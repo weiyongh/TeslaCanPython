@@ -36,3 +36,45 @@ PartyBus（娱乐总线）：娱乐系统、显示屏通讯，消息ID范围：0
 [savvycan](https://blog.csdn.net/gitblog_00649/article/details/163753036)
 
 [git项目](https://blog.csdn.net/gitblog_00649/article/details/163753036)
+
+# 按采集脚本提取关键 Signal
+
+详细文档：[extract_scripted_signals.md](doc/extract_scripted_signals.md)
+
+程序接受“标准采集脚本、ASC、DBC”三个文件名，自动识别脚本中的动作时间点，
+并从 ASC 中筛选在这些时间点附近重复、稳定变化的 DBC Signal：
+
+```powershell
+python src\extract_scripted_signals.py `
+    input\can_开门关门采集脚本.txt `
+    input\can_20260823164405.asc `
+    input\tesla_model3_ONYX.dbc
+```
+
+默认在 `output` 中生成 Markdown 报告、可用 Excel 打开的 CSV 明细，以及排名第一的
+候选信号所属 CAN Message 的全 Signal 状态变化时间线。Message 追踪文件名带有
+ASC 名、CAN ID 和运行时间戳，因此不会覆盖以前的结果。
+可通过 `--tolerance 2` 设置动作点前后匹配秒数，通过 `--top 10` 设置候选信号数量。
+
+使用 `--exclude-regex` 可以排除不需要分析的 Message 或 Signal，匹配时忽略大小写：
+
+```powershell
+python src\extract_scripted_signals.py `
+    input\can_开门关门采集脚本.txt `
+    input\can_20260823164405.asc `
+    input\tesla_model3_ONYX.dbc `
+    --exclude-regex "mirrorTilt"
+```
+
+正则可以组合多个排除项，例如 `--exclude-regex "mirrorTilt|temperature|counter$"`。
+
+# Python 程序文档约定
+
+以后新增 Python 程序时，在 `doc` 目录创建与 Python 文件同名的 Markdown 文档：
+
+```text
+src/example.py
+doc/example.md
+```
+
+同时在 `readme.md` 的相应程序章节加入该文档的链接。
