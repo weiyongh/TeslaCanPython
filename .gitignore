@@ -1,3 +1,18 @@
 .venv/
 __pycache__/
 *.pyc
+
+# Local downloads and generated artifacts
+.downloads/
+
+# Android Studio / Gradle
+android/**/.gradle/
+android/**/.idea/
+android/**/build/
+android/**/local.properties
+android/**/*.iml
+android/**/.externalNativeBuild/
+android/**/.cxx/
+android/**/captures/
+android/**/*.jks
+android/**/*.keystore
