@@ -1,0 +1,16 @@
+﻿rank,blind_score,can_id,profiles,roles,best_byte,best_bit_in_byte,evidence_count,dbc_known,dbc_message,sources
+1,93.106,0x2B4,generic-event|window,事件附近变化|运动过程,4,5,8,no,,generic-event:事件附近变化|window:运动过程
+2,86.932,0x545,generic-event|window,事件附近变化|运动过程,1,2,3,yes,EXP_windowMotionFeedback_LEFT,generic-event:事件附近变化|window:运动过程
+3,86.353,0x272,generic-event|window,事件附近变化|运动过程,2,0,2,no,,generic-event:事件附近变化|window:运动过程
+4,78.797,0x2C2,generic-event|window,事件附近变化|运动过程,4,7,6,yes,EXP_leftWindowExecutionPosition,generic-event:事件附近变化|window:运动过程
+5,78.242,0x7A8,generic-event|window,事件附近变化|运动过程,0,2,2,no,,generic-event:事件附近变化|window:运动过程
+6,73.514,0x788,generic-event|window,事件附近变化|运动过程,0,2,2,no,,generic-event:事件附近变化|window:运动过程
+7,63.811,0x3C2,generic-event,事件附近变化,4,2,3,yes,VCLEFT_switchStatus_EXP,generic-event:事件附近变化
+8,61.813,0x23A,generic-event,事件附近变化,4,0,14,no,,generic-event:事件附近变化
+9,60.370,0x382,window,运动过程,1,0,1,no,,window:运动过程
+10,48.073,0x373,generic-event,事件附近变化,0,2,1,no,,generic-event:事件附近变化
+11,43.675,0x23E,generic-event,事件附近变化,1,3,1,no,,generic-event:事件附近变化
+12,34.558,0x3A3,generic-event,事件附近变化,1,4,2,no,,generic-event:事件附近变化
+13,32.744,0x3A1,generic-event,事件附近变化,5,2,1,no,,generic-event:事件附近变化
+14,31.991,0x622,generic-event,事件附近变化,2,0,1,no,,generic-event:事件附近变化
+15,-7.186,0x32A,generic-event,事件附近变化,4,3,1,no,,generic-event:事件附近变化

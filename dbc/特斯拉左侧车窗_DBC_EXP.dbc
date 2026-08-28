@@ -1,0 +1,75 @@
+VERSION "Tesla Model 3 left-side windows experimental DBC 2026-08-25"
+
+NS_ :
+    CM_
+    VAL_
+
+BS_:
+
+BU_: EXP VEH
+
+
+BO_ 962 VCLEFT_switchStatus_EXP: 8 VEH
+ SG_ VCLEFT_switchStatusIndex M : 0|2@1+ (1,0) [0|2] "" EXP
+ SG_ VCLEFT_btnWindowSwPackUpLF m0 : 32|1@1+ (1,0) [0|1] "" EXP
+ SG_ VCLEFT_btnWindowSwPackAutoUpLF m0 : 33|1@1+ (1,0) [0|1] "" EXP
+ SG_ VCLEFT_btnWindowSwPackDownLF m0 : 34|1@1+ (1,0) [0|1] "" EXP
+ SG_ VCLEFT_btnWindowSwPackAutoDownLF m0 : 35|1@1+ (1,0) [0|1] "" EXP
+ SG_ VCLEFT_btnWindowSwPackUpLR m0 : 36|1@1+ (1,0) [0|1] "" EXP
+ SG_ VCLEFT_btnWindowSwPackAutoUpLR m0 : 37|1@1+ (1,0) [0|1] "" EXP
+ SG_ VCLEFT_btnWindowSwPackDownLR m0 : 38|1@1+ (1,0) [0|1] "" EXP
+ SG_ VCLEFT_btnWindowSwPackAutoDownLR m0 : 39|1@1+ (1,0) [0|1] "" EXP
+
+BO_ 1349 EXP_windowMotionFeedback_LEFT: 8 EXP
+ SG_ EXP_leftWindowMotionActivityCandidate1 : 9|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_leftWindowMotionActivityCandidate2 : 10|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_motionRaw_B0 : 0|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRaw_B2 : 16|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRaw_B3 : 24|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRaw_B4 : 32|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRaw_B5 : 40|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRolling_B6 : 48|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionChecksumOrData_B7 : 56|8@1+ (1,0) [0|255] "raw" EXP
+
+BO_ 706 EXP_leftWindowExecutionPosition: 8 EXP
+ SG_ EXP_leftMessageFamily_B0_B1 : 0|16@1+ (1,0) [0|65535] "raw" EXP
+ SG_ EXP_leftFrontStateOrPosition_B2 : 16|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_leftFrontPositionOrTarget_B3 : 24|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_leftUnknown_B4 : 32|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_leftUnknown_B5 : 40|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_leftRearStateOrPosition_B6 : 48|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_leftRearPositionOrState_B7 : 56|8@1+ (1,0) [0|255] "raw" EXP
+
+BO_ 506 EXP_anyWindowOpenSummary_LEFT: 3 EXP
+ SG_ EXP_summaryUnknown_B0_bits0_4 : 0|5@1+ (1,0) [0|31] "raw" EXP
+ SG_ EXP_anyWindowNotFullyClosedCandidate : 5|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_summaryUnknown_B0_bits6_7 : 6|2@1+ (1,0) [0|3] "raw" EXP
+ SG_ EXP_summaryUnknown_B1 : 8|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_summaryUnknown_B2 : 16|8@1+ (1,0) [0|255] "raw" EXP
+
+
+CM_ "Experimental receive/decode-only DBC derived from local ASC captures. EXP names are hypotheses, not Tesla definitions. Do not use it to transmit control frames.";
+CM_ BO_ 962 "0x3C2 / VCLEFT switch-pack input. LF and LR multiplex-0 fields come from the collected ONYX DBC and were confirmed by physical-button captures.";
+CM_ BO_ 1349 "0x545 shared four-window motion feedback candidate. Left-side motion activity is concentrated in Byte 1 bits 1 and 2; right-side activity uses different Byte 2 fields.";
+CM_ SG_ 1349 EXP_leftWindowMotionActivityCandidate1 "B1.b1 left-side motion activity candidate. Direction and front/rear allocation are not fully proven.";
+CM_ SG_ 1349 EXP_leftWindowMotionActivityCandidate2 "B1.b2 responds in all four scripted LF/LR motion windows and remains unchanged in the no-operation baseline.";
+CM_ BO_ 706 "0x2C2 left-side execution/position candidate. In the 20 40 family, Bytes 2-3 track left-front and Bytes 6-7 track left-rear. Stable-window fingerprints reached 100 percent purity in the scripted captures.";
+CM_ SG_ 706 EXP_leftMessageFamily_B0_B1 "Observed left execution-position family has B0=0x20, B1=0x40, little-endian raw value 0x4020.";
+CM_ SG_ 706 EXP_leftFrontStateOrPosition_B2 "Left-front raw state/position byte; not proven to be a linear position percentage.";
+CM_ SG_ 706 EXP_leftFrontPositionOrTarget_B3 "Left-front raw endpoint/target byte.";
+CM_ SG_ 706 EXP_leftRearStateOrPosition_B6 "Left-rear raw state/position byte.";
+CM_ SG_ 706 EXP_leftRearPositionOrState_B7 "Left-rear raw endpoint/state byte.";
+CM_ BO_ 506 "0x1FA whole-vehicle window summary candidate, included here for diagnostic-chain completeness. It is shared by both left and right DBC files.";
+CM_ SG_ 506 EXP_anyWindowNotFullyClosedCandidate "B0.b5: 0 with stable payload 02 C0 01 when all windows are closed; 1 with 22 C0 01 when at least one window is not fully closed. Four-window and no-operation validation support about 95 percent semantic confidence.";
+
+VAL_ 962 VCLEFT_btnWindowSwPackUpLF 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 962 VCLEFT_btnWindowSwPackAutoUpLF 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 962 VCLEFT_btnWindowSwPackDownLF 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 962 VCLEFT_btnWindowSwPackAutoDownLF 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 962 VCLEFT_btnWindowSwPackUpLR 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 962 VCLEFT_btnWindowSwPackAutoUpLR 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 962 VCLEFT_btnWindowSwPackDownLR 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 962 VCLEFT_btnWindowSwPackAutoDownLR 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 1349 EXP_leftWindowMotionActivityCandidate1 0 "INACTIVE_CANDIDATE" 1 "ACTIVE_CANDIDATE";
+VAL_ 1349 EXP_leftWindowMotionActivityCandidate2 0 "INACTIVE_CANDIDATE" 1 "ACTIVE_CANDIDATE";
+VAL_ 506 EXP_anyWindowNotFullyClosedCandidate 0 "ALL_WINDOWS_CLOSED_CANDIDATE" 1 "ANY_WINDOW_NOT_FULLY_CLOSED_CANDIDATE";

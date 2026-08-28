@@ -1,0 +1,13 @@
+﻿rank,score,can_id,message,signal,unit,step_time_s,step,matched,change_time_s,offset_s,before,after
+1,12.317,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowDownLR,,20.000,按下左后车窗下降按钮第一档,yes,20.434100,+0.434100,0,1
+1,12.317,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowDownLR,,22.000,松开左后车窗按钮,yes,20.684200,-1.315800,1,0
+1,12.317,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowDownLR,,37.000,提起左后车窗上升按钮第一档,no,,,0,0
+1,12.317,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowDownLR,,42.000,松开左后车窗按钮,no,,,0,0
+1,12.317,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowDownLR,,57.000,按下左后车窗下降按钮第二档,yes,57.616600,+0.616600,0,1
+1,12.317,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowDownLR,,72.000,（1分12秒）  提起左后车窗上升按钮第二档,no,,,0,0
+2,8.918,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowAutoUpLR,,20.000,按下左后车窗下降按钮第一档,no,,,0,0
+2,8.918,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowAutoUpLR,,22.000,松开左后车窗按钮,no,,,0,0
+2,8.918,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowAutoUpLR,,37.000,提起左后车窗上升按钮第一档,yes,37.645500,+0.645500,0,1
+2,8.918,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowAutoUpLR,,42.000,松开左后车窗按钮,no,,,0,0
+2,8.918,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowAutoUpLR,,57.000,按下左后车窗下降按钮第二档,no,,,0,0
+2,8.918,0x3C2,VCLEFT_switchStatus,VCLEFT_btnWindowAutoUpLR,,72.000,（1分12秒）  提起左后车窗上升按钮第二档,yes,72.517600,+0.517600,0,1

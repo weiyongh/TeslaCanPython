@@ -41,6 +41,9 @@ PartyBus（娱乐总线）：娱乐系统、显示屏通讯，消息ID范围：0
 
 详细文档：[extract_scripted_signals.md](doc/extract_scripted_signals.md)
 
+已在实车采集数据中遇到的 Model 3 Message、Signal、枚举和中文解释：
+[model3_dbc.md](doc/model3_dbc.md)
+
 程序接受“标准采集脚本、ASC、DBC”三个文件名，自动识别脚本中的动作时间点，
 并从 ASC 中筛选在这些时间点附近重复、稳定变化的 DBC Signal：
 
@@ -69,6 +72,81 @@ python src\extract_scripted_signals.py `
 正则可以组合多个排除项，例如 `--exclude-regex "mirrorTilt|temperature|counter$"`。
 
 # Python 程序文档约定
+
+## 事件驱动 CAN 候选 ID 遴选
+
+详细文档：[select_can_candidates.md](doc/select_can_candidates.md)
+
+```powershell
+python src\select_can_candidates.py `
+    input\can_20260824175030.asc `
+    input\驾驶门物理按钮开关窗采集脚本.txt `
+    --profile generic-event `
+    --profile window `
+    --pre-offset 0.5 `
+    --post-offset 1.0 `
+    --min-blind-score 60 `
+    --dbc dbc\特斯拉左侧车窗_DBC_EXP.dbc
+```
+
+程序支持复合 profile 并集遴选，保留候选来源；DBC 仅用于标记已知 Message，
+不参与盲评分。所有输出默认使用“ASC 文件名 + 执行时间戳”作为前缀，并生成
+可直接加载 SavvyCAN 的候选事件窗口 ASC。
+
+## 无 DBC 分析车窗通风
+
+详细文档：[analyze_window_vent.md](doc/analyze_window_vent.md)
+
+```powershell
+python src\analyze_window_vent.py `
+    input\can_车窗通风采集脚本.txt `
+    input\can_20260824154441.asc
+```
+
+程序利用重复的通风/关闭动作和稳定状态区间，输出 CAN ID、Byte、Bit 候选排名，
+并区分稳定状态候选与瞬时请求候选，不需要 DBC。
+
+## 使用 DBC 提取 Window Signal
+
+详细文档：[extract_window_signals.md](doc/extract_window_signals.md)
+
+```powershell
+python src\extract_window_signals.py `
+    input\can_车窗通风采集脚本.txt `
+    input\can_20260824154441.asc `
+    dbc\tesla_model3_ONYX.dbc.txt
+```
+
+输出结构与 `extract_scripted_signals.py` 一致，并针对 ONYX DBC 与 ASC 的 DLC 不一致进行受控修正。
+
+## 驾驶门物理按钮开关窗混合分析
+
+详细文档：[analyze_driver_window_button.md](doc/analyze_driver_window_button.md)
+
+```powershell
+python src\analyze_driver_window_button.py `
+    input\驾驶门物理按钮开关窗采集脚本.txt `
+    input\can_20260824175030.asc `
+    input\tesla_model3_ONYX.dbc `
+    --verify-id 0x1FA
+```
+
+程序同时输出 DBC 已知 Window Signal、无 DBC bit 候选和指定未知 ID 的原始变化核验。
+
+## 物理按钮与 App 通风交叉分析
+
+详细文档：[compare_window_control_sources.md](doc/compare_window_control_sources.md)
+
+```powershell
+python src\compare_window_control_sources.py `
+    input\驾驶门物理按钮开关窗采集脚本.txt `
+    input\can_20260824175030.asc `
+    input\can_车窗通风采集脚本.txt `
+    input\can_20260824154441.asc `
+    input\tesla_model3_ONYX.dbc
+```
+
+程序通过两个控制入口的共同运动响应，缩小车窗执行过程候选范围。
 
 以后新增 Python 程序时，在 `doc` 目录创建与 Python 文件同名的 Markdown 文档：
 

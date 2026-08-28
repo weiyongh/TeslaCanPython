@@ -1,0 +1,84 @@
+VERSION "Tesla Model 3 right-side windows experimental DBC 2026-08-25"
+
+NS_ :
+    CM_
+    VAL_
+
+BS_:
+
+BU_: EXP VEH
+
+
+BO_ 963 VCRIGHT_switchStatus_EXP: 8 VEH
+ SG_ EXP_VCRIGHT_switchStatusFamily M : 0|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_btnWindowUpRF m0 : 24|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_btnWindowAutoUpRF m0 : 25|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_btnWindowDownRF m0 : 26|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_btnWindowAutoDownRF m0 : 27|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_btnWindowUpRR m0 : 28|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_btnWindowAutoUpRR m0 : 29|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_btnWindowDownRR m0 : 30|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_btnWindowAutoDownRR m0 : 31|1@1+ (1,0) [0|1] "" EXP
+
+BO_ 1349 EXP_windowMotionFeedback_RIGHT: 8 EXP
+ SG_ EXP_rightWindowMotionActivityCandidate1 : 22|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_rightWindowMotionActivityCandidate2 : 23|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_motionRaw_B0 : 0|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRaw_B1 : 8|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRaw_B3 : 24|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRaw_B4 : 32|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRaw_B5 : 40|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionRolling_B6 : 48|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_motionChecksumOrData_B7 : 56|8@1+ (1,0) [0|255] "raw" EXP
+
+BO_ 707 EXP_rightWindowExecutionPosition: 8 EXP
+ SG_ EXP_rightMessageFamily_B0_B1 : 0|16@1+ (1,0) [0|65535] "raw" EXP
+ SG_ EXP_rightFrontStateOrPosition_B2 : 16|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_rightFrontPositionOrTarget_B3 : 24|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_rightUnknown_B4 : 32|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_rightUnknown_B5 : 40|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_rightRearStateOrPosition_B6 : 48|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_rightRearPositionOrState_B7 : 56|8@1+ (1,0) [0|255] "raw" EXP
+
+BO_ 506 EXP_anyWindowOpenSummary_RIGHT: 3 EXP
+ SG_ EXP_summaryUnknown_B0_bits0_4 : 0|5@1+ (1,0) [0|31] "raw" EXP
+ SG_ EXP_anyWindowNotFullyClosedCandidate : 5|1@1+ (1,0) [0|1] "" EXP
+ SG_ EXP_summaryUnknown_B0_bits6_7 : 6|2@1+ (1,0) [0|3] "raw" EXP
+ SG_ EXP_summaryUnknown_B1 : 8|8@1+ (1,0) [0|255] "raw" EXP
+ SG_ EXP_summaryUnknown_B2 : 16|8@1+ (1,0) [0|255] "raw" EXP
+
+
+CM_ "Experimental receive/decode-only DBC derived from local ASC captures. EXP names are hypotheses, not Tesla definitions. Do not use it to transmit control frames.";
+CM_ BO_ 963 "0x3C3 right-side window switch-input candidate and structural counterpart of left controller 0x3C2. When B0 family equals 0, Byte 3 low nibble represents RF and high nibble represents RR. All four RF/RR manual/automatic directions were observed. RR repeated auto-down presses provided independent confirmation.";
+CM_ SG_ 963 EXP_VCRIGHT_switchStatusFamily "Use only family B0=0x00 for the experimental button fields. Alternating 0x55-family frames on the same ID are excluded by multiplexing.";
+CM_ SG_ 963 EXP_btnWindowUpRF "B3.b0 right-front manual-up input candidate.";
+CM_ SG_ 963 EXP_btnWindowAutoUpRF "B3.b1 right-front automatic-up input candidate.";
+CM_ SG_ 963 EXP_btnWindowDownRF "B3.b2 right-front manual-down input candidate.";
+CM_ SG_ 963 EXP_btnWindowAutoDownRF "B3.b3 right-front automatic-down input candidate.";
+CM_ SG_ 963 EXP_btnWindowUpRR "B3.b4 right-rear manual-up input candidate.";
+CM_ SG_ 963 EXP_btnWindowAutoUpRR "B3.b5 right-rear automatic-up input candidate.";
+CM_ SG_ 963 EXP_btnWindowDownRR "B3.b6 right-rear manual-down input candidate.";
+CM_ SG_ 963 EXP_btnWindowAutoDownRR "B3.b7 right-rear automatic-down input candidate; a second request near 59.7385 s during automatic descent corroborates the repeated-press observation.";
+CM_ BO_ 1349 "0x545 shared four-window motion feedback candidate. Right-side motion activity is concentrated in Byte 2 bits 6 and 7; left-side activity uses Byte 1 fields.";
+CM_ SG_ 1349 EXP_rightWindowMotionActivityCandidate1 "B2.b6 responds in all four scripted RF and RR motion windows and remains unchanged in the no-operation baseline.";
+CM_ SG_ 1349 EXP_rightWindowMotionActivityCandidate2 "B2.b7 is a second right-side motion activity candidate. Exact direction and front/rear allocation remain unconfirmed.";
+CM_ BO_ 707 "0x2C3 right-side execution/position candidate and structural mirror of left-side 0x2C2. In the 00 00 family, Bytes 2-3 track right-front and Bytes 6-7 track right-rear. Stable-window fingerprints reached 100 percent purity.";
+CM_ SG_ 707 EXP_rightMessageFamily_B0_B1 "Observed right execution-position family has B0=0x00 and B1=0x00. Other alternating payload families on the same ID must be analyzed separately.";
+CM_ SG_ 707 EXP_rightFrontStateOrPosition_B2 "Right-front raw state/position byte. Observed stable fingerprints: closed C0 4B, partial 00 51, fully open 40 20 across Bytes 2-3.";
+CM_ SG_ 707 EXP_rightFrontPositionOrTarget_B3 "Right-front raw endpoint/target byte; not proven to be a linear position percentage.";
+CM_ SG_ 707 EXP_rightRearStateOrPosition_B6 "Right-rear raw state/position byte. Observed stable fingerprints: closed 80 CB, partial C0 D3, fully open 40 FF across Bytes 6-7.";
+CM_ SG_ 707 EXP_rightRearPositionOrState_B7 "Right-rear raw endpoint/state byte.";
+CM_ BO_ 506 "0x1FA whole-vehicle window summary candidate, included here for diagnostic-chain completeness. It is shared by both left and right DBC files.";
+CM_ SG_ 506 EXP_anyWindowNotFullyClosedCandidate "B0.b5: 0 with stable payload 02 C0 01 when all windows are closed; 1 with 22 C0 01 when at least one window is not fully closed. RF, RR, LR and no-operation validation support about 95 percent semantic confidence.";
+
+VAL_ 1349 EXP_rightWindowMotionActivityCandidate1 0 "INACTIVE_CANDIDATE" 1 "ACTIVE_CANDIDATE";
+VAL_ 1349 EXP_rightWindowMotionActivityCandidate2 0 "INACTIVE_CANDIDATE" 1 "ACTIVE_CANDIDATE";
+VAL_ 506 EXP_anyWindowNotFullyClosedCandidate 0 "ALL_WINDOWS_CLOSED_CANDIDATE" 1 "ANY_WINDOW_NOT_FULLY_CLOSED_CANDIDATE";
+VAL_ 963 EXP_btnWindowUpRF 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 963 EXP_btnWindowAutoUpRF 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 963 EXP_btnWindowDownRF 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 963 EXP_btnWindowAutoDownRF 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 963 EXP_btnWindowUpRR 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 963 EXP_btnWindowAutoUpRR 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 963 EXP_btnWindowDownRR 0 "NOT_ACTIVE" 1 "ACTIVE";
+VAL_ 963 EXP_btnWindowAutoDownRR 0 "NOT_ACTIVE" 1 "ACTIVE";

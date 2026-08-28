@@ -87,7 +87,7 @@ def parse_steps(path: Path) -> list[Step]:
     for timestamp, lines in blocks:
         title = lines[0] or "未命名步骤"
         # 只以时间行上的首要指令判断动作，避免把“保持驾驶门打开”误判为开门动作。
-        is_action = bool(re.search(r"(?:再次)?(?:打开|关闭|按下|松开|踩下|释放|切换|插入|拔出)", title))
+        is_action = bool(re.search(r"(?:再次)?(?:打开|关闭|按下|提起|松开|踩下|释放|切换|插入|拔出)", title))
         steps.append(Step(timestamp, title, tuple(lines[1:]), is_action))
     return steps
 
