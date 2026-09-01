@@ -1,0 +1,8 @@
+﻿experiment_id,signal_key,decision,override_role,override_priority,override_report_position,override_order,human_reason,reviewer,reviewed_at
+TM3-010,DI_tractionControlMode,ACCEPT,,,,,保留为状态门背景。,人工模拟审核,2026-09-01
+TM3-010,DI_axleSpeed,OVERRIDE,,P1,ANALYSIS_WINDOW+CORE_SIGNAL_TABLE,,轴速用于窗口统计与运动交叉验证，不占用固定人读主时间线列。,人工模拟审核,2026-09-01
+TM3-010,DI_elecPower,ACCEPT,,,,,保留为能源交叉验证主观测。,人工模拟审核,2026-09-01
+TM3-010,BMS_packVoltage,OVERRIDE,,P2,ANALYSIS_WINDOW+CORE_SIGNAL_TABLE,,电压进入稳定窗口统计，不单占主时间线列。,人工模拟审核,2026-09-01
+TM3-010,BMS_packCurrent,ACCEPT,,,,,Pack电流保留在核心时间线和能源基线。,人工模拟审核,2026-09-01
+TM3-010,DI_sysDrivePowerMax,ACCEPT,,,,,作为能力背景，不提升为主链。,人工模拟审核,2026-09-01
+TM3-010,DI_sysRegenPowerMax,ACCEPT,,,,,作为能力背景，不提升为主链。,人工模拟审核,2026-09-01

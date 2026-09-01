@@ -1,0 +1,30 @@
+{
+  "experiment_id": "TM3-010",
+  "experiment_name": "稳定匀速",
+  "experiment_metadata": "output/TM3-010/experiment_metadata.json",
+  "source": "input/can_20260831085710_TM3-009_稳定匀速采集.asc",
+  "source_sha256": "d3ab95e0036602901412f0c7bd66bda627cac9cc286cb0e8b4c391fcac6b4b16",
+  "dbc": "input/tesla_model3_ONYX.dbc",
+  "dbc_sha256": "3554e37a3a8371bc9c1b76445061d30f2c5bbaa35a055fe1f01f7ee75030e86c",
+  "frames": 627514,
+  "duration_s": 220.9016,
+  "backwards_timestamps": 0,
+  "speed_samples": 11045,
+  "event_count": 16,
+  "event_signal_rows": 240,
+  "coverage_signals": 14,
+  "band20": {
+    "low": 19,
+    "high": 21,
+    "start_s": 56.2764,
+    "end_s": 74.9953,
+    "samples": 937
+  },
+  "band40": {
+    "low": 38,
+    "high": 42,
+    "start_s": 158.1487,
+    "end_s": 161.4694,
+    "samples": 167
+  }
+}

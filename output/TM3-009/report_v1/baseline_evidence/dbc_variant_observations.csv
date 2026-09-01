@@ -1,0 +1,5 @@
+﻿signal,other_dbc,other_signal,numeric_samples,failed_frames,minimum,maximum
+DI_elecPower,dbc/Model3CAN.dbc,RearPower266,16998,0,-14.0,13.5
+DI_elecPower,dbc/tesla_model3.dbc,DI_elecPower,16998,0,-511.0,393.0
+DI_sysRegenPowerMax,dbc/Model3CAN.dbc,SystemRegenPowerMax268,1700,0,91,92
+DI_sysRegenPowerMax,dbc/tesla_model3.dbc,DI_sysRegenPowerMax,1700,0,91,92

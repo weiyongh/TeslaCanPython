@@ -1,0 +1,17 @@
+{
+  "experiment_id": "TM3-010",
+  "experiment_name": "稳定匀速",
+  "purpose": "正常基线",
+  "identity_basis": "实验metadata与采集脚本定义；不依赖原始ASC文件名中的编号",
+  "script": "input/TM3-010_稳定匀速采集脚本.txt",
+  "source_asc": "input/can_20260831085710_TM3-009_稳定匀速采集.asc",
+  "source_naming_note": "原始ASC编号误写为TM3-009；仅作为来源记录，实验身份固定为TM3-010=稳定匀速",
+  "vehicle": {
+    "model": "Tesla Model 3",
+    "production": "上海产2021款",
+    "production_date": "2021-05",
+    "variant": "标准续航",
+    "battery_capacity_user_provided_kWh": 55,
+    "drive": "后驱"
+  }
+}

@@ -1,0 +1,15 @@
+﻿role,message,signal,can_id,unit,dbc_source,dbc_dlc,signal_start,signal_length,byte_order,scale,offset,asc_dlc,decoded_samples,decode_errors,changed,observed_min,observed_max,maximum_snapshot_age_s
+驾驶输入,DI_systemStatus,DI_accelPedalPos,0x118,%,input/tesla_model3_ONYX.dbc,8,32,8,little_endian,0.4,0,8,22091,0,True,0.0,25.6,0.03
+条件/状态,DI_systemStatus,DI_gear,0x118,enum,input/tesla_model3_ONYX.dbc,8,21,3,little_endian,1,0,8,22091,0,True,,,0.03
+条件/状态,DI_systemStatus,DI_systemState,0x118,enum,input/tesla_model3_ONYX.dbc,8,16,3,little_endian,1,0,8,22091,0,True,,,0.03
+条件/状态,DI_systemStatus,DI_tractionControlMode,0x118,enum,input/tesla_model3_ONYX.dbc,8,40,3,little_endian,1,0,8,22091,0,False,,,0.03
+仲裁后请求,DI_torque,DI_torqueCommand,0x108,Nm,input/tesla_model3_ONYX.dbc,8,12,13,little_endian,2,0,8,2209,0,True,-622.0,794.0,0.15
+执行反馈,DI_torque,DI_torqueActual,0x108,Nm,input/tesla_model3_ONYX.dbc,8,27,13,little_endian,2,0,8,2209,0,True,-622.0,838.0,0.15
+运动反馈,DI_torque,DI_axleSpeed,0x108,RPM,input/tesla_model3_ONYX.dbc,8,40,16,little_endian,0.1,0,8,2209,0,True,-1.3,349.1,0.15
+运动反馈,DI_speed,DI_vehicleSpeed,0x257,km/h,input/tesla_model3_ONYX.dbc,8,12,12,little_endian,0.08,-40,8,11045,0,True,-0.1599999999999966,43.44,0.05
+能源响应,DI_power,DI_elecPower,0x266,kW,input/tesla_model3_ONYX.dbc,8,0,11,little_endian,0.5,0,8,22091,0,True,-14.0,14.5,0.03
+能源响应,BMS_hvBusStatus,BMS_packVoltage,0x132,V,input/tesla_model3_ONYX.dbc,8,0,16,little_endian,0.01,0,6,22090,0,True,343.81,350.07,0.03
+能源响应,BMS_hvBusStatus,BMS_packCurrent,0x132,A,input/tesla_model3_ONYX.dbc,8,16,15,little_endian,-0.1,0,6,22090,0,True,-38.300000000000004,45.5,0.03
+条件/SOC,BMS_socStatus,BMS_socUI,0x292,%,input/tesla_model3_ONYX.dbc,8,10,10,little_endian,0.1,0,8,2209,0,True,32.5,32.7,0.15
+条件/能力,DI_systemPower,DI_sysDrivePowerMax,0x268,kW,input/tesla_model3_ONYX.dbc,5,16,9,little_endian,1,0,5,2209,0,True,246.0,247.0,0.15
+条件/能力,DI_systemPower,DI_sysRegenPowerMax,0x268,kW,input/tesla_model3_ONYX.dbc,5,32,8,little_endian,1,-100,5,2209,0,True,91.0,92.0,0.15

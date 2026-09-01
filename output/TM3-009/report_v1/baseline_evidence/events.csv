@@ -1,0 +1,57 @@
+﻿time_s,event,criterion,planned_s,event_id
+0.15,初始P挡参考状态,固定首段参考点（非动作边沿）；待关键报文到齐,0,E01
+20.0747,制动施加状态出现,IBST_driverBrakeApply 首个 DRIVER_APPLYING_BRAKES,—,E02
+20.3129,第1轮挂D,DI_gear 首个D样本,20,E03
+21.8747,第1轮制动开关释放,VCLEFT_brakeSwitchPressed 首个0；不等同输入杆完全回零,—,E04
+21.9637,第1轮零电门正请求建立,D挡内 DI_torqueCommand 首个>0,—,E05
+22.075,制动施加状态解除,IBST_driverBrakeApply 首个 BRAKES_NOT_APPLIED,—,E06
+22.4848,第1轮观察到低速运动,DI_vehicleSpeed 首个>0.5 km/h；识别阈值非标定阈值,—,E07
+27.4225,第1轮开始踩电门,DI_accelPedalPos 首个>0,30,E08
+29.1632,第1轮实际扭矩峰值,DI_torqueActual 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E09
+29.2632,第1轮请求峰值,DI_torqueCommand 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E10
+43.942,第1轮电门峰值,DI_accelPedalPos 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E11
+44.2024,第1轮电驱功率峰值,DI_elecPower 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E12
+44.3225,第1轮Pack放电电流峰值,BMS_packCurrent 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E13
+44.923,第1轮首次达到30 km/h,DI_vehicleSpeed 首个≥30,45,E14
+51.1821,第1轮车速峰值,DI_vehicleSpeed 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E15
+51.762,第1轮请求转负,DI_torqueCommand 从≥0变为<0；单独识别调速/减速,—,E16
+51.9028,第1轮负请求期间首次观察到Pack净回收,本次负请求区间内，Pack同帧V×I首次<0；不据时间差推算系统延迟,—,E17
+57.7611,第1轮请求退出负值,DI_torqueCommand 从<0变为≥0,—,E18
+71.9601,第1轮请求转负,DI_torqueCommand 从≥0变为<0；单独识别调速/减速,—,E19
+72.019,第1轮电门完全归零,踩下后 DI_accelPedalPos 首次回到0,55,E20
+72.023,第1轮负请求期间首次观察到Pack净回收,本次负请求区间内，Pack同帧V×I首次<0；不据时间差推算系统延迟,—,E21
+75.0361,制动施加状态出现,IBST_driverBrakeApply 首个 DRIVER_APPLYING_BRAKES,—,E22
+77.4604,第1轮请求退出负值,DI_torqueCommand 从<0变为≥0,—,E23
+78.5391,第1轮减速至近零车速,电门归零后 |DI_vehicleSpeed| 首个≤0.5km/h；不等同精确机械停稳时刻,—,E24
+78.7495,第1轮回P,DI_gear 离开D进入P的首个样本,75,E25
+84.3963,制动施加状态解除,IBST_driverBrakeApply 首个 BRAKES_NOT_APPLIED,—,E26
+93.9966,制动施加状态出现,IBST_driverBrakeApply 首个 DRIVER_APPLYING_BRAKES,—,E27
+94.5083,第2轮挂D,DI_gear 首个D样本,95,E28
+97.4806,第2轮制动开关释放,VCLEFT_brakeSwitchPressed 首个0；不等同输入杆完全回零,—,E29
+97.5593,第2轮零电门正请求建立,D挡内 DI_torqueCommand 首个>0,—,E30
+97.8767,制动施加状态解除,IBST_driverBrakeApply 首个 BRAKES_NOT_APPLIED,—,E31
+98.0368,制动施加状态出现,IBST_driverBrakeApply 首个 DRIVER_APPLYING_BRAKES,—,E32
+98.0988,第2轮观察到低速运动,DI_vehicleSpeed 首个>0.5 km/h；识别阈值非标定阈值,—,E33
+98.2595,补踩制动：请求仍处高值,已核实的独立制动工况关键原生样本,—,E34
+98.6767,补踩制动：输入杆行程峰值,已核实的独立制动工况关键原生样本,—,E35
+99.4592,补踩制动：正请求降至62 Nm,已核实的独立制动工况关键原生样本,—,E36
+99.6594,输入杆回落中请求已恢复,已核实的独立制动工况关键原生样本,—,E37
+99.9574,制动施加状态解除,IBST_driverBrakeApply 首个 BRAKES_NOT_APPLIED,—,E38
+99.959,施加状态解除后的扭矩样本,已核实的独立制动工况关键原生样本,—,E39
+102.0783,第2轮开始踩电门,DI_accelPedalPos 首个>0,105,E40
+103.7591,第2轮请求峰值,DI_torqueCommand 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E41
+109.5188,第2轮电驱功率峰值,DI_elecPower 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E42
+109.5582,第2轮实际扭矩峰值,DI_torqueActual 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E43
+109.5942,第2轮Pack放电电流峰值,BMS_packCurrent 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E44
+116.7868,第2轮电门峰值,DI_accelPedalPos 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E45
+120.1169,第2轮首次达到30 km/h,DI_vehicleSpeed 首个≥30,120,E46
+123.5175,第2轮车速峰值,DI_vehicleSpeed 在本轮踩电门起点至离开D挡前的最大值（首次出现）,—,E47
+125.4562,第2轮请求转负,DI_torqueCommand 从≥0变为<0；单独识别调速/减速,—,E48
+125.7342,第2轮负请求期间首次观察到Pack净回收,本次负请求区间内，Pack同帧V×I首次<0；不据时间差推算系统延迟,—,E49
+140.4659,第2轮电门完全归零,踩下后 DI_accelPedalPos 首次回到0,130,E50
+148.4381,制动施加状态出现,IBST_driverBrakeApply 首个 DRIVER_APPLYING_BRAKES,—,E51
+149.2556,第2轮请求退出负值,DI_torqueCommand 从<0变为≥0,—,E52
+150.434,第2轮减速至近零车速,电门归零后 |DI_vehicleSpeed| 首个≤0.5km/h；不等同精确机械停稳时刻,—,E53
+150.7533,第2轮回P,DI_gear 离开D进入P的首个样本,150,E54
+152.8782,制动施加状态解除,IBST_driverBrakeApply 首个 BRAKES_NOT_APPLIED,—,E55
+169.9696,采集结束,最后一个ASC数据帧,170,E56

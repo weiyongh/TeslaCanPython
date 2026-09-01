@@ -1,0 +1,897 @@
+﻿event_id,event_time_s,event,signal,can_id,value,sample_time_s,age_ms,unit,source,status
+E01,0.15,初始P挡参考状态,DI_gear,0x118,P,0.1434,6.6,enum/raw,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,DI_systemState,0x118,STANDBY,0.1434,6.6,enum/raw,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,DI_accelPedalPos,0x118,0.0,0.1434,6.6,%,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,DI_torqueCommand,0x108,0.0,0.0641,85.9,Nm,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,DI_torqueActual,0x108,0.0,0.0641,85.9,Nm,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,DI_axleSpeed,0x108,0.0,0.0641,85.9,RPM,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,DI_vehicleSpeed,0x257,0.0,0.1438,6.2,kph,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,DI_elecPower,0x266,0.0,0.1436,6.4,kW,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,BMS_packVoltage,0x132,347.24,0.1415,8.5,V,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,BMS_packCurrent,0x132,1.3,0.1415,8.5,A,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,PackPower_derived,0x132,0.45141200000000004,0.1415,8.5,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E01,0.15,初始P挡参考状态,IBST_sInputRodDriver,0x39D,-0.015625,0.1168,33.2,mm,dbc/Model3CAN.dbc,available
+E01,0.15,初始P挡参考状态,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,0.1168,33.2,enum/raw,dbc/Model3CAN.dbc,available
+E01,0.15,初始P挡参考状态,IBST_internalState,0x39D,NO_MODE_ACTIVE,0.1168,33.2,enum/raw,dbc/Model3CAN.dbc,available
+E01,0.15,初始P挡参考状态,VCLEFT_brakeSwitchPressed,0x3C2,0.0,0.1317,18.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E01,0.15,初始P挡参考状态,BMS_socUI,0x292,32.5,0.0807,69.3,%,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,DI_gear,0x118,P,20.0728,1.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,DI_systemState,0x118,STANDBY,20.0728,1.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,DI_accelPedalPos,0x118,0.0,20.0728,1.9,%,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,DI_torqueCommand,0x108,0.0,20.0629,11.8,Nm,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,DI_torqueActual,0x108,0.0,20.0629,11.8,Nm,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,DI_axleSpeed,0x108,0.0,20.0629,11.8,RPM,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,DI_vehicleSpeed,0x257,0.0,20.0627,12.0,kph,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,DI_elecPower,0x266,0.0,20.0733,1.4,kW,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,BMS_packVoltage,0x132,347.41,20.0719,2.8,V,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,BMS_packCurrent,0x132,1.4000000000000001,20.0719,2.8,A,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,PackPower_derived,0x132,0.4863740000000001,20.0719,2.8,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E02,20.0747,制动施加状态出现,IBST_sInputRodDriver,0x39D,0.765625,20.0747,0.0,mm,dbc/Model3CAN.dbc,available
+E02,20.0747,制动施加状态出现,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,20.0747,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E02,20.0747,制动施加状态出现,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,20.0747,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E02,20.0747,制动施加状态出现,VCLEFT_brakeSwitchPressed,0x3C2,0.0,20.035,39.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E02,20.0747,制动施加状态出现,BMS_socUI,0x292,32.5,19.9811,93.6,%,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,DI_gear,0x118,D,20.3129,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,DI_systemState,0x118,ENABLE,20.3129,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,DI_accelPedalPos,0x118,0.0,20.3129,0.0,%,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,DI_torqueCommand,0x108,0.0,20.2629,50.0,Nm,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,DI_torqueActual,0x108,0.0,20.2629,50.0,Nm,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,DI_axleSpeed,0x108,-0.1,20.2629,50.0,RPM,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,DI_vehicleSpeed,0x257,0.0,20.3029,10.0,kph,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,DI_elecPower,0x266,0.0,20.3024,10.5,kW,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,BMS_packVoltage,0x132,347.40000000000003,20.3119,1.0,V,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,BMS_packCurrent,0x132,1.5,20.3119,1.0,A,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,PackPower_derived,0x132,0.5211,20.3119,1.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E03,20.3129,第1轮挂D,IBST_sInputRodDriver,0x39D,6.3125,20.2749,38.0,mm,dbc/Model3CAN.dbc,available
+E03,20.3129,第1轮挂D,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,20.2749,38.0,enum/raw,dbc/Model3CAN.dbc,available
+E03,20.3129,第1轮挂D,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,20.2749,38.0,enum/raw,dbc/Model3CAN.dbc,available
+E03,20.3129,第1轮挂D,VCLEFT_brakeSwitchPressed,0x3C2,1.0,20.2342,78.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E03,20.3129,第1轮挂D,BMS_socUI,0x292,32.5,20.2811,31.8,%,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,DI_gear,0x118,D,21.8727,2.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,DI_systemState,0x118,ENABLE,21.8727,2.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,DI_accelPedalPos,0x118,0.0,21.8727,2.0,%,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,DI_torqueCommand,0x108,0.0,21.8628,11.9,Nm,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,DI_torqueActual,0x108,0.0,21.8628,11.9,Nm,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,DI_axleSpeed,0x108,0.0,21.8628,11.9,RPM,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,DI_vehicleSpeed,0x257,0.0,21.8626,12.1,kph,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,DI_elecPower,0x266,0.0,21.8732,1.5,kW,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,BMS_packVoltage,0x132,347.39,21.8719,2.8,V,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,BMS_packCurrent,0x132,1.6,21.8719,2.8,A,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,PackPower_derived,0x132,0.555824,21.8719,2.8,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E04,21.8747,第1轮制动开关释放,IBST_sInputRodDriver,0x39D,1.90625,21.8349,39.8,mm,dbc/Model3CAN.dbc,available
+E04,21.8747,第1轮制动开关释放,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,21.8349,39.8,enum/raw,dbc/Model3CAN.dbc,available
+E04,21.8747,第1轮制动开关释放,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,21.8349,39.8,enum/raw,dbc/Model3CAN.dbc,available
+E04,21.8747,第1轮制动开关释放,VCLEFT_brakeSwitchPressed,0x3C2,0.0,21.8747,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E04,21.8747,第1轮制动开关释放,BMS_socUI,0x292,32.5,21.7918,82.9,%,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,DI_gear,0x118,D,21.9627,1.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,DI_systemState,0x118,ENABLE,21.9627,1.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,DI_accelPedalPos,0x118,0.0,21.9627,1.0,%,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,DI_torqueCommand,0x108,6.0,21.9637,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,DI_torqueActual,0x108,6.0,21.9637,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,DI_axleSpeed,0x108,0.1,21.9637,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,DI_vehicleSpeed,0x257,0.0,21.9438,19.9,kph,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,DI_elecPower,0x266,0.0,21.9635,0.2,kW,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,BMS_packVoltage,0x132,347.25,21.962,1.7,V,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,BMS_packCurrent,0x132,1.6,21.962,1.7,A,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,PackPower_derived,0x132,0.5556,21.962,1.7,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E05,21.9637,第1轮零电门正请求建立,IBST_sInputRodDriver,0x39D,1.171875,21.9547,9.0,mm,dbc/Model3CAN.dbc,available
+E05,21.9637,第1轮零电门正请求建立,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,21.9547,9.0,enum/raw,dbc/Model3CAN.dbc,available
+E05,21.9637,第1轮零电门正请求建立,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,21.9547,9.0,enum/raw,dbc/Model3CAN.dbc,available
+E05,21.9637,第1轮零电门正请求建立,VCLEFT_brakeSwitchPressed,0x3C2,0.0,21.9334,30.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E05,21.9637,第1轮零电门正请求建立,BMS_socUI,0x292,32.5,21.8941,69.6,%,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,DI_gear,0x118,D,22.0738,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,DI_systemState,0x118,ENABLE,22.0738,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,DI_accelPedalPos,0x118,0.0,22.0738,1.2,%,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,DI_torqueCommand,0x108,52.0,22.0642,10.8,Nm,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,DI_torqueActual,0x108,36.0,22.0642,10.8,Nm,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,DI_axleSpeed,0x108,2.9000000000000004,22.0642,10.8,RPM,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,DI_vehicleSpeed,0x257,0.240000000000002,22.0644,10.6,kph,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,DI_elecPower,0x266,0.0,22.0741,0.9,kW,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,BMS_packVoltage,0x132,347.16,22.0719,3.1,V,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,BMS_packCurrent,0x132,1.6,22.0719,3.1,A,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,PackPower_derived,0x132,0.5554560000000001,22.0719,3.1,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E06,22.075,制动施加状态解除,IBST_sInputRodDriver,0x39D,0.0,22.075,0.0,mm,dbc/Model3CAN.dbc,available
+E06,22.075,制动施加状态解除,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,22.075,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E06,22.075,制动施加状态解除,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,22.075,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E06,22.075,制动施加状态解除,VCLEFT_brakeSwitchPressed,0x3C2,0.0,22.0334,41.6,enum/raw,input/tesla_model3_ONYX.dbc,available
+E06,22.075,制动施加状态解除,BMS_socUI,0x292,32.5,21.9914,83.6,%,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,DI_gear,0x118,D,22.4829,1.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,DI_systemState,0x118,ENABLE,22.4829,1.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,DI_accelPedalPos,0x118,0.0,22.4829,1.9,%,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,DI_torqueCommand,0x108,342.0,22.464,20.8,Nm,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,DI_torqueActual,0x108,360.0,22.464,20.8,Nm,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,DI_axleSpeed,0x108,4.4,22.464,20.8,RPM,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,DI_vehicleSpeed,0x257,0.5600000000000023,22.4848,0.0,kph,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,DI_elecPower,0x266,0.5,22.4838,1.0,kW,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,BMS_packVoltage,0x132,347.35,22.482,2.8,V,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,BMS_packCurrent,0x132,2.6,22.482,2.8,A,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,PackPower_derived,0x132,0.9031100000000001,22.482,2.8,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E07,22.4848,第1轮观察到低速运动,IBST_sInputRodDriver,0x39D,0.015625,22.4792,5.6,mm,dbc/Model3CAN.dbc,available
+E07,22.4848,第1轮观察到低速运动,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,22.4792,5.6,enum/raw,dbc/Model3CAN.dbc,available
+E07,22.4848,第1轮观察到低速运动,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,22.4792,5.6,enum/raw,dbc/Model3CAN.dbc,available
+E07,22.4848,第1轮观察到低速运动,VCLEFT_brakeSwitchPressed,0x3C2,0.0,22.4337,51.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E07,22.4848,第1轮观察到低速运动,BMS_socUI,0x292,32.5,22.3915,93.3,%,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,DI_gear,0x118,D,27.4225,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,DI_systemState,0x118,ENABLE,27.4225,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,DI_accelPedalPos,0x118,0.4,27.4225,0.0,%,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,DI_torqueCommand,0x108,108.0,27.3642,58.3,Nm,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,DI_torqueActual,0x108,106.0,27.3642,58.3,Nm,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,DI_axleSpeed,0x108,48.5,27.3642,58.3,RPM,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,DI_vehicleSpeed,0x257,5.920000000000002,27.4035,19.0,kph,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,DI_elecPower,0x266,0.5,27.4141,8.4,kW,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,BMS_packVoltage,0x132,347.18,27.4223,0.2,V,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,BMS_packCurrent,0x132,3.1,27.4223,0.2,A,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,PackPower_derived,0x132,1.076258,27.4223,0.2,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E08,27.4225,第1轮开始踩电门,IBST_sInputRodDriver,0x39D,0.015625,27.395,27.5,mm,dbc/Model3CAN.dbc,available
+E08,27.4225,第1轮开始踩电门,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,27.395,27.5,enum/raw,dbc/Model3CAN.dbc,available
+E08,27.4225,第1轮开始踩电门,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,27.395,27.5,enum/raw,dbc/Model3CAN.dbc,available
+E08,27.4225,第1轮开始踩电门,VCLEFT_brakeSwitchPressed,0x3C2,0.0,27.3337,88.8,enum/raw,input/tesla_model3_ONYX.dbc,available
+E08,27.4225,第1轮开始踩电门,BMS_socUI,0x292,32.5,27.3917,30.8,%,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,DI_gear,0x118,D,29.1623,0.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,DI_systemState,0x118,ENABLE,29.1623,0.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,DI_accelPedalPos,0x118,12.0,29.1623,0.9,%,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,DI_torqueCommand,0x108,676.0,29.1632,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,DI_torqueActual,0x108,710.0,29.1632,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,DI_axleSpeed,0x108,76.5,29.1632,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,DI_vehicleSpeed,0x257,9.280000000000001,29.1431,20.1,kph,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,DI_elecPower,0x266,6.0,29.163,0.2,kW,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,BMS_packVoltage,0x132,346.16,29.1625,0.7,V,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,BMS_packCurrent,0x132,19.5,29.1625,0.7,A,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,PackPower_derived,0x132,6.750120000000001,29.1625,0.7,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E09,29.1632,第1轮实际扭矩峰值,IBST_sInputRodDriver,0x39D,0.0,29.1547,8.5,mm,dbc/Model3CAN.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,29.1547,8.5,enum/raw,dbc/Model3CAN.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,IBST_internalState,0x39D,TRANSITION_TO_IDLE,29.1547,8.5,enum/raw,dbc/Model3CAN.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,29.1339,29.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E09,29.1632,第1轮实际扭矩峰值,BMS_socUI,0x292,32.5,29.0913,71.9,%,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,DI_gear,0x118,D,29.262,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,DI_systemState,0x118,ENABLE,29.262,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,DI_accelPedalPos,0x118,12.0,29.262,1.2,%,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,DI_torqueCommand,0x108,684.0,29.2632,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,DI_torqueActual,0x108,692.0,29.2632,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,DI_axleSpeed,0x108,79.5,29.2632,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,DI_vehicleSpeed,0x257,9.68,29.2629,0.3,kph,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,DI_elecPower,0x266,6.5,29.2625,0.7,kW,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,BMS_packVoltage,0x132,346.01,29.2622,1.0,V,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,BMS_packCurrent,0x132,20.900000000000002,29.2622,1.0,A,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,PackPower_derived,0x132,7.231609000000001,29.2622,1.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E10,29.2632,第1轮请求峰值,IBST_sInputRodDriver,0x39D,0.0,29.2347,28.5,mm,dbc/Model3CAN.dbc,available
+E10,29.2632,第1轮请求峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,29.2347,28.5,enum/raw,dbc/Model3CAN.dbc,available
+E10,29.2632,第1轮请求峰值,IBST_internalState,0x39D,TRANSITION_TO_IDLE,29.2347,28.5,enum/raw,dbc/Model3CAN.dbc,available
+E10,29.2632,第1轮请求峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,29.2339,29.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E10,29.2632,第1轮请求峰值,BMS_socUI,0x292,32.5,29.1912,72.0,%,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,DI_gear,0x118,D,43.942,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,DI_systemState,0x118,ENABLE,43.942,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,DI_accelPedalPos,0x118,25.6,43.942,0.0,%,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,DI_torqueCommand,0x108,382.0,43.8631,78.9,Nm,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,DI_torqueActual,0x108,376.0,43.8631,78.9,Nm,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,DI_axleSpeed,0x108,222.60000000000002,43.8631,78.9,RPM,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,DI_vehicleSpeed,0x257,27.599999999999994,43.9229,19.1,kph,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,DI_elecPower,0x266,10.0,43.9331,8.9,kW,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,BMS_packVoltage,0x132,344.71,43.9324,9.6,V,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,BMS_packCurrent,0x132,30.8,43.9324,9.6,A,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,PackPower_derived,0x132,10.617068,43.9324,9.6,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E11,43.942,第1轮电门峰值,IBST_sInputRodDriver,0x39D,-0.015625,43.915,27.0,mm,dbc/Model3CAN.dbc,available
+E11,43.942,第1轮电门峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,43.915,27.0,enum/raw,dbc/Model3CAN.dbc,available
+E11,43.942,第1轮电门峰值,IBST_internalState,0x39D,NO_MODE_ACTIVE,43.915,27.0,enum/raw,dbc/Model3CAN.dbc,available
+E11,43.942,第1轮电门峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,43.9348,7.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E11,43.942,第1轮电门峰值,BMS_socUI,0x292,32.5,43.8943,47.7,%,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,DI_gear,0x118,D,44.2019,0.5,enum/raw,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,DI_systemState,0x118,ENABLE,44.2019,0.5,enum/raw,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,DI_accelPedalPos,0x118,25.200000000000003,44.2019,0.5,%,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,DI_torqueCommand,0x108,536.0,44.1631,39.3,Nm,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,DI_torqueActual,0x108,536.0,44.1631,39.3,Nm,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,DI_axleSpeed,0x108,228.20000000000002,44.1631,39.3,RPM,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,DI_vehicleSpeed,0x257,28.239999999999995,44.1824,20.0,kph,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,DI_elecPower,0x266,13.5,44.2024,0.0,kW,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,BMS_packVoltage,0x132,344.19,44.1928,9.6,V,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,BMS_packCurrent,0x132,40.5,44.1928,9.6,A,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,PackPower_derived,0x132,13.939695,44.1928,9.6,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E12,44.2024,第1轮电驱功率峰值,IBST_sInputRodDriver,0x39D,-0.015625,44.1952,7.2,mm,dbc/Model3CAN.dbc,available
+E12,44.2024,第1轮电驱功率峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,44.1952,7.2,enum/raw,dbc/Model3CAN.dbc,available
+E12,44.2024,第1轮电驱功率峰值,IBST_internalState,0x39D,NO_MODE_ACTIVE,44.1952,7.2,enum/raw,dbc/Model3CAN.dbc,available
+E12,44.2024,第1轮电驱功率峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,44.1348,67.6,enum/raw,input/tesla_model3_ONYX.dbc,available
+E12,44.2024,第1轮电驱功率峰值,BMS_socUI,0x292,32.5,44.1926,9.8,%,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,DI_gear,0x118,D,44.3223,0.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,DI_systemState,0x118,ENABLE,44.3223,0.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,DI_accelPedalPos,0x118,25.200000000000003,44.3223,0.2,%,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,DI_torqueCommand,0x108,530.0,44.2635,59.0,Nm,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,DI_torqueActual,0x108,530.0,44.2635,59.0,Nm,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,DI_axleSpeed,0x108,229.70000000000002,44.2635,59.0,RPM,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,DI_vehicleSpeed,0x257,28.560000000000002,44.3024,20.1,kph,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,DI_elecPower,0x266,13.0,44.3135,9.0,kW,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,BMS_packVoltage,0x132,344.19,44.3225,0.0,V,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,BMS_packCurrent,0x132,41.0,44.3225,0.0,A,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,PackPower_derived,0x132,14.11179,44.3225,0.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E13,44.3225,第1轮Pack放电电流峰值,IBST_sInputRodDriver,0x39D,-0.015625,44.315,7.5,mm,dbc/Model3CAN.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,44.315,7.5,enum/raw,dbc/Model3CAN.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,IBST_internalState,0x39D,NO_MODE_ACTIVE,44.315,7.5,enum/raw,dbc/Model3CAN.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,44.2348,87.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E13,44.3225,第1轮Pack放电电流峰值,BMS_socUI,0x292,32.5,44.2925,30.0,%,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,DI_gear,0x118,D,44.9223,0.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,DI_systemState,0x118,ENABLE,44.9223,0.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,DI_accelPedalPos,0x118,24.8,44.9223,0.7,%,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,DI_torqueCommand,0x108,506.0,44.8632,59.8,Nm,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,DI_torqueActual,0x108,508.0,44.8632,59.8,Nm,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,DI_axleSpeed,0x108,240.9,44.8632,59.8,RPM,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,DI_vehicleSpeed,0x257,30.0,44.923,0.0,kph,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,DI_elecPower,0x266,13.0,44.9227,0.3,kW,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,BMS_packVoltage,0x132,343.97,44.9225,0.5,V,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,BMS_packCurrent,0x132,40.5,44.9225,0.5,A,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,PackPower_derived,0x132,13.930785000000002,44.9225,0.5,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E14,44.923,第1轮首次达到30 km/h,IBST_sInputRodDriver,0x39D,-0.015625,44.9152,7.8,mm,dbc/Model3CAN.dbc,available
+E14,44.923,第1轮首次达到30 km/h,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,44.9152,7.8,enum/raw,dbc/Model3CAN.dbc,available
+E14,44.923,第1轮首次达到30 km/h,IBST_internalState,0x39D,NO_MODE_ACTIVE,44.9152,7.8,enum/raw,dbc/Model3CAN.dbc,available
+E14,44.923,第1轮首次达到30 km/h,VCLEFT_brakeSwitchPressed,0x3C2,0.0,44.835,88.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E14,44.923,第1轮首次达到30 km/h,BMS_socUI,0x292,32.5,44.8945,28.5,%,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,DI_gear,0x118,D,51.1809,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,DI_systemState,0x118,ENABLE,51.1809,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,DI_accelPedalPos,0x118,18.400000000000002,51.1809,1.2,%,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,DI_torqueCommand,0x108,106.0,51.1618,20.3,Nm,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,DI_torqueActual,0x108,104.0,51.1618,20.3,Nm,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,DI_axleSpeed,0x108,279.40000000000003,51.1618,20.3,RPM,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,DI_vehicleSpeed,0x257,34.72,51.1821,0.0,kph,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,DI_elecPower,0x266,3.0,51.1816,0.5,kW,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,BMS_packVoltage,0x132,346.06,51.1726,9.5,V,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,BMS_packCurrent,0x132,10.9,51.1726,9.5,A,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,PackPower_derived,0x132,3.7720540000000002,51.1726,9.5,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E15,51.1821,第1轮车速峰值,IBST_sInputRodDriver,0x39D,0.0,51.1554,26.7,mm,dbc/Model3CAN.dbc,available
+E15,51.1821,第1轮车速峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,51.1554,26.7,enum/raw,dbc/Model3CAN.dbc,available
+E15,51.1821,第1轮车速峰值,IBST_internalState,0x39D,TRANSITION_TO_IDLE,51.1554,26.7,enum/raw,dbc/Model3CAN.dbc,available
+E15,51.1821,第1轮车速峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,51.1353,46.8,enum/raw,input/tesla_model3_ONYX.dbc,available
+E15,51.1821,第1轮车速峰值,BMS_socUI,0x292,32.5,51.0927,89.4,%,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,DI_gear,0x118,D,51.7609,1.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,DI_systemState,0x118,ENABLE,51.7609,1.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,DI_accelPedalPos,0x118,15.600000000000001,51.7609,1.1,%,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,DI_torqueCommand,0x108,-10.0,51.762,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,DI_torqueActual,0x108,-10.0,51.762,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,DI_axleSpeed,0x108,273.6,51.762,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,DI_vehicleSpeed,0x257,34.64,51.7421,19.9,kph,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,DI_elecPower,0x266,0.0,51.7618,0.2,kW,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,BMS_packVoltage,0x132,346.74,51.7527,9.3,V,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,BMS_packCurrent,0x132,1.5,51.7527,9.3,A,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,PackPower_derived,0x132,0.52011,51.7527,9.3,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E16,51.762,第1轮请求转负,IBST_sInputRodDriver,0x39D,0.0,51.7554,6.6,mm,dbc/Model3CAN.dbc,available
+E16,51.762,第1轮请求转负,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,51.7554,6.6,enum/raw,dbc/Model3CAN.dbc,available
+E16,51.762,第1轮请求转负,IBST_internalState,0x39D,TRANSITION_TO_IDLE,51.7554,6.6,enum/raw,dbc/Model3CAN.dbc,available
+E16,51.762,第1轮请求转负,VCLEFT_brakeSwitchPressed,0x3C2,0.0,51.7353,26.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E16,51.762,第1轮请求转负,BMS_socUI,0x292,32.5,51.6927,69.3,%,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,DI_gear,0x118,D,51.9007,2.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,DI_systemState,0x118,ENABLE,51.9007,2.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,DI_accelPedalPos,0x118,15.600000000000001,51.9007,2.1,%,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,DI_torqueCommand,0x108,-22.0,51.8616,41.2,Nm,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,DI_torqueActual,0x108,18.0,51.8616,41.2,Nm,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,DI_axleSpeed,0x108,271.90000000000003,51.8616,41.2,RPM,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,DI_vehicleSpeed,0x257,34.56,51.9018,1.0,kph,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,DI_elecPower,0x266,-0.5,51.901,1.8,kW,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,BMS_packVoltage,0x132,347.04,51.9028,0.0,V,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,BMS_packCurrent,0x132,-0.1,51.9028,0.0,A,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,PackPower_derived,0x132,-0.034704,51.9028,0.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,IBST_sInputRodDriver,0x39D,0.0,51.8752,27.6,mm,dbc/Model3CAN.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,51.8752,27.6,enum/raw,dbc/Model3CAN.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,IBST_internalState,0x39D,TRANSITION_TO_IDLE,51.8752,27.6,enum/raw,dbc/Model3CAN.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,VCLEFT_brakeSwitchPressed,0x3C2,0.0,51.8357,67.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E17,51.9028,第1轮负请求期间首次观察到Pack净回收,BMS_socUI,0x292,32.5,51.8945,8.3,%,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,DI_gear,0x118,D,57.7601,1.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,DI_systemState,0x118,ENABLE,57.7601,1.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,DI_accelPedalPos,0x118,18.8,57.7601,1.0,%,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,DI_torqueCommand,0x108,10.0,57.7611,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,DI_torqueActual,0x108,10.0,57.7611,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,DI_axleSpeed,0x108,231.8,57.7611,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,DI_vehicleSpeed,0x257,28.799999999999997,57.7404,20.7,kph,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,DI_elecPower,0x266,0.0,57.7604,0.7,kW,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,BMS_packVoltage,0x132,347.21,57.7529,8.2,V,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,BMS_packCurrent,0x132,1.5,57.7529,8.2,A,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,PackPower_derived,0x132,0.5208149999999999,57.7529,8.2,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E18,57.7611,第1轮请求退出负值,IBST_sInputRodDriver,0x39D,-0.015625,57.7557,5.4,mm,dbc/Model3CAN.dbc,available
+E18,57.7611,第1轮请求退出负值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,57.7557,5.4,enum/raw,dbc/Model3CAN.dbc,available
+E18,57.7611,第1轮请求退出负值,IBST_internalState,0x39D,NO_MODE_ACTIVE,57.7557,5.4,enum/raw,dbc/Model3CAN.dbc,available
+E18,57.7611,第1轮请求退出负值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,57.7357,25.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E18,57.7611,第1轮请求退出负值,BMS_socUI,0x292,32.5,57.6924,68.7,%,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,DI_gear,0x118,D,71.9592,0.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,DI_systemState,0x118,ENABLE,71.9592,0.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,DI_accelPedalPos,0x118,4.800000000000001,71.9592,0.9,%,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,DI_torqueCommand,0x108,-40.0,71.9601,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,DI_torqueActual,0x108,-26.0,71.9601,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,DI_axleSpeed,0x108,241.0,71.9601,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,DI_vehicleSpeed,0x257,30.560000000000002,71.9395,20.6,kph,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,DI_elecPower,0x266,0.0,71.9594,0.7,kW,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,BMS_packVoltage,0x132,347.17,71.953,7.1,V,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,BMS_packCurrent,0x132,0.9,71.953,7.1,A,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,PackPower_derived,0x132,0.31245300000000004,71.953,7.1,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E19,71.9601,第1轮请求转负,IBST_sInputRodDriver,0x39D,0.0,71.9559,4.2,mm,dbc/Model3CAN.dbc,available
+E19,71.9601,第1轮请求转负,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,71.9559,4.2,enum/raw,dbc/Model3CAN.dbc,available
+E19,71.9601,第1轮请求转负,IBST_internalState,0x39D,TRANSITION_TO_IDLE,71.9559,4.2,enum/raw,dbc/Model3CAN.dbc,available
+E19,71.9601,第1轮请求转负,VCLEFT_brakeSwitchPressed,0x3C2,0.0,71.9366,23.5,enum/raw,input/tesla_model3_ONYX.dbc,available
+E19,71.9601,第1轮请求转负,BMS_socUI,0x292,32.5,71.8948,65.3,%,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,DI_gear,0x118,D,72.019,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,DI_systemState,0x118,ENABLE,72.019,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,DI_accelPedalPos,0x118,0.0,72.019,0.0,%,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,DI_torqueCommand,0x108,-40.0,71.9601,58.9,Nm,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,DI_torqueActual,0x108,-26.0,71.9601,58.9,Nm,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,DI_axleSpeed,0x108,241.0,71.9601,58.9,RPM,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,DI_vehicleSpeed,0x257,30.560000000000002,71.9994,19.6,kph,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,DI_elecPower,0x266,-0.5,72.0104,8.6,kW,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,BMS_packVoltage,0x132,347.09000000000003,72.0131,5.9,V,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,BMS_packCurrent,0x132,0.5,72.0131,5.9,A,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,PackPower_derived,0x132,0.173545,72.0131,5.9,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E20,72.019,第1轮电门完全归零,IBST_sInputRodDriver,0x39D,0.0,71.9959,23.1,mm,dbc/Model3CAN.dbc,available
+E20,72.019,第1轮电门完全归零,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,71.9959,23.1,enum/raw,dbc/Model3CAN.dbc,available
+E20,72.019,第1轮电门完全归零,IBST_internalState,0x39D,TRANSITION_TO_IDLE,71.9959,23.1,enum/raw,dbc/Model3CAN.dbc,available
+E20,72.019,第1轮电门完全归零,VCLEFT_brakeSwitchPressed,0x3C2,0.0,71.9366,82.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E20,72.019,第1轮电门完全归零,BMS_socUI,0x292,32.5,71.9927,26.3,%,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,DI_gear,0x118,D,72.019,4.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,DI_systemState,0x118,ENABLE,72.019,4.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,DI_accelPedalPos,0x118,0.0,72.019,4.0,%,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,DI_torqueCommand,0x108,-40.0,71.9601,62.9,Nm,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,DI_torqueActual,0x108,-26.0,71.9601,62.9,Nm,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,DI_axleSpeed,0x108,241.0,71.9601,62.9,RPM,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,DI_vehicleSpeed,0x257,30.560000000000002,72.0202,2.8,kph,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,DI_elecPower,0x266,-1.0,72.0197,3.3,kW,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,BMS_packVoltage,0x132,347.16,72.023,0.0,V,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,BMS_packCurrent,0x132,-0.7000000000000001,72.023,0.0,A,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,PackPower_derived,0x132,-0.24301200000000003,72.023,0.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,IBST_sInputRodDriver,0x39D,0.0,71.9959,27.1,mm,dbc/Model3CAN.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,71.9959,27.1,enum/raw,dbc/Model3CAN.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,IBST_internalState,0x39D,TRANSITION_TO_IDLE,71.9959,27.1,enum/raw,dbc/Model3CAN.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,VCLEFT_brakeSwitchPressed,0x3C2,0.0,71.9366,86.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E21,72.023,第1轮负请求期间首次观察到Pack净回收,BMS_socUI,0x292,32.5,71.9927,30.3,%,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,DI_gear,0x118,D,75.03,6.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,DI_systemState,0x118,ENABLE,75.03,6.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,DI_accelPedalPos,0x118,0.0,75.03,6.1,%,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,DI_torqueCommand,0x108,-528.0,74.9609,75.2,Nm,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,DI_torqueActual,0x108,-524.0,74.9609,75.2,Nm,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,DI_axleSpeed,0x108,158.60000000000002,74.9609,75.2,RPM,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,DI_vehicleSpeed,0x257,20.08,75.0206,15.5,kph,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,DI_elecPower,0x266,-8.5,75.0303,5.8,kW,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,BMS_packVoltage,0x132,349.05,75.0331,3.0,V,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,BMS_packCurrent,0x132,-22.200000000000003,75.0331,3.0,A,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,PackPower_derived,0x132,-7.748910000000001,75.0331,3.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E22,75.0361,制动施加状态出现,IBST_sInputRodDriver,0x39D,0.59375,75.0361,0.0,mm,dbc/Model3CAN.dbc,available
+E22,75.0361,制动施加状态出现,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,75.0361,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E22,75.0361,制动施加状态出现,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,75.0361,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E22,75.0361,制动施加状态出现,VCLEFT_brakeSwitchPressed,0x3C2,0.0,74.9371,99.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E22,75.0361,制动施加状态出现,BMS_socUI,0x292,32.5,74.9927,43.4,%,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,DI_gear,0x118,D,77.459,1.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,DI_systemState,0x118,ENABLE,77.459,1.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,DI_accelPedalPos,0x118,0.0,77.459,1.4,%,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,DI_torqueCommand,0x108,0.0,77.4604,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,DI_torqueActual,0x108,-6.0,77.4604,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,DI_axleSpeed,0x108,57.900000000000006,77.4604,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,DI_vehicleSpeed,0x257,7.359999999999999,77.4406,19.8,kph,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,DI_elecPower,0x266,0.0,77.4597,0.7,kW,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,BMS_packVoltage,0x132,347.22,77.4533,7.1,V,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,BMS_packCurrent,0x132,1.3,77.4533,7.1,A,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,PackPower_derived,0x132,0.451386,77.4533,7.1,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E23,77.4604,第1轮请求退出负值,IBST_sInputRodDriver,0x39D,5.109375,77.4363,24.1,mm,dbc/Model3CAN.dbc,available
+E23,77.4604,第1轮请求退出负值,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,77.4363,24.1,enum/raw,dbc/Model3CAN.dbc,available
+E23,77.4604,第1轮请求退出负值,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,77.4363,24.1,enum/raw,dbc/Model3CAN.dbc,available
+E23,77.4604,第1轮请求退出负值,VCLEFT_brakeSwitchPressed,0x3C2,1.0,77.4372,23.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E23,77.4604,第1轮请求退出负值,BMS_socUI,0x292,32.5,77.3931,67.3,%,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,DI_gear,0x118,D,78.5384,0.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,DI_systemState,0x118,ENABLE,78.5384,0.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,DI_accelPedalPos,0x118,0.0,78.5384,0.7,%,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,DI_torqueCommand,0x108,0.0,78.4594,79.7,Nm,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,DI_torqueActual,0x108,0.0,78.4594,79.7,Nm,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,DI_axleSpeed,0x108,6.300000000000001,78.4594,79.7,RPM,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,DI_vehicleSpeed,0x257,0.480000000000004,78.5391,0.0,kph,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,DI_elecPower,0x266,0.0,78.5389,0.2,kW,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,BMS_packVoltage,0x132,347.21,78.5333,5.8,V,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,BMS_packCurrent,0x132,1.3,78.5333,5.8,A,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,PackPower_derived,0x132,0.45137299999999997,78.5333,5.8,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E24,78.5391,第1轮减速至近零车速,IBST_sInputRodDriver,0x39D,6.03125,78.5162,22.9,mm,dbc/Model3CAN.dbc,available
+E24,78.5391,第1轮减速至近零车速,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,78.5162,22.9,enum/raw,dbc/Model3CAN.dbc,available
+E24,78.5391,第1轮减速至近零车速,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,78.5162,22.9,enum/raw,dbc/Model3CAN.dbc,available
+E24,78.5391,第1轮减速至近零车速,VCLEFT_brakeSwitchPressed,0x3C2,1.0,78.5375,1.6,enum/raw,input/tesla_model3_ONYX.dbc,available
+E24,78.5391,第1轮减速至近零车速,BMS_socUI,0x292,32.5,78.4931,46.0,%,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,DI_gear,0x118,P,78.7495,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,DI_systemState,0x118,STANDBY,78.7495,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,DI_accelPedalPos,0x118,0.0,78.7495,0.0,%,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,DI_torqueCommand,0x108,0.0,78.6594,90.1,Nm,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,DI_torqueActual,0x108,0.0,78.6594,90.1,Nm,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,DI_axleSpeed,0x108,-1.7000000000000002,78.6594,90.1,RPM,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,DI_vehicleSpeed,0x257,-0.1599999999999966,78.7389,10.6,kph,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,DI_elecPower,0x266,0.0,78.7386,10.9,kW,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,BMS_packVoltage,0x132,347.07,78.7433,6.2,V,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,BMS_packCurrent,0x132,1.4000000000000001,78.7433,6.2,A,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,PackPower_derived,0x132,0.48589800000000005,78.7433,6.2,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E25,78.7495,第1轮回P,IBST_sInputRodDriver,0x39D,5.71875,78.7162,33.3,mm,dbc/Model3CAN.dbc,available
+E25,78.7495,第1轮回P,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,78.7162,33.3,enum/raw,dbc/Model3CAN.dbc,available
+E25,78.7495,第1轮回P,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,78.7162,33.3,enum/raw,dbc/Model3CAN.dbc,available
+E25,78.7495,第1轮回P,VCLEFT_brakeSwitchPressed,0x3C2,1.0,78.7372,12.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E25,78.7495,第1轮回P,BMS_socUI,0x292,32.5,78.6924,57.1,%,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,DI_gear,0x118,P,84.3888,7.5,enum/raw,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,DI_systemState,0x118,STANDBY,84.3888,7.5,enum/raw,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,DI_accelPedalPos,0x118,0.0,84.3888,7.5,%,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,DI_torqueCommand,0x108,0.0,84.3589,37.4,Nm,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,DI_torqueActual,0x108,0.0,84.3589,37.4,Nm,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,DI_axleSpeed,0x108,-0.1,84.3589,37.4,RPM,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,DI_vehicleSpeed,0x257,0.0,84.3785,17.8,kph,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,DI_elecPower,0x266,0.0,84.3893,7.0,kW,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,BMS_packVoltage,0x132,346.99,84.3937,2.6,V,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,BMS_packCurrent,0x132,1.3,84.3937,2.6,A,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,PackPower_derived,0x132,0.45108700000000007,84.3937,2.6,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E26,84.3963,制动施加状态解除,IBST_sInputRodDriver,0x39D,0.453125,84.3963,0.0,mm,dbc/Model3CAN.dbc,available
+E26,84.3963,制动施加状态解除,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,84.3963,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E26,84.3963,制动施加状态解除,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,84.3963,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E26,84.3963,制动施加状态解除,VCLEFT_brakeSwitchPressed,0x3C2,0.0,84.3376,58.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E26,84.3963,制动施加状态解除,BMS_socUI,0x292,32.5,84.3925,3.8,%,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,DI_gear,0x118,P,93.9883,8.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,DI_systemState,0x118,STANDBY,93.9883,8.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,DI_accelPedalPos,0x118,0.0,93.9883,8.3,%,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,DI_torqueCommand,0x108,0.0,93.9586,38.0,Nm,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,DI_torqueActual,0x108,0.0,93.9586,38.0,Nm,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,DI_axleSpeed,0x108,0.0,93.9586,38.0,RPM,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,DI_vehicleSpeed,0x257,0.0,93.978,18.6,kph,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,DI_elecPower,0x266,0.0,93.9888,7.8,kW,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,BMS_packVoltage,0x132,347.36,93.9939,2.7,V,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,BMS_packCurrent,0x132,1.2000000000000002,93.9939,2.7,A,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,PackPower_derived,0x132,0.41683200000000004,93.9939,2.7,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E27,93.9966,制动施加状态出现,IBST_sInputRodDriver,0x39D,0.578125,93.9966,0.0,mm,dbc/Model3CAN.dbc,available
+E27,93.9966,制动施加状态出现,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,93.9966,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E27,93.9966,制动施加状态出现,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,93.9966,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E27,93.9966,制动施加状态出现,VCLEFT_brakeSwitchPressed,0x3C2,0.0,93.9392,57.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E27,93.9966,制动施加状态出现,BMS_socUI,0x292,32.5,93.9932,3.4,%,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,DI_gear,0x118,D,94.5083,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,DI_systemState,0x118,ENABLE,94.5083,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,DI_accelPedalPos,0x118,0.0,94.5083,0.0,%,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,DI_torqueCommand,0x108,0.0,94.4585,49.8,Nm,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,DI_torqueActual,0x108,0.0,94.4585,49.8,Nm,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,DI_axleSpeed,0x108,0.0,94.4585,49.8,RPM,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,DI_vehicleSpeed,0x257,0.0,94.4977,10.6,kph,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,DI_elecPower,0x266,0.0,94.4975,10.8,kW,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,BMS_packVoltage,0x132,347.31,94.5036,4.7,V,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,BMS_packCurrent,0x132,1.4000000000000001,94.5036,4.7,A,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,PackPower_derived,0x132,0.48623400000000006,94.5036,4.7,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E28,94.5083,第2轮挂D,IBST_sInputRodDriver,0x39D,6.875,94.477,31.3,mm,dbc/Model3CAN.dbc,available
+E28,94.5083,第2轮挂D,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,94.477,31.3,enum/raw,dbc/Model3CAN.dbc,available
+E28,94.5083,第2轮挂D,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,94.477,31.3,enum/raw,dbc/Model3CAN.dbc,available
+E28,94.5083,第2轮挂D,VCLEFT_brakeSwitchPressed,0x3C2,1.0,94.44,68.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E28,94.5083,第2轮挂D,BMS_socUI,0x292,32.5,94.4925,15.8,%,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,DI_gear,0x118,D,97.4773,3.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,DI_systemState,0x118,ENABLE,97.4773,3.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,DI_accelPedalPos,0x118,0.0,97.4773,3.3,%,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,DI_torqueCommand,0x108,0.0,97.4581,22.5,Nm,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,DI_torqueActual,0x108,0.0,97.4581,22.5,Nm,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,DI_axleSpeed,0x108,0.0,97.4581,22.5,RPM,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,DI_vehicleSpeed,0x257,0.0,97.4787,1.9,kph,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,DI_elecPower,0x266,0.0,97.4778,2.8,kW,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,BMS_packVoltage,0x132,347.25,97.4737,6.9,V,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,BMS_packCurrent,0x132,1.4000000000000001,97.4737,6.9,A,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,PackPower_derived,0x132,0.48615,97.4737,6.9,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E29,97.4806,第2轮制动开关释放,IBST_sInputRodDriver,0x39D,1.765625,97.477,3.6,mm,dbc/Model3CAN.dbc,available
+E29,97.4806,第2轮制动开关释放,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,97.477,3.6,enum/raw,dbc/Model3CAN.dbc,available
+E29,97.4806,第2轮制动开关释放,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,97.477,3.6,enum/raw,dbc/Model3CAN.dbc,available
+E29,97.4806,第2轮制动开关释放,VCLEFT_brakeSwitchPressed,0x3C2,0.0,97.4806,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E29,97.4806,第2轮制动开关释放,BMS_socUI,0x292,32.5,97.3828,97.8,%,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,DI_gear,0x118,D,97.5581,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,DI_systemState,0x118,ENABLE,97.5581,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,DI_accelPedalPos,0x118,0.0,97.5581,1.2,%,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,DI_torqueCommand,0x108,6.0,97.5593,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,DI_torqueActual,0x108,8.0,97.5593,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,DI_axleSpeed,0x108,0.1,97.5593,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,DI_vehicleSpeed,0x257,0.0,97.5591,0.2,kph,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,DI_elecPower,0x266,0.0,97.5586,0.7,kW,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,BMS_packVoltage,0x132,347.3,97.5536,5.7,V,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,BMS_packCurrent,0x132,1.3,97.5536,5.7,A,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,PackPower_derived,0x132,0.45149,97.5536,5.7,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E30,97.5593,第2轮零电门正请求建立,IBST_sInputRodDriver,0x39D,1.140625,97.5568,2.5,mm,dbc/Model3CAN.dbc,available
+E30,97.5593,第2轮零电门正请求建立,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,97.5568,2.5,enum/raw,dbc/Model3CAN.dbc,available
+E30,97.5593,第2轮零电门正请求建立,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,97.5568,2.5,enum/raw,dbc/Model3CAN.dbc,available
+E30,97.5593,第2轮零电门正请求建立,VCLEFT_brakeSwitchPressed,0x3C2,0.0,97.539,20.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E30,97.5593,第2轮零电门正请求建立,BMS_socUI,0x292,32.5,97.4831,76.2,%,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,DI_gear,0x118,D,97.8691,7.6,enum/raw,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,DI_systemState,0x118,ENABLE,97.8691,7.6,enum/raw,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,DI_accelPedalPos,0x118,0.0,97.8691,7.6,%,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,DI_torqueCommand,0x108,194.0,97.8593,17.4,Nm,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,DI_torqueActual,0x108,210.0,97.8593,17.4,Nm,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,DI_axleSpeed,0x108,1.4000000000000001,97.8593,17.4,RPM,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,DI_vehicleSpeed,0x257,0.1600000000000037,97.8591,17.6,kph,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,DI_elecPower,0x266,0.0,97.8696,7.1,kW,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,BMS_packVoltage,0x132,347.16,97.8737,3.0,V,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,BMS_packCurrent,0x132,1.6,97.8737,3.0,A,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,PackPower_derived,0x132,0.5554560000000001,97.8737,3.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E31,97.8767,制动施加状态解除,IBST_sInputRodDriver,0x39D,0.234375,97.8767,0.0,mm,dbc/Model3CAN.dbc,available
+E31,97.8767,制动施加状态解除,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,97.8767,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E31,97.8767,制动施加状态解除,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,97.8767,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E31,97.8767,制动施加状态解除,VCLEFT_brakeSwitchPressed,0x3C2,0.0,97.8387,38.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E31,97.8767,制动施加状态解除,BMS_socUI,0x292,32.5,97.7832,93.5,%,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,DI_gear,0x118,D,98.0291,7.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,DI_systemState,0x118,ENABLE,98.0291,7.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,DI_accelPedalPos,0x118,0.0,98.0291,7.7,%,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,DI_torqueCommand,0x108,274.0,97.9593,77.5,Nm,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,DI_torqueActual,0x108,276.0,97.9593,77.5,Nm,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,DI_axleSpeed,0x108,3.4000000000000004,97.9593,77.5,RPM,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,DI_vehicleSpeed,0x257,0.480000000000004,98.0195,17.3,kph,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,DI_elecPower,0x266,0.5,98.0294,7.4,kW,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,BMS_packVoltage,0x132,347.21,98.0336,3.2,V,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,BMS_packCurrent,0x132,2.4000000000000004,98.0336,3.2,A,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,PackPower_derived,0x132,0.833304,98.0336,3.2,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E32,98.0368,制动施加状态出现,IBST_sInputRodDriver,0x39D,0.40625,98.0368,0.0,mm,dbc/Model3CAN.dbc,available
+E32,98.0368,制动施加状态出现,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,98.0368,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E32,98.0368,制动施加状态出现,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,98.0368,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E32,98.0368,制动施加状态出现,VCLEFT_brakeSwitchPressed,0x3C2,0.0,97.9388,98.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E32,98.0368,制动施加状态出现,BMS_socUI,0x292,32.5,97.983,53.8,%,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,DI_gear,0x118,D,98.0981,0.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,DI_systemState,0x118,ENABLE,98.0981,0.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,DI_accelPedalPos,0x118,0.0,98.0981,0.7,%,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,DI_torqueCommand,0x108,342.0,98.0593,39.5,Nm,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,DI_torqueActual,0x108,368.0,98.0593,39.5,Nm,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,DI_axleSpeed,0x108,4.3,98.0593,39.5,RPM,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,DI_vehicleSpeed,0x257,0.5600000000000023,98.0988,0.0,kph,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,DI_elecPower,0x266,0.5,98.0986,0.2,kW,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,BMS_packVoltage,0x132,347.19,98.094,4.8,V,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,BMS_packCurrent,0x132,2.5,98.094,4.8,A,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,PackPower_derived,0x132,0.867975,98.094,4.8,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E33,98.0988,第2轮观察到低速运动,IBST_sInputRodDriver,0x39D,0.40625,98.0767,22.1,mm,dbc/Model3CAN.dbc,available
+E33,98.0988,第2轮观察到低速运动,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,98.0767,22.1,enum/raw,dbc/Model3CAN.dbc,available
+E33,98.0988,第2轮观察到低速运动,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,98.0767,22.1,enum/raw,dbc/Model3CAN.dbc,available
+E33,98.0988,第2轮观察到低速运动,VCLEFT_brakeSwitchPressed,0x3C2,0.0,98.0388,60.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E33,98.0988,第2轮观察到低速运动,BMS_socUI,0x292,32.5,98.0923,6.5,%,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,DI_gear,0x118,D,98.2585,1.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,DI_systemState,0x118,ENABLE,98.2585,1.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,DI_accelPedalPos,0x118,0.0,98.2585,1.0,%,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,DI_torqueCommand,0x108,382.0,98.2595,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,DI_torqueActual,0x108,388.0,98.2595,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,DI_axleSpeed,0x108,6.300000000000001,98.2595,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,DI_vehicleSpeed,0x257,0.7199999999999989,98.239,20.5,kph,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,DI_elecPower,0x266,0.5,98.2592,0.3,kW,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,BMS_packVoltage,0x132,347.3,98.2536,5.9,V,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,BMS_packCurrent,0x132,2.6,98.2536,5.9,A,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,PackPower_derived,0x132,0.90298,98.2536,5.9,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E34,98.2595,补踩制动：请求仍处高值,IBST_sInputRodDriver,0x39D,0.640625,98.2368,22.7,mm,dbc/Model3CAN.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,98.2368,22.7,enum/raw,dbc/Model3CAN.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,98.2368,22.7,enum/raw,dbc/Model3CAN.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,98.2385,21.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E34,98.2595,补踩制动：请求仍处高值,BMS_socUI,0x292,32.5,98.1932,66.3,%,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,DI_gear,0x118,D,98.6691,7.6,enum/raw,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,DI_systemState,0x118,ENABLE,98.6691,7.6,enum/raw,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,DI_accelPedalPos,0x118,0.0,98.6691,7.6,%,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,DI_torqueCommand,0x108,364.0,98.6593,17.4,Nm,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,DI_torqueActual,0x108,426.0,98.6593,17.4,Nm,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,DI_axleSpeed,0x108,8.1,98.6593,17.4,RPM,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,DI_vehicleSpeed,0x257,1.1199999999999974,98.6591,17.6,kph,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,DI_elecPower,0x266,0.5,98.6696,7.1,kW,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,BMS_packVoltage,0x132,347.19,98.6736,3.1,V,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,BMS_packCurrent,0x132,3.5,98.6736,3.1,A,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,PackPower_derived,0x132,1.215165,98.6736,3.1,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E35,98.6767,补踩制动：输入杆行程峰值,IBST_sInputRodDriver,0x39D,3.9375,98.6767,0.0,mm,dbc/Model3CAN.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,98.6767,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,98.6767,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,VCLEFT_brakeSwitchPressed,0x3C2,1.0,98.6389,37.8,enum/raw,input/tesla_model3_ONYX.dbc,available
+E35,98.6767,补踩制动：输入杆行程峰值,BMS_socUI,0x292,32.5,98.5932,83.5,%,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,DI_gear,0x118,D,99.458,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,DI_systemState,0x118,ENABLE,99.458,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,DI_accelPedalPos,0x118,0.0,99.458,1.2,%,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,DI_torqueCommand,0x108,62.0,99.4592,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,DI_torqueActual,0x108,104.0,99.4592,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,DI_axleSpeed,0x108,-1.5,99.4592,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,DI_vehicleSpeed,0x257,-0.1599999999999966,99.439,20.2,kph,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,DI_elecPower,0x266,0.0,99.4589,0.3,kW,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,BMS_packVoltage,0x132,347.13,99.4536,5.6,V,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,BMS_packCurrent,0x132,1.5,99.4536,5.6,A,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,PackPower_derived,0x132,0.5206949999999999,99.4536,5.6,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E36,99.4592,补踩制动：正请求降至62 Nm,IBST_sInputRodDriver,0x39D,3.703125,99.4368,22.4,mm,dbc/Model3CAN.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,99.4368,22.4,enum/raw,dbc/Model3CAN.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,99.4368,22.4,enum/raw,dbc/Model3CAN.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,VCLEFT_brakeSwitchPressed,0x3C2,1.0,99.4395,19.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E36,99.4592,补踩制动：正请求降至62 Nm,BMS_socUI,0x292,32.5,99.3933,65.9,%,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,DI_gear,0x118,D,99.6585,0.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,DI_systemState,0x118,ENABLE,99.6585,0.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,DI_accelPedalPos,0x118,0.0,99.6585,0.9,%,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,DI_torqueCommand,0x108,110.0,99.6594,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,DI_torqueActual,0x108,90.0,99.6594,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,DI_axleSpeed,0x108,0.4,99.6594,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,DI_vehicleSpeed,0x257,0.0,99.6592,0.2,kph,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,DI_elecPower,0x266,0.0,99.6587,0.7,kW,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,BMS_packVoltage,0x132,347.21,99.6536,5.8,V,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,BMS_packCurrent,0x132,1.5,99.6536,5.8,A,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,PackPower_derived,0x132,0.5208149999999999,99.6536,5.8,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E37,99.6594,输入杆回落中请求已恢复,IBST_sInputRodDriver,0x39D,3.09375,99.6368,22.6,mm,dbc/Model3CAN.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,99.6368,22.6,enum/raw,dbc/Model3CAN.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,99.6368,22.6,enum/raw,dbc/Model3CAN.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,VCLEFT_brakeSwitchPressed,0x3C2,1.0,99.639,20.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E37,99.6594,输入杆回落中请求已恢复,BMS_socUI,0x292,32.5,99.5923,67.1,%,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,DI_gear,0x118,D,99.9492,8.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,DI_systemState,0x118,ENABLE,99.9492,8.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,DI_accelPedalPos,0x118,0.0,99.9492,8.2,%,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,DI_torqueCommand,0x108,256.0,99.8592,98.2,Nm,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,DI_torqueActual,0x108,260.0,99.8592,98.2,Nm,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,DI_axleSpeed,0x108,1.5,99.8592,98.2,RPM,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,DI_vehicleSpeed,0x257,0.3200000000000003,99.9388,18.6,kph,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,DI_elecPower,0x266,0.5,99.9494,8.0,kW,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,BMS_packVoltage,0x132,347.36,99.9536,3.8,V,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,BMS_packCurrent,0x132,2.1,99.9536,3.8,A,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,PackPower_derived,0x132,0.729456,99.9536,3.8,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E38,99.9574,制动施加状态解除,IBST_sInputRodDriver,0x39D,0.4375,99.9574,0.0,mm,dbc/Model3CAN.dbc,available
+E38,99.9574,制动施加状态解除,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,99.9574,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E38,99.9574,制动施加状态解除,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,99.9574,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E38,99.9574,制动施加状态解除,VCLEFT_brakeSwitchPressed,0x3C2,0.0,99.939,18.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E38,99.9574,制动施加状态解除,BMS_socUI,0x292,32.5,99.8957,61.7,%,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,DI_gear,0x118,D,99.9581,0.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,DI_systemState,0x118,ENABLE,99.9581,0.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,DI_accelPedalPos,0x118,0.0,99.9581,0.9,%,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,DI_torqueCommand,0x108,332.0,99.959,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,DI_torqueActual,0x108,330.0,99.959,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,DI_axleSpeed,0x108,2.6,99.959,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,DI_vehicleSpeed,0x257,0.3200000000000003,99.9388,20.2,kph,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,DI_elecPower,0x266,0.5,99.9588,0.2,kW,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,BMS_packVoltage,0x132,347.36,99.9536,5.4,V,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,BMS_packCurrent,0x132,2.1,99.9536,5.4,A,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,PackPower_derived,0x132,0.729456,99.9536,5.4,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E39,99.959,施加状态解除后的扭矩样本,IBST_sInputRodDriver,0x39D,0.4375,99.9574,1.6,mm,dbc/Model3CAN.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,99.9574,1.6,enum/raw,dbc/Model3CAN.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,99.9574,1.6,enum/raw,dbc/Model3CAN.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,VCLEFT_brakeSwitchPressed,0x3C2,0.0,99.939,20.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E39,99.959,施加状态解除后的扭矩样本,BMS_socUI,0x292,32.5,99.8957,63.3,%,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,DI_gear,0x118,D,102.0783,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,DI_systemState,0x118,ENABLE,102.0783,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,DI_accelPedalPos,0x118,0.4,102.0783,0.0,%,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,DI_torqueCommand,0x108,244.0,102.059,19.3,Nm,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,DI_torqueActual,0x108,270.0,102.059,19.3,Nm,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,DI_axleSpeed,0x108,28.700000000000003,102.059,19.3,RPM,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,DI_vehicleSpeed,0x257,3.3599999999999994,102.0588,19.5,kph,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,DI_elecPower,0x266,1.0,102.0694,8.9,kW,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,BMS_packVoltage,0x132,347.07,102.0736,4.7,V,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,BMS_packCurrent,0x132,3.8000000000000003,102.0736,4.7,A,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,PackPower_derived,0x132,1.318866,102.0736,4.7,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E40,102.0783,第2轮开始踩电门,IBST_sInputRodDriver,0x39D,0.015625,102.0769,1.4,mm,dbc/Model3CAN.dbc,available
+E40,102.0783,第2轮开始踩电门,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,102.0769,1.4,enum/raw,dbc/Model3CAN.dbc,available
+E40,102.0783,第2轮开始踩电门,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,102.0769,1.4,enum/raw,dbc/Model3CAN.dbc,available
+E40,102.0783,第2轮开始踩电门,VCLEFT_brakeSwitchPressed,0x3C2,0.0,102.0392,39.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E40,102.0783,第2轮开始踩电门,BMS_socUI,0x292,32.5,101.9933,85.0,%,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,DI_gear,0x118,D,103.7579,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,DI_systemState,0x118,ENABLE,103.7579,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,DI_accelPedalPos,0x118,8.4,103.7579,1.2,%,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,DI_torqueCommand,0x108,554.0,103.7591,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,DI_torqueActual,0x108,552.0,103.7591,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,DI_axleSpeed,0x108,58.900000000000006,103.7591,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,DI_vehicleSpeed,0x257,7.039999999999999,103.7589,0.2,kph,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,DI_elecPower,0x266,4.0,103.7584,0.7,kW,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,BMS_packVoltage,0x132,346.13,103.7537,5.4,V,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,BMS_packCurrent,0x132,12.700000000000001,103.7537,5.4,A,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,PackPower_derived,0x132,4.395851,103.7537,5.4,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E41,103.7591,第2轮请求峰值,IBST_sInputRodDriver,0x39D,0.015625,103.7205,38.6,mm,dbc/Model3CAN.dbc,available
+E41,103.7591,第2轮请求峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,103.7205,38.6,enum/raw,dbc/Model3CAN.dbc,available
+E41,103.7591,第2轮请求峰值,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,103.7205,38.6,enum/raw,dbc/Model3CAN.dbc,available
+E41,103.7591,第2轮请求峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,103.7391,20.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E41,103.7591,第2轮请求峰值,BMS_socUI,0x292,32.5,103.6934,65.7,%,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,DI_gear,0x118,D,109.5174,1.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,DI_systemState,0x118,ENABLE,109.5174,1.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,DI_accelPedalPos,0x118,17.6,109.5174,1.4,%,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,DI_torqueCommand,0x108,500.0,109.4576,61.2,Nm,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,DI_torqueActual,0x108,530.0,109.4576,61.2,Nm,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,DI_axleSpeed,0x108,150.1,109.4576,61.2,RPM,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,DI_vehicleSpeed,0x257,18.560000000000002,109.4985,20.3,kph,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,DI_elecPower,0x266,9.0,109.5188,0.0,kW,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,BMS_packVoltage,0x132,345.26,109.5138,5.0,V,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,BMS_packCurrent,0x132,26.5,109.5138,5.0,A,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,PackPower_derived,0x132,9.149389999999999,109.5138,5.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E42,109.5188,第2轮电驱功率峰值,IBST_sInputRodDriver,0x39D,0.0,109.4789,39.9,mm,dbc/Model3CAN.dbc,available
+E42,109.5188,第2轮电驱功率峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,109.4789,39.9,enum/raw,dbc/Model3CAN.dbc,available
+E42,109.5188,第2轮电驱功率峰值,IBST_internalState,0x39D,TRANSITION_TO_IDLE,109.4789,39.9,enum/raw,dbc/Model3CAN.dbc,available
+E42,109.5188,第2轮电驱功率峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,109.4394,79.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E42,109.5188,第2轮电驱功率峰值,BMS_socUI,0x292,32.5,109.4935,25.3,%,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,DI_gear,0x118,D,109.5571,1.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,DI_systemState,0x118,ENABLE,109.5571,1.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,DI_accelPedalPos,0x118,17.6,109.5571,1.1,%,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,DI_torqueCommand,0x108,524.0,109.5582,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,DI_torqueActual,0x108,558.0,109.5582,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,DI_axleSpeed,0x108,150.8,109.5582,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,DI_vehicleSpeed,0x257,18.72,109.5383,19.9,kph,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,DI_elecPower,0x266,9.0,109.5578,0.4,kW,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,BMS_packVoltage,0x132,345.34000000000003,109.5538,4.4,V,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,BMS_packCurrent,0x132,27.400000000000002,109.5538,4.4,A,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,PackPower_derived,0x132,9.462316000000001,109.5538,4.4,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E43,109.5582,第2轮实际扭矩峰值,IBST_sInputRodDriver,0x39D,0.0,109.5196,38.6,mm,dbc/Model3CAN.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,109.5196,38.6,enum/raw,dbc/Model3CAN.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,IBST_internalState,0x39D,TRANSITION_TO_IDLE,109.5196,38.6,enum/raw,dbc/Model3CAN.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,109.5393,18.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E43,109.5582,第2轮实际扭矩峰值,BMS_socUI,0x292,32.5,109.4935,64.7,%,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,DI_gear,0x118,D,109.5881,6.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,DI_systemState,0x118,ENABLE,109.5881,6.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,DI_accelPedalPos,0x118,17.6,109.5881,6.1,%,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,DI_torqueCommand,0x108,524.0,109.5582,36.0,Nm,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,DI_torqueActual,0x108,558.0,109.5582,36.0,Nm,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,DI_axleSpeed,0x108,150.8,109.5582,36.0,RPM,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,DI_vehicleSpeed,0x257,18.800000000000004,109.5782,16.0,kph,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,DI_elecPower,0x266,9.0,109.5884,5.8,kW,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,BMS_packVoltage,0x132,345.40000000000003,109.5942,0.0,V,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,BMS_packCurrent,0x132,28.1,109.5942,0.0,A,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,PackPower_derived,0x132,9.705740000000002,109.5942,0.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E44,109.5942,第2轮Pack放电电流峰值,IBST_sInputRodDriver,0x39D,0.0,109.5613,32.9,mm,dbc/Model3CAN.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,109.5613,32.9,enum/raw,dbc/Model3CAN.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,IBST_internalState,0x39D,TRANSITION_TO_IDLE,109.5613,32.9,enum/raw,dbc/Model3CAN.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,109.5393,54.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E44,109.5942,第2轮Pack放电电流峰值,BMS_socUI,0x292,32.5,109.5934,0.8,%,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,DI_gear,0x118,D,116.7868,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,DI_systemState,0x118,ENABLE,116.7868,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,DI_accelPedalPos,0x118,21.200000000000003,116.7868,0.0,%,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,DI_torqueCommand,0x108,148.0,116.757,29.8,Nm,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,DI_torqueActual,0x108,148.0,116.757,29.8,Nm,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,DI_axleSpeed,0x108,213.9,116.757,29.8,RPM,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,DI_vehicleSpeed,0x257,26.560000000000002,116.7766,10.2,kph,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,DI_elecPower,0x266,3.5,116.7761,10.7,kW,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,BMS_packVoltage,0x132,346.24,116.784,2.8,V,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,BMS_packCurrent,0x132,12.3,116.784,2.8,A,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,PackPower_derived,0x132,4.258752,116.784,2.8,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E45,116.7868,第2轮电门峰值,IBST_sInputRodDriver,0x39D,-0.015625,116.7608,26.0,mm,dbc/Model3CAN.dbc,available
+E45,116.7868,第2轮电门峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,116.7608,26.0,enum/raw,dbc/Model3CAN.dbc,available
+E45,116.7868,第2轮电门峰值,IBST_internalState,0x39D,NO_MODE_ACTIVE,116.7608,26.0,enum/raw,dbc/Model3CAN.dbc,available
+E45,116.7868,第2轮电门峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,116.7398,47.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E45,116.7868,第2轮电门峰值,BMS_socUI,0x292,32.5,116.6928,94.0,%,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,DI_gear,0x118,D,120.1157,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,DI_systemState,0x118,ENABLE,120.1157,1.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,DI_accelPedalPos,0x118,20.8,120.1157,1.2,%,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,DI_torqueCommand,0x108,186.0,120.0566,60.3,Nm,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,DI_torqueActual,0x108,186.0,120.0566,60.3,Nm,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,DI_axleSpeed,0x108,240.5,120.0566,60.3,RPM,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,DI_vehicleSpeed,0x257,30.0,120.1169,0.0,kph,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,DI_elecPower,0x266,4.5,120.1164,0.5,kW,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,BMS_packVoltage,0x132,345.81,120.1141,2.8,V,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,BMS_packCurrent,0x132,15.600000000000001,120.1141,2.8,A,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,PackPower_derived,0x132,5.394636,120.1141,2.8,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E46,120.1169,第2轮首次达到30 km/h,IBST_sInputRodDriver,0x39D,-0.015625,120.0773,39.6,mm,dbc/Model3CAN.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,120.0773,39.6,enum/raw,dbc/Model3CAN.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,IBST_internalState,0x39D,NO_MODE_ACTIVE,120.0773,39.6,enum/raw,dbc/Model3CAN.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,VCLEFT_brakeSwitchPressed,0x3C2,0.0,120.04,76.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E46,120.1169,第2轮首次达到30 km/h,BMS_socUI,0x292,32.5,120.0937,23.2,%,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,DI_gear,0x118,D,123.5156,1.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,DI_systemState,0x118,ENABLE,123.5156,1.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,DI_accelPedalPos,0x118,17.6,123.5156,1.9,%,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,DI_torqueCommand,0x108,116.0,123.4564,61.1,Nm,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,DI_torqueActual,0x108,112.0,123.4564,61.1,Nm,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,DI_axleSpeed,0x108,261.6,123.4564,61.1,RPM,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,DI_vehicleSpeed,0x257,32.56,123.5175,0.0,kph,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,DI_elecPower,0x266,3.0,123.517,0.5,kW,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,BMS_packVoltage,0x132,346.04,123.5141,3.4,V,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,BMS_packCurrent,0x132,9.8,123.5141,3.4,A,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,PackPower_derived,0x132,3.3911920000000007,123.5141,3.4,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E47,123.5175,第2轮车速峰值,IBST_sInputRodDriver,0x39D,-0.015625,123.479,38.5,mm,dbc/Model3CAN.dbc,available
+E47,123.5175,第2轮车速峰值,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,123.479,38.5,enum/raw,dbc/Model3CAN.dbc,available
+E47,123.5175,第2轮车速峰值,IBST_internalState,0x39D,NO_MODE_ACTIVE,123.479,38.5,enum/raw,dbc/Model3CAN.dbc,available
+E47,123.5175,第2轮车速峰值,VCLEFT_brakeSwitchPressed,0x3C2,0.0,123.4402,77.3,enum/raw,input/tesla_model3_ONYX.dbc,available
+E47,123.5175,第2轮车速峰值,BMS_socUI,0x292,32.5,123.4941,23.4,%,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,DI_gear,0x118,D,125.4552,1.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,DI_systemState,0x118,ENABLE,125.4552,1.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,DI_accelPedalPos,0x118,16.400000000000002,125.4552,1.0,%,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,DI_torqueCommand,0x108,-8.0,125.4562,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,DI_torqueActual,0x108,0.0,125.4562,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,DI_axleSpeed,0x108,254.10000000000002,125.4562,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,DI_vehicleSpeed,0x257,32.239999999999995,125.456,0.2,kph,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,DI_elecPower,0x266,0.0,125.4555,0.7,kW,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,BMS_packVoltage,0x132,346.56,125.4542,2.0,V,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,BMS_packCurrent,0x132,1.4000000000000001,125.4542,2.0,A,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,PackPower_derived,0x132,0.485184,125.4542,2.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E48,125.4562,第2轮请求转负,IBST_sInputRodDriver,0x39D,-0.015625,125.4373,18.9,mm,dbc/Model3CAN.dbc,available
+E48,125.4562,第2轮请求转负,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,125.4373,18.9,enum/raw,dbc/Model3CAN.dbc,available
+E48,125.4562,第2轮请求转负,IBST_internalState,0x39D,NO_MODE_ACTIVE,125.4373,18.9,enum/raw,dbc/Model3CAN.dbc,available
+E48,125.4562,第2轮请求转负,VCLEFT_brakeSwitchPressed,0x3C2,0.0,125.4407,15.5,enum/raw,input/tesla_model3_ONYX.dbc,available
+E48,125.4562,第2轮请求转负,BMS_socUI,0x292,32.5,125.393,63.2,%,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,DI_gear,0x118,D,125.7263,7.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,DI_systemState,0x118,ENABLE,125.7263,7.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,DI_accelPedalPos,0x118,16.400000000000002,125.7263,7.9,%,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,DI_torqueCommand,0x108,-18.0,125.6562,78.0,Nm,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,DI_torqueActual,0x108,-12.0,125.6562,78.0,Nm,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,DI_axleSpeed,0x108,256.1,125.6562,78.0,RPM,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,DI_vehicleSpeed,0x257,32.16,125.717,17.2,kph,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,DI_elecPower,0x266,-0.5,125.7268,7.4,kW,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,BMS_packVoltage,0x132,346.97,125.7342,0.0,V,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,BMS_packCurrent,0x132,-0.1,125.7342,0.0,A,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,PackPower_derived,0x132,-0.034697000000000006,125.7342,0.0,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,IBST_sInputRodDriver,0x39D,-0.015625,125.719,15.2,mm,dbc/Model3CAN.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,125.719,15.2,enum/raw,dbc/Model3CAN.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,IBST_internalState,0x39D,NO_MODE_ACTIVE,125.719,15.2,enum/raw,dbc/Model3CAN.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,VCLEFT_brakeSwitchPressed,0x3C2,0.0,125.6404,93.8,enum/raw,input/tesla_model3_ONYX.dbc,available
+E49,125.7342,第2轮负请求期间首次观察到Pack净回收,BMS_socUI,0x292,32.5,125.6936,40.6,%,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,DI_gear,0x118,D,140.4659,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,DI_systemState,0x118,ENABLE,140.4659,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,DI_accelPedalPos,0x118,0.0,140.4659,0.0,%,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,DI_torqueCommand,0x108,-294.0,140.4559,10.0,Nm,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,DI_torqueActual,0x108,-294.0,140.4559,10.0,Nm,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,DI_axleSpeed,0x108,136.70000000000002,140.4559,10.0,RPM,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,DI_vehicleSpeed,0x257,17.28,140.4561,9.8,kph,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,DI_elecPower,0x266,-4.0,140.4554,10.5,kW,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,BMS_packVoltage,0x132,348.2,140.4645,1.4,V,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,BMS_packCurrent,0x132,-10.700000000000001,140.4645,1.4,A,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,PackPower_derived,0x132,-3.72574,140.4645,1.4,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E50,140.4659,第2轮电门完全归零,IBST_sInputRodDriver,0x39D,-0.015625,140.4378,28.1,mm,dbc/Model3CAN.dbc,available
+E50,140.4659,第2轮电门完全归零,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,140.4378,28.1,enum/raw,dbc/Model3CAN.dbc,available
+E50,140.4659,第2轮电门完全归零,IBST_internalState,0x39D,NO_MODE_ACTIVE,140.4378,28.1,enum/raw,dbc/Model3CAN.dbc,available
+E50,140.4659,第2轮电门完全归零,VCLEFT_brakeSwitchPressed,0x3C2,0.0,140.4415,24.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E50,140.4659,第2轮电门完全归零,BMS_socUI,0x292,32.5,140.3938,72.1,%,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,DI_gear,0x118,D,148.435,3.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,DI_systemState,0x118,ENABLE,148.435,3.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,DI_accelPedalPos,0x118,0.0,148.435,3.1,%,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,DI_torqueCommand,0x108,-20.0,148.3558,82.3,Nm,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,DI_torqueActual,0x108,-20.0,148.3558,82.3,Nm,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,DI_axleSpeed,0x108,68.2,148.3558,82.3,RPM,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,DI_vehicleSpeed,0x257,8.480000000000004,148.4357,2.4,kph,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,DI_elecPower,0x266,0.0,148.4354,2.7,kW,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,BMS_packVoltage,0x132,347.37,148.4347,3.4,V,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,BMS_packCurrent,0x132,0.9,148.4347,3.4,A,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,PackPower_derived,0x132,0.31263300000000005,148.4347,3.4,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E51,148.4381,制动施加状态出现,IBST_sInputRodDriver,0x39D,0.484375,148.4381,0.0,mm,dbc/Model3CAN.dbc,available
+E51,148.4381,制动施加状态出现,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,148.4381,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E51,148.4381,制动施加状态出现,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,148.4381,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E51,148.4381,制动施加状态出现,VCLEFT_brakeSwitchPressed,0x3C2,0.0,148.3419,96.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E51,148.4381,制动施加状态出现,BMS_socUI,0x292,32.5,148.3943,43.8,%,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,DI_gear,0x118,D,149.2542,1.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,DI_systemState,0x118,ENABLE,149.2542,1.4,enum/raw,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,DI_accelPedalPos,0x118,0.0,149.2542,1.4,%,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,DI_torqueCommand,0x108,0.0,149.2556,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,DI_torqueActual,0x108,0.0,149.2556,0.0,Nm,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,DI_axleSpeed,0x108,62.6,149.2556,0.0,RPM,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,DI_vehicleSpeed,0x257,8.0,149.2357,19.9,kph,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,DI_elecPower,0x266,0.0,149.2549,0.7,kW,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,BMS_packVoltage,0x132,347.35,149.2547,0.9,V,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,BMS_packCurrent,0x132,1.4000000000000001,149.2547,0.9,A,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,PackPower_derived,0x132,0.48629000000000006,149.2547,0.9,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E52,149.2556,第2轮请求退出负值,IBST_sInputRodDriver,0x39D,5.34375,149.2381,17.5,mm,dbc/Model3CAN.dbc,available
+E52,149.2556,第2轮请求退出负值,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,149.2381,17.5,enum/raw,dbc/Model3CAN.dbc,available
+E52,149.2556,第2轮请求退出负值,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,149.2381,17.5,enum/raw,dbc/Model3CAN.dbc,available
+E52,149.2556,第2轮请求退出负值,VCLEFT_brakeSwitchPressed,0x3C2,1.0,149.2419,13.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E52,149.2556,第2轮请求退出负值,BMS_socUI,0x292,32.5,149.1942,61.4,%,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,DI_gear,0x118,D,150.4335,0.5,enum/raw,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,DI_systemState,0x118,ENABLE,150.4335,0.5,enum/raw,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,DI_accelPedalPos,0x118,0.0,150.4335,0.5,%,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,DI_torqueCommand,0x108,0.0,150.3541,79.9,Nm,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,DI_torqueActual,0x108,0.0,150.3541,79.9,Nm,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,DI_axleSpeed,0x108,6.0,150.3541,79.9,RPM,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,DI_vehicleSpeed,0x257,0.480000000000004,150.434,0.0,kph,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,DI_elecPower,0x266,0.0,150.4338,0.2,kW,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,BMS_packVoltage,0x132,347.48,150.4248,9.2,V,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,BMS_packCurrent,0x132,1.3,150.4248,9.2,A,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,PackPower_derived,0x132,0.45172400000000007,150.4248,9.2,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E53,150.434,第2轮减速至近零车速,IBST_sInputRodDriver,0x39D,5.5,150.3982,35.8,mm,dbc/Model3CAN.dbc,available
+E53,150.434,第2轮减速至近零车速,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,150.3982,35.8,enum/raw,dbc/Model3CAN.dbc,available
+E53,150.434,第2轮减速至近零车速,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,150.3982,35.8,enum/raw,dbc/Model3CAN.dbc,available
+E53,150.434,第2轮减速至近零车速,VCLEFT_brakeSwitchPressed,0x3C2,1.0,150.3421,91.9,enum/raw,input/tesla_model3_ONYX.dbc,available
+E53,150.434,第2轮减速至近零车速,BMS_socUI,0x292,32.5,150.3943,39.7,%,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,DI_gear,0x118,P,150.7533,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,DI_systemState,0x118,STANDBY,150.7533,0.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,DI_accelPedalPos,0x118,0.0,150.7533,0.0,%,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,DI_torqueCommand,0x108,0.0,150.6541,99.2,Nm,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,DI_torqueActual,0x108,0.0,150.6541,99.2,Nm,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,DI_axleSpeed,0x108,-1.4000000000000001,150.6541,99.2,RPM,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,DI_vehicleSpeed,0x257,-0.0799999999999983,150.734,19.3,kph,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,DI_elecPower,0x266,0.0,150.7444,8.9,kW,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,BMS_packVoltage,0x132,347.52,150.7448,8.5,V,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,BMS_packCurrent,0x132,1.3,150.7448,8.5,A,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,PackPower_derived,0x132,0.451776,150.7448,8.5,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E54,150.7533,第2轮回P,IBST_sInputRodDriver,0x39D,5.25,150.7182,35.1,mm,dbc/Model3CAN.dbc,available
+E54,150.7533,第2轮回P,IBST_driverBrakeApply,0x39D,DRIVER_APPLYING_BRAKES,150.7182,35.1,enum/raw,dbc/Model3CAN.dbc,available
+E54,150.7533,第2轮回P,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,150.7182,35.1,enum/raw,dbc/Model3CAN.dbc,available
+E54,150.7533,第2轮回P,VCLEFT_brakeSwitchPressed,0x3C2,1.0,150.7421,11.2,enum/raw,input/tesla_model3_ONYX.dbc,available
+E54,150.7533,第2轮回P,BMS_socUI,0x292,32.5,150.6945,58.8,%,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,DI_gear,0x118,P,152.8731,5.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,DI_systemState,0x118,STANDBY,152.8731,5.1,enum/raw,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,DI_accelPedalPos,0x118,0.0,152.8731,5.1,%,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,DI_torqueCommand,0x108,0.0,152.8539,24.3,Nm,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,DI_torqueActual,0x108,0.0,152.8539,24.3,Nm,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,DI_axleSpeed,0x108,0.0,152.8539,24.3,RPM,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,DI_vehicleSpeed,0x257,0.0,152.8736,4.6,kph,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,DI_elecPower,0x266,0.0,152.8733,4.9,kW,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,BMS_packVoltage,0x132,347.17,152.8748,3.4,V,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,BMS_packCurrent,0x132,1.2000000000000002,152.8748,3.4,A,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,PackPower_derived,0x132,0.4166040000000001,152.8748,3.4,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E55,152.8782,制动施加状态解除,IBST_sInputRodDriver,0x39D,0.59375,152.8782,0.0,mm,dbc/Model3CAN.dbc,available
+E55,152.8782,制动施加状态解除,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,152.8782,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E55,152.8782,制动施加状态解除,IBST_internalState,0x39D,LOCAL_BRAKE_REQUEST,152.8782,0.0,enum/raw,dbc/Model3CAN.dbc,available
+E55,152.8782,制动施加状态解除,VCLEFT_brakeSwitchPressed,0x3C2,0.0,152.8422,36.0,enum/raw,input/tesla_model3_ONYX.dbc,available
+E55,152.8782,制动施加状态解除,BMS_socUI,0x292,32.5,152.7948,83.4,%,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,DI_gear,0x118,P,169.9628,6.8,enum/raw,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,DI_systemState,0x118,STANDBY,169.9628,6.8,enum/raw,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,DI_accelPedalPos,0x118,0.0,169.9628,6.8,%,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,DI_torqueCommand,0x108,0.0,169.9529,16.7,Nm,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,DI_torqueActual,0x108,0.0,169.9529,16.7,Nm,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,DI_axleSpeed,0x108,0.0,169.9529,16.7,RPM,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,DI_vehicleSpeed,0x257,0.0,169.9525,17.1,kph,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,DI_elecPower,0x266,0.0,169.9633,6.3,kW,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,BMS_packVoltage,0x132,347.15000000000003,169.9652,4.4,V,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,BMS_packCurrent,0x132,1.2000000000000002,169.9652,4.4,A,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,PackPower_derived,0x132,0.4165800000000001,169.9652,4.4,kW,"derived: BMS_packVoltage * BMS_packCurrent / 1000, same frame",available
+E56,169.9696,采集结束,IBST_sInputRodDriver,0x39D,-0.015625,169.9599,9.7,mm,dbc/Model3CAN.dbc,available
+E56,169.9696,采集结束,IBST_driverBrakeApply,0x39D,BRAKES_NOT_APPLIED,169.9599,9.7,enum/raw,dbc/Model3CAN.dbc,available
+E56,169.9696,采集结束,IBST_internalState,0x39D,NO_MODE_ACTIVE,169.9599,9.7,enum/raw,dbc/Model3CAN.dbc,available
+E56,169.9696,采集结束,VCLEFT_brakeSwitchPressed,0x3C2,0.0,169.9439,25.7,enum/raw,input/tesla_model3_ONYX.dbc,available
+E56,169.9696,采集结束,BMS_socUI,0x292,32.5,169.8868,82.8,%,input/tesla_model3_ONYX.dbc,available
