@@ -1,0 +1,49 @@
+{
+  "experiment_id": "TM3-008",
+  "analysis_status": "EVIDENCE_ASSESSED",
+  "completion_status": "PARTIAL",
+  "approved_scope": "THIS_EXPERIMENT_ONLY",
+  "source_interval_s": [
+    0.0,
+    660.0
+  ],
+  "observed_down_sequence_s": {
+    "vehicle_power_state_off": 282.1605,
+    "bms_contactor_opening": 282.2451,
+    "dcdc_support_idle": 282.2645,
+    "hvp_contactors_opening": 282.3549,
+    "hv_bus_discharge_candidate_active": 282.4645,
+    "bms_contactor_open": 282.5436,
+    "voltage_candidate_below_60v": 282.5503,
+    "voltage_candidate_below_15v": 282.7001,
+    "hvp_contactors_open": 283.3549,
+    "bms_bus_asleep_candidate": 295.0436,
+    "capture_domain_silence_start": 295.8383,
+    "capture_domain_silence_observation_end": 660.0
+  },
+  "capture_domain_silence_duration_s": 364.1617,
+  "supported_requirements": [
+    "ER-03",
+    "ER-06",
+    "ER-08"
+  ],
+  "insufficient_requirements": [
+    "ER-01",
+    "ER-02",
+    "ER-04",
+    "ER-05",
+    "ER-07",
+    "ER-10"
+  ],
+  "not_observed_requirements": [
+    "ER-09"
+  ],
+  "key_conflicts": [
+    "BMS_hvState remains DOWN across CLOSED/OPENING/OPEN contactor transitions.",
+    "PCS_dcdcMainState remains STANDBY across DCDC support exit transitions.",
+    "PCS_dcdcHvBusVolt uses a DLC5 definition against DLC6 frames and produces nonphysical discontinuities.",
+    "BMS_packVoltage scaling follows high-voltage collapse/restore, but its Pack-side physical location is contradicted or unconfirmed."
+  ],
+  "external_evidence_gap_er10": true,
+  "formal_report_bundle_generated": true
+}

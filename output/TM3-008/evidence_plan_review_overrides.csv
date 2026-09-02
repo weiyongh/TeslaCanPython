@@ -1,0 +1,34 @@
+experiment_id,signal_key,decision,override_role,override_priority,override_report_position,override_order,human_reason,reviewer,reviewed_at
+TM3-008,NetworkFrameRate_derived,ACCEPT,,,,,接受为当前采集域通信结果；不得外推整车休眠或ECU断电,User,2026-09-02
+TM3-008,ActiveCanIdCount_derived,ACCEPT,,,,,接受为当前采集域活跃度代理；不等同控制器数量或整车网络覆盖,User,2026-09-02
+TM3-008,CanIdLastSeenTime_derived,ACCEPT,,,,,接受为逐ID停止出现的系统结果；不等同ECU断电时间,User,2026-09-02
+TM3-008,VCLEFT_frontOccupancyStatus,OVERRIDE,驾驶员离座反馈候选/可见性验证目标,,,,接受收窄方案；无帧或不适配时保留ER-02 GAP,User,2026-09-02
+TM3-008,VCLEFT_frontLatchStatus,ACCEPT,,,,,接受为门闩反馈；保留跨DBC位段和非Observed Event边界,User,2026-09-02
+TM3-008,VCSEC_lockRequestType,OVERRIDE,钥匙卡/NFC锁止请求类型候选,P1,,,接受收窄为P1请求候选；不能单独证明实际刷卡,User,2026-09-02
+TM3-008,VCSEC_simpleLockStatus,ACCEPT,,,,,接受为聚合锁止反馈；不能替代机械锁止或外部反馈,User,2026-09-02
+TM3-008,VCSEC_vehicleLockStatus,ACCEPT,,,,,接受为消费者状态交叉验证；不重复计为独立物理证据,User,2026-09-02
+TM3-008,UI_lockRequest,OVERRIDE,CONSUMER_STATE_CANDIDATE,P1,BODY_INPUT_TABLE+ENGINEERING_AUDIT,,最新人工决定：进入ASC验证；验证前禁止解释为钥匙卡落锁REQUEST且不得作为ER-03独立充分证据,User,2026-09-02
+TM3-008,DI_gear,ACCEPT,,,,,接受为P挡反馈和起始状态门；不承担下电请求或需求撤销证明,User,2026-09-02
+TM3-008,DI_systemState,ACCEPT,,,,,接受为电驱执行状态；不等同整车READY或高压许可源,User,2026-09-02
+TM3-008,UI_readyForDrive,ACCEPT,,,,,接受为显示消费者状态；不得提升为PERMISSION或COMMAND,User,2026-09-02
+TM3-008,VCFRONT_vehiclePowerState,OVERRIDE,车辆供电阶段系统结果候选,P1,,,接受收窄为P1 SYSTEM_RESULT；不作为整车下电请求或命令,User,2026-09-02
+TM3-008,VCFRONT_vehicleStatusDBG,EXCLUDE,,,,,确认排除；MUX适用性未确认且与既有状态和网络派生证据重叠,User,2026-09-02
+TM3-008,VCFRONT_12vStatusForDrive,ACCEPT,,,,,接受为12V侧消费者状态；不单独证明DCDC执行或物理输出,User,2026-09-02
+TM3-008,BMS_hvState,OVERRIDE,BMS高压系统结果/执行候选（低可信验证目标）,P1,HV_SPECIAL_TIMELINE+ENGINEERING_AUDIT,,Draft成熟度已修正为SEMANTIC_VALIDATION_FAILED/LOW；重新Review后保留为P1验证候选,User,2026-09-02
+TM3-008,BMS_contactorState,ACCEPT,,,,,接受为接触器总执行状态；TM3-008仍须验证且不能替代下游母线响应,User,2026-09-02
+TM3-008,HVP_packContPositiveState,ACCEPT,,,,,接受为0x20A正接触器执行候选；保持多DBC和实验验证边界,User,2026-09-02
+TM3-008,HVP_packContNegativeState,ACCEPT,,,,,接受为0x20A负接触器执行候选；保持多DBC和实验验证边界,User,2026-09-02
+TM3-008,BMS_packVoltage,ACCEPT,,,,,接受为Pack侧物理背景；不能证明接触器下游母线去电,User,2026-09-02
+TM3-008,PCS_dcdcHvBusVolt,ACCEPT,,,,,接受为P0下游母线Signal Validation目标；保留SEMANTIC_VALIDATION_FAILED且验证失败时ER-05维持GAP,User,2026-09-02
+TM3-008,PCS_dcdcHvBusDischargeStatus,ACCEPT,,,,,接受为主动放电执行候选；不能单独证明母线已经去电,User,2026-09-02
+TM3-008,PCS_dcdcMainState,OVERRIDE,DCDC主状态机执行候选（低可信验证目标）,P1,DCDC_SPECIAL_TABLE+ENGINEERING_AUDIT,,Draft成熟度已修正为SEMANTIC_VALIDATION_FAILED/LOW；重新Review后保留为P1验证候选,User,2026-09-02
+TM3-008,PCS_dcdc12VSupportStatus,ACCEPT,,,,,接受为12V支持执行状态；必须与低压物理反馈交叉,User,2026-09-02
+TM3-008,PCS_dcdcLvBusVolt,ACCEPT,,,,,接受为PCS侧低压物理响应候选；不替代外部12V实测,User,2026-09-02
+TM3-008,PCS_dcdcLvOutputCurrent,ACCEPT,,,,,接受为低压输出响应候选；保留符号位宽缩放冲突和定量未验证边界,User,2026-09-02
+TM3-008,BMS_nmGoingToSleep,OVERRIDE,BMS网络管理阶段系统结果候选,,,,接受收窄为网络管理状态；不得标为REQUEST或COMMAND,User,2026-09-02
+TM3-008,BMS_hvsBusAsleep,ACCEPT,,,,,接受为BMS消费者视角总线状态；不得外推整车网络,User,2026-09-02
+TM3-008,BMS_nmKeepAwakeReason,ACCEPT,,,,,接受为DIAGNOSTIC_CONTEXT；不能单独确认唤醒根因,User,2026-09-02
+TM3-008,GTW_nmGoingToSleep,OVERRIDE,网关网络管理阶段系统结果候选,,,,接受收窄为网络管理状态；不得标为REQUEST或COMMAND,User,2026-09-02
+TM3-008,GTW_VEHBusAsleep,ACCEPT,,,,,接受为网关消费者视角VEH总线状态；不得外推全部网络,User,2026-09-02
+TM3-008,GTW_chBusAsleep,OVERRIDE,网关所见CH总线消费者状态候选,P2,,,接受收窄方案；仅在CH总线和采集域适配确认后使用,User,2026-09-02
+TM3-008,GTW_nmKeepAwakeReason,ACCEPT,,,,,接受为DIAGNOSTIC_CONTEXT；不替代ER-10无干预记录或形成故障结论,User,2026-09-02

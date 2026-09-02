@@ -107,3 +107,55 @@ AGENTS.md + L3规范 + Artifact Contract + 项目模板/测试
 这才是我们现在折腾 AGENTS 的最终目的。
 
 而且下一次真的可以故意这么测试：**只给 Codex 两三句话。**如果它仍然能自己恢复状态、找到正确文件、判断 Gate 并继续工作，那才说明这套工程环境真正成熟了。
+
+# 以后你在 Mac 做到一半，突然因为现实原因只能用 Windows，最稳的交接方式其实非常简单：
+
+Mac Codex
+   ↓
+完成一个明确阶段
+   ↓
+tests
+   ↓
+git status
+   ↓
+commit
+   ↓
+push GitHub
+   ↓
+Windows pull
+   ↓
+Windows Codex先做 Preflight
+   ↓
+继续工作
+
+# 另外，Codex 会话本身可以换，不必害怕。 新会话第一条提示只需要告诉它三件核心事情：
+
+先读取当前仓库状态和项目文档，以 Git 当前内容为事实基线；确认当前 branch / commit / working tree；Windows 项目命令使用 .venv\Scripts\python.exe（Mac 使用项目对应 Python 环境）。不要依据旧会话记忆推断当前工程状态。
+
+# golden
+
+实验定义
+   ↓
+Evidence Requirement
+   ↓
+Signal Candidate
+   ↓
+Human Review
+   ↓
+Approved Plan
+   ↓
+ASC Analysis
+   ↓
+Evidence Assessment
+   ↓
+四件套
+   ↓
+Engineering Audit
+
+# github提交
+
+git status
+git diff --stat
+git add .
+git commit -m "Complete TM3-008 shutdown baseline analysis"
+git push

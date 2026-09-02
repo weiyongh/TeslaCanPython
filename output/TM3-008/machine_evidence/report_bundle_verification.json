@@ -1,0 +1,14 @@
+{
+  "renderer": "shared report_renderer.py",
+  "profile": "WAKE_HV",
+  "contract_validation": "PASSED",
+  "files": {
+    "output\\TM3-008\\TM3-008_最终报告.md": "ed77cff8c7aabb3d758a58badb18a3bb6c33f3791612813ddb6a6f384fd5116d",
+    "output\\TM3-008\\采集时间线与关键Signal.md": "ae5adb3182e4b70d1cf947a41abb94b7ce7611f6c0fc695369be364070b6a69b",
+    "output\\TM3-008\\DBC关键Signal覆盖与可读性.md": "04ddf819d487b1e1e158a1dc2828bc0a3db9c4cd017ac7b82b8cbfc77bd7d739",
+    "output\\TM3-008\\工程审计.md": "619c0124595eb863f5099f2f96a732659e83cc99476e4b35e7fe314a0afe713b",
+    "output\\TM3-008\\TM3-008_采集时间线与关键Signal.md": "ae5adb3182e4b70d1cf947a41abb94b7ce7611f6c0fc695369be364070b6a69b",
+    "output\\TM3-008\\TM3-008_DBC关键Signal覆盖与可读性.md": "04ddf819d487b1e1e158a1dc2828bc0a3db9c4cd017ac7b82b8cbfc77bd7d739",
+    "output\\TM3-008\\TM3-008_工程审计.md": "619c0124595eb863f5099f2f96a732659e83cc99476e4b35e7fe314a0afe713b"
+  }
+}

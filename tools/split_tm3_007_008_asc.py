@@ -8,13 +8,19 @@ from pathlib import Path
 
 
 SOURCE = Path("input/can_20260831113240开关门采集.asc")
-TM3_007 = Path("input/can_20260831113240_TM3-007_开锁开门完整上电采集.asc")
-TM3_008 = Path("input/can_20260831123400_TM3-008_关门落锁完整下电采集.asc")
+TM3_007 = Path("input/can_20260831123400_TM3-007_开锁开门完整上电采集.asc")
+TM3_008 = Path("input/can_20260831113240_TM3-008_关门落锁完整下电采集.asc")
+TM3_008_PADDED = Path("input/can_20260831113240_TM3-008_关门落锁完整下电采集_含120s后余量.asc")
 
-TM3_007_START = 0.0
-TM3_007_END = 130.0
-TM3_008_END = 792.6812
-TM3_008_START = TM3_008_END - 600.0
+# The combined logger file begins at 11:32:40 by filename, while its ASC header
+# begins at 11:33:00.  The TM3-008 script starts with the first ASC frame and
+# ends at 12:44:00 local execution time, hence source 0..660 s.  TM3-007 then
+# occupies the final 130 s; the 2.6812 s boundary gap is retained.
+TM3_008_START = 0.0
+TM3_008_END = 660.0
+TM3_008_PADDED_END = 780.0
+TM3_007_END = 792.6812
+TM3_007_START = TM3_007_END - 130.0
 
 FRAME_RE = re.compile(r"^(\d+\.\d+)(\s+.*)$")
 
@@ -65,7 +71,7 @@ def main() -> None:
             write_segment(
                 TM3_007,
                 "TM3-007",
-                "Mon Aug 31 11:32:40 AM 2026",
+                "Mon Aug 31 12:34:00 PM 2026",
                 TM3_007_START,
                 TM3_007_END,
             ),
@@ -75,7 +81,7 @@ def main() -> None:
             write_segment(
                 TM3_008,
                 "TM3-008",
-                "Mon Aug 31 12:34:00 PM 2026",
+                "Mon Aug 31 11:33:00 AM 2026",
                 TM3_008_START,
                 TM3_008_END,
             ),

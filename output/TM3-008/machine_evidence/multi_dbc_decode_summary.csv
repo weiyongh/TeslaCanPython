@@ -1,0 +1,94 @@
+﻿signal_key,source,can_id,definition_fingerprint,asc_frame_count,asc_dlcs,decoded_count,decode_error_count,first_value,last_value,observed
+BMS_packVoltage,input\tesla_model3_ONYX.dbc,0x132,132:8:0:16:little_endian:0:0.01:0,29560,6,29560,0,353.48,8.56,8.540000..353.970000
+BMS_contactorState,input\tesla_model3_ONYX.dbc,0x212,212:8:8:3:little_endian:0:1:0,2956,8,2956,0,CLOSED,OPEN,CLOSED | OPENING | OPEN
+BMS_hvState,input\tesla_model3_ONYX.dbc,0x212,212:8:16:3:little_endian:0:1:0,2956,8,2956,0,DOWN,DOWN,DOWN
+BMS_nmGoingToSleep,input\tesla_model3_ONYX.dbc,0x2F2,2F2:2:0:1:little_endian:0:1:0,2956,2,2956,0,0,0,0
+BMS_hvsBusAsleep,input\tesla_model3_ONYX.dbc,0x2F2,2F2:2:2:1:little_endian:0:1:0,2956,2,2956,0,0,1,0 | 1
+BMS_nmKeepAwakeReason,input\tesla_model3_ONYX.dbc,0x2F2,2F2:2:4:3:little_endian:0:1:0,2956,2,2956,0,CTRS_CLOSED,NONE_SNA,CTRS_CLOSED | NONE_SNA
+DI_systemState,input\tesla_model3_ONYX.dbc,0x118,118:8:16:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_gear,input\tesla_model3_ONYX.dbc,0x118,118:8:21:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+GTW_nmGoingToSleep,input\tesla_model3_ONYX.dbc,0x458,458:7:0:1:little_endian:0:1:0,2956,7,2956,0,0,0,0
+GTW_chBusAsleep,input\tesla_model3_ONYX.dbc,0x458,458:7:2:1:little_endian:0:1:0,2956,7,2956,0,0,1,0 | 1
+GTW_VEHBusAsleep,input\tesla_model3_ONYX.dbc,0x458,458:7:3:1:little_endian:0:1:0,2956,7,2956,0,0,1,0 | 1
+GTW_nmKeepAwakeReason,input\tesla_model3_ONYX.dbc,0x458,458:7:4:4:little_endian:0:1:0,2956,7,2956,0,NONE_SNA,NONE_SNA,NONE_SNA
+HVP_packContNegativeState,input\tesla_model3_ONYX.dbc,0x20A,20A:6:0:3:little_endian:0:1:0,294,6,294,0,ECONOMIZED,OPEN,ECONOMIZED | OPENING | OPEN
+HVP_packContPositiveState,input\tesla_model3_ONYX.dbc,0x20A,20A:6:3:3:little_endian:0:1:0,294,6,294,0,ECONOMIZED,OPEN,ECONOMIZED | OPENING | OPEN
+PCS_dcdcLvBusVolt,input\tesla_model3_ONYX.dbc,0x2B4,2B4:5:0:10:little_endian:0:0.0390625:0,2943,6,2943,0,10.703125,10.9765625,7.773438..14.062500
+PCS_dcdcHvBusVolt,input\tesla_model3_ONYX.dbc,0x2B4,2B4:5:10:12:little_endian:0:0.146484375:0,2943,6,2943,0,187.646484375,197.021484375,0.146484..590.771484
+PCS_dcdcLvOutputCurrent,input\tesla_model3_ONYX.dbc,0x2B4,2B4:5:24:12:little_endian:0:0.1:0,2943,6,2943,0,334.1,0,0.000000..385.300000
+PCS_dcdc12VSupportStatus,input\tesla_model3_ONYX.dbc,0x224,224:8:2:2:little_endian:0:1:0,2943,8,2943,0,ACTIVE,IDLE,ACTIVE | IDLE
+PCS_dcdcHvBusDischargeStatus,input\tesla_model3_ONYX.dbc,0x224,224:8:4:2:little_endian:0:1:0,2943,8,2943,0,IDLE,IDLE,IDLE | ACTIVE
+PCS_dcdcMainState,input\tesla_model3_ONYX.dbc,0x224,224:8:6:4:little_endian:0:1:0,2943,8,2943,0,STANDBY,STANDBY,STANDBY
+UI_readyForDrive,input\tesla_model3_ONYX.dbc,0x353,353:7:9:1:little_endian:0:1:0,177,8,177,0,1,0,1 | 0
+UI_lockRequest,input\tesla_model3_ONYX.dbc,0x273,273:8:17:3:little_endian:0:1:0,337,8,337,0,IDLE,IDLE,IDLE
+VCFRONT_vehiclePowerState,input\tesla_model3_ONYX.dbc,0x221,221:8:5:2:little_endian:0:1:0,5914,8,5914,0,ACCESSORY,OFF,ACCESSORY | CONDITIONING | OFF
+VCFRONT_12vStatusForDrive,input\tesla_model3_ONYX.dbc,0x3A1,3A1:8:14:2:little_endian:0:1:0,5914,8,0,5914,,,
+VCLEFT_frontLatchStatus,input\tesla_model3_ONYX.dbc,0x102,102:8:0:4:little_endian:0:1:0,2970,8,2970,0,CLOSED,CLOSED,CLOSED | OPENED
+VCLEFT_frontOccupancyStatus,input\tesla_model3_ONYX.dbc,0x30A,30A:4:0:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+VCSEC_vehicleLockStatus,input\tesla_model3_ONYX.dbc,0x339,339:8:12:4:little_endian:0:1:0,2958,8,2958,0,ACTIVE_NFC_UNLOCKED,ACTIVE_NFC_LOCKED,ACTIVE_NFC_UNLOCKED | ACTIVE_NFC_LOCKED
+VCSEC_lockRequestType,input\tesla_model3_ONYX.dbc,0x339,339:8:24:5:little_endian:0:1:0,2958,8,2958,0,NONE,NONE,NONE | ACTIVE_NFC_LOCK
+VCSEC_simpleLockStatus,input\tesla_model3_ONYX.dbc,0x339,339:8:54:2:little_endian:0:1:0,2958,8,2958,0,UNLOCKED,LOCKED,UNLOCKED | LOCKED
+BMS_contactorState,dbc\Model3_ETH_json_reference_optional.dbc,0x212,212:8:8:3:little_endian:0:1.0:0.0,2956,8,2956,0,BMS_CTRSET_CLOSED,BMS_CTRSET_OPEN,BMS_CTRSET_CLOSED | BMS_CTRSET_OPENING | BMS_CTRSET_OPEN
+BMS_hvState,dbc\Model3_ETH_json_reference_optional.dbc,0x212,212:8:16:3:little_endian:0:1.0:0.0,2956,8,2956,0,HV_DOWN,HV_DOWN,HV_DOWN
+DI_gear,dbc\Model3_ETH_json_reference_optional.dbc,0x118,118:8:21:3:little_endian:0:1.0:0.0,0,NO_FRAME,0,0,,,
+PCS_dcdcLvBusVolt,dbc\Model3_ETH_json_reference_optional.dbc,0x2B4,2B4:6:0:13:little_endian:0:0.01:0.0,2943,6,2943,0,12.98,13.05,12.230000..13.840000
+PCS_dcdcLvOutputCurrent,dbc\Model3_ETH_json_reference_optional.dbc,0x2B4,2B4:6:32:13:little_endian:1:0.1:0.0,2943,6,2943,0,22.1,0,0.000000..31.000000
+VCFRONT_vehiclePowerState,dbc\Model3_ETH_json_reference_optional.dbc,0x221,221:8:5:2:little_endian:0:1.0:0.0,5914,8,5914,0,VEHICLE_POWER_STATE_ACCESSORY,VEHICLE_POWER_STATE_OFF,VEHICLE_POWER_STATE_ACCESSORY | VEHICLE_POWER_STATE_CONDITIONING | VEHICLE_POWER_STATE_OFF
+VCLEFT_frontLatchStatus,dbc\Model3_ETH_json_reference_optional.dbc,0x102,102:8:14:4:little_endian:0:1.0:0.0,2970,8,2970,0,LATCH_CLOSED,LATCH_CLOSED,LATCH_CLOSED | LATCH_OPENING | LATCH_OPENED
+VCLEFT_frontOccupancyStatus,dbc\Model3_ETH_json_reference_optional.dbc,0x30A,30A:8:0:3:little_endian:0:1.0:0.0,0,NO_FRAME,0,0,,,
+UI_readyForDrive,dbc\Model3CAN.dbc,0xC,C:8:9:1:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+UI_readyForDrive,dbc\Model3CAN.dbc,0x353,353:8:9:1:little_endian:0:1:0,177,8,177,0,1,0,1 | 0
+VCLEFT_frontLatchStatus,dbc\Model3CAN.dbc,0x102,102:8:0:4:little_endian:0:1:0,2970,8,2970,0,LATCH_CLOSED,LATCH_CLOSED,LATCH_CLOSED | LATCH_OPENED
+HVP_packContNegativeState,dbc\Model3CAN.dbc,0x20A,20A:6:0:3:little_endian:0:1:0,294,6,294,0,CONTACTOR_STATE_ECONOMIZED,CONTACTOR_STATE_OPEN,CONTACTOR_STATE_ECONOMIZED | CONTACTOR_STATE_OPENING | CONTACTOR_STATE_OPEN
+HVP_packContPositiveState,dbc\Model3CAN.dbc,0x20A,20A:6:3:3:little_endian:0:1:0,294,6,294,0,CONTACTOR_STATE_ECONOMIZED,CONTACTOR_STATE_OPEN,CONTACTOR_STATE_ECONOMIZED | CONTACTOR_STATE_OPENING | CONTACTOR_STATE_OPEN
+UI_lockRequest,dbc\Model3CAN.dbc,0x273,273:8:17:3:little_endian:0:1:0,337,8,337,0,UI_LOCK_REQUEST_IDLE,UI_LOCK_REQUEST_IDLE,UI_LOCK_REQUEST_IDLE
+PCS_dcdcLvBusVolt,dbc\Model3CAN.dbc,0x2B4,2B4:5:0:10:little_endian:0:0.0390625:0,2943,6,2943,0,10.703125,10.9765625,7.773438..14.062500
+PCS_dcdcHvBusVolt,dbc\Model3CAN.dbc,0x2B4,2B4:5:10:12:little_endian:0:0.146484:0,2943,6,2943,0,187.646004,197.02098,0.146484..590.769972
+PCS_dcdcLvOutputCurrent,dbc\Model3CAN.dbc,0x2B4,2B4:5:24:12:little_endian:0:0.1:0,2943,6,2943,0,334.1,0,0.000000..385.300000
+VCFRONT_12vStatusForDrive,dbc\Model3CAN.dbc,0x3A1,3A1:8:14:2:little_endian:0:1:0,5914,8,5914,0,READY_FOR_DRIVE_12V,EXIT_DRIVE_REQUESTED_12V,READY_FOR_DRIVE_12V | EXIT_DRIVE_REQUESTED_12V | NOT_READY_FOR_DRIVE_12V
+BMS_contactorState,dbc\Model3CAN.dbc,0x212,212:8:8:3:little_endian:0:1:0,2956,8,2956,0,BMS_CTRSET_CLOSED,BMS_CTRSET_OPEN,BMS_CTRSET_CLOSED | BMS_CTRSET_OPENING | BMS_CTRSET_OPEN
+BMS_hvState,dbc\Model3CAN.dbc,0x212,212:8:16:3:little_endian:0:1:0,2956,8,2956,0,HV_DOWN,HV_DOWN,HV_DOWN
+DI_systemState,dbc\Model3CAN.dbc,0x118,118:8:16:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_gear,dbc\Model3CAN.dbc,0x118,118:8:21:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_gear,dbc\tesla_can (1).dbc,0x118,118:6:12:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_systemState,dbc\tesla_can (1).dbc,0x368,368:8:0:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+UI_readyForDrive,dbc\tesla_can (1).dbc,0x338,338:8:10:1:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_gear,dbc\tesla_can.dbc,0x118,118:6:12:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_systemState,dbc\tesla_can.dbc,0x368,368:8:0:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+UI_readyForDrive,dbc\tesla_can.dbc,0x338,338:8:10:1:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+BMS_packVoltage,dbc\tesla_model3.dbc,0x132,132:8:0:16:little_endian:0:0.01:0,29560,6,29560,0,353.48,8.56,8.540000..353.970000
+BMS_contactorState,dbc\tesla_model3.dbc,0x212,212:8:8:3:little_endian:0:1:0,2956,8,2956,0,CLOSED,OPEN,CLOSED | OPENING | OPEN
+BMS_hvState,dbc\tesla_model3.dbc,0x212,212:8:16:3:little_endian:0:1:0,2956,8,2956,0,DOWN,DOWN,DOWN
+BMS_nmGoingToSleep,dbc\tesla_model3.dbc,0x2F2,2F2:2:0:1:little_endian:0:1:0,2956,2,2956,0,0,0,0
+BMS_hvsBusAsleep,dbc\tesla_model3.dbc,0x2F2,2F2:2:2:1:little_endian:0:1:0,2956,2,2956,0,0,1,0 | 1
+BMS_nmKeepAwakeReason,dbc\tesla_model3.dbc,0x2F2,2F2:2:4:3:little_endian:0:1:0,2956,2,2956,0,CTRS_CLOSED,NONE_SNA,CTRS_CLOSED | NONE_SNA
+DI_systemState,dbc\tesla_model3.dbc,0x118,118:8:16:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_gear,dbc\tesla_model3.dbc,0x118,118:8:21:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+GTW_nmGoingToSleep,dbc\tesla_model3.dbc,0x458,458:7:0:1:little_endian:0:1:0,2956,7,2956,0,0,0,0
+GTW_chBusAsleep,dbc\tesla_model3.dbc,0x458,458:7:2:1:little_endian:0:1:0,2956,7,2956,0,0,1,0 | 1
+GTW_nmKeepAwakeReason,dbc\tesla_model3.dbc,0x458,458:7:4:4:little_endian:0:1:0,2956,7,2956,0,NONE_SNA,NONE_SNA,NONE_SNA
+HVP_packContNegativeState,dbc\tesla_model3.dbc,0x20A,20A:6:0:3:little_endian:0:1:0,294,6,294,0,ECONOMIZED,OPEN,ECONOMIZED | OPENING | OPEN
+HVP_packContPositiveState,dbc\tesla_model3.dbc,0x20A,20A:6:3:3:little_endian:0:1:0,294,6,294,0,ECONOMIZED,OPEN,ECONOMIZED | OPENING | OPEN
+PCS_dcdc12VSupportStatus,dbc\tesla_model3.dbc,0x224,224:8:2:2:little_endian:0:1:0,2943,8,2943,0,ACTIVE,IDLE,ACTIVE | IDLE
+PCS_dcdcHvBusDischargeStatus,dbc\tesla_model3.dbc,0x224,224:8:4:2:little_endian:0:1:0,2943,8,2943,0,IDLE,IDLE,IDLE | ACTIVE
+PCS_dcdcMainState,dbc\tesla_model3.dbc,0x224,224:8:6:4:little_endian:0:1:0,2943,8,2943,0,STANDBY,STANDBY,STANDBY
+PCS_dcdcLvOutputCurrent,dbc\tesla_model3.dbc,0x224,224:8:16:12:little_endian:0:0.1:0,2943,8,2943,0,204.8,204.8,204.8
+PCS_dcdcLvBusVolt,dbc\tesla_model3.dbc,0x2C4,2C4:8:5:10:little_endian:0:0.0390625:0,2943,8,141,140,29.375,0,29.375 | 0 | 25.9375 | 37.1875 | 0.3125 | 1.5625 | 1.875
+PCS_dcdcHvBusVolt,dbc\tesla_model3.dbc,0x2C4,2C4:8:16:12:little_endian:0:0.146484:0,2943,8,141,140,473.582772,0,473.582772 | 0 | 473.436288
+UI_readyForDrive,dbc\tesla_model3.dbc,0xC,C:7:9:1:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+UI_lockRequest,dbc\tesla_model3.dbc,0x273,273:8:17:3:little_endian:0:1:0,337,8,337,0,IDLE,IDLE,IDLE
+VCFRONT_vehiclePowerState,dbc\tesla_model3.dbc,0x221,221:8:5:2:little_endian:0:1:0,5914,8,5914,0,ACCESSORY,OFF,ACCESSORY | CONDITIONING | OFF
+VCFRONT_12vStatusForDrive,dbc\tesla_model3.dbc,0x3A1,3A1:8:14:2:little_endian:0:1:0,5914,8,5914,0,READY_FOR_DRIVE_12V,EXIT_DRIVE_REQUESTED_12V,READY_FOR_DRIVE_12V | EXIT_DRIVE_REQUESTED_12V | NOT_READY_FOR_DRIVE_12V
+VCLEFT_frontLatchStatus,dbc\tesla_model3.dbc,0x102,102:8:0:4:little_endian:0:1:0,2970,8,2970,0,CLOSED,CLOSED,CLOSED | OPENED
+VCLEFT_frontOccupancyStatus,dbc\tesla_model3.dbc,0x30A,30A:4:0:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+VCSEC_vehicleLockStatus,dbc\tesla_model3.dbc,0x339,339:8:12:4:little_endian:0:1:0,2958,8,2958,0,ACTIVE_NFC_UNLOCKED,ACTIVE_NFC_LOCKED,ACTIVE_NFC_UNLOCKED | ACTIVE_NFC_LOCKED
+VCSEC_lockRequestType,dbc\tesla_model3.dbc,0x339,339:8:24:5:little_endian:0:1:0,2958,8,2958,0,NONE,NONE,NONE | ACTIVE_NFC_LOCK
+VCSEC_simpleLockStatus,dbc\tesla_model3.dbc,0x339,339:8:54:2:little_endian:0:1:0,2958,8,2958,0,UNLOCKED,LOCKED,UNLOCKED | LOCKED
+DI_systemState,dbc\tesla_model3_party.dbc,0x118,118:8:16:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_gear,dbc\tesla_model3_party.dbc,0x118,118:8:21:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+VCFRONT_vehiclePowerState,dbc\tesla_model3_party.dbc,0x221,221:8:5:2:little_endian:0:1:0,5914,8,5914,0,VEHICLE_POWER_STATE_ACCESSORY,VEHICLE_POWER_STATE_OFF,VEHICLE_POWER_STATE_ACCESSORY | VEHICLE_POWER_STATE_CONDITIONING | VEHICLE_POWER_STATE_OFF
+DI_systemState,dbc\tesla_model3_vehicle.dbc,0x118,118:8:16:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_gear,dbc\tesla_model3_vehicle.dbc,0x118,118:8:21:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+VCLEFT_frontLatchStatus,dbc\tesla_model3_vehicle.dbc,0x102,102:8:0:4:little_endian:0:1:0,2970,8,2970,0,LATCH_CLOSED,LATCH_CLOSED,LATCH_CLOSED | LATCH_OPENED
+DI_gear,dbc\tesla_powertrain.dbc,0x116,116:6:12:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,
+DI_systemState,dbc\tesla_powertrain.dbc,0x256,256:8:0:3:little_endian:0:1:0,0,NO_FRAME,0,0,,,

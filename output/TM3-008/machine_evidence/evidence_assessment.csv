@@ -1,0 +1,11 @@
+﻿requirement_id,status,evidence_summary,limitation
+ER-01,INSUFFICIENT_EVIDENCE,区间起始UI_readyForDrive=1、门闩CLOSED、车辆UNLOCKED、BMS接触器CLOSED、DCDC支持ACTIVE且通信活跃。,Ready、高压和DCDC起始状态有CAN支持，但DI_gear无样本，P挡及外部READY事实仍缺口。
+ER-02,INSUFFICIENT_EVIDENCE,驾驶门在7.9845秒CLOSED→OPENED，并在29.6561秒OPENED→CLOSED。,开关门反馈已观察；VCLEFT_frontOccupancyStatus无帧，离座动作及Observed Event Time不能由门闩替代。
+ER-03,SUPPORTED,关门后车辆维持UNLOCKED；33.3626秒VCSEC_lockRequestType出现ACTIVE_NFC_LOCK，simple/vehicle锁状态同步转为LOCKED。,支持CAN域内关门未锁与NFC落锁/反馈的区分；UI_lockRequest全程IDLE且不承担钥匙卡REQUEST，外部灯光/声音反馈仍属ER-10 GAP。
+ER-04,INSUFFICIENT_EVIDENCE,UI_readyForDrive在122.8397秒由1转0；VCFRONT_vehiclePowerState在282.1605秒由CONDITIONING转OFF，随后接触器与DCDC退出。,观察到消费者状态和系统结果，但没有直接下电REQUEST/PERMISSION/COMMAND；BMS_hvState语义验证失败。
+ER-05,INSUFFICIENT_EVIDENCE,BMS总接触器282.2451秒OPENING、282.5436秒OPEN；0x20A正负接触器282.3549秒OPENING、283.3549秒OPEN；放电候选282.4645到282.7644秒ACTIVE；0x132电压字段快速下降。,PCS_dcdcHvBusVolt继续SEMANTIC_VALIDATION_FAILED；0x132字段的Pack端物理定位与下降行为冲突，因此接触器执行已支持，但下游母线定量物理响应仍为GAP。
+ER-06,SUPPORTED,PCS_dcdc12VSupportStatus曾在175.4707到185.2708秒短暂IDLE后恢复ACTIVE，并在282.2645秒最终转IDLE；DLC6低压输出电流候选随后归零，母线电压候选约7.77到14.06 V。,仅支持PCS侧DCDC/低压响应；PCS_dcdcMainState语义失败，且没有外部12 V测量。
+ER-07,INSUFFICIENT_EVIDENCE,可重建门开→门关→NFC落锁/锁止反馈→Ready消费者状态退出→GTW分域asleep候选→SYSTEM_RESULT OFF→接触器/DCDC退出→BMS总线休眠候选→末段静默的实际顺序。,占座以及直接需求/许可/命令层仍缺失，不能形成完整请求—许可—执行链，也不从时间先后推断控制因果。
+ER-08,SUPPORTED,GTW chBus/VEHBus asleep候选分别于146.3140/170.5162秒转1；各ID分层停止发布，BMS_hvsBusAsleep于295.0436秒转1，295.8383秒最后一帧后无通信。,只证明当前采集域分层退出；逐ID最后出现不等于ECU断电，GTW asleep字段不代表整车全部网络。
+ER-09,NOT_OBSERVED,观察到从最后一帧295.8383秒到计划截止660.0000秒、持续364.1617秒的采集域末段静默，期间未见恢复通信。,连续静默仅约6.07分钟，未达到不少于10分钟要求；结束边界来自拆分合同，且无外部无干预记录。
+ER-10,INSUFFICIENT_EVIDENCE,未发现现场记录或App实际触发时间CSV。,CAN Candidate不得替代Observed Event、外部落锁反馈、钥匙/App无干预记录或停止采集方式。

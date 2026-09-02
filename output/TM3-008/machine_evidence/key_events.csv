@@ -1,0 +1,18 @@
+﻿event_id,time_s,event,evidence,observed,boundary
+E00,0.000000,分析区间开始,UI_readyForDrive、门闩、VCSEC锁状态、BMS接触器、DCDC支持,Ready候选为1、门闩CLOSED、车辆UNLOCKED、接触器CLOSED、DCDC支持ACTIVE,DI_gear无可解样本，P挡仍缺直接CAN证据
+E01,7.984500,驾驶门打开,VCLEFT_frontLatchStatus,CLOSED→OPENED,无占座Signal，不能单独证明人员已经离座
+E02,29.656100,驾驶门关闭,VCLEFT_frontLatchStatus,OPENED→CLOSED,门闩反馈，不等于落锁
+E03,33.362600,NFC锁止请求候选及锁止反馈,VCSEC_lockRequestType+VCSEC_simpleLockStatus+VCSEC_vehicleLockStatus,ACTIVE_NFC_LOCK；UNLOCKED→LOCKED；ACTIVE_NFC_UNLOCKED→ACTIVE_NFC_LOCKED,CAN内部时序支持；ER-10外部刷卡/灯光/声音记录仍缺失
+E04,122.839700,Ready消费者状态候选退出,UI_readyForDrive,1→0,CONSUMER_STATE，不作为许可或控制命令
+E05,282.160500,车辆供电阶段候选进入OFF,VCFRONT_vehiclePowerState,CONDITIONING→OFF,SYSTEM_RESULT候选，不是下电REQUEST或COMMAND
+E06,282.245100,BMS总接触器开始打开,BMS_contactorState,CLOSED→OPENING,BMS总状态
+E07,282.264500,12V支持状态退出,PCS_dcdc12VSupportStatus,ACTIVE→IDLE,PCS内部状态；外部12V未测
+E08,282.354900,正负接触器候选进入OPENING,HVP_packContPositiveState+HVP_packContNegativeState,ECONOMIZED→OPENING,0x20A实验级多DBC验证
+E09,282.464500,PCS母线放电状态候选激活,PCS_dcdcHvBusDischargeStatus,IDLE→ACTIVE,执行状态候选，不证明母线已去电
+E10,282.543600,BMS总接触器打开,BMS_contactorState,OPENING→OPEN,BMS总状态
+E11,282.550300,0x132电压字段快速下降,BMS_packVoltage,由约353.5 V降至60 V以下并继续下降,缩放/动态可信；Pack端物理定位与实测矛盾，不能沿用名称
+E12,282.764400,PCS母线放电状态候选返回IDLE,PCS_dcdcHvBusDischargeStatus,ACTIVE→IDLE,PCS_dcdcHvBusVolt定义失败，不能据此确认下游母线终值
+E13,283.354900,正负接触器候选进入OPEN,HVP_packContPositiveState+HVP_packContNegativeState,OPENING→OPEN,0x20A实验级多DBC验证
+E14,295.043600,BMS发布总线休眠候选,BMS_hvsBusAsleep,0→1,BMS消费者视角，不代表整车全部网络
+E15,295.838300,本采集域最后一帧/进入末段静默,NetworkFrameRate_derived+CanIdLastSeenTime_derived,最后一帧后通信为0,当前采集域静默候选
+E16,660.000000,计划采集窗口结束,TM3-008拆分边界,末段未见通信恢复,结束时刻来自用户确认和拆分合同，不是CAN事件

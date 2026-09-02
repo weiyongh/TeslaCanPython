@@ -1,0 +1,52 @@
+{
+  "experiment_id": "TM3-008",
+  "analysis_status": "EVIDENCE_ASSESSED",
+  "approved_plan_status": "APPROVED",
+  "approved_plan_scope": "THIS_EXPERIMENT_ONLY",
+  "approved_plan_sha256": "bd903029fa4e94a7cca19cf9b3360f60b9e7711326c88e11a3635479eba561d6",
+  "approved_active_candidate_count": 32,
+  "approved_excluded_candidate_count": 1,
+  "source_asc_path": "input\\can_20260831113240_TM3-008_关门落锁完整下电采集.asc",
+  "source_asc_sha256": "53bfd3947933e0554541bbe71e315aad61d5ef9f92429800097923594475955c",
+  "source_asc_size_bytes": 27361537,
+  "source_interval_s": [
+    0.0,
+    660.0
+  ],
+  "input_file_declared_interval_s": [
+    0.0,
+    660.0
+  ],
+  "collection_script_path": "input\\TM3-008_关门落锁完整下电采集脚本.txt",
+  "collection_script_sha256": "eb9de2c46048ea0477f94bc176caaf7e613d3f024317ef906c2c06bd663da27d",
+  "collection_script_duration_s": 600.0,
+  "declared_interval_covers_script": true,
+  "declared_interval_margin_after_script_s": 60.0,
+  "timestamps_rebased_to_interval_start": true,
+  "interval_start_s": 0.0,
+  "interval_end_s": 295.8383,
+  "interval_observed_duration_s": 295.8383,
+  "interval_nominal_duration_s": 660.0,
+  "unique_can_id_count": 284,
+  "source_frame_line_count": 592949,
+  "source_malformed_frame_count": 0,
+  "interval_parsed_frame_count": 592949,
+  "interval_malformed_frame_count": 0,
+  "interval_first_source_frame_s": 0.0,
+  "interval_last_source_frame_s": 295.8383,
+  "combined_asc_path": "input\\can_20260831113240开关门采集.asc",
+  "combined_asc_sha256": "5f4507e60c9105ad89b66ab31bd76f175155faab25a2d66c11f427053d2c5bf7",
+  "source_file_header": [
+    "date Mon Aug 31 11:33:00 AM 2026",
+    "base hex timestamps absolute",
+    "// version 7.0.0",
+    "// Derived analysis input: TM3-008",
+    "// Source: can_20260831113240开关门采集.asc",
+    "// Source interval: 0.000000 s to 660.000000 s",
+    "// Output timestamps rebased to 0.000000 s"
+  ],
+  "input_identity_decision": "The standard TM3-008 ASC is the sole ASC input. Its declared source interval is 0..660 s, covering the collection script's 0..600 s timeline with 60 s margin. The last CAN frame is earlier because the capture domain becomes silent; this is not treated as evidence that the declared file interval ended at the last frame timestamp.",
+  "onyx_dbc_sha256": "3554e37a3a8371bc9c1b76445061d30f2c5bbaa35a055fe1f01f7ee75030e86c",
+  "evidence_assessment_count": 10,
+  "formal_report_bundle_generated": true
+}
