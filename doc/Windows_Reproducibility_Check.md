@@ -6,7 +6,7 @@
 
 - 安装 Git for Windows。
 - 安装 64 位 Python 3.12；本项目当前开发环境验证版本为 Python 3.12.2。
-- clone 时保持 Git 默认配置即可；仓库 `.gitattributes` 已固定报告、Golden、CSV、JSON和源码为 LF，并将 ASC、ZIP 等证据输入按二进制处理。
+- clone 时保持 Git 默认配置即可；仓库 `.gitattributes` 已固定报告、普通文本fixture、JSON和源码为 LF，冻结输出CSV/machine evidence保留仓库原始字节，并将 ASC、ZIP 等证据输入按二进制处理。
 
 在 PowerShell 中执行：
 
@@ -96,3 +96,27 @@ TM3-007当前四件套冻结 SHA-256：
 ## 6. Windows 验收结论
 
 只有实际 Windows clone 满足以下全部条件，才可标记跨平台验证通过：clone和依赖安装成功、完整测试通过、Renderer入口不读ASC即可复现四件套、23项Approved和Assessment等冻结边界不变、字节级文件SHA一致、无Windows专属临时补丁。任何失败请保留完整PowerShell命令、错误输出、Python版本、`git rev-parse HEAD`和`git status --short`，返回开发侧分析。
+
+## 7. macOS 提交前 clean verification
+
+本节必须在 macOS 开发机执行；Windows 或应用内置 Python 的结果不能代替它：
+
+```bash
+git status --short --branch
+git rev-parse HEAD
+python3 --version
+python3 -m pip install -r requirements.txt
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+python3 src/render_tm3_007.py
+python3 -m unittest tests.test_tm3_007_report_migration tests.test_tm3_regression_outputs -v
+git status --short
+```
+
+预期：Python 为3.12.x；所有测试通过；Renderer不读取ASC；重新生成后只有本轮有意修改的源码/文档出现在状态中，四件套不产生内容差异。提交后记录并推送 `git rev-parse HEAD` 的结果，Windows必须clone并验证同一提交。
+
+## 8. 文件名、编码与故障日志
+
+- 仓库包含中文文件名；Git for Windows、PowerShell和Python均按UTF-8路径处理，不要手工改成英文副本。
+- 不要设置会覆盖仓库 `.gitattributes` 的换行规则。正式Markdown使用UTF-8/LF；冻结machine evidence CSV保留仓库中的原始字节。
+- 若 `python` 打开Microsoft Store或不可执行，说明Python安装/launcher尚未完成。安装Python 3.12后关闭并重新打开PowerShell，再执行 `py -3.12 --version`；不要修改项目代码绕过环境问题。
+- 失败回传至少包含：`git rev-parse HEAD`、`git status --short`、`py -3.12 --version`、失败命令完整输出，以及四件套的 `Get-FileHash` 结果。

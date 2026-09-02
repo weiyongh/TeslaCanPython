@@ -475,7 +475,10 @@ def render_report_bundle(plan: ApprovedEvidencePlan, report: ExperimentReport, o
         "coverage": render_signal_coverage(plan, report), "audit": render_audit(plan, report),
     }
     for key, path in outputs.items():
-        path.write_text(content[key], encoding="utf-8")
+        # Keep rendered reports byte-stable across POSIX and Windows.  The
+        # Golden hashes protect the UTF-8/LF representation, so relying on the
+        # host's default newline would turn every LF into CRLF on Windows.
+        path.write_text(content[key], encoding="utf-8", newline="\n")
     validate_report_bundle(report.experiment_id, output_dir, report.timeline_profile)
     return outputs
 
