@@ -1,0 +1,79 @@
+{
+  "experiment_id": "TM3-007",
+  "artifact_contract": "PASS",
+  "approved_plan_gate": "PASS",
+  "approved_signal_count": 23,
+  "evidence_requirement_count": 9,
+  "completion_status": "COMPLETE_WITH_GAPS",
+  "asc_analyzed": true,
+  "observed_event_time_fabricated": false,
+  "extra_formal_signal_added": false,
+  "evidence_plan_unittest": "PASS_4_TESTS",
+  "golden_regression": "PASS_EXISTING_GOLDEN_NON_MUTATION_CHECK_ONLY",
+  "generated_files": [
+    {
+      "path": "output/TM3-007/TM3-007_最终报告.md",
+      "sha256": "b9e585e9f3306cd3c8286bde63eebc2007cd5d9e4b5490c4072418171bfcd70d"
+    },
+    {
+      "path": "output/TM3-007/采集时间线与关键Signal.md",
+      "sha256": "fad944a1e46f603482599ed77cb9ff0a9ffb4bdaaca6f71341badcbcd26188d0"
+    },
+    {
+      "path": "output/TM3-007/DBC关键Signal覆盖与可读性.md",
+      "sha256": "3a01e06693347bce57a5aaf80bca3e5be22e82fd62c3d775b108f1cd63f77f20"
+    },
+    {
+      "path": "output/TM3-007/工程审计.md",
+      "sha256": "26348ebc613d6293dfc5de94ec75ae4e064d12bfab4b25f519842c42b169e8be"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/asc_integrity.json",
+      "sha256": "238b3d3894cd50ad8504908f07026792283fbc49b5fe7f0d31396084b0d13e3f"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/decoded_native_samples.csv",
+      "sha256": "7545947976181d106ccb13143a73b8592e643cc08ee2b881bd4f9780702f887c"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/network_activity_1s.csv",
+      "sha256": "d7fa3231495a6c603d6cb5e6a0848e145c16974aba7cbd35be48db4de4912e97"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/dbc_definition_comparison.csv",
+      "sha256": "bf2af516fd7b748b29fd24a27ee09ff4a8bb77b4f88b1b4ba25a3b7ed24a823c"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/signal_coverage.csv",
+      "sha256": "9f5a24b749d6944a9511e8925484d3066a48db51b1c48104c4fda1487be58fb9"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/signal_validation_0x20A_raw.csv",
+      "sha256": "facc5411bcba8231ea97752c3ed93ab5c09548d8acccdeef8c8350a6d8b3ad49"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/signal_validation_assessment.csv",
+      "sha256": "490bf4ca0516cea70d477a33061485bb16f0e8443ccf7c261547b82677bdbb4f"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/events.csv",
+      "sha256": "30c1a232e0e1d348114b1b2c4ff7507e2f01894db9223b7097688c87005c762c"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/event_signal_samples.csv",
+      "sha256": "d51460828b1ed66307ffb7a34ec5414b0306c94204cc76db7d287f66d761fcf7"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/evidence_assessment.csv",
+      "sha256": "02a1f6375fcd21ae20c3e7c255f1652e3a1aacfdd4a58c60190986ffe379b0de"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/report_view_model.json",
+      "sha256": "df6abd8eeb2879bc30dc40d081ec4a0be5ad5deac237717d5fe1d66ed984518d"
+    },
+    {
+      "path": "output/TM3-007/machine_evidence/experiment_metadata.json",
+      "sha256": "4996f745d69dba4dd7f79dbbf1846cb4fd83245f2bdbf80c9aa274a4cc348344"
+    }
+  ]
+}

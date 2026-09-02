@@ -1,0 +1,1026 @@
+﻿file,id,message,dlc,signal,start,length,byte_order,signed,scale,offset,minimum,maximum,unit,mux,mux_ids,choices,comment,message_comment,asc_frames,asc_dlcs
+Model3CAN.dbc,0x123,ID123UI_alertMatrix1,8,UI_a015_TPMSOverPressureWarning,14,1,little_endian,False,1,0,0,1,,,,{},,,1706,"{""8"": 1706}"
+Model3CAN.dbc,0x123,ID123UI_alertMatrix1,8,UI_a019_ParkBrakeFault,18,1,little_endian,False,1,0,0,1,,,,{},,,1706,"{""8"": 1706}"
+Model3CAN.dbc,0x123,ID123UI_alertMatrix1,8,UI_a031_BrakeFluidLow,30,1,little_endian,False,1,0,0,1,,,,{},,,1706,"{""8"": 1706}"
+Model3CAN.dbc,0x123,ID123UI_alertMatrix1,8,UI_a049_BrakeShiftRequired,48,1,little_endian,False,1,0,0,1,,,,{},,,1706,"{""8"": 1706}"
+Model3CAN.dbc,0x145,ID145ESP_status,8,ESP_hydraulicBoostEnabled,19,1,little_endian,False,1,0,0,1,,,,{},,,0,{}
+Model3CAN.dbc,0x145,ID145ESP_status,8,ESP_brakeLamp,21,1,little_endian,False,1,0,0,1,,,,"{""0"": ""LAMP_OFF"", ""1"": ""LAMP_ON""}",,,0,{}
+Model3CAN.dbc,0x145,ID145ESP_status,8,ESP_absBrakeEvent2,22,2,little_endian,False,1,0,0,3,,,,"{""2"": ""ABS_EVENT_ACTIVE_FRONT"", ""1"": ""ABS_EVENT_ACTIVE_FRONT_REAR"", ""3"": ""ABS_EVENT_ACTIVE_REAR"", ""0"": ""ABS_EVENT_NOT_ACTIVE""}",,,0,{}
+Model3CAN.dbc,0x145,ID145ESP_status,8,ESP_brakeDiscWipingActive,28,1,little_endian,False,1,0,0,1,,,,"{""1"": ""BDW_ACTIVE"", ""0"": ""BDW_INACTIVE""}",,,0,{}
+Model3CAN.dbc,0x145,ID145ESP_status,8,ESP_driverBrakeApply,29,2,little_endian,False,1,0,0,3,,,,"{""2"": ""Driver_applying_brakes"", ""3"": ""Faulty_SNA"", ""0"": ""NotInit_orOff"", ""1"": ""Not_Applied""}",,,0,{}
+Model3CAN.dbc,0x145,ID145ESP_status,8,ESP_brakeApply,31,1,little_endian,False,1,0,0,1,,,,"{""1"": ""BLS_ACTIVE"", ""0"": ""BLS_INACTIVE""}",,,0,{}
+Model3CAN.dbc,0x145,ID145ESP_status,8,ESP_brakeTorqueTarget,51,13,little_endian,False,2,0,0,16382,Nm,,,"{""8191"": ""SNA""}",,,0,{}
+Model3CAN.dbc,0x219,ID219VCSEC_TPMSData,5,VCSEC_TPMSPressure0,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[0],"{""255"": ""SNA""}",,,1699,"{""7"": 1699}"
+Model3CAN.dbc,0x219,ID219VCSEC_TPMSData,5,VCSEC_TPMSPressure1,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[1],"{""255"": ""SNA""}",,,1699,"{""7"": 1699}"
+Model3CAN.dbc,0x219,ID219VCSEC_TPMSData,5,VCSEC_TPMSPressure2,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[2],"{""255"": ""SNA""}",,,1699,"{""7"": 1699}"
+Model3CAN.dbc,0x219,ID219VCSEC_TPMSData,5,VCSEC_TPMSPressure3,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[3],"{""255"": ""SNA""}",,,1699,"{""7"": 1699}"
+Model3CAN.dbc,0x399,ID399DAS_status,8,DAS_autoparkWaitingForBrake,26,1,little_endian,False,1,0,0,1,,,,{},,,170,"{""3"": 170}"
+Model3CAN.dbc,0x39D,ID39DIBST_status,5,IBST_statusChecksum,0,8,little_endian,False,1,0,0,255,,,,{},,,4249,"{""5"": 4249}"
+Model3CAN.dbc,0x39D,ID39DIBST_status,5,IBST_statusCounter,8,4,little_endian,False,1,0,0,15,,,,{},,,4249,"{""5"": 4249}"
+Model3CAN.dbc,0x39D,ID39DIBST_status,5,IBST_iBoosterStatus,12,3,little_endian,False,1,0,0,6,,,,"{""4"": ""IBOOSTER_ACTIVE_GOOD_CHECK"", ""6"": ""IBOOSTER_ACTUATION"", ""3"": ""IBOOSTER_DIAGNOSTIC"", ""2"": ""IBOOSTER_FAILURE"", ""1"": ""IBOOSTER_INIT"", ""0"": ""IBOOSTER_OFF"", ""5"": ""IBOOSTER_READY""}",,,4249,"{""5"": 4249}"
+Model3CAN.dbc,0x39D,ID39DIBST_status,5,IBST_driverBrakeApply,16,2,little_endian,False,1,0,0,3,,,,"{""1"": ""BRAKES_NOT_APPLIED"", ""2"": ""DRIVER_APPLYING_BRAKES"", ""3"": ""FAULT"", ""0"": ""NOT_INIT_OR_OFF""}",,,4249,"{""5"": 4249}"
+Model3CAN.dbc,0x39D,ID39DIBST_status,5,IBST_internalState,18,3,little_endian,False,1,0,0,6,,,,"{""4"": ""DIAGNOSTIC"", ""3"": ""EXTERNAL_BRAKE_REQUEST"", ""2"": ""LOCAL_BRAKE_REQUEST"", ""0"": ""NO_MODE_ACTIVE"", ""6"": ""POST_DRIVE_CHECK"", ""1"": ""PRE_DRIVE_CHECK"", ""5"": ""TRANSITION_TO_IDLE""}",,,4249,"{""5"": 4249}"
+Model3CAN.dbc,0x39D,ID39DIBST_status,5,IBST_sInputRodDriver,21,12,little_endian,False,0.015625,-5,-5,47,mm,,,{},,,4249,"{""5"": 4249}"
+Model3CAN.dbc,0x3E2,ID3E2VCLEFT_lightStatus,7,VCLEFT_brakeLightStatus,0,2,little_endian,False,1,0,0,3,,,,"{""2"": ""LIGHT_FAULT"", ""0"": ""LIGHT_OFF"", ""1"": ""LIGHT_ON"", ""3"": ""LIGHT_SNA""}",,,860,"{""7"": 860}"
+Model3CAN.dbc,0x3E2,ID3E2VCLEFT_lightStatus,7,VCLEFT_brakeTrailerLightStatus,22,2,little_endian,False,1,0,0,3,,,,"{""2"": ""LIGHT_FAULT"", ""0"": ""LIGHT_OFF"", ""1"": ""LIGHT_ON"", ""3"": ""LIGHT_SNA""}",,,860,"{""7"": 860}"
+Model3CAN.dbc,0x3E2,ID3E2VCLEFT_lightStatus,7,VCLEFT_dynamicBrakeLightStatus,44,2,little_endian,False,1,0,0,2,,,,"{""2"": ""DYNAMIC_BRAKE_LIGHT_ACTIVE_HIGH"", ""1"": ""DYNAMIC_BRAKE_LIGHT_ACTIVE_LOW"", ""0"": ""DYNAMIC_BRAKE_LIGHT_OFF""}",,,860,"{""7"": 860}"
+Model3CAN.dbc,0x3E9,ID3E9DAS_bodyControls,8,DAS_dynamicBrakeLightRequest,22,1,little_endian,False,1,0,0,1,,,,{},,,345,"{""8"": 345}"
+Model3CAN.dbc,0x3F8,ID3F8UI_driverAssistControl,8,UI_enableBrakeLightPulse,63,1,little_endian,False,1,0,0,1,,,,{},,,0,{}
+Model3CAN.dbc,0x3E3,ID3E3VCRIGHT_lightStatus,2,VCRIGHT_brakeLightStatus,0,2,little_endian,False,1,0,0,3,,,,"{""2"": ""LIGHT_FAULT"", ""0"": ""LIGHT_OFF"", ""1"": ""LIGHT_ON"", ""3"": ""LIGHT_SNA""}",,,860,"{""4"": 860}"
+Model3CAN.dbc,0x334,ID334UI_powertrainControl,8,UI_pedalMap,5,2,little_endian,False,1,0,0,2,,,,"{""0"": ""CHILL"", ""2"": ""PERFORMANCE"", ""1"": ""SPORT""}",,,340,"{""8"": 340}"
+Model3CAN.dbc,0x7D5,ID7D5DIR_debug,8,DIR_veResForce,20,12,little_endian,True,0.0005,0,-1.024,1.0235,G,DIR_debugSelector,[41],{},,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc,0x7D5,ID7D5DIR_debug,8,DIR_oilPumpPressureEstimateMax,24,8,little_endian,False,2,0,0,500,kPa,DIR_debugSelector,[46],"{""255"": ""SNA""}",,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc,0x7D5,ID7D5DIR_debug,8,DIR_oilPumpPressureExpectedMin,32,8,little_endian,False,2,0,0,500,kPa,DIR_debugSelector,[46],"{""255"": ""SNA""}",,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc,0x7D5,ID7D5DIR_debug,8,DIR_brakeSwitchNO,62,1,little_endian,False,1,0,0,1,,DIR_debugSelector,[42],{},,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc,0x7D5,ID7D5DIR_debug,8,DIR_brakeSwitchNC,63,1,little_endian,False,1,0,0,1,,DIR_debugSelector,[42],{},,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc,0x757,ID757DIF_debug,8,DIF_veResForce,20,12,little_endian,True,0.0005,0,-1.024,1.0235,G,DIF_debugSelector,[41],{},,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc,0x757,ID757DIF_debug,8,DIF_oilPumpPressureEstimateMax,24,8,little_endian,False,2,0,0,500,kPa,DIF_debugSelector,[46],"{""255"": ""SNA""}",,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc,0x757,ID757DIF_debug,8,DIF_oilPumpPressureExpectedMin,32,8,little_endian,False,2,0,0,500,kPa,DIF_debugSelector,[46],"{""255"": ""SNA""}",,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc,0x757,ID757DIF_debug,8,DIF_brakeSwitchNO,62,1,little_endian,False,1,0,0,1,,DIF_debugSelector,[42],{},,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc,0x757,ID757DIF_debug,8,DIF_brakeSwitchNC,63,1,little_endian,False,1,0,0,1,,DIF_debugSelector,[42],{},,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc,0x221,ID221VCFRONT_LVPowerState,8,VCFRONT_iBoosterLVState,24,2,little_endian,False,1,0,0,3,,VCFRONT_LVPowerStateIndex,[0],"{""3"": ""LV_FAULT"", ""2"": ""LV_GOING_DOWN"", ""0"": ""LV_OFF"", ""1"": ""LV_ON""}",,,3399,"{""8"": 3399}"
+Model3CAN.dbc,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterState,8,2,little_endian,False,1,0,0,2,,VCFRONT_eFuseDebugStatusIndex,[3],"{""2"": ""EFUSE_STATE_LOCKED_OUT"", ""0"": ""EFUSE_STATE_OFF"", ""1"": ""EFUSE_STATE_ON""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterFault,10,1,little_endian,False,1,0,0,1,,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterSelfTestResult,11,4,little_endian,False,1,0,0,11,,VCFRONT_eFuseDebugStatusIndex,[3],"{""4"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_EFUSE_OUTPUT_SHORT"", ""8"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_ENABLE_HIGH_MALFUNCTION"", ""6"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_ENABLE_LOW_MALFUNCTION"", ""10"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_NOT_LATCHED"", ""7"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_POWER_FET_CHANNEL_OPEN"", ""5"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_POWER_FET_STUCK_ON"", ""3"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_RAILS_UNSTABLE"", ""9"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_TURN_OFF_PATH_TOO_SLOW"", ""0"": ""EFUSE_SELF_TEST_EFUSE_RESULT_NOT_RUN"", ""2"": ""EFUSE_SELF_TEST_EFUSE_RESULT_PASSED"", ""1"": ""EFUSE_SELF_TEST_EFUSE_RESULT_RUNNING"", ""11"": ""EFUSE_SELF_TEST_EFUSE_RESULT_SKIPPED""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterTemp,15,11,little_endian,False,0.125,-40,-40,150,C,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterVoltage,31,16,little_endian,False,0.1,0,0,6553.5,V,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterCurrent,47,16,little_endian,False,0.1,0,0,6553.5,A,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x2E1,ID2E1VCFRONT_status,8,VCFRONT_iBoosterWakeLine,3,1,little_endian,False,1,0,0,1,,VCFRONT_statusIndex,[1],{},,,10623,"{""8"": 10623}"
+Model3CAN.dbc,0x2E1,ID2E1VCFRONT_status,8,VCFRONT_iBoosterStateDBG,5,3,little_endian,False,1,0,0,4,,VCFRONT_statusIndex,[1],"{""4"": ""IBOOSTER_FORCE_OFF"", ""2"": ""IBOOSTER_GOING_DOWN"", ""0"": ""IBOOSTER_OFF"", ""1"": ""IBOOSTER_ON"", ""3"": ""IBOOSTER_WRITING_DATA_SHUTDOWN""}",,,10623,"{""8"": 10623}"
+Model3CAN.dbc,0x2E1,ID2E1VCFRONT_status,8,VCFRONT_pressureRefrigSuction,32,7,little_endian,False,0.125,0,0,11.5,bar,VCFRONT_statusIndex,[3],"{""127"": ""SNA""}",,,10623,"{""8"": 10623}"
+Model3CAN.dbc,0x2E1,ID2E1VCFRONT_status,8,VCFRONT_pressureRefrigDischarge,40,8,little_endian,False,0.125,0,0,31.75,bar,VCFRONT_statusIndex,[3],"{""255"": ""SNA""}",,,10623,"{""8"": 10623}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_estPressureLiq,5,7,little_endian,False,0.25,0,0,31.75,bar,VCFRONT_logging1HzIndex,[10],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_hpForceScavenge,5,1,little_endian,False,1,0,0,1,,VCFRONT_logging1HzIndex,[16],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_condenserPressureLimit,8,6,little_endian,False,0.16,10,10,20,bar,VCFRONT_logging1HzIndex,[1],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_dischargePressureTarget,8,7,little_endian,False,0.25,0,0,26,bar,VCFRONT_logging1HzIndex,[14],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_estPressureSuct,12,7,little_endian,False,0.125,0,0,11.5,bar,VCFRONT_logging1HzIndex,[10],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_estPressureDisch,19,7,little_endian,False,0.25,0,0,31.75,bar,VCFRONT_logging1HzIndex,[10],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_pressureRefrigDischEst,24,5,little_endian,False,1,0,0,31,bar,VCFRONT_logging1HzIndex,[16],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_suctionPressureTarget,32,6,little_endian,False,0.15,0,0,8,bar,VCFRONT_logging1HzIndex,[14],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_dischargePressureLimit,48,7,little_endian,False,0.25,0,0,26,bar,VCFRONT_logging1HzIndex,[19],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_pressureRefrigSuctionEst,51,7,little_endian,False,0.12,0,0,14.36,bar,VCFRONT_logging1HzIndex,[16],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc,0x186,ID186DIF_torque,8,DIF_slavePedalPos,56,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,0,{}
+Model3CAN.dbc,0x396,ID396FrontOilPump,8,FrontOilPumpPressureEstimate396,40,8,little_endian,False,2,0,0,500,kPa,,,{},,swapped with 395 in old firmware,0,{}
+Model3CAN.dbc,0x396,ID396FrontOilPump,8,FrontOilPumpPressureExpected396,48,8,little_endian,False,2,0,0,500,kPa,,,{},,swapped with 395 in old firmware,0,{}
+Model3CAN.dbc,0x395,ID395DIR_oilPump,8,DIR_oilPumpPressureEstimate,40,8,little_endian,False,2,0,0,500,kPa,,,{},,swapped with 396 in old firmware,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x395,ID395DIR_oilPump,8,DIR_oilPumpPressureExpected,48,8,little_endian,False,2,0,0,500,kPa,,,{},,swapped with 396 in old firmware,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x395,ID395DIR_oilPump,8,DIR_oilPumpPressureResidual,56,8,little_endian,False,4,-500,-500,500,kPa,,,{},,swapped with 396 in old firmware,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueFrL,0,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+Model3CAN.dbc,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueFrR,12,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+Model3CAN.dbc,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueReL,24,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+Model3CAN.dbc,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueReR,36,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+Model3CAN.dbc,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueQF,50,1,little_endian,False,1,0,0,1,,,,"{""1"": ""IN_SPEC"", ""0"": ""UNDEFINABLE_ACCURACY""}",,,0,{}
+Model3CAN.dbc,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueCounter,52,4,little_endian,False,1,0,0,15,,,,{},,,0,{}
+Model3CAN.dbc,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueChecksum,56,8,little_endian,False,1,0,0,255,,,,{},,,0,{}
+Model3CAN.dbc,0x3C2,ID3C2VCLEFT_switchStatus,8,VCLEFT_brakeSwitchPressed,4,1,little_endian,False,1,0,0,1,,VCLEFT_switchStatusIndex,[0],{},,,3408,"{""8"": 3408}"
+Model3CAN.dbc,0x3C2,ID3C2VCLEFT_switchStatus,8,VCLEFT_brakePressed,60,1,little_endian,False,1,0,0,1,,VCLEFT_switchStatusIndex,[0],{},,,3408,"{""8"": 3408}"
+Model3CAN.dbc,0x293,ID293UI_chassisControl,8,UI_parkBrakeRequest,5,2,little_endian,False,1,0,0,3,,,,"{""0"": ""PARK_BRAKE_REQUEST_IDLE"", ""1"": ""PARK_BRAKE_REQUEST_PRESSED"", ""3"": ""PARK_BRAKE_REQUEST_SNA""}",,,340,"{""8"": 340}"
+Model3CAN.dbc,0x293,ID293UI_chassisControl,8,UI_pedalSafetyEnable,42,2,little_endian,False,1,0,0,3,,,,"{""0"": ""PEDAL_SAFETY_OFF"", ""1"": ""PEDAL_SAFETY_ON"", ""3"": ""SNA""}",,,340,"{""8"": 340}"
+Model3CAN.dbc,0x321,ID321VCFRONT_sensors,8,VCFRONT_brakeFluidLevel,22,2,little_endian,False,1,0,0,2,,,,"{""1"": ""LOW"", ""2"": ""NORMAL"", ""0"": ""SNA""}",,,170,"{""8"": 170}"
+Model3CAN.dbc,0x201,ID201VCFRONT_loggingAndVitals10Hz,8,VCFRONT_pressureRefrigLiquid,40,8,little_endian,False,0.125,0,0,31.75,bar,VCFRONT_loggingAndVitals10HzInde,[1],"{""255"": ""SNA""}",,,6799,"{""8"": 6799}"
+Model3CAN.dbc,0x201,ID201VCFRONT_loggingAndVitals10Hz,8,VCFRONT_pressureRefrigSuctionVit,46,7,little_endian,False,0.125,0,0,11.5,bar,VCFRONT_loggingAndVitals10HzInde,[2],"{""127"": ""SNA""}",,,6799,"{""8"": 6799}"
+Model3CAN.dbc,0x201,ID201VCFRONT_loggingAndVitals10Hz,8,VCFRONT_pressureRefrigDischargeV,53,8,little_endian,False,0.125,0,0,31.75,bar,VCFRONT_loggingAndVitals10HzInde,[2],"{""255"": ""SNA""}",,,6799,"{""8"": 6799}"
+Model3CAN.dbc,0x118,ID118DriveSystemStatus,8,DI_brakePedalState,19,2,little_endian,False,1,0,0,2,,,,"{""2"": ""INVALID"", ""0"": ""OFF"", ""1"": ""ON""}",Brake Pedal,,16998,"{""8"": 16998}"
+Model3CAN.dbc,0x118,ID118DriveSystemStatus,8,DI_regenLight,26,1,little_endian,False,1,0,0,1,,,,{},Regen Brake,,16998,"{""8"": 16998}"
+Model3CAN.dbc,0x118,ID118DriveSystemStatus,8,DI_accelPedalPos,32,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",Pedal Position,,16998,"{""8"": 16998}"
+Model3CAN.dbc,0x108,ID108DIR_torque,8,DIR_slavePedalPos,56,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x31F,ID31FTPMSsensors,8,TPMSFLpressure31F,0,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,0,{}
+Model3CAN.dbc,0x31F,ID31FTPMSsensors,8,TPMSFRpressure31F,16,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,0,{}
+Model3CAN.dbc,0x31F,ID31FTPMSsensors,8,TPMSRLpressure31F,32,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,0,{}
+Model3CAN.dbc,0x31F,ID31FTPMSsensors,8,TPMSRRpressure31F,48,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,0,{}
+Model3CAN.dbc,0x3FE,ID3FEbrakeTemps,5,BrakeTempFL3FE,0,10,little_endian,False,1,-40,,,C,,,{},,Brake Temps Estimated,170,"{""8"": 170}"
+Model3CAN.dbc,0x3FE,ID3FEbrakeTemps,5,BrakeTempFR3FE,10,10,little_endian,False,1,-40,,,C,,,{},,Brake Temps Estimated,170,"{""8"": 170}"
+Model3CAN.dbc,0x3FE,ID3FEbrakeTemps,5,BrakeTempRL3FE,20,10,little_endian,False,1,-40,,,C,,,{},,Brake Temps Estimated,170,"{""8"": 170}"
+Model3CAN.dbc,0x3FE,ID3FEbrakeTemps,5,BrakeTempRR3FE,30,10,little_endian,False,1,-40,,,C,,,{},,Brake Temps Estimated,170,"{""8"": 170}"
+Model3CAN.dbc,0x7FF,ID7FFcarConfig,8,GTW_xcpIbst,15,1,little_endian,False,1,0,0,1,,GTW_carConfigMultiplexer,[2],"{""0"": ""FALSE"", ""1"": ""TRUE""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x7FF,ID7FFcarConfig,8,GTW_brakeLineSwitchType,39,1,little_endian,False,1,0,0,1,,GTW_carConfigMultiplexer,[3],"{""0"": ""DI_VC_SHARED"", ""1"": ""VC_ONLY""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc,0x7FF,ID7FFcarConfig,8,GTW_brakeHWType,59,2,little_endian,False,1,0,0,3,,GTW_carConfigMultiplexer,[2],"{""1"": ""BREMBO_LARGE_P42_BREMBO_44MOC"", ""3"": ""BREMBO_LARGE_P42_BREMBO_LARGE_44MOC"", ""2"": ""BREMBO_LARGE_P42_MANDO_43MOC"", ""0"": ""BREMBO_P42_MANDO_43MOC""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x123,ID123UI_alertMatrix1,8,UI_a015_TPMSOverPressureWarning,14,1,little_endian,False,1,0,0,1,,,,{},,,1706,"{""8"": 1706}"
+Model3CAN.dbc.txt,0x123,ID123UI_alertMatrix1,8,UI_a019_ParkBrakeFault,18,1,little_endian,False,1,0,0,1,,,,{},,,1706,"{""8"": 1706}"
+Model3CAN.dbc.txt,0x123,ID123UI_alertMatrix1,8,UI_a031_BrakeFluidLow,30,1,little_endian,False,1,0,0,1,,,,{},,,1706,"{""8"": 1706}"
+Model3CAN.dbc.txt,0x123,ID123UI_alertMatrix1,8,UI_a049_BrakeShiftRequired,48,1,little_endian,False,1,0,0,1,,,,{},,,1706,"{""8"": 1706}"
+Model3CAN.dbc.txt,0x145,ID145ESP_status,8,ESP_hydraulicBoostEnabled,19,1,little_endian,False,1,0,0,1,,,,{},,,0,{}
+Model3CAN.dbc.txt,0x145,ID145ESP_status,8,ESP_brakeLamp,21,1,little_endian,False,1,0,0,1,,,,"{""0"": ""LAMP_OFF"", ""1"": ""LAMP_ON""}",,,0,{}
+Model3CAN.dbc.txt,0x145,ID145ESP_status,8,ESP_absBrakeEvent2,22,2,little_endian,False,1,0,0,3,,,,"{""2"": ""ABS_EVENT_ACTIVE_FRONT"", ""1"": ""ABS_EVENT_ACTIVE_FRONT_REAR"", ""3"": ""ABS_EVENT_ACTIVE_REAR"", ""0"": ""ABS_EVENT_NOT_ACTIVE""}",,,0,{}
+Model3CAN.dbc.txt,0x145,ID145ESP_status,8,ESP_brakeDiscWipingActive,28,1,little_endian,False,1,0,0,1,,,,"{""1"": ""BDW_ACTIVE"", ""0"": ""BDW_INACTIVE""}",,,0,{}
+Model3CAN.dbc.txt,0x145,ID145ESP_status,8,ESP_driverBrakeApply,29,2,little_endian,False,1,0,0,3,,,,"{""2"": ""Driver_applying_brakes"", ""3"": ""Faulty_SNA"", ""0"": ""NotInit_orOff"", ""1"": ""Not_Applied""}",,,0,{}
+Model3CAN.dbc.txt,0x145,ID145ESP_status,8,ESP_brakeApply,31,1,little_endian,False,1,0,0,1,,,,"{""1"": ""BLS_ACTIVE"", ""0"": ""BLS_INACTIVE""}",,,0,{}
+Model3CAN.dbc.txt,0x145,ID145ESP_status,8,ESP_brakeTorqueTarget,51,13,little_endian,False,2,0,0,16382,Nm,,,"{""8191"": ""SNA""}",,,0,{}
+Model3CAN.dbc.txt,0x219,ID219VCSEC_TPMSData,5,VCSEC_TPMSPressure0,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[0],"{""255"": ""SNA""}",,,1699,"{""7"": 1699}"
+Model3CAN.dbc.txt,0x219,ID219VCSEC_TPMSData,5,VCSEC_TPMSPressure1,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[1],"{""255"": ""SNA""}",,,1699,"{""7"": 1699}"
+Model3CAN.dbc.txt,0x219,ID219VCSEC_TPMSData,5,VCSEC_TPMSPressure2,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[2],"{""255"": ""SNA""}",,,1699,"{""7"": 1699}"
+Model3CAN.dbc.txt,0x219,ID219VCSEC_TPMSData,5,VCSEC_TPMSPressure3,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[3],"{""255"": ""SNA""}",,,1699,"{""7"": 1699}"
+Model3CAN.dbc.txt,0x399,ID399DAS_status,8,DAS_autoparkWaitingForBrake,26,1,little_endian,False,1,0,0,1,,,,{},,,170,"{""3"": 170}"
+Model3CAN.dbc.txt,0x39D,ID39DIBST_status,5,IBST_statusChecksum,0,8,little_endian,False,1,0,0,255,,,,{},,,4249,"{""5"": 4249}"
+Model3CAN.dbc.txt,0x39D,ID39DIBST_status,5,IBST_statusCounter,8,4,little_endian,False,1,0,0,15,,,,{},,,4249,"{""5"": 4249}"
+Model3CAN.dbc.txt,0x39D,ID39DIBST_status,5,IBST_iBoosterStatus,12,3,little_endian,False,1,0,0,6,,,,"{""4"": ""IBOOSTER_ACTIVE_GOOD_CHECK"", ""6"": ""IBOOSTER_ACTUATION"", ""3"": ""IBOOSTER_DIAGNOSTIC"", ""2"": ""IBOOSTER_FAILURE"", ""1"": ""IBOOSTER_INIT"", ""0"": ""IBOOSTER_OFF"", ""5"": ""IBOOSTER_READY""}",,,4249,"{""5"": 4249}"
+Model3CAN.dbc.txt,0x39D,ID39DIBST_status,5,IBST_driverBrakeApply,16,2,little_endian,False,1,0,0,3,,,,"{""1"": ""BRAKES_NOT_APPLIED"", ""2"": ""DRIVER_APPLYING_BRAKES"", ""3"": ""FAULT"", ""0"": ""NOT_INIT_OR_OFF""}",,,4249,"{""5"": 4249}"
+Model3CAN.dbc.txt,0x39D,ID39DIBST_status,5,IBST_internalState,18,3,little_endian,False,1,0,0,6,,,,"{""4"": ""DIAGNOSTIC"", ""3"": ""EXTERNAL_BRAKE_REQUEST"", ""2"": ""LOCAL_BRAKE_REQUEST"", ""0"": ""NO_MODE_ACTIVE"", ""6"": ""POST_DRIVE_CHECK"", ""1"": ""PRE_DRIVE_CHECK"", ""5"": ""TRANSITION_TO_IDLE""}",,,4249,"{""5"": 4249}"
+Model3CAN.dbc.txt,0x39D,ID39DIBST_status,5,IBST_sInputRodDriver,21,12,little_endian,False,0.015625,-5,-5,47,mm,,,{},,,4249,"{""5"": 4249}"
+Model3CAN.dbc.txt,0x3E2,ID3E2VCLEFT_lightStatus,7,VCLEFT_brakeLightStatus,0,2,little_endian,False,1,0,0,3,,,,"{""2"": ""LIGHT_FAULT"", ""0"": ""LIGHT_OFF"", ""1"": ""LIGHT_ON"", ""3"": ""LIGHT_SNA""}",,,860,"{""7"": 860}"
+Model3CAN.dbc.txt,0x3E2,ID3E2VCLEFT_lightStatus,7,VCLEFT_brakeTrailerLightStatus,22,2,little_endian,False,1,0,0,3,,,,"{""2"": ""LIGHT_FAULT"", ""0"": ""LIGHT_OFF"", ""1"": ""LIGHT_ON"", ""3"": ""LIGHT_SNA""}",,,860,"{""7"": 860}"
+Model3CAN.dbc.txt,0x3E2,ID3E2VCLEFT_lightStatus,7,VCLEFT_dynamicBrakeLightStatus,44,2,little_endian,False,1,0,0,2,,,,"{""2"": ""DYNAMIC_BRAKE_LIGHT_ACTIVE_HIGH"", ""1"": ""DYNAMIC_BRAKE_LIGHT_ACTIVE_LOW"", ""0"": ""DYNAMIC_BRAKE_LIGHT_OFF""}",,,860,"{""7"": 860}"
+Model3CAN.dbc.txt,0x3E9,ID3E9DAS_bodyControls,8,DAS_dynamicBrakeLightRequest,22,1,little_endian,False,1,0,0,1,,,,{},,,345,"{""8"": 345}"
+Model3CAN.dbc.txt,0x3F8,ID3F8UI_driverAssistControl,8,UI_enableBrakeLightPulse,63,1,little_endian,False,1,0,0,1,,,,{},,,0,{}
+Model3CAN.dbc.txt,0x3E3,ID3E3VCRIGHT_lightStatus,2,VCRIGHT_brakeLightStatus,0,2,little_endian,False,1,0,0,3,,,,"{""2"": ""LIGHT_FAULT"", ""0"": ""LIGHT_OFF"", ""1"": ""LIGHT_ON"", ""3"": ""LIGHT_SNA""}",,,860,"{""4"": 860}"
+Model3CAN.dbc.txt,0x334,ID334UI_powertrainControl,8,UI_pedalMap,5,2,little_endian,False,1,0,0,2,,,,"{""0"": ""CHILL"", ""2"": ""PERFORMANCE"", ""1"": ""SPORT""}",,,340,"{""8"": 340}"
+Model3CAN.dbc.txt,0x7D5,ID7D5DIR_debug,8,DIR_veResForce,20,12,little_endian,True,0.0005,0,-1.024,1.0235,G,DIR_debugSelector,[41],{},,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc.txt,0x7D5,ID7D5DIR_debug,8,DIR_oilPumpPressureEstimateMax,24,8,little_endian,False,2,0,0,500,kPa,DIR_debugSelector,[46],"{""255"": ""SNA""}",,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc.txt,0x7D5,ID7D5DIR_debug,8,DIR_oilPumpPressureExpectedMin,32,8,little_endian,False,2,0,0,500,kPa,DIR_debugSelector,[46],"{""255"": ""SNA""}",,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc.txt,0x7D5,ID7D5DIR_debug,8,DIR_brakeSwitchNO,62,1,little_endian,False,1,0,0,1,,DIR_debugSelector,[42],{},,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc.txt,0x7D5,ID7D5DIR_debug,8,DIR_brakeSwitchNC,63,1,little_endian,False,1,0,0,1,,DIR_debugSelector,[42],{},,swapped with 757 in old firmware,5950,"{""8"": 5950}"
+Model3CAN.dbc.txt,0x757,ID757DIF_debug,8,DIF_veResForce,20,12,little_endian,True,0.0005,0,-1.024,1.0235,G,DIF_debugSelector,[41],{},,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc.txt,0x757,ID757DIF_debug,8,DIF_oilPumpPressureEstimateMax,24,8,little_endian,False,2,0,0,500,kPa,DIF_debugSelector,[46],"{""255"": ""SNA""}",,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc.txt,0x757,ID757DIF_debug,8,DIF_oilPumpPressureExpectedMin,32,8,little_endian,False,2,0,0,500,kPa,DIF_debugSelector,[46],"{""255"": ""SNA""}",,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc.txt,0x757,ID757DIF_debug,8,DIF_brakeSwitchNO,62,1,little_endian,False,1,0,0,1,,DIF_debugSelector,[42],{},,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc.txt,0x757,ID757DIF_debug,8,DIF_brakeSwitchNC,63,1,little_endian,False,1,0,0,1,,DIF_debugSelector,[42],{},,swapped with 7D5 in old firmware,0,{}
+Model3CAN.dbc.txt,0x221,ID221VCFRONT_LVPowerState,8,VCFRONT_iBoosterLVState,24,2,little_endian,False,1,0,0,3,,VCFRONT_LVPowerStateIndex,[0],"{""3"": ""LV_FAULT"", ""2"": ""LV_GOING_DOWN"", ""0"": ""LV_OFF"", ""1"": ""LV_ON""}",,,3399,"{""8"": 3399}"
+Model3CAN.dbc.txt,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterState,8,2,little_endian,False,1,0,0,2,,VCFRONT_eFuseDebugStatusIndex,[3],"{""2"": ""EFUSE_STATE_LOCKED_OUT"", ""0"": ""EFUSE_STATE_OFF"", ""1"": ""EFUSE_STATE_ON""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterFault,10,1,little_endian,False,1,0,0,1,,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterSelfTestResult,11,4,little_endian,False,1,0,0,11,,VCFRONT_eFuseDebugStatusIndex,[3],"{""4"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_EFUSE_OUTPUT_SHORT"", ""8"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_ENABLE_HIGH_MALFUNCTION"", ""6"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_ENABLE_LOW_MALFUNCTION"", ""10"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_NOT_LATCHED"", ""7"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_POWER_FET_CHANNEL_OPEN"", ""5"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_POWER_FET_STUCK_ON"", ""3"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_RAILS_UNSTABLE"", ""9"": ""EFUSE_SELF_TEST_EFUSE_RESULT_FAILED_TURN_OFF_PATH_TOO_SLOW"", ""0"": ""EFUSE_SELF_TEST_EFUSE_RESULT_NOT_RUN"", ""2"": ""EFUSE_SELF_TEST_EFUSE_RESULT_PASSED"", ""1"": ""EFUSE_SELF_TEST_EFUSE_RESULT_RUNNING"", ""11"": ""EFUSE_SELF_TEST_EFUSE_RESULT_SKIPPED""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterTemp,15,11,little_endian,False,0.125,-40,-40,150,C,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterVoltage,31,16,little_endian,False,0.1,0,0,6553.5,V,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x2F1,ID2F1VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterCurrent,47,16,little_endian,False,0.1,0,0,6553.5,A,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x2E1,ID2E1VCFRONT_status,8,VCFRONT_iBoosterWakeLine,3,1,little_endian,False,1,0,0,1,,VCFRONT_statusIndex,[1],{},,,10623,"{""8"": 10623}"
+Model3CAN.dbc.txt,0x2E1,ID2E1VCFRONT_status,8,VCFRONT_iBoosterStateDBG,5,3,little_endian,False,1,0,0,4,,VCFRONT_statusIndex,[1],"{""4"": ""IBOOSTER_FORCE_OFF"", ""2"": ""IBOOSTER_GOING_DOWN"", ""0"": ""IBOOSTER_OFF"", ""1"": ""IBOOSTER_ON"", ""3"": ""IBOOSTER_WRITING_DATA_SHUTDOWN""}",,,10623,"{""8"": 10623}"
+Model3CAN.dbc.txt,0x2E1,ID2E1VCFRONT_status,8,VCFRONT_pressureRefrigSuction,32,7,little_endian,False,0.125,0,0,11.5,bar,VCFRONT_statusIndex,[3],"{""127"": ""SNA""}",,,10623,"{""8"": 10623}"
+Model3CAN.dbc.txt,0x2E1,ID2E1VCFRONT_status,8,VCFRONT_pressureRefrigDischarge,40,8,little_endian,False,0.125,0,0,31.75,bar,VCFRONT_statusIndex,[3],"{""255"": ""SNA""}",,,10623,"{""8"": 10623}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_estPressureLiq,5,7,little_endian,False,0.25,0,0,31.75,bar,VCFRONT_logging1HzIndex,[10],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_hpForceScavenge,5,1,little_endian,False,1,0,0,1,,VCFRONT_logging1HzIndex,[16],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_condenserPressureLimit,8,6,little_endian,False,0.16,10,10,20,bar,VCFRONT_logging1HzIndex,[1],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_dischargePressureTarget,8,7,little_endian,False,0.25,0,0,26,bar,VCFRONT_logging1HzIndex,[14],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_estPressureSuct,12,7,little_endian,False,0.125,0,0,11.5,bar,VCFRONT_logging1HzIndex,[10],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_estPressureDisch,19,7,little_endian,False,0.25,0,0,31.75,bar,VCFRONT_logging1HzIndex,[10],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_pressureRefrigDischEst,24,5,little_endian,False,1,0,0,31,bar,VCFRONT_logging1HzIndex,[16],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_suctionPressureTarget,32,6,little_endian,False,0.15,0,0,8,bar,VCFRONT_logging1HzIndex,[14],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_dischargePressureLimit,48,7,little_endian,False,0.25,0,0,26,bar,VCFRONT_logging1HzIndex,[19],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x381,ID381VCFRONT_logging1Hz,8,VCFRONT_pressureRefrigSuctionEst,51,7,little_endian,False,0.12,0,0,14.36,bar,VCFRONT_logging1HzIndex,[16],{},,,4721,"{""8"": 4721}"
+Model3CAN.dbc.txt,0x186,ID186DIF_torque,8,DIF_slavePedalPos,56,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,0,{}
+Model3CAN.dbc.txt,0x396,ID396FrontOilPump,8,FrontOilPumpPressureEstimate396,40,8,little_endian,False,2,0,0,500,kPa,,,{},,swapped with 395 in old firmware,0,{}
+Model3CAN.dbc.txt,0x396,ID396FrontOilPump,8,FrontOilPumpPressureExpected396,48,8,little_endian,False,2,0,0,500,kPa,,,{},,swapped with 395 in old firmware,0,{}
+Model3CAN.dbc.txt,0x395,ID395DIR_oilPump,8,DIR_oilPumpPressureEstimate,40,8,little_endian,False,2,0,0,500,kPa,,,{},,swapped with 396 in old firmware,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x395,ID395DIR_oilPump,8,DIR_oilPumpPressureExpected,48,8,little_endian,False,2,0,0,500,kPa,,,{},,swapped with 396 in old firmware,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x395,ID395DIR_oilPump,8,DIR_oilPumpPressureResidual,56,8,little_endian,False,4,-500,-500,500,kPa,,,{},,swapped with 396 in old firmware,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueFrL,0,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+Model3CAN.dbc.txt,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueFrR,12,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+Model3CAN.dbc.txt,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueReL,24,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+Model3CAN.dbc.txt,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueReR,36,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+Model3CAN.dbc.txt,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueQF,50,1,little_endian,False,1,0,0,1,,,,"{""1"": ""IN_SPEC"", ""0"": ""UNDEFINABLE_ACCURACY""}",,,0,{}
+Model3CAN.dbc.txt,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueCounter,52,4,little_endian,False,1,0,0,15,,,,{},,,0,{}
+Model3CAN.dbc.txt,0x185,ID185ESP_brakeTorque,8,ESP_brakeTorqueChecksum,56,8,little_endian,False,1,0,0,255,,,,{},,,0,{}
+Model3CAN.dbc.txt,0x3C2,ID3C2VCLEFT_switchStatus,8,VCLEFT_brakeSwitchPressed,4,1,little_endian,False,1,0,0,1,,VCLEFT_switchStatusIndex,[0],{},,,3408,"{""8"": 3408}"
+Model3CAN.dbc.txt,0x3C2,ID3C2VCLEFT_switchStatus,8,VCLEFT_brakePressed,60,1,little_endian,False,1,0,0,1,,VCLEFT_switchStatusIndex,[0],{},,,3408,"{""8"": 3408}"
+Model3CAN.dbc.txt,0x293,ID293UI_chassisControl,8,UI_parkBrakeRequest,5,2,little_endian,False,1,0,0,3,,,,"{""0"": ""PARK_BRAKE_REQUEST_IDLE"", ""1"": ""PARK_BRAKE_REQUEST_PRESSED"", ""3"": ""PARK_BRAKE_REQUEST_SNA""}",,,340,"{""8"": 340}"
+Model3CAN.dbc.txt,0x293,ID293UI_chassisControl,8,UI_pedalSafetyEnable,42,2,little_endian,False,1,0,0,3,,,,"{""0"": ""PEDAL_SAFETY_OFF"", ""1"": ""PEDAL_SAFETY_ON"", ""3"": ""SNA""}",,,340,"{""8"": 340}"
+Model3CAN.dbc.txt,0x321,ID321VCFRONT_sensors,8,VCFRONT_brakeFluidLevel,22,2,little_endian,False,1,0,0,2,,,,"{""1"": ""LOW"", ""2"": ""NORMAL"", ""0"": ""SNA""}",,,170,"{""8"": 170}"
+Model3CAN.dbc.txt,0x201,ID201VCFRONT_loggingAndVitals10Hz,8,VCFRONT_pressureRefrigLiquid,40,8,little_endian,False,0.125,0,0,31.75,bar,VCFRONT_loggingAndVitals10HzInde,[1],"{""255"": ""SNA""}",,,6799,"{""8"": 6799}"
+Model3CAN.dbc.txt,0x201,ID201VCFRONT_loggingAndVitals10Hz,8,VCFRONT_pressureRefrigSuctionVit,46,7,little_endian,False,0.125,0,0,11.5,bar,VCFRONT_loggingAndVitals10HzInde,[2],"{""127"": ""SNA""}",,,6799,"{""8"": 6799}"
+Model3CAN.dbc.txt,0x201,ID201VCFRONT_loggingAndVitals10Hz,8,VCFRONT_pressureRefrigDischargeV,53,8,little_endian,False,0.125,0,0,31.75,bar,VCFRONT_loggingAndVitals10HzInde,[2],"{""255"": ""SNA""}",,,6799,"{""8"": 6799}"
+Model3CAN.dbc.txt,0x118,ID118DriveSystemStatus,8,DI_brakePedalState,19,2,little_endian,False,1,0,0,2,,,,"{""2"": ""INVALID"", ""0"": ""OFF"", ""1"": ""ON""}",Brake Pedal,,16998,"{""8"": 16998}"
+Model3CAN.dbc.txt,0x118,ID118DriveSystemStatus,8,DI_regenLight,26,1,little_endian,False,1,0,0,1,,,,{},Regen Brake,,16998,"{""8"": 16998}"
+Model3CAN.dbc.txt,0x118,ID118DriveSystemStatus,8,DI_accelPedalPos,32,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",Pedal Position,,16998,"{""8"": 16998}"
+Model3CAN.dbc.txt,0x108,ID108DIR_torque,8,DIR_slavePedalPos,56,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x31F,ID31FTPMSsensors,8,TPMSFLpressure31F,0,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,0,{}
+Model3CAN.dbc.txt,0x31F,ID31FTPMSsensors,8,TPMSFRpressure31F,16,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,0,{}
+Model3CAN.dbc.txt,0x31F,ID31FTPMSsensors,8,TPMSRLpressure31F,32,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,0,{}
+Model3CAN.dbc.txt,0x31F,ID31FTPMSsensors,8,TPMSRRpressure31F,48,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,0,{}
+Model3CAN.dbc.txt,0x3FE,ID3FEbrakeTemps,5,BrakeTempFL3FE,0,10,little_endian,False,1,-40,,,C,,,{},,Brake Temps Estimated,170,"{""8"": 170}"
+Model3CAN.dbc.txt,0x3FE,ID3FEbrakeTemps,5,BrakeTempFR3FE,10,10,little_endian,False,1,-40,,,C,,,{},,Brake Temps Estimated,170,"{""8"": 170}"
+Model3CAN.dbc.txt,0x3FE,ID3FEbrakeTemps,5,BrakeTempRL3FE,20,10,little_endian,False,1,-40,,,C,,,{},,Brake Temps Estimated,170,"{""8"": 170}"
+Model3CAN.dbc.txt,0x3FE,ID3FEbrakeTemps,5,BrakeTempRR3FE,30,10,little_endian,False,1,-40,,,C,,,{},,Brake Temps Estimated,170,"{""8"": 170}"
+Model3CAN.dbc.txt,0x7FF,ID7FFcarConfig,8,GTW_xcpIbst,15,1,little_endian,False,1,0,0,1,,GTW_carConfigMultiplexer,[2],"{""0"": ""FALSE"", ""1"": ""TRUE""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x7FF,ID7FFcarConfig,8,GTW_brakeLineSwitchType,39,1,little_endian,False,1,0,0,1,,GTW_carConfigMultiplexer,[3],"{""0"": ""DI_VC_SHARED"", ""1"": ""VC_ONLY""}",,,1700,"{""8"": 1700}"
+Model3CAN.dbc.txt,0x7FF,ID7FFcarConfig,8,GTW_brakeHWType,59,2,little_endian,False,1,0,0,3,,GTW_carConfigMultiplexer,[2],"{""1"": ""BREMBO_LARGE_P42_BREMBO_44MOC"", ""3"": ""BREMBO_LARGE_P42_BREMBO_LARGE_44MOC"", ""2"": ""BREMBO_LARGE_P42_MANDO_43MOC"", ""0"": ""BREMBO_P42_MANDO_43MOC""}",,,1700,"{""8"": 1700}"
+tesla_can (1).dbc,0x370,EPAS_sysStatus,8,EPAS_steeringRackForce,1,10,big_endian,False,50,-25575,,,N,,,"{""1022"": ""NOT_IN_SPEC"", ""1023"": ""SNA""}",,,0,{}
+tesla_can (1).dbc,0x131,EPAS3P_sysStatus,8,EPAS_steeringRackForce,1,10,big_endian,False,50,-25575,-25575,25575,N,,,{},,,0,{}
+tesla_can (1).dbc,0x108,DI_torque1,8,DI_pedalPos,48,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,1700,"{""8"": 1700}"
+tesla_can (1).dbc,0x118,DI_torque2,6,DI_brakePedal,15,1,little_endian,False,1,0,,,,,,"{""1"": ""Applied"", ""0"": ""Not_applied""}",,,16998,"{""8"": 16998}"
+tesla_can (1).dbc,0x118,DI_torque2,6,DI_brakePedalState,36,2,little_endian,False,1,0,,,,,,"{""3"": ""SNA"", ""2"": ""INVALID"", ""1"": ""ON"", ""0"": ""OFF""}",,,16998,"{""8"": 16998}"
+tesla_can (1).dbc,0x135,ESP_135h,5,ESP_brakeDiscWipingActive,4,1,big_endian,False,1,0,-1,2,,,,"{""1"": ""ACTIVE"", ""0"": ""INACTIVE""}",,,0,{}
+tesla_can (1).dbc,0x135,ESP_135h,5,ESP_brakeLamp,3,1,big_endian,False,1,0,-1,2,,,,"{""0"": ""OFF"", ""1"": ""ON""}",,,0,{}
+tesla_can (1).dbc,0x135,ESP_135h,5,ESP_absBrakeEvent,2,1,big_endian,False,1,0,-1,2,,,,"{""1"": ""ACTIVE"", ""0"": ""NOT_ACTIVE""}",,,0,{}
+tesla_can (1).dbc,0x135,ESP_135h,5,ESP_hydraulicBoostEnabled,30,1,big_endian,False,1,0,0,1,,,,{},,,0,{}
+tesla_can (1).dbc,0x283,BODY_R1,8,MPkBrk_Stat,28,1,big_endian,False,1,0,-1,2,,,,"{""1"": ""ENGG"", ""0"": ""RELS""}",,,1699,"{""6"": 1699}"
+tesla_can (1).dbc,0x218,MCU_chassisControl,8,MCU_parkBrakeRequest,1,2,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_can (1).dbc,0x218,MCU_chassisControl,8,MCU_pedalSafetyEnable,22,2,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_can (1).dbc,0x348,GTW_status,8,GTW_brakePressed,1,1,big_endian,False,1,0,0,1,,,,{},,,170,"{""8"": 170}"
+tesla_can (1).dbc,0x398,GTW_carConfig,8,GTW_brakeHwType,59,2,big_endian,False,1,0,0,2,,,,{},,,0,{}
+tesla_can (1).dbc,0x2B8,UI_radarMapData,8,UI_radarEnableBraking,17,1,little_endian,False,1,0,0,1,,,,{},,,0,{}
+tesla_can (1).dbc,0x20A,BrakeMessage,8,driverBrakeStatus,2,2,little_endian,False,1,0,0,3,,,,"{""2"": ""APPLIED"", ""1"": ""NOT_APPLIED""}",,,170,"{""6"": 170}"
+tesla_can (1).dbc,0x399,AutopilotStatus,8,DAS_autoparkWaitingForBrake,26,1,little_endian,False,1,0,0,1,,,,{},,,170,"{""3"": 170}"
+tesla_can.dbc,0x370,EPAS_sysStatus,8,EPAS_steeringRackForce,1,10,big_endian,False,50,-25575,,,N,,,"{""1022"": ""NOT_IN_SPEC"", ""1023"": ""SNA""}",,,0,{}
+tesla_can.dbc,0x108,DI_torque1,8,DI_pedalPos,48,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,1700,"{""8"": 1700}"
+tesla_can.dbc,0x118,DI_torque2,6,DI_brakePedal,15,1,little_endian,False,1,0,,,,,,"{""1"": ""Applied"", ""0"": ""Not_applied""}",,,16998,"{""8"": 16998}"
+tesla_can.dbc,0x118,DI_torque2,6,DI_brakePedalState,36,2,little_endian,False,1,0,,,,,,"{""3"": ""SNA"", ""2"": ""INVALID"", ""1"": ""ON"", ""0"": ""OFF""}",,,16998,"{""8"": 16998}"
+tesla_can.dbc,0x135,ESP_135h,5,ESP_brakeDiscWipingActive,4,1,big_endian,False,1,0,-1,2,,,,"{""1"": ""ACTIVE"", ""0"": ""INACTIVE""}",,,0,{}
+tesla_can.dbc,0x135,ESP_135h,5,ESP_brakeLamp,3,1,big_endian,False,1,0,-1,2,,,,"{""0"": ""OFF"", ""1"": ""ON""}",,,0,{}
+tesla_can.dbc,0x135,ESP_135h,5,ESP_absBrakeEvent,2,1,big_endian,False,1,0,-1,2,,,,"{""1"": ""ACTIVE"", ""0"": ""NOT_ACTIVE""}",,,0,{}
+tesla_can.dbc,0x135,ESP_135h,5,ESP_hydraulicBoostEnabled,30,1,big_endian,False,1,0,0,1,,,,{},,,0,{}
+tesla_can.dbc,0x283,BODY_R1,8,MPkBrk_Stat,28,1,big_endian,False,1,0,-1,2,,,,"{""1"": ""ENGG"", ""0"": ""RELS""}",,,1699,"{""6"": 1699}"
+tesla_can.dbc,0x218,MCU_chassisControl,8,MCU_parkBrakeRequest,1,2,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_can.dbc,0x218,MCU_chassisControl,8,MCU_pedalSafetyEnable,22,2,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_can.dbc,0x348,GTW_status,8,GTW_brakePressed,1,1,big_endian,False,1,0,0,1,,,,{},,,170,"{""8"": 170}"
+tesla_can.dbc,0x398,GTW_carConfig,8,GTW_brakeHwType,59,2,big_endian,False,1,0,0,2,,,,{},,,0,{}
+tesla_can.dbc,0x2B8,UI_radarMapData,8,UI_radarEnableBraking,17,1,little_endian,False,1,0,0,1,,,,{},,,0,{}
+tesla_can.dbc,0x20A,BrakeMessage,8,driverBrakeStatus,2,2,little_endian,False,1,0,0,3,,,,"{""2"": ""APPLIED"", ""1"": ""NOT_APPLIED""}",,,170,"{""6"": 170}"
+tesla_can.dbc,0x399,AutopilotStatus,8,DAS_autoparkWaitingForBrake,26,1,little_endian,False,1,0,0,1,,,,{},,,170,"{""3"": 170}"
+tesla_can.dbc.txt,0x370,EPAS_sysStatus,8,EPAS_steeringRackForce,1,10,big_endian,False,50,-25575,,,N,,,"{""1022"": ""NOT_IN_SPEC"", ""1023"": ""SNA""}",,,0,{}
+tesla_can.dbc.txt,0x108,DI_torque1,8,DI_pedalPos,48,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,1700,"{""8"": 1700}"
+tesla_can.dbc.txt,0x118,DI_torque2,6,DI_brakePedal,15,1,little_endian,False,1,0,,,,,,"{""1"": ""Applied"", ""0"": ""Not_applied""}",,,16998,"{""8"": 16998}"
+tesla_can.dbc.txt,0x118,DI_torque2,6,DI_brakePedalState,36,2,little_endian,False,1,0,,,,,,"{""3"": ""SNA"", ""2"": ""INVALID"", ""1"": ""ON"", ""0"": ""OFF""}",,,16998,"{""8"": 16998}"
+tesla_can.dbc.txt,0x135,ESP_135h,5,ESP_brakeDiscWipingActive,4,1,big_endian,False,1,0,-1,2,,,,"{""1"": ""ACTIVE"", ""0"": ""INACTIVE""}",,,0,{}
+tesla_can.dbc.txt,0x135,ESP_135h,5,ESP_brakeLamp,3,1,big_endian,False,1,0,-1,2,,,,"{""0"": ""OFF"", ""1"": ""ON""}",,,0,{}
+tesla_can.dbc.txt,0x135,ESP_135h,5,ESP_absBrakeEvent,2,1,big_endian,False,1,0,-1,2,,,,"{""1"": ""ACTIVE"", ""0"": ""NOT_ACTIVE""}",,,0,{}
+tesla_can.dbc.txt,0x135,ESP_135h,5,ESP_hydraulicBoostEnabled,30,1,big_endian,False,1,0,0,1,,,,{},,,0,{}
+tesla_can.dbc.txt,0x283,BODY_R1,8,MPkBrk_Stat,28,1,big_endian,False,1,0,-1,2,,,,"{""1"": ""ENGG"", ""0"": ""RELS""}",,,1699,"{""6"": 1699}"
+tesla_can.dbc.txt,0x348,GTW_status,8,GTW_brakePressed,1,1,big_endian,False,1,0,0,1,,,,{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x369,APP_warningMatrix1,8,APP_w081_pmmActiveBraking,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x449,APP_warningMatrix4,8,APP_w257_brakeJerkEvent,0,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x36C,APS_warningMatrix1,8,APS_w081_pmmActiveBraking,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x320,BMS_alertMatrix,8,BMS_a082_SW_Ctr_Force_Open,25,1,little_endian,False,1,0,,,,BMS_matrixIndex,[1],{},,,850,"{""8"": 850}"
+tesla_model3.dbc,0x399,DAS_status,8,DAS_autoparkWaitingForBrake,26,1,little_endian,False,1,0,,,,,,{},,,170,"{""3"": 170}"
+tesla_model3.dbc,0x3DA,DAS_telemetryEvent,8,DAS_TE_fcmDecelReqInstant,38,7,little_endian,True,0.1,-6.3,,,m/s^2,DAS_TE_multiplexer,[7],{},,,0,{}
+tesla_model3.dbc,0x3DA,DAS_telemetryEvent,8,DAS_TE_fcmDecelReqAeb,45,7,little_endian,True,0.1,-6.3,,,m/s^2,DAS_TE_multiplexer,[7],{},,,0,{}
+tesla_model3.dbc,0x3DA,DAS_telemetryEvent,8,DAS_TE_brakeCapacityWarning,48,1,little_endian,False,1,0,,,,DAS_TE_multiplexer,[8],{},,,0,{}
+tesla_model3.dbc,0x3DA,DAS_telemetryEvent,8,DAS_TE_emergencyBrake,49,1,little_endian,False,1,0,,,,DAS_TE_multiplexer,[8],{},,,0,{}
+tesla_model3.dbc,0x3DA,DAS_telemetryEvent,8,DAS_TE_robActiveBraking,53,1,little_endian,False,1,0,,,,DAS_TE_multiplexer,[9],{},,,0,{}
+tesla_model3.dbc,0x3B1,DAS_telemetryFurniture,8,DAS_TF_distTraveled,13,11,little_endian,False,0.1,0,,,m,DAS_TF_multiplexer,[0],{},,,0,{}
+tesla_model3.dbc,0x36A,DAS_warningMatrix1,8,DAS_w081_pmmActiveBraking,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x3A5,DIS_alertMatrix1,8,DIS_a017_hwPedalMonitor,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x3A5,DIS_alertMatrix1,8,DIS_a019_hwAccelPedalPower,18,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x3B5,DIS_alertMatrix2,8,DIS_a110_brakeMIA,45,1,little_endian,False,1,0,,,,,,{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3C5,DIS_alertMatrix3,8,DIS_a158_ibstMIA,29,1,little_endian,False,1,0,,,,,,{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x356,DI_alertMatrix1,8,DI_a017_hwPedalMonitor,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x356,DI_alertMatrix1,8,DI_a019_hwAccelPedalPower,18,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x356,DI_alertMatrix1,8,DI_a041_driverBrakeApplyCheck,40,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x357,DI_alertMatrix2,8,DI_a083_brakePedalSensor,18,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x357,DI_alertMatrix2,8,DI_a110_brakeMIA,45,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a145_pbrkPanicSkid,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a146_pbrkPanicEpbFault,17,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a158_ibstMIA,29,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a164_brakeOverride,35,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a170_pedalFoul,41,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a173_bothPedalsPressed,44,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a186_brakeStand,57,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a187_pedalMisapplication,58,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a189_garageShiftWithPedal,60,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35A,DI_alertMatrix3,8,DI_a191_brakeShiftReq,62,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35B,DI_alertMatrix4,8,DI_a193_vdcEspBrakeTorqueFr,0,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35B,DI_alertMatrix4,8,DI_a194_vdcEspBrakeTorqueRe,1,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35B,DI_alertMatrix4,8,DI_a220_vdcUndersteerDecelActive,27,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35B,DI_alertMatrix4,8,DI_a224_brakeOverTemp,31,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35B,DI_alertMatrix4,8,DI_a228_brakeTempEstUnavailable,35,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x35B,DI_alertMatrix4,8,DI_a238_brakeOverTempBrembo,45,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_sysPedalMinTorque,8,14,little_endian,False,0.1,-1638.3,,,Nm,DI_debugSelector,[44],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_brakeCpScale,16,9,little_endian,True,0.01,0.5,,,N/N,DI_debugSelector,[2],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_torquePedalMin,16,12,little_endian,False,2,-7500,,,Nm,DI_debugSelector,[51],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_veResForce,20,12,little_endian,True,0.0005,0,,,G,DI_debugSelector,[41],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_sysPedalMaxTorque,22,14,little_endian,False,0.1,0,,,Nm,DI_debugSelector,[44],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_brkStState,24,3,little_endian,False,1,0,,,,DI_debugSelector,[50],"{""0"": ""UNAVAILABLE"", ""1"": ""IDLE"", ""2"": ""RUNNING_UNPRESSED"", ""3"": ""RUNNING_PRESSING"", ""4"": ""RUNNING_PRESSED"", ""5"": ""INTERRUPTED"", ""6"": ""FINISHED""}",,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_torquePedalMax,28,12,little_endian,False,2,0,,,Nm,DI_debugSelector,[51],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_pedalPosFilt,32,8,little_endian,False,0.4,0,,,%,DI_debugSelector,[2],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_oilPumpPressureEstimate,32,8,little_endian,False,2,0,,,kPa,DI_debugSelector,[46],"{""255"": ""SNA""}",,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_sysPostPedalMinTorque,36,14,little_endian,False,0.1,-1638.3,,,Nm,DI_debugSelector,[44],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_torquePostPedalMin,40,12,little_endian,False,2,-7500,,,Nm,DI_debugSelector,[51],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_sysPostPedalMaxTorque,50,14,little_endian,False,0.1,0,,,Nm,DI_debugSelector,[44],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_torquePostPedalMax,52,12,little_endian,False,2,0,,,Nm,DI_debugSelector,[51],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_brakeSwitchNO,62,1,little_endian,False,1,0,,,,DI_debugSelector,[42],{},,,0,{}
+tesla_model3.dbc,0x757,DI_debug,8,DI_brakeSwitchNC,63,1,little_endian,False,1,0,,,,DI_debugSelector,[42],{},,,0,{}
+tesla_model3.dbc,0x758,DI_dyno,8,DI_pedalMinTorque,8,12,little_endian,False,0.25,-750,,,Nm,DI_dynoSelector,[32],{},,,0,{}
+tesla_model3.dbc,0x758,DI_dyno,8,DI_pedalMaxTorque,20,12,little_endian,False,0.25,0,,,Nm,DI_dynoSelector,[32],{},,,0,{}
+tesla_model3.dbc,0x758,DI_dyno,8,DI_postPedalMinTorque,32,12,little_endian,False,0.25,-750,,,Nm,DI_dynoSelector,[32],{},,,0,{}
+tesla_model3.dbc,0x758,DI_dyno,8,DI_postPedalMaxTorque,44,12,little_endian,False,0.25,0,,,Nm,DI_dynoSelector,[32],{},,,0,{}
+tesla_model3.dbc,0x3FE,DI_estimatedBrakeTemp,5,DI_brakeFLTemp,0,10,little_endian,False,1,-40,,,DegC,,,"{""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3FE,DI_estimatedBrakeTemp,5,DI_brakeFRTemp,10,10,little_endian,False,1,-40,,,DegC,,,"{""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3FE,DI_estimatedBrakeTemp,5,DI_brakeRLTemp,20,10,little_endian,False,1,-40,,,DegC,,,"{""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3FE,DI_estimatedBrakeTemp,5,DI_brakeRRTemp,30,10,little_endian,False,1,-40,,,DegC,,,"{""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3.dbc,0x286,DI_locStatus,7,DI_parkBrakeState,32,4,little_endian,False,1,0,,,,,,"{""0"": ""UNAVAILABLE"", ""1"": ""RELEASED"", ""2"": ""REQUESTED"", ""3"": ""APPLIED"", ""4"": ""FAULTED"", ""5"": ""PANIC_EPB"", ""6"": ""PANIC_SKID"", ""7"": ""RELEASING"", ""15"": ""SNA""}",,,339,"{""5"": 339}"
+tesla_model3.dbc,0x118,DI_systemStatus,8,DI_brakePedalState,19,2,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""INVALID""}",,,16998,"{""8"": 16998}"
+tesla_model3.dbc,0x118,DI_systemStatus,8,DI_accelPedalPos,32,8,little_endian,False,0.4,0,,,%,,,"{""255"": ""SNA""}",,,16998,"{""8"": 16998}"
+tesla_model3.dbc,0x373,EPAS3P_sysStatus,8,EPAS3P_steeringRackForce,0,10,big_endian,False,50,-25575,,,N,,,"{""1022"": ""NOT_IN_SPEC"", ""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3.dbc,0x372,EPAS3S_sysStatus,8,EPAS3S_steeringRackForce,0,10,big_endian,False,50,-25575,,,N,,,"{""1022"": ""NOT_IN_SPEC"", ""1023"": ""SNA""}",,,2550,"{""8"": 2550}"
+tesla_model3.dbc,0x3C8,EPBL_alertMatrix,8,EPBL_a201_hwBrakeTypeMismatch,24,1,little_endian,False,1,0,,,,EPBL_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x2A9,EPBL_status,8,EPBL_brakeLight,18,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x2A9,EPBL_status,8,EPBL_brakeHWConfigMismatch,19,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x2A9,EPBL_status,8,EPBL_brakeDiscWipeRequest,30,2,little_endian,False,1,0,,,,,,"{""0"": ""NONE"", ""1"": ""LIGHT"", ""2"": ""STRONG"", ""3"": ""SNA""}",,,0,{}
+tesla_model3.dbc,0x3E8,EPBR_alertMatrix,8,EPBR_a201_hwBrakeTypeMismatch,24,1,little_endian,False,1,0,,,,EPBR_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x2E8,EPBR_status,8,EPBR_brakeLight,18,1,little_endian,False,1,0,,,,,,{},,,1713,"{""8"": 1713}"
+tesla_model3.dbc,0x2E8,EPBR_status,8,EPBR_brakeHWConfigMismatch,19,1,little_endian,False,1,0,,,,,,{},,,1713,"{""8"": 1713}"
+tesla_model3.dbc,0x2E8,EPBR_status,8,EPBR_brakeDiscWipeRequest,30,2,little_endian,False,1,0,,,,,,"{""0"": ""NONE"", ""1"": ""LIGHT"", ""2"": ""STRONG"", ""3"": ""SNA""}",,,1713,"{""8"": 1713}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a181_IBSTparty2DLC,4,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a182_IBSTparty2Counter,5,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a183_IBSTStatusOff,6,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a184_IBSTpRunoutInvalid,7,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a185_IBSTFeedforwardBackup,8,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a186_IBSTBrakeAppliedInvalid,9,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a248_vdcBrkeTrqTarFrLInvalid,11,1,little_endian,False,1,0,,,,ESP_matrixIndex,[4],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a249_vdcBrkeTrqTarFrRInvalid,12,1,little_endian,False,1,0,,,,ESP_matrixIndex,[4],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a250_vdcBrkeTrqTarReLInvalid,13,1,little_endian,False,1,0,,,,ESP_matrixIndex,[4],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a251_vdcBrkeTrqTarReRInvalid,14,1,little_endian,False,1,0,,,,ESP_matrixIndex,[4],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a081_PressureSensorShort,24,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a202_accelPedalInvalid,25,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a084_BrakeFluidReservoirLow,27,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a085_BrakeSwitchStuckHigh,28,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a086_BrakeSwitchImplausible1,29,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a087_BrakeSwitchImplausible3,30,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a089_absNoPressureIncrease,32,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a099_brakeTempModelOverheat,42,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a100_brakeTempModelDisabled,43,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a172_IBSTparty1Timeout,55,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a173_IBSTparty1DLC,56,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a174_IBSTparty1Checksum,57,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a175_IBSTparty1Counter,58,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a176_IBSTEBRNotAvailable,59,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a177_IBSTOutputRodDrvInvalid,60,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a178_IBSTOutputRodActInvalid,61,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a179_IBSTparty2Timeout,62,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x3D5,ESP_alertMatrix,8,ESP_a180_IBSTparty2Checksum,63,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3.dbc,0x145,ESP_status,8,ESP_hydraulicBoostEnabled,19,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x145,ESP_status,8,ESP_brakeLamp,21,1,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""ON""}",,,0,{}
+tesla_model3.dbc,0x145,ESP_status,8,ESP_absBrakeEvent2,22,2,little_endian,False,1,0,,,,,,"{""0"": ""NOT_ACTIVE"", ""1"": ""ACTIVE_FRONT_REAR"", ""2"": ""ACTIVE_FRONT"", ""3"": ""ACTIVE_REAR""}",,,0,{}
+tesla_model3.dbc,0x145,ESP_status,8,ESP_brakeDiscWipingActive,28,1,little_endian,False,1,0,,,,,,"{""0"": ""INACTIVE"", ""1"": ""ACTIVE""}",,,0,{}
+tesla_model3.dbc,0x145,ESP_status,8,ESP_driverBrakeApply,29,2,little_endian,False,1,0,,,,,,"{""0"": ""NotInit_orOff"", ""1"": ""Not_Applied"", ""2"": ""Driver_applying_brakes"", ""3"": ""Faulty_SNA""}",,,0,{}
+tesla_model3.dbc,0x145,ESP_status,8,ESP_brakeApply,31,1,little_endian,False,1,0,,,,,,"{""0"": ""INACTIVE"", ""1"": ""ACTIVE""}",,,0,{}
+tesla_model3.dbc,0x145,ESP_status,8,ESP_brakeTorqueTarget,51,13,little_endian,False,2,0,,,Nm,,,"{""8191"": ""SNA""}",,,0,{}
+tesla_model3.dbc,0x03E,GTW_alertMatrix,8,GTW_w085_iBoosterStuck,27,1,little_endian,False,1,0,,,,GTW_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x03E,GTW_alertMatrix,8,GTW_w028_IBSTversionMismatch,31,1,little_endian,False,1,0,,,,GTW_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x03E,GTW_alertMatrix,8,GTW_w029_IBSTCALversionMismatch,32,1,little_endian,False,1,0,,,,GTW_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x7FF,GTW_carConfig,8,GTW_brakeHWType,12,1,little_endian,False,1,0,,,,GTW_carConfigMultiplexer,[2],"{""0"": ""MANDO_43MOC"", ""1"": ""BREMBO_44MOC""}",,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x7FF,GTW_carConfig,8,GTW_xcpIbst,15,1,little_endian,False,1,0,,,,GTW_carConfigMultiplexer,[2],"{""0"": ""FALSE"", ""1"": ""TRUE""}",,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x7FF,GTW_carConfig,8,GTW_ibstWakeType,24,1,little_endian,False,1,0,,,,GTW_carConfigMultiplexer,[2],"{""0"": ""NONE"", ""1"": ""WAKE_PIN_20""}",,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x560,GTW_factoryEcuPresent,4,GTW_IBSTpresent,8,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x3AA,HVP_alertMatrix1,8,HVP_w043_packContactorForceOpen,42,1,little_endian,False,1,0,,,,,,{},,,340,"{""8"": 340}"
+tesla_model3.dbc,0x3AA,HVP_alertMatrix1,8,HVP_w044_fcContactorForceOpen,43,1,little_endian,False,1,0,,,,,,{},,,340,"{""8"": 340}"
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_matrixIndex,0,4,little_endian,False,1,0,,,,,,"{""0"": ""AlertMatrix0"", ""1"": ""AlertMatrix1"", ""2"": ""AlertMatrix2""}",,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a001_microSupplyError,4,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a061_AswSystemTimeOut,4,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a121_RPSVectorRangeLow,4,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a002_HWBISTError,5,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a062_MICB6TransferError,5,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a122_RPSVectorOscillating,5,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a003_RAMFault,6,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a063_tempSens2ShortToSupply,6,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a123_bridgeDriverUnavail,6,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a004_flashFault,7,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a064_tempSens1ShortToGround,7,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a124_OBDCurrent1OORHigh,7,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a005_microSafetyFault,8,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a065_tempSens2ShortToGround,8,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a125_OBDCurrent2OORHigh,8,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a006_microSafetyLogicFault,9,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a066_tempSens1ShortToSupply,9,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a126_OBDCurrent1OORLow,9,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a007_RBCPUException,10,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a067_tempSensImplausVoltage,10,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a127_OBDCurrent2OORLow,10,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a008_stackOverUnderFlow,11,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a068_chargePumpUndervoltage,11,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a128_BLMMuxerTimeoutError,11,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a009_systemErrorHook,12,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a069_greasingRoutineFault,12,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a129_loadDumpOnFSLTest,12,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a010_OSErrorHook,13,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a070_notShutDownNvMWrite,13,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a130_DTSFunctionalRangeLow,13,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a011_systemTaskOverRun,14,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a071_notShutDownNvMRead,14,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a131_DTSFunctionalRangeHigh,14,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a012_OSTaskSchemeError,15,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a072_notShutDownRight,15,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a132_DTSPlausiCheck1vs2,15,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a013_systemTaskJitter,16,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a073_jumpInAdjustNvMRead,16,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a133_DTSOffsetTooLow,16,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a014_DMATransferError,17,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a074_FindIdleDataNvMWrite,17,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a134_DTSOffsetTooHigh,17,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a015_asicOscillatorError,18,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a075_FindIdleRoutineFault,18,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a135_ESPparty1DLC,18,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a016_RBBLMShaftShiftError,19,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a076_masterCylLengthRead,19,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a136_ESPparty1Timeout,19,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a017_assertionFault,20,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a077_runOutMotorSaturated,20,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a137_ESPparty1Checksum,20,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a018_unsupportedHW,21,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a078_wearOffsetCompNVMRead,21,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a138_ESPparty1Counter,21,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a019_supplyASICInitFault,22,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a079_motorTempHighLevel1,22,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a139_ESPparty2DLC,22,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a020_VPREU5VOutOfRange,23,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a080_motorTempHighLevel2,23,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a140_ESPparty2Timeout,23,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a021_IREFOutOfRange,24,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a081_travelDeviation,24,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a141_ESPparty2Checksum,24,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a022_U5VTestFault,25,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a082_motorSpeedDeviation,25,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a142_ESPparty2Counter,25,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a023_U5VOutOfRange,26,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a083_spindlePositionTooHigh,26,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a143_ESPparty3DLC,26,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a024_chargePumpFault,27,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a084_CANTransceiverHWFault,27,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a144_ESPparty3Timeout,27,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a025_ecuClockTestFault,28,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a085_supplyUndervoltageLvl3,28,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a145_ESPparty3Checksum,28,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a026_ecuBistCmdTestFault,29,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a086_supplyOvervoltageLvl3,29,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a146_ESPparty3Counter,29,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a027_ecuFastWdTestFault,30,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a087_rotorSinOutOfRangeLow,30,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a147_PSCMotorSizeReadFault,30,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a028_ecuBistFaultCtrFault,31,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a088_rotorCosOutOfRangeLow,31,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a148_MLIGainMechReadFault,31,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a029_ecuErrpinCounterFault,32,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a089_rotorSinOutOfRangeHigh,32,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a149_MLITMCAreaReadFault,32,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a030_ecuEnableElLowFault,33,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a090_rotorCosOutOfRangeHigh,33,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a150_motorTestFault,33,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a031_decoupleBitTestFault,34,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a091_SMMOneRequestsInit,34,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a151_PSCGearRatioReadFault,34,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a032_ecuEnableElHighFault,35,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a092_systemStartTimeOut,35,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a152_PSCVoltageImplausible,35,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a033_ecuWdStartuptestFault,36,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a093_UEXSOvertemperature,36,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a153_PSCImpedanceTooHigh,36,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a034_ecuEnableHyHighFault,37,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a094_XPASSEchoTimeDeviation,37,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a154_PSCImpedanceTooLow,37,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a035_ecuEnableHyLowFault,38,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a095_XPASSTimeOut,38,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a155_supplyUndervoltageLvl1,38,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a036_MRGPathTestFault,39,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a096_bridgeDriverMonError,39,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a156_supplyOvervoltageLvl1,39,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a037_ecuWdSContinuousError,40,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a097_bridgeDriverError,40,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a157_masterCylPressInvalid,40,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a038_ecuEnContinuousError,41,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a098_bridgeShortedPhase,41,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a158_DTSOffsHighSuspicious,41,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a039_GTMRefFrequencyError,42,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a099_bridgeSwitchInitError,42,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a159_FindIdleNvMReadError,42,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a040_GTMTbuMonError,43,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a100_current2OffsetHigh,43,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a160_DTSIDTimeOut,43,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a041_micAsicClkInError,44,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a101_current2OffsetLow,44,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a161_powerPackMismatch,44,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a042_micAsicInitTestError,45,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a102_current1OffsetHigh,45,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a162_idlePosNotDetected,45,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a043_micSpiTransferError,46,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a103_current1OffsetLow,46,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a163_ESPpEstMaxInvalid,46,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a044_NvMEepromWIP,47,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a104_bridgeDriverShort,47,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a164_ESPVehicleSpeedInvalid,47,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a045_WdhAsicWdErrorCntStuck,48,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a105_LiPSUndervoltage,48,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a165_ESPpForceBlendInvalid,48,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a046_WdhAsicWdErrorCntLimit,49,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a106_LiPS5VSupply,49,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a166_ESPpMcVirtualInvalid,49,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a047_WdhAsicWdCmdMissing,50,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a107_LiPS2PwmLineHigh,50,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a167_ESPqTargetExterInvalid,50,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a048_WdhSwBistConCnt,51,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a108_LiPS2PwmLineLow,51,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a168_CANOvervoltage,51,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a049_WdhTaskMonConCnt,52,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a109_LiPS2PwmTransmission,52,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a169_CANUndervoltage,52,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a050_VPreExternalFeeding,53,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a110_LiPS1SentLineHigh,53,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a170_LVPowerStateTimeout,53,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a051_ecuBandgap,54,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a111_LiPS1SentLineLow,54,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a171_LVPowerStateChecksum,54,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a052_AdcPinTest,55,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a112_LiPS1SentTransmission,55,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a172_LVPowerStateDLC,55,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a053_AdcSelftestC5P,56,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a113_LiPS1SentSensor,56,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a173_LVPowerStateCounter,56,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a054_AdcPeripheralFault,57,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a114_partyBusOff,57,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a174_LVOffStateInvalid,57,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a055_UB6SupplyPathFault,58,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a115_chassisBusOff,58,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a175_LVGoingDownInvalid,58,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a056_UB6PlausiMonFault,59,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a116_supplyUndervoltageLvl2,59,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a057_microRegisterFault,60,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a117_supplyOvervoltageLvl2,60,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a058_NvMWriteCycleExceed,61,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a118_RPSNvMReadFault,61,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a059_NvMEepromSize,62,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a119_RPSWrongCalibData,62,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a060_NvMMigrationFault,63,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x35D,IBST_alertMatrix,8,IBST_a120_RPSVectorRangeHigh,63,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoIndex,0,8,little_endian,False,1,0,,,,,,"{""0"": ""DEPRECATED_0"", ""1"": ""DEPRECATED_1"", ""2"": ""DEPRECATED_2"", ""3"": ""DEPRECATED_3"", ""4"": ""DEPRECATED_4"", ""5"": ""DEPRECATED_5"", ""6"": ""DEPRECATED_6"", ""7"": ""DEPRECATED_7"", ""8"": ""DEPRECATED_8"", ""9"": ""DEPRECATED_9"", ""10"": ""BUILD_HWID_COMPONENTID"", ""11"": ""PCBAID_ASSYID_USAGEID"", ""13"": ""APP_CRC"", ""14"": ""BOOTLOADER_SVN"", ""15"": ""BOOTLOADER_CRC"", ""16"": ""SUBCOMPONENT"", ""17"": ""APP_GITHASH"", ""18"": ""BOOTLOADER_GITHASH"", ""19"": ""VERSION_DEPRECATED"", ""20"": ""UDS_PROTOCOL_BOOTCRC"", ""22"": ""VARIANTCRC"", ""25"": ""PACKAGE_PN_1_7"", ""26"": ""PACKAGE_PN_8_14"", ""27"": ""PACKAGE_PN_15_20"", ""29"": ""PACKAGE_SN_1_7"", ""30"": ""PACKAGE_SN_8_14"", ""31"": ""SUBCOMPONENT_GITHASH"", ""255"": ""END""}",,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoBuildType,8,8,little_endian,False,1,0,,,,IBST_infoIndex,[10],"{""0"": ""UNKNOWN_BUILD"", ""1"": ""PLATFORM_BUILD"", ""2"": ""LOCAL_BUILD"", ""3"": ""TRACEABLE_CI_BUILD"", ""4"": ""MFG_BUILD""}",,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoBootUdsProtoVersion,8,8,little_endian,False,1,0,,,,IBST_infoIndex,[20],{},,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoPcbaID,16,8,little_endian,False,1,0,,,,IBST_infoIndex,[11],{},,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoAssemblyID,24,8,little_endian,False,1,0,,,,IBST_infoIndex,[11],{},,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoUsageID,32,16,little_endian,False,1,0,,,,IBST_infoIndex,[11],{},,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoBootloaderCRC,32,32,little_endian,False,1,0,,,,IBST_infoIndex,[20],{},,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoApplicationCRC,32,32,little_endian,False,1,0,,,,IBST_infoIndex,[13],{},,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoVariantCRC,32,32,little_endian,False,1,0,,,,IBST_infoIndex,[22],{},,,0,{}
+tesla_model3.dbc,0x32D,IBST_info,8,IBST_infoComponentID,48,16,little_endian,False,1,0,,,,IBST_infoIndex,[10],{},,,0,{}
+tesla_model3.dbc,0x39D,IBST_status,3,IBST_statusChecksum,0,8,little_endian,False,1,0,,,,,,{},,,4249,"{""5"": 4249}"
+tesla_model3.dbc,0x39D,IBST_status,3,IBST_statusCounter,8,4,little_endian,False,1,0,,,,,,{},,,4249,"{""5"": 4249}"
+tesla_model3.dbc,0x39D,IBST_status,3,IBST_iBoosterStatus,12,3,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""INIT"", ""2"": ""FAILURE"", ""3"": ""DIAGNOSTIC"", ""4"": ""ACTIVE_GOOD_CHECK"", ""5"": ""READY"", ""6"": ""ACTUATION""}",,,4249,"{""5"": 4249}"
+tesla_model3.dbc,0x39D,IBST_status,3,IBST_driverBrakeApply,16,2,little_endian,False,1,0,,,,,,"{""0"": ""NOT_INIT_OR_OFF"", ""1"": ""BRAKES_NOT_APPLIED"", ""2"": ""DRIVER_APPLYING_BRAKES"", ""3"": ""FAULT""}",,,4249,"{""5"": 4249}"
+tesla_model3.dbc,0x65D,IBST_udsResponse,8,IBST_udsResponseData,0,54,big_endian,False,1024,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x304,PM_alertMatrix1,8,PM_a014_accelPedalError,13,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x304,PM_alertMatrix1,8,PM_a017_brakeMIA,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x304,PM_alertMatrix1,8,PM_a024_brakeIrrational,23,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x304,PM_alertMatrix1,8,PM_a051_unintDecelStbCtrl,50,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x304,PM_alertMatrix1,8,PM_a052_stbCtrlDrvrDecelCflct,51,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x371,RCM_alertMatrix,8,RCM_a051_pressureFrontLftDoor,55,1,little_endian,False,1,0,,,,RCM_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x371,RCM_alertMatrix,8,RCM_a052_pressureFrontRtDoor,56,1,little_endian,False,1,0,,,,RCM_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x371,RCM_alertMatrix,8,RCM_a053_pressurePedProLeft,57,1,little_endian,False,1,0,,,,RCM_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x371,RCM_alertMatrix,8,RCM_a054_pressurePedProRight,58,1,little_endian,False,1,0,,,,RCM_matrixIndex,[0],{},,,0,{}
+tesla_model3.dbc,0x20D,TAS_states,8,TAS_pressureGallery,8,8,little_endian,False,0.1,0,,,bar,,,{},,,0,{}
+tesla_model3.dbc,0x20D,TAS_states,8,TAS_pressureReservoir,16,8,little_endian,False,0.1,0,,,bar,,,{},,,0,{}
+tesla_model3.dbc,0x36D,TAS_warningMatrix2,8,TAS_w077_pressureSigVTooLow,12,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x36D,TAS_warningMatrix2,8,TAS_w078_pressureSigVTooHigh,13,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x36D,TAS_warningMatrix2,8,TAS_w080_pressureRefVTooLow,15,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x3AD,TAS_warningMatrix4,8,TAS_w225_galleryPressureTooHigh,32,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x36F,TPMS_StatusC,8,TPMS_globalDeltaPressure,4,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x322,TPMS_data,8,TPMS_pressureFL,0,8,little_endian,False,0.025,0,,,bar,,,"{""255"": ""SNA""}",,,0,{}
+tesla_model3.dbc,0x322,TPMS_data,8,TPMS_pressureFR,16,8,little_endian,False,0.025,0,,,bar,,,"{""255"": ""SNA""}",,,0,{}
+tesla_model3.dbc,0x322,TPMS_data,8,TPMS_pressureRL,32,8,little_endian,False,0.025,0,,,bar,,,"{""255"": ""SNA""}",,,0,{}
+tesla_model3.dbc,0x322,TPMS_data,8,TPMS_pressureRR,48,8,little_endian,False,0.025,0,,,bar,,,"{""255"": ""SNA""}",,,0,{}
+tesla_model3.dbc,0x64D,UDS_ibstRequest,8,UDS_ibstRequestData,0,54,big_endian,False,1024,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x123,UI_alertMatrix1,8,UI_a015_TPMSOverPressureWarning,14,1,little_endian,False,1,0,,,,,,{},,,1706,"{""8"": 1706}"
+tesla_model3.dbc,0x123,UI_alertMatrix1,8,UI_a019_ParkBrakeFault,18,1,little_endian,False,1,0,,,,,,{},,,1706,"{""8"": 1706}"
+tesla_model3.dbc,0x123,UI_alertMatrix1,8,UI_a031_BrakeFluidLow,30,1,little_endian,False,1,0,,,,,,{},,,1706,"{""8"": 1706}"
+tesla_model3.dbc,0x293,UI_chassisControl,8,UI_parkBrakeRequest,5,2,little_endian,False,1,0,,,,,,"{""0"": ""IDLE"", ""1"": ""PRESSED"", ""3"": ""SNA""}",,,340,"{""8"": 340}"
+tesla_model3.dbc,0x293,UI_chassisControl,8,UI_pedalSafetyEnable,44,2,little_endian,False,1,0,,,,,,"{""0"": ""PEDAL_SAFETY_OFF"", ""1"": ""PEDAL_SAFETY_ON"", ""3"": ""SNA""}",,,340,"{""8"": 340}"
+tesla_model3.dbc,0x285,UI_driverProfileRecall,8,UI_lumbarAPressureHpa,16,16,little_endian,False,1,0,,,,UI_driverProfileRecallIndex,[2],{},,,1358,"{""8"": 1358}"
+tesla_model3.dbc,0x285,UI_driverProfileRecall,8,UI_lumbarBPressureHpa,32,16,little_endian,False,1,0,,,,UI_driverProfileRecallIndex,[2],{},,,1358,"{""8"": 1358}"
+tesla_model3.dbc,0x313,UI_powertrainControl,8,UI_pedalMap,5,1,little_endian,False,1,0,,,,,,"{""0"": ""CHILL"", ""1"": ""SPORT""}",,,340,"{""8"": 340}"
+tesla_model3.dbc,0x2BA,UI_radarMapData,8,UI_radarEnableBraking,17,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3.dbc,0x261,VCFRONT_12VBatteryStatus,8,VCFRONT_IBSTemperature,16,16,little_endian,True,0.01,0,,,degC,,,"{""32767"": ""VCFRONT_IBS_TEMPERATURE_SNA""}",,,10622,"{""8"": 10622}"
+tesla_model3.dbc,0x221,VCFRONT_LVPowerState,8,VCFRONT_iBoosterLVState,24,2,little_endian,False,1,0,,,,VCFRONT_LVPowerStateIndex,[0],"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""GOING_DOWN"", ""3"": ""FAULT""}",,,3399,"{""8"": 3399}"
+tesla_model3.dbc,0x340,VCFRONT_alertMatrix,8,VCFRONT_a132_iBoosterEFuseTrip,15,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[2],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x340,VCFRONT_alertMatrix,8,VCFRONT_a194_iBoosterRetry,17,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x340,VCFRONT_alertMatrix,8,VCFRONT_a205_iBoosterSelfTestFail,28,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x340,VCFRONT_alertMatrix,8,VCFRONT_a208_brakeFluidLow,31,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x340,VCFRONT_alertMatrix,8,VCFRONT_a209_brakeFluidSNA,32,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterState,8,2,little_endian,False,1,0,,,,VCFRONT_eFuseDebugStatusIndex,[3],"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""LOCKED_OUT""}",,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterFault,10,1,little_endian,False,1,0,,,,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterSelfTestResult,11,4,little_endian,False,1,0,,,,VCFRONT_eFuseDebugStatusIndex,[3],"{""0"": ""NOT_RUN"", ""1"": ""PASSED"", ""2"": ""FAILED_EFUSE_OUTPUT_SHORT"", ""3"": ""FAILED_POWER_FET_STUCK_ON"", ""4"": ""FAILED_ENABLE_LOW_MALFUNCTION"", ""5"": ""FAILED_POWER_FET_CHANNEL_OPEN"", ""6"": ""FAILED_ENABLE_HIGH_MALFUNCTION"", ""7"": ""FAILED_TURN_OFF_PATH_TOO_SLOW"", ""8"": ""FAILED_NOT_LATCHED"", ""9"": ""SKIPPED""}",,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterTemp,15,11,little_endian,False,0.125,-40,,,degC,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterVoltage,31,16,little_endian,False,0.1,0,,,V,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterCurrent,47,16,little_endian,False,0.1,0,,,A,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x2C1,VCFRONT_logging10Hz,8,VCFRONT_fiveWayValveAngleTravel,43,10,little_endian,False,5,0,,,degrees,VCFRONT_logging10HzIndex,[2],{},,,8498,"{""8"": 8498}"
+tesla_model3.dbc,0x381,VCFRONT_logging1Hz,8,VCFRONT_condenserPressureLimit,8,7,little_endian,False,0.1,10,,,bar,VCFRONT_logging1HzIndex,[1],{},,,4721,"{""8"": 4721}"
+tesla_model3.dbc,0x321,VCFRONT_sensors,8,VCFRONT_brakeFluidLevel,22,2,little_endian,False,1,0,,,,,,"{""0"": ""SNA"", ""1"": ""LOW"", ""2"": ""NORMAL""}",,,170,"{""8"": 170}"
+tesla_model3.dbc,0x2E1,VCFRONT_status,8,VCFRONT_iBoosterWakeLine,10,1,little_endian,False,1,0,,,,VCFRONT_statusIndex,[1],{},,,10623,"{""8"": 10623}"
+tesla_model3.dbc,0x2E1,VCFRONT_status,8,VCFRONT_iBoosterStateDBG,12,3,little_endian,False,1,0,,,,VCFRONT_statusIndex,[1],"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""GOING_DOWN"", ""3"": ""WRITING_DATA_SHUTDOWN"", ""4"": ""FORCE_OFF""}",,,10623,"{""8"": 10623}"
+tesla_model3.dbc,0x2E1,VCFRONT_status,8,VCFRONT_pressureRefrigSuction,32,7,little_endian,False,0.125,0,,,bar,VCFRONT_statusIndex,[3],"{""127"": ""SNA""}",,,10623,"{""8"": 10623}"
+tesla_model3.dbc,0x2E1,VCFRONT_status,8,VCFRONT_pressureRefrigDischarge,40,8,little_endian,False,0.125,0,,,bar,VCFRONT_statusIndex,[3],"{""255"": ""SNA""}",,,10623,"{""8"": 10623}"
+tesla_model3.dbc,0x360,VCLEFT_alertMatrix,8,VCLEFT_a136_brakeSwitchMismatch,19,1,little_endian,False,1,0,,,,VCLEFT_matrixIndex,[2],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x3E2,VCLEFT_lightStatus,4,VCLEFT_brakeLightStatus,0,2,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""FAULT"", ""3"": ""SNA""}",,,860,"{""7"": 860}"
+tesla_model3.dbc,0x3E2,VCLEFT_lightStatus,4,VCLEFT_brakeTrailerLightStatus,22,2,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""FAULT"", ""3"": ""SNA""}",,,860,"{""7"": 860}"
+tesla_model3.dbc,0x4E2,VCLEFT_seatStatus,8,VCLEFT_lumbarAPressureHpa,16,16,little_endian,False,1,0,,,,VCLEFT_seatStatusIndex,[4],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x4E2,VCLEFT_seatStatus,8,VCLEFT_lumbarBPressureHpa,32,16,little_endian,False,1,0,,,,VCLEFT_seatStatusIndex,[4],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x3C2,VCLEFT_switchStatus,8,VCLEFT_brakePressed,60,1,little_endian,False,1,0,,,,VCLEFT_switchStatusIndex,[0],{},,,3408,"{""8"": 3408}"
+tesla_model3.dbc,0x3E3,VCRIGHT_lightStatus,2,VCRIGHT_brakeLightStatus,0,2,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""FAULT"", ""3"": ""SNA""}",,,860,"{""4"": 860}"
+tesla_model3.dbc,0x4E3,VCRIGHT_seatStatus,8,VCRIGHT_lumbarAPressureHpa,16,16,little_endian,False,1,0,,,,VCRIGHT_seatStatusIndex,[4],{},,,1700,"{""8"": 1700}"
+tesla_model3.dbc,0x4E3,VCRIGHT_seatStatus,8,VCRIGHT_lumbarBPressureHpa,32,16,little_endian,False,1,0,,,,VCRIGHT_seatStatusIndex,[4],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x219,VCSEC_TPMSData,5,VCSEC_TPMSPressure0,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[0],{},,,1699,"{""7"": 1699}"
+tesla_model3_ONYX.dbc.txt,0x219,VCSEC_TPMSData,5,VCSEC_TPMSPressure1,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[1],{},,,1699,"{""7"": 1699}"
+tesla_model3_ONYX.dbc.txt,0x219,VCSEC_TPMSData,5,VCSEC_TPMSPressure2,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[2],{},,,1699,"{""7"": 1699}"
+tesla_model3_ONYX.dbc.txt,0x219,VCSEC_TPMSData,5,VCSEC_TPMSPressure3,8,8,little_endian,False,0.025,0,0,6.35,bar,VCSEC_TPMSDataIndex,[3],{},,,1699,"{""7"": 1699}"
+tesla_model3_ONYX.dbc.txt,0x3E2,VCLEFT_lightStatus,7,VCLEFT_brakeLightStatus,0,2,little_endian,False,1,0,0,3,,,,"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""FAULT"", ""3"": ""SNA""}",,,860,"{""7"": 860}"
+tesla_model3_ONYX.dbc.txt,0x3E2,VCLEFT_lightStatus,7,VCLEFT_brakeTrailerLightStatus,22,2,little_endian,False,1,0,0,3,,,,"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""FAULT"", ""3"": ""SNA""}",,,860,"{""7"": 860}"
+tesla_model3_ONYX.dbc.txt,0x3E2,VCLEFT_lightStatus,7,VCLEFT_dynamicBrakeLightStatus,44,2,little_endian,False,1,0,0,2,,,,{},,,860,"{""7"": 860}"
+tesla_model3_ONYX.dbc.txt,0x201,VCFRONT_logging10Hz2,8,VCFRONT_pressureRefrigLiquid,40,8,little_endian,False,0.125,0,0,31.75,bar,VCFRONT_logging10Hz2,[1],{},,,6799,"{""8"": 6799}"
+tesla_model3_ONYX.dbc.txt,0x201,VCFRONT_logging10Hz2,8,VCFRONT_pressureRefrigSuctionVit,46,7,little_endian,False,0.125,0,0,11.5,bar,VCFRONT_logging10Hz2,[2],{},,,6799,"{""8"": 6799}"
+tesla_model3_ONYX.dbc.txt,0x201,VCFRONT_logging10Hz2,8,VCFRONT_pressureRefrigDischargeV,53,8,little_endian,False,0.125,0,0,31.75,bar,VCFRONT_logging10Hz2,[2],{},,,6799,"{""8"": 6799}"
+tesla_model3_ONYX.dbc.txt,0x369,APP_warningMatrix1,8,APP_w081_pmmActiveBraking,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x449,APP_warningMatrix4,8,APP_w257_brakeJerkEvent,0,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x36C,APS_warningMatrix1,8,APS_w081_pmmActiveBraking,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x320,BMS_alertMatrix,8,BMS_a082_SW_Ctr_Force_Open,25,1,little_endian,False,1,0,,,,BMS_matrixIndex,[1],{},,,850,"{""8"": 850}"
+tesla_model3_ONYX.dbc.txt,0x3E9,DAS_bodyControls,8,DAS_dynamicBrakeLightRequest,22,1,little_endian,False,1,0,0,1,,,,{},,,345,"{""8"": 345}"
+tesla_model3_ONYX.dbc.txt,0x399,DAS_status,8,DAS_autoparkWaitingForBrake,26,1,little_endian,False,1,0,,,,,,{},,,170,"{""3"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3DA,DAS_telemetryEvent,8,DAS_TE_fcmDecelReqInstant,38,7,little_endian,True,0.1,-6.3,,,m/s^2,DAS_TE_multiplexer,[7],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3DA,DAS_telemetryEvent,8,DAS_TE_fcmDecelReqAeb,45,7,little_endian,True,0.1,-6.3,,,m/s^2,DAS_TE_multiplexer,[7],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3DA,DAS_telemetryEvent,8,DAS_TE_brakeCapacityWarning,48,1,little_endian,False,1,0,,,,DAS_TE_multiplexer,[8],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3DA,DAS_telemetryEvent,8,DAS_TE_emergencyBrake,49,1,little_endian,False,1,0,,,,DAS_TE_multiplexer,[8],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3DA,DAS_telemetryEvent,8,DAS_TE_robActiveBraking,53,1,little_endian,False,1,0,,,,DAS_TE_multiplexer,[9],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3B1,DAS_telemetryFurniture,8,DAS_TF_distTraveled,13,11,little_endian,False,0.1,0,,,m,DAS_TF_multiplexer,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x36A,DAS_warningMatrix1,8,DAS_w081_pmmActiveBraking,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3A5,DIS_alertMatrix1,8,DIS_a017_hwPedalMonitor,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3A5,DIS_alertMatrix1,8,DIS_a019_hwAccelPedalPower,18,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3B5,DIS_alertMatrix2,8,DIS_a110_brakeMIA,45,1,little_endian,False,1,0,,,,,,{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3C5,DIS_alertMatrix3,8,DIS_a158_ibstMIA,29,1,little_endian,False,1,0,,,,,,{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x186,DIS_frontTorque,8,DIS_frontSlavePedalPos,56,8,little_endian,False,0.4,0,0,100,%,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x356,DI_alertMatrix1,8,DI_a017_hwPedalMonitor,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x356,DI_alertMatrix1,8,DI_a019_hwAccelPedalPower,18,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x356,DI_alertMatrix1,8,DI_a041_driverBrakeApplyCheck,40,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x357,DI_alertMatrix2,8,DI_a083_brakePedalSensor,18,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x357,DI_alertMatrix2,8,DI_a110_brakeMIA,45,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a145_pbrkPanicSkid,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a146_pbrkPanicEpbFault,17,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a158_ibstMIA,29,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a164_brakeOverride,35,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a170_pedalFoul,41,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a173_bothPedalsPressed,44,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a186_brakeStand,57,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a187_pedalMisapplication,58,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a189_garageShiftWithPedal,60,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35A,DI_alertMatrix3,8,DI_a191_brakeShiftReq,62,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35B,DI_alertMatrix4,8,DI_a193_vdcEspBrakeTorqueFr,0,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35B,DI_alertMatrix4,8,DI_a194_vdcEspBrakeTorqueRe,1,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35B,DI_alertMatrix4,8,DI_a220_vdcUndersteerDecelActive,27,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35B,DI_alertMatrix4,8,DI_a224_brakeOverTemp,31,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35B,DI_alertMatrix4,8,DI_a228_brakeTempEstUnavailable,35,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35B,DI_alertMatrix4,8,DI_a238_brakeOverTempBrembo,45,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_sysPedalMinTorque,8,14,little_endian,False,0.1,-1638.3,,,Nm,DI_debugSelector,[44],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_brakeCpScale,16,9,little_endian,True,0.01,0.5,,,N/N,DI_debugSelector,[2],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_torquePedalMin,16,12,little_endian,False,2,-7500,,,Nm,DI_debugSelector,[51],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_veResForce,20,12,little_endian,True,0.0005,0,,,G,DI_debugSelector,[41],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_sysPedalMaxTorque,22,14,little_endian,False,0.1,0,,,Nm,DI_debugSelector,[44],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_brkStState,24,3,little_endian,False,1,0,,,,DI_debugSelector,[50],"{""0"": ""UNAVAILABLE"", ""1"": ""IDLE"", ""2"": ""RUNNING_UNPRESSED"", ""3"": ""RUNNING_PRESSING"", ""4"": ""RUNNING_PRESSED"", ""5"": ""INTERRUPTED"", ""6"": ""FINISHED""}",,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_torquePedalMax,28,12,little_endian,False,2,0,,,Nm,DI_debugSelector,[51],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_pedalPosFilt,32,8,little_endian,False,0.4,0,,,%,DI_debugSelector,[2],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_oilPumpPressureEstimate,32,8,little_endian,False,2,0,,,kPa,DI_debugSelector,[46],"{""255"": ""SNA""}",,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_sysPostPedalMinTorque,36,14,little_endian,False,0.1,-1638.3,,,Nm,DI_debugSelector,[44],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_torquePostPedalMin,40,12,little_endian,False,2,-7500,,,Nm,DI_debugSelector,[51],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_sysPostPedalMaxTorque,50,14,little_endian,False,0.1,0,,,Nm,DI_debugSelector,[44],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_torquePostPedalMax,52,12,little_endian,False,2,0,,,Nm,DI_debugSelector,[51],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_brakeSwitchNO,62,1,little_endian,False,1,0,,,,DI_debugSelector,[42],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x7D5,DI_debug,8,DI_brakeSwitchNC,63,1,little_endian,False,1,0,,,,DI_debugSelector,[42],{},,,5950,"{""8"": 5950}"
+tesla_model3_ONYX.dbc.txt,0x758,DI_dyno,8,DI_pedalMinTorque,8,12,little_endian,False,0.25,-750,,,Nm,DI_dynoSelector,[32],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x758,DI_dyno,8,DI_pedalMaxTorque,20,12,little_endian,False,0.25,0,,,Nm,DI_dynoSelector,[32],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x758,DI_dyno,8,DI_postPedalMinTorque,32,12,little_endian,False,0.25,-750,,,Nm,DI_dynoSelector,[32],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x758,DI_dyno,8,DI_postPedalMaxTorque,44,12,little_endian,False,0.25,0,,,Nm,DI_dynoSelector,[32],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3FE,DI_estimatedBrakeTemp,5,DI_brakeFLTemp,0,10,little_endian,False,1,-40,,,DegC,,,"{""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3FE,DI_estimatedBrakeTemp,5,DI_brakeFRTemp,10,10,little_endian,False,1,-40,,,DegC,,,"{""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3FE,DI_estimatedBrakeTemp,5,DI_brakeRLTemp,20,10,little_endian,False,1,-40,,,DegC,,,"{""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3FE,DI_estimatedBrakeTemp,5,DI_brakeRRTemp,30,10,little_endian,False,1,-40,,,DegC,,,"{""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x286,DI_locStatus,7,DI_parkBrakeState,32,4,little_endian,False,1,0,,,,,,"{""0"": ""UNAVAILABLE"", ""1"": ""RELEASED"", ""2"": ""REQUESTED"", ""3"": ""APPLIED"", ""4"": ""FAULTED"", ""5"": ""PANIC_EPB"", ""6"": ""PANIC_SKID"", ""7"": ""RELEASING"", ""15"": ""SNA""}",,,339,"{""5"": 339}"
+tesla_model3_ONYX.dbc.txt,0x118,DI_systemStatus,8,DI_brakePedalState,19,2,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""INVALID""}",,,16998,"{""8"": 16998}"
+tesla_model3_ONYX.dbc.txt,0x118,DI_systemStatus,8,DI_accelPedalPos,32,8,little_endian,False,0.4,0,,,%,,,"{""255"": ""SNA""}",,,16998,"{""8"": 16998}"
+tesla_model3_ONYX.dbc.txt,0x108,DI_torque,8,DI_slavePedalPos,56,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x373,EPAS3P_sysStatus,8,EPAS3P_steeringRackForce,0,10,big_endian,False,50,-25575,,,N,,,"{""1022"": ""NOT_IN_SPEC"", ""1023"": ""SNA""}",,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x372,EPAS3S_sysStatus,8,EPAS3S_steeringRackForce,0,10,big_endian,False,50,-25575,,,N,,,"{""1022"": ""NOT_IN_SPEC"", ""1023"": ""SNA""}",,,2550,"{""8"": 2550}"
+tesla_model3_ONYX.dbc.txt,0x3C8,EPBL_alertMatrix,8,EPBL_a201_hwBrakeTypeMismatch,24,1,little_endian,False,1,0,,,,EPBL_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x2A9,EPBL_status,8,EPBL_brakeLight,18,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x2A9,EPBL_status,8,EPBL_brakeHWConfigMismatch,19,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x2A9,EPBL_status,8,EPBL_brakeDiscWipeRequest,30,2,little_endian,False,1,0,,,,,,"{""0"": ""NONE"", ""1"": ""LIGHT"", ""2"": ""STRONG"", ""3"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3E8,EPBR_alertMatrix,8,EPBR_a201_hwBrakeTypeMismatch,24,1,little_endian,False,1,0,,,,EPBR_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x2E8,EPBR_status,8,EPBR_brakeLight,18,1,little_endian,False,1,0,,,,,,{},,,1713,"{""8"": 1713}"
+tesla_model3_ONYX.dbc.txt,0x2E8,EPBR_status,8,EPBR_brakeHWConfigMismatch,19,1,little_endian,False,1,0,,,,,,{},,,1713,"{""8"": 1713}"
+tesla_model3_ONYX.dbc.txt,0x2E8,EPBR_status,8,EPBR_brakeDiscWipeRequest,30,2,little_endian,False,1,0,,,,,,"{""0"": ""NONE"", ""1"": ""LIGHT"", ""2"": ""STRONG"", ""3"": ""SNA""}",,,1713,"{""8"": 1713}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a181_IBSTparty2DLC,4,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a182_IBSTparty2Counter,5,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a183_IBSTStatusOff,6,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a184_IBSTpRunoutInvalid,7,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a185_IBSTFeedforwardBackup,8,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a186_IBSTBrakeAppliedInvalid,9,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a248_vdcBrkeTrqTarFrLInvalid,11,1,little_endian,False,1,0,,,,ESP_matrixIndex,[4],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a249_vdcBrkeTrqTarFrRInvalid,12,1,little_endian,False,1,0,,,,ESP_matrixIndex,[4],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a250_vdcBrkeTrqTarReLInvalid,13,1,little_endian,False,1,0,,,,ESP_matrixIndex,[4],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a251_vdcBrkeTrqTarReRInvalid,14,1,little_endian,False,1,0,,,,ESP_matrixIndex,[4],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a081_PressureSensorShort,24,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a202_accelPedalInvalid,25,1,little_endian,False,1,0,,,,ESP_matrixIndex,[3],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a084_BrakeFluidReservoirLow,27,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a085_BrakeSwitchStuckHigh,28,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a086_BrakeSwitchImplausible1,29,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a087_BrakeSwitchImplausible3,30,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a089_absNoPressureIncrease,32,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a099_brakeTempModelOverheat,42,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a100_brakeTempModelDisabled,43,1,little_endian,False,1,0,,,,ESP_matrixIndex,[1],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a172_IBSTparty1Timeout,55,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a173_IBSTparty1DLC,56,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a174_IBSTparty1Checksum,57,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a175_IBSTparty1Counter,58,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a176_IBSTEBRNotAvailable,59,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a177_IBSTOutputRodDrvInvalid,60,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a178_IBSTOutputRodActInvalid,61,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a179_IBSTparty2Timeout,62,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x3D5,ESP_alertMatrix,8,ESP_a180_IBSTparty2Checksum,63,1,little_endian,False,1,0,,,,ESP_matrixIndex,[2],{},,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x145,ESP_status,8,ESP_hydraulicBoostEnabled,19,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x145,ESP_status,8,ESP_brakeLamp,21,1,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""ON""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x145,ESP_status,8,ESP_absBrakeEvent2,22,2,little_endian,False,1,0,,,,,,"{""0"": ""NOT_ACTIVE"", ""1"": ""ACTIVE_FRONT_REAR"", ""2"": ""ACTIVE_FRONT"", ""3"": ""ACTIVE_REAR""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x145,ESP_status,8,ESP_brakeDiscWipingActive,28,1,little_endian,False,1,0,,,,,,"{""0"": ""INACTIVE"", ""1"": ""ACTIVE""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x145,ESP_status,8,ESP_driverBrakeApply,29,2,little_endian,False,1,0,,,,,,"{""0"": ""NotInit_orOff"", ""1"": ""Not_Applied"", ""2"": ""Driver_applying_brakes"", ""3"": ""Faulty_SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x145,ESP_status,8,ESP_brakeApply,31,1,little_endian,False,1,0,,,,,,"{""0"": ""INACTIVE"", ""1"": ""ACTIVE""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x145,ESP_status,8,ESP_brakeTorqueTarget,51,13,little_endian,False,2,0,,,Nm,,,"{""8191"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x185,ESP_brakeTorque,8,ESP_brakeTorqueFL,0,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x185,ESP_brakeTorque,8,ESP_brakeTorqueFR,12,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x185,ESP_brakeTorque,8,ESP_brakeTorqueRL,24,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x185,ESP_brakeTorque,8,ESP_brakeTorqueRR,36,12,little_endian,False,2,0,0,8190,Nm,,,"{""4095"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x185,ESP_brakeTorque,8,ESP_brakeTorqueQF,50,1,little_endian,False,1,0,0,1,,,,"{""1"": ""IN_SPEC"", ""0"": ""UNDEFINABLE_ACCURACY""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x185,ESP_brakeTorque,8,ESP_brakeTorqueCounter,52,4,little_endian,False,1,0,0,15,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x185,ESP_brakeTorque,8,ESP_brakeTorqueChecksum,56,8,little_endian,False,1,0,0,255,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x03E,GTW_alertMatrix,8,GTW_w085_iBoosterStuck,27,1,little_endian,False,1,0,,,,GTW_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x03E,GTW_alertMatrix,8,GTW_w028_IBSTversionMismatch,31,1,little_endian,False,1,0,,,,GTW_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x03E,GTW_alertMatrix,8,GTW_w029_IBSTCALversionMismatch,32,1,little_endian,False,1,0,,,,GTW_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x7FF,GTW_carConfig,8,GTW_xcpIbst,15,1,little_endian,False,1,0,0,1,,GTW_carConfigMultiplexer,[2],"{""0"": ""FALSE"", ""1"": ""TRUE""}",,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x7FF,GTW_carConfig,8,GTW_ibstWakeType,24,1,little_endian,False,1,0,0,1,,GTW_carConfigMultiplexer,[2],"{""0"": ""NONE"", ""1"": ""WAKE_PIN_20""}",,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x7FF,GTW_carConfig,8,GTW_brakeLineSwitchType,39,1,little_endian,False,1,0,0,1,,GTW_carConfigMultiplexer,[3],"{""0"": ""DI_VC_SHARED"", ""1"": ""VC_ONLY""}",,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x7FF,GTW_carConfig,8,GTW_brakeHWType,59,2,little_endian,False,1,0,0,3,,GTW_carConfigMultiplexer,[2],"{""0"": ""MANDO_43MOC"", ""1"": ""BREMBO_44MOC""}",,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x560,GTW_factoryEcuPresent,4,GTW_IBSTpresent,8,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3AA,HVP_alertMatrix1,8,HVP_w043_packContactorForceOpen,42,1,little_endian,False,1,0,,,,,,{},,,340,"{""8"": 340}"
+tesla_model3_ONYX.dbc.txt,0x3AA,HVP_alertMatrix1,8,HVP_w044_fcContactorForceOpen,43,1,little_endian,False,1,0,,,,,,{},,,340,"{""8"": 340}"
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_matrixIndex,0,4,little_endian,False,1,0,,,,,,"{""0"": ""AlertMatrix0"", ""1"": ""AlertMatrix1"", ""2"": ""AlertMatrix2""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a001_microSupplyError,4,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a061_AswSystemTimeOut,4,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a121_RPSVectorRangeLow,4,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a002_HWBISTError,5,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a062_MICB6TransferError,5,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a122_RPSVectorOscillating,5,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a003_RAMFault,6,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a063_tempSens2ShortToSupply,6,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a123_bridgeDriverUnavail,6,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a004_flashFault,7,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a064_tempSens1ShortToGround,7,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a124_OBDCurrent1OORHigh,7,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a005_microSafetyFault,8,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a065_tempSens2ShortToGround,8,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a125_OBDCurrent2OORHigh,8,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a006_microSafetyLogicFault,9,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a066_tempSens1ShortToSupply,9,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a126_OBDCurrent1OORLow,9,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a007_RBCPUException,10,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a067_tempSensImplausVoltage,10,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a127_OBDCurrent2OORLow,10,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a008_stackOverUnderFlow,11,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a068_chargePumpUndervoltage,11,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a128_BLMMuxerTimeoutError,11,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a009_systemErrorHook,12,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a069_greasingRoutineFault,12,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a129_loadDumpOnFSLTest,12,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a010_OSErrorHook,13,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a070_notShutDownNvMWrite,13,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a130_DTSFunctionalRangeLow,13,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a011_systemTaskOverRun,14,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a071_notShutDownNvMRead,14,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a131_DTSFunctionalRangeHigh,14,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a012_OSTaskSchemeError,15,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a072_notShutDownRight,15,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a132_DTSPlausiCheck1vs2,15,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a013_systemTaskJitter,16,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a073_jumpInAdjustNvMRead,16,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a133_DTSOffsetTooLow,16,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a014_DMATransferError,17,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a074_FindIdleDataNvMWrite,17,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a134_DTSOffsetTooHigh,17,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a015_asicOscillatorError,18,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a075_FindIdleRoutineFault,18,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a135_ESPparty1DLC,18,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a016_RBBLMShaftShiftError,19,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a076_masterCylLengthRead,19,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a136_ESPparty1Timeout,19,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a017_assertionFault,20,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a077_runOutMotorSaturated,20,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a137_ESPparty1Checksum,20,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a018_unsupportedHW,21,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a078_wearOffsetCompNVMRead,21,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a138_ESPparty1Counter,21,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a019_supplyASICInitFault,22,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a079_motorTempHighLevel1,22,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a139_ESPparty2DLC,22,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a020_VPREU5VOutOfRange,23,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a080_motorTempHighLevel2,23,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a140_ESPparty2Timeout,23,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a021_IREFOutOfRange,24,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a081_travelDeviation,24,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a141_ESPparty2Checksum,24,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a022_U5VTestFault,25,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a082_motorSpeedDeviation,25,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a142_ESPparty2Counter,25,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a023_U5VOutOfRange,26,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a083_spindlePositionTooHigh,26,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a143_ESPparty3DLC,26,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a024_chargePumpFault,27,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a084_CANTransceiverHWFault,27,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a144_ESPparty3Timeout,27,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a025_ecuClockTestFault,28,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a085_supplyUndervoltageLvl3,28,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a145_ESPparty3Checksum,28,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a026_ecuBistCmdTestFault,29,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a086_supplyOvervoltageLvl3,29,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a146_ESPparty3Counter,29,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a027_ecuFastWdTestFault,30,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a087_rotorSinOutOfRangeLow,30,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a147_PSCMotorSizeReadFault,30,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a028_ecuBistFaultCtrFault,31,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a088_rotorCosOutOfRangeLow,31,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a148_MLIGainMechReadFault,31,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a029_ecuErrpinCounterFault,32,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a089_rotorSinOutOfRangeHigh,32,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a149_MLITMCAreaReadFault,32,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a030_ecuEnableElLowFault,33,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a090_rotorCosOutOfRangeHigh,33,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a150_motorTestFault,33,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a031_decoupleBitTestFault,34,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a091_SMMOneRequestsInit,34,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a151_PSCGearRatioReadFault,34,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a032_ecuEnableElHighFault,35,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a092_systemStartTimeOut,35,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a152_PSCVoltageImplausible,35,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a033_ecuWdStartuptestFault,36,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a093_UEXSOvertemperature,36,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a153_PSCImpedanceTooHigh,36,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a034_ecuEnableHyHighFault,37,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a094_XPASSEchoTimeDeviation,37,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a154_PSCImpedanceTooLow,37,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a035_ecuEnableHyLowFault,38,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a095_XPASSTimeOut,38,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a155_supplyUndervoltageLvl1,38,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a036_MRGPathTestFault,39,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a096_bridgeDriverMonError,39,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a156_supplyOvervoltageLvl1,39,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a037_ecuWdSContinuousError,40,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a097_bridgeDriverError,40,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a157_masterCylPressInvalid,40,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a038_ecuEnContinuousError,41,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a098_bridgeShortedPhase,41,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a158_DTSOffsHighSuspicious,41,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a039_GTMRefFrequencyError,42,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a099_bridgeSwitchInitError,42,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a159_FindIdleNvMReadError,42,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a040_GTMTbuMonError,43,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a100_current2OffsVEHigh,43,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a160_DTSIDTimeOut,43,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a041_micAsicClkInError,44,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a101_current2OffsetLow,44,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a161_powerPackMismatch,44,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a042_micAsicInitTestError,45,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a102_current1OffsVEHigh,45,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a162_idlePosNotDetected,45,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a043_micSpiTransferError,46,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a103_current1OffsetLow,46,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a163_ESPpEstMaxInvalid,46,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a044_NvMEepromWIP,47,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a104_bridgeDriverShort,47,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a164_ESPVehicleSpeedInvalid,47,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a045_WdhAsicWdErrorCntStuck,48,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a105_LiPSUndervoltage,48,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a165_ESPpForceBlendInvalid,48,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a046_WdhAsicWdErrorCntLimit,49,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a106_LiPS5VSupply,49,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a166_ESPpMcVirtualInvalid,49,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a047_WdhAsicWdCmdMissing,50,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a107_LiPS2PwmLineHigh,50,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a167_ESPqTargetExterInvalid,50,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a048_WdhSwBistConCnt,51,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a108_LiPS2PwmLineLow,51,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a168_CANOvervoltage,51,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a049_WdhTaskMonConCnt,52,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a109_LiPS2PwmTransmission,52,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a169_CANUndervoltage,52,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a050_VPreExternalFeeding,53,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a110_LiPS1SentLineHigh,53,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a170_LVPowerStateTimeout,53,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a051_ecuBandgap,54,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a111_LiPS1SentLineLow,54,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a171_LVPowerStateChecksum,54,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a052_AdcPinTest,55,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a112_LiPS1SentTransmission,55,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a172_LVPowerStateDLC,55,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a053_AdcSelftestC5P,56,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a113_LiPS1SentSensor,56,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a173_LVPowerStateCounter,56,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a054_AdcPeripheralFault,57,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a114_partyBusOff,57,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a174_LVOffStateInvalid,57,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a055_UB6SupplyPathFault,58,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a115_CHOff,58,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a175_LVGoingDownInvalid,58,1,little_endian,False,1,0,,,,IBST_matrixIndex,[2],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a056_UB6PlausiMonFault,59,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a116_supplyUndervoltageLvl2,59,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a057_microRegisterFault,60,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a117_supplyOvervoltageLvl2,60,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a058_NvMWriteCycleExceed,61,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a118_RPSNvMReadFault,61,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a059_NvMEepromSize,62,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a119_RPSWrongCalibData,62,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a060_NvMMigrationFault,63,1,little_endian,False,1,0,,,,IBST_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x35D,IBST_alertMatrix,8,IBST_a120_RPSVectorRangeHigh,63,1,little_endian,False,1,0,,,,IBST_matrixIndex,[1],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoIndex,0,8,little_endian,False,1,0,,,,,,"{""0"": ""DEPRECATED_0"", ""1"": ""DEPRECATED_1"", ""2"": ""DEPRECATED_2"", ""3"": ""DEPRECATED_3"", ""4"": ""DEPRECATED_4"", ""5"": ""DEPRECATED_5"", ""6"": ""DEPRECATED_6"", ""7"": ""DEPRECATED_7"", ""8"": ""DEPRECATED_8"", ""9"": ""DEPRECATED_9"", ""10"": ""BUILD_HWID_COMPONENTID"", ""11"": ""PCBAID_ASSYID_USAGEID"", ""13"": ""APP_CRC"", ""14"": ""BOOTLOADER_SVN"", ""15"": ""BOOTLOADER_CRC"", ""16"": ""SUBCOMPONENT"", ""17"": ""APP_GITHASH"", ""18"": ""BOOTLOADER_GITHASH"", ""19"": ""VERSION_DEPRECATED"", ""20"": ""UDS_PROTOCOL_BOOTCRC"", ""22"": ""VARIANTCRC"", ""25"": ""PACKAGE_PN_1_7"", ""26"": ""PACKAGE_PN_8_14"", ""27"": ""PACKAGE_PN_15_20"", ""29"": ""PACKAGE_SN_1_7"", ""30"": ""PACKAGE_SN_8_14"", ""31"": ""SUBCOMPONENT_GITHASH"", ""255"": ""END""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoBuildType,8,8,little_endian,False,1,0,,,,IBST_infoIndex,[10],"{""0"": ""UNKNOWN_BUILD"", ""1"": ""PLATFORM_BUILD"", ""2"": ""LOCAL_BUILD"", ""3"": ""TRACEABLE_CI_BUILD"", ""4"": ""MFG_BUILD""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoBootUdsProtoVersion,8,8,little_endian,False,1,0,,,,IBST_infoIndex,[20],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoPcbaID,16,8,little_endian,False,1,0,,,,IBST_infoIndex,[11],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoAssemblyID,24,8,little_endian,False,1,0,,,,IBST_infoIndex,[11],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoUsageID,32,16,little_endian,False,1,0,,,,IBST_infoIndex,[11],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoBootloaderCRC,32,32,little_endian,False,1,0,,,,IBST_infoIndex,[20],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoApplicationCRC,32,32,little_endian,False,1,0,,,,IBST_infoIndex,[13],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoVariantCRC,32,32,little_endian,False,1,0,,,,IBST_infoIndex,[22],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x32D,IBST_info,8,IBST_infoComponentID,48,16,little_endian,False,1,0,,,,IBST_infoIndex,[10],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x39D,IBST_status,3,IBST_statusChecksum,0,8,little_endian,False,1,0,,,,,,{},,,4249,"{""5"": 4249}"
+tesla_model3_ONYX.dbc.txt,0x39D,IBST_status,3,IBST_statusCounter,8,4,little_endian,False,1,0,,,,,,{},,,4249,"{""5"": 4249}"
+tesla_model3_ONYX.dbc.txt,0x39D,IBST_status,3,IBST_iBoosterStatus,12,3,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""INIT"", ""2"": ""FAILURE"", ""3"": ""DIAGNOSTIC"", ""4"": ""ACTIVE_GOOD_CHECK"", ""5"": ""READY"", ""6"": ""ACTUATION""}",,,4249,"{""5"": 4249}"
+tesla_model3_ONYX.dbc.txt,0x39D,IBST_status,3,IBST_driverBrakeApply,16,2,little_endian,False,1,0,,,,,,"{""0"": ""NOT_INIT_OR_OFF"", ""1"": ""BRAKES_NOT_APPLIED"", ""2"": ""DRIVER_APPLYING_BRAKES"", ""3"": ""FAULT""}",,,4249,"{""5"": 4249}"
+tesla_model3_ONYX.dbc.txt,0x304,PM_alertMatrix1,8,PM_a014_accelPedalError,13,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x304,PM_alertMatrix1,8,PM_a017_brakeMIA,16,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x304,PM_alertMatrix1,8,PM_a024_brakeIrrational,23,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x304,PM_alertMatrix1,8,PM_a051_unintDecelStbCtrl,50,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x304,PM_alertMatrix1,8,PM_a052_stbCtrlDrvrDecelCflct,51,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x371,RCM_alertMatrix,8,RCM_a051_pressureFrontLftDoor,55,1,little_endian,False,1,0,,,,RCM_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x371,RCM_alertMatrix,8,RCM_a052_pressureFrontRtDoor,56,1,little_endian,False,1,0,,,,RCM_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x371,RCM_alertMatrix,8,RCM_a053_pressurePedProLeft,57,1,little_endian,False,1,0,,,,RCM_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x371,RCM_alertMatrix,8,RCM_a054_pressurePedProRight,58,1,little_endian,False,1,0,,,,RCM_matrixIndex,[0],{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x20D,TAS_states,8,TAS_pressureGallery,8,8,little_endian,False,0.1,0,,,bar,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x20D,TAS_states,8,TAS_pressureReservoir,16,8,little_endian,False,0.1,0,,,bar,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x36D,TAS_warningMatrix2,8,TAS_w077_pressureSigVTooLow,12,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x36D,TAS_warningMatrix2,8,TAS_w078_pressureSigVTooHigh,13,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x36D,TAS_warningMatrix2,8,TAS_w080_pressureRefVTooLow,15,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x3AD,TAS_warningMatrix4,8,TAS_w225_galleryPressureTooHigh,32,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x36F,TPMS_StatusC,8,TPMS_globalDeltaPressure,4,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x31F,TPMS_data,8,TPMS_pressureFL,0,8,little_endian,False,0.025,0,,,bar,,,"{""255"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x31F,TPMS_data,8,TPMS_pressureFR,16,8,little_endian,False,0.025,0,,,bar,,,"{""255"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x31F,TPMS_data,8,TPMS_pressureRL,32,8,little_endian,False,0.025,0,,,bar,,,"{""255"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x31F,TPMS_data,8,TPMS_pressureRR,48,8,little_endian,False,0.025,0,,,bar,,,"{""255"": ""SNA""}",,,0,{}
+tesla_model3_ONYX.dbc.txt,0x25A,TPMS_bluetoothData,8,TPMS_btPressureFL,0,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,170,"{""6"": 170}"
+tesla_model3_ONYX.dbc.txt,0x25A,TPMS_bluetoothData,8,TPMS_btPressureFR,8,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,170,"{""6"": 170}"
+tesla_model3_ONYX.dbc.txt,0x25A,TPMS_bluetoothData,8,TPMS_btPressureRL,16,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,170,"{""6"": 170}"
+tesla_model3_ONYX.dbc.txt,0x25A,TPMS_bluetoothData,8,TPMS_btPressureRR,24,8,little_endian,False,0.025,0,0,6.375,bar,,,{},,,170,"{""6"": 170}"
+tesla_model3_ONYX.dbc.txt,0x123,UI_alertMatrix1,8,UI_a015_TPMSOverPressureWarning,14,1,little_endian,False,1,0,,,,,,{},,,1706,"{""8"": 1706}"
+tesla_model3_ONYX.dbc.txt,0x123,UI_alertMatrix1,8,UI_a019_ParkBrakeFault,18,1,little_endian,False,1,0,,,,,,{},,,1706,"{""8"": 1706}"
+tesla_model3_ONYX.dbc.txt,0x123,UI_alertMatrix1,8,UI_a031_BrakeFluidLow,30,1,little_endian,False,1,0,,,,,,{},,,1706,"{""8"": 1706}"
+tesla_model3_ONYX.dbc.txt,0x293,UI_chassisControl,8,UI_parkBrakeRequest,5,2,little_endian,False,1,0,,,,,,"{""0"": ""IDLE"", ""1"": ""PRESSED"", ""3"": ""SNA""}",,,340,"{""8"": 340}"
+tesla_model3_ONYX.dbc.txt,0x293,UI_chassisControl,8,UI_pedalSafetyEnable,44,2,little_endian,False,1,0,,,,,,"{""0"": ""PEDAL_SAFETY_OFF"", ""1"": ""PEDAL_SAFETY_ON"", ""3"": ""SNA""}",,,340,"{""8"": 340}"
+tesla_model3_ONYX.dbc.txt,0x285,UI_driverProfileRecall,8,UI_lumbarAPressureHpa,16,16,little_endian,False,1,0,,,,UI_driverProfileRecallIndex,[2],{},,,1358,"{""8"": 1358}"
+tesla_model3_ONYX.dbc.txt,0x285,UI_driverProfileRecall,8,UI_lumbarBPressureHpa,32,16,little_endian,False,1,0,,,,UI_driverProfileRecallIndex,[2],{},,,1358,"{""8"": 1358}"
+tesla_model3_ONYX.dbc.txt,0x313,UI_powertrainControl,8,UI_pedalMap,5,1,little_endian,False,1,0,,,,,,"{""0"": ""CHILL"", ""1"": ""SPORT""}",,,340,"{""8"": 340}"
+tesla_model3_ONYX.dbc.txt,0x2BA,UI_radarMapData,8,UI_radarEnableBraking,17,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_ONYX.dbc.txt,0x261,VCFRONT_12VBatteryStatus,8,VCFRONT_IBSTemperature,8,16,big_endian,True,0.1,0,-327.68,327.66,degC,VCFRONT_12VBatteryIndex,[2],"{""32767"": ""VCFRONT_IBS_TEMPERATURE_SNA""}",,,10622,"{""8"": 10622}"
+tesla_model3_ONYX.dbc.txt,0x221,VCFRONT_LVPowerState,8,VCFRONT_iBoosterLVState,24,2,little_endian,False,1,0,,,,VCFRONT_LVPowerStateIndex,[0],"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""GOING_DOWN"", ""3"": ""FAULT""}",,,3399,"{""8"": 3399}"
+tesla_model3_ONYX.dbc.txt,0x340,VCFRONT_alertMatrix,8,VCFRONT_a132_iBoosterEFuseTrip,15,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[2],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x340,VCFRONT_alertMatrix,8,VCFRONT_a194_iBoosterRetry,17,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x340,VCFRONT_alertMatrix,8,VCFRONT_a205_iBoosterSelfTestFail,28,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x340,VCFRONT_alertMatrix,8,VCFRONT_a208_brakeFluidLow,31,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x340,VCFRONT_alertMatrix,8,VCFRONT_a209_brakeFluidSNA,32,1,little_endian,False,1,0,,,,VCFRONT_matrixIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterState,8,2,little_endian,False,1,0,,,,VCFRONT_eFuseDebugStatusIndex,[3],"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""LOCKED_OUT""}",,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterFault,10,1,little_endian,False,1,0,,,,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterSelfTestResult,11,4,little_endian,False,1,0,,,,VCFRONT_eFuseDebugStatusIndex,[3],"{""0"": ""NOT_RUN"", ""1"": ""PASSED"", ""2"": ""FAILED_EFUSE_OUTPUT_SHORT"", ""3"": ""FAILED_POWER_FET_STUCK_ON"", ""4"": ""FAILED_ENABLE_LOW_MALFUNCTION"", ""5"": ""FAILED_POWER_FET_CHANNEL_OPEN"", ""6"": ""FAILED_ENABLE_HIGH_MALFUNCTION"", ""7"": ""FAILED_TURN_OFF_PATH_TOO_SLOW"", ""8"": ""FAILED_NOT_LATCHED"", ""9"": ""SKIPPED""}",,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterTemp,15,11,little_endian,False,0.125,-40,,,degC,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterVoltage,31,16,little_endian,False,0.1,0,,,V,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x2F1,VCFRONT_eFuseDebugStatus,8,VCFRONT_iBoosterCurrent,47,16,little_endian,False,0.1,0,,,A,VCFRONT_eFuseDebugStatusIndex,[3],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x2C1,VCFRONT_logging10Hz,8,VCFRONT_coolantValveAngleTravel,40,10,little_endian,False,5,0,0,5000,deg,VCFRONT_logging10HzIndex,[2],{},,,8498,"{""8"": 8498}"
+tesla_model3_ONYX.dbc.txt,0x381,VCFRONT_logging1Hz,8,VCFRONT_estPressureLiq,5,7,little_endian,False,0.25,0,0,31.75,bar,VCFRONT_logging1HzIndex,[10],{},,,4721,"{""8"": 4721}"
+tesla_model3_ONYX.dbc.txt,0x381,VCFRONT_logging1Hz,8,VCFRONT_hpForceScavenge,5,1,little_endian,False,1,0,0,1,,VCFRONT_logging1HzIndex,[16],{},,,4721,"{""8"": 4721}"
+tesla_model3_ONYX.dbc.txt,0x381,VCFRONT_logging1Hz,8,VCFRONT_condenserPressureLimit,8,6,little_endian,False,0.16,10,10,20,bar,VCFRONT_logging1HzIndex,[1],{},,,4721,"{""8"": 4721}"
+tesla_model3_ONYX.dbc.txt,0x381,VCFRONT_logging1Hz,8,VCFRONT_dischargePressureTarget,8,7,little_endian,False,0.25,0,0,26,bar,VCFRONT_logging1HzIndex,[14],{},,,4721,"{""8"": 4721}"
+tesla_model3_ONYX.dbc.txt,0x381,VCFRONT_logging1Hz,8,VCFRONT_estPressureSuct,12,7,little_endian,False,0.125,0,0,11.5,bar,VCFRONT_logging1HzIndex,[10],{},,,4721,"{""8"": 4721}"
+tesla_model3_ONYX.dbc.txt,0x381,VCFRONT_logging1Hz,8,VCFRONT_estPressureDisch,19,7,little_endian,False,0.25,0,0,31.75,bar,VCFRONT_logging1HzIndex,[10],{},,,4721,"{""8"": 4721}"
+tesla_model3_ONYX.dbc.txt,0x381,VCFRONT_logging1Hz,8,VCFRONT_estCompPressureInlet,24,8,little_endian,False,0.05,0,0,12.75,bar,VCFRONT_logging1HzIndex,[16],{},,,4721,"{""8"": 4721}"
+tesla_model3_ONYX.dbc.txt,0x381,VCFRONT_logging1Hz,8,VCFRONT_estCompPressureOutlet,32,8,little_endian,False,0.1,0,1,26.5,bar,VCFRONT_logging1HzIndex,[16],{},,,4721,"{""8"": 4721}"
+tesla_model3_ONYX.dbc.txt,0x381,VCFRONT_logging1Hz,8,VCFRONT_suctionPressureTarget,32,6,little_endian,False,0.15,0,0,8,bar,VCFRONT_logging1HzIndex,[14],{},,,4721,"{""8"": 4721}"
+tesla_model3_ONYX.dbc.txt,0x321,VCFRONT_sensors,8,VCFRONT_brakeFluidLevel,22,2,little_endian,False,1,0,,,,,,"{""0"": ""SNA"", ""1"": ""LOW"", ""2"": ""NORMAL""}",,,170,"{""8"": 170}"
+tesla_model3_ONYX.dbc.txt,0x2E1,VCFRONT_status,8,VCFRONT_iBoosterWakeLine,3,1,little_endian,False,1,0,0,1,,VCFRONT_statusIndex,[1],{},,,10623,"{""8"": 10623}"
+tesla_model3_ONYX.dbc.txt,0x2E1,VCFRONT_status,8,VCFRONT_iBoosterStateDBG,5,3,little_endian,False,1,0,0,4,,VCFRONT_statusIndex,[1],"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""GOING_DOWN"", ""3"": ""WRITING_DATA_SHUTDOWN"", ""4"": ""FORCE_OFF""}",,,10623,"{""8"": 10623}"
+tesla_model3_ONYX.dbc.txt,0x2E1,VCFRONT_status,8,VCFRONT_pressureRefrigSuction,32,7,little_endian,False,0.125,0,0,11.5,bar,VCFRONT_statusIndex,[3],"{""127"": ""SNA""}",,,10623,"{""8"": 10623}"
+tesla_model3_ONYX.dbc.txt,0x2E1,VCFRONT_status,8,VCFRONT_pressureRefrigDischarge,40,8,little_endian,False,0.125,0,0,31.75,bar,VCFRONT_statusIndex,[3],"{""255"": ""SNA""}",,,10623,"{""8"": 10623}"
+tesla_model3_ONYX.dbc.txt,0x360,VCLEFT_alertMatrix,8,VCLEFT_a136_brakeSwitchMismatch,19,1,little_endian,False,1,0,,,,VCLEFT_matrixIndex,[2],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x4E2,VCLEFT_seatStatus,8,VCLEFT_lumbarAPressureHpa,16,16,little_endian,False,1,0,,,,VCLEFT_seatStatusIndex,[4],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x4E2,VCLEFT_seatStatus,8,VCLEFT_lumbarBPressureHpa,32,16,little_endian,False,1,0,,,,VCLEFT_seatStatusIndex,[4],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x3C2,VCLEFT_switchStatus,8,VCLEFT_brakeSwitchPressed,4,1,little_endian,False,1,0,0,1,,VCLEFT_switchStatusIndex,[0],{},,,3408,"{""8"": 3408}"
+tesla_model3_ONYX.dbc.txt,0x3C2,VCLEFT_switchStatus,8,VCLEFT_brakePressed,60,1,little_endian,False,1,0,0,1,,VCLEFT_switchStatusIndex,[0],{},,,3408,"{""8"": 3408}"
+tesla_model3_ONYX.dbc.txt,0x3E3,VCRIGHT_lightStatus,2,VCRIGHT_brakeLightStatus,0,2,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""ON"", ""2"": ""FAULT"", ""3"": ""SNA""}",,,860,"{""4"": 860}"
+tesla_model3_ONYX.dbc.txt,0x4E3,VCRIGHT_seatStatus,8,VCRIGHT_lumbarAPressureHpa,16,16,little_endian,False,1,0,,,,VCRIGHT_seatStatusIndex,[4],{},,,1700,"{""8"": 1700}"
+tesla_model3_ONYX.dbc.txt,0x4E3,VCRIGHT_seatStatus,8,VCRIGHT_lumbarBPressureHpa,32,16,little_endian,False,1,0,,,,VCRIGHT_seatStatusIndex,[4],{},,,1700,"{""8"": 1700}"
+tesla_model3_party.dbc,0x118,DI_systemStatus,8,DI_brakePedalState,19,2,little_endian,False,1,0,0,2,,,,"{""2"": ""INVALID"", ""0"": ""OFF"", ""1"": ""ON""}",,,16998,"{""8"": 16998}"
+tesla_model3_party.dbc,0x118,DI_systemStatus,8,DI_accelPedalPos,32,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,16998,"{""8"": 16998}"
+tesla_model3_party.dbc,0x39D,IBST_status,5,IBST_statusChecksum,0,8,little_endian,False,1,0,0,255,,,,{},,,4249,"{""5"": 4249}"
+tesla_model3_party.dbc,0x39D,IBST_status,5,IBST_statusCounter,8,4,little_endian,False,1,0,0,15,,,,{},,,4249,"{""5"": 4249}"
+tesla_model3_party.dbc,0x39D,IBST_status,5,IBST_iBoosterStatus,12,3,little_endian,False,1,0,0,6,,,,"{""6"": ""IBOOSTER_ACTUATION"", ""4"": ""IBOOSTER_ACTIVE_GOOD_CHECK"", ""2"": ""IBOOSTER_FAILURE"", ""5"": ""IBOOSTER_READY"", ""3"": ""IBOOSTER_DIAGNOSTIC"", ""0"": ""IBOOSTER_OFF"", ""1"": ""IBOOSTER_INIT""}",,,4249,"{""5"": 4249}"
+tesla_model3_party.dbc,0x39D,IBST_status,5,IBST_driverBrakeApply,16,2,little_endian,False,1,0,0,3,,,,"{""1"": ""BRAKES_NOT_APPLIED"", ""2"": ""DRIVER_APPLYING_BRAKES"", ""3"": ""FAULT"", ""0"": ""NOT_INIT_OR_OFF""}",,,4249,"{""5"": 4249}"
+tesla_model3_party.dbc,0x39D,IBST_status,5,IBST_internalState,18,3,little_endian,False,1,0,0,6,,,,"{""5"": ""TRANSITION_TO_IDLE"", ""0"": ""NO_MODE_ACTIVE"", ""4"": ""DIAGNOSTIC"", ""6"": ""POST_DRIVE_CHECK"", ""1"": ""PRE_DRIVE_CHECK"", ""3"": ""EXTERNAL_BRAKE_REQUEST"", ""2"": ""LOCAL_BRAKE_REQUEST""}",,,4249,"{""5"": 4249}"
+tesla_model3_party.dbc,0x39D,IBST_status,5,IBST_sInputRodDriver,21,12,little_endian,False,0.015625,-5,-5,47,mm,,,{},,,4249,"{""5"": 4249}"
+tesla_model3_party.dbc,0x370,EPAS3S_sysStatus,8,EPAS3S_steeringRackForce,1,10,big_endian,False,50,-25575,-25575,25575,N,,,"{""1023"": ""SNA"", ""1022"": ""NOT_IN_SPEC""}",,,0,{}
+tesla_model3_party.dbc,0x221,VCFRONT_LVPowerState,8,VCFRONT_iBoosterLVState,24,2,little_endian,False,1,0,0,3,,VCFRONT_LVPowerStateIndex,[0],"{""1"": ""LV_ON"", ""2"": ""LV_GOING_DOWN"", ""3"": ""LV_FAULT"", ""0"": ""LV_OFF""}",,,3399,"{""8"": 3399}"
+tesla_model3_party.dbc,0x286,DI_state,8,DI_parkBrakeState,32,4,little_endian,False,1,0,,,,,,"{""0"": ""UNAVAILABLE"", ""1"": ""RELEASED"", ""2"": ""REQUESTED"", ""3"": ""APPLIED"", ""4"": ""FAULTED"", ""5"": ""PANIC_EPB"", ""6"": ""PANIC_SKID"", ""7"": ""RELEASING"", ""15"": ""SNA""}",,,339,"{""5"": 339}"
+tesla_model3_party.dbc,0x39B,DAS_status,8,DAS_autoparkWaitingForBrake,26,1,little_endian,False,1,0,0,1,,,,{},,,384,"{""8"": 384}"
+tesla_model3_party.dbc,0x145,ESP_status,8,ESP_hydraulicBoostEnabled,19,1,little_endian,False,1,0,,,,,,{},,,0,{}
+tesla_model3_party.dbc,0x145,ESP_status,8,ESP_brakeLamp,21,1,little_endian,False,1,0,,,,,,"{""0"": ""OFF"", ""1"": ""ON""}",,,0,{}
+tesla_model3_party.dbc,0x145,ESP_status,8,ESP_absBrakeEvent2,22,2,little_endian,False,1,0,,,,,,"{""0"": ""NOT_ACTIVE"", ""1"": ""ACTIVE_FRONT_REAR"", ""2"": ""ACTIVE_FRONT"", ""3"": ""ACTIVE_REAR""}",,,0,{}
+tesla_model3_party.dbc,0x145,ESP_status,8,ESP_brakeDiscWipingActive,28,1,little_endian,False,1,0,,,,,,"{""0"": ""INACTIVE"", ""1"": ""ACTIVE""}",,,0,{}
+tesla_model3_party.dbc,0x145,ESP_status,8,ESP_driverBrakeApply,29,2,little_endian,False,1,0,,,,,,"{""0"": ""NotInit_orOff"", ""1"": ""Not_Applied"", ""2"": ""Driver_applying_brakes"", ""3"": ""Faulty_SNA""}",,,0,{}
+tesla_model3_party.dbc,0x145,ESP_status,8,ESP_brakeApply,31,1,little_endian,False,1,0,,,,,,"{""0"": ""INACTIVE"", ""1"": ""ACTIVE""}",,,0,{}
+tesla_model3_party.dbc,0x145,ESP_status,8,ESP_brakeTorqueTarget,51,13,little_endian,False,2,0,,,Nm,,,"{""8191"": ""SNA""}",,,0,{}
+tesla_model3_vehicle.dbc,0x3C2,VCLEFT_switchStatus,8,VCLEFT_brakePressed,60,1,little_endian,False,1,0,0,1,,VCLEFT_switchStatusIndex,[0],{},,,3408,"{""8"": 3408}"
+tesla_model3_vehicle.dbc,0x118,DI_systemStatus,8,DI_brakePedalState,19,2,little_endian,False,1,0,0,2,,,,"{""2"": ""INVALID"", ""0"": ""OFF"", ""1"": ""ON""}",,,16998,"{""8"": 16998}"
+tesla_model3_vehicle.dbc,0x118,DI_systemStatus,8,DI_accelPedalPos,32,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,16998,"{""8"": 16998}"
+tesla_powertrain.dbc,0x106,DI_torque1,8,DI_pedalPos,48,8,little_endian,False,0.4,0,0,100,%,,,"{""255"": ""SNA""}",,,0,{}
+tesla_powertrain.dbc,0x116,DI_torque2,6,DI_brakePedal,15,1,little_endian,False,1,0,,,,,,"{""1"": ""Applied"", ""0"": ""Not_applied""}",,,0,{}
+tesla_powertrain.dbc,0x116,DI_torque2,6,DI_brakePedalState,36,2,little_endian,False,1,0,,,,,,"{""3"": ""SNA"", ""2"": ""INVALID"", ""1"": ""ON"", ""0"": ""OFF""}",,,0,{}
+tesla_powertrain.dbc,0x1F8,BrakeMessage,8,driverBrakeStatus,2,2,little_endian,False,1,0,0,3,,,,"{""2"": ""APPLIED"", ""1"": ""NOT_APPLIED""}",,,1700,"{""4"": 1700}"

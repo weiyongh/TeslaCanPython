@@ -16,7 +16,10 @@ PRIORITIES = {"P0", "P1", "P2", "P3"}
 REPORT_POSITIONS = {
     "CORE_TIMELINE", "CORE_SIGNAL_TABLE", "CONDITION_SUMMARY",
     "CAPABILITY_SUMMARY", "ANALYSIS_WINDOW", "SPECIAL_TABLE",
-    "AUDIT_ONLY", "EXCLUDE",
+    "AUDIT_ONLY", "EXCLUDE", "NETWORK_WAKE_SUMMARY", "CONTROL_RELATIONSHIP",
+    "READY_CROSSCHECK_TABLE", "HV_CHAIN_TABLE", "SAFETY_CONDITION_TABLE",
+    "HV_SPECIAL_TIMELINE", "DCDC_TABLE", "DCDC_SPECIAL_TABLE",
+    "ENGINEERING_AUDIT", "BODY_INPUT_TABLE",
 }
 REVIEW_DECISIONS = {"ACCEPT", "OVERRIDE", "EXCLUDE"}
 UNCERTAINTY_FLAGS = {
@@ -26,6 +29,7 @@ UNCERTAINTY_FLAGS = {
     "CROSS_MAINLINE_EVIDENCE", "PROXY_OBSERVATION",
     "PHYSICAL_MEANING_UNCONFIRMED", "STATE_APPLICABILITY_UNCERTAIN",
     "MISSING_DIRECT_SIGNAL", "SUFFICIENCY_RULE_UNCONFIRMED",
+    "MUX_APPLICABILITY_UNCONFIRMED",
 }
 ASSESSMENT_STATUSES = {
     "SUPPORTED", "CONTRADICTED", "INSUFFICIENT_EVIDENCE",
@@ -75,10 +79,13 @@ class DraftSignalEvidence:
     confidence: str
     uncertainty_flags: str = ""
     review_required: str = "NO"
+    chinese_semantic: str = ""
 
     def validate(self) -> None:
         if not self.experiment_id or not self.signal_key or not self.signal:
             raise ValueError("experiment_id, signal_key and signal are required")
+        if self.experiment_id >= "TM3-015" and not self.chinese_semantic:
+            raise ValueError(f"Chinese semantic is required from TM3-015: {self.signal_key}")
         if self.suggested_priority not in PRIORITIES:
             raise ValueError(f"invalid priority: {self.suggested_priority}")
         validate_positions(self.suggested_report_position)
@@ -150,10 +157,13 @@ class ApprovedSignalEvidence:
     human_reason: str
     reviewer: str
     reviewed_at: str
+    chinese_semantic: str = ""
 
     def validate(self) -> None:
         if self.plan_status != "APPROVED":
             raise ValueError("Renderer requires APPROVED plan rows")
+        if self.experiment_id >= "TM3-015" and not self.chinese_semantic:
+            raise ValueError(f"Chinese semantic is required from TM3-015: {self.signal_key}")
         if self.scope != "THIS_EXPERIMENT_ONLY":
             raise ValueError("approved plan must be experiment-scoped")
         if self.effective_priority not in PRIORITIES:
@@ -261,6 +271,7 @@ def approve_plan(
             human_reason=override.human_reason if override else "",
             reviewer=override.reviewer if override else "",
             reviewed_at=override.reviewed_at if override else "",
+            chinese_semantic=row.chinese_semantic,
         ))
     plan = ApprovedEvidencePlan(experiment_id, "APPROVED", "THIS_EXPERIMENT_ONLY", tuple(approved))
     plan.validate()

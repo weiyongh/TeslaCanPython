@@ -1,0 +1,62 @@
+[
+  {
+    "file": "Model3CAN.dbc",
+    "sha256": "e590cd74650948b6be0ffaa1a52b66a76dd2ee254740b0e00eb8a5b7a921b0ab",
+    "model3": true,
+    "messages": 159
+  },
+  {
+    "file": "Model3CAN.dbc.txt",
+    "sha256": "e590cd74650948b6be0ffaa1a52b66a76dd2ee254740b0e00eb8a5b7a921b0ab",
+    "model3": true,
+    "messages": 159
+  },
+  {
+    "file": "tesla_can (1).dbc",
+    "sha256": "de164d9e68e1758da9e573874687c0b16f2b3b35feefa2855655c8328e8d0e8d",
+    "model3": false,
+    "messages": 44
+  },
+  {
+    "file": "tesla_can.dbc",
+    "sha256": "526a986354b6d3ef94a7174182db86437f784d6f221e8f63097d5acc507759f2",
+    "model3": false,
+    "messages": 42
+  },
+  {
+    "file": "tesla_can.dbc.txt",
+    "sha256": "162b0ed0adc521759e6f0b0ccf0015408fb48e263dd5282f81c294a5fdb10425",
+    "model3": false,
+    "messages": 19
+  },
+  {
+    "file": "tesla_model3.dbc",
+    "sha256": "17c8bb145bb33dddef025a0ccc4b725664f7e5cc9f17d392481d69440de7ded9",
+    "model3": true,
+    "messages": 348
+  },
+  {
+    "file": "tesla_model3_ONYX.dbc.txt",
+    "sha256": "3554e37a3a8371bc9c1b76445061d30f2c5bbaa35a055fe1f01f7ee75030e86c",
+    "model3": true,
+    "messages": 316
+  },
+  {
+    "file": "tesla_model3_party.dbc",
+    "sha256": "466ddc74797ceb05591c44050efac82c3eb6e24f515c38d2297a6befa0c45a74",
+    "model3": true,
+    "messages": 21
+  },
+  {
+    "file": "tesla_model3_vehicle.dbc",
+    "sha256": "c5edad0acc3285be7e6c4eb24fd36717a5a27f12a915e5069b855fa5cbe0bedb",
+    "model3": true,
+    "messages": 11
+  },
+  {
+    "file": "tesla_powertrain.dbc",
+    "sha256": "d5fe66f2c1888a769ba73fb7b6c43da62ba0789da6193b170483bbcf51967930",
+    "model3": false,
+    "messages": 6
+  }
+]

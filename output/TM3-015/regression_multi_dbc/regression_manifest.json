@@ -1,0 +1,11 @@
+{
+  "experiment_id": "TM3-015",
+  "regression": "MULTI_DBC_V1",
+  "scope": "THIS_EXPERIMENT_ONLY",
+  "original_files_overwritten": false,
+  "approved_plan_sha256": "dcb428ef07365ed03185ec973ab9537a4ac5d333bbb0fbdad5da3af995360dfa",
+  "multi_dbc_decode_summary_sha256": "2db47624eb289a23a34593fa01d1a3140976290877b6f3523517902af6f33b2b",
+  "effective_plan_sha256": "4c83bce2ffc036baf4b2a9ffae5bbee58d77109634685a0a709c994d6dc4ee1b",
+  "assessment_sha256": "4ed9d3978262edb12dae63f61ba8f91e88e734bd613fc54c6b53d880c8e03d25",
+  "result": "PASS_WITH_EXPECTED_CONCLUSION_UPDATE"
+}

@@ -1,0 +1,30 @@
+{
+  "experiment_id": "TM3-007",
+  "completion_status": "COMPLETE_WITH_GAPS",
+  "scope": "THIS_EXPERIMENT_ONLY",
+  "use": "正常基线数据采集",
+  "time_basis": {
+    "planned": "rough_location_only",
+    "observed_event": "missing",
+    "can_observed": "used_for_internal_sequence"
+  },
+  "facts": [
+    "600秒ASC格式完整且525946帧均可解析",
+    "103.1571–470.1237秒为本采集域无帧窗口",
+    "470.1237秒后通信恢复并形成预充/接触器/Pack电压/DCDC上电序列",
+    "门闩CAN候选形成CLOSED→OPENED→CLOSED",
+    "挡位和电驱状态形成P/STANDBY→D/ENABLE→P/STANDBY"
+  ],
+  "control_relationship_view": {
+    "body_input_feedback": "部分可观测：门闩状态转换；解锁请求无直接证据",
+    "occupancy": "本次无直接观测",
+    "brake_and_gear": "制动字段INVALID；挡位反馈直接可观测",
+    "network_wake": "本采集域低通信候选→通信恢复",
+    "hv_conditions_and_execution": "HVIL OK→正接触器PRECHARGE→总接触器CLOSED→正负接触器ECONOMIZED→Pack电压建立",
+    "drive_enable": "P/STANDBY→D/ENABLE→P/STANDBY",
+    "dcdc_response": "DCDC支持IDLE→ACTIVE，低压电压/电流候选同步建立"
+  },
+  "baseline_conclusion": "建立了本采集域低通信候选到高压建立、DCDC支持及电驱D/ENABLE的条件化CAN内部上电基线。",
+  "completion_decision": "COMPLETE_WITH_GAPS；核心上电链成立，解锁/占座/制动及外部12V证据仍有缺口，不进入车辆故障诊断树。",
+  "minimum_next_step": "无需整体重采；最小补采仅补独立Observed Event Time、占座/制动证据及外部12V电压，复核0x2B4低压定义。"
+}

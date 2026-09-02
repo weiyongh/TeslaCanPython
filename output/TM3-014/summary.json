@@ -1,0 +1,96 @@
+{
+  "source": "input/can_20260831114905_喇叭不响故障采集.asc",
+  "sha256": "e2af4751e80cf7e7de101116982e1a058ba3efe1e5013d60b10c4dd849289ece",
+  "header": [
+    "date Mon Aug 31 11:49:20 AM 2026",
+    "base hex timestamps absolute",
+    "// version 7.0.0"
+  ],
+  "frames": 768355,
+  "first_s": 0.0,
+  "last_s": 299.6518,
+  "signals": [
+    {
+      "channel": "1",
+      "id": "0x3c2",
+      "signal": "VCLEFT_hornSwitchPressed",
+      "total_frames": 6006,
+      "pages": {
+        "0": 3010,
+        "1": 2996
+      },
+      "valid_samples": 3010,
+      "ones": 33,
+      "median_gap_s": 0.09999999999999787,
+      "max_gap_s": 0.10460000000000491
+    },
+    {
+      "channel": "1",
+      "id": "0x2e1",
+      "signal": "VCFRONT_hornOn",
+      "total_frames": 18736,
+      "pages": {
+        "2": 3122,
+        "3": 3121,
+        "4": 3121,
+        "5": 3121,
+        "0": 3124,
+        "1": 3127
+      },
+      "valid_samples": 3124,
+      "ones": 45,
+      "median_gap_s": 0.09600000000000364,
+      "max_gap_s": 0.09980000000000003
+    },
+    {
+      "channel": "1",
+      "id": "0x273",
+      "signal": "UI_honkHorn",
+      "total_frames": 611,
+      "pages": {
+        "0": 611
+      },
+      "valid_samples": 611,
+      "ones": 4,
+      "median_gap_s": 0.49979999999999336,
+      "max_gap_s": 0.5054000000000087
+    },
+    {
+      "channel": "1",
+      "id": "0x3b3",
+      "signal": "UI_soundHornOnLock",
+      "total_frames": 609,
+      "pages": {
+        "0": 609
+      },
+      "valid_samples": 609,
+      "ones": 46,
+      "median_gap_s": 0.49979999999999336,
+      "max_gap_s": 0.5067000000000093
+    },
+    {
+      "channel": "1",
+      "id": "0x2a9",
+      "signal": "EPBL_hornRequest",
+      "total_frames": 0,
+      "pages": {},
+      "valid_samples": 0,
+      "ones": 0,
+      "median_gap_s": null,
+      "max_gap_s": null
+    },
+    {
+      "channel": "1",
+      "id": "0x2e8",
+      "signal": "EPBR_hornRequest",
+      "total_frames": 2997,
+      "pages": {
+        "0": 2997
+      },
+      "valid_samples": 2997,
+      "ones": 0,
+      "median_gap_s": 0.09999999999999432,
+      "max_gap_s": 0.10290000000000532
+    }
+  ]
+}

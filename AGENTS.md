@@ -43,14 +43,79 @@
 
 如果来源冲突，保留冲突并标明时间、适用采集域和证据等级，不把推测写成已确认信号定义。
 
+## 实车采集前文档
+
+今后每个TM3实车实验在采集前固定生成`TM3-xxx_实验采集方案.md`、`TM3-xxx_语音执行脚本.txt`和`TM3-xxx_现场采集记录.md`，遵循`doc/methodology/实车采集前文档体系与分析接口.md`及`doc/templates/experiment_collection/`模板。
+
+- 方案负责实验目的、控制关系、Evidence Requirements、证据来源设计、Signal Validation独立证据、有效/无效/终止条件及完成判定。
+- TXT只负责TTS现场动作提示；一条指令一个动作，不放DBC解释或复杂Signal表，不承担最终事实记录。
+- 现场记录必须在采集前生成空白模板，分开记录计划时间和实际时间，保存外部证据、偏差、开始前与结束前Checklist。
+- `Planned Time / Observed Event Time / CAN Observed Time`必须分开。计划时间不作为实验事实；不得由CAN变化反推人工操作时刻并循环证明CAN响应。
+- 结论跨越车辆边界时，方案必须主动设计车外证据。P0/P1 Signal成熟度不足或DBC冲突时，所需独立证据必须前移到现场记录栏和结束前Checklist。
+- 完成状态使用`COMPLETE / COMPLETE_WITH_GAPS / PARTIAL / INVALID / ABORTED`，由Evidence Requirements满足程度决定；ASC存在不等于实验完成，单个Signal缺失也不自动判实验无效。
+
+## TM3 Experiment Artifact Contract / 实验产物契约
+
+本节只固定TM3实验产物的标准路径、精确文件名和状态门；各文件的内容要求、证据设计、三类时间及分析方法继续遵循上节、`L3新能源实车数据诊断分析规范_v1.1.md`和既有方法文档，不在此重复展开。
+
+### 采集前三件套
+
+新建TM3实验，以及历史实验发生补采或新轮次采集时，采集开始前必须在现有`input/`输入域形成：
+
+- `input/TM3-xxx_实验采集方案.md`
+- `input/TM3-xxx_语音执行脚本.txt`
+- `input/TM3-xxx_现场采集记录.md`
+
+`input/`保存采集设计、现场执行输入和现场事实记录；`output/TM3-xxx/`保存Evidence Plan及后续分析产物。不得因本契约自动回填、伪造或重建已完成历史实验的现场采集记录，不批量删除、移动或重命名既有历史文件。历史实验仅在发生补采、新轮次采集或收到明确迁移任务时按当前制式创建新的采集前三件套；不得根据ASC或后续分析结果反向编造历史现场记录。
+
+### Draft、Review与Approved产物
+
+实验进入Draft阶段时，必须在实验输出目录形成固定三件套：
+
+- `output/TM3-xxx/evidence_plan_context.md`
+- `output/TM3-xxx/evidence_plan_draft.csv`
+- `output/TM3-xxx/待审Signal证据表.md`
+
+人工Review/Approved阶段使用以下标准文件名：
+
+- `output/TM3-xxx/evidence_plan_review_overrides.csv`
+- `output/TM3-xxx/evidence_plan_approved.csv`
+
+没有实际人工Review时不得创建或伪造`evidence_plan_review_overrides.csv`。没有`evidence_plan_approved.csv`时，禁止正式读取ASC进行证据分析、形成Evidence Assessment或生成正式最终结论。`APPROVED`只表示当前实验、`THIS_EXPERIMENT_ONLY`范围内的分析合同生效，不代表Signal语义、DBC定义或实验结论已经成立。
+
+状态门固定如下：
+
+- 状态为`DRAFT`、`NOT_APPROVED`或`ASC_NOT_ANALYZED`时，Draft三件套必须存在；这些状态下不得生成Evidence Assessment或正式最终结论。
+- ASC正式证据分析必须发生在Approved之后。
+- Evidence Assessment完成后，才能形成正式综合结论。
+
+### 正式分析完成态产物
+
+今后所有按当前规范完成正式分析的TM3实验，必须形成以下标准人读四件套，不再仅限Golden Regression Samples：
+
+- `output/TM3-xxx/TM3-xxx_最终报告.md`
+- `output/TM3-xxx/采集时间线与关键Signal.md`
+- `output/TM3-xxx/DBC关键Signal覆盖与可读性.md`
+- `output/TM3-xxx/工程审计.md`
+
+四件套之外还必须存在可追溯的Evidence Assessment及其关联机器证据，使结论能够回溯到Approved Plan、分析窗口、原始/解码Signal和复现输出。当前标准综合结论入口统一为`TM3-xxx_最终报告.md`；新实验不得另建同义的`总结分析.md`、`分析结论.md`等平行最终报告。历史文件保持原状，不因本规则批量重命名。
+
+正式四件套的固定骨架、Profile字段和结构校验遵循`doc/methodology/TM3_Human-readable_Report_Golden_Contract.md`。所有新TM3正式四件套必须由共享`Report View Model → report_renderer.py`路径生成；`analyze_tm3_xxx.py`只负责分析、机器证据和Report View Model，不得自行拼接正式四件套Markdown。主时间线只能选择共享Renderer已注册Profile，不得由分析器临时定义表头。TM3-009/010的Golden结构或内容出现非预期差异，一律作为`Regression Failure`处理。
+
 ## 工作边界
 
 - 每次采集先提出要验证的控制关系或采集问题；故障专项则提出诊断问题，再设计动作、稳定窗口、事件窗口和观察量。
 - 新建或修订采集脚本时，在“00s 开始采集”片段的缩进说明中写明采集目的、主要采集问题（故障专项为诊断问题）、重点证据链和判读边界；目的须在采集前阅读，不为说明文字新增计时节点或挤占动作窗口。
+- 新体系生效后，详细目的、证据链和判读边界优先放入实验采集方案；语音TXT的00s节点只保留现场必须听到的简短目的和初始状态确认。历史脚本不批量改写。
 - 产出优先回答“请求—条件—决策—执行—反馈—结果—异常分支”。
 - 表达控制关系时，控制链、动力响应与能源响应分别呈现、相互印证，不把能源证据接在车辆运动之后串成单一时间因果链。推荐：控制链“驾驶输入→状态/条件/能力/仲裁→扭矩请求→实际扭矩→车辆运动”；同时列出动力响应“实际扭矩→轴速/车速”和能源响应“电驱功率↑ ↔ Pack放电↑”。
 - 实验细节优先补充到已有控制树状态、变量或控制关系的说明及证据中，不逐条扩展为新分支。仅在现有模型无法表达且证据支持新的状态、决策条件或控制路径时调整树结构；采集偏差和分析窗口规则留在实验记录中。
 - 有 DBC 时用于解释与验证；无 DBC 时只给候选、角色猜测和置信度。
+- 实车分析不得默认只依赖`input/tesla_model3_ONYX.dbc`。在解析效力、Signal覆盖或语义闭环不足时，应扩大到`dbc/`目录及其他当前可用DBC进行联合定义审计和候选解析：先核对CAN ID、实测DLC、位段/位宽、字节序、缩放、符号、枚举、复用页及实测报文覆盖，再利用动作与状态事件验证变化方向、时序和物理合理性。ONYX缺失的Signal也应检查其他DBC定义能否在本次ASC中稳定解码并补充控制链。
+- 必要时可为单次实验生成可复现的候选合并DBC或多DBC解析视图，以提高报文与Signal命中率；必须保留每个Signal的原始DBC来源、定义指纹、版本冲突和选择理由。发生同名异义、同ID不同位段/缩放、DLC不适配或复用页不成立时，不得静默覆盖或按文件优先级强行合并，应并列解析并通过实测事件与物理闭环筛选。
+- 多DBC中“位段可解”不等于“语义已确认”。联合解析结果至少区分：仅可解码、动态但事件关系未确认、事件时序支持、定量物理闭环支持、语义验证失败；候选定义进入实验Evidence Plan或结论仍须遵循人工审核和`THIS_EXPERIMENT_ONLY`边界，不自动写回车型级知识。
+- 关键Signal出现物理不合理、控制链矛盾、实际动作不符、Request/Available/Actual关系异常、跨DBC定义冲突、DLC/MUX/位段/缩放/符号差异、SNA/越界/异常枚举或守恒不闭合时，自动执行`doc/methodology/第三方DBC_Signal_Validation流程.md`。先区分车辆异常与测量/解释链异常，再决定是否进入故障诊断树。
+- Signal重要度P0/P1/P2/P3与Signal成熟度是两个独立维度。成熟度统一使用`CONFIRMED / STRONGLY_SUPPORTED / PARTIALLY_VALIDATED / TIMING_ONLY_VALID / QUANTITATIVE_SEMANTICS_UNVALIDATED / SEMANTIC_VALIDATION_FAILED / INSUFFICIENT_EVIDENCE`，不得因P0自动提高语义可信度。单次实验反推的factor只能作为诊断线索，未经独立来源或第二次实车验证不得写回正式DBC。
 - CAN 盲猜用于补齐诊断链路，不追求穷举全部 ID 或制作完整私有 DBC。
 - 不跨采集域自动迁移分数或语义；跨采集比较只作为人工验证线索。
 - Notion 保存长期知识、控制树、诊断树、实验结论和决策；本地保存原始数据、脚本、DBC、程序与可复现输出。
@@ -109,3 +174,5 @@
 当前明确暂停：正式L3知识库、全量Model 3 Signal Semantic Mapping数据库、自动Evidence Plan编译/评分、自动控制树生成、自动故障原因确认、审核GUI和Notion规则自动同步。不得用默认优先级掩盖尚未验证的知识缺口。
 
 TM3-009与TM3-010已标记为Golden Regression Samples。除非能够证明原始数据或算法存在真实错误，未来重构不得静默改变其已验收结论、窗口、关键数值、Signal语义、控制关系边界和人读结构；差异先作为`Regression Failure`报告。
+
+TM3-015能源链DBC适配专项已标记为Signal Validation首个Golden Case。保护边界为：`0x132 / BMS_packCurrent`在TM3-015 Pack侧为实验级可信定量Signal；`0x29D / CP_evseOutputDcCurrent`只确认时序、不确认128.108 A定量语义；`BMS_chgPowerAvailable`优先采用bit40实验候选但不升级为Request或Actual。

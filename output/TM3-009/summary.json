@@ -1,0 +1,1043 @@
+{
+  "source": "input/can_20260831090233_TM3-010_中等负载加速采集.asc",
+  "sha256": "c9f378fa919ead3fb7464395d1b33b92c97a1ffca156371191bfc4545bf3b4e6",
+  "dbc_sha256": "3554e37a3a8371bc9c1b76445061d30f2c5bbaa35a055fe1f01f7ee75030e86c",
+  "frames": 483669,
+  "duration_s": 169.9696,
+  "decode_errors": {
+    "252: unpacking failed": 1699
+  },
+  "dlcs": {
+    "132/6": 16997,
+    "118/8": 16998,
+    "266/8": 16998,
+    "257/8": 8499,
+    "3C2/8": 3408,
+    "108/8": 1700,
+    "268/5": 1700,
+    "2D2/8": 1699,
+    "252/8": 1699,
+    "292/8": 1699
+  },
+  "frame_periods": {
+    "132": {
+      "n": 16997,
+      "median_s": 0.009999999999999787,
+      "max_gap_s": 0.010800000000017462
+    },
+    "118": {
+      "n": 16998,
+      "median_s": 0.010100000000008436,
+      "max_gap_s": 0.012000000000000455
+    },
+    "266": {
+      "n": 16998,
+      "median_s": 0.009999999999990905,
+      "max_gap_s": 0.01279999999999859
+    },
+    "257": {
+      "n": 8499,
+      "median_s": 0.019999999999997797,
+      "max_gap_s": 0.021999999999998465
+    },
+    "3C2": {
+      "n": 3408,
+      "median_s": 0.04999999999999716,
+      "max_gap_s": 0.055299999999999905
+    },
+    "108": {
+      "n": 1700,
+      "median_s": 0.09999999999999432,
+      "max_gap_s": 0.10179999999999723
+    },
+    "268": {
+      "n": 1700,
+      "median_s": 0.09999999999999432,
+      "max_gap_s": 0.10179999999999723
+    },
+    "2D2": {
+      "n": 1699,
+      "median_s": 0.09999999999999964,
+      "max_gap_s": 0.10999999999999943
+    },
+    "252": {
+      "n": 1699,
+      "median_s": 0.09999999999999964,
+      "max_gap_s": 0.10960000000000036
+    },
+    "292": {
+      "n": 1699,
+      "median_s": 0.09999999999999964,
+      "max_gap_s": 0.1097999999999999
+    }
+  },
+  "missing_signals": [
+    "BMS_maxDischargePower",
+    "BMS_maxRegenPower"
+  ],
+  "runs": [
+    {
+      "drive_window": [
+        20.3129,
+        78.7495
+      ],
+      "pedal_onset_s": 27.4225,
+      "speed_at_pedal_onset_kmh": 5.920000000000002,
+      "DI_torqueCommand_onset_s": 21.9637,
+      "DI_torqueActual_onset_s": 21.9637,
+      "DI_vehicleSpeed_onset_s": 22.4848,
+      "DI_axleSpeed_onset_s": 22.6642,
+      "first_30kmh_s": 44.923,
+      "stats": {
+        "BMS_packVoltage": {
+          "n": 5132,
+          "min": 343.85,
+          "max": 350.0,
+          "mean": 346.60313717848794,
+          "peak_s": 72.783
+        },
+        "BMS_packCurrent": {
+          "n": 5132,
+          "min": -37.6,
+          "max": 41.0,
+          "mean": 7.471492595479345,
+          "peak_s": 44.3225
+        },
+        "derived_packPower_kW": {
+          "n": 5132,
+          "min": -13.148344000000002,
+          "max": 14.11179,
+          "mean": 2.5748569341387375,
+          "peak_s": 44.3225
+        },
+        "DI_accelPedalPos": {
+          "n": 5133,
+          "min": 0.0,
+          "max": 25.6,
+          "mean": 14.653730761737776,
+          "peak_s": 43.942
+        },
+        "DI_driveBlocked": {
+          "n": 5133,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "peak_s": 27.4225
+        },
+        "DI_elecPower": {
+          "n": 5133,
+          "min": -14.0,
+          "max": 13.5,
+          "mean": 1.9484706799142801,
+          "peak_s": 44.2024
+        },
+        "DI_vehicleSpeed": {
+          "n": 2567,
+          "min": -0.1599999999999966,
+          "max": 34.72,
+          "mean": 25.3200155823919,
+          "peak_s": 51.1821
+        },
+        "VCLEFT_brakeSwitchPressed": {
+          "n": 515,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.07378640776699029,
+          "peak_s": 75.1087
+        },
+        "VCLEFT_brakePressed": {
+          "n": 515,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.07378640776699029,
+          "peak_s": 75.1087
+        },
+        "DI_torqueCommand": {
+          "n": 513,
+          "min": -622.0,
+          "max": 684.0,
+          "mean": 98.61988304093568,
+          "peak_s": 29.2632
+        },
+        "DI_torqueActual": {
+          "n": 513,
+          "min": -622.0,
+          "max": 710.0,
+          "mean": 98.70955165692008,
+          "peak_s": 29.1632
+        },
+        "DI_axleSpeed": {
+          "n": 513,
+          "min": -1.7000000000000002,
+          "max": 279.40000000000003,
+          "mean": 202.88031189083821,
+          "peak_s": 51.1618
+        },
+        "derived_axleMechanicalPower_kW": {
+          "n": 513,
+          "min": -14.762804646140967,
+          "max": 12.815310416229629,
+          "mean": 1.862230956202342,
+          "peak_s": 44.8632
+        },
+        "DI_sysDrivePowerMax": {
+          "n": 513,
+          "min": 246.0,
+          "max": 247.0,
+          "mean": 246.0448343079922,
+          "peak_s": 27.4657
+        },
+        "DI_sysRegenPowerMax": {
+          "n": 513,
+          "min": 91.0,
+          "max": 92.0,
+          "mean": 91.18908382066277,
+          "peak_s": 27.4657
+        },
+        "BMS_maxDischargeCurrent": {
+          "n": 513,
+          "min": 682.624,
+          "max": 682.624,
+          "mean": 682.624,
+          "peak_s": 27.491
+        },
+        "BMS_maxChargeCurrent": {
+          "n": 513,
+          "min": 250.0,
+          "max": 250.0,
+          "mean": 250.0,
+          "peak_s": 27.491
+        },
+        "BMS_socUI": {
+          "n": 513,
+          "min": 32.5,
+          "max": 32.5,
+          "mean": 32.5,
+          "peak_s": 27.4917
+        },
+        "BMS_socMin": {
+          "n": 513,
+          "min": 32.0,
+          "max": 32.1,
+          "mean": 32.03450292397661,
+          "peak_s": 27.4917
+        },
+        "BMS_socMax": {
+          "n": 513,
+          "min": 34.7,
+          "max": 34.800000000000004,
+          "mean": 34.71325536062378,
+          "peak_s": 27.4917
+        }
+      },
+      "positive_torque_no_brake_tracking": {
+        "n": 385,
+        "mean_error_Nm": 0.2545454545454545,
+        "mae_Nm": 1.2623376623376623,
+        "max_abs_error_Nm": 34.0
+      }
+    },
+    {
+      "drive_window": [
+        94.5083,
+        150.7533
+      ],
+      "pedal_onset_s": 102.0783,
+      "speed_at_pedal_onset_kmh": 3.3599999999999994,
+      "DI_torqueCommand_onset_s": 97.5593,
+      "DI_torqueActual_onset_s": 97.5593,
+      "DI_vehicleSpeed_onset_s": 98.0988,
+      "DI_axleSpeed_onset_s": 98.2595,
+      "first_30kmh_s": 120.1169,
+      "stats": {
+        "BMS_packVoltage": {
+          "n": 4867,
+          "min": 345.07,
+          "max": 348.5,
+          "mean": 346.8703657283748,
+          "peak_s": 133.0043
+        },
+        "BMS_packCurrent": {
+          "n": 4867,
+          "min": -16.2,
+          "max": 28.1,
+          "mean": 4.395500308198069,
+          "peak_s": 109.5942
+        },
+        "derived_packPower_kW": {
+          "n": 4867,
+          "min": -5.644404000000001,
+          "max": 9.705740000000002,
+          "mean": 1.5159716700226014,
+          "peak_s": 109.5942
+        },
+        "DI_accelPedalPos": {
+          "n": 4868,
+          "min": 0.0,
+          "max": 21.200000000000003,
+          "mean": 10.798438783894824,
+          "peak_s": 116.7868
+        },
+        "DI_driveBlocked": {
+          "n": 4868,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "peak_s": 102.0783
+        },
+        "DI_elecPower": {
+          "n": 4868,
+          "min": -6.0,
+          "max": 9.0,
+          "mean": 0.9549096138044372,
+          "peak_s": 109.5188
+        },
+        "DI_vehicleSpeed": {
+          "n": 2434,
+          "min": -0.1599999999999966,
+          "max": 32.56,
+          "mean": 20.74543960558751,
+          "peak_s": 123.5175
+        },
+        "VCLEFT_brakeSwitchPressed": {
+          "n": 488,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0389344262295082,
+          "peak_s": 149.0341
+        },
+        "VCLEFT_brakePressed": {
+          "n": 488,
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0389344262295082,
+          "peak_s": 149.0341
+        },
+        "DI_torqueCommand": {
+          "n": 486,
+          "min": -340.0,
+          "max": 554.0,
+          "mean": 59.06172839506173,
+          "peak_s": 103.7591
+        },
+        "DI_torqueActual": {
+          "n": 486,
+          "min": -342.0,
+          "max": 558.0,
+          "mean": 59.251028806584365,
+          "peak_s": 109.5582
+        },
+        "DI_axleSpeed": {
+          "n": 486,
+          "min": -1.4000000000000001,
+          "max": 262.5,
+          "mean": 166.45534979423869,
+          "peak_s": 123.8564
+        },
+        "derived_axleMechanicalPower_kW": {
+          "n": 486,
+          "min": -6.453354909249033,
+          "max": 8.81179040220094,
+          "mean": 0.8690836844121161,
+          "peak_s": 109.5582
+        },
+        "DI_sysDrivePowerMax": {
+          "n": 486,
+          "min": 246.0,
+          "max": 247.0,
+          "mean": 246.25102880658437,
+          "peak_s": 102.1604
+        },
+        "DI_sysRegenPowerMax": {
+          "n": 486,
+          "min": 91.0,
+          "max": 92.0,
+          "mean": 91.41152263374485,
+          "peak_s": 102.1604
+        },
+        "BMS_maxDischargeCurrent": {
+          "n": 487,
+          "min": 682.624,
+          "max": 682.624,
+          "mean": 682.624,
+          "peak_s": 102.0926
+        },
+        "BMS_maxChargeCurrent": {
+          "n": 487,
+          "min": 250.0,
+          "max": 250.0,
+          "mean": 250.0,
+          "peak_s": 102.0926
+        },
+        "BMS_socUI": {
+          "n": 487,
+          "min": 32.2,
+          "max": 32.5,
+          "mean": 32.473511293634495,
+          "peak_s": 102.0933
+        },
+        "BMS_socMin": {
+          "n": 487,
+          "min": 32.0,
+          "max": 32.0,
+          "mean": 32.0,
+          "peak_s": 102.0933
+        },
+        "BMS_socMax": {
+          "n": 487,
+          "min": 34.6,
+          "max": 34.7,
+          "mean": 34.629979466119096,
+          "peak_s": 102.0933
+        }
+      },
+      "positive_torque_no_brake_tracking": {
+        "n": 232,
+        "mean_error_Nm": 0.33620689655172414,
+        "mae_Nm": 2.163793103448276,
+        "max_abs_error_Nm": 34.0
+      }
+    }
+  ],
+  "planned_hold_windows": [
+    {
+      "window": [
+        45,
+        55
+      ],
+      "speed": {
+        "n": 500,
+        "min": 30.239999999999995,
+        "max": 34.72,
+        "mean": 33.26336,
+        "peak_s": 51.1821
+      },
+      "eligible_30plusminus2_no_brake_s": 1.4000000000000001
+    },
+    {
+      "window": [
+        120,
+        130
+      ],
+      "speed": {
+        "n": 500,
+        "min": 29.439999999999998,
+        "max": 32.56,
+        "mean": 31.334400000000002,
+        "peak_s": 123.5175
+      },
+      "eligible_30plusminus2_no_brake_s": 6.800000000000001
+    }
+  ],
+  "brake_reference": "VCLEFT_brakeSwitchPressed; DI_brakePedalState remains INVALID and is excluded",
+  "brake_intervals": [
+    [
+      20.0944,
+      21.8747
+    ],
+    [
+      75.1087,
+      84.2797
+    ],
+    [
+      94.0497,
+      97.4806
+    ],
+    [
+      98.4395,
+      99.8506
+    ],
+    [
+      149.0341,
+      152.7638
+    ]
+  ],
+  "pedal_intervals": [
+    [
+      27.4225,
+      72.019
+    ],
+    [
+      102.0783,
+      140.4659
+    ]
+  ],
+  "moving_intervals": [
+    [
+      22.4848,
+      78.5391
+    ],
+    [
+      98.0988,
+      99.0197
+    ],
+    [
+      100.1589,
+      150.434
+    ]
+  ],
+  "negative_torque_intervals": [
+    [
+      51.762,
+      57.7611
+    ],
+    [
+      71.9601,
+      77.4604
+    ],
+    [
+      125.4562,
+      149.2556
+    ]
+  ],
+  "analysis_windows": {
+    "10-19": {
+      "DI_vehicleSpeed": {
+        "n": 450,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 10.0031
+      },
+      "DI_accelPedalPos": {
+        "n": 900,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 10.0027
+      },
+      "DI_torqueCommand": {
+        "n": 90,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 10.0636
+      },
+      "DI_torqueActual": {
+        "n": 90,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 10.0636
+      },
+      "DI_elecPower": {
+        "n": 900,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 10.0029
+      },
+      "BMS_packVoltage": {
+        "n": 900,
+        "min": 347.14,
+        "max": 347.7,
+        "mean": 347.39362222222223,
+        "peak_s": 16.1621
+      },
+      "BMS_packCurrent": {
+        "n": 900,
+        "min": 1.2000000000000002,
+        "max": 1.5,
+        "mean": 1.3202222222222222,
+        "peak_s": 10.2017
+      },
+      "derived_packPower_kW": {
+        "n": 900,
+        "min": 0.4166640000000001,
+        "max": 0.521205,
+        "mean": 0.45863689,
+        "peak_s": 10.2017
+      }
+    },
+    "85-93": {
+      "DI_vehicleSpeed": {
+        "n": 400,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 85.0196
+      },
+      "DI_accelPedalPos": {
+        "n": 800,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 85.0087
+      },
+      "DI_torqueCommand": {
+        "n": 80,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 85.0589
+      },
+      "DI_torqueActual": {
+        "n": 80,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 85.0589
+      },
+      "DI_elecPower": {
+        "n": 800,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 85.0097
+      },
+      "BMS_packVoltage": {
+        "n": 800,
+        "min": 346.96,
+        "max": 347.5,
+        "mean": 347.2223125,
+        "peak_s": 90.5134
+      },
+      "BMS_packCurrent": {
+        "n": 800,
+        "min": 1.1,
+        "max": 1.3,
+        "mean": 1.1996250000000002,
+        "peak_s": 85.1936
+      },
+      "derived_packPower_kW": {
+        "n": 800,
+        "min": 0.3816780000000001,
+        "max": 0.451672,
+        "mean": 0.41653643375000005,
+        "peak_s": 92.1735
+      }
+    },
+    "27.4225-44.923": {
+      "DI_vehicleSpeed": {
+        "n": 875,
+        "min": 6.0,
+        "max": 29.92,
+        "mean": 19.318765714285714,
+        "peak_s": 44.883
+      },
+      "DI_accelPedalPos": {
+        "n": 1751,
+        "min": 0.4,
+        "max": 25.6,
+        "mean": 14.640091376356368,
+        "peak_s": 43.942
+      },
+      "DI_torqueCommand": {
+        "n": 175,
+        "min": 108.0,
+        "max": 684.0,
+        "mean": 294.3885714285714,
+        "peak_s": 29.2632
+      },
+      "DI_torqueActual": {
+        "n": 175,
+        "min": 108.0,
+        "max": 710.0,
+        "mean": 294.7885714285714,
+        "peak_s": 29.1632
+      },
+      "DI_elecPower": {
+        "n": 1751,
+        "min": 0.5,
+        "max": 13.5,
+        "mean": 4.872644203312393,
+        "peak_s": 44.2024
+      },
+      "BMS_packVoltage": {
+        "n": 1750,
+        "min": 343.85,
+        "max": 347.36,
+        "mean": 346.10217714285716,
+        "peak_s": 27.6122
+      },
+      "BMS_packCurrent": {
+        "n": 1750,
+        "min": 3.1,
+        "max": 41.0,
+        "mean": 15.889714285714287,
+        "peak_s": 44.3225
+      },
+      "derived_packPower_kW": {
+        "n": 1750,
+        "min": 1.07632,
+        "max": 14.11179,
+        "mean": 5.493879075428572,
+        "peak_s": 44.3225
+      }
+    },
+    "102.0783-120.1169": {
+      "DI_vehicleSpeed": {
+        "n": 902,
+        "min": 3.4399999999999977,
+        "max": 29.92,
+        "mean": 19.597339246119734,
+        "peak_s": 120.0362
+      },
+      "DI_accelPedalPos": {
+        "n": 1805,
+        "min": 0.4,
+        "max": 21.200000000000003,
+        "mean": 14.945595567867036,
+        "peak_s": 116.7868
+      },
+      "DI_torqueCommand": {
+        "n": 180,
+        "min": 106.0,
+        "max": 554.0,
+        "mean": 299.8222222222222,
+        "peak_s": 103.7591
+      },
+      "DI_torqueActual": {
+        "n": 180,
+        "min": 106.0,
+        "max": 558.0,
+        "mean": 300.26666666666665,
+        "peak_s": 109.5582
+      },
+      "DI_elecPower": {
+        "n": 1805,
+        "min": 1.0,
+        "max": 9.0,
+        "mean": 4.582548476454294,
+        "peak_s": 109.5188
+      },
+      "BMS_packVoltage": {
+        "n": 1804,
+        "min": 345.07,
+        "max": 347.2,
+        "mean": 346.0870898004435,
+        "peak_s": 102.1238
+      },
+      "BMS_packCurrent": {
+        "n": 1804,
+        "min": 3.9000000000000004,
+        "max": 28.1,
+        "mean": 15.004600886917961,
+        "peak_s": 109.5942
+      },
+      "derived_packPower_kW": {
+        "n": 1804,
+        "min": 1.3532220000000001,
+        "max": 9.705740000000002,
+        "mean": 5.191181699556541,
+        "peak_s": 109.5942
+      }
+    },
+    "60-71": {
+      "DI_vehicleSpeed": {
+        "n": 551,
+        "min": 28.72,
+        "max": 30.879999999999995,
+        "mean": 30.24508166969147,
+        "peak_s": 66.5407
+      },
+      "DI_accelPedalPos": {
+        "n": 1100,
+        "min": 17.6,
+        "max": 20.400000000000002,
+        "mean": 18.95418181818182,
+        "peak_s": 60.0107
+      },
+      "DI_torqueCommand": {
+        "n": 110,
+        "min": 22.0,
+        "max": 166.0,
+        "mean": 95.32727272727273,
+        "peak_s": 60.2612
+      },
+      "DI_torqueActual": {
+        "n": 110,
+        "min": 22.0,
+        "max": 168.0,
+        "mean": 95.36363636363636,
+        "peak_s": 60.2612
+      },
+      "DI_elecPower": {
+        "n": 1101,
+        "min": 0.5,
+        "max": 4.0,
+        "mean": 2.3501362397820165,
+        "peak_s": 60.092
+      },
+      "BMS_packVoltage": {
+        "n": 1100,
+        "min": 345.90000000000003,
+        "max": 347.17,
+        "mean": 346.4435454545455,
+        "peak_s": 70.893
+      },
+      "BMS_packCurrent": {
+        "n": 1100,
+        "min": 3.2,
+        "max": 13.4,
+        "mean": 8.657727272727273,
+        "peak_s": 60.2528
+      },
+      "derived_packPower_kW": {
+        "n": 1100,
+        "min": 1.110624,
+        "max": 4.642162,
+        "mean": 2.998313482727273,
+        "peak_s": 60.2528
+      }
+    },
+    "72.019-75.1087": {
+      "DI_vehicleSpeed": {
+        "n": 155,
+        "min": 19.840000000000003,
+        "max": 30.560000000000002,
+        "mean": 25.526709677419355,
+        "peak_s": 72.0202
+      },
+      "DI_accelPedalPos": {
+        "n": 309,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 72.019
+      },
+      "DI_torqueCommand": {
+        "n": 31,
+        "min": -622.0,
+        "max": -160.0,
+        "mean": -562.516129032258,
+        "peak_s": 72.0601
+      },
+      "DI_torqueActual": {
+        "n": 31,
+        "min": -622.0,
+        "max": -160.0,
+        "mean": -563.6774193548387,
+        "peak_s": 72.0601
+      },
+      "DI_elecPower": {
+        "n": 309,
+        "min": -14.0,
+        "max": -1.0,
+        "mean": -11.435275080906148,
+        "peak_s": 72.0197
+      },
+      "BMS_packVoltage": {
+        "n": 309,
+        "min": 347.16,
+        "max": 350.0,
+        "mean": 349.4259870550162,
+        "peak_s": 72.783
+      },
+      "BMS_packCurrent": {
+        "n": 309,
+        "min": -37.6,
+        "max": -0.7000000000000001,
+        "mean": -30.91003236245955,
+        "peak_s": 72.023
+      },
+      "derived_packPower_kW": {
+        "n": 309,
+        "min": -13.148344000000002,
+        "max": -0.24301200000000003,
+        "mean": -10.803515142394822,
+        "peak_s": 72.023
+      }
+    },
+    "140.4659-149.0341": {
+      "DI_vehicleSpeed": {
+        "n": 428,
+        "min": 8.32,
+        "max": 17.28,
+        "mean": 11.294766355140188,
+        "peak_s": 140.4769
+      },
+      "DI_accelPedalPos": {
+        "n": 857,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "peak_s": 140.4659
+      },
+      "DI_torqueCommand": {
+        "n": 85,
+        "min": -340.0,
+        "max": -16.0,
+        "mean": -138.4,
+        "peak_s": 148.7558
+      },
+      "DI_torqueActual": {
+        "n": 85,
+        "min": -342.0,
+        "max": -16.0,
+        "mean": -138.51764705882354,
+        "peak_s": 148.7558
+      },
+      "DI_elecPower": {
+        "n": 857,
+        "min": -4.5,
+        "max": 0.0,
+        "mean": -1.499416569428238,
+        "peak_s": 147.5157
+      },
+      "BMS_packVoltage": {
+        "n": 856,
+        "min": 347.12,
+        "max": 348.43,
+        "mean": 347.6054906542056,
+        "peak_s": 140.6845
+      },
+      "BMS_packCurrent": {
+        "n": 856,
+        "min": -11.8,
+        "max": 1.1,
+        "mean": -2.9813084112149535,
+        "peak_s": 148.7247
+      },
+      "derived_packPower_kW": {
+        "n": 856,
+        "min": -4.108996000000001,
+        "max": 0.382195,
+        "mean": -1.0374229427570094,
+        "peak_s": 148.8347
+      }
+    }
+  },
+  "global_stats": {
+    "BMS_packVoltage": {
+      "n": 16997,
+      "min": 343.85,
+      "max": 350.0,
+      "mean": 346.94621521444964,
+      "peak_s": 72.783
+    },
+    "BMS_packCurrent": {
+      "n": 16997,
+      "min": -37.6,
+      "max": 41.0,
+      "mean": 4.1525210331234925,
+      "peak_s": 44.3225
+    },
+    "derived_packPower_kW": {
+      "n": 16997,
+      "min": -13.148344000000002,
+      "max": 14.11179,
+      "mean": 1.433059627640172,
+      "peak_s": 44.3225
+    },
+    "DI_accelPedalPos": {
+      "n": 16998,
+      "min": 0.0,
+      "max": 25.6,
+      "mean": 7.517613836921991,
+      "peak_s": 43.942
+    },
+    "DI_driveBlocked": {
+      "n": 16998,
+      "min": 2.0,
+      "max": 2.0,
+      "mean": 2.0,
+      "peak_s": 0.0034
+    },
+    "DI_elecPower": {
+      "n": 16998,
+      "min": -14.0,
+      "max": 13.5,
+      "mean": 0.8987233792210848,
+      "peak_s": 44.2024
+    },
+    "DI_vehicleSpeed": {
+      "n": 8499,
+      "min": -0.1599999999999966,
+      "max": 34.72,
+      "mean": 13.72919166960819,
+      "peak_s": 51.1821
+    },
+    "VCLEFT_brakeSwitchPressed": {
+      "n": 1709,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.11761263897015799,
+      "peak_s": 20.0944
+    },
+    "VCLEFT_brakePressed": {
+      "n": 1709,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.11761263897015799,
+      "peak_s": 20.0944
+    },
+    "DI_torqueCommand": {
+      "n": 1700,
+      "min": -622.0,
+      "max": 684.0,
+      "mean": 61.04352941176471,
+      "peak_s": 29.2632
+    },
+    "DI_torqueActual": {
+      "n": 1700,
+      "min": -622.0,
+      "max": 710.0,
+      "mean": 61.923529411764704,
+      "peak_s": 29.1632
+    },
+    "DI_axleSpeed": {
+      "n": 1700,
+      "min": -1.7000000000000002,
+      "max": 279.40000000000003,
+      "mean": 109.97911764705883,
+      "peak_s": 51.1618
+    },
+    "derived_axleMechanicalPower_kW": {
+      "n": 1700,
+      "min": -14.762804646140967,
+      "max": 12.815310416229629,
+      "mean": 0.8377290890249804,
+      "peak_s": 44.8632
+    },
+    "DI_sysDrivePowerMax": {
+      "n": 1700,
+      "min": 246.0,
+      "max": 247.0,
+      "mean": 246.4764705882353,
+      "peak_s": 0.0656
+    },
+    "DI_sysRegenPowerMax": {
+      "n": 1700,
+      "min": 91.0,
+      "max": 92.0,
+      "mean": 91.58705882352942,
+      "peak_s": 0.0656
+    },
+    "BMS_maxDischargeCurrent": {
+      "n": 1699,
+      "min": 682.624,
+      "max": 682.624,
+      "mean": 682.624,
+      "peak_s": 0.08
+    },
+    "BMS_maxChargeCurrent": {
+      "n": 1699,
+      "min": 250.0,
+      "max": 250.0,
+      "mean": 250.0,
+      "peak_s": 0.08
+    },
+    "BMS_socUI": {
+      "n": 1699,
+      "min": 32.2,
+      "max": 32.5,
+      "mean": 32.49240729841083,
+      "peak_s": 0.0807
+    },
+    "BMS_socMin": {
+      "n": 1699,
+      "min": 32.0,
+      "max": 32.1,
+      "mean": 32.02654502648617,
+      "peak_s": 0.0807
+    },
+    "BMS_socMax": {
+      "n": 1699,
+      "min": 34.6,
+      "max": 34.800000000000004,
+      "mean": 34.68875809299588,
+      "peak_s": 0.0807
+    }
+  }
+}

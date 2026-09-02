@@ -1,0 +1,68 @@
+{
+  "source": "input/can_20260831090233_TM3-010_中等负载加速采集.asc",
+  "messages": [
+    {
+      "id": "0x145",
+      "name": "ESP_status",
+      "frames": 0
+    },
+    {
+      "id": "0x185",
+      "name": "ESP_brakeTorque",
+      "frames": 0
+    },
+    {
+      "id": "0x39d",
+      "name": "IBST_status",
+      "frames": 4249
+    }
+  ],
+  "IBST_decode_errors": 0,
+  "IBST_driverBrakeApply_edges": [
+    {
+      "time_s": 0.038,
+      "value": "BRAKES_NOT_APPLIED"
+    },
+    {
+      "time_s": 20.0747,
+      "value": "DRIVER_APPLYING_BRAKES"
+    },
+    {
+      "time_s": 22.075,
+      "value": "BRAKES_NOT_APPLIED"
+    },
+    {
+      "time_s": 75.0361,
+      "value": "DRIVER_APPLYING_BRAKES"
+    },
+    {
+      "time_s": 84.3963,
+      "value": "BRAKES_NOT_APPLIED"
+    },
+    {
+      "time_s": 93.9966,
+      "value": "DRIVER_APPLYING_BRAKES"
+    },
+    {
+      "time_s": 97.8767,
+      "value": "BRAKES_NOT_APPLIED"
+    },
+    {
+      "time_s": 98.0368,
+      "value": "DRIVER_APPLYING_BRAKES"
+    },
+    {
+      "time_s": 99.9574,
+      "value": "BRAKES_NOT_APPLIED"
+    },
+    {
+      "time_s": 148.4381,
+      "value": "DRIVER_APPLYING_BRAKES"
+    },
+    {
+      "time_s": 152.8782,
+      "value": "BRAKES_NOT_APPLIED"
+    }
+  ],
+  "scope": "Initial ONYX-only audit. Superseded for signal coverage by dbc_brake_audit: Model3CAN and party define input-rod travel in the captured 5-byte 0x39D message. Known brake torque IDs remain absent."
+}

@@ -1,0 +1,11 @@
+﻿requirement_id,status,evidence_summary,limitation
+ER-01,INSUFFICIENT_EVIDENCE,开口/插枪附近有位变化，但DoorOpen为短脉冲，CablePresent/Secured方向与名称冲突,SEMANTIC_VALIDATION_FAILED；保留原始边沿，不确认字段名称语义
+ER-02,INSUFFICIENT_EVIDENCE,EVSE类型候选在插枪窗0→1，但数字通信、Request、Accept、gbState全程0,未观察到足以还原协商顺序的车辆内部Signal
+ER-03,INSUFFICIENT_EVIDENCE,UI充电状态及接触器转换可见，后续确有电流；但0x13D无帧、BMS_chargeRequest恒0、BMS_hvState轮转异常,只能由下游结果间接支持许可已形成，不能确认条件判断/许可节点
+ER-04,SUPPORTED,CP电压约140.028s建立且稳定段约365.4V；CP电流145.028s建立并在停止后归零；Pack双电流字段与累计量在约70.7kW闭合,Pack侧形成实验级定量基线；CP电流仅时序可信，桩端Actual及效率仍未建立
+ER-05,SUPPORTED,173.73–233.23s取得59.50s短稳态；CP候选电流128.108A，SOC 28.2%→30.5%,条件化短稳态有效；不代表峰值、全SOC曲线或长期能力
+ER-06,SUPPORTED,停止候选245.7336s后，CP电流246.2332s归0，UI状态246.3925s退出,两个停止Signal语义仍未完全确认；结论依赖状态和电流退出闭环
+ER-07,INSUFFICIENT_EVIDENCE,连接类型约273.534s退出，锁止/门候选随后变化,无独立解锁和拔枪实际时刻，且Cable/Latch语义未通过
+ER-08,SUPPORTED,SOC、低压及部分热状态有覆盖；SOC由27.5%升至31.0%；BMS_chgPowerAvailable采用bit40候选时稳定约72.98kW,Available保持P1能力上限候选，不等于Request或Actual；多个温度字段仍语义失败
+ER-09,INSUFFICIENT_EVIDENCE,DI_gear仅解码为7=SNA；DI_systemState在电流阶段为1=IDLE,只记录状态共存；挡位条件本次无有效DBC证据
+ER-10,INSUFFICIENT_EVIDENCE,BMS_modelTMax 33.5→35.0°C候选可读；多项温度目标/执行字段存在SNA、越界、无帧或不合理突变,热管理执行器覆盖得到验证，但请求—执行—温度闭环尚不足；SEMANTIC_VALIDATION_FAILED项不得解释

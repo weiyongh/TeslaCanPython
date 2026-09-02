@@ -1,0 +1,14 @@
+{
+  "source": "input/can_20260831102614_TM3-015_直流快充采集.asc",
+  "source_sha256": "622bfb8e8db203f0a5ba09b4ab91bff42415a28728a078a7c4f7f771e880665d",
+  "approved_plan_sha256": "dcb428ef07365ed03185ec973ab9537a4ac5d333bbb0fbdad5da3af995360dfa",
+  "coverage_gate_sha256": "352992cf0127aed9622e9a1faa5f3e316ce0e81ce22521b7de27d6c7dc2fadbe",
+  "human_power_sign": "charge_into_pack_positive",
+  "raw_data_modified": false,
+  "stable_window_s": [
+    173.73,
+    233.23
+  ],
+  "cp_power_candidate_kw": 46.81190000384178,
+  "pack_power_candidate_kw": 70.74724365309602
+}

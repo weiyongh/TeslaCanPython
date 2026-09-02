@@ -1,0 +1,18 @@
+{
+  "experiment_id": "TM3-015",
+  "status": "CLOSED_WITH_PENDING_EXTERNAL_CALIBRATION",
+  "closed_at": "2026-09-01",
+  "analysis_expansion_stopped": true,
+  "existing_timing_baseline_preserved": true,
+  "pack_quantitative_baseline": {
+    "scope": "THIS_EXPERIMENT_ONLY",
+    "window_s": [173.73, 233.23],
+    "voltage_v": 364.90,
+    "current_charge_into_pack_positive_a": 193.88,
+    "power_kw": 70.75,
+    "signal_maturity": "STRONGLY_SUPPORTED"
+  },
+  "pending_items": ["TM3-015-P01"],
+  "pending_is_blocking": false,
+  "golden_case": "SIGNAL_VALIDATION_ENERGY_CHAIN_V1"
+}

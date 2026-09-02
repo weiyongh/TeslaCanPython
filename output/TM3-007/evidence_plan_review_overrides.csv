@@ -1,0 +1,24 @@
+﻿experiment_id,signal_key,decision,override_role,override_priority,override_report_position,override_order,human_reason,reviewer,reviewed_at
+TM3-007,NetworkFrameRate_derived,ACCEPT,,,,,接受Draft建议；仅表示纳入本实验分析范围；起始状态只允许称为本采集域低通信候选；Planned Time仅用于粗定位,用户,2026-09-01
+TM3-007,ActiveCanIdCount_derived,ACCEPT,,,,,接受Draft建议；仅作为本采集域控制器分批唤醒代理；不等同整车控制器数量或整车真实休眠,用户,2026-09-01
+TM3-007,VCLEFT_frontLatchStatus,ACCEPT,,,,,接受Draft建议；跨DBC位段冲突须并列验证；缺少Observed Event Time时不确认开关门精确人工时刻,用户,2026-09-01
+TM3-007,VCLEFT_frontOccupancyStatus,ACCEPT,,,,,接受Draft建议；须验证本采集域覆盖与枚举方向；缺少Observed Event Time时不确认入座精确人工时刻,用户,2026-09-01
+TM3-007,DI_brakePedalState,ACCEPT,,,,,接受Draft建议；制动状态不等同READY请求；缺少Observed Event Time时不形成精确人工动作到CAN响应延迟,用户,2026-09-01
+TM3-007,DI_gear,ACCEPT,,,,,接受Draft建议；保持为挡位反馈而非原始换挡请求；ACCEPT不代表语义自动升级,用户,2026-09-01
+TM3-007,DI_systemState,ACCEPT,,,,,接受Draft建议；仅作为电驱状态或ENABLE候选；不单独等同整车READY,用户,2026-09-01
+TM3-007,UI_readyForDrive,ACCEPT,,,,,接受Draft建议；保持为仪表或用户层交叉验证；不作为高压或驱动许可源头,用户,2026-09-01
+TM3-007,BMS_hvState,ACCEPT,,,,,接受Draft建议；须评价完整枚举状态序列；ACCEPT不代表具体状态语义已经由本实验验证,用户,2026-09-01
+TM3-007,BMS_contactorState,ACCEPT,,,,,接受Draft建议；仅为接触器总状态；不能替代正负接触器及预充支路独立反馈,用户,2026-09-01
+TM3-007,BMS_packVoltage,ACCEPT,,,,,接受Draft建议；保持Pack侧电压边界；不单独证明接触器下游母线已上电,用户,2026-09-01
+TM3-007,PCS_dcdcHvBusVolt,ACCEPT,,,,,接受Draft建议；定量语义须与其他高压状态及母线物理响应形成闭环,用户,2026-09-01
+TM3-007,HVP_hvilStatus,ACCEPT,,,,,P1多DBC并列解析；必须执行Signal Validation；不预选冲突定义；不自动升级成熟度或车型级语义；仅在完整序列及物理闭环后评价具体语义,用户,2026-09-01
+TM3-007,BMS_isolationResistance,ACCEPT,,,,,接受Draft建议；须排除SNA；未知OEM阈值不得自行补全或作为许可判据,用户,2026-09-01
+TM3-007,HVP_packContNegativeState,ACCEPT,,,,,P1多DBC并列解析；必须执行Signal Validation；不预选冲突定义；不自动升级成熟度或车型级语义；仅在完整序列及物理闭环后评价具体语义,用户,2026-09-01
+TM3-007,HVP_packContPositiveState,ACCEPT,,,,,P1多DBC并列解析；必须执行Signal Validation；不预选冲突定义；不自动升级成熟度或车型级语义；仅在完整序列及物理闭环后评价具体语义,用户,2026-09-01
+TM3-007,PCS_dcdcMainState,ACCEPT,,,,,接受Draft建议；必须结合低压母线电压和输出电流验证；不只依据枚举名称下结论,用户,2026-09-01
+TM3-007,PCS_dcdc12VSupportStatus,ACCEPT,,,,,接受Draft建议；保持P1交叉验证角色；须区分与DCDC主状态的角色重叠,用户,2026-09-01
+TM3-007,PCS_dcdcLvBusVolt,ACCEPT,,,,,接受Draft建议；仅代表PCS侧低压母线；不冒充外部仪表实测12V电压,用户,2026-09-01
+TM3-007,PCS_dcdcLvOutputCurrent,ACCEPT,,,,,接受Draft建议；跨DBC符号及位宽冲突须验证；不提前确认定量语义,用户,2026-09-01
+TM3-007,DI_keepAliveRequest,ACCEPT,,,,,接受Draft建议；仅进入P2工程审计；名称不足以确认整车唤醒请求,用户,2026-09-01
+TM3-007,GTW_BMP_AWAKE_PIN,ACCEPT,,,,,接受Draft建议；仅进入P2工程审计；非ONYX定义且只作为网关唤醒代理候选,用户,2026-09-01
+TM3-007,UI_lockRequest,ACCEPT,,,,,接受Draft建议；仅进入P2工程审计；不自动等同B柱钥匙卡请求；缺少Observed Event Time时不确认精确解锁时刻,用户,2026-09-01

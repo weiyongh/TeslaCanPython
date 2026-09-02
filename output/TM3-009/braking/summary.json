@@ -1,0 +1,3480 @@
+{
+  "reference": "IBST_driverBrakeApply transitions; rod is input displacement, not force.",
+  "alignment": "Native same-frame 0x108 torque pairs; other signals use past-only bounded-age samples. No physical-delay claim.",
+  "episodes": [
+    {
+      "episode": {
+        "start_s": 20.0747,
+        "end_s": 22.075,
+        "peak_mm": 7.34375,
+        "peak_s": 20.4761,
+        "peak_raw": "33 67 ca 62 00"
+      },
+      "pre_1s": {
+        "start_s": 19.0747,
+        "end_s": 20.0747,
+        "n": 10,
+        "first": {
+          "time_s": 19.1632,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": -0.015625,
+          "rod_mm_age_s": 0.0086,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0086,
+          "internal_state": "NO_MODE_ACTIVE",
+          "internal_state_age_s": 0.0086,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0301,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": 0.451685,
+          "derived_packPower_kW_age_s": 0.0009,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0011
+        },
+        "last": {
+          "time_s": 20.0629,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": -0.015625,
+          "rod_mm_age_s": 0.0275,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0275,
+          "internal_state": "NO_MODE_ACTIVE",
+          "internal_state_age_s": 0.0275,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0009,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0279,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0004,
+          "derived_packPower_kW": 0.486346,
+          "derived_packPower_kW_age_s": 0.0007,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0009
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 10,
+          "negative": 0
+        },
+        "mean_error_Nm": 0.0,
+        "mae_Nm": 0.0,
+        "max_error_sample": {
+          "time_s": 19.1632,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": -0.015625,
+          "rod_mm_age_s": 0.0086,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0086,
+          "internal_state": "NO_MODE_ACTIVE",
+          "internal_state_age_s": 0.0086,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0301,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": 0.451685,
+          "derived_packPower_kW_age_s": 0.0009,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0011
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "actual_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "rod_mm_range": [
+          -0.015625,
+          -0.015625
+        ],
+        "DI_vehicleSpeed_range": [
+          0.0,
+          0.0
+        ],
+        "derived_packPower_kW_range": [
+          0.451451,
+          0.4863740000000001
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 19.1632,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          }
+        ]
+      },
+      "during": {
+        "start_s": 20.0747,
+        "end_s": 22.075,
+        "n": 20,
+        "first": {
+          "time_s": 20.1628,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 3.765625,
+          "rod_mm_age_s": 0.0079,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0079,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0079,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0201,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0007,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0296,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0003,
+          "derived_packPower_kW": 0.555808,
+          "derived_packPower_kW_age_s": 0.0005,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0007
+        },
+        "last": {
+          "time_s": 22.0642,
+          "request_Nm": 52.0,
+          "actual_Nm": 36.0,
+          "error_Nm": -16.0,
+          "rod_mm": 0.4375,
+          "rod_mm_age_s": 0.0289,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0289,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0289,
+          "DI_vehicleSpeed": 0.1600000000000037,
+          "DI_vehicleSpeed_age_s": 0.0201,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0015,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0308,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0008,
+          "derived_packPower_kW": 0.55544,
+          "derived_packPower_kW_age_s": 0.0023,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0015
+        },
+        "request_sign_counts": {
+          "positive": 2,
+          "zero": 18,
+          "negative": 0
+        },
+        "mean_error_Nm": -0.8,
+        "mae_Nm": 0.8,
+        "max_error_sample": {
+          "time_s": 22.0642,
+          "request_Nm": 52.0,
+          "actual_Nm": 36.0,
+          "error_Nm": -16.0,
+          "rod_mm": 0.4375,
+          "rod_mm_age_s": 0.0289,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0289,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0289,
+          "DI_vehicleSpeed": 0.1600000000000037,
+          "DI_vehicleSpeed_age_s": 0.0201,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0015,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0308,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0008,
+          "derived_packPower_kW": 0.55544,
+          "derived_packPower_kW_age_s": 0.0023,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0015
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          0.0,
+          52.0
+        ],
+        "actual_Nm_range": [
+          0.0,
+          36.0
+        ],
+        "rod_mm_range": [
+          0.4375,
+          7.296875
+        ],
+        "DI_vehicleSpeed_range": [
+          0.0,
+          0.1600000000000037
+        ],
+        "derived_packPower_kW_range": [
+          0.52092,
+          0.6944600000000001
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 20.1628,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          },
+          {
+            "time_s": 21.9637,
+            "request_Nm": 6.0,
+            "actual_Nm": 6.0
+          }
+        ]
+      },
+      "first_1s": {
+        "start_s": 20.0747,
+        "end_s": 21.0747,
+        "n": 10,
+        "first": {
+          "time_s": 20.1628,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 3.765625,
+          "rod_mm_age_s": 0.0079,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0079,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0079,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0201,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0007,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0296,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0003,
+          "derived_packPower_kW": 0.555808,
+          "derived_packPower_kW_age_s": 0.0005,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0007
+        },
+        "last": {
+          "time_s": 21.0632,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 5.609375,
+          "rod_mm_age_s": 0.0279,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0279,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0279,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0275,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": 0.555824,
+          "derived_packPower_kW_age_s": 0.001,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0012
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 10,
+          "negative": 0
+        },
+        "mean_error_Nm": 0.0,
+        "mae_Nm": 0.0,
+        "max_error_sample": {
+          "time_s": 20.1628,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 3.765625,
+          "rod_mm_age_s": 0.0079,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0079,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0079,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0201,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0007,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0296,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0003,
+          "derived_packPower_kW": 0.555808,
+          "derived_packPower_kW_age_s": 0.0005,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0007
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "actual_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "rod_mm_range": [
+          3.765625,
+          7.296875
+        ],
+        "DI_vehicleSpeed_range": [
+          0.0,
+          0.0
+        ],
+        "derived_packPower_kW_range": [
+          0.5556,
+          0.6944600000000001
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 20.1628,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          }
+        ]
+      },
+      "post_1s": {
+        "start_s": 22.075,
+        "end_s": 23.075,
+        "n": 10,
+        "first": {
+          "time_s": 22.1639,
+          "request_Nm": 118.0,
+          "actual_Nm": 138.0,
+          "error_Nm": 20.0,
+          "rod_mm": 0.015625,
+          "rod_mm_age_s": 0.009,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.009,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.009,
+          "DI_vehicleSpeed": 0.1600000000000037,
+          "DI_vehicleSpeed_age_s": 0.0193,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0302,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": 0.5904100000000001,
+          "derived_packPower_kW_age_s": 0.0019,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "last": {
+          "time_s": 23.0642,
+          "request_Nm": 354.0,
+          "actual_Nm": 378.0,
+          "error_Nm": 24.0,
+          "rod_mm": 0.015625,
+          "rod_mm_age_s": 0.0292,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0292,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0292,
+          "DI_vehicleSpeed": 1.5200000000000031,
+          "DI_vehicleSpeed_age_s": 0.0005,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0014,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0308,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0009,
+          "derived_packPower_kW": 1.3192080000000002,
+          "derived_packPower_kW_age_s": 0.0022,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0014
+        },
+        "request_sign_counts": {
+          "positive": 10,
+          "zero": 0,
+          "negative": 0
+        },
+        "mean_error_Nm": 15.6,
+        "mae_Nm": 15.6,
+        "max_error_sample": {
+          "time_s": 23.0642,
+          "request_Nm": 354.0,
+          "actual_Nm": 378.0,
+          "error_Nm": 24.0,
+          "rod_mm": 0.015625,
+          "rod_mm_age_s": 0.0292,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0292,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0292,
+          "DI_vehicleSpeed": 1.5200000000000031,
+          "DI_vehicleSpeed_age_s": 0.0005,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0014,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0308,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0009,
+          "derived_packPower_kW": 1.3192080000000002,
+          "derived_packPower_kW_age_s": 0.0022,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0014
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          118.0,
+          380.0
+        ],
+        "actual_Nm_range": [
+          138.0,
+          392.0
+        ],
+        "rod_mm_range": [
+          0.015625,
+          0.015625
+        ],
+        "DI_vehicleSpeed_range": [
+          0.1600000000000037,
+          1.5200000000000031
+        ],
+        "derived_packPower_kW_range": [
+          0.5904100000000001,
+          1.3192080000000002
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 22.1639,
+            "request_Nm": 118.0,
+            "actual_Nm": 138.0
+          }
+        ]
+      }
+    },
+    {
+      "episode": {
+        "start_s": 75.0361,
+        "end_s": 84.3963,
+        "peak_mm": 6.796875,
+        "peak_s": 81.1164,
+        "peak_raw": "cb 63 6a 5e 00"
+      },
+      "pre_1s": {
+        "start_s": 74.0361,
+        "end_s": 75.0361,
+        "n": 10,
+        "first": {
+          "time_s": 74.0613,
+          "request_Nm": -620.0,
+          "actual_Nm": -620.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.078125,
+          "rod_mm_age_s": 0.0252,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0252,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0252,
+          "DI_vehicleSpeed": 23.68,
+          "DI_vehicleSpeed_age_s": 0.0005,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0014,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0242,
+          "DI_elecPower": -12.0,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": -11.147136,
+          "derived_packPower_kW_age_s": 0.0081,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0014
+        },
+        "last": {
+          "time_s": 74.9609,
+          "request_Nm": -528.0,
+          "actual_Nm": -524.0,
+          "error_Nm": 4.0,
+          "rod_mm": 0.0,
+          "rod_mm_age_s": 0.0048,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0048,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0048,
+          "DI_vehicleSpeed": 20.4,
+          "DI_vehicleSpeed_age_s": 0.0203,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0238,
+          "DI_elecPower": -8.5,
+          "DI_elecPower_age_s": 0.0002,
+          "derived_packPower_kW": -8.134496,
+          "derived_packPower_kW_age_s": 0.0078,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 0,
+          "negative": 10
+        },
+        "mean_error_Nm": -1.0,
+        "mae_Nm": 3.4,
+        "max_error_sample": {
+          "time_s": 74.8601,
+          "request_Nm": -534.0,
+          "actual_Nm": -546.0,
+          "error_Nm": -12.0,
+          "rod_mm": 0.0,
+          "rod_mm_age_s": 0.0239,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0239,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0239,
+          "DI_vehicleSpeed": 20.72,
+          "DI_vehicleSpeed_age_s": 0.0203,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0009,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0232,
+          "DI_elecPower": -9.0,
+          "DI_elecPower_age_s": 0.0004,
+          "derived_packPower_kW": -8.38032,
+          "derived_packPower_kW_age_s": 0.007,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0009
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          -622.0,
+          -528.0
+        ],
+        "actual_Nm_range": [
+          -620.0,
+          -524.0
+        ],
+        "rod_mm_range": [
+          0.0,
+          0.078125
+        ],
+        "DI_vehicleSpeed_range": [
+          20.4,
+          23.68
+        ],
+        "derived_packPower_kW_range": [
+          -11.147136,
+          -8.134496
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 74.0613,
+            "request_Nm": -620.0,
+            "actual_Nm": -620.0
+          }
+        ]
+      },
+      "during": {
+        "start_s": 75.0361,
+        "end_s": 84.3963,
+        "n": 94,
+        "first": {
+          "time_s": 75.0608,
+          "request_Nm": -510.0,
+          "actual_Nm": -510.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.59375,
+          "rod_mm_age_s": 0.0247,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0247,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0247,
+          "DI_vehicleSpeed": 20.0,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0237,
+          "DI_elecPower": -8.5,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": -7.746246000000001,
+          "derived_packPower_kW_age_s": 0.0075,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "last": {
+          "time_s": 84.3589,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.828125,
+          "rod_mm_age_s": 0.0026,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0026,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0026,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0202,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0007,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0213,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0003,
+          "derived_packPower_kW": 0.416484,
+          "derived_packPower_kW_age_s": 0.0055,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0007
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 70,
+          "negative": 24
+        },
+        "mean_error_Nm": -0.574468085106383,
+        "mae_Nm": 0.9574468085106383,
+        "max_error_sample": {
+          "time_s": 76.0601,
+          "request_Nm": -270.0,
+          "actual_Nm": -292.0,
+          "error_Nm": -22.0,
+          "rod_mm": 5.046875,
+          "rod_mm_age_s": 0.024,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.024,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.024,
+          "DI_vehicleSpeed": 14.399999999999999,
+          "DI_vehicleSpeed_age_s": 0.0005,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0232,
+          "DI_elecPower": -3.5,
+          "DI_elecPower_age_s": 0.0009,
+          "derived_packPower_kW": -2.748805,
+          "derived_packPower_kW_age_s": 0.007,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0012
+        },
+        "sign_disagreement_n": 1,
+        "request_Nm_range": [
+          -510.0,
+          0.0
+        ],
+        "actual_Nm_range": [
+          -510.0,
+          0.0
+        ],
+        "rod_mm_range": [
+          0.59375,
+          6.796875
+        ],
+        "DI_vehicleSpeed_range": [
+          -0.1599999999999966,
+          20.0
+        ],
+        "derived_packPower_kW_range": [
+          -7.746246000000001,
+          0.69432
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 75.0608,
+            "request_Nm": -510.0,
+            "actual_Nm": -510.0
+          },
+          {
+            "time_s": 77.4604,
+            "request_Nm": 0.0,
+            "actual_Nm": -6.0
+          }
+        ]
+      },
+      "first_1s": {
+        "start_s": 75.0361,
+        "end_s": 76.0361,
+        "n": 10,
+        "first": {
+          "time_s": 75.0608,
+          "request_Nm": -510.0,
+          "actual_Nm": -510.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.59375,
+          "rod_mm_age_s": 0.0247,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0247,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0247,
+          "DI_vehicleSpeed": 20.0,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0237,
+          "DI_elecPower": -8.5,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": -7.746246000000001,
+          "derived_packPower_kW_age_s": 0.0075,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "last": {
+          "time_s": 75.9604,
+          "request_Nm": -300.0,
+          "actual_Nm": -302.0,
+          "error_Nm": -2.0,
+          "rod_mm": 5.015625,
+          "rod_mm_age_s": 0.0042,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0042,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0042,
+          "DI_vehicleSpeed": 15.120000000000005,
+          "DI_vehicleSpeed_age_s": 0.0199,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0232,
+          "DI_elecPower": -3.5,
+          "DI_elecPower_age_s": 0.0005,
+          "derived_packPower_kW": -3.0280350000000005,
+          "derived_packPower_kW_age_s": 0.0072,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0012
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 0,
+          "negative": 10
+        },
+        "mean_error_Nm": -2.4,
+        "mae_Nm": 3.2,
+        "max_error_sample": {
+          "time_s": 75.5606,
+          "request_Nm": -404.0,
+          "actual_Nm": -418.0,
+          "error_Nm": -14.0,
+          "rod_mm": 4.9375,
+          "rod_mm_age_s": 0.0045,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0045,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0045,
+          "DI_vehicleSpeed": 17.439999999999998,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0014,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0234,
+          "DI_elecPower": -5.5,
+          "DI_elecPower_age_s": 0.001,
+          "derived_packPower_kW": -5.01768,
+          "derived_packPower_kW_age_s": 0.0075,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0014
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          -510.0,
+          -300.0
+        ],
+        "actual_Nm_range": [
+          -510.0,
+          -302.0
+        ],
+        "rod_mm_range": [
+          0.59375,
+          5.015625
+        ],
+        "DI_vehicleSpeed_range": [
+          15.120000000000005,
+          20.0
+        ],
+        "derived_packPower_kW_range": [
+          -7.746246000000001,
+          -3.0280350000000005
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 75.0608,
+            "request_Nm": -510.0,
+            "actual_Nm": -510.0
+          }
+        ]
+      },
+      "post_1s": {
+        "start_s": 84.3963,
+        "end_s": 85.3963,
+        "n": 10,
+        "first": {
+          "time_s": 84.459,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.15625,
+          "rod_mm_age_s": 0.0225,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0225,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0225,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0008,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0211,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0005,
+          "derived_packPower_kW": 0.4165080000000001,
+          "derived_packPower_kW_age_s": 0.0057,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0008
+        },
+        "last": {
+          "time_s": 85.3589,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.015625,
+          "rod_mm_age_s": 0.0023,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0023,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0023,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.001,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0213,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0005,
+          "derived_packPower_kW": 0.41656800000000005,
+          "derived_packPower_kW_age_s": 0.0055,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.001
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 10,
+          "negative": 0
+        },
+        "mean_error_Nm": 0.0,
+        "mae_Nm": 0.0,
+        "max_error_sample": {
+          "time_s": 84.459,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.15625,
+          "rod_mm_age_s": 0.0225,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0225,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0225,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0008,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0211,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0005,
+          "derived_packPower_kW": 0.4165080000000001,
+          "derived_packPower_kW_age_s": 0.0057,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0008
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "actual_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "rod_mm_range": [
+          0.0,
+          0.15625
+        ],
+        "DI_vehicleSpeed_range": [
+          0.0,
+          0.0
+        ],
+        "derived_packPower_kW_range": [
+          0.38175500000000007,
+          0.41661600000000004
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 84.459,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "episode": {
+        "start_s": 93.9966,
+        "end_s": 97.8767,
+        "peak_mm": 6.890625,
+        "peak_s": 94.5168,
+        "peak_raw": "8b 62 2a 5f 00"
+      },
+      "pre_1s": {
+        "start_s": 92.9966,
+        "end_s": 93.9966,
+        "n": 10,
+        "first": {
+          "time_s": 93.0586,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.0,
+          "rod_mm_age_s": 0.0222,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0222,
+          "internal_state": "TRANSITION_TO_IDLE",
+          "internal_state_age_s": 0.0222,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0007,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0201,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.001,
+          "derived_packPower_kW": 0.38208500000000006,
+          "derived_packPower_kW_age_s": 0.0049,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0012
+        },
+        "last": {
+          "time_s": 93.9586,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.1875,
+          "rod_mm_age_s": 0.002,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.002,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.002,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0008,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0194,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.001,
+          "derived_packPower_kW": 0.41679600000000006,
+          "derived_packPower_kW_age_s": 0.0051,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0012
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 10,
+          "negative": 0
+        },
+        "mean_error_Nm": 0.0,
+        "mae_Nm": 0.0,
+        "max_error_sample": {
+          "time_s": 93.0586,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.0,
+          "rod_mm_age_s": 0.0222,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0222,
+          "internal_state": "TRANSITION_TO_IDLE",
+          "internal_state_age_s": 0.0222,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0007,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0201,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.001,
+          "derived_packPower_kW": 0.38208500000000006,
+          "derived_packPower_kW_age_s": 0.0049,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0012
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "actual_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "rod_mm_range": [
+          -0.015625,
+          0.1875
+        ],
+        "DI_vehicleSpeed_range": [
+          0.0,
+          0.0
+        ],
+        "derived_packPower_kW_range": [
+          0.38208500000000006,
+          0.451607
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 93.0586,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          }
+        ]
+      },
+      "during": {
+        "start_s": 93.9966,
+        "end_s": 97.8767,
+        "n": 39,
+        "first": {
+          "time_s": 94.0585,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 1.234375,
+          "rod_mm_age_s": 0.0219,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0219,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0219,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0007,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0088,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.001,
+          "derived_packPower_kW": 0.41683200000000004,
+          "derived_packPower_kW_age_s": 0.005,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0012
+        },
+        "last": {
+          "time_s": 97.8593,
+          "request_Nm": 194.0,
+          "actual_Nm": 210.0,
+          "error_Nm": 16.0,
+          "rod_mm": 0.28125,
+          "rod_mm_age_s": 0.0226,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0226,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0226,
+          "DI_vehicleSpeed": 0.1600000000000037,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0206,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": 0.5905800000000001,
+          "derived_packPower_kW_age_s": 0.0057,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0012
+        },
+        "request_sign_counts": {
+          "positive": 4,
+          "zero": 35,
+          "negative": 0
+        },
+        "mean_error_Nm": 1.2307692307692308,
+        "mae_Nm": 2.4615384615384617,
+        "max_error_sample": {
+          "time_s": 97.7592,
+          "request_Nm": 118.0,
+          "actual_Nm": 172.0,
+          "error_Nm": 54.0,
+          "rod_mm": 0.28125,
+          "rod_mm_age_s": 0.0023,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0023,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0023,
+          "DI_vehicleSpeed": 0.3200000000000003,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0009,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0207,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0004,
+          "derived_packPower_kW": 0.590308,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0009
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          0.0,
+          194.0
+        ],
+        "actual_Nm_range": [
+          0.0,
+          210.0
+        ],
+        "rod_mm_range": [
+          0.28125,
+          6.875
+        ],
+        "DI_vehicleSpeed_range": [
+          0.0,
+          0.3200000000000003
+        ],
+        "derived_packPower_kW_range": [
+          0.41683200000000004,
+          0.624942
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 94.0585,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          },
+          {
+            "time_s": 97.5593,
+            "request_Nm": 6.0,
+            "actual_Nm": 8.0
+          }
+        ]
+      },
+      "first_1s": {
+        "start_s": 93.9966,
+        "end_s": 94.9966,
+        "n": 10,
+        "first": {
+          "time_s": 94.0585,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 1.234375,
+          "rod_mm_age_s": 0.0219,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0219,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0219,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0007,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0088,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.001,
+          "derived_packPower_kW": 0.41683200000000004,
+          "derived_packPower_kW_age_s": 0.005,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0012
+        },
+        "last": {
+          "time_s": 94.9586,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 6.140625,
+          "rod_mm_age_s": 0.0019,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0019,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0019,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0008,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0013,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0192,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.001,
+          "derived_packPower_kW": 0.48624800000000007,
+          "derived_packPower_kW_age_s": 0.005,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0013
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 10,
+          "negative": 0
+        },
+        "mean_error_Nm": 0.0,
+        "mae_Nm": 0.0,
+        "max_error_sample": {
+          "time_s": 94.0585,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 1.234375,
+          "rod_mm_age_s": 0.0219,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0219,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0219,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0007,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0088,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.001,
+          "derived_packPower_kW": 0.41683200000000004,
+          "derived_packPower_kW_age_s": 0.005,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0012
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "actual_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "rod_mm_range": [
+          1.234375,
+          6.875
+        ],
+        "DI_vehicleSpeed_range": [
+          0.0,
+          0.0
+        ],
+        "derived_packPower_kW_range": [
+          0.41683200000000004,
+          0.624942
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 94.0585,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          }
+        ]
+      },
+      "post_1s": {
+        "start_s": 97.8767,
+        "end_s": 98.8767,
+        "n": 10,
+        "first": {
+          "time_s": 97.9593,
+          "request_Nm": 274.0,
+          "actual_Nm": 276.0,
+          "error_Nm": 2.0,
+          "rod_mm": 0.234375,
+          "rod_mm_age_s": 0.0019,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0019,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0019,
+          "DI_vehicleSpeed": 0.3200000000000003,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0205,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": 0.6944600000000001,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0012
+        },
+        "last": {
+          "time_s": 98.8592,
+          "request_Nm": 312.0,
+          "actual_Nm": 378.0,
+          "error_Nm": 66.0,
+          "rod_mm": 3.90625,
+          "rod_mm_age_s": 0.0207,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0207,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0207,
+          "DI_vehicleSpeed": 0.7199999999999989,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0009,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0202,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": 0.9375480000000002,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0009
+        },
+        "request_sign_counts": {
+          "positive": 10,
+          "zero": 0,
+          "negative": 0
+        },
+        "mean_error_Nm": 29.6,
+        "mae_Nm": 30.0,
+        "max_error_sample": {
+          "time_s": 98.7592,
+          "request_Nm": 344.0,
+          "actual_Nm": 412.0,
+          "error_Nm": 68.0,
+          "rod_mm": 3.921875,
+          "rod_mm_age_s": 0.0022,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0022,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0022,
+          "DI_vehicleSpeed": 0.9600000000000009,
+          "DI_vehicleSpeed_age_s": 0.0204,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.001,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0202,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0002,
+          "derived_packPower_kW": 1.0070830000000002,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.001
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          274.0,
+          382.0
+        ],
+        "actual_Nm_range": [
+          276.0,
+          426.0
+        ],
+        "rod_mm_range": [
+          0.234375,
+          3.921875
+        ],
+        "DI_vehicleSpeed_range": [
+          0.3200000000000003,
+          1.1199999999999974
+        ],
+        "derived_packPower_kW_range": [
+          0.6944600000000001,
+          1.2154449999999999
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 97.9593,
+            "request_Nm": 274.0,
+            "actual_Nm": 276.0
+          }
+        ]
+      }
+    },
+    {
+      "episode": {
+        "start_s": 98.0368,
+        "end_s": 99.9574,
+        "peak_mm": 3.9375,
+        "peak_s": 98.6767,
+        "peak_raw": "db 6a 8a 47 00"
+      },
+      "pre_1s": {
+        "start_s": 97.0368,
+        "end_s": 98.0368,
+        "n": 10,
+        "first": {
+          "time_s": 97.0581,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 2.609375,
+          "rod_mm_age_s": 0.0214,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0214,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0214,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0008,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0191,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0005,
+          "derived_packPower_kW": 0.45154200000000005,
+          "derived_packPower_kW_age_s": 0.0045,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0008
+        },
+        "last": {
+          "time_s": 97.9593,
+          "request_Nm": 274.0,
+          "actual_Nm": 276.0,
+          "error_Nm": 2.0,
+          "rod_mm": 0.234375,
+          "rod_mm_age_s": 0.0019,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0019,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0019,
+          "DI_vehicleSpeed": 0.3200000000000003,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0205,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": 0.6944600000000001,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0012
+        },
+        "request_sign_counts": {
+          "positive": 5,
+          "zero": 5,
+          "negative": 0
+        },
+        "mean_error_Nm": 5.0,
+        "mae_Nm": 9.8,
+        "max_error_sample": {
+          "time_s": 97.7592,
+          "request_Nm": 118.0,
+          "actual_Nm": 172.0,
+          "error_Nm": 54.0,
+          "rod_mm": 0.28125,
+          "rod_mm_age_s": 0.0023,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0023,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0023,
+          "DI_vehicleSpeed": 0.3200000000000003,
+          "DI_vehicleSpeed_age_s": 0.0002,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0009,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0207,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0004,
+          "derived_packPower_kW": 0.590308,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0009
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          0.0,
+          274.0
+        ],
+        "actual_Nm_range": [
+          0.0,
+          276.0
+        ],
+        "rod_mm_range": [
+          0.234375,
+          2.703125
+        ],
+        "DI_vehicleSpeed_range": [
+          0.0,
+          0.3200000000000003
+        ],
+        "derived_packPower_kW_range": [
+          0.45129500000000006,
+          0.6944600000000001
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 97.0581,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          },
+          {
+            "time_s": 97.5593,
+            "request_Nm": 6.0,
+            "actual_Nm": 8.0
+          }
+        ]
+      },
+      "during": {
+        "start_s": 98.0368,
+        "end_s": 99.9574,
+        "n": 19,
+        "first": {
+          "time_s": 98.0593,
+          "request_Nm": 342.0,
+          "actual_Nm": 368.0,
+          "error_Nm": 26.0,
+          "rod_mm": 0.40625,
+          "rod_mm_age_s": 0.0225,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0225,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0225,
+          "DI_vehicleSpeed": 0.480000000000004,
+          "DI_vehicleSpeed_age_s": 0.0203,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.001,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0205,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0003,
+          "derived_packPower_kW": 0.8331840000000001,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.001
+        },
+        "last": {
+          "time_s": 99.8592,
+          "request_Nm": 256.0,
+          "actual_Nm": 260.0,
+          "error_Nm": 4.0,
+          "rod_mm": 1.84375,
+          "rod_mm_age_s": 0.0223,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0223,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0223,
+          "DI_vehicleSpeed": 0.240000000000002,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0013,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0086,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0008,
+          "derived_packPower_kW": 0.659661,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0013
+        },
+        "request_sign_counts": {
+          "positive": 19,
+          "zero": 0,
+          "negative": 0
+        },
+        "mean_error_Nm": 30.31578947368421,
+        "mae_Nm": 35.36842105263158,
+        "max_error_sample": {
+          "time_s": 98.7592,
+          "request_Nm": 344.0,
+          "actual_Nm": 412.0,
+          "error_Nm": 68.0,
+          "rod_mm": 3.921875,
+          "rod_mm_age_s": 0.0022,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0022,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0022,
+          "DI_vehicleSpeed": 0.9600000000000009,
+          "DI_vehicleSpeed_age_s": 0.0204,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.001,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0202,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0002,
+          "derived_packPower_kW": 1.0070830000000002,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.001
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          62.0,
+          382.0
+        ],
+        "actual_Nm_range": [
+          64.0,
+          426.0
+        ],
+        "rod_mm_range": [
+          0.40625,
+          3.921875
+        ],
+        "DI_vehicleSpeed_range": [
+          -0.1599999999999966,
+          1.1199999999999974
+        ],
+        "derived_packPower_kW_range": [
+          0.5206949999999999,
+          1.2154449999999999
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 98.0593,
+            "request_Nm": 342.0,
+            "actual_Nm": 368.0
+          }
+        ]
+      },
+      "first_1s": {
+        "start_s": 98.0368,
+        "end_s": 99.0368,
+        "n": 10,
+        "first": {
+          "time_s": 98.0593,
+          "request_Nm": 342.0,
+          "actual_Nm": 368.0,
+          "error_Nm": 26.0,
+          "rod_mm": 0.40625,
+          "rod_mm_age_s": 0.0225,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0225,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0225,
+          "DI_vehicleSpeed": 0.480000000000004,
+          "DI_vehicleSpeed_age_s": 0.0203,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.001,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0205,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0003,
+          "derived_packPower_kW": 0.8331840000000001,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.001
+        },
+        "last": {
+          "time_s": 98.9595,
+          "request_Nm": 274.0,
+          "actual_Nm": 334.0,
+          "error_Nm": 60.0,
+          "rod_mm": 3.90625,
+          "rod_mm_age_s": 0.0026,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0026,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0026,
+          "DI_vehicleSpeed": 0.5600000000000023,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.001,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0205,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0008,
+          "derived_packPower_kW": 0.7985140000000002,
+          "derived_packPower_kW_age_s": 0.0059,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.001
+        },
+        "request_sign_counts": {
+          "positive": 10,
+          "zero": 0,
+          "negative": 0
+        },
+        "mean_error_Nm": 35.4,
+        "mae_Nm": 35.8,
+        "max_error_sample": {
+          "time_s": 98.7592,
+          "request_Nm": 344.0,
+          "actual_Nm": 412.0,
+          "error_Nm": 68.0,
+          "rod_mm": 3.921875,
+          "rod_mm_age_s": 0.0022,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0022,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0022,
+          "DI_vehicleSpeed": 0.9600000000000009,
+          "DI_vehicleSpeed_age_s": 0.0204,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.001,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0202,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0002,
+          "derived_packPower_kW": 1.0070830000000002,
+          "derived_packPower_kW_age_s": 0.0056,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.001
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          274.0,
+          382.0
+        ],
+        "actual_Nm_range": [
+          334.0,
+          426.0
+        ],
+        "rod_mm_range": [
+          0.40625,
+          3.921875
+        ],
+        "DI_vehicleSpeed_range": [
+          0.480000000000004,
+          1.1199999999999974
+        ],
+        "derived_packPower_kW_range": [
+          0.7985140000000002,
+          1.2154449999999999
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 98.0593,
+            "request_Nm": 342.0,
+            "actual_Nm": 368.0
+          }
+        ]
+      },
+      "post_1s": {
+        "start_s": 99.9574,
+        "end_s": 100.9574,
+        "n": 10,
+        "first": {
+          "time_s": 99.959,
+          "request_Nm": 332.0,
+          "actual_Nm": 330.0,
+          "error_Nm": -2.0,
+          "rod_mm": 0.4375,
+          "rod_mm_age_s": 0.0016,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0016,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0016,
+          "DI_vehicleSpeed": 0.3200000000000003,
+          "DI_vehicleSpeed_age_s": 0.0202,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0009,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.02,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0002,
+          "derived_packPower_kW": 0.729456,
+          "derived_packPower_kW_age_s": 0.0054,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0009
+        },
+        "last": {
+          "time_s": 100.8591,
+          "request_Nm": 340.0,
+          "actual_Nm": 360.0,
+          "error_Nm": 20.0,
+          "rod_mm": 0.015625,
+          "rod_mm_age_s": 0.0208,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0208,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0208,
+          "DI_vehicleSpeed": 1.759999999999998,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.001,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0203,
+          "DI_elecPower": 0.5,
+          "DI_elecPower_age_s": 0.0007,
+          "derived_packPower_kW": 1.1808200000000002,
+          "derived_packPower_kW_age_s": 0.0055,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.001
+        },
+        "request_sign_counts": {
+          "positive": 10,
+          "zero": 0,
+          "negative": 0
+        },
+        "mean_error_Nm": 7.4,
+        "mae_Nm": 7.8,
+        "max_error_sample": {
+          "time_s": 100.7591,
+          "request_Nm": 348.0,
+          "actual_Nm": 370.0,
+          "error_Nm": 22.0,
+          "rod_mm": 0.015625,
+          "rod_mm_age_s": 0.0022,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0022,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0022,
+          "DI_vehicleSpeed": 1.6000000000000014,
+          "DI_vehicleSpeed_age_s": 0.0203,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0007,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.02,
+          "DI_elecPower": 1.0,
+          "DI_elecPower_age_s": 0.0003,
+          "derived_packPower_kW": 1.21527,
+          "derived_packPower_kW_age_s": 0.0055,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0007
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          332.0,
+          388.0
+        ],
+        "actual_Nm_range": [
+          330.0,
+          396.0
+        ],
+        "rod_mm_range": [
+          0.015625,
+          0.4375
+        ],
+        "DI_vehicleSpeed_range": [
+          0.3200000000000003,
+          1.759999999999998
+        ],
+        "derived_packPower_kW_range": [
+          0.729456,
+          1.21527
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 99.959,
+            "request_Nm": 332.0,
+            "actual_Nm": 330.0
+          }
+        ]
+      }
+    },
+    {
+      "episode": {
+        "start_s": 148.4381,
+        "end_s": 152.8782,
+        "peak_mm": 6.671875,
+        "peak_s": 152.1983,
+        "peak_raw": "cb 64 6a 5d 00"
+      },
+      "pre_1s": {
+        "start_s": 147.4381,
+        "end_s": 148.4381,
+        "n": 10,
+        "first": {
+          "time_s": 147.4554,
+          "request_Nm": -36.0,
+          "actual_Nm": -38.0,
+          "error_Nm": -2.0,
+          "rod_mm": 0.015625,
+          "rod_mm_age_s": 0.0174,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0174,
+          "internal_state": "NO_MODE_ACTIVE",
+          "internal_state_age_s": 0.0174,
+          "DI_vehicleSpeed": 8.880000000000003,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0136,
+          "DI_elecPower": -0.5,
+          "DI_elecPower_age_s": 0.0009,
+          "derived_packPower_kW": 0.20836200000000002,
+          "derived_packPower_kW_age_s": 0.0007,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0012
+        },
+        "last": {
+          "time_s": 148.3558,
+          "request_Nm": -20.0,
+          "actual_Nm": -20.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.15625,
+          "rod_mm_age_s": 0.0375,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0375,
+          "internal_state": "TRANSITION_TO_IDLE",
+          "internal_state_age_s": 0.0375,
+          "DI_vehicleSpeed": 8.480000000000004,
+          "DI_vehicleSpeed_age_s": 0.0199,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0139,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0002,
+          "derived_packPower_kW": 0.312732,
+          "derived_packPower_kW_age_s": 0.0009,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 0,
+          "negative": 10
+        },
+        "mean_error_Nm": -0.2,
+        "mae_Nm": 0.2,
+        "max_error_sample": {
+          "time_s": 147.4554,
+          "request_Nm": -36.0,
+          "actual_Nm": -38.0,
+          "error_Nm": -2.0,
+          "rod_mm": 0.015625,
+          "rod_mm_age_s": 0.0174,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0174,
+          "internal_state": "NO_MODE_ACTIVE",
+          "internal_state_age_s": 0.0174,
+          "DI_vehicleSpeed": 8.880000000000003,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0012,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0136,
+          "DI_elecPower": -0.5,
+          "DI_elecPower_age_s": 0.0009,
+          "derived_packPower_kW": 0.20836200000000002,
+          "derived_packPower_kW_age_s": 0.0007,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0012
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          -36.0,
+          -20.0
+        ],
+        "actual_Nm_range": [
+          -38.0,
+          -20.0
+        ],
+        "rod_mm_range": [
+          0.015625,
+          0.15625
+        ],
+        "DI_vehicleSpeed_range": [
+          8.480000000000004,
+          8.880000000000003
+        ],
+        "derived_packPower_kW_range": [
+          0.20836200000000002,
+          0.312732
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 147.4554,
+            "request_Nm": -36.0,
+            "actual_Nm": -38.0
+          }
+        ]
+      },
+      "during": {
+        "start_s": 148.4381,
+        "end_s": 152.8782,
+        "n": 45,
+        "first": {
+          "time_s": 148.4558,
+          "request_Nm": -22.0,
+          "actual_Nm": -22.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.484375,
+          "rod_mm_age_s": 0.0177,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0177,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0177,
+          "DI_vehicleSpeed": 8.480000000000004,
+          "DI_vehicleSpeed_age_s": 0.0201,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0139,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0002,
+          "derived_packPower_kW": 0.27788000000000007,
+          "derived_packPower_kW_age_s": 0.0009,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "last": {
+          "time_s": 152.8539,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.890625,
+          "rod_mm_age_s": 0.0157,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0157,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0157,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0008,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0117,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0005,
+          "derived_packPower_kW": 0.38199700000000003,
+          "derived_packPower_kW_age_s": 0.0089,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0008
+        },
+        "request_sign_counts": {
+          "positive": 4,
+          "zero": 33,
+          "negative": 8
+        },
+        "mean_error_Nm": 0.0,
+        "mae_Nm": 0.35555555555555557,
+        "max_error_sample": {
+          "time_s": 149.3554,
+          "request_Nm": 14.0,
+          "actual_Nm": 6.0,
+          "error_Nm": -8.0,
+          "rod_mm": 5.578125,
+          "rod_mm_age_s": 0.0373,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0373,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0373,
+          "DI_vehicleSpeed": 7.520000000000003,
+          "DI_vehicleSpeed_age_s": 0.0195,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0134,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0005,
+          "derived_packPower_kW": 0.520995,
+          "derived_packPower_kW_age_s": 0.0007,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          -22.0,
+          18.0
+        ],
+        "actual_Nm_range": [
+          -22.0,
+          22.0
+        ],
+        "rod_mm_range": [
+          0.484375,
+          6.671875
+        ],
+        "DI_vehicleSpeed_range": [
+          -0.1599999999999966,
+          8.480000000000004
+        ],
+        "derived_packPower_kW_range": [
+          0.27788000000000007,
+          0.729519
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 148.4558,
+            "request_Nm": -22.0,
+            "actual_Nm": -22.0
+          },
+          {
+            "time_s": 149.2556,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          },
+          {
+            "time_s": 149.3554,
+            "request_Nm": 14.0,
+            "actual_Nm": 6.0
+          },
+          {
+            "time_s": 149.7555,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          }
+        ]
+      },
+      "first_1s": {
+        "start_s": 148.4381,
+        "end_s": 149.4381,
+        "n": 10,
+        "first": {
+          "time_s": 148.4558,
+          "request_Nm": -22.0,
+          "actual_Nm": -22.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.484375,
+          "rod_mm_age_s": 0.0177,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0177,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0177,
+          "DI_vehicleSpeed": 8.480000000000004,
+          "DI_vehicleSpeed_age_s": 0.0201,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0139,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0002,
+          "derived_packPower_kW": 0.27788000000000007,
+          "derived_packPower_kW_age_s": 0.0009,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "last": {
+          "time_s": 149.3554,
+          "request_Nm": 14.0,
+          "actual_Nm": 6.0,
+          "error_Nm": -8.0,
+          "rod_mm": 5.578125,
+          "rod_mm_age_s": 0.0373,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0373,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0373,
+          "DI_vehicleSpeed": 7.520000000000003,
+          "DI_vehicleSpeed_age_s": 0.0195,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0134,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0005,
+          "derived_packPower_kW": 0.520995,
+          "derived_packPower_kW_age_s": 0.0007,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "request_sign_counts": {
+          "positive": 1,
+          "zero": 1,
+          "negative": 8
+        },
+        "mean_error_Nm": -0.8,
+        "mae_Nm": 0.8,
+        "max_error_sample": {
+          "time_s": 149.3554,
+          "request_Nm": 14.0,
+          "actual_Nm": 6.0,
+          "error_Nm": -8.0,
+          "rod_mm": 5.578125,
+          "rod_mm_age_s": 0.0373,
+          "apply": "DRIVER_APPLYING_BRAKES",
+          "apply_age_s": 0.0373,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0373,
+          "DI_vehicleSpeed": 7.520000000000003,
+          "DI_vehicleSpeed_age_s": 0.0195,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0011,
+          "VCLEFT_brakeSwitchPressed": 1.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0134,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0005,
+          "derived_packPower_kW": 0.520995,
+          "derived_packPower_kW_age_s": 0.0007,
+          "DI_gear": "D",
+          "DI_gear_age_s": 0.0011
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          -22.0,
+          14.0
+        ],
+        "actual_Nm_range": [
+          -22.0,
+          6.0
+        ],
+        "rod_mm_range": [
+          0.484375,
+          5.578125
+        ],
+        "DI_vehicleSpeed_range": [
+          7.520000000000003,
+          8.480000000000004
+        ],
+        "derived_packPower_kW_range": [
+          0.27788000000000007,
+          0.520995
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 148.4558,
+            "request_Nm": -22.0,
+            "actual_Nm": -22.0
+          },
+          {
+            "time_s": 149.2556,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          },
+          {
+            "time_s": 149.3554,
+            "request_Nm": 14.0,
+            "actual_Nm": 6.0
+          }
+        ]
+      },
+      "post_1s": {
+        "start_s": 152.8782,
+        "end_s": 153.8782,
+        "n": 10,
+        "first": {
+          "time_s": 152.9539,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.34375,
+          "rod_mm_age_s": 0.0357,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0357,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0357,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0008,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0117,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0006,
+          "derived_packPower_kW": 0.41668800000000006,
+          "derived_packPower_kW_age_s": 0.009,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0008
+        },
+        "last": {
+          "time_s": 153.8539,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.015625,
+          "rod_mm_age_s": 0.0156,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0156,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0156,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0004,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0008,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0116,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0006,
+          "derived_packPower_kW": 0.41691600000000006,
+          "derived_packPower_kW_age_s": 0.009,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0008
+        },
+        "request_sign_counts": {
+          "positive": 0,
+          "zero": 10,
+          "negative": 0
+        },
+        "mean_error_Nm": 0.0,
+        "mae_Nm": 0.0,
+        "max_error_sample": {
+          "time_s": 152.9539,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0,
+          "error_Nm": 0.0,
+          "rod_mm": 0.34375,
+          "rod_mm_age_s": 0.0357,
+          "apply": "BRAKES_NOT_APPLIED",
+          "apply_age_s": 0.0357,
+          "internal_state": "LOCAL_BRAKE_REQUEST",
+          "internal_state_age_s": 0.0357,
+          "DI_vehicleSpeed": 0.0,
+          "DI_vehicleSpeed_age_s": 0.0003,
+          "DI_accelPedalPos": 0.0,
+          "DI_accelPedalPos_age_s": 0.0008,
+          "VCLEFT_brakeSwitchPressed": 0.0,
+          "VCLEFT_brakeSwitchPressed_age_s": 0.0117,
+          "DI_elecPower": 0.0,
+          "DI_elecPower_age_s": 0.0006,
+          "derived_packPower_kW": 0.41668800000000006,
+          "derived_packPower_kW_age_s": 0.009,
+          "DI_gear": "P",
+          "DI_gear_age_s": 0.0008
+        },
+        "sign_disagreement_n": 0,
+        "request_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "actual_Nm_range": [
+          0.0,
+          0.0
+        ],
+        "rod_mm_range": [
+          0.0,
+          0.34375
+        ],
+        "DI_vehicleSpeed_range": [
+          0.0,
+          0.0
+        ],
+        "derived_packPower_kW_range": [
+          0.382008,
+          0.41691600000000006
+        ],
+        "request_sign_edges": [
+          {
+            "time_s": 152.9539,
+            "request_Nm": 0.0,
+            "actual_Nm": 0.0
+          }
+        ]
+      }
+    }
+  ],
+  "moving_windows": {
+    "first_stop_moving": {
+      "start_s": 75.0361,
+      "end_s": 78.5391,
+      "n": 35,
+      "first": {
+        "time_s": 75.0608,
+        "request_Nm": -510.0,
+        "actual_Nm": -510.0,
+        "error_Nm": 0.0,
+        "rod_mm": 0.59375,
+        "rod_mm_age_s": 0.0247,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0247,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0247,
+        "DI_vehicleSpeed": 20.0,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0011,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0237,
+        "DI_elecPower": -8.5,
+        "DI_elecPower_age_s": 0.0007,
+        "derived_packPower_kW": -7.746246000000001,
+        "derived_packPower_kW_age_s": 0.0075,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0011
+      },
+      "last": {
+        "time_s": 78.4594,
+        "request_Nm": 0.0,
+        "actual_Nm": 0.0,
+        "error_Nm": 0.0,
+        "rod_mm": 6.046875,
+        "rod_mm_age_s": 0.0231,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0231,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0231,
+        "DI_vehicleSpeed": 1.2800000000000011,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0009,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0222,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0005,
+        "derived_packPower_kW": 0.4516200000000001,
+        "derived_packPower_kW_age_s": 0.0062,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0009
+      },
+      "request_sign_counts": {
+        "positive": 0,
+        "zero": 11,
+        "negative": 24
+      },
+      "mean_error_Nm": -1.542857142857143,
+      "mae_Nm": 2.5714285714285716,
+      "max_error_sample": {
+        "time_s": 76.0601,
+        "request_Nm": -270.0,
+        "actual_Nm": -292.0,
+        "error_Nm": -22.0,
+        "rod_mm": 5.046875,
+        "rod_mm_age_s": 0.024,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.024,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.024,
+        "DI_vehicleSpeed": 14.399999999999999,
+        "DI_vehicleSpeed_age_s": 0.0005,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0012,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0232,
+        "DI_elecPower": -3.5,
+        "DI_elecPower_age_s": 0.0009,
+        "derived_packPower_kW": -2.748805,
+        "derived_packPower_kW_age_s": 0.007,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0012
+      },
+      "sign_disagreement_n": 1,
+      "request_Nm_range": [
+        -510.0,
+        0.0
+      ],
+      "actual_Nm_range": [
+        -510.0,
+        0.0
+      ],
+      "rod_mm_range": [
+        0.59375,
+        6.0625
+      ],
+      "DI_vehicleSpeed_range": [
+        1.2800000000000011,
+        20.0
+      ],
+      "derived_packPower_kW_range": [
+        -7.746246000000001,
+        0.555616
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 75.0608,
+          "request_Nm": -510.0,
+          "actual_Nm": -510.0
+        },
+        {
+          "time_s": 77.4604,
+          "request_Nm": 0.0,
+          "actual_Nm": -6.0
+        }
+      ]
+    },
+    "creep_reapply": {
+      "start_s": 98.0368,
+      "end_s": 99.9574,
+      "n": 19,
+      "first": {
+        "time_s": 98.0593,
+        "request_Nm": 342.0,
+        "actual_Nm": 368.0,
+        "error_Nm": 26.0,
+        "rod_mm": 0.40625,
+        "rod_mm_age_s": 0.0225,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0225,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0225,
+        "DI_vehicleSpeed": 0.480000000000004,
+        "DI_vehicleSpeed_age_s": 0.0203,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.001,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0205,
+        "DI_elecPower": 0.5,
+        "DI_elecPower_age_s": 0.0003,
+        "derived_packPower_kW": 0.8331840000000001,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.001
+      },
+      "last": {
+        "time_s": 99.8592,
+        "request_Nm": 256.0,
+        "actual_Nm": 260.0,
+        "error_Nm": 4.0,
+        "rod_mm": 1.84375,
+        "rod_mm_age_s": 0.0223,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0223,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0223,
+        "DI_vehicleSpeed": 0.240000000000002,
+        "DI_vehicleSpeed_age_s": 0.0003,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0013,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0086,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0008,
+        "derived_packPower_kW": 0.659661,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0013
+      },
+      "request_sign_counts": {
+        "positive": 19,
+        "zero": 0,
+        "negative": 0
+      },
+      "mean_error_Nm": 30.31578947368421,
+      "mae_Nm": 35.36842105263158,
+      "max_error_sample": {
+        "time_s": 98.7592,
+        "request_Nm": 344.0,
+        "actual_Nm": 412.0,
+        "error_Nm": 68.0,
+        "rod_mm": 3.921875,
+        "rod_mm_age_s": 0.0022,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0022,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0022,
+        "DI_vehicleSpeed": 0.9600000000000009,
+        "DI_vehicleSpeed_age_s": 0.0204,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.001,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0202,
+        "DI_elecPower": 0.5,
+        "DI_elecPower_age_s": 0.0002,
+        "derived_packPower_kW": 1.0070830000000002,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.001
+      },
+      "sign_disagreement_n": 0,
+      "request_Nm_range": [
+        62.0,
+        382.0
+      ],
+      "actual_Nm_range": [
+        64.0,
+        426.0
+      ],
+      "rod_mm_range": [
+        0.40625,
+        3.921875
+      ],
+      "DI_vehicleSpeed_range": [
+        -0.1599999999999966,
+        1.1199999999999974
+      ],
+      "derived_packPower_kW_range": [
+        0.5206949999999999,
+        1.2154449999999999
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 98.0593,
+          "request_Nm": 342.0,
+          "actual_Nm": 368.0
+        }
+      ]
+    },
+    "second_stop_moving": {
+      "start_s": 148.4381,
+      "end_s": 150.434,
+      "n": 20,
+      "first": {
+        "time_s": 148.4558,
+        "request_Nm": -22.0,
+        "actual_Nm": -22.0,
+        "error_Nm": 0.0,
+        "rod_mm": 0.484375,
+        "rod_mm_age_s": 0.0177,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0177,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0177,
+        "DI_vehicleSpeed": 8.480000000000004,
+        "DI_vehicleSpeed_age_s": 0.0201,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0011,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0139,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0002,
+        "derived_packPower_kW": 0.27788000000000007,
+        "derived_packPower_kW_age_s": 0.0009,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0011
+      },
+      "last": {
+        "time_s": 150.3541,
+        "request_Nm": 0.0,
+        "actual_Nm": 0.0,
+        "error_Nm": 0.0,
+        "rod_mm": 5.515625,
+        "rod_mm_age_s": 0.0359,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0359,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0359,
+        "DI_vehicleSpeed": 0.9600000000000009,
+        "DI_vehicleSpeed_age_s": 0.0003,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0008,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.012,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0005,
+        "derived_packPower_kW": 0.451698,
+        "derived_packPower_kW_age_s": 0.0093,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0008
+      },
+      "request_sign_counts": {
+        "positive": 4,
+        "zero": 8,
+        "negative": 8
+      },
+      "mean_error_Nm": 0.0,
+      "mae_Nm": 0.8,
+      "max_error_sample": {
+        "time_s": 149.3554,
+        "request_Nm": 14.0,
+        "actual_Nm": 6.0,
+        "error_Nm": -8.0,
+        "rod_mm": 5.578125,
+        "rod_mm_age_s": 0.0373,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0373,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0373,
+        "DI_vehicleSpeed": 7.520000000000003,
+        "DI_vehicleSpeed_age_s": 0.0195,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0011,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0134,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0005,
+        "derived_packPower_kW": 0.520995,
+        "derived_packPower_kW_age_s": 0.0007,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0011
+      },
+      "sign_disagreement_n": 0,
+      "request_Nm_range": [
+        -22.0,
+        18.0
+      ],
+      "actual_Nm_range": [
+        -22.0,
+        22.0
+      ],
+      "rod_mm_range": [
+        0.484375,
+        5.578125
+      ],
+      "DI_vehicleSpeed_range": [
+        0.9600000000000009,
+        8.480000000000004
+      ],
+      "derived_packPower_kW_range": [
+        0.27788000000000007,
+        0.729519
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 148.4558,
+          "request_Nm": -22.0,
+          "actual_Nm": -22.0
+        },
+        {
+          "time_s": 149.2556,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0
+        },
+        {
+          "time_s": 149.3554,
+          "request_Nm": 14.0,
+          "actual_Nm": 6.0
+        },
+        {
+          "time_s": 149.7555,
+          "request_Nm": 0.0,
+          "actual_Nm": 0.0
+        }
+      ]
+    }
+  },
+  "transient_phases": {
+    "request_peak_to_feedback_peak": {
+      "start_s": 98.2595,
+      "end_s": 98.6593,
+      "n": 4,
+      "first": {
+        "time_s": 98.2595,
+        "request_Nm": 382.0,
+        "actual_Nm": 388.0,
+        "error_Nm": 6.0,
+        "rod_mm": 0.640625,
+        "rod_mm_age_s": 0.0227,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0227,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0227,
+        "DI_vehicleSpeed": 0.7199999999999989,
+        "DI_vehicleSpeed_age_s": 0.0205,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.001,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.021,
+        "DI_elecPower": 0.5,
+        "DI_elecPower_age_s": 0.0003,
+        "derived_packPower_kW": 0.90298,
+        "derived_packPower_kW_age_s": 0.0059,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.001
+      },
+      "last": {
+        "time_s": 98.5592,
+        "request_Nm": 368.0,
+        "actual_Nm": 400.0,
+        "error_Nm": 32.0,
+        "rod_mm": 3.6875,
+        "rod_mm_age_s": 0.0023,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0023,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0023,
+        "DI_vehicleSpeed": 1.1199999999999974,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0009,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0204,
+        "DI_elecPower": 0.5,
+        "DI_elecPower_age_s": 0.0004,
+        "derived_packPower_kW": 1.2154449999999999,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0009
+      },
+      "request_sign_counts": {
+        "positive": 4,
+        "zero": 0,
+        "negative": 0
+      },
+      "mean_error_Nm": 13.5,
+      "mae_Nm": 14.5,
+      "max_error_sample": {
+        "time_s": 98.5592,
+        "request_Nm": 368.0,
+        "actual_Nm": 400.0,
+        "error_Nm": 32.0,
+        "rod_mm": 3.6875,
+        "rod_mm_age_s": 0.0023,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0023,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0023,
+        "DI_vehicleSpeed": 1.1199999999999974,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0009,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0204,
+        "DI_elecPower": 0.5,
+        "DI_elecPower_age_s": 0.0004,
+        "derived_packPower_kW": 1.2154449999999999,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0009
+      },
+      "sign_disagreement_n": 0,
+      "request_Nm_range": [
+        368.0,
+        382.0
+      ],
+      "actual_Nm_range": [
+        378.0,
+        400.0
+      ],
+      "rod_mm_range": [
+        0.640625,
+        3.6875
+      ],
+      "DI_vehicleSpeed_range": [
+        0.7199999999999989,
+        1.1199999999999974
+      ],
+      "derived_packPower_kW_range": [
+        0.90298,
+        1.2154449999999999
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 98.2595,
+          "request_Nm": 382.0,
+          "actual_Nm": 388.0
+        }
+      ]
+    },
+    "descending_request_large_positive_error": {
+      "start_s": 98.6593,
+      "end_s": 99.5592,
+      "n": 9,
+      "first": {
+        "time_s": 98.6593,
+        "request_Nm": 364.0,
+        "actual_Nm": 426.0,
+        "error_Nm": 62.0,
+        "rod_mm": 3.921875,
+        "rod_mm_age_s": 0.0225,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0225,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0225,
+        "DI_vehicleSpeed": 1.1199999999999974,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0012,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0204,
+        "DI_elecPower": 0.5,
+        "DI_elecPower_age_s": 0.0005,
+        "derived_packPower_kW": 1.110848,
+        "derived_packPower_kW_age_s": 0.0057,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0012
+      },
+      "last": {
+        "time_s": 99.4592,
+        "request_Nm": 62.0,
+        "actual_Nm": 104.0,
+        "error_Nm": 42.0,
+        "rod_mm": 3.703125,
+        "rod_mm_age_s": 0.0224,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0224,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0224,
+        "DI_vehicleSpeed": -0.1599999999999966,
+        "DI_vehicleSpeed_age_s": 0.0202,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0012,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0197,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0003,
+        "derived_packPower_kW": 0.5206949999999999,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0012
+      },
+      "request_sign_counts": {
+        "positive": 9,
+        "zero": 0,
+        "negative": 0
+      },
+      "mean_error_Nm": 57.55555555555556,
+      "mae_Nm": 57.55555555555556,
+      "max_error_sample": {
+        "time_s": 98.7592,
+        "request_Nm": 344.0,
+        "actual_Nm": 412.0,
+        "error_Nm": 68.0,
+        "rod_mm": 3.921875,
+        "rod_mm_age_s": 0.0022,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0022,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0022,
+        "DI_vehicleSpeed": 0.9600000000000009,
+        "DI_vehicleSpeed_age_s": 0.0204,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.001,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0202,
+        "DI_elecPower": 0.5,
+        "DI_elecPower_age_s": 0.0002,
+        "derived_packPower_kW": 1.0070830000000002,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.001
+      },
+      "sign_disagreement_n": 0,
+      "request_Nm_range": [
+        62.0,
+        364.0
+      ],
+      "actual_Nm_range": [
+        104.0,
+        426.0
+      ],
+      "rod_mm_range": [
+        3.703125,
+        3.921875
+      ],
+      "DI_vehicleSpeed_range": [
+        -0.1599999999999966,
+        1.1199999999999974
+      ],
+      "derived_packPower_kW_range": [
+        0.5206949999999999,
+        1.110848
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 98.6593,
+          "request_Nm": 364.0,
+          "actual_Nm": 426.0
+        }
+      ]
+    },
+    "trough_convergence_sample": {
+      "start_s": 99.5592,
+      "end_s": 99.6594,
+      "n": 1,
+      "first": {
+        "time_s": 99.5592,
+        "request_Nm": 62.0,
+        "actual_Nm": 64.0,
+        "error_Nm": 2.0,
+        "rod_mm": 3.15625,
+        "rod_mm_age_s": 0.0021,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0021,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0021,
+        "DI_vehicleSpeed": -0.0799999999999983,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.001,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0204,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0007,
+        "derived_packPower_kW": 0.52089,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.001
+      },
+      "last": {
+        "time_s": 99.5592,
+        "request_Nm": 62.0,
+        "actual_Nm": 64.0,
+        "error_Nm": 2.0,
+        "rod_mm": 3.15625,
+        "rod_mm_age_s": 0.0021,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0021,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0021,
+        "DI_vehicleSpeed": -0.0799999999999983,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.001,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0204,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0007,
+        "derived_packPower_kW": 0.52089,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.001
+      },
+      "request_sign_counts": {
+        "positive": 1,
+        "zero": 0,
+        "negative": 0
+      },
+      "mean_error_Nm": 2.0,
+      "mae_Nm": 2.0,
+      "max_error_sample": {
+        "time_s": 99.5592,
+        "request_Nm": 62.0,
+        "actual_Nm": 64.0,
+        "error_Nm": 2.0,
+        "rod_mm": 3.15625,
+        "rod_mm_age_s": 0.0021,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0021,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0021,
+        "DI_vehicleSpeed": -0.0799999999999983,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.001,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0204,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0007,
+        "derived_packPower_kW": 0.52089,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.001
+      },
+      "sign_disagreement_n": 0,
+      "request_Nm_range": [
+        62.0,
+        62.0
+      ],
+      "actual_Nm_range": [
+        64.0,
+        64.0
+      ],
+      "rod_mm_range": [
+        3.15625,
+        3.15625
+      ],
+      "DI_vehicleSpeed_range": [
+        -0.0799999999999983,
+        -0.0799999999999983
+      ],
+      "derived_packPower_kW_range": [
+        0.52089,
+        0.52089
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 99.5592,
+          "request_Nm": 62.0,
+          "actual_Nm": 64.0
+        }
+      ]
+    },
+    "release_request_recovery": {
+      "start_s": 99.6594,
+      "end_s": 99.959,
+      "n": 3,
+      "first": {
+        "time_s": 99.6594,
+        "request_Nm": 110.0,
+        "actual_Nm": 90.0,
+        "error_Nm": -20.0,
+        "rod_mm": 3.09375,
+        "rod_mm_age_s": 0.0226,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0226,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0226,
+        "DI_vehicleSpeed": 0.0,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0009,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0204,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0007,
+        "derived_packPower_kW": 0.5208149999999999,
+        "derived_packPower_kW_age_s": 0.0058,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0009
+      },
+      "last": {
+        "time_s": 99.8592,
+        "request_Nm": 256.0,
+        "actual_Nm": 260.0,
+        "error_Nm": 4.0,
+        "rod_mm": 1.84375,
+        "rod_mm_age_s": 0.0223,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0223,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0223,
+        "DI_vehicleSpeed": 0.240000000000002,
+        "DI_vehicleSpeed_age_s": 0.0003,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0013,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0086,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0008,
+        "derived_packPower_kW": 0.659661,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0013
+      },
+      "request_sign_counts": {
+        "positive": 3,
+        "zero": 0,
+        "negative": 0
+      },
+      "mean_error_Nm": -14.0,
+      "mae_Nm": 16.666666666666668,
+      "max_error_sample": {
+        "time_s": 99.7592,
+        "request_Nm": 178.0,
+        "actual_Nm": 152.0,
+        "error_Nm": -26.0,
+        "rod_mm": 2.78125,
+        "rod_mm_age_s": 0.0016,
+        "apply": "DRIVER_APPLYING_BRAKES",
+        "apply_age_s": 0.0016,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0016,
+        "DI_vehicleSpeed": 0.1600000000000037,
+        "DI_vehicleSpeed_age_s": 0.0004,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0012,
+        "VCLEFT_brakeSwitchPressed": 1.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0204,
+        "DI_elecPower": 0.0,
+        "DI_elecPower_age_s": 0.0007,
+        "derived_packPower_kW": 0.5904780000000001,
+        "derived_packPower_kW_age_s": 0.0056,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0012
+      },
+      "sign_disagreement_n": 0,
+      "request_Nm_range": [
+        110.0,
+        256.0
+      ],
+      "actual_Nm_range": [
+        90.0,
+        260.0
+      ],
+      "rod_mm_range": [
+        1.84375,
+        3.09375
+      ],
+      "DI_vehicleSpeed_range": [
+        0.0,
+        0.240000000000002
+      ],
+      "derived_packPower_kW_range": [
+        0.5208149999999999,
+        0.659661
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 99.6594,
+          "request_Nm": 110.0,
+          "actual_Nm": 90.0
+        }
+      ]
+    },
+    "post_release_low_speed_drive": {
+      "start_s": 99.959,
+      "end_s": 102.0,
+      "n": 21,
+      "first": {
+        "time_s": 99.959,
+        "request_Nm": 332.0,
+        "actual_Nm": 330.0,
+        "error_Nm": -2.0,
+        "rod_mm": 0.4375,
+        "rod_mm_age_s": 0.0016,
+        "apply": "BRAKES_NOT_APPLIED",
+        "apply_age_s": 0.0016,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0016,
+        "DI_vehicleSpeed": 0.3200000000000003,
+        "DI_vehicleSpeed_age_s": 0.0202,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0009,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.02,
+        "DI_elecPower": 0.5,
+        "DI_elecPower_age_s": 0.0002,
+        "derived_packPower_kW": 0.729456,
+        "derived_packPower_kW_age_s": 0.0054,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0009
+      },
+      "last": {
+        "time_s": 101.9591,
+        "request_Nm": 252.0,
+        "actual_Nm": 264.0,
+        "error_Nm": 12.0,
+        "rod_mm": 0.015625,
+        "rod_mm_age_s": 0.002,
+        "apply": "BRAKES_NOT_APPLIED",
+        "apply_age_s": 0.002,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.002,
+        "DI_vehicleSpeed": 3.280000000000001,
+        "DI_vehicleSpeed_age_s": 0.0003,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.001,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0198,
+        "DI_elecPower": 1.0,
+        "DI_elecPower_age_s": 0.0005,
+        "derived_packPower_kW": 1.3540800000000002,
+        "derived_packPower_kW_age_s": 0.0054,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.001
+      },
+      "request_sign_counts": {
+        "positive": 21,
+        "zero": 0,
+        "negative": 0
+      },
+      "mean_error_Nm": 10.19047619047619,
+      "mae_Nm": 10.380952380952381,
+      "max_error_sample": {
+        "time_s": 100.7591,
+        "request_Nm": 348.0,
+        "actual_Nm": 370.0,
+        "error_Nm": 22.0,
+        "rod_mm": 0.015625,
+        "rod_mm_age_s": 0.0022,
+        "apply": "BRAKES_NOT_APPLIED",
+        "apply_age_s": 0.0022,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0022,
+        "DI_vehicleSpeed": 1.6000000000000014,
+        "DI_vehicleSpeed_age_s": 0.0203,
+        "DI_accelPedalPos": 0.0,
+        "DI_accelPedalPos_age_s": 0.0007,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.02,
+        "DI_elecPower": 1.0,
+        "DI_elecPower_age_s": 0.0003,
+        "derived_packPower_kW": 1.21527,
+        "derived_packPower_kW_age_s": 0.0055,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0007
+      },
+      "sign_disagreement_n": 0,
+      "request_Nm_range": [
+        252.0,
+        388.0
+      ],
+      "actual_Nm_range": [
+        264.0,
+        396.0
+      ],
+      "rod_mm_range": [
+        0.015625,
+        0.4375
+      ],
+      "DI_vehicleSpeed_range": [
+        0.3200000000000003,
+        3.280000000000001
+      ],
+      "derived_packPower_kW_range": [
+        0.729456,
+        1.457862
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 99.959,
+          "request_Nm": 332.0,
+          "actual_Nm": 330.0
+        }
+      ]
+    },
+    "acceleration_run1": {
+      "start_s": 27.4225,
+      "end_s": 44.923,
+      "n": 175,
+      "first": {
+        "time_s": 27.4642,
+        "request_Nm": 108.0,
+        "actual_Nm": 108.0,
+        "error_Nm": 0.0,
+        "rod_mm": 0.015625,
+        "rod_mm_age_s": 0.0287,
+        "apply": "BRAKES_NOT_APPLIED",
+        "apply_age_s": 0.0287,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0287,
+        "DI_vehicleSpeed": 6.0,
+        "DI_vehicleSpeed_age_s": 0.0003,
+        "DI_accelPedalPos": 1.2000000000000002,
+        "DI_accelPedalPos_age_s": 0.0017,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0305,
+        "DI_elecPower": 0.5,
+        "DI_elecPower_age_s": 0.0007,
+        "derived_packPower_kW": 1.11104,
+        "derived_packPower_kW_age_s": 0.0019,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0017
+      },
+      "last": {
+        "time_s": 44.8632,
+        "request_Nm": 506.0,
+        "actual_Nm": 508.0,
+        "error_Nm": 2.0,
+        "rod_mm": -0.015625,
+        "rod_mm_age_s": 0.0281,
+        "apply": "BRAKES_NOT_APPLIED",
+        "apply_age_s": 0.0281,
+        "internal_state": "NO_MODE_ACTIVE",
+        "internal_state_age_s": 0.0281,
+        "DI_vehicleSpeed": 29.760000000000005,
+        "DI_vehicleSpeed_age_s": 0.0205,
+        "DI_accelPedalPos": 24.8,
+        "DI_accelPedalPos_age_s": 0.0012,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0282,
+        "DI_elecPower": 13.0,
+        "DI_elecPower_age_s": 0.0002,
+        "derived_packPower_kW": 13.96843,
+        "derived_packPower_kW_age_s": 0.0007,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0012
+      },
+      "request_sign_counts": {
+        "positive": 175,
+        "zero": 0,
+        "negative": 0
+      },
+      "mean_error_Nm": 0.4,
+      "mae_Nm": 2.342857142857143,
+      "max_error_sample": {
+        "time_s": 29.1632,
+        "request_Nm": 676.0,
+        "actual_Nm": 710.0,
+        "error_Nm": 34.0,
+        "rod_mm": 0.0,
+        "rod_mm_age_s": 0.0085,
+        "apply": "BRAKES_NOT_APPLIED",
+        "apply_age_s": 0.0085,
+        "internal_state": "TRANSITION_TO_IDLE",
+        "internal_state_age_s": 0.0085,
+        "DI_vehicleSpeed": 9.280000000000001,
+        "DI_vehicleSpeed_age_s": 0.0201,
+        "DI_accelPedalPos": 12.0,
+        "DI_accelPedalPos_age_s": 0.0009,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0293,
+        "DI_elecPower": 6.0,
+        "DI_elecPower_age_s": 0.0002,
+        "derived_packPower_kW": 6.750120000000001,
+        "derived_packPower_kW_age_s": 0.0007,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0009
+      },
+      "sign_disagreement_n": 0,
+      "request_Nm_range": [
+        108.0,
+        684.0
+      ],
+      "actual_Nm_range": [
+        108.0,
+        710.0
+      ],
+      "rod_mm_range": [
+        -0.015625,
+        0.015625
+      ],
+      "DI_vehicleSpeed_range": [
+        6.0,
+        29.760000000000005
+      ],
+      "derived_packPower_kW_range": [
+        1.11104,
+        14.029080000000002
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 27.4642,
+          "request_Nm": 108.0,
+          "actual_Nm": 108.0
+        }
+      ]
+    },
+    "acceleration_run2": {
+      "start_s": 102.0783,
+      "end_s": 120.1169,
+      "n": 180,
+      "first": {
+        "time_s": 102.1591,
+        "request_Nm": 260.0,
+        "actual_Nm": 258.0,
+        "error_Nm": -2.0,
+        "rod_mm": 0.015625,
+        "rod_mm_age_s": 0.0017,
+        "apply": "BRAKES_NOT_APPLIED",
+        "apply_age_s": 0.0017,
+        "internal_state": "LOCAL_BRAKE_REQUEST",
+        "internal_state_age_s": 0.0017,
+        "DI_vehicleSpeed": 3.520000000000003,
+        "DI_vehicleSpeed_age_s": 0.0002,
+        "DI_accelPedalPos": 2.8000000000000003,
+        "DI_accelPedalPos_age_s": 0.001,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0203,
+        "DI_elecPower": 1.0,
+        "DI_elecPower_age_s": 0.0005,
+        "derived_packPower_kW": 1.526976,
+        "derived_packPower_kW_age_s": 0.0054,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.001
+      },
+      "last": {
+        "time_s": 120.0566,
+        "request_Nm": 186.0,
+        "actual_Nm": 186.0,
+        "error_Nm": 0.0,
+        "rod_mm": -0.015625,
+        "rod_mm_age_s": 0.0185,
+        "apply": "BRAKES_NOT_APPLIED",
+        "apply_age_s": 0.0185,
+        "internal_state": "NO_MODE_ACTIVE",
+        "internal_state_age_s": 0.0185,
+        "DI_vehicleSpeed": 29.92,
+        "DI_vehicleSpeed_age_s": 0.0204,
+        "DI_accelPedalPos": 20.8,
+        "DI_accelPedalPos_age_s": 0.0009,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0166,
+        "DI_elecPower": 4.5,
+        "DI_elecPower_age_s": 0.0004,
+        "derived_packPower_kW": 5.324858,
+        "derived_packPower_kW_age_s": 0.0026,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0009
+      },
+      "request_sign_counts": {
+        "positive": 180,
+        "zero": 0,
+        "negative": 0
+      },
+      "mean_error_Nm": 0.4444444444444444,
+      "mae_Nm": 2.577777777777778,
+      "max_error_sample": {
+        "time_s": 109.5582,
+        "request_Nm": 524.0,
+        "actual_Nm": 558.0,
+        "error_Nm": 34.0,
+        "rod_mm": 0.0,
+        "rod_mm_age_s": 0.0386,
+        "apply": "BRAKES_NOT_APPLIED",
+        "apply_age_s": 0.0386,
+        "internal_state": "TRANSITION_TO_IDLE",
+        "internal_state_age_s": 0.0386,
+        "DI_vehicleSpeed": 18.72,
+        "DI_vehicleSpeed_age_s": 0.0199,
+        "DI_accelPedalPos": 17.6,
+        "DI_accelPedalPos_age_s": 0.0011,
+        "VCLEFT_brakeSwitchPressed": 0.0,
+        "VCLEFT_brakeSwitchPressed_age_s": 0.0189,
+        "DI_elecPower": 9.0,
+        "DI_elecPower_age_s": 0.0004,
+        "derived_packPower_kW": 9.462316000000001,
+        "derived_packPower_kW_age_s": 0.0044,
+        "DI_gear": "D",
+        "DI_gear_age_s": 0.0011
+      },
+      "sign_disagreement_n": 0,
+      "request_Nm_range": [
+        106.0,
+        554.0
+      ],
+      "actual_Nm_range": [
+        106.0,
+        558.0
+      ],
+      "rod_mm_range": [
+        -0.015625,
+        0.015625
+      ],
+      "DI_vehicleSpeed_range": [
+        3.520000000000003,
+        29.92
+      ],
+      "derived_packPower_kW_range": [
+        1.526976,
+        9.633312000000002
+      ],
+      "request_sign_edges": [
+        {
+          "time_s": 102.1591,
+          "request_Nm": 260.0,
+          "actual_Nm": 258.0
+        }
+      ]
+    }
+  }
+}

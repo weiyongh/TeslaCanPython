@@ -1,1 +1,1 @@
-cantools
+cantools>=43.0,<44.0

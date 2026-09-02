@@ -1,0 +1,14 @@
+﻿event_id,can_time_s,planned_time_s,observed_event_time,event,basis
+E00,103.157100,10–30低通信窗口(粗定位),MISSING,前序高通信结束，进入本采集域无帧窗口,103.1571至470.1237秒无CAN帧；只称本采集域低通信候选
+E01,470.123700,约30解锁(粗定位),MISSING,CAN通信恢复/网络唤醒候选,366.9666秒无帧后恢复；不确认具体人工解锁时刻
+E02,472.669700,无精确对应,MISSING,BMS接触器总状态进入CLOSING,0x212状态转换
+E03,473.323300,无精确对应,MISSING,HVIL候选OK且正接触器进入PRECHARGE,0x20A原始bit；Pack电压同期开始快速上升
+E04,474.271300,无精确对应,MISSING,BMS接触器总状态进入CLOSED,0x212；Pack电压接近约354V
+E05,474.323300,无精确对应,MISSING,正负接触器候选均进入ECONOMIZED；DCDC支持已ACTIVE,0x20A与0x224，形成内部高压/DCDC时序闭环
+E06,477.030200,无精确对应,MISSING,UI_readyForDrive候选由0变1,0x353消费/显示层交叉反馈
+E07,500.738600,约40开门(粗定位),MISSING,驾驶门闩候选进入OPENED窗口,0x102；不把CAN边沿当人工开门时刻
+E08,525.770300,约55关门(粗定位),MISSING,驾驶门闩候选回CLOSED,0x102
+E09,540.415500,约70制动(粗定位),MISSING,DI报文可见并稳定为P/STANDBY；制动字段仍INVALID,0x118；不能证明制动输入
+E10,545.267000,约75挂D(粗定位),MISSING,挡位P→D且电驱STANDBY→ENABLE,0x118同帧状态转换；支持CAN内部可驱动状态建立
+E11,555.426200,约85回P(粗定位),MISSING,挡位D→P且电驱ENABLE→STANDBY,0x118同帧状态转换
+E12,599.999600,100–130稳定窗,MISSING,P挡上电稳定窗口结束,P/STANDBY、接触器CLOSED、DCDC支持ACTIVE持续至文件结束

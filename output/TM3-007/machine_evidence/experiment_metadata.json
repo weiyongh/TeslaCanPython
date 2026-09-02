@@ -1,0 +1,11 @@
+{
+  "experiment_id": "TM3-007",
+  "vehicle": "Tesla Model 3 上海产2021款 标准续航 55 kWh 后驱",
+  "source_file": "input/can_20260831123400_TM3-007_开锁开门完整上电采集.asc",
+  "duration_s": 599.999,
+  "purpose": "正常基线数据采集",
+  "completion_status": "COMPLETE_WITH_GAPS",
+  "observed_event_time_available": false,
+  "asc_header_type": "Derived analysis input",
+  "environment_soc_software_connection": "历史现场记录缺失；未知"
+}

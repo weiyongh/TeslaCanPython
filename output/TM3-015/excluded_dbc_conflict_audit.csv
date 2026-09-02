@@ -1,0 +1,4 @@
+﻿signal,chinese_semantic,can_id,asc_frames,asc_dlc,onyx_message,alternate_message,disposition
+CP_evseInstantDcCurrentLimit,EVSE瞬时直流电流能力候选（节点冲突，仅允许DBC审计）,0x27D,2997,8,APS_eacMonitor,ID27DCP_dcChargeLimits,EXCLUDED_FROM_CONCLUSION_DBC_AUDIT_ONLY
+CP_evseMaxDcCurrentLimit,EVSE最大直流电流能力候选（节点冲突，仅允许DBC审计）,0x27D,2997,8,APS_eacMonitor,ID27DCP_dcChargeLimits,EXCLUDED_FROM_CONCLUSION_DBC_AUDIT_ONLY
+CP_evseInstantDcPowerLimit,EVSE瞬时直流功率能力候选（车型适配未知，仅允许DBC审计）,0x2BD,2997,4,MISSING,ID2BDCP_dcPowerLimits,EXCLUDED_FROM_CONCLUSION_DBC_AUDIT_ONLY

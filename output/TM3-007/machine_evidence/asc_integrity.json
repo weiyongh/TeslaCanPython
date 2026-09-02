@@ -1,0 +1,18 @@
+{
+  "experiment_id": "TM3-007",
+  "analysis_status": "ANALYZED",
+  "asc_path": "input/can_20260831123400_TM3-007_开锁开门完整上电采集.asc",
+  "asc_sha256": "6f721abbe94d57bad321a99644c93c2d0a64ef35c0e743a60eefc6e65aea2d59",
+  "asc_size_bytes": 24342750,
+  "parsed_frame_count": 525946,
+  "malformed_frame_count": 0,
+  "unique_can_id_count": 357,
+  "start_s": 0.001,
+  "end_s": 600.0,
+  "duration_s": 599.999,
+  "header_declares_derived_analysis_input": true,
+  "header_source": "can_20260831113240开关门采集.asc",
+  "header_source_interval": "192.681200 s to 792.681200 s",
+  "approved_plan_sha256": "96fd4e9cc4becbb8f334ccc02c902f9389fa035d0d786db21005d0728f50201f",
+  "onyx_dbc_sha256": "3554e37a3a8371bc9c1b76445061d30f2c5bbaa35a055fe1f01f7ee75030e86c"
+}

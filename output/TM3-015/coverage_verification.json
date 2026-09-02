@@ -1,0 +1,22 @@
+{
+  "experiment_id": "TM3-015",
+  "source": "input/can_20260831102614_TM3-015_直流快充采集.asc",
+  "source_sha256": "622bfb8e8db203f0a5ba09b4ab91bff42415a28728a078a7c4f7f771e880665d",
+  "dbc": "input/tesla_model3_ONYX.dbc",
+  "dbc_sha256": "3554e37a3a8371bc9c1b76445061d30f2c5bbaa35a055fe1f01f7ee75030e86c",
+  "approved_plan_sha256": "dcb428ef07365ed03185ec973ab9537a4ac5d333bbb0fbdad5da3af995360dfa",
+  "frame_count": 685617,
+  "duration_s": 299.7339,
+  "unique_can_ids": 340,
+  "approved_rows": 58,
+  "active_rows": 55,
+  "excluded_rows": 3,
+  "decoded_sample_rows": 184117,
+  "readability_counts": {
+    "READABLE": 33,
+    "NO_FRAME": 4,
+    "DERIVED_AFTER_INPUT_VALIDATION": 2,
+    "READABLE_ON_MUX_PAGE": 15,
+    "MUX_NOT_OBSERVED_OR_UNREADABLE": 1
+  }
+}

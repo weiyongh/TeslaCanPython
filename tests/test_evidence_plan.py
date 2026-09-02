@@ -8,8 +8,8 @@ sys.path.insert(0, str(ROOT / "src"))
 from evidence_plan import DraftSignalEvidence, ReviewOverride, approve_plan
 
 
-def row(flags="", required="NO"):
-    return DraftSignalEvidence("T", "speed", "speed", "msg", "0x1", "km/h", "motion",
+def row(flags="", required="NO", experiment_id="T"):
+    return DraftSignalEvidence(experiment_id, "speed", "speed", "msg", "0x1", "km/h", "motion",
         "物理结果", "P0", "CORE_TIMELINE+CORE_SIGNAL_TABLE", 1, "direct", "已确认", "HIGH", flags, required)
 
 
@@ -31,6 +31,10 @@ class EvidencePlanTest(unittest.TestCase):
     def test_uncertainty_requires_review_flag(self):
         with self.assertRaisesRegex(ValueError, "must require review"):
             row("PROXY_OBSERVATION", "NO").validate()
+
+    def test_tm3_015_requires_chinese_semantic(self):
+        with self.assertRaisesRegex(ValueError, "Chinese semantic"):
+            row(experiment_id="TM3-015").validate()
 
 
 if __name__ == "__main__":

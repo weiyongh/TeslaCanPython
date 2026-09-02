@@ -1,0 +1,28 @@
+﻿experiment_id,signal_key,decision,override_role,override_priority,override_report_position,override_order,human_reason,reviewer,reviewed_at
+TM3-015,BMS_modelTMax,ACCEPT,,,,,接受为P1 Pack热状态主干候选；保持候选语义和置信度,用户,2026-09-01
+TM3-015,BMS_modelTMin,ACCEPT,,,,,接受为P1 Pack热状态主干候选；保持候选语义和置信度,用户,2026-09-01
+TM3-015,BMS_minPackTemperature,ACCEPT,,,,,维持P2 Pack热状态候选,用户,2026-09-01
+TM3-015,CP_pinTemperature1,ACCEPT,,,,,接受为P2充电接口热状态专项候选；与Pack热管理副线区分,用户,2026-09-01
+TM3-015,CP_pinTemperature2,ACCEPT,,,,,接受为P2充电接口热状态专项候选；与Pack热管理副线区分,用户,2026-09-01
+TM3-015,CP_pinTemperature3,ACCEPT,,,,,接受为P2充电接口热状态专项候选；与Pack热管理副线区分,用户,2026-09-01
+TM3-015,BMS_activeHeatingWorthwhile,ACCEPT,,,,,维持P2热管理条件决策候选,用户,2026-09-01
+TM3-015,BMS_hvacPowerRequest,ACCEPT,,,,,维持P2热管理请求候选,用户,2026-09-01
+TM3-015,BMS_flowRequest,ACCEPT,,,,,接受为P1 BMS热管理请求主干候选,用户,2026-09-01
+TM3-015,BMS_inletActiveCoolTargetT,ACCEPT,,,,,接受为P1 BMS主动冷却目标候选,用户,2026-09-01
+TM3-015,BMS_inletActiveHeatTargetT,ACCEPT,,,,,接受为P1 BMS主动加热目标候选,用户,2026-09-01
+TM3-015,VCFRONT_tempCoolantBatInlet,ACCEPT,,,,,接受为P1电池回路温度反馈候选,用户,2026-09-01
+TM3-015,VCFRONT_coolantFlowBatTarget,ACCEPT,,,,,接受为P1电池回路流量目标候选,用户,2026-09-01
+TM3-015,VCFRONT_coolantFlowBatActual,ACCEPT,,,,,接受为P1电池回路流量反馈候选,用户,2026-09-01
+TM3-015,VCFRONT_pumpBatteryRPMTarget,ACCEPT,,,,,接受为P2热管理专项执行目标候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_pumpBatteryRPMActual,ACCEPT,,,,,接受为P2热管理专项执行反馈候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_chillerDemandActive,ACCEPT,,,,,接受为P2 Chiller专项候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_chillerExvFlowTarget,ACCEPT,,,,,接受为P2 Chiller阀目标候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_chillerExvFlow,ACCEPT,,,,,接受为P2 Chiller阀反馈候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_compressorTargetDuty,ACCEPT,,,,,接受为P2压缩机目标候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_compressorEnable,ACCEPT,,,,,接受为P2压缩机使能候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_compressorState,ACCEPT,,,,,接受为P2压缩机状态候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_coolantValveAngleTarget,ACCEPT,,,,,接受为P2多通阀目标候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_coolantValveAngleActual,ACCEPT,,,,,接受为P2多通阀反馈候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_hpMode,ACCEPT,,,,,接受为P2热泵模式候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_hpBatteryCool,ACCEPT,,,,,接受为P2电池冷却模式候选；不进入核心充电时间线,用户,2026-09-01
+TM3-015,VCFRONT_isActiveHeatingBattery,ACCEPT,,,,,接受为P2电池主动加热反馈候选；不进入核心充电时间线,用户,2026-09-01

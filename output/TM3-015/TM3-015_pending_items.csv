@@ -1,0 +1,2 @@
+pending_id,status,blocking,title,scope,minimal_next_evidence,closure_effect
+TM3-015-P01,PENDING,NO,外部桩端能源标定,桩端实际电压/电流/功率及桩到Pack定量链,优先查找本次订单或桩屏记录；未来如方便仅补约60秒稳定快充并同步记录桩端V/I/P,不阻塞TM3-015关闭或后续实验

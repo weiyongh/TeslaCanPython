@@ -1,0 +1,42 @@
+{
+  "asc_sha256": "622bfb8e8db203f0a5ba09b4ab91bff42415a28728a078a7c4f7f771e880665d",
+  "stable_window_s": [
+    173.73,
+    233.23
+  ],
+  "stable_duration_s": 59.5,
+  "frame_counts": {
+    "0x29d": 2997,
+    "0x132": 29973,
+    "0x212": 2997
+  },
+  "asc_dlcs": {
+    "0x29d": {
+      "5": 2997
+    },
+    "0x132": {
+      "6": 29973
+    },
+    "0x212": {
+      "8": 2997
+    }
+  },
+  "cp_current_onyx_a": 128.1084783,
+  "cp_voltage_onyx_v": 365.4082901072269,
+  "cp_power_onyx_kw": 46.81190000384178,
+  "pack_voltage_v": 364.90146722689076,
+  "pack_smooth_charge_positive_a": 193.88040336134455,
+  "pack_unfiltered_charge_positive_a": 193.78157142857148,
+  "pack_power_smooth_kw": 70.74724365309602,
+  "pack_power_unfiltered_kw": 70.71117973581826,
+  "available_onyx_start38_kw": 35.94621848739496,
+  "available_model3can_start40_kw": 72.97563025210084,
+  "cp_factor_required_to_match_pack": 0.11085214600419928,
+  "soc_delta_ui_pct": 2.3000000000000007,
+  "soc_55kwh_sanity_energy_kwh": 1.2650000000000003,
+  "soc_55kwh_sanity_power_kw": 76.53781512605045,
+  "cumulative_charge_counter_delta_kwh": 1.157999999999447,
+  "cumulative_charge_counter_duration_s": 59.0026,
+  "cumulative_charge_counter_power_kw": 70.6545135298785,
+  "external_charger_evidence_found": false
+}

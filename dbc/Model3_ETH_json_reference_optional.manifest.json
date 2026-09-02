@@ -1,0 +1,23 @@
+{
+  "status": "REFERENCE_OPTIONAL",
+  "mandatory": false,
+  "authoritative": false,
+  "source": "dbc/Model3_ETH.compact.json",
+  "source_sha256": "e8624f71b11c295915ac1f051a279305df70cce27a8aba952882aa620339d17d",
+  "source_product": "Model3",
+  "source_version": "3.1.2",
+  "source_bus": "eth",
+  "output": "dbc/Model3_ETH_json_reference_optional.dbc",
+  "output_sha256": "f4f8b6d2ffd7c1028896e6c33f623d3773f7f8665d75264bc1d3339085b53608",
+  "messages_expected": 148,
+  "messages_roundtrip": 148,
+  "signals_expected": 375,
+  "signals_roundtrip": 375,
+  "conversion_policy_counts": {
+    "JSON_DIRECT": 271,
+    "LOCAL_DBC_START_BIT_ADAPTATION": 84,
+    "JSON_BIG_ENDIAN_UNVERIFIED_START": 20
+  },
+  "roundtrip_pass": true,
+  "usage_boundary": "Candidate parsing source only. Compare ID/DLC/bit layout/mux and validate against experiment events before using a signal in Evidence Assessment."
+}

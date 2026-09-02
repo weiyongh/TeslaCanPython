@@ -1,0 +1,10 @@
+﻿requirement_id,assessment,evidence,reason
+ER-01,SUPPORTED,103.1571–470.1237秒无CAN帧，随后通信恢复并进入约2200–3000帧/秒,支持本采集域低通信候选→网络唤醒；不升级为整车真实休眠
+ER-02,INSUFFICIENT_EVIDENCE,0x102在500.7386秒开、525.7703秒关；UI_lockRequest只见IDLE；无独立动作锚点,门闩反馈可区分，但解锁请求和人工开门时刻不能独立确认
+ER-03,INSUFFICIENT_EVIDENCE,门闩关闭可见；0x30A无帧,占座节点无直接观测，不能区分入座与关门各自贡献
+ER-04,INSUFFICIENT_EVIDENCE,0x118在540.3854秒后可见，但DI_brakePedalState全程INVALID,无法直接确认制动输入；仅能评价其后挡位/电驱内部状态
+ER-05,SUPPORTED,HVP_hvilStatus由UNKNOWN转STATUS_OK并与0x682 OK交叉；发生在预充和接触器闭合前,至少一个高压安全条件候选形成状态门时序；绝缘Signal仍验证失败
+ER-06,SUPPORTED,BMS总接触器CLOSING→CLOSED；正接触器PRECHARGE→ECONOMIZED；负接触器OPEN→ECONOMIZED；Pack电压约5V升至约354V,状态序列和物理电压响应形成实验级闭环
+ER-07,SUPPORTED,545.2670秒DI_gear P→D且DI_systemState STANDBY→ENABLE；UI ready候选此前已为1,挡位反馈和电驱ENABLE满足内部可驱动状态证据；缺少独立仪表/动作时刻
+ER-08,SUPPORTED,DCDC支持IDLE→ACTIVE；ETH/JSON低压候选约12.44V升至稳定13.48–13.51V，电流由0升至约24–33A,DCDC状态与低压能源响应方向、时序和量级闭合；无外部12V实测
+ER-09,SUPPORTED,555.4262秒D→P且ENABLE→STANDBY；其后接触器CLOSED、DCDC ACTIVE及低压电压稳定至600秒,形成约44.6秒P挡上电稳定窗口
