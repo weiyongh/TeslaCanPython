@@ -1,0 +1,27 @@
+{
+  "charter_version": "analysis-charter-v1",
+  "experiment_id": "TM3-006",
+  "purpose": "动力电池静态基线的确定性CAN Observation Discovery；不形成事件、语义健康或诊断结论",
+  "system_scope": "动力电池及采集总线上可观察的相关车辆系统",
+  "analysis_scope": "全量bus-key、DBC coverage、Known/Residual/Unknown机器观察",
+  "l3_prior_refs": [
+    "L3新能源实车数据诊断分析规范_v1.1.md"
+  ],
+  "evidence_requirements": [
+    "静态状态、结构一致性和物理一致性的后续Evidence机会",
+    "DBC未覆盖与定义冲突的Signal Validation前提"
+  ],
+  "allowed_data_sources": [
+    "input/can_20260827141104_TM3-006_动力电池静态基线采集.asc",
+    "input/tesla_model3_ONYX.dbc"
+  ],
+  "asc_ref": "input/can_20260827141104_TM3-006_动力电池静态基线采集.asc",
+  "dbc_refs": [
+    "input/tesla_model3_ONYX.dbc"
+  ],
+  "time_policy": {
+    "mode": "STATIC_FULL_CAPTURE",
+    "event_inference_allowed": false
+  },
+  "known_signal_hints": []
+}

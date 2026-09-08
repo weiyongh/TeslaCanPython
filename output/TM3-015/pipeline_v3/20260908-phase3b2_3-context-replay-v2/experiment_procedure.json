@@ -1,0 +1,143 @@
+{
+  "procedure_version": "experiment-procedure-v1",
+  "experiment_id": "TM3-015",
+  "source": {
+    "ref": "input/TM3-015_直流快充采集脚本.txt",
+    "sha256": "400f83d81240611c384dc37fecb7b3e276e325c694235454b31553dbf4984a0d"
+  },
+  "time_semantics": {
+    "all_phase_times_are": "PLANNED_TIME",
+    "observed_event_source": null,
+    "observed_event_phase_status": "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+    "planned_time_is_observed_event": false,
+    "can_state_is_human_action": false
+  },
+  "initial_conditions": [
+    "vehicle awake",
+    "park selected",
+    "charging interface not connected",
+    "no requirement to begin from sleep"
+  ],
+  "planned_phases": [
+    {
+      "phase_id": "PP-INITIAL",
+      "start_s": 0,
+      "end_s": 20,
+      "action": "maintain initial background without operation",
+      "semantic_tags": [
+        "INITIAL",
+        "BACKGROUND"
+      ]
+    },
+    {
+      "phase_id": "PP-PORT-OPEN",
+      "start_s": 20,
+      "end_s": 40,
+      "action": "open charge port without connecting",
+      "semantic_tags": [
+        "INTERFACE",
+        "PORT"
+      ]
+    },
+    {
+      "phase_id": "PP-CONNECT",
+      "start_s": 40,
+      "end_s": 60,
+      "action": "connect charging interface and record recognition and locking when independently observed",
+      "semantic_tags": [
+        "INTERFACE",
+        "CONNECTION",
+        "LOCK"
+      ]
+    },
+    {
+      "phase_id": "PP-AUTH-START",
+      "start_s": 60,
+      "end_s": 120,
+      "action": "perform authorization and request charging start; actual timing may vary",
+      "semantic_tags": [
+        "AUTHORIZATION",
+        "START",
+        "COMMUNICATION"
+      ]
+    },
+    {
+      "phase_id": "PP-ESTABLISH",
+      "start_s": 120,
+      "end_s": 150,
+      "action": "check whether charging actually established using independent vehicle and EVSE evidence",
+      "semantic_tags": [
+        "ESTABLISHMENT",
+        "PERMISSION",
+        "HV_PATH"
+      ]
+    },
+    {
+      "phase_id": "PP-CHARGE-OBSERVE",
+      "start_s": 150,
+      "end_s": 210,
+      "action": "observe EVSE and Pack voltage current power capability state and thermal context",
+      "semantic_tags": [
+        "CHARGE",
+        "CAPABILITY",
+        "REQUEST",
+        "ACTUAL",
+        "THERMAL"
+      ]
+    },
+    {
+      "phase_id": "PP-STEADY-HOLD",
+      "start_s": 210,
+      "end_s": 240,
+      "action": "observe a conditional short stable interval if naturally available",
+      "semantic_tags": [
+        "STEADY",
+        "CAPABILITY",
+        "REQUEST",
+        "ACTUAL",
+        "THERMAL"
+      ]
+    },
+    {
+      "phase_id": "PP-STOP",
+      "start_s": 240,
+      "end_s": 270,
+      "action": "request one normal stop if charging has not already ended",
+      "semantic_tags": [
+        "STOP",
+        "REQUEST",
+        "CONTROLLED_EXIT"
+      ]
+    },
+    {
+      "phase_id": "PP-SAFE-EXIT",
+      "start_s": 270,
+      "end_s": 300,
+      "action": "confirm output stopped and lock released before disconnecting",
+      "semantic_tags": [
+        "STOP",
+        "ACTUAL",
+        "HV_PATH",
+        "LOCK",
+        "CONTROLLED_EXIT"
+      ]
+    },
+    {
+      "phase_id": "PP-TAIL",
+      "start_s": 300,
+      "end_s": null,
+      "action": "retain an optional post-disconnect observation tail",
+      "semantic_tags": [
+        "TAIL",
+        "BACKGROUND"
+      ]
+    }
+  ],
+  "procedure_constraints": [
+    "planned action order may change to follow the EVSE operating procedure",
+    "charging may start or stop earlier than the nominal planned time",
+    "a planned steady interval exists only if the observed process naturally becomes stable",
+    "Pack current alone does not confirm that EVSE output stopped",
+    "planned actions do not establish observed event times"
+  ]
+}

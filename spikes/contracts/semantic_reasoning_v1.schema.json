@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "semantic_reasoning_v1.schema.json",
+  "title": "TeslaCanPython isolated semantic reasoning spike contract",
+  "type": "object",
+  "required": ["contract_version", "result_id", "input_package_id", "input_package_hash", "initial_reasoning", "follow_up_result", "updated_reasoning", "audit_metadata"],
+  "properties": {
+    "contract_version": {"const": "semantic-reasoning-v1"},
+    "result_id": {"type": "string"},
+    "input_package_id": {"type": "string"},
+    "input_package_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "initial_reasoning": {"$ref": "#/$defs/reasoningPass"},
+    "follow_up_result": {
+      "type": ["object", "null"],
+      "properties": {
+        "request_id": {"type": "string"},
+        "operation": {"enum": ["TARGETED_WINDOW_STATS"]},
+        "result_id": {"type": "string"},
+        "results": {"type": "array"},
+        "limitations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "updated_reasoning": {"$ref": "#/$defs/reasoningPass"},
+    "audit_metadata": {"type": "object"}
+  },
+  "$defs": {
+    "reasoningPass": {
+      "type": "object",
+      "required": ["pass_id", "findings", "validation_requests"],
+      "properties": {
+        "pass_id": {"type": "string"},
+        "findings": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+        "validation_requests": {"type": "array", "maxItems": 1, "items": {"$ref": "#/$defs/validationRequest"}}
+      }
+    },
+    "finding": {
+      "type": "object",
+      "required": ["finding_id", "candidate_refs", "observation_refs", "relation_refs", "event_refs", "fact_bindings", "l3_domain_mapping", "control_tree_mapping", "evidence_requirement_mapping", "relationship_kind", "causality_status", "semantic_hypothesis", "alternative_explanations", "model_interaction", "supported_claims", "unsupported_claims", "missing_evidence", "signal_validation_needed", "minimum_next_check", "uncertainty", "confidence", "trace_refs"],
+      "properties": {
+        "finding_id": {"type": "string"},
+        "candidate_refs": {"type": "array", "items": {"type": "string"}},
+        "observation_refs": {"type": "array", "items": {"type": "string"}},
+        "relation_refs": {"type": "array", "items": {"type": "string"}},
+        "event_refs": {"type": "array", "items": {"type": "string"}},
+        "fact_bindings": {"type": "array", "items": {"$ref": "#/$defs/factBinding"}},
+        "l3_domain_mapping": {"type": "object"},
+        "control_tree_mapping": {"type": "object"},
+        "evidence_requirement_mapping": {"type": "array", "items": {"$ref": "#/$defs/erMapping"}},
+        "relationship_kind": {"enum": ["STATE_SEQUENCE", "CONDITION_PERMISSION", "REQUEST_ACTUAL", "PHYSICAL_CLOSURE", "POSSIBLE_PROXY", "COMPANION_STATE", "NO_SAFE_RELATIONSHIP"]},
+        "causality_status": {"enum": ["TEMPORAL_ASSOCIATION_ONLY", "CONTROL_RELATION_SUPPORTED", "CAUSALITY_NOT_ESTABLISHED", "NOT_APPLICABLE"]},
+        "semantic_hypothesis": {"type": "string"},
+        "alternative_explanations": {"type": "array", "items": {"$ref": "#/$defs/alternative"}},
+        "model_interaction": {"enum": ["SUPPORTS_CURRENT_MODEL", "EXTENDS_CURRENT_MODEL", "CHALLENGES_CURRENT_MODEL", "OUTSIDE_CURRENT_MODEL", "INSUFFICIENT_TO_MAP"]},
+        "supported_claims": {"type": "array", "items": {"type": "string"}},
+        "unsupported_claims": {"type": "array", "items": {"type": "string"}},
+        "missing_evidence": {"type": "array", "items": {"$ref": "#/$defs/gap"}},
+        "signal_validation_needed": {"type": "boolean"},
+        "minimum_next_check": {"type": "string"},
+        "uncertainty": {"type": "string"},
+        "confidence": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+        "trace_refs": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "factBinding": {
+      "type": "object",
+      "required": ["claim_class", "support_refs", "statement"],
+      "properties": {
+        "claim_class": {"enum": ["OBSERVED", "DERIVED", "INFERRED", "UNSUPPORTED"]},
+        "support_refs": {"type": "array", "items": {"type": "string"}},
+        "statement": {"type": "string"}
+      }
+    },
+    "erMapping": {
+      "type": "object",
+      "required": ["evidence_requirement_ref", "status", "basis_refs", "reason"],
+      "properties": {
+        "evidence_requirement_ref": {"type": "string"},
+        "status": {"enum": ["DIRECT_SUPPORT", "PARTIAL_SUPPORT", "CONTRADICTION", "UNRELATED", "INSUFFICIENT"]},
+        "basis_refs": {"type": "array", "items": {"type": "string"}},
+        "reason": {"type": "string"}
+      }
+    },
+    "alternative": {
+      "type": "object",
+      "required": ["alternative_id", "description", "compatible_observation_refs", "discriminating_evidence", "minimum_check"],
+      "properties": {
+        "alternative_id": {"type": "string"},
+        "description": {"type": "string"},
+        "compatible_observation_refs": {"type": "array", "items": {"type": "string"}},
+        "discriminating_evidence": {"type": "string"},
+        "minimum_check": {"type": "string"}
+      }
+    },
+    "gap": {
+      "type": "object",
+      "required": ["gap_id", "blocked_claim", "missing_evidence_type", "reason", "minimum_evidence_needed", "priority"],
+      "properties": {
+        "gap_id": {"type": "string"},
+        "blocked_claim": {"type": "string"},
+        "missing_evidence_type": {"enum": ["EXTERNAL_EVENT_TIME", "DIRECT_REQUEST", "CONDITION_OR_PERMISSION", "EXECUTION_FEEDBACK", "PHYSICAL_MEASUREMENT", "SIGNAL_VALIDATION", "REPEAT_OBSERVATION", "ALTERNATIVE_CONDITION", "DBC_DEFINITION"]},
+        "reason": {"type": "string"},
+        "minimum_evidence_needed": {"type": "string"},
+        "priority": {"enum": ["P0", "P1", "P2", "P3"]}
+      }
+    },
+    "validationRequest": {
+      "type": "object",
+      "required": ["request_id", "operation", "input_refs", "parameters", "expected_decision"],
+      "properties": {
+        "request_id": {"type": "string"},
+        "operation": {"enum": ["TARGETED_WINDOW_STATS"]},
+        "input_refs": {"type": "array", "items": {"type": "string"}},
+        "parameters": {"type": "object"},
+        "expected_decision": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,4738 @@
+{
+  "retrieval_version": "semantic-observation-retrieval-v2-context",
+  "results": [
+    {
+      "intent_id": "SSI-ER-01",
+      "evidence_question_ref": "SEQ-ER-01",
+      "retrieved": [
+        {
+          "observation_ref": "SO-BA9225550260",
+          "source_space": "KNOWN",
+          "score": 424,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "lock",
+              "port"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-7C154FF11732",
+          "source_space": "KNOWN",
+          "score": 420,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 1,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "latch"
+            ],
+            "role_terms": [
+              "state",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01",
+          "candidate_refs": [
+            "C0033"
+          ]
+        },
+        {
+          "observation_ref": "SO-AFC76E33264C",
+          "source_space": "KNOWN",
+          "score": 420,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 1,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "latch"
+            ],
+            "role_terms": [
+              "state",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01",
+          "candidate_refs": [
+            "C0033"
+          ]
+        },
+        {
+          "observation_ref": "SO-F7E9FC02F201",
+          "source_space": "KNOWN",
+          "score": 420,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "connected",
+              "latch"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-31D612FA2BA9",
+          "source_space": "KNOWN",
+          "score": 416,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 1,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "unlock"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-CONNECT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01",
+          "candidate_refs": [
+            "C0033"
+          ]
+        },
+        {
+          "observation_ref": "SO-7BB7F570959A",
+          "source_space": "KNOWN",
+          "score": 416,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 1,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "proximity"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "OBS-0096",
+          "source_space": "UNKNOWN",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 100,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 1,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 988,
+      "truncated_count": 980,
+      "below_context_gate_count": 3522,
+      "below_threshold_count": 3522,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-02",
+      "evidence_question_ref": "SEQ-ER-02",
+      "retrieved": [
+        {
+          "observation_ref": "SO-BA9225550260",
+          "source_space": "KNOWN",
+          "score": 426,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "lock",
+              "port"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-31D612FA2BA9",
+          "source_space": "KNOWN",
+          "score": 422,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 1,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "unlock"
+            ],
+            "role_terms": [
+              "request",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-CONNECT",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02",
+          "candidate_refs": [
+            "C0033"
+          ]
+        },
+        {
+          "observation_ref": "SO-7C154FF11732",
+          "source_space": "KNOWN",
+          "score": 422,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 1,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "latch"
+            ],
+            "role_terms": [
+              "state",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02",
+          "candidate_refs": [
+            "C0033"
+          ]
+        },
+        {
+          "observation_ref": "SO-AFC76E33264C",
+          "source_space": "KNOWN",
+          "score": 422,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 1,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "latch"
+            ],
+            "role_terms": [
+              "state",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02",
+          "candidate_refs": [
+            "C0033"
+          ]
+        },
+        {
+          "observation_ref": "SO-F7E9FC02F201",
+          "source_space": "KNOWN",
+          "score": 422,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "connected",
+              "latch"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-23B9FBB08D32",
+          "source_space": "KNOWN",
+          "score": 420,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 1,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "latch"
+            ],
+            "role_terms": [
+              "request",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0096",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 993,
+      "truncated_count": 985,
+      "below_context_gate_count": 3517,
+      "below_threshold_count": 3517,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-03",
+      "evidence_question_ref": "SEQ-ER-03",
+      "retrieved": [
+        {
+          "observation_ref": "SO-2CA4B2E7EDED",
+          "source_space": "KNOWN",
+          "score": 450,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-30140211597F",
+          "source_space": "KNOWN",
+          "score": 449,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "dc",
+              "evse",
+              "voltage"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "source_space": "KNOWN",
+          "score": 449,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-61297290B6D1",
+          "source_space": "KNOWN",
+          "score": 431,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "lv"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-9EC200C4C4B1",
+          "source_space": "KNOWN",
+          "score": 430,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "evse"
+            ],
+            "role_terms": [
+              "state",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "SO-05B359B48253",
+          "source_space": "KNOWN",
+          "score": 427,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "pack"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0278",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-CHARGE-OBSERVE",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0010",
+          "source_space": "RESIDUAL",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 1244,
+      "truncated_count": 1236,
+      "below_context_gate_count": 3266,
+      "below_threshold_count": 3266,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-04",
+      "evidence_question_ref": "SEQ-ER-04",
+      "retrieved": [
+        {
+          "observation_ref": "SO-22FA7C2E4F75",
+          "source_space": "KNOWN",
+          "score": 420,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "protocol",
+              "version"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-04",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-D6BDAE830634",
+          "source_space": "KNOWN",
+          "score": 420,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "protocol",
+              "version"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-04",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-E2D313EBB723",
+          "source_space": "KNOWN",
+          "score": 420,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "protocol",
+              "version"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-04",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0086",
+          "source_space": "UNKNOWN",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-AUTH-START"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-04",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-0E3BF055E63D",
+          "source_space": "KNOWN",
+          "score": 110,
+          "eligibility_path": "BEHAVIOR_EXPLORATORY",
+          "ranking_components": {
+            "path_tier": 1,
+            "domain_hit_count": 1,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "BEHAVIOR_EXPLORATORY"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "version"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-04",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 100,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 1,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-04",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 4,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 963,
+      "truncated_count": 957,
+      "below_context_gate_count": 3547,
+      "below_threshold_count": 3547,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-05",
+      "evidence_question_ref": "SEQ-ER-05",
+      "retrieved": [
+        {
+          "observation_ref": "SO-30140211597F",
+          "source_space": "KNOWN",
+          "score": 447,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "dc",
+              "evse",
+              "voltage"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "source_space": "KNOWN",
+          "score": 447,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-2CA4B2E7EDED",
+          "source_space": "KNOWN",
+          "score": 446,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-6A427DF5AFB4",
+          "source_space": "KNOWN",
+          "score": 431,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current"
+            ],
+            "role_terms": [
+              "limit",
+              "request"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-C817FE195629",
+          "source_space": "KNOWN",
+          "score": 427,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "evse"
+            ],
+            "role_terms": [
+              "limit"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "SO-39C18ABF3E3C",
+          "source_space": "KNOWN",
+          "score": 426,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "evse"
+            ],
+            "role_terms": [
+              "request"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "OBS-0278",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-CHARGE-OBSERVE",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 1210,
+      "truncated_count": 1202,
+      "below_context_gate_count": 3300,
+      "below_threshold_count": 3300,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-06",
+      "evidence_question_ref": "SEQ-ER-06",
+      "retrieved": [
+        {
+          "observation_ref": "SO-30140211597F",
+          "source_space": "KNOWN",
+          "score": 447,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "dc",
+              "evse",
+              "voltage"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "source_space": "KNOWN",
+          "score": 447,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-2CA4B2E7EDED",
+          "source_space": "KNOWN",
+          "score": 446,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-6A427DF5AFB4",
+          "source_space": "KNOWN",
+          "score": 431,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current"
+            ],
+            "role_terms": [
+              "limit",
+              "request"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-C817FE195629",
+          "source_space": "KNOWN",
+          "score": 427,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "evse"
+            ],
+            "role_terms": [
+              "limit"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "SO-39C18ABF3E3C",
+          "source_space": "KNOWN",
+          "score": 426,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "evse"
+            ],
+            "role_terms": [
+              "request"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "OBS-0278",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-CHARGE-OBSERVE",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 1210,
+      "truncated_count": 1202,
+      "below_context_gate_count": 3300,
+      "below_threshold_count": 3300,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-07",
+      "evidence_question_ref": "SEQ-ER-07",
+      "retrieved": [
+        {
+          "observation_ref": "SO-30140211597F",
+          "source_space": "KNOWN",
+          "score": 447,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "dc",
+              "evse",
+              "voltage"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "source_space": "KNOWN",
+          "score": 447,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-2CA4B2E7EDED",
+          "source_space": "KNOWN",
+          "score": 446,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-6A427DF5AFB4",
+          "source_space": "KNOWN",
+          "score": 431,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current"
+            ],
+            "role_terms": [
+              "limit",
+              "request"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-C817FE195629",
+          "source_space": "KNOWN",
+          "score": 427,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "evse"
+            ],
+            "role_terms": [
+              "limit"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "SO-39C18ABF3E3C",
+          "source_space": "KNOWN",
+          "score": 426,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "evse"
+            ],
+            "role_terms": [
+              "request"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "OBS-0278",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-CHARGE-OBSERVE",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 1210,
+      "truncated_count": 1202,
+      "below_context_gate_count": 3300,
+      "below_threshold_count": 3300,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-08",
+      "evidence_question_ref": "SEQ-ER-08",
+      "retrieved": [
+        {
+          "observation_ref": "SO-30140211597F",
+          "source_space": "KNOWN",
+          "score": 451,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "dc",
+              "evse",
+              "voltage"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-ESTABLISH"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "source_space": "KNOWN",
+          "score": 451,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-ESTABLISH"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-2CA4B2E7EDED",
+          "source_space": "KNOWN",
+          "score": 450,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-05B359B48253",
+          "source_space": "KNOWN",
+          "score": 437,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 3,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "hv",
+              "pack"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-C817FE195629",
+          "source_space": "KNOWN",
+          "score": 437,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 3,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "evse",
+              "limit"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "SO-CEEC4D90BE22",
+          "source_space": "KNOWN",
+          "score": 437,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 3,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "hv",
+              "pack",
+              "voltage"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0269",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-CHARGE-OBSERVE",
+              "PP-ESTABLISH"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-ESTABLISH"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 1318,
+      "truncated_count": 1310,
+      "below_context_gate_count": 3192,
+      "below_threshold_count": 3192,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-09",
+      "evidence_question_ref": "SEQ-ER-09",
+      "retrieved": [
+        {
+          "observation_ref": "SO-30140211597F",
+          "source_space": "KNOWN",
+          "score": 453,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "dc",
+              "evse",
+              "voltage"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "source_space": "KNOWN",
+          "score": 453,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-2CA4B2E7EDED",
+          "source_space": "KNOWN",
+          "score": 450,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-05B359B48253",
+          "source_space": "KNOWN",
+          "score": 437,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 3,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "hv",
+              "pack"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CEEC4D90BE22",
+          "source_space": "KNOWN",
+          "score": 437,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 3,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "hv",
+              "pack",
+              "voltage"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-19CE993899A3",
+          "source_space": "KNOWN",
+          "score": 434,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 3,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "contactor",
+              "pack"
+            ],
+            "role_terms": [
+              "request",
+              "state",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0012",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09",
+          "candidate_refs": [
+            "C0093"
+          ]
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1260,
+      "truncated_count": 1252,
+      "below_context_gate_count": 3250,
+      "below_threshold_count": 3250,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-10",
+      "evidence_question_ref": "SEQ-ER-10",
+      "retrieved": [
+        {
+          "observation_ref": "SO-2CA4B2E7EDED",
+          "source_space": "KNOWN",
+          "score": 446,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-30140211597F",
+          "source_space": "KNOWN",
+          "score": 445,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "dc",
+              "evse",
+              "voltage"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "source_space": "KNOWN",
+          "score": 445,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-05B359B48253",
+          "source_space": "KNOWN",
+          "score": 423,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "pack"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-1470804EE51E",
+          "source_space": "KNOWN",
+          "score": 423,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "evse"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "SO-1BD4E76B92C5",
+          "source_space": "KNOWN",
+          "score": 423,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "pack",
+              "voltage"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10",
+          "candidate_refs": [
+            "C0073"
+          ]
+        },
+        {
+          "observation_ref": "OBS-0278",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-CHARGE-OBSERVE",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0010",
+          "source_space": "RESIDUAL",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 1183,
+      "truncated_count": 1175,
+      "below_context_gate_count": 3327,
+      "below_threshold_count": 3327,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-11",
+      "evidence_question_ref": "SEQ-ER-11",
+      "retrieved": [
+        {
+          "observation_ref": "SO-2CA4B2E7EDED",
+          "source_space": "KNOWN",
+          "score": 448,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-30140211597F",
+          "source_space": "KNOWN",
+          "score": 447,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "dc",
+              "evse",
+              "voltage"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "source_space": "KNOWN",
+          "score": 447,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output"
+            ],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-BA9225550260",
+          "source_space": "KNOWN",
+          "score": 432,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 3,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "lock",
+              "port"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-6A427DF5AFB4",
+          "source_space": "KNOWN",
+          "score": 431,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current"
+            ],
+            "role_terms": [
+              "limit",
+              "request"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-39C18ABF3E3C",
+          "source_space": "KNOWN",
+          "score": 428,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "evse"
+            ],
+            "role_terms": [
+              "request"
+            ],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "OBS-0096",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11",
+          "candidate_refs": []
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 1220,
+      "truncated_count": 1212,
+      "below_context_gate_count": 3290,
+      "below_threshold_count": 3290,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-12",
+      "evidence_question_ref": "SEQ-ER-12",
+      "retrieved": [
+        {
+          "observation_ref": "SO-2BAA1DECBE96",
+          "source_space": "KNOWN",
+          "score": 428,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "heat",
+              "thermal"
+            ],
+            "role_terms": [
+              "status",
+              "target"
+            ],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12",
+          "candidate_refs": [
+            "C0002"
+          ]
+        },
+        {
+          "observation_ref": "SO-C8661259C0DA",
+          "source_space": "KNOWN",
+          "score": 428,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "cool",
+              "thermal"
+            ],
+            "role_terms": [
+              "status",
+              "target"
+            ],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12",
+          "candidate_refs": [
+            "C0002"
+          ]
+        },
+        {
+          "observation_ref": "SO-D1DF92E029BE",
+          "source_space": "KNOWN",
+          "score": 424,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "heating",
+              "hvac"
+            ],
+            "role_terms": [
+              "request"
+            ],
+            "planned_phase_refs": [],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-ECCC5B871B00",
+          "source_space": "KNOWN",
+          "score": 424,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "heating",
+              "hvac"
+            ],
+            "role_terms": [
+              "request"
+            ],
+            "planned_phase_refs": [],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-1161F7A1A991",
+          "source_space": "KNOWN",
+          "score": 420,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 0,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "cool",
+              "heat"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-91CF20915AEE",
+          "source_space": "KNOWN",
+          "score": 420,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 1,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "hvac"
+            ],
+            "role_terms": [
+              "request",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0012",
+          "source_space": "UNKNOWN",
+          "score": 202,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12",
+          "candidate_refs": [
+            "C0093"
+          ]
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1022,
+      "truncated_count": 1014,
+      "below_context_gate_count": 3488,
+      "below_threshold_count": 3488,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-13",
+      "evidence_question_ref": "SEQ-ER-13",
+      "retrieved": [
+        {
+          "observation_ref": "SO-45716AC8B0E2",
+          "source_space": "KNOWN",
+          "score": 426,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "fault",
+              "sleep"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-963212C39D13",
+          "source_space": "KNOWN",
+          "score": 426,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "stop",
+              "warning"
+            ],
+            "role_terms": [
+              "enable"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-C035F6F0E004",
+          "source_space": "KNOWN",
+          "score": 424,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "fault",
+              "warning"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13",
+          "candidate_refs": [
+            "C0063",
+            "C0064",
+            "C0066",
+            "C0068"
+          ]
+        },
+        {
+          "observation_ref": "SO-0FDD0CF085CC",
+          "source_space": "KNOWN",
+          "score": 422,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "fault",
+              "warning"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-CHARGE-OBSERVE"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-17777FF5897D",
+          "source_space": "KNOWN",
+          "score": 422,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "stop",
+              "warning"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-179F3E028894",
+          "source_space": "KNOWN",
+          "score": 422,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 2,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "fault",
+              "warning"
+            ],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-CHARGE-OBSERVE"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0012",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13",
+          "candidate_refs": [
+            "C0093"
+          ]
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1034,
+      "truncated_count": 1026,
+      "below_context_gate_count": 3476,
+      "below_threshold_count": 3476,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    },
+    {
+      "intent_id": "SSI-ER-14",
+      "evidence_question_ref": "SEQ-ER-14",
+      "retrieved": [
+        {
+          "observation_ref": "SO-30140211597F",
+          "source_space": "KNOWN",
+          "score": 453,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "dc",
+              "evse",
+              "voltage"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "source_space": "KNOWN",
+          "score": 453,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-2CA4B2E7EDED",
+          "source_space": "KNOWN",
+          "score": 452,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 4,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "dc",
+              "evse"
+            ],
+            "role_terms": [
+              "output",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-39C18ABF3E3C",
+          "source_space": "KNOWN",
+          "score": 442,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 3,
+            "role_hit_count": 2,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "evse",
+              "stop"
+            ],
+            "role_terms": [
+              "request",
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-PORT-OPEN",
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14",
+          "candidate_refs": [
+            "C0019",
+            "C0022",
+            "C0034",
+            "C0112"
+          ]
+        },
+        {
+          "observation_ref": "SO-05B359B48253",
+          "source_space": "KNOWN",
+          "score": 437,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 3,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "current",
+              "hv",
+              "pack"
+            ],
+            "role_terms": [
+              "status"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": [
+              "DYNAMIC"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "SO-6A427DF5AFB4",
+          "source_space": "KNOWN",
+          "score": 437,
+          "eligibility_path": "SEMANTIC_CONTEXT_COMPATIBLE",
+          "ranking_components": {
+            "path_tier": 4,
+            "domain_hit_count": 3,
+            "role_hit_count": 1,
+            "planned_phase_hit_count": 1,
+            "dimension_match": 1
+          },
+          "retrieval_reasons": [
+            "SEMANTIC_CONTEXT_COMPATIBLE"
+          ],
+          "context_matches": {
+            "domain_terms": [
+              "charge",
+              "current",
+              "limit"
+            ],
+            "role_terms": [
+              "request"
+            ],
+            "planned_phase_refs": [
+              "PP-SAFE-EXIT"
+            ],
+            "behavior_tags": []
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0005",
+          "source_space": "RESIDUAL",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14",
+          "candidate_refs": []
+        },
+        {
+          "observation_ref": "OBS-0012",
+          "source_space": "UNKNOWN",
+          "score": 204,
+          "eligibility_path": "UNNAMED_BEHAVIOR_CONTEXT",
+          "ranking_components": {
+            "path_tier": 2,
+            "domain_hit_count": 0,
+            "role_hit_count": 0,
+            "planned_phase_hit_count": 2,
+            "dimension_match": 0
+          },
+          "retrieval_reasons": [
+            "UNNAMED_BEHAVIOR_CONTEXT"
+          ],
+          "context_matches": {
+            "domain_terms": [],
+            "role_terms": [],
+            "planned_phase_refs": [
+              "PP-ESTABLISH",
+              "PP-STOP"
+            ],
+            "behavior_tags": [
+              "DYNAMIC",
+              "LOW_CARDINALITY",
+              "UNNAMED_ACTIVITY"
+            ]
+          },
+          "unavailable_features": [
+            "OBSERVED_EVENT_PHASE_UNAVAILABLE",
+            "CAN_REGION_DETAIL_UNAVAILABLE",
+            "RELATIONSHIP_FEATURE_UNAVAILABLE"
+          ],
+          "semantic_role_status": "UNCONFIRMED",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14",
+          "candidate_refs": [
+            "C0093"
+          ]
+        }
+      ],
+      "cross_intent_supplements": [],
+      "global_context_only": [],
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1381,
+      "truncated_count": 1373,
+      "below_context_gate_count": 3129,
+      "below_threshold_count": 3129,
+      "no_suitable_observation": false,
+      "global_limit_excluded_count": 0
+    }
+  ],
+  "selected_observation_refs": [
+    "SO-BA9225550260",
+    "SO-7C154FF11732",
+    "SO-AFC76E33264C",
+    "SO-F7E9FC02F201",
+    "SO-31D612FA2BA9",
+    "SO-7BB7F570959A",
+    "OBS-0096",
+    "OBS-0005",
+    "SO-23B9FBB08D32",
+    "SO-2CA4B2E7EDED",
+    "SO-30140211597F",
+    "SO-CE0335F98FD8",
+    "SO-61297290B6D1",
+    "SO-9EC200C4C4B1",
+    "SO-05B359B48253",
+    "OBS-0278",
+    "OBS-0010",
+    "SO-22FA7C2E4F75",
+    "SO-D6BDAE830634",
+    "SO-E2D313EBB723",
+    "OBS-0086",
+    "SO-0E3BF055E63D",
+    "SO-6A427DF5AFB4",
+    "SO-C817FE195629",
+    "SO-39C18ABF3E3C",
+    "SO-CEEC4D90BE22",
+    "OBS-0269",
+    "SO-19CE993899A3",
+    "OBS-0012",
+    "SO-1470804EE51E",
+    "SO-1BD4E76B92C5",
+    "SO-2BAA1DECBE96",
+    "SO-C8661259C0DA",
+    "SO-D1DF92E029BE",
+    "SO-ECCC5B871B00",
+    "SO-1161F7A1A991",
+    "SO-91CF20915AEE",
+    "SO-45716AC8B0E2",
+    "SO-963212C39D13",
+    "SO-C035F6F0E004",
+    "SO-0FDD0CF085CC",
+    "SO-17777FF5897D",
+    "SO-179F3E028894"
+  ]
+}

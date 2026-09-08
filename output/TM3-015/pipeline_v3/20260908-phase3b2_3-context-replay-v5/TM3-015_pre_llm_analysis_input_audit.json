@@ -1,0 +1,56 @@
+{
+  "audit_version": "pre-llm-analysis-input-audit-v1",
+  "status": "AWAITING_EVIDENCE_REVIEW",
+  "frozen_run": "20260908-phase3b2_3-context-replay-v5",
+  "reasoning_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+  "reasoning_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+  "er_count": 14,
+  "semantic_question_count": 14,
+  "retrieval_row_count": 108,
+  "unique_observation_count": 62,
+  "source_space_counts": {
+    "KNOWN": 54,
+    "RESIDUAL": 3,
+    "UNKNOWN": 5
+  },
+  "exact_final_llm_payload_recoverable": false,
+  "model_visibility": {
+    "provider": "冻结运行中未记录",
+    "model_name": "冻结运行中未记录",
+    "model_identity": "codex-recovery-session",
+    "effort": "冻结运行中未记录",
+    "llm_calls_in_frozen_run": 1,
+    "follow_up_calls_in_frozen_run": 0
+  },
+  "source_hashes_before": {
+    "reasoning_input": "4c8b747fa35ddc1401cc0e986b7c7c5491b233e002fd00594283438979d29af7",
+    "reasoning_output": "ff72bfa0b4a146425ecf70c73889f8c8191b09d27ef58ce35a2c74d0cc23364b",
+    "evidence_mapping": "7464e8364f6179e02fadefcd89d84d07078e26ec7972e103c2b4dcea3edbe22e",
+    "runtime_audit": "706698043cae895a893c386e07a5a0f2c17e069eefe368586aae60d632f2f072",
+    "experiment_procedure": "1d3bd2a725c985df8c27099815a7d3d0681365956b1f6343f5f44efae5759eaa",
+    "semantic_questions": "f498acd955f00a235a346673f73c9f177fa68d764beb57d155e38f8683345b02",
+    "semantic_intents": "b8e1b659b96b9d572f2ef3a0892e51a6e7ce9fdcc6dfb544a71a46a87d358127",
+    "retrieval_results": "2668fca5ca4c7746d86b78ba327f3460fbaacf910b5ac7181e4f7b58aa2887e2",
+    "observation_contexts": "1a9f4867c8bfebdae44fa7d1f17794486d3c9efd831d1c9d02e3fc3ba7df8cb8"
+  },
+  "source_hashes_after": {
+    "reasoning_input": "4c8b747fa35ddc1401cc0e986b7c7c5491b233e002fd00594283438979d29af7",
+    "reasoning_output": "ff72bfa0b4a146425ecf70c73889f8c8191b09d27ef58ce35a2c74d0cc23364b",
+    "evidence_mapping": "7464e8364f6179e02fadefcd89d84d07078e26ec7972e103c2b4dcea3edbe22e",
+    "runtime_audit": "706698043cae895a893c386e07a5a0f2c17e069eefe368586aae60d632f2f072",
+    "experiment_procedure": "1d3bd2a725c985df8c27099815a7d3d0681365956b1f6343f5f44efae5759eaa",
+    "semantic_questions": "f498acd955f00a235a346673f73c9f177fa68d764beb57d155e38f8683345b02",
+    "semantic_intents": "b8e1b659b96b9d572f2ef3a0892e51a6e7ce9fdcc6dfb544a71a46a87d358127",
+    "retrieval_results": "2668fca5ca4c7746d86b78ba327f3460fbaacf910b5ac7181e4f7b58aa2887e2",
+    "observation_contexts": "1a9f4867c8bfebdae44fa7d1f17794486d3c9efd831d1c9d02e3fc3ba7df8cb8"
+  },
+  "asc_reread": false,
+  "asc_parse_delta": 0,
+  "retrieval_rerun": false,
+  "reasoning_rerun": false,
+  "llm_calls_for_audit": 0,
+  "finding_changed": false,
+  "evidence_mapping_changed": false,
+  "approved_evidence_generated": false,
+  "downstream_artifacts_generated": false
+}

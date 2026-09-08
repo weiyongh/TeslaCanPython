@@ -1,0 +1,662 @@
+{
+  "retrieval_version": "semantic-observation-retrieval-v2-context",
+  "intents": [
+    {
+      "intent_id": "SSI-ER-01",
+      "evidence_question_ref": "SEQ-ER-01",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-03",
+        "CT-DCFC-10",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-01"
+      ],
+      "semantic_roles": [
+        "STATE"
+      ],
+      "semantic_need": "Distinguish nine-terminal mechanical interface conditions from confirmed physical connection.",
+      "domain_concepts": [
+        "INTERFACE"
+      ],
+      "forbidden_substitutions": [
+        "ACTUAL",
+        "CAPABILITY",
+        "PERMISSION",
+        "REQUEST"
+      ],
+      "planned_phase_refs": [
+        "PP-PORT-OPEN",
+        "PP-CONNECT"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-02",
+      "evidence_question_ref": "SEQ-ER-02",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-03",
+        "CT-DCFC-10",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-02"
+      ],
+      "semantic_roles": [
+        "REQUEST",
+        "STATE"
+      ],
+      "semantic_need": "Distinguish connection confirmation from lock request, lock execution, lock feedback, and confirmed lock.",
+      "domain_concepts": [
+        "INTERFACE"
+      ],
+      "forbidden_substitutions": [
+        "ACTUAL",
+        "CAPABILITY",
+        "PERMISSION"
+      ],
+      "planned_phase_refs": [
+        "PP-PORT-OPEN",
+        "PP-CONNECT",
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD",
+        "PP-STOP"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-03",
+      "evidence_question_ref": "SEQ-ER-03",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-03"
+      ],
+      "semantic_roles": [
+        "STATE"
+      ],
+      "semantic_need": "Distinguish A+ and A- contact, auxiliary supply establishment, actual controller wake, and charge-ready state.",
+      "domain_concepts": [
+        "AUX_WAKE",
+        "ELECTRICAL"
+      ],
+      "forbidden_substitutions": [
+        "ACTUAL",
+        "CAPABILITY",
+        "PERMISSION",
+        "REQUEST"
+      ],
+      "planned_phase_refs": [],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-04",
+      "evidence_question_ref": "SEQ-ER-04",
+      "control_tree_refs": [
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-10",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-04"
+      ],
+      "semantic_roles": [
+        "TIMING_ONLY"
+      ],
+      "semantic_need": "Identify communication link, handshake or initialization, version compatibility, and parameter exchange where observable.",
+      "domain_concepts": [
+        "COMMUNICATION"
+      ],
+      "forbidden_substitutions": [
+        "ACTUAL",
+        "CAPABILITY",
+        "PERMISSION",
+        "REQUEST"
+      ],
+      "planned_phase_refs": [
+        "PP-AUTH-START"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-05",
+      "evidence_question_ref": "SEQ-ER-05",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-05"
+      ],
+      "semantic_roles": [
+        "CAPABILITY"
+      ],
+      "semantic_need": "Identify EVSE Capability without substituting Vehicle Capability, Vehicle Request, or Actual.",
+      "domain_concepts": [
+        "ELECTRICAL"
+      ],
+      "forbidden_substitutions": [
+        "ACTUAL",
+        "PERMISSION",
+        "REQUEST"
+      ],
+      "planned_phase_refs": [
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-06",
+      "evidence_question_ref": "SEQ-ER-06",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-06"
+      ],
+      "semantic_roles": [
+        "CAPABILITY"
+      ],
+      "semantic_need": "Identify Vehicle Capability without substituting EVSE Capability, Vehicle Request, or Actual.",
+      "domain_concepts": [
+        "ELECTRICAL"
+      ],
+      "forbidden_substitutions": [
+        "ACTUAL",
+        "PERMISSION",
+        "REQUEST"
+      ],
+      "planned_phase_refs": [
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-07",
+      "evidence_question_ref": "SEQ-ER-07",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-07"
+      ],
+      "semantic_roles": [
+        "REQUEST"
+      ],
+      "semantic_need": "Identify Vehicle Request voltage and current independently of Capability and Actual.",
+      "domain_concepts": [
+        "ELECTRICAL"
+      ],
+      "forbidden_substitutions": [
+        "ACTUAL",
+        "CAPABILITY",
+        "PERMISSION"
+      ],
+      "planned_phase_refs": [
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD",
+        "PP-STOP"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-08",
+      "evidence_question_ref": "SEQ-ER-08",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-08"
+      ],
+      "semantic_roles": [
+        "REQUEST",
+        "ACTUAL",
+        "STATE"
+      ],
+      "semantic_need": "Identify Permission and Safety Gate separately from contactor state, high-voltage path, and energy transfer.",
+      "domain_concepts": [
+        "ELECTRICAL",
+        "HV_PATH",
+        "PROTECTION"
+      ],
+      "forbidden_substitutions": [
+        "CAPABILITY",
+        "PERMISSION"
+      ],
+      "planned_phase_refs": [
+        "PP-ESTABLISH",
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD",
+        "PP-STOP",
+        "PP-SAFE-EXIT"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-09",
+      "evidence_question_ref": "SEQ-ER-09",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-09"
+      ],
+      "semantic_roles": [
+        "REQUEST",
+        "ACTUAL",
+        "STATE"
+      ],
+      "semantic_need": "Identify high-voltage path request, action, feedback, voltage matching, and establishment within observable limits.",
+      "domain_concepts": [
+        "ELECTRICAL",
+        "HV_PATH"
+      ],
+      "forbidden_substitutions": [
+        "CAPABILITY",
+        "PERMISSION"
+      ],
+      "planned_phase_refs": [
+        "PP-ESTABLISH",
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD",
+        "PP-STOP",
+        "PP-SAFE-EXIT"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-10",
+      "evidence_question_ref": "SEQ-ER-10",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-10"
+      ],
+      "semantic_roles": [
+        "ACTUAL"
+      ],
+      "semantic_need": "Distinguish EVSE Actual voltage/current/power from Pack Actual voltage/current/power at their measurement boundaries.",
+      "domain_concepts": [
+        "ELECTRICAL"
+      ],
+      "forbidden_substitutions": [
+        "CAPABILITY",
+        "PERMISSION",
+        "REQUEST"
+      ],
+      "planned_phase_refs": [
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD",
+        "PP-SAFE-EXIT"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-11",
+      "evidence_question_ref": "SEQ-ER-11",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-11"
+      ],
+      "semantic_roles": [
+        "CAPABILITY",
+        "REQUEST",
+        "ACTUAL"
+      ],
+      "semantic_need": "Assess the continuous Capability, Request, EVSE Actual, and Pack Actual relationship without collapsing roles or assuming causality from proximity.",
+      "domain_concepts": [
+        "INTERFACE",
+        "ELECTRICAL"
+      ],
+      "forbidden_substitutions": [
+        "PERMISSION"
+      ],
+      "planned_phase_refs": [
+        "PP-PORT-OPEN",
+        "PP-CONNECT",
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD",
+        "PP-STOP",
+        "PP-SAFE-EXIT"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-12",
+      "evidence_question_ref": "SEQ-ER-12",
+      "control_tree_refs": [
+        "CT-DCFC-08",
+        "CT-DCFC-14"
+      ],
+      "evidence_requirement_refs": [
+        "ER-12"
+      ],
+      "semantic_roles": [
+        "CAPABILITY",
+        "REQUEST",
+        "STATE"
+      ],
+      "semantic_need": "Identify thermal state, thermal demand, execution, and effects on capability or request where supported.",
+      "domain_concepts": [
+        "THERMAL"
+      ],
+      "forbidden_substitutions": [
+        "ACTUAL",
+        "PERMISSION"
+      ],
+      "planned_phase_refs": [
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD",
+        "PP-STOP"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-13",
+      "evidence_question_ref": "SEQ-ER-13",
+      "control_tree_refs": [
+        "CT-DCFC-08",
+        "CT-DCFC-10",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-13"
+      ],
+      "semantic_roles": [
+        "CAPABILITY",
+        "REQUEST",
+        "STATE"
+      ],
+      "semantic_need": "Identify protection monitoring, limiting action, stop request, and safe shutdown without inventing fault causes.",
+      "domain_concepts": [
+        "PROTECTION",
+        "STOP"
+      ],
+      "forbidden_substitutions": [
+        "ACTUAL",
+        "PERMISSION"
+      ],
+      "planned_phase_refs": [
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD",
+        "PP-STOP",
+        "PP-SAFE-EXIT"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-14",
+      "evidence_question_ref": "SEQ-ER-14",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-14"
+      ],
+      "semantic_roles": [
+        "REQUEST",
+        "ACTUAL",
+        "STATE"
+      ],
+      "semantic_need": "Describe controlled stop across Request, EVSE Actual, Pack Actual, high-voltage path, communication closeout, and safe unlock.",
+      "domain_concepts": [
+        "INTERFACE",
+        "COMMUNICATION",
+        "ELECTRICAL",
+        "HV_PATH",
+        "PROTECTION",
+        "STOP"
+      ],
+      "forbidden_substitutions": [
+        "CAPABILITY",
+        "PERMISSION"
+      ],
+      "planned_phase_refs": [
+        "PP-PORT-OPEN",
+        "PP-CONNECT",
+        "PP-AUTH-START",
+        "PP-ESTABLISH",
+        "PP-CHARGE-OBSERVE",
+        "PP-STEADY-HOLD",
+        "PP-STOP",
+        "PP-SAFE-EXIT"
+      ],
+      "experiment_context_ref": "TM3-015",
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "UNKNOWN_CANDIDATE",
+        "IRRELEVANT",
+        "GAP"
+      ]
+    }
+  ]
+}

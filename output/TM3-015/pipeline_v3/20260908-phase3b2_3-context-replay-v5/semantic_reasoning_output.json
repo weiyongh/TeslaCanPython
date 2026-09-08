@@ -1,0 +1,956 @@
+{
+  "contract_version": "formal-semantic-reasoning-v1",
+  "result_id": "TM3-015-phase3b2_3-context-blind-replay-v5",
+  "input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+  "input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+  "follow_up_requests": [],
+  "findings": [
+    {
+      "finding_id": "F-3B23-01",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-7BB7F570959A",
+        "SO-AFC76E33264C"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-7BB7F570959A",
+            "SO-AFC76E33264C"
+          ],
+          "statement": "Interface proximity and latch observations change, but they do not independently confirm all nine-terminal mechanical contact or physical connection."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-03",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-01",
+          "status": "PARTIAL_SUPPORT",
+          "basis_refs": [
+            "SO-7BB7F570959A",
+            "SO-AFC76E33264C"
+          ]
+        }
+      ],
+      "proposed_role": "STATE",
+      "semantic_status": "VALIDATION_REQUIRED",
+      "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+      "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-01",
+          "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+          "reason": "Independent physical connection confirmation and observed connection time are absent."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-7BB7F570959A",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01"
+        },
+        {
+          "observation_ref": "SO-AFC76E33264C",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-02",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-57834B9DC181",
+        "SO-7C154FF11732",
+        "SO-AFC76E33264C"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-57834B9DC181",
+            "SO-7C154FF11732",
+            "SO-AFC76E33264C"
+          ],
+          "statement": "Latch control and latch feedback states are observable, but the evidence does not establish every request, execution, feedback, and confirmed-lock stage."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-03",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-02",
+          "status": "PARTIAL_SUPPORT",
+          "basis_refs": [
+            "SO-57834B9DC181",
+            "SO-7C154FF11732",
+            "SO-AFC76E33264C"
+          ]
+        }
+      ],
+      "proposed_role": "STATE",
+      "semantic_status": "VALIDATION_REQUIRED",
+      "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+      "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-02",
+          "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+          "reason": "No independent lock confirmation or observed lock action time binds the stages."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-57834B9DC181",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02"
+        },
+        {
+          "observation_ref": "SO-7C154FF11732",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02"
+        },
+        {
+          "observation_ref": "SO-AFC76E33264C",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-03",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-1DA23ED17AA5",
+        "SO-61297290B6D1"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-1DA23ED17AA5",
+            "SO-61297290B6D1"
+          ],
+          "statement": "Low-voltage bus observations show electrical activity, but do not distinguish A-terminal contact, auxiliary supply establishment, controller wake, and charge-ready state."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-04",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-03",
+          "status": "INSUFFICIENT",
+          "basis_refs": [
+            "SO-1DA23ED17AA5",
+            "SO-61297290B6D1"
+          ]
+        }
+      ],
+      "proposed_role": "STATE",
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+      "model_interaction": "INSUFFICIENT_TO_MAP",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-03",
+          "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+          "reason": "The required upstream interface and wake boundaries are not directly observed."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-1DA23ED17AA5",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03"
+        },
+        {
+          "observation_ref": "SO-61297290B6D1",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-04",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-11F964A63B77"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-11F964A63B77"
+          ],
+          "statement": "A generic communication-related state is present, but it does not establish charging handshake, version compatibility, or parameter exchange."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-05",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-04",
+          "status": "INSUFFICIENT",
+          "basis_refs": [
+            "SO-11F964A63B77"
+          ]
+        }
+      ],
+      "proposed_role": "TIMING_ONLY",
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+      "model_interaction": "INSUFFICIENT_TO_MAP",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-04",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "The retrieved DBC term is not validated as the fast-charge protocol exchange."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-11F964A63B77",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-04"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-05",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-C817FE195629",
+        "SO-30140211597F"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-C817FE195629",
+            "SO-30140211597F"
+          ],
+          "statement": "The selected cable-limit field is constant and EVSE output voltage is Actual; neither is sufficient to establish EVSE Capability."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-07",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-05",
+          "status": "INSUFFICIENT",
+          "basis_refs": [
+            "SO-C817FE195629",
+            "SO-30140211597F"
+          ]
+        }
+      ],
+      "proposed_role": "CAPABILITY",
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+      "model_interaction": "INSUFFICIENT_TO_MAP",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-05",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "No validated EVSE-boundary capability voltage and current pair is present."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-C817FE195629",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05"
+        },
+        {
+          "observation_ref": "SO-30140211597F",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-06",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-EE1762E29E91",
+        "SO-FCA6D6091527"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-EE1762E29E91",
+            "SO-FCA6D6091527"
+          ],
+          "statement": "Vehicle-boundary maximum charge current and available charging power are capability candidates, but their exact semantics and voltage counterpart remain incomplete."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-08",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-06",
+          "status": "PARTIAL_SUPPORT",
+          "basis_refs": [
+            "SO-EE1762E29E91",
+            "SO-FCA6D6091527"
+          ]
+        }
+      ],
+      "proposed_role": "CAPABILITY",
+      "semantic_status": "VALIDATION_REQUIRED",
+      "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+      "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-06",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "DBC naming and dynamics alone do not confirm a complete Vehicle Capability set."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-EE1762E29E91",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06"
+        },
+        {
+          "observation_ref": "SO-FCA6D6091527",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-07",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-C735BF77D6EA"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-C735BF77D6EA"
+          ],
+          "statement": "The retrieved charge-request field is constant and no independently validated requested voltage and current pair is available; Actual signals cannot replace Request."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-09",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-07",
+          "status": "INSUFFICIENT",
+          "basis_refs": [
+            "SO-C735BF77D6EA"
+          ]
+        }
+      ],
+      "proposed_role": "REQUEST",
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+      "model_interaction": "INSUFFICIENT_TO_MAP",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-07",
+          "missing_evidence_type": "DIRECT_REQUEST",
+          "reason": "Direct semantically validated request voltage and current are absent."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-C735BF77D6EA",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-08",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-19CE993899A3",
+        "SO-464571D40359",
+        "SO-605D4479E286"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-19CE993899A3",
+            "SO-464571D40359",
+            "SO-605D4479E286"
+          ],
+          "statement": "HVIL and contactor-request status observations describe safety and path states, but do not independently prove charging Permission."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-10",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-08",
+          "status": "INSUFFICIENT",
+          "basis_refs": [
+            "SO-19CE993899A3",
+            "SO-464571D40359",
+            "SO-605D4479E286"
+          ]
+        }
+      ],
+      "proposed_role": "STATE",
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+      "model_interaction": "INSUFFICIENT_TO_MAP",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-08",
+          "missing_evidence_type": "CONDITION_OR_PERMISSION",
+          "reason": "No direct permission or safety-gate decision variable is validated."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-19CE993899A3",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08"
+        },
+        {
+          "observation_ref": "SO-464571D40359",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08"
+        },
+        {
+          "observation_ref": "SO-605D4479E286",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-09",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-605D4479E286",
+        "SO-40123AC227A0"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-605D4479E286",
+            "SO-40123AC227A0"
+          ],
+          "statement": "Fast-charge contactor request status and contactor set state support an observable HV-path state change, but do not alone prove voltage matching or energy transfer."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-11",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-09",
+          "status": "PARTIAL_SUPPORT",
+          "basis_refs": [
+            "SO-605D4479E286",
+            "SO-40123AC227A0"
+          ]
+        }
+      ],
+      "proposed_role": "STATE",
+      "semantic_status": "VALIDATION_REQUIRED",
+      "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+      "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-09",
+          "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+          "reason": "Voltage matching and synchronized transfer evidence are not bound to the path transition."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-605D4479E286",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09"
+        },
+        {
+          "observation_ref": "SO-40123AC227A0",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-10",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-30140211597F",
+        "SO-CE0335F98FD8",
+        "SO-05B359B48253",
+        "SO-CEEC4D90BE22"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-30140211597F",
+            "SO-CE0335F98FD8",
+            "SO-05B359B48253",
+            "SO-CEEC4D90BE22"
+          ],
+          "statement": "Distinct EVSE-side voltage and current and Pack-side voltage and current observations are present, preserving two measurement boundaries, but quantitative cross-boundary closure is not established."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-12",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-10",
+          "status": "PARTIAL_SUPPORT",
+          "basis_refs": [
+            "SO-30140211597F",
+            "SO-CE0335F98FD8",
+            "SO-05B359B48253",
+            "SO-CEEC4D90BE22"
+          ]
+        }
+      ],
+      "proposed_role": "ACTUAL",
+      "semantic_status": "VALIDATION_REQUIRED",
+      "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+      "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-10",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "EVSE current quantitative semantics and synchronized cross-boundary comparison remain unvalidated."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-30140211597F",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10"
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10"
+        },
+        {
+          "observation_ref": "SO-05B359B48253",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10"
+        },
+        {
+          "observation_ref": "SO-CEEC4D90BE22",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-11",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-EE1762E29E91",
+        "SO-30140211597F",
+        "SO-CE0335F98FD8"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-EE1762E29E91",
+            "SO-30140211597F",
+            "SO-CE0335F98FD8"
+          ],
+          "statement": "A vehicle capability candidate and EVSE Actual candidates coexist, but direct Vehicle Request and a complete Pack Actual pair are absent from this question's direct evidence."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-13",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-11",
+          "status": "PARTIAL_SUPPORT",
+          "basis_refs": [
+            "SO-EE1762E29E91",
+            "SO-30140211597F",
+            "SO-CE0335F98FD8"
+          ]
+        }
+      ],
+      "proposed_role": "POSSIBLE_PROXY",
+      "semantic_status": "VALIDATION_REQUIRED",
+      "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+      "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-11",
+          "missing_evidence_type": "DIRECT_REQUEST",
+          "reason": "The continuous relationship cannot be completed without validated Request and all boundary roles."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-EE1762E29E91",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11"
+        },
+        {
+          "observation_ref": "SO-30140211597F",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11"
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-12",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-7717801FE8E8",
+        "SO-BC7D879CB5FA"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-7717801FE8E8",
+            "SO-BC7D879CB5FA"
+          ],
+          "statement": "Battery-heating activity and waste-heat request state changes support a thermal-control context, but no causal effect on capability or request is established."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-14",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-12",
+          "status": "PARTIAL_SUPPORT",
+          "basis_refs": [
+            "SO-7717801FE8E8",
+            "SO-BC7D879CB5FA"
+          ]
+        }
+      ],
+      "proposed_role": "STATE",
+      "semantic_status": "VALIDATION_REQUIRED",
+      "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+      "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-12",
+          "missing_evidence_type": "ALTERNATIVE_CONDITION",
+          "reason": "No alternative-condition comparison separates thermal influence from other controls."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-7717801FE8E8",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12"
+        },
+        {
+          "observation_ref": "SO-BC7D879CB5FA",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-13",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-39C18ABF3E3C",
+        "SO-31D612FA2BA9",
+        "SO-4AA492D64A9C",
+        "SO-5772080DA750",
+        "SO-61CF5F025B68"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-39C18ABF3E3C",
+            "SO-31D612FA2BA9",
+            "SO-4AA492D64A9C",
+            "SO-5772080DA750",
+            "SO-61CF5F025B68"
+          ],
+          "statement": "Stop and unlock request observations are present while selected limit-achieved states remain inactive; this supports stop observability but not a protection cause or safe-shutdown completion."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-14",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-13",
+          "status": "PARTIAL_SUPPORT",
+          "basis_refs": [
+            "SO-39C18ABF3E3C",
+            "SO-31D612FA2BA9",
+            "SO-4AA492D64A9C",
+            "SO-5772080DA750",
+            "SO-61CF5F025B68"
+          ]
+        }
+      ],
+      "proposed_role": "STATE",
+      "semantic_status": "VALIDATION_REQUIRED",
+      "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+      "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-13",
+          "missing_evidence_type": "CONDITION_OR_PERMISSION",
+          "reason": "Applicable fault and protection decision evidence and independent safe-state confirmation are absent."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-39C18ABF3E3C",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        },
+        {
+          "observation_ref": "SO-31D612FA2BA9",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        },
+        {
+          "observation_ref": "SO-4AA492D64A9C",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        },
+        {
+          "observation_ref": "SO-5772080DA750",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        },
+        {
+          "observation_ref": "SO-61CF5F025B68",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        }
+      ]
+    },
+    {
+      "finding_id": "F-3B23-14",
+      "candidate_refs": [],
+      "observation_refs": [
+        "SO-31D612FA2BA9",
+        "SO-7BB7F570959A",
+        "SO-DCF64D235226"
+      ],
+      "event_refs": [],
+      "fact_bindings": [
+        {
+          "claim_class": "OBSERVED",
+          "support_refs": [
+            "SO-31D612FA2BA9",
+            "SO-7BB7F570959A",
+            "SO-DCF64D235226"
+          ],
+          "statement": "Unlock request, proximity, and charge-port latch-enable observations provide partial controlled-exit coverage, but the initiator, communication closeout, energy decay, and human action time are not established."
+        }
+      ],
+      "control_tree_ref": "CT-DCFC-15",
+      "evidence_requirement_mapping": [
+        {
+          "evidence_requirement_ref": "ER-14",
+          "status": "PARTIAL_SUPPORT",
+          "basis_refs": [
+            "SO-31D612FA2BA9",
+            "SO-7BB7F570959A",
+            "SO-DCF64D235226"
+          ]
+        }
+      ],
+      "proposed_role": "STATE",
+      "semantic_status": "VALIDATION_REQUIRED",
+      "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+      "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-14",
+          "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+          "reason": "Planned time cannot substitute for observed stop or unplug time and several exit stages lack direct evidence."
+        }
+      ],
+      "signal_validation_needed": true,
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-31D612FA2BA9",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14"
+        },
+        {
+          "observation_ref": "SO-7BB7F570959A",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14"
+        },
+        {
+          "observation_ref": "SO-DCF64D235226",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14"
+        }
+      ]
+    }
+  ],
+  "audit_metadata": {
+    "reasoning_call_count": 1,
+    "follow_up_count": 0,
+    "input_scope": "FROZEN_REASONING_INPUT_ONLY",
+    "historical_answer_used": false,
+    "asc_read_count": 0,
+    "strict_cognitive_blindness_certifiable": false,
+    "strict_cognitive_blindness_limitation": "Recovery occurred in the existing project session; artifact inputs were restricted, but session-level historical exposure cannot be disproved."
+  }
+}

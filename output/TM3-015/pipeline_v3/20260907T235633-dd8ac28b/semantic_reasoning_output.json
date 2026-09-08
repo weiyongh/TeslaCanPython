@@ -1,0 +1,72 @@
+{
+  "contract_version": "formal-semantic-reasoning-v1",
+  "result_id": "TM3-015-SEMANTIC-RETRIEVAL-REPLAY-001",
+  "input_package_id": "TM3-015-reasoning-9c206059b748bc1b",
+  "input_package_hash": "5abd023a233d724bdee759f8930bdb565709ce365bf7dedfcb99f33b09c450d6",
+  "follow_up_requests": [],
+  "findings": [
+    {
+      "finding_id": "F-RETRIEVED-CONNECTION", "candidate_refs": ["C0033", "C0034"],
+      "observation_refs": ["SO-268A8B468362", "SO-57834B9DC181", "SO-7BB7F570959A", "SO-7C154FF11732", "SO-AFC76E33264C", "SO-0593C7A1D041"], "event_refs": [],
+      "fact_bindings": [
+        {"claim_class": "OBSERVED", "support_refs": ["SO-268A8B468362", "SO-57834B9DC181", "SO-7BB7F570959A", "SO-7C154FF11732", "SO-AFC76E33264C"], "statement": "Several connection- and latch-labelled decoded observations change."},
+        {"claim_class": "INFERRED", "support_refs": ["SO-0593C7A1D041"], "statement": "The observed states may participate in connection and high-voltage establishment, but names and activity do not confirm physical connection or lock state."}
+      ],
+      "control_tree_ref": "CT-DCFC-01", "evidence_requirement_mapping": [{"evidence_requirement_ref": "ER-01", "status": "PARTIAL_SUPPORT", "basis_refs": ["SO-268A8B468362", "SO-7BB7F570959A", "SO-7C154FF11732"]}],
+      "proposed_role": "STATE", "semantic_status": "VALIDATION_REQUIRED", "causality_status": "NOT_APPLICABLE", "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": ["UI or controller state rather than physical state", "DBC enumeration mismatch"],
+      "evidence_gaps": [{"gap_id": "G-PHYSICAL-CONNECTION", "missing_evidence_type": "PHYSICAL_MEASUREMENT", "reason": "No independent plug and lock observation is available."}],
+      "signal_validation_needed": true, "confidence": "MEDIUM", "uncertainty_flags": ["DBC_NAME_NOT_CONFIRMATION"]
+    },
+    {
+      "finding_id": "F-RETRIEVED-REQUEST", "candidate_refs": [],
+      "observation_refs": ["SO-CDB81064C219", "SO-D137E9644D18", "SO-39C18ABF3E3C", "SO-605D4479E286"], "event_refs": [],
+      "fact_bindings": [
+        {"claim_class": "OBSERVED", "support_refs": ["SO-CDB81064C219", "SO-D137E9644D18", "SO-39C18ABF3E3C", "SO-605D4479E286"], "statement": "Request-labelled decoded observations are present and change."},
+        {"claim_class": "INFERRED", "support_refs": ["SO-CDB81064C219"], "statement": "The voltage-request-labelled field lacks a validated voltage magnitude and cannot establish the charging voltage Request."},
+        {"claim_class": "INFERRED", "support_refs": ["SO-D137E9644D18", "SO-39C18ABF3E3C"], "statement": "Enable and stop labels are state candidates, not proof of current Request, Permission, human action, protocol traffic, or ECU intent."}
+      ],
+      "control_tree_ref": "CT-DCFC-13", "evidence_requirement_mapping": [{"evidence_requirement_ref": "ER-04", "status": "INSUFFICIENT", "basis_refs": ["SO-CDB81064C219", "SO-D137E9644D18"]}, {"evidence_requirement_ref": "ER-06", "status": "PARTIAL_SUPPORT", "basis_refs": ["SO-39C18ABF3E3C"]}],
+      "proposed_role": "REQUEST", "semantic_status": "UNVALIDATED", "causality_status": "CAUSALITY_NOT_ESTABLISHED", "model_interaction": "INSUFFICIENT_TO_MAP",
+      "alternative_explanations": ["Boolean state", "UI intent", "contactor-control request", "incorrect DBC scaling"],
+      "evidence_gaps": [{"gap_id": "G-DIRECT-VI-REQUEST", "missing_evidence_type": "DIRECT_REQUEST", "reason": "No validated vehicle charging voltage/current Request pair is retrieved."}, {"gap_id": "G-STOP-EVENT-TIME", "missing_evidence_type": "EXTERNAL_EVENT_TIME", "reason": "No externally observed human stop time is available."}],
+      "signal_validation_needed": true, "confidence": "LOW", "uncertainty_flags": ["REQUEST_ROLE_UNCONFIRMED", "NO_HUMAN_EVENT_TIME"]
+    },
+    {
+      "finding_id": "F-RETRIEVED-ACTUAL", "candidate_refs": [],
+      "observation_refs": ["SO-30140211597F", "SO-CE0335F98FD8", "SO-05B359B48253", "SO-1BD4E76B92C5", "SO-2CA4B2E7EDED"], "event_refs": [],
+      "fact_bindings": [
+        {"claim_class": "OBSERVED", "support_refs": ["SO-30140211597F", "SO-CE0335F98FD8", "SO-05B359B48253", "SO-1BD4E76B92C5"], "statement": "EVSE-labelled and Pack-labelled voltage/current observations vary."},
+        {"claim_class": "INFERRED", "support_refs": ["SO-30140211597F", "SO-CE0335F98FD8"], "statement": "The EVSE pair is an Actual candidate, but its quantitative meaning requires independent validation."},
+        {"claim_class": "INFERRED", "support_refs": ["SO-05B359B48253", "SO-1BD4E76B92C5"], "statement": "The Pack pair is a physical-response candidate and cannot substitute for Request or Capability."}
+      ],
+      "control_tree_ref": "CT-DCFC-14", "evidence_requirement_mapping": [{"evidence_requirement_ref": "ER-04", "status": "PARTIAL_SUPPORT", "basis_refs": ["SO-30140211597F", "SO-CE0335F98FD8", "SO-05B359B48253", "SO-1BD4E76B92C5"]}, {"evidence_requirement_ref": "ER-05", "status": "PARTIAL_SUPPORT", "basis_refs": ["SO-30140211597F", "SO-CE0335F98FD8", "SO-05B359B48253", "SO-1BD4E76B92C5"]}],
+      "proposed_role": "ACTUAL", "semantic_status": "VALIDATION_REQUIRED", "causality_status": "TEMPORAL_ASSOCIATION_ONLY", "model_interaction": "SUPPORTS_CURRENT_MODEL",
+      "alternative_explanations": ["Incorrect EVSE current scale", "different measurement boundaries", "timing-only proxy"],
+      "evidence_gaps": [{"gap_id": "G-EVSE-QUANTITATIVE", "missing_evidence_type": "SIGNAL_VALIDATION", "reason": "No synchronized independent EVSE measurement validates the decoded magnitude."}],
+      "signal_validation_needed": true, "confidence": "MEDIUM", "uncertainty_flags": ["ACTUAL_NOT_REQUEST", "ACTUAL_NOT_CAPABILITY", "TIMING_ONLY_POSSIBLE"]
+    },
+    {
+      "finding_id": "F-CAPABILITY-GAP", "candidate_refs": [], "observation_refs": [], "event_refs": [],
+      "fact_bindings": [{"claim_class": "UNSUPPORTED", "support_refs": [], "statement": "A validated charging Capability cannot be established from the retrieved set."}],
+      "control_tree_ref": "CT-DCFC-12", "evidence_requirement_mapping": [{"evidence_requirement_ref": "ER-08", "status": "INSUFFICIENT", "basis_refs": []}],
+      "proposed_role": "CAPABILITY", "semantic_status": "INSUFFICIENT_EVIDENCE", "causality_status": "NOT_APPLICABLE", "model_interaction": "INSUFFICIENT_TO_MAP",
+      "alternative_explanations": [], "evidence_gaps": [{"gap_id": "G-CAPABILITY", "missing_evidence_type": "SIGNAL_VALIDATION", "reason": "No above-threshold retrieved observation safely establishes charging Capability."}],
+      "signal_validation_needed": true, "confidence": "LOW", "uncertainty_flags": ["NO_SUITABLE_CAPABILITY_OBSERVATION"]
+    },
+    {
+      "finding_id": "F-UNNAMED-RETRIEVAL", "candidate_refs": ["C0092"],
+      "observation_refs": ["OBS-0010", "OBS-0005", "OBS-0009"], "event_refs": [],
+      "fact_bindings": [
+        {"claim_class": "OBSERVED", "support_refs": ["OBS-0010", "OBS-0005", "OBS-0009"], "statement": "Residual and Unknown raw observations were retrieved from activity and state features without a confirming Signal name."},
+        {"claim_class": "INFERRED", "support_refs": ["OBS-0010", "OBS-0005", "OBS-0009"], "statement": "They may contain state behavior, but phase and relationship features are unavailable and no safe role can be assigned."}
+      ],
+      "control_tree_ref": "NO_SAFE_MAPPING", "evidence_requirement_mapping": [],
+      "proposed_role": "UNRESOLVED", "semantic_status": "UNVALIDATED", "causality_status": "NOT_APPLICABLE", "model_interaction": "NO_SAFE_MAPPING",
+      "alternative_explanations": ["Counter", "heartbeat", "paging", "unrelated state"],
+      "evidence_gaps": [{"gap_id": "G-UNNAMED-PHASE", "missing_evidence_type": "ALTERNATIVE_CONDITION", "reason": "PHASE_FEATURE_UNAVAILABLE and RELATIONSHIP_FEATURE_UNAVAILABLE prevent event-specific discrimination."}],
+      "signal_validation_needed": true, "confidence": "LOW", "uncertainty_flags": ["RAW_SEMANTICS_UNKNOWN", "PHASE_FEATURE_UNAVAILABLE", "RELATIONSHIP_FEATURE_UNAVAILABLE"]
+    }
+  ],
+  "audit_metadata": {"reasoning_mode": "ONE_BOUNDED_PRIMARY_CALL", "raw_asc_access": false, "historical_result_input": false, "follow_up_count": 0}
+}

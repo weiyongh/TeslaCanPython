@@ -1,0 +1,26 @@
+{
+  "packet_version": "human-evidence-review-packet-v1",
+  "experiment_id": "TM3-015",
+  "status": "AWAITING_EVIDENCE_REVIEW",
+  "card_count": 14,
+  "displayed_unique_observation_counts": {
+    "KNOWN": 54,
+    "RESIDUAL": 3,
+    "UNKNOWN": 5
+  },
+  "cards_with_dbc_reference": 14,
+  "cards_without_dbc_reference": 0,
+  "cards_with_evidence_gap": 14,
+  "cards_with_relationship_limitation": 14,
+  "cards_with_collection_limitation": 14,
+  "source_artifact_hashes": {
+    "input": "4c8b747fa35ddc1401cc0e986b7c7c5491b233e002fd00594283438979d29af7",
+    "output": "ff72bfa0b4a146425ecf70c73889f8c8191b09d27ef58ce35a2c74d0cc23364b",
+    "mapping": "7464e8364f6179e02fadefcd89d84d07078e26ec7972e103c2b4dcea3edbe22e",
+    "contexts": "1a9f4867c8bfebdae44fa7d1f17794486d3c9efd831d1c9d02e3fc3ba7df8cb8",
+    "audit": "706698043cae895a893c386e07a5a0f2c17e069eefe368586aae60d632f2f072"
+  },
+  "human_review_submitted": false,
+  "approved_evidence_generated": false,
+  "analysis_input": false
+}

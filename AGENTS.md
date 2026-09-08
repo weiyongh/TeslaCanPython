@@ -1,5 +1,11 @@
 # TeslaCanPython 工作区约定
 
+## 用户语言与技术术语偏好
+
+- 与用户交流及编写人类可读项目文档时，默认使用中文。
+- 涉及编程代码、接口、类、函数、字段、数据对象、状态、协议、Contract或其他需要精确指认的技术概念时，采用“中文名（准确英文名）”的表达方式，方便阅读和学习；首次出现时优先同时给出中英文，后文在无歧义时可使用中文或保留标准英文简称。
+- 代码标识符、命令行参数、文件名、Schema字段、枚举值和状态常量必须保留原始准确英文，不得为了中文可读性擅自翻译或改名；必要时在其旁边补充中文解释。
+
 ## 项目目标
 
 本工作区同时服务于正常基线数据采集与故障诊断分析，支撑新能源诊断 L3 能力及正常基线数据库建设。两类工作目前共用项目、尚未明确拆分，不默认将整个项目或所有采集都视为正常基线。Tesla Model 3 是首个基准车型，不以完整逆向其私有 CAN/DBC 为目标。
@@ -32,13 +38,15 @@
 
 所有基线采集、故障诊断分析及相关分析代码修改，先阅读并遵循当前有效规范 `L3新能源实车数据诊断分析规范_v1.1.md`，再按需查阅 `doc/methodology/L3_CAN诊断分析原则.md`。统计必须服务于本次采集/分析问题，不以大量证据限制替代实质结论。
 
-遇到基线规划、采集脚本、控制树、功能诊断树、实验结论或学习路线任务时，先查阅 `doc/notion_workspace_context.md` 中对应的 Notion 页面，再结合本地文件工作。仅做纯代码修复或格式调整时，不必重复读取无关笔记。
+新会话涉及当前Phase、TM3状态、正式Pipeline入口或停止点时，先读取 `doc/PROJECT_CURRENT_STATUS.md`。该文件是当前执行状态入口；历史设计文档和按时间命名的输出目录不能单独作为当前状态依据。
+
+遇到基线规划、采集脚本、控制树、功能诊断树、实验结论或学习路线任务时，普通工作以 `knowledge/notion_l3/current/` 为正式本地 L3 Knowledge Source，只读取当前任务所需页面。不得默认访问实时Notion，也不得把 `doc/notion_workspace_context.md`、`knowledge/notion_l3/snapshots/`、Notion“备份库”或全局搜索命中的历史副本作为日常正式L3来源。只有用户明确要求同步或实时核实、用户说明Notion已更新，或本地 `current/` 确实缺少当前任务必需知识时，才访问Notion；同步遵循 `doc/methodology/TeslaCanPython_Notion_L3_本地同步规范_v0.2.md`。仅做纯代码修复或格式调整时，不必读取无关L3页面。
 
 知识优先级：
 
 1. 用户当前指令和最新实验事实；
 2. 本地 ASC、DBC、采集脚本和程序输出；
-3. Notion 中的项目目标、方法框架和历史决策；
+3. `knowledge/notion_l3/current/` 中的正式L3工作快照；用户明确要求实时核实时，以Notion正式 `新能源汽修L3学习/…` ancestor path为权威编辑源；
 4. 推测与待验证假设。
 
 如果来源冲突，保留冲突并标明时间、适用采集域和证据等级，不把推测写成已确认信号定义。
@@ -81,7 +89,7 @@
 - `output/TM3-xxx/evidence_plan_review_overrides.csv`
 - `output/TM3-xxx/evidence_plan_approved.csv`
 
-没有实际人工Review时不得创建或伪造`evidence_plan_review_overrides.csv`。没有`evidence_plan_approved.csv`时，禁止正式读取ASC进行证据分析、形成Evidence Assessment或生成正式最终结论。`APPROVED`只表示当前实验、`THIS_EXPERIMENT_ONLY`范围内的分析合同生效，不代表Signal语义、DBC定义或实验结论已经成立。
+没有实际人工Review时不得创建或伪造`evidence_plan_review_overrides.csv`。没有`evidence_plan_approved.csv`时，禁止正式读取ASC进行证据分析、形成Evidence Assessment或生成正式最终结论。唯一窄例外是显式选择`discovery-v1`正式管线版本时，可按`Analysis Charter → ASC Data Admission → Formal Discovery → Frozen Observation Package`读取ASC，并必须在`DISCOVERY_COMPLETE`门停止；该例外不得生成Evidence Assessment、正式结论、RVM、Renderer输入或四件套。`APPROVED`只表示当前实验、`THIS_EXPERIMENT_ONLY`范围内的分析合同生效，不代表Signal语义、DBC定义或实验结论已经成立。
 
 状态门固定如下：
 

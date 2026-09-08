@@ -1,0 +1,3629 @@
+{
+  "contract_version": "semantic-reasoning-v1",
+  "result_id": "SRR-TM3-015-v1",
+  "input_package_id": "SRP-TM3-015-DCFC-v1",
+  "input_package_hash": "aea77f58573fa4671fdb0aa0f3639725fbd860fe96e0c1266b3e381ea28a7685",
+  "overall_status": "UPDATED_REASONING_COMPLETE_FROZEN",
+  "initial_reasoning": {
+    "pass_id": "INITIAL-01",
+    "findings": [
+      {
+        "finding_id": "F-01-CONNECTION",
+        "candidate_refs": [
+          "C0032",
+          "C0033",
+          "C0034"
+        ],
+        "observation_refs": [
+          "O-CCCAD844E3A0",
+          "O-30A5630397C5",
+          "O-DECE03E5A445",
+          "O-4D428E122092"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-CCCAD844E3A0",
+          "EA-30A5630397C5",
+          "EA-DECE03E5A445",
+          "EA-4D428E122092"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-CCCAD844E3A0",
+              "O-30A5630397C5",
+              "O-DECE03E5A445"
+            ],
+            "statement": "三个DBC命名的充电口/线缆字段均发生多次状态变化。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-4D428E122092"
+            ],
+            "statement": "这些变化可能覆盖连接识别阶段，但不能确定具体人工插枪或锁止时刻。"
+          },
+          {
+            "claim_class": "UNSUPPORTED",
+            "support_refs": [],
+            "statement": "人工开盖、插枪和机械锁止已经按DBC字段名称得到独立确认。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "subsystem": "充电口与连接检测",
+          "control_layer": "SENSED_STATE"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-01",
+          "mapping_status": "PARTIAL"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-01",
+            "status": "CONTRADICTION",
+            "basis_refs": [
+              "O-CCCAD844E3A0",
+              "O-30A5630397C5",
+              "O-DECE03E5A445",
+              "C0032",
+              "C0033",
+              "C0034"
+            ],
+            "reason": "存在连接相关边沿，但重复方向、SNA/范围和缺少外部事件使字段物理语义不能确认。"
+          },
+          {
+            "evidence_requirement_ref": "ER-07",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-30A5630397C5",
+              "O-DECE03E5A445"
+            ],
+            "reason": "CAN状态不足以证明枪锁安全释放或人工拔枪。"
+          }
+        ],
+        "relationship_kind": "POSSIBLE_PROXY",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "连接类Signal组合可能投射连接和释放阶段，但单个DBC名称及其方向均不适合作为物理事件真值。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "A-01",
+            "description": "部分字段可能是内部反相状态、短脉冲或复用页解释错误。",
+            "compatible_observation_refs": [
+              "O-CCCAD844E3A0",
+              "O-DECE03E5A445"
+            ],
+            "discriminating_evidence": "外部视频/操作时间与机械锁止确认",
+            "minimum_check": "同步记录一次开盖、插枪、锁止、释放和拔枪实际时间。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "存在连接阶段相关的CAN状态变化。"
+        ],
+        "unsupported_claims": [
+          "DBC字段已经确认人工事件及其物理方向。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-01",
+            "blocked_claim": "开盖、插枪、锁止和释放的物理事件映射",
+            "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+            "reason": "输入明确没有Observed Event Time。",
+            "minimum_evidence_needed": "独立实际事件时间和机械状态记录。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "将连接字段与独立外部事件时间对齐并核对状态方向。",
+        "uncertainty": "DBC覆盖为PARTIAL且连接字段存在异常候选。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "O-CCCAD844E3A0",
+          "O-30A5630397C5",
+          "O-DECE03E5A445",
+          "C0032",
+          "C0033",
+          "C0034",
+          "CT-DCFC-01",
+          "ER-01",
+          "ER-07"
+        ]
+      },
+      {
+        "finding_id": "F-02-COMMS-PERMISSION",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-4D428E122092",
+          "O-F2DC88B369D3",
+          "O-B8F1BFF40DB9",
+          "O-1B9378807E2B",
+          "O-46CD035D4715",
+          "O-9D323E9B10AC",
+          "O-FF177FEE2DC2"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-4D428E122092",
+          "EA-9D323E9B10AC",
+          "EA-FF177FEE2DC2"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-4D428E122092",
+              "O-9D323E9B10AC"
+            ],
+            "statement": "EVSE类型和UI充电状态均出现往返变化。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-F2DC88B369D3",
+              "O-B8F1BFF40DB9",
+              "O-1B9378807E2B",
+              "O-46CD035D4715"
+            ],
+            "statement": "gbState、EVSE Request/Accept和BMS chargeRequest在当前DBC解释下未形成变化。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-9D323E9B10AC",
+              "O-FF177FEE2DC2"
+            ],
+            "statement": "车辆内部某些充电条件已经形成，但直接许可和完整协议过程不可见或DBC解释不适配。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "subsystem": "可见协商与车辆许可",
+          "control_layer": "CONDITION_PERMISSION"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-04",
+          "mapping_status": "INDIRECT_ONLY"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-02",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-4D428E122092",
+              "O-F2DC88B369D3",
+              "O-B8F1BFF40DB9",
+              "O-1B9378807E2B"
+            ],
+            "reason": "连接类型可见，但没有足够状态还原可见协商顺序。"
+          },
+          {
+            "evidence_requirement_ref": "ER-03",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "O-9D323E9B10AC",
+              "O-FF177FEE2DC2",
+              "O-46CD035D4715"
+            ],
+            "reason": "下游充电状态出现，但直接条件或许可Signal缺失或冲突。"
+          }
+        ],
+        "relationship_kind": "CONDITION_PERMISSION",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "下游状态支持车辆侧许可结果曾经形成，但不足以识别具体Request、Permission或协议步骤。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "A-02",
+            "description": "许可可能存在于当前CAN域不可见的车桩通信、其他报文或错误DBC位段中。",
+            "compatible_observation_refs": [
+              "O-F2DC88B369D3",
+              "O-B8F1BFF40DB9",
+              "O-1B9378807E2B"
+            ],
+            "discriminating_evidence": "其他DBC定义或独立协议/桩侧记录",
+            "minimum_check": "对协商候选执行多DBC并列定义验证。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "车辆充电状态发生建立和退出。"
+        ],
+        "unsupported_claims": [
+          "完整协商或许可算法已经被观察。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-02",
+            "blocked_claim": "直接充电请求与许可链",
+            "missing_evidence_type": "CONDITION_OR_PERMISSION",
+            "reason": "预期字段恒定且hvState存在复杂轮转。",
+            "minimum_evidence_needed": "经Signal Validation的直接请求/许可或独立协议状态。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "并列审计CP_gbState、Request、Accept和BMS_hvState定义。",
+        "uncertainty": "只能由下游状态间接约束许可存在。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "O-4D428E122092",
+          "O-F2DC88B369D3",
+          "O-B8F1BFF40DB9",
+          "O-1B9378807E2B",
+          "O-9D323E9B10AC",
+          "CT-DCFC-02",
+          "CT-DCFC-04",
+          "ER-02",
+          "ER-03"
+        ]
+      },
+      {
+        "finding_id": "F-03-HV-CURRENT",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-2644736F4A49",
+          "O-8EBD6B851F2B",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "O-54E23D9221B4"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-2644736F4A49",
+          "EA-8EBD6B851F2B",
+          "EA-7980F7D7EA4B",
+          "EA-BFA7B49A9AC9"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-2644736F4A49",
+              "O-8EBD6B851F2B"
+            ],
+            "statement": "BMS和HVP接触器相关状态均发生转换。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "statement": "CP电压、电流及Pack电流均覆盖从背景到显著充电量级再退出的变化范围。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "statement": "这些Observation支持高压和电流建立的阶段关系，但不证明桩内部许可导致该顺序。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "subsystem": "高压执行与电流响应",
+          "control_layer": "EXECUTION_FEEDBACK"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-07",
+          "mapping_status": "SUPPORTED_WITH_SEMANTIC_GAPS"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-03",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "O-2644736F4A49",
+              "O-8EBD6B851F2B"
+            ],
+            "reason": "高压执行状态可见，许可层没有直接证据。"
+          },
+          {
+            "evidence_requirement_ref": "ER-04",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924",
+              "O-54E23D9221B4"
+            ],
+            "reason": "能源量发生相容变化，但不同测量边界和DBC定量有效性尚未验证。"
+          }
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "CONTROL_RELATION_SUPPORTED",
+        "semantic_hypothesis": "CAN内部状态支持接触器/高压阶段与直流电流建立属于同一快充过程。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "A-03",
+            "description": "部分接触器或电流字段可能具有版本、符号、缩放或物理边界偏差。",
+            "compatible_observation_refs": [
+              "O-8EBD6B851F2B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "discriminating_evidence": "同一窗口确定性统计、独立电流字段和桩端测量",
+            "minimum_check": "提取核心Signal在启动至停止窗口内的完整转换和值域。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "高压状态与充电电流响应均被观察。"
+        ],
+        "unsupported_claims": [
+          "已确认完整许可到接触器执行的内部因果链。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-03",
+            "blocked_claim": "桩端Actual与车辆内部许可的完整闭环",
+            "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+            "reason": "没有独立桩端电流和协议记录。",
+            "minimum_evidence_needed": "同步桩屏/订单电量或可信桩端测量。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "执行一次100至280秒核心Signal确定性窗口统计。",
+        "uncertainty": "当前只验证CAN内部状态和能量变化相容。",
+        "confidence": "HIGH",
+        "trace_refs": [
+          "O-2644736F4A49",
+          "O-8EBD6B851F2B",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "CT-DCFC-05",
+          "CT-DCFC-06",
+          "CT-DCFC-07",
+          "ER-03",
+          "ER-04"
+        ]
+      },
+      {
+        "finding_id": "F-04-STEADY-ENERGY",
+        "candidate_refs": [
+          "C0030"
+        ],
+        "observation_refs": [
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "O-54E23D9221B4",
+          "O-40626519D168",
+          "O-2F8692A40C75"
+        ],
+        "relation_refs": [
+          "R-C0030"
+        ],
+        "event_refs": [],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-40626519D168"
+            ],
+            "statement": "SOC字段在采集期间由27.5变化到31.0。"
+          },
+          {
+            "claim_class": "DERIVED",
+            "support_refs": [
+              "R-C0030"
+            ],
+            "statement": "电芯族均值和与Pack电压候选在全采集统计上接近。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924",
+              "O-2F8692A40C75"
+            ],
+            "statement": "存在持续充电区间和能力背景，但初始包尚未确定满足20至30秒稳定条件的窗口。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "subsystem": "能源交叉验证",
+          "control_layer": "PHYSICAL_RESPONSE"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-ENERGY-01",
+          "mapping_status": "PARTIAL"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-04",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924",
+              "O-54E23D9221B4"
+            ],
+            "reason": "方向与量级变化可见，跨边界定量闭环尚未计算。"
+          },
+          {
+            "evidence_requirement_ref": "ER-05",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "reason": "全采集Summary不能证明一个连续稳定窗口。"
+          },
+          {
+            "evidence_requirement_ref": "ER-08",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "O-40626519D168",
+              "O-2F8692A40C75"
+            ],
+            "reason": "SOC和能力候选已覆盖，但能力Signal仍需DBC验证。"
+          }
+        ],
+        "relationship_kind": "PHYSICAL_CLOSURE",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "Pack响应和SOC变化支持能量进入电池，但CP电流与Pack电流不能因DBC名称直接视为同一边界Actual。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "A-04",
+            "description": "CP电流可能存在factor或版本偏差，Pack电流还存在符号定义差异。",
+            "compatible_observation_refs": [
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "discriminating_evidence": "同窗V×I、累计电量及外部桩端读数",
+            "minimum_check": "计算同一稳定窗口内的CP和Pack数值及变异。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "Pack能源相关字段和SOC发生充电方向变化。"
+        ],
+        "unsupported_claims": [
+          "CP侧与Pack侧电流均已确认是同一Actual且可以直接计算效率。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-04",
+            "blocked_claim": "桩端至Pack完整定量能源闭环",
+            "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+            "reason": "没有外部桩端能源证据。",
+            "minimum_evidence_needed": "同步桩端V/I/P或累计量。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "对核心能源Signal执行一次目标窗口统计并比较稳定性。",
+        "uncertainty": "初始包只有全采集统计，无法确定正式稳态窗口。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "O-54E23D9221B4",
+          "O-40626519D168",
+          "O-2F8692A40C75",
+          "R-C0030",
+          "CT-ENERGY-01",
+          "ER-04",
+          "ER-05",
+          "ER-08"
+        ]
+      },
+      {
+        "finding_id": "F-05-STOP-EXIT",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-E56A605C76CE",
+          "O-626BE21E225E",
+          "O-BFA7B49A9AC9",
+          "O-9D323E9B10AC",
+          "O-4D428E122092",
+          "O-30A5630397C5"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-E56A605C76CE",
+          "EA-626BE21E225E"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-BFA7B49A9AC9",
+              "O-9D323E9B10AC",
+              "O-4D428E122092"
+            ],
+            "statement": "电流、车辆充电状态和连接类型均覆盖建立后退出。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-E56A605C76CE"
+            ],
+            "statement": "stopChargeRequest按当前DBC解释发生12次翻转。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-E56A605C76CE",
+              "O-626BE21E225E",
+              "O-BFA7B49A9AC9"
+            ],
+            "statement": "一个停止相关内部状态可能先于电流退出，但需要完整转换时间确认且不能代替人工停止时间。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "subsystem": "停止与连接释放",
+          "control_layer": "REQUEST_CANDIDATE_AND_RESULT"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-10",
+          "mapping_status": "SUPPORTED_WITH_REQUEST_GAP"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-06",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "O-E56A605C76CE",
+              "O-626BE21E225E",
+              "O-BFA7B49A9AC9",
+              "O-9D323E9B10AC"
+            ],
+            "reason": "停止与退出相关状态均存在，但人工停止入口缺失且请求字段周期翻转。"
+          },
+          {
+            "evidence_requirement_ref": "ER-07",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-4D428E122092",
+              "O-30A5630397C5"
+            ],
+            "reason": "连接退出不能证明机械释放与实际拔枪。"
+          }
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "CAN内部存在停止/退出序列，但直接停止Request语义和外部触发均未确认。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "A-05",
+            "description": "周期翻转的stopChargeRequest可能是复用、状态机心跳或错误DBC语义。",
+            "compatible_observation_refs": [
+              "O-E56A605C76CE"
+            ],
+            "discriminating_evidence": "完整转换序列与独立停止事件",
+            "minimum_check": "提取100至280秒内停止候选、电流和状态的确定性转换。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "CAN内部观察到充电状态和电流退出。"
+        ],
+        "unsupported_claims": [
+          "人工停止请求时刻和枪锁释放已经确认。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-05",
+            "blocked_claim": "人工停止请求到电流退出时延",
+            "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+            "reason": "只有计划时间和CAN状态。",
+            "minimum_evidence_needed": "人工停止入口的独立时间戳。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "提取停止阶段核心Signal的完整转换顺序。",
+        "uncertainty": "停止相关DBC字段可能是代理或周期结构。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "O-E56A605C76CE",
+          "O-626BE21E225E",
+          "O-BFA7B49A9AC9",
+          "O-9D323E9B10AC",
+          "CT-DCFC-09",
+          "CT-DCFC-10",
+          "ER-06",
+          "ER-07"
+        ]
+      },
+      {
+        "finding_id": "F-06-VEHICLE-CONDITION",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-CD434F15B123",
+          "O-CA7F125EF12A"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-CA7F125EF12A"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-CD434F15B123"
+            ],
+            "statement": "DI_gear仅解码为SNA。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-CA7F125EF12A"
+            ],
+            "statement": "DI_systemState在UNAVAILABLE、IDLE之间变化后返回UNAVAILABLE。"
+          },
+          {
+            "claim_class": "UNSUPPORTED",
+            "support_refs": [],
+            "statement": "P挡是本次充电许可的充分条件。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "subsystem": "整车条件背景",
+          "control_layer": "CONDITION"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-03",
+          "mapping_status": "INSUFFICIENT"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-09",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-CD434F15B123",
+              "O-CA7F125EF12A"
+            ],
+            "reason": "挡位无有效DBC证据，系统状态只能作为共存背景。"
+          }
+        ],
+        "relationship_kind": "CONDITION_PERMISSION",
+        "causality_status": "NOT_APPLICABLE",
+        "semantic_hypothesis": "当前数据只能提供部分整车状态背景，不能恢复完整充电状态门。",
+        "alternative_explanations": [],
+        "model_interaction": "INSUFFICIENT_TO_MAP",
+        "supported_claims": [
+          "存在可见整车系统状态变化。"
+        ],
+        "unsupported_claims": [
+          "已确认P挡许可规则。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-06",
+            "blocked_claim": "P挡及整车状态门",
+            "missing_evidence_type": "DBC_DEFINITION",
+            "reason": "DI_gear为SNA。",
+            "minimum_evidence_needed": "可靠挡位定义或独立车辆状态记录。",
+            "priority": "P1"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "验证本采集域DI_gear定义，不从充电成功反推挡位许可。",
+        "uncertainty": "整车状态仅可部分观察。",
+        "confidence": "HIGH",
+        "trace_refs": [
+          "O-CD434F15B123",
+          "O-CA7F125EF12A",
+          "CT-DCFC-03",
+          "ER-09"
+        ]
+      },
+      {
+        "finding_id": "F-07-THERMAL-CONFLICT",
+        "candidate_refs": [
+          "C0002",
+          "C0003"
+        ],
+        "observation_refs": [
+          "O-6B9B0785AEA9"
+        ],
+        "relation_refs": [
+          "R-C0002",
+          "R-C0003"
+        ],
+        "event_refs": [
+          "EA-6B9B0785AEA9"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-6B9B0785AEA9"
+            ],
+            "statement": "BMS_modelTMax由33.5变化到35.0 DegC。"
+          },
+          {
+            "claim_class": "DERIVED",
+            "support_refs": [
+              "R-C0002",
+              "R-C0003"
+            ],
+            "statement": "其他温度Min/Max字段存在大量同帧顺序冲突。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-6B9B0785AEA9",
+              "R-C0002",
+              "R-C0003"
+            ],
+            "statement": "可观察到热状态变化候选，但不足以建立请求—执行—温度响应闭环。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "动力电池热管理",
+          "subsystem": "快充热状态副线",
+          "control_layer": "STATE_AND_FEEDBACK"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-THERMAL-01",
+          "mapping_status": "PARTIAL_WITH_CONFLICT"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-10",
+            "status": "CONTRADICTION",
+            "basis_refs": [
+              "O-6B9B0785AEA9",
+              "R-C0002",
+              "R-C0003"
+            ],
+            "reason": "存在温度变化候选，但其他温度字段物理顺序冲突且没有完整执行反馈。"
+          }
+        ],
+        "relationship_kind": "NO_SAFE_RELATIONSHIP",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "BMS_modelTMax可能反映充电期间Pack热状态上升，但不能用冲突字段补齐热管理链。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "A-07",
+            "description": "温度变化可能是有效Pack模型温度，也可能受DBC版本、MUX或字段角色错误影响。",
+            "compatible_observation_refs": [
+              "O-6B9B0785AEA9"
+            ],
+            "discriminating_evidence": "外部/诊断温度和执行器Signal Validation",
+            "minimum_check": "同步可信温度并验证热管理请求及执行字段。"
+          }
+        ],
+        "model_interaction": "CHALLENGES_CURRENT_MODEL",
+        "supported_claims": [
+          "至少一个温度候选随采集变化。"
+        ],
+        "unsupported_claims": [
+          "快充热管理请求—执行—温度闭环已经建立。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-07",
+            "blocked_claim": "完整热管理副线",
+            "missing_evidence_type": "SIGNAL_VALIDATION",
+            "reason": "温度定义冲突且执行器语义未验证。",
+            "minimum_evidence_needed": "可信温度源和至少一组请求/Actual执行反馈。",
+            "priority": "P1"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "保留热管理副线为不充分，不扩展本次Follow-up。",
+        "uncertainty": "温度字段语义成熟度不一致。",
+        "confidence": "HIGH",
+        "trace_refs": [
+          "O-6B9B0785AEA9",
+          "C0002",
+          "C0003",
+          "R-C0002",
+          "R-C0003",
+          "CT-THERMAL-01",
+          "ER-10"
+        ]
+      },
+      {
+        "finding_id": "F-08-RESIDUAL-UNKNOWN",
+        "candidate_refs": [
+          "C0047",
+          "C0048",
+          "C0077",
+          "C0092"
+        ],
+        "observation_refs": [],
+        "relation_refs": [],
+        "event_refs": [],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "C0047",
+              "C0048",
+              "C0077",
+              "C0092"
+            ],
+            "statement": "输入包含已匹配报文残余bit和未匹配报文的周期/低离散度候选。"
+          },
+          {
+            "claim_class": "UNSUPPORTED",
+            "support_refs": [],
+            "statement": "这些Unknown/Residual Candidate属于快充许可或协议Signal。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "UNKNOWN",
+          "subsystem": "UNKNOWN",
+          "control_layer": "UNKNOWN"
+        },
+        "control_tree_mapping": {
+          "node_ref": "NO_SAFE_MAPPING",
+          "mapping_status": "NO_SAFE_MAPPING"
+        },
+        "evidence_requirement_mapping": [],
+        "relationship_kind": "NO_SAFE_RELATIONSHIP",
+        "causality_status": "NOT_APPLICABLE",
+        "semantic_hypothesis": "当前没有足够事件对齐或语义证据将这些Candidate安全映射到快充Control Tree。",
+        "alternative_explanations": [],
+        "model_interaction": "INSUFFICIENT_TO_MAP",
+        "supported_claims": [
+          "Residual和Unknown Observation Space保持开放。"
+        ],
+        "unsupported_claims": [
+          "Unknown bit可依据本次单次采集直接命名。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-08",
+            "blocked_claim": "Unknown Candidate语义命名",
+            "missing_evidence_type": "REPEAT_OBSERVATION",
+            "reason": "候选缺少独立事件与对照条件。",
+            "minimum_evidence_needed": "重复动作、负对照和原始bit事件窗口。",
+            "priority": "P2"
+          }
+        ],
+        "signal_validation_needed": false,
+        "minimum_next_check": "不在本轮强制映射，保留原始引用供后续事件验证。",
+        "uncertainty": "语义未知。",
+        "confidence": "HIGH",
+        "trace_refs": [
+          "C0047",
+          "C0048",
+          "C0077",
+          "C0092"
+        ]
+      }
+    ],
+    "validation_requests": [
+      {
+        "request_id": "VR-01",
+        "operation": "TARGETED_WINDOW_STATS",
+        "input_refs": [
+          "O-4D428E122092",
+          "O-9D323E9B10AC",
+          "O-2644736F4A49",
+          "O-8EBD6B851F2B",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "O-54E23D9221B4",
+          "O-40626519D168",
+          "O-2F8692A40C75",
+          "O-E56A605C76CE",
+          "O-626BE21E225E",
+          "O-30A5630397C5"
+        ],
+        "parameters": {
+          "start_s": 100.0,
+          "end_s": 280.0
+        },
+        "expected_decision": "确定CAN内部充电建立、持续和退出顺序，并判断是否存在可用稳定窗口；不计算人工操作响应时延。"
+      }
+    ]
+  },
+  "follow_up_result": {
+    "request_id": "VR-01",
+    "operation": "TARGETED_WINDOW_STATS",
+    "result_id": "FU-5284974017F34272",
+    "method": "Fresh ASC decode using the current DBC; bounded inclusive time window; transitions capped at 32 per signal.",
+    "parameters": {
+      "start_s": 100.0,
+      "end_s": 280.0
+    },
+    "results": [
+      {
+        "observation_ref": "O-4D428E122092",
+        "signal_name": "CP_evseChargeType",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 1800,
+        "first_value": "DC_CHARGER_PRESENT",
+        "last_value": "NO_CHARGER_PRESENT",
+        "minimum": null,
+        "maximum": null,
+        "mean": null,
+        "transitions": [
+          {
+            "can_time_s": 273.5338,
+            "value": "NO_CHARGER_PRESENT",
+            "raw_ref": {
+              "line_number": 634387,
+              "time_s": 273.5338,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "04 00 35 00 00 00 00 00"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209446,
+          "time_s": 100.022,
+          "bus_key": "ch1:0x21D",
+          "dlc": 8,
+          "raw_hex": "0c 00 33 00 40 01 00 00"
+        },
+        "last_raw_ref": {
+          "line_number": 647044,
+          "time_s": 279.9343,
+          "bus_key": "ch1:0x21D",
+          "dlc": 8,
+          "raw_hex": "04 00 35 00 00 00 00 00"
+        }
+      },
+      {
+        "observation_ref": "O-9D323E9B10AC",
+        "signal_name": "BMS_uiChargeStatus",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 1800,
+        "first_value": "ABOUT_TO_CHARGE",
+        "last_value": "ABOUT_TO_CHARGE",
+        "minimum": null,
+        "maximum": null,
+        "mean": null,
+        "transitions": [
+          {
+            "can_time_s": 115.3922,
+            "value": "CHARGING",
+            "raw_ref": {
+              "line_number": 240001,
+              "time_s": 115.3922,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 14 00 40 83 ff 57 43"
+            }
+          },
+          {
+            "can_time_s": 246.3925,
+            "value": "ABOUT_TO_CHARGE",
+            "raw_ref": {
+              "line_number": 578355,
+              "time_s": 246.3925,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "58 2c 9c 00 82 ff 57 62"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209596,
+          "time_s": 100.092,
+          "bus_key": "ch1:0x212",
+          "dlc": 8,
+          "raw_hex": "58 2c 00 00 82 ff 57 62"
+        },
+        "last_raw_ref": {
+          "line_number": 647169,
+          "time_s": 279.9962,
+          "bus_key": "ch1:0x212",
+          "dlc": 8,
+          "raw_hex": "58 04 00 00 82 ff 77 62"
+        }
+      },
+      {
+        "observation_ref": "O-2644736F4A49",
+        "signal_name": "BMS_contactorState",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 1800,
+        "first_value": "CLOSED",
+        "last_value": "CLOSED",
+        "minimum": null,
+        "maximum": null,
+        "mean": null,
+        "transitions": [
+          {
+            "can_time_s": 133.3907,
+            "value": "OPENING",
+            "raw_ref": {
+              "line_number": 276297,
+              "time_s": 133.3907,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 12 00 40 83 ff 57 23"
+            }
+          },
+          {
+            "can_time_s": 133.7898,
+            "value": "OPEN",
+            "raw_ref": {
+              "line_number": 277088,
+              "time_s": 133.7898,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 11 00 40 83 ff 57 03"
+            }
+          },
+          {
+            "can_time_s": 134.7894,
+            "value": "CLOSING",
+            "raw_ref": {
+              "line_number": 279102,
+              "time_s": 134.7894,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 13 00 40 83 ff 57 13"
+            }
+          },
+          {
+            "can_time_s": 136.4927,
+            "value": "CLOSED",
+            "raw_ref": {
+              "line_number": 282544,
+              "time_s": 136.4927,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 14 00 40 83 ff 57 43"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209596,
+          "time_s": 100.092,
+          "bus_key": "ch1:0x212",
+          "dlc": 8,
+          "raw_hex": "58 2c 00 00 82 ff 57 62"
+        },
+        "last_raw_ref": {
+          "line_number": 647169,
+          "time_s": 279.9962,
+          "bus_key": "ch1:0x212",
+          "dlc": 8,
+          "raw_hex": "58 04 00 00 82 ff 77 62"
+        }
+      },
+      {
+        "observation_ref": "O-8EBD6B851F2B",
+        "signal_name": "HVP_fcContactorSetState",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 180,
+        "first_value": "OPEN",
+        "last_value": "OPEN",
+        "minimum": null,
+        "maximum": null,
+        "mean": null,
+        "transitions": [
+          {
+            "can_time_s": 134.8465,
+            "value": "CLOSED",
+            "raw_ref": {
+              "line_number": 279219,
+              "time_s": 134.8465,
+              "bus_key": "ch1:0x20A",
+              "dlc": 6,
+              "raw_hex": "11 62 2e 42 18 21"
+            }
+          },
+          {
+            "can_time_s": 246.8477,
+            "value": "OPEN",
+            "raw_ref": {
+              "line_number": 579549,
+              "time_s": 246.8477,
+              "bus_key": "ch1:0x20A",
+              "dlc": 6,
+              "raw_hex": "f6 15 09 82 18 01"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 211082,
+          "time_s": 100.8449,
+          "bus_key": "ch1:0x20A",
+          "dlc": 6,
+          "raw_hex": "f6 15 09 82 18 01"
+        },
+        "last_raw_ref": {
+          "line_number": 646861,
+          "time_s": 279.8477,
+          "bus_key": "ch1:0x20A",
+          "dlc": 6,
+          "raw_hex": "f6 15 09 82 18 01"
+        }
+      },
+      {
+        "observation_ref": "O-7980F7D7EA4B",
+        "signal_name": "CP_evseOutputDcVoltage",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 1800,
+        "first_value": "0.0",
+        "last_value": "0.0",
+        "minimum": 0.0,
+        "maximum": 365.47857799999997,
+        "mean": 214.34838456388886,
+        "transitions": [
+          {
+            "can_time_s": 140.0275,
+            "value": "346.87505919999995",
+            "raw_ref": {
+              "line_number": 289691,
+              "time_s": 140.0275,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "00 00 80 12 00"
+            }
+          },
+          {
+            "can_time_s": 141.3271,
+            "value": "347.31451239999996",
+            "raw_ref": {
+              "line_number": 292373,
+              "time_s": 141.3271,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "00 00 86 12 00"
+            }
+          },
+          {
+            "can_time_s": 144.0276,
+            "value": "349.29205179999997",
+            "raw_ref": {
+              "line_number": 299438,
+              "time_s": 144.0276,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "00 00 a1 12 00"
+            }
+          },
+          {
+            "can_time_s": 146.6272,
+            "value": "352.3682242",
+            "raw_ref": {
+              "line_number": 306365,
+              "time_s": 146.6272,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "b4 01 cb 12 00"
+            }
+          },
+          {
+            "can_time_s": 149.4276,
+            "value": "355.5176388",
+            "raw_ref": {
+              "line_number": 313782,
+              "time_s": 149.4276,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "fb 02 f6 12 00"
+            }
+          },
+          {
+            "can_time_s": 152.228,
+            "value": "358.37408459999995",
+            "raw_ref": {
+              "line_number": 321226,
+              "time_s": 152.228,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "3a 04 1d 13 00"
+            }
+          },
+          {
+            "can_time_s": 154.8283,
+            "value": "361.08404599999994",
+            "raw_ref": {
+              "line_number": 328137,
+              "time_s": 154.8283,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "4b 05 42 13 00"
+            }
+          },
+          {
+            "can_time_s": 157.5278,
+            "value": "363.57428079999994",
+            "raw_ref": {
+              "line_number": 335308,
+              "time_s": 157.5278,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "43 06 64 13 00"
+            }
+          },
+          {
+            "can_time_s": 160.328,
+            "value": "364.59967159999997",
+            "raw_ref": {
+              "line_number": 342749,
+              "time_s": 160.328,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "19 07 72 13 00"
+            }
+          },
+          {
+            "can_time_s": 163.0286,
+            "value": "364.37994499999996",
+            "raw_ref": {
+              "line_number": 349930,
+              "time_s": 163.0286,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "e3 06 6f 13 00"
+            }
+          },
+          {
+            "can_time_s": 165.6286,
+            "value": "364.67291379999995",
+            "raw_ref": {
+              "line_number": 356849,
+              "time_s": 165.6286,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d7 06 73 13 00"
+            }
+          },
+          {
+            "can_time_s": 168.4284,
+            "value": "364.89264039999995",
+            "raw_ref": {
+              "line_number": 364254,
+              "time_s": 168.4284,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d6 06 76 13 00"
+            }
+          },
+          {
+            "can_time_s": 171.1295,
+            "value": "364.9658826",
+            "raw_ref": {
+              "line_number": 371596,
+              "time_s": 171.1295,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d6 06 77 13 00"
+            }
+          },
+          {
+            "can_time_s": 173.7303,
+            "value": "365.11236699999995",
+            "raw_ref": {
+              "line_number": 378710,
+              "time_s": 173.7303,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d5 06 79 13 00"
+            }
+          },
+          {
+            "can_time_s": 179.1291,
+            "value": "365.1856092",
+            "raw_ref": {
+              "line_number": 393693,
+              "time_s": 179.1291,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d5 06 7a 13 00"
+            }
+          },
+          {
+            "can_time_s": 181.9292,
+            "value": "365.33209359999995",
+            "raw_ref": {
+              "line_number": 401466,
+              "time_s": 181.9292,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d5 06 7c 13 00"
+            }
+          },
+          {
+            "can_time_s": 187.2289,
+            "value": "365.4053358",
+            "raw_ref": {
+              "line_number": 416158,
+              "time_s": 187.2289,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d5 06 7d 13 00"
+            }
+          },
+          {
+            "can_time_s": 192.7317,
+            "value": "365.47857799999997",
+            "raw_ref": {
+              "line_number": 431429,
+              "time_s": 192.7317,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d5 06 7e 13 00"
+            }
+          },
+          {
+            "can_time_s": 208.8314,
+            "value": "365.4053358",
+            "raw_ref": {
+              "line_number": 476101,
+              "time_s": 208.8314,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d5 06 7d 13 00"
+            }
+          },
+          {
+            "can_time_s": 211.6312,
+            "value": "365.47857799999997",
+            "raw_ref": {
+              "line_number": 483892,
+              "time_s": 211.6312,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d5 06 7e 13 00"
+            }
+          },
+          {
+            "can_time_s": 233.2322,
+            "value": "365.4053358",
+            "raw_ref": {
+              "line_number": 543175,
+              "time_s": 233.2322,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d5 06 7d 13 00"
+            }
+          },
+          {
+            "can_time_s": 246.2332,
+            "value": "0.0",
+            "raw_ref": {
+              "line_number": 577929,
+              "time_s": 246.2332,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "00 00 00 00 00"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209453,
+          "time_s": 100.0234,
+          "bus_key": "ch1:0x29D",
+          "dlc": 5,
+          "raw_hex": "00 00 00 00 00"
+        },
+        "last_raw_ref": {
+          "line_number": 647052,
+          "time_s": 279.9359,
+          "bus_key": "ch1:0x29D",
+          "dlc": 5,
+          "raw_hex": "00 00 00 20 00"
+        }
+      },
+      {
+        "observation_ref": "O-BFA7B49A9AC9",
+        "signal_name": "CP_evseOutputDcCurrent",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 1800,
+        "first_value": "0.0",
+        "last_value": "0.0",
+        "minimum": 0.0,
+        "maximum": 133.0892539,
+        "mean": 68.33998495222222,
+        "transitions": [
+          {
+            "can_time_s": 145.0277,
+            "value": "31.9355612",
+            "raw_ref": {
+              "line_number": 302096,
+              "time_s": 145.0277,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "b4 01 a1 12 00"
+            }
+          },
+          {
+            "can_time_s": 147.5274,
+            "value": "55.8872321",
+            "raw_ref": {
+              "line_number": 308731,
+              "time_s": 147.5274,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "fb 02 cb 12 00"
+            }
+          },
+          {
+            "can_time_s": 150.3273,
+            "value": "79.2529294",
+            "raw_ref": {
+              "line_number": 316171,
+              "time_s": 150.3273,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "3a 04 f6 12 00"
+            }
+          },
+          {
+            "can_time_s": 153.0284,
+            "value": "99.2492785",
+            "raw_ref": {
+              "line_number": 323355,
+              "time_s": 153.0284,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "4b 05 1d 13 00"
+            }
+          },
+          {
+            "can_time_s": 155.7297,
+            "value": "117.4144601",
+            "raw_ref": {
+              "line_number": 330534,
+              "time_s": 155.7297,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "43 06 42 13 00"
+            }
+          },
+          {
+            "can_time_s": 158.4278,
+            "value": "133.0892539",
+            "raw_ref": {
+              "line_number": 337698,
+              "time_s": 158.4278,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "19 07 64 13 00"
+            }
+          },
+          {
+            "can_time_s": 161.1286,
+            "value": "129.1339321",
+            "raw_ref": {
+              "line_number": 344876,
+              "time_s": 161.1286,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "e3 06 72 13 00"
+            }
+          },
+          {
+            "can_time_s": 163.9284,
+            "value": "128.2549717",
+            "raw_ref": {
+              "line_number": 352322,
+              "time_s": 163.9284,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d7 06 6f 13 00"
+            }
+          },
+          {
+            "can_time_s": 166.5286,
+            "value": "128.181725",
+            "raw_ref": {
+              "line_number": 359223,
+              "time_s": 166.5286,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d6 06 73 13 00"
+            }
+          },
+          {
+            "can_time_s": 171.9287,
+            "value": "128.1084783",
+            "raw_ref": {
+              "line_number": 373786,
+              "time_s": 171.9287,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d5 06 77 13 00"
+            }
+          },
+          {
+            "can_time_s": 234.2322,
+            "value": "128.181725",
+            "raw_ref": {
+              "line_number": 545831,
+              "time_s": 234.2322,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "d6 06 7d 13 00"
+            }
+          },
+          {
+            "can_time_s": 246.2332,
+            "value": "0.0",
+            "raw_ref": {
+              "line_number": 577929,
+              "time_s": 246.2332,
+              "bus_key": "ch1:0x29D",
+              "dlc": 5,
+              "raw_hex": "00 00 00 00 00"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209453,
+          "time_s": 100.0234,
+          "bus_key": "ch1:0x29D",
+          "dlc": 5,
+          "raw_hex": "00 00 00 00 00"
+        },
+        "last_raw_ref": {
+          "line_number": 647052,
+          "time_s": 279.9359,
+          "bus_key": "ch1:0x29D",
+          "dlc": 5,
+          "raw_hex": "00 00 00 20 00"
+        }
+      },
+      {
+        "observation_ref": "O-CA4507EB8924",
+        "signal_name": "BMS_packCurrent",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 18000,
+        "first_value": "0.6000000000000001",
+        "last_value": "0.4",
+        "minimum": -219.60000000000002,
+        "maximum": 27.8,
+        "mean": -105.92135555555556,
+        "transitions": [
+          {
+            "can_time_s": 100.0142,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 209432,
+              "time_s": 100.0142,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a2 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.0645,
+            "value": "0.8",
+            "raw_ref": {
+              "line_number": 209552,
+              "time_s": 100.0645,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a9 87 f8 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.0742,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 209565,
+              "time_s": 100.0742,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a7 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.1542,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 209717,
+              "time_s": 100.1542,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a3 87 fa ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.1644,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 209738,
+              "time_s": 100.1644,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9d 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.2243,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 209851,
+              "time_s": 100.2243,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "94 87 fa ff 2e 40"
+            }
+          },
+          {
+            "can_time_s": 100.2342,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 209878,
+              "time_s": 100.2342,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9c 87 f9 ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.4342,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 210274,
+              "time_s": 100.4342,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a5 87 fa ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.4442,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 210299,
+              "time_s": 100.4442,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "ad 87 f9 ff 2d 40"
+            }
+          },
+          {
+            "can_time_s": 100.5543,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 210524,
+              "time_s": 100.5543,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "93 87 fa ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.5642,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 210544,
+              "time_s": 100.5642,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a2 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.5944,
+            "value": "0.8",
+            "raw_ref": {
+              "line_number": 210601,
+              "time_s": 100.5944,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a3 87 f8 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.6042,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 210615,
+              "time_s": 100.6042,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a9 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.6342,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 210672,
+              "time_s": 100.6342,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "ac 87 fa ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.6442,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 210695,
+              "time_s": 100.6442,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a2 87 f9 ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.6642,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 210733,
+              "time_s": 100.6642,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a3 87 fa ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.6842,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 210768,
+              "time_s": 100.6842,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9a 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.7842,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 210962,
+              "time_s": 100.7842,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a6 87 fa ff 2d 40"
+            }
+          },
+          {
+            "can_time_s": 100.7945,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 210984,
+              "time_s": 100.7945,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a5 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.8442,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 211080,
+              "time_s": 100.8442,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "b0 87 fa ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.8643,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 211130,
+              "time_s": 100.8643,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a8 87 f9 ff 2d 40"
+            }
+          },
+          {
+            "can_time_s": 100.9742,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 211342,
+              "time_s": 100.9742,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a4 87 fa ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.9842,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 211367,
+              "time_s": 100.9842,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a6 87 f9 ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.9946,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 211389,
+              "time_s": 100.9946,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a3 87 fa ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 101.0042,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 211403,
+              "time_s": 101.0042,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "98 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 101.0342,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 211465,
+              "time_s": 101.0342,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "94 87 fa ff 2e 40"
+            }
+          },
+          {
+            "can_time_s": 101.0442,
+            "value": "0.8",
+            "raw_ref": {
+              "line_number": 211493,
+              "time_s": 101.0442,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "aa 87 f8 ff 28 40"
+            }
+          },
+          {
+            "can_time_s": 101.0543,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 211509,
+              "time_s": 101.0543,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9c 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 101.1042,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 211604,
+              "time_s": 101.1042,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a0 87 fa ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 101.1342,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 211662,
+              "time_s": 101.1342,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a7 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 101.1442,
+            "value": "0.6000000000000001",
+            "raw_ref": {
+              "line_number": 211686,
+              "time_s": 101.1442,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "ab 87 fa ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 101.1543,
+            "value": "0.7000000000000001",
+            "raw_ref": {
+              "line_number": 211700,
+              "time_s": 101.1543,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9b 87 f9 ff 2a 40"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209420,
+          "time_s": 100.0042,
+          "bus_key": "ch1:0x132",
+          "dlc": 6,
+          "raw_hex": "a5 87 fa ff 2d 40"
+        },
+        "last_raw_ref": {
+          "line_number": 647178,
+          "time_s": 279.9982,
+          "bus_key": "ch1:0x132",
+          "dlc": 6,
+          "raw_hex": "57 89 fc ff 32 40"
+        }
+      },
+      {
+        "observation_ref": "O-54E23D9221B4",
+        "signal_name": "BMS_packVoltage",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 18000,
+        "first_value": "347.25",
+        "last_value": "351.59000000000003",
+        "minimum": 8.17,
+        "maximum": 365.25,
+        "mean": 353.71781111111113,
+        "transitions": [
+          {
+            "can_time_s": 100.0142,
+            "value": "347.22",
+            "raw_ref": {
+              "line_number": 209432,
+              "time_s": 100.0142,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a2 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.0243,
+            "value": "347.23",
+            "raw_ref": {
+              "line_number": 209457,
+              "time_s": 100.0243,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a3 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.0342,
+            "value": "347.26",
+            "raw_ref": {
+              "line_number": 209481,
+              "time_s": 100.0342,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a6 87 f9 ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.0443,
+            "value": "347.2",
+            "raw_ref": {
+              "line_number": 209510,
+              "time_s": 100.0443,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a0 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.0542,
+            "value": "347.11",
+            "raw_ref": {
+              "line_number": 209529,
+              "time_s": 100.0542,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "97 87 f9 ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.0645,
+            "value": "347.29",
+            "raw_ref": {
+              "line_number": 209552,
+              "time_s": 100.0645,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a9 87 f8 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.0742,
+            "value": "347.27",
+            "raw_ref": {
+              "line_number": 209565,
+              "time_s": 100.0742,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a7 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.0842,
+            "value": "347.22",
+            "raw_ref": {
+              "line_number": 209584,
+              "time_s": 100.0842,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a2 87 f9 ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.0944,
+            "value": "347.35",
+            "raw_ref": {
+              "line_number": 209603,
+              "time_s": 100.0944,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "af 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.1042,
+            "value": "347.27",
+            "raw_ref": {
+              "line_number": 209620,
+              "time_s": 100.1042,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a7 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.1142,
+            "value": "347.15000000000003",
+            "raw_ref": {
+              "line_number": 209633,
+              "time_s": 100.1142,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9b 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.1243,
+            "value": "347.08",
+            "raw_ref": {
+              "line_number": 209656,
+              "time_s": 100.1243,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "94 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.1342,
+            "value": "347.1",
+            "raw_ref": {
+              "line_number": 209677,
+              "time_s": 100.1342,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "96 87 f9 ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.1442,
+            "value": "347.21",
+            "raw_ref": {
+              "line_number": 209703,
+              "time_s": 100.1442,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a1 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.1542,
+            "value": "347.23",
+            "raw_ref": {
+              "line_number": 209717,
+              "time_s": 100.1542,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a3 87 fa ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.1644,
+            "value": "347.17",
+            "raw_ref": {
+              "line_number": 209738,
+              "time_s": 100.1644,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9d 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.1742,
+            "value": "347.26",
+            "raw_ref": {
+              "line_number": 209755,
+              "time_s": 100.1742,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a6 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.1842,
+            "value": "347.08",
+            "raw_ref": {
+              "line_number": 209777,
+              "time_s": 100.1842,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "94 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.1944,
+            "value": "347.21",
+            "raw_ref": {
+              "line_number": 209800,
+              "time_s": 100.1944,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a1 87 f9 ff 28 40"
+            }
+          },
+          {
+            "can_time_s": 100.2042,
+            "value": "347.3",
+            "raw_ref": {
+              "line_number": 209815,
+              "time_s": 100.2042,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "aa 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.2142,
+            "value": "347.27",
+            "raw_ref": {
+              "line_number": 209826,
+              "time_s": 100.2142,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a7 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.2243,
+            "value": "347.08",
+            "raw_ref": {
+              "line_number": 209851,
+              "time_s": 100.2243,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "94 87 fa ff 2e 40"
+            }
+          },
+          {
+            "can_time_s": 100.2342,
+            "value": "347.16",
+            "raw_ref": {
+              "line_number": 209878,
+              "time_s": 100.2342,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9c 87 f9 ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.2442,
+            "value": "347.23",
+            "raw_ref": {
+              "line_number": 209904,
+              "time_s": 100.2442,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a3 87 f9 ff 28 40"
+            }
+          },
+          {
+            "can_time_s": 100.2542,
+            "value": "347.2",
+            "raw_ref": {
+              "line_number": 209919,
+              "time_s": 100.2542,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a0 87 f9 ff 2d 40"
+            }
+          },
+          {
+            "can_time_s": 100.2644,
+            "value": "347.24",
+            "raw_ref": {
+              "line_number": 209944,
+              "time_s": 100.2644,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a4 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.2742,
+            "value": "347.44",
+            "raw_ref": {
+              "line_number": 209958,
+              "time_s": 100.2742,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "b8 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.2842,
+            "value": "347.24",
+            "raw_ref": {
+              "line_number": 209976,
+              "time_s": 100.2842,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "a4 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.3042,
+            "value": "347.34000000000003",
+            "raw_ref": {
+              "line_number": 210015,
+              "time_s": 100.3042,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "ae 87 f9 ff 2c 40"
+            }
+          },
+          {
+            "can_time_s": 100.3142,
+            "value": "347.14",
+            "raw_ref": {
+              "line_number": 210028,
+              "time_s": 100.3142,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9a 87 f9 ff 29 40"
+            }
+          },
+          {
+            "can_time_s": 100.3243,
+            "value": "347.18",
+            "raw_ref": {
+              "line_number": 210052,
+              "time_s": 100.3243,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9e 87 f9 ff 2a 40"
+            }
+          },
+          {
+            "can_time_s": 100.3342,
+            "value": "347.19",
+            "raw_ref": {
+              "line_number": 210074,
+              "time_s": 100.3342,
+              "bus_key": "ch1:0x132",
+              "dlc": 6,
+              "raw_hex": "9f 87 f9 ff 2c 40"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209420,
+          "time_s": 100.0042,
+          "bus_key": "ch1:0x132",
+          "dlc": 6,
+          "raw_hex": "a5 87 fa ff 2d 40"
+        },
+        "last_raw_ref": {
+          "line_number": 647178,
+          "time_s": 279.9982,
+          "bus_key": "ch1:0x132",
+          "dlc": 6,
+          "raw_hex": "57 89 fc ff 32 40"
+        }
+      },
+      {
+        "observation_ref": "O-40626519D168",
+        "signal_name": "BMS_socUI",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 1800,
+        "first_value": "27.5",
+        "last_value": "31.0",
+        "minimum": 27.5,
+        "maximum": 31.0,
+        "mean": 29.021,
+        "transitions": [
+          {
+            "can_time_s": 160.1902,
+            "value": "27.700000000000003",
+            "raw_ref": {
+              "line_number": 342391,
+              "time_s": 160.1902,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "14 55 e4 92 45 01 7b 06"
+            }
+          },
+          {
+            "can_time_s": 164.1915,
+            "value": "28.0",
+            "raw_ref": {
+              "line_number": 353020,
+              "time_s": 164.1915,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "15 61 04 13 46 01 82 06"
+            }
+          },
+          {
+            "can_time_s": 172.1904,
+            "value": "28.200000000000003",
+            "raw_ref": {
+              "line_number": 374493,
+              "time_s": 172.1904,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "18 69 34 d3 46 01 86 06"
+            }
+          },
+          {
+            "can_time_s": 176.1922,
+            "value": "28.5",
+            "raw_ref": {
+              "line_number": 385540,
+              "time_s": 176.1922,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "1a 75 44 13 47 01 86 06"
+            }
+          },
+          {
+            "can_time_s": 184.1912,
+            "value": "28.700000000000003",
+            "raw_ref": {
+              "line_number": 407737,
+              "time_s": 184.1912,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "1d 7d 74 d3 47 01 87 06"
+            }
+          },
+          {
+            "can_time_s": 192.1921,
+            "value": "29.0",
+            "raw_ref": {
+              "line_number": 429930,
+              "time_s": 192.1921,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "20 89 a4 93 48 01 88 06"
+            }
+          },
+          {
+            "can_time_s": 196.1928,
+            "value": "29.200000000000003",
+            "raw_ref": {
+              "line_number": 441031,
+              "time_s": 196.1928,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "21 91 c4 d3 48 01 88 06"
+            }
+          },
+          {
+            "can_time_s": 204.191,
+            "value": "29.5",
+            "raw_ref": {
+              "line_number": 463227,
+              "time_s": 204.191,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "24 9d f4 93 49 01 87 06"
+            }
+          },
+          {
+            "can_time_s": 212.1916,
+            "value": "29.700000000000003",
+            "raw_ref": {
+              "line_number": 485437,
+              "time_s": 212.1916,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "27 a5 24 54 4a 01 88 06"
+            }
+          },
+          {
+            "can_time_s": 216.1913,
+            "value": "30.0",
+            "raw_ref": {
+              "line_number": 496534,
+              "time_s": 216.1913,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "28 b1 34 d4 4a 01 88 06"
+            }
+          },
+          {
+            "can_time_s": 224.2924,
+            "value": "30.200000000000003",
+            "raw_ref": {
+              "line_number": 519005,
+              "time_s": 224.2924,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "2b b9 64 54 4b 01 88 06"
+            }
+          },
+          {
+            "can_time_s": 232.6933,
+            "value": "30.5",
+            "raw_ref": {
+              "line_number": 541769,
+              "time_s": 232.6933,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "2e c5 94 54 4c 01 88 06"
+            }
+          },
+          {
+            "can_time_s": 236.8943,
+            "value": "30.700000000000003",
+            "raw_ref": {
+              "line_number": 552927,
+              "time_s": 236.8943,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "30 cd a4 94 4c 01 88 06"
+            }
+          },
+          {
+            "can_time_s": 245.3936,
+            "value": "31.0",
+            "raw_ref": {
+              "line_number": 575600,
+              "time_s": 245.3936,
+              "bus_key": "ch1:0x292",
+              "dlc": 8,
+              "raw_hex": "33 d9 d4 54 4d 01 87 06"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209598,
+          "time_s": 100.0925,
+          "bus_key": "ch1:0x292",
+          "dlc": 8,
+          "raw_hex": "0f 4d a4 92 44 01 00 00"
+        },
+        "last_raw_ref": {
+          "line_number": 647171,
+          "time_s": 279.9967,
+          "bus_key": "ch1:0x292",
+          "dlc": 8,
+          "raw_hex": "33 d9 d4 54 4d 01 00 00"
+        }
+      },
+      {
+        "observation_ref": "O-2F8692A40C75",
+        "signal_name": "BMS_chgPowerAvailable",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 1800,
+        "first_value": "255.75",
+        "last_value": "255.75",
+        "minimum": 21.5,
+        "maximum": 255.75,
+        "mean": 125.80958333333334,
+        "transitions": [
+          {
+            "can_time_s": 140.0893,
+            "value": "22.0",
+            "raw_ref": {
+              "line_number": 289817,
+              "time_s": 140.0893,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 07 40 03 2c 52 53"
+            }
+          },
+          {
+            "can_time_s": 141.5878,
+            "value": "21.75",
+            "raw_ref": {
+              "line_number": 292986,
+              "time_s": 141.5878,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 1c 06 40 83 2b 52 53"
+            }
+          },
+          {
+            "can_time_s": 141.6896,
+            "value": "22.0",
+            "raw_ref": {
+              "line_number": 293247,
+              "time_s": 141.6896,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 05 40 03 2c 52 53"
+            }
+          },
+          {
+            "can_time_s": 141.7903,
+            "value": "21.75",
+            "raw_ref": {
+              "line_number": 293510,
+              "time_s": 141.7903,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 9c 04 40 83 2b 52 53"
+            }
+          },
+          {
+            "can_time_s": 141.8912,
+            "value": "22.0",
+            "raw_ref": {
+              "line_number": 293777,
+              "time_s": 141.8912,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 1c 04 40 03 2c 52 53"
+            }
+          },
+          {
+            "can_time_s": 142.0894,
+            "value": "21.75",
+            "raw_ref": {
+              "line_number": 294301,
+              "time_s": 142.0894,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 dc 02 40 83 2b 52 53"
+            }
+          },
+          {
+            "can_time_s": 142.1897,
+            "value": "22.0",
+            "raw_ref": {
+              "line_number": 294560,
+              "time_s": 142.1897,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 02 40 03 2c 52 53"
+            }
+          },
+          {
+            "can_time_s": 142.2894,
+            "value": "21.75",
+            "raw_ref": {
+              "line_number": 294820,
+              "time_s": 142.2894,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 01 40 83 2b 52 53"
+            }
+          },
+          {
+            "can_time_s": 142.3903,
+            "value": "21.5",
+            "raw_ref": {
+              "line_number": 295088,
+              "time_s": 142.3903,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 00 40 03 2b 52 53"
+            }
+          },
+          {
+            "can_time_s": 142.5892,
+            "value": "21.75",
+            "raw_ref": {
+              "line_number": 295636,
+              "time_s": 142.5892,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 1c 00 40 83 2b 52 53"
+            }
+          },
+          {
+            "can_time_s": 142.7886,
+            "value": "22.5",
+            "raw_ref": {
+              "line_number": 296153,
+              "time_s": 142.7886,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 01 40 03 2d 52 53"
+            }
+          },
+          {
+            "can_time_s": 142.8902,
+            "value": "22.75",
+            "raw_ref": {
+              "line_number": 296421,
+              "time_s": 142.8902,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 dc 04 40 83 2d 52 53"
+            }
+          },
+          {
+            "can_time_s": 143.1885,
+            "value": "23.0",
+            "raw_ref": {
+              "line_number": 297207,
+              "time_s": 143.1885,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 dc 0d 40 03 2e 52 53"
+            }
+          },
+          {
+            "can_time_s": 143.5895,
+            "value": "23.5",
+            "raw_ref": {
+              "line_number": 298293,
+              "time_s": 143.5895,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 9c 1a 40 03 2f 52 53"
+            }
+          },
+          {
+            "can_time_s": 143.8903,
+            "value": "23.75",
+            "raw_ref": {
+              "line_number": 299077,
+              "time_s": 143.8903,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 24 40 83 2f 52 53"
+            }
+          },
+          {
+            "can_time_s": 143.9895,
+            "value": "23.5",
+            "raw_ref": {
+              "line_number": 299343,
+              "time_s": 143.9895,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 dc 26 40 03 2f 52 53"
+            }
+          },
+          {
+            "can_time_s": 144.0886,
+            "value": "24.0",
+            "raw_ref": {
+              "line_number": 299606,
+              "time_s": 144.0886,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 2a 40 03 30 52 53"
+            }
+          },
+          {
+            "can_time_s": 144.4887,
+            "value": "24.25",
+            "raw_ref": {
+              "line_number": 300652,
+              "time_s": 144.4887,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 dc 36 40 83 30 52 53"
+            }
+          },
+          {
+            "can_time_s": 144.6886,
+            "value": "24.5",
+            "raw_ref": {
+              "line_number": 301205,
+              "time_s": 144.6886,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 1c 3d 40 03 31 52 53"
+            }
+          },
+          {
+            "can_time_s": 144.9896,
+            "value": "24.75",
+            "raw_ref": {
+              "line_number": 302000,
+              "time_s": 144.9896,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 1c 46 40 83 31 52 53"
+            }
+          },
+          {
+            "can_time_s": 145.1886,
+            "value": "25.0",
+            "raw_ref": {
+              "line_number": 302519,
+              "time_s": 145.1886,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 4c 40 03 32 52 53"
+            }
+          },
+          {
+            "can_time_s": 145.5919,
+            "value": "25.25",
+            "raw_ref": {
+              "line_number": 303609,
+              "time_s": 145.5919,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 9c 58 40 83 32 52 53"
+            }
+          },
+          {
+            "can_time_s": 145.6885,
+            "value": "25.5",
+            "raw_ref": {
+              "line_number": 303859,
+              "time_s": 145.6885,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 dc 5b 40 03 33 52 53"
+            }
+          },
+          {
+            "can_time_s": 146.1911,
+            "value": "26.0",
+            "raw_ref": {
+              "line_number": 305184,
+              "time_s": 146.1911,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 1c 6a 40 03 34 52 53"
+            }
+          },
+          {
+            "can_time_s": 146.6885,
+            "value": "26.25",
+            "raw_ref": {
+              "line_number": 306528,
+              "time_s": 146.6885,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 1c 78 40 83 34 52 53"
+            }
+          },
+          {
+            "can_time_s": 147.0926,
+            "value": "26.5",
+            "raw_ref": {
+              "line_number": 307592,
+              "time_s": 147.0926,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 dc 82 40 03 35 52 53"
+            }
+          },
+          {
+            "can_time_s": 147.4918,
+            "value": "27.0",
+            "raw_ref": {
+              "line_number": 308637,
+              "time_s": 147.4918,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 1c 8d 40 03 36 52 53"
+            }
+          },
+          {
+            "can_time_s": 147.9948,
+            "value": "27.25",
+            "raw_ref": {
+              "line_number": 309989,
+              "time_s": 147.9948,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 dc 99 40 83 36 52 53"
+            }
+          },
+          {
+            "can_time_s": 148.0918,
+            "value": "27.5",
+            "raw_ref": {
+              "line_number": 310246,
+              "time_s": 148.0918,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c 9c 40 03 37 52 53"
+            }
+          },
+          {
+            "can_time_s": 148.5928,
+            "value": "27.75",
+            "raw_ref": {
+              "line_number": 311591,
+              "time_s": 148.5928,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c a9 40 83 37 52 53"
+            }
+          },
+          {
+            "can_time_s": 148.7898,
+            "value": "28.0",
+            "raw_ref": {
+              "line_number": 312102,
+              "time_s": 148.7898,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 5c ae 40 03 38 52 53"
+            }
+          },
+          {
+            "can_time_s": 149.2896,
+            "value": "28.5",
+            "raw_ref": {
+              "line_number": 313425,
+              "time_s": 149.2896,
+              "bus_key": "ch1:0x212",
+              "dlc": 8,
+              "raw_hex": "59 1c bb 40 03 39 52 53"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209596,
+          "time_s": 100.092,
+          "bus_key": "ch1:0x212",
+          "dlc": 8,
+          "raw_hex": "58 2c 00 00 82 ff 57 62"
+        },
+        "last_raw_ref": {
+          "line_number": 647169,
+          "time_s": 279.9962,
+          "bus_key": "ch1:0x212",
+          "dlc": 8,
+          "raw_hex": "58 04 00 00 82 ff 77 62"
+        }
+      },
+      {
+        "observation_ref": "O-E56A605C76CE",
+        "signal_name": "CP_stopChargeRequest",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 1800,
+        "first_value": "1",
+        "last_value": "0",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "mean": 0.3488888888888889,
+        "transitions": [
+          {
+            "can_time_s": 115.3227,
+            "value": "0",
+            "raw_ref": {
+              "line_number": 239851,
+              "time_s": 115.3227,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 02 00 00"
+            }
+          },
+          {
+            "can_time_s": 115.5226,
+            "value": "1",
+            "raw_ref": {
+              "line_number": 240253,
+              "time_s": 115.5226,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 03 00 00"
+            }
+          },
+          {
+            "can_time_s": 132.0245,
+            "value": "0",
+            "raw_ref": {
+              "line_number": 273533,
+              "time_s": 132.0245,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 04 00 00"
+            }
+          },
+          {
+            "can_time_s": 132.5239,
+            "value": "1",
+            "raw_ref": {
+              "line_number": 274543,
+              "time_s": 132.5239,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 05 00 00"
+            }
+          },
+          {
+            "can_time_s": 133.0246,
+            "value": "0",
+            "raw_ref": {
+              "line_number": 275550,
+              "time_s": 133.0246,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 06 00 00"
+            }
+          },
+          {
+            "can_time_s": 136.5243,
+            "value": "1",
+            "raw_ref": {
+              "line_number": 282612,
+              "time_s": 136.5243,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 07 00 00"
+            }
+          },
+          {
+            "can_time_s": 139.5243,
+            "value": "0",
+            "raw_ref": {
+              "line_number": 288670,
+              "time_s": 139.5243,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 08 00 00"
+            }
+          },
+          {
+            "can_time_s": 245.7336,
+            "value": "1",
+            "raw_ref": {
+              "line_number": 576550,
+              "time_s": 245.7336,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 19 00 00"
+            }
+          },
+          {
+            "can_time_s": 245.8323,
+            "value": "0",
+            "raw_ref": {
+              "line_number": 576819,
+              "time_s": 245.8323,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 1a 00 00"
+            }
+          },
+          {
+            "can_time_s": 246.132,
+            "value": "1",
+            "raw_ref": {
+              "line_number": 577665,
+              "time_s": 246.132,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "8c 00 33 00 40 1b 00 00"
+            }
+          },
+          {
+            "can_time_s": 273.5338,
+            "value": "0",
+            "raw_ref": {
+              "line_number": 634387,
+              "time_s": 273.5338,
+              "bus_key": "ch1:0x21D",
+              "dlc": 8,
+              "raw_hex": "04 00 35 00 00 00 00 00"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209446,
+          "time_s": 100.022,
+          "bus_key": "ch1:0x21D",
+          "dlc": 8,
+          "raw_hex": "0c 00 33 00 40 01 00 00"
+        },
+        "last_raw_ref": {
+          "line_number": 647044,
+          "time_s": 279.9343,
+          "bus_key": "ch1:0x21D",
+          "dlc": 8,
+          "raw_hex": "04 00 35 00 00 00 00 00"
+        }
+      },
+      {
+        "observation_ref": "O-626BE21E225E",
+        "signal_name": "UI_chargeEnableRequest",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 367,
+        "first_value": "1",
+        "last_value": "1",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "mean": 0.8419618528610354,
+        "transitions": [
+          {
+            "can_time_s": 245.6557,
+            "value": "0",
+            "raw_ref": {
+              "line_number": 576361,
+              "time_s": 245.6557,
+              "bus_key": "ch1:0x333",
+              "dlc": 5,
+              "raw_hex": "00 10 e8 07 00"
+            }
+          },
+          {
+            "can_time_s": 273.7457,
+            "value": "1",
+            "raw_ref": {
+              "line_number": 634792,
+              "time_s": 273.7457,
+              "bus_key": "ch1:0x333",
+              "dlc": 5,
+              "raw_hex": "04 10 e8 07 00"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 210368,
+          "time_s": 100.4812,
+          "bus_key": "ch1:0x333",
+          "dlc": 5,
+          "raw_hex": "04 10 e8 07 00"
+        },
+        "last_raw_ref": {
+          "line_number": 647000,
+          "time_s": 279.9092,
+          "bus_key": "ch1:0x333",
+          "dlc": 5,
+          "raw_hex": "04 10 e8 07 00"
+        }
+      },
+      {
+        "observation_ref": "O-30A5630397C5",
+        "signal_name": "CP_chargeCablePresent",
+        "window_s": [
+          100.0,
+          280.0
+        ],
+        "sample_count": 1800,
+        "first_value": "NOT_PRESENT",
+        "last_value": "NOT_PRESENT",
+        "minimum": null,
+        "maximum": null,
+        "mean": null,
+        "transitions": [
+          {
+            "can_time_s": 268.7359,
+            "value": "PRESENT",
+            "raw_ref": {
+              "line_number": 624672,
+              "time_s": 268.7359,
+              "bus_key": "ch1:0x25D",
+              "dlc": 8,
+              "raw_hex": "6e 81 23 ac 00 f2 d3 03"
+            }
+          },
+          {
+            "can_time_s": 277.4349,
+            "value": "NOT_PRESENT",
+            "raw_ref": {
+              "line_number": 642106,
+              "time_s": 277.4349,
+              "bus_key": "ch1:0x25D",
+              "dlc": 8,
+              "raw_hex": "76 45 01 38 04 f0 d0 03"
+            }
+          }
+        ],
+        "first_raw_ref": {
+          "line_number": 209449,
+          "time_s": 100.0225,
+          "bus_key": "ch1:0x25D",
+          "dlc": 8,
+          "raw_hex": "76 81 19 ac 04 f0 d8 03"
+        },
+        "last_raw_ref": {
+          "line_number": 647048,
+          "time_s": 279.9351,
+          "bus_key": "ch1:0x25D",
+          "dlc": 8,
+          "raw_hex": "36 41 01 16 04 f0 d8 03"
+        }
+      }
+    ],
+    "limitations": [
+      "All returned times are CAN_OBSERVED_TIME.",
+      "No returned transition is an independently observed human event.",
+      "DBC semantic and quantitative validity is not upgraded by this calculation."
+    ]
+  },
+  "updated_reasoning": {
+    "pass_id": "UPDATED-01",
+    "findings": [
+      {
+        "finding_id": "F-U1-HV-CURRENT-SEQUENCE",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-9D323E9B10AC",
+          "O-2644736F4A49",
+          "O-8EBD6B851F2B",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-9D323E9B10AC",
+          "EA-2644736F4A49",
+          "EA-8EBD6B851F2B",
+          "EA-7980F7D7EA4B",
+          "EA-BFA7B49A9AC9"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "FU-5284974017F34272"
+            ],
+            "statement": "100–280 s重解码窗口内，DBC解码状态在115.3922 s进入CHARGING；快充接触器候选在134.8465 s闭合；桩侧电压候选在140.0275 s由0建立；桩侧电流候选在145.0277 s由0建立。"
+          },
+          {
+            "claim_class": "DERIVED",
+            "support_refs": [
+              "FU-5284974017F34272"
+            ],
+            "statement": "在当前DBC解释下，状态、电驱高压执行候选、电压候选、电流候选形成有序边沿，电压候选领先电流候选约5.0002 s。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "FU-5284974017F34272",
+              "O-CA4507EB8924"
+            ],
+            "statement": "该序列与L3快充主线的状态建立、高压建立和电流建立相容，但只支持车辆侧可见投射。"
+          },
+          {
+            "claim_class": "UNSUPPORTED",
+            "support_refs": [],
+            "statement": "该序列证明了完整授权、协议握手、BMS电流请求和桩侧执行因果链。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "subsystem": "高压与电流建立",
+          "control_layer": "EXECUTION_AND_FEEDBACK"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-06",
+          "mapping_status": "PARTIAL"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-03",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "FU-5284974017F34272",
+              "O-9D323E9B10AC",
+              "O-2644736F4A49",
+              "O-8EBD6B851F2B"
+            ],
+            "reason": "状态和接触器候选边沿得到精确CAN时序，但Permission/Protocol/Request仍不可见。"
+          },
+          {
+            "evidence_requirement_ref": "ER-04",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "FU-5284974017F34272",
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "reason": "电压先于电流建立且Pack电流有响应；CP电流仅可作Timing-only候选，不能当作已验证Actual。"
+          }
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "车辆侧观测与高压建立后电流爬升的L3语义顺序相容。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "A-U1",
+            "description": "0x29D的字段可能正确标记边沿，但缩放或物理角色不正确。",
+            "compatible_observation_refs": [
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9"
+            ],
+            "discriminating_evidence": "桩侧独立电压、电流记录及协议量",
+            "minimum_check": "同步采集桩侧仪表与车辆CAN。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "存在状态、高压和电流建立的车辆侧时序投射。"
+        ],
+        "unsupported_claims": [
+          "完整条件许可、协议和请求链已经被观测。",
+          "CP_evseOutputDcCurrent是定量可信Actual。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-U1",
+            "blocked_claim": "完整许可和请求链",
+            "missing_evidence_type": "CONDITION_OR_PERMISSION",
+            "reason": "相关字段恒定或语义未验证。",
+            "minimum_evidence_needed": "独立协议状态、许可和BMS请求证据。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "以桩侧独立测量校验0x29D电压/电流缩放，并补充许可与请求字段。",
+        "uncertainty": "时序关系较强，因果、角色和0x29D定量语义未确认。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "FU-5284974017F34272",
+          "O-9D323E9B10AC",
+          "O-2644736F4A49",
+          "O-8EBD6B851F2B",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "CT-DCFC-06",
+          "ER-03",
+          "ER-04"
+        ]
+      },
+      {
+        "finding_id": "F-U2-STEADY-ENERGY-ROLES",
+        "candidate_refs": [
+          "C0030"
+        ],
+        "observation_refs": [
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "O-54E23D9221B4",
+          "O-40626519D168",
+          "O-2F8692A40C75"
+        ],
+        "relation_refs": [
+          "R-C0030"
+        ],
+        "event_refs": [
+          "EA-BFA7B49A9AC9",
+          "EA-40626519D168",
+          "EA-2F8692A40C75"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "FU-5284974017F34272"
+            ],
+            "statement": "CP电流候选在171.9287 s达到128.1084783并保持到234.2322 s附近仅有一个最小量化步进，246.2332 s归零；SOC在窗口内由27.5升至31.0。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "FU-5284974017F34272"
+            ],
+            "statement": "BMS_packCurrent在窗口内范围为-219.6至27.8 A；BMS_packVoltage出现8.17 V极小值，与其约350 V量级主体不相容。"
+          },
+          {
+            "claim_class": "DERIVED",
+            "support_refs": [
+              "FU-5284974017F34272"
+            ],
+            "statement": "CP电流候选存在约62.3 s的近平台区，但Follow-up没有按同一稳定窗口计算Pack侧与CP侧功率闭环。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "FU-5284974017F34272",
+              "R-C0030"
+            ],
+            "statement": "SOC上升与Pack侧充电方向支持能源进入车辆；BMS_chgPowerAvailable更适合作Capability候选，Pack电流更接近Actual候选。"
+          },
+          {
+            "claim_class": "UNSUPPORTED",
+            "support_refs": [],
+            "statement": "CP电流128.108 A已获定量确认，或BMS_chgPowerAvailable等于Request/Actual。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "subsystem": "稳态与能源交叉验证",
+          "control_layer": "CAPABILITY_ACTUAL_PHYSICAL_RESULT"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-ENERGY-01",
+          "mapping_status": "PARTIAL"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-05",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "FU-5284974017F34272",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924",
+              "O-40626519D168"
+            ],
+            "reason": "存在长于30 s的平台候选和SOC上升，但缺少同窗Pack功率统计、桩侧独立Actual与外部记录。"
+          },
+          {
+            "evidence_requirement_ref": "ER-08",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "FU-5284974017F34272",
+              "O-CA4507EB8924",
+              "O-54E23D9221B4",
+              "O-40626519D168",
+              "R-C0030"
+            ],
+            "reason": "能源方向及SOC变化相容；极端Pack电压值和缺少同窗功率闭环阻止定量确认。"
+          }
+        ],
+        "relationship_kind": "PHYSICAL_CLOSURE",
+        "causality_status": "CONTROL_RELATION_SUPPORTED",
+        "semantic_hypothesis": "Pack电流/电压与SOC可承担车辆侧Actual和物理结果证据，CP电流仅承担Timing-only角色，BMS_chgPowerAvailable仅承担Capability候选角色。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "A-U2",
+            "description": "Pack电压极小值可能来自字节错位、复用条件或瞬态解码异常。",
+            "compatible_observation_refs": [
+              "O-54E23D9221B4"
+            ],
+            "discriminating_evidence": "原始帧位段审计和相邻样本",
+            "minimum_check": "定位8.17 V样本并核对DLC、原始字节和同帧信号。"
+          }
+        ],
+        "model_interaction": "CHALLENGES_CURRENT_MODEL",
+        "supported_claims": [
+          "存在稳态充电候选和车辆侧能源响应。",
+          "Actual、Capability、State和Timing-only必须分离。"
+        ],
+        "unsupported_claims": [
+          "当前Follow-up完成了定量功率闭环。",
+          "CP侧候选值可直接替代桩侧物理测量。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-U2",
+            "blocked_claim": "定量能源闭环",
+            "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+            "reason": "没有同一稳定窗口的独立桩侧Actual及稳健Pack统计。",
+            "minimum_evidence_needed": "固定稳定窗的Pack V×I、桩侧功率及能量增量。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-U3",
+            "blocked_claim": "BMS_packVoltage全窗定量可信",
+            "missing_evidence_type": "SIGNAL_VALIDATION",
+            "reason": "窗口中出现8.17 V物理不合理值。",
+            "minimum_evidence_needed": "异常样本原始帧与定义审计。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "对稳定窗做同步Pack功率、SOC/能量增量与桩侧物理量闭环，并审计Pack电压异常样本。",
+        "uncertainty": "Follow-up支持时序与角色分层，未完成定量闭环。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "FU-5284974017F34272",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "O-54E23D9221B4",
+          "O-40626519D168",
+          "O-2F8692A40C75",
+          "R-C0030",
+          "C0030",
+          "CT-ENERGY-01",
+          "ER-05",
+          "ER-08"
+        ]
+      },
+      {
+        "finding_id": "F-U3-STOP-EXIT",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-626BE21E225E",
+          "O-E56A605C76CE",
+          "O-BFA7B49A9AC9",
+          "O-7980F7D7EA4B",
+          "O-9D323E9B10AC",
+          "O-8EBD6B851F2B",
+          "O-4D428E122092",
+          "O-30A5630397C5"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-626BE21E225E",
+          "EA-E56A605C76CE",
+          "EA-BFA7B49A9AC9",
+          "EA-9D323E9B10AC",
+          "EA-8EBD6B851F2B",
+          "EA-4D428E122092",
+          "EA-30A5630397C5"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "FU-5284974017F34272"
+            ],
+            "statement": "UI_chargeEnableRequest候选245.6557 s变0；CP_stopChargeRequest候选245.7336 s变1；CP电流/电压候选246.2332 s归零；充电状态246.3925 s退出；快充接触器246.8477 s断开。"
+          },
+          {
+            "claim_class": "DERIVED",
+            "support_refs": [
+              "FU-5284974017F34272"
+            ],
+            "statement": "在当前DBC解释下，退出边沿的顺序为使能候选撤销、停止候选、电流/电压归零、状态退出、快充接触器断开，跨度约1.1920 s。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "FU-5284974017F34272"
+            ],
+            "statement": "这一顺序与受控停止/退出模型相容，但无法判定哪个边沿是人工停止、内部停止或桩侧动作的原因。"
+          },
+          {
+            "claim_class": "UNSUPPORTED",
+            "support_refs": [],
+            "statement": "245.6557 s就是人工停止时刻，268.7359 s或277.4349 s就是人工拔枪时刻。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "subsystem": "停止与退出",
+          "control_layer": "REQUEST_EXECUTION_STATE"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-09",
+          "mapping_status": "PARTIAL"
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-06",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "FU-5284974017F34272",
+              "O-626BE21E225E",
+              "O-E56A605C76CE",
+              "O-BFA7B49A9AC9",
+              "O-9D323E9B10AC",
+              "O-8EBD6B851F2B"
+            ],
+            "reason": "停止/退出CAN序列清晰，但起因和Request语义未由独立证据确认。"
+          },
+          {
+            "evidence_requirement_ref": "ER-07",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "FU-5284974017F34272",
+              "O-4D428E122092",
+              "O-30A5630397C5"
+            ],
+            "reason": "充电类型和线缆候选之后变化，但不能替代机械安全释放与人工拔枪事件。"
+          }
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "停止候选、能量归零、状态退出和接触器断开构成车辆侧可审计退出序列。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "A-U3",
+            "description": "退出可能由车端、桩端、定时策略或保护条件触发。",
+            "compatible_observation_refs": [
+              "O-626BE21E225E",
+              "O-E56A605C76CE"
+            ],
+            "discriminating_evidence": "独立操作时间、协议原因码和停止源",
+            "minimum_check": "同步记录停止操作并采集停止原因。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "停止后的车辆侧退出次序得到更精确的CAN时序支持。"
+        ],
+        "unsupported_claims": [
+          "CAN边沿已经确定人工事件与停止因果来源。",
+          "枪锁释放和拔枪已被验证。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-U4",
+            "blocked_claim": "停止触发来源",
+            "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+            "reason": "缺少人工实际事件时间及停止来源。",
+            "minimum_evidence_needed": "同步操作时间与协议/控制器停止原因。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-U5",
+            "blocked_claim": "安全释放与拔枪",
+            "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+            "reason": "连接字段方向冲突且无机械状态记录。",
+            "minimum_evidence_needed": "枪锁和拔枪独立现场证据。",
+            "priority": "P1"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "同步记录停止动作、停止源和机械释放事件。",
+        "uncertainty": "退出时序可信度高，触发来源与物理拔枪语义未知。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "FU-5284974017F34272",
+          "O-626BE21E225E",
+          "O-E56A605C76CE",
+          "O-BFA7B49A9AC9",
+          "O-7980F7D7EA4B",
+          "O-9D323E9B10AC",
+          "O-8EBD6B851F2B",
+          "O-4D428E122092",
+          "O-30A5630397C5",
+          "CT-DCFC-09",
+          "ER-06",
+          "ER-07"
+        ]
+      }
+    ],
+    "validation_requests": []
+  },
+  "audit_metadata": {
+    "reasoning_mode": "STRUCTURED_RESULT_WITHOUT_CHAIN_OF_THOUGHT",
+    "initial_reasoning_status": "FROZEN_BEFORE_FOLLOW_UP",
+    "historical_artifacts_used_as_reasoning_input": false,
+    "strict_cognitive_blinding": false,
+    "blinding_limitation": "The executing root-agent conversation had prior exposure to TM3-015 historical results during sample-selection review. All claims in this artifact are nevertheless constrained to IDs and values present in reasoning_input.json.",
+    "model_role": "LLM semantic mapper; no raw ASC calculation",
+    "follow_up_limit": 1,
+    "follow_up_count": 1,
+    "updated_reasoning_status": "FROZEN"
+  }
+}

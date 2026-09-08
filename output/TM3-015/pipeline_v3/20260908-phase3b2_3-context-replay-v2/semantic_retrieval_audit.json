@@ -1,0 +1,200 @@
+{
+  "retrieval_version": "semantic-observation-retrieval-v2-context",
+  "retrieval_input_hash": "54c082510d317efb8fc69e47f67551e4f132a626ff8db7520ee8b12eb4b858c9",
+  "retrieval_output_hash": "0c634bd52225e34dfdce2a92ce3091a076c772926d13aaabdfe4aa3bbed23a7d",
+  "limits": {
+    "per_intent": 8,
+    "global": 120,
+    "source_limits": {
+      "KNOWN": 6,
+      "RESIDUAL": 1,
+      "UNKNOWN": 1
+    },
+    "eligibility_model": "PATH_TIER_THEN_CONTEXT_ORDER"
+  },
+  "intent_audit": [
+    {
+      "intent_id": "SSI-ER-01",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 987,
+      "below_threshold_count": 3523,
+      "truncated_count": 979,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-02",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 992,
+      "below_threshold_count": 3518,
+      "truncated_count": 984,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-03",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 969,
+      "below_threshold_count": 3541,
+      "truncated_count": 961,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-04",
+      "source_space_counts": {
+        "UNKNOWN": 1,
+        "KNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 960,
+      "below_threshold_count": 3550,
+      "truncated_count": 957,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-05",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1147,
+      "below_threshold_count": 3363,
+      "truncated_count": 1139,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-06",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1147,
+      "below_threshold_count": 3363,
+      "truncated_count": 1139,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-07",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1142,
+      "below_threshold_count": 3368,
+      "truncated_count": 1134,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-08",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1022,
+      "below_threshold_count": 3488,
+      "truncated_count": 1014,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-09",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 980,
+      "below_threshold_count": 3530,
+      "truncated_count": 972,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-10",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 1127,
+      "below_threshold_count": 3383,
+      "truncated_count": 1119,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-11",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 966,
+      "below_threshold_count": 3544,
+      "truncated_count": 958,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-12",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1013,
+      "below_threshold_count": 3497,
+      "truncated_count": 1005,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-13",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "UNKNOWN": 1,
+        "RESIDUAL": 1
+      },
+      "eligible_count": 1070,
+      "below_threshold_count": 3440,
+      "truncated_count": 1062,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    },
+    {
+      "intent_id": "SSI-ER-14",
+      "source_space_counts": {
+        "KNOWN": 6,
+        "RESIDUAL": 1,
+        "UNKNOWN": 1
+      },
+      "eligible_count": 1066,
+      "below_threshold_count": 3444,
+      "truncated_count": 1058,
+      "global_limit_excluded_count": 0,
+      "no_suitable_observation": false
+    }
+  ],
+  "selected_observation_count": 60
+}

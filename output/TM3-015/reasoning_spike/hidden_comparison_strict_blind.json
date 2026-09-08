@@ -1,0 +1,130 @@
+{
+  "comparison_id": "HC-TM3-015-v1",
+  "reasoning_output_sha256_at_unlock": "179dc37616ece8d4e5f3fb6e9a8974fb90b8ba9b787d30d8108d10de82731620",
+  "unlock_condition": "reasoning_output existed, input/output validation completed, and output hash was frozen before these files were read by the comparison command",
+  "historical_sources": [
+    {
+      "path": "output/TM3-015/TM3-015_最终报告.md",
+      "sha256": "98de922d08aedb4a65d3b8de8d74b25f82c0bbe4ac38adb16d17501f26cabe3a"
+    },
+    {
+      "path": "output/TM3-015/events.csv",
+      "sha256": "5f49de90a489ff80b6af8d19c6269b0f1f6f235956011755001d963b2939ee53"
+    },
+    {
+      "path": "output/TM3-015/evidence_assessment.csv",
+      "sha256": "b414d4b9e522da2a75725c6266264ee72c9f2658c82a453596c85c60857f1868"
+    },
+    {
+      "path": "output/TM3-015/energy_dbc_adaptation/energy_chain_summary.json",
+      "sha256": "e8fd80937668b9b950d21c3fcdf85e86a162bdea19b58f257d1c26d53cf2fa2e"
+    }
+  ],
+  "evidence_requirement_comparison": [
+    {
+      "evidence_requirement_id": "ER-01",
+      "llm_statuses": [
+        "INSUFFICIENT"
+      ],
+      "historical_status": "INSUFFICIENT_EVIDENCE",
+      "compatible": true,
+      "historical_limitation": "SEMANTIC_VALIDATION_FAILED；保留原始边沿，不确认字段名称语义"
+    },
+    {
+      "evidence_requirement_id": "ER-02",
+      "llm_statuses": [
+        "PARTIAL_SUPPORT"
+      ],
+      "historical_status": "INSUFFICIENT_EVIDENCE",
+      "compatible": true,
+      "historical_limitation": "未观察到足以还原协商顺序的车辆内部Signal"
+    },
+    {
+      "evidence_requirement_id": "ER-03",
+      "llm_statuses": [
+        "PARTIAL_SUPPORT"
+      ],
+      "historical_status": "INSUFFICIENT_EVIDENCE",
+      "compatible": true,
+      "historical_limitation": "只能由下游结果间接支持许可已形成，不能确认条件判断/许可节点"
+    },
+    {
+      "evidence_requirement_id": "ER-04",
+      "llm_statuses": [
+        "PARTIAL_SUPPORT"
+      ],
+      "historical_status": "SUPPORTED",
+      "compatible": true,
+      "historical_limitation": "Pack侧形成实验级定量基线；CP电流仅时序可信，桩端Actual及效率仍未建立"
+    },
+    {
+      "evidence_requirement_id": "ER-05",
+      "llm_statuses": [
+        "INSUFFICIENT"
+      ],
+      "historical_status": "SUPPORTED",
+      "compatible": false,
+      "historical_limitation": "条件化短稳态有效；不代表峰值、全SOC曲线或长期能力"
+    },
+    {
+      "evidence_requirement_id": "ER-06",
+      "llm_statuses": [
+        "INSUFFICIENT"
+      ],
+      "historical_status": "SUPPORTED",
+      "compatible": false,
+      "historical_limitation": "两个停止Signal语义仍未完全确认；结论依赖状态和电流退出闭环"
+    },
+    {
+      "evidence_requirement_id": "ER-07",
+      "llm_statuses": [
+        "INSUFFICIENT"
+      ],
+      "historical_status": "INSUFFICIENT_EVIDENCE",
+      "compatible": true,
+      "historical_limitation": "无独立解锁和拔枪实际时刻，且Cable/Latch语义未通过"
+    },
+    {
+      "evidence_requirement_id": "ER-08",
+      "llm_statuses": [],
+      "historical_status": "SUPPORTED",
+      "compatible": false,
+      "historical_limitation": "Available保持P1能力上限候选，不等于Request或Actual；多个温度字段仍语义失败"
+    },
+    {
+      "evidence_requirement_id": "ER-09",
+      "llm_statuses": [],
+      "historical_status": "INSUFFICIENT_EVIDENCE",
+      "compatible": false,
+      "historical_limitation": "只记录状态共存；挡位条件本次无有效DBC证据"
+    },
+    {
+      "evidence_requirement_id": "ER-10",
+      "llm_statuses": [
+        "INSUFFICIENT"
+      ],
+      "historical_status": "INSUFFICIENT_EVIDENCE",
+      "compatible": true,
+      "historical_limitation": "热管理执行器覆盖得到验证，但请求—执行—温度闭环尚不足；SEMANTIC_VALIDATION_FAILED项不得解释"
+    }
+  ],
+  "compatible_er_count": 6,
+  "total_er_count": 10,
+  "semantic_checks": {
+    "separates_cp_current_timing_from_quantitative_validity": false,
+    "recognizes_pack_energy_closure": true,
+    "separates_capability_from_actual": false,
+    "keeps_external_event_time_gap": true,
+    "does_not_claim_complete_permission_protocol": true
+  },
+  "historical_numeric_reference": {
+    "stable_window_s": [
+      173.73,
+      233.23
+    ],
+    "pack_power_smooth_kw": 70.74724365309602,
+    "cp_power_onyx_kw": 46.81190000384178,
+    "external_charger_evidence_found": false
+  },
+  "blindness_caveat": "Strict cognitive blinding was achieved for the isolated reasoning executor: it inherited no prior conversation and read only the frozen reasoning_input.json, the semantic_reasoning_v1 schema, and its own output during the single deterministic contract-correction follow-up. Historical sources were unlocked only afterward by the non-reasoning comparison context."
+}

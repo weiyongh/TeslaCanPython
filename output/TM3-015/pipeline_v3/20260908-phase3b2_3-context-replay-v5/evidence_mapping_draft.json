@@ -1,0 +1,1041 @@
+{
+  "mapping_version": "evidence-mapping-draft-v1",
+  "created_at": "2026-09-08T05:16:12.318222+00:00",
+  "approval_state": "NOT_APPROVED",
+  "bindings": [
+    {
+      "binding_id": "EB-0001",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-01",
+      "observation_refs": [
+        "SO-7BB7F570959A",
+        "SO-AFC76E33264C"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-7BB7F570959A",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01"
+        },
+        {
+          "observation_ref": "SO-AFC76E33264C",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-01"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-01"
+      ],
+      "proposed_role": "STATE",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-01",
+          "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+          "reason": "Independent physical connection confirmation and observed connection time are absent."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L35",
+        "ASC-L37",
+        "ASC-L43668",
+        "ASC-L634387",
+        "ASC-L644481",
+        "ASC-L685438",
+        "ASC-L685440",
+        "ASC-L83365"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0002",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-02",
+      "observation_refs": [
+        "SO-57834B9DC181",
+        "SO-7C154FF11732",
+        "SO-AFC76E33264C"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-57834B9DC181",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02"
+        },
+        {
+          "observation_ref": "SO-7C154FF11732",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02"
+        },
+        {
+          "observation_ref": "SO-AFC76E33264C",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-02"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-02"
+      ],
+      "proposed_role": "STATE",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-02",
+          "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+          "reason": "No independent lock confirmation or observed lock action time binds the stages."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L240255",
+        "ASC-L289270",
+        "ASC-L37",
+        "ASC-L43668",
+        "ASC-L44302",
+        "ASC-L44727",
+        "ASC-L577111",
+        "ASC-L624672",
+        "ASC-L625080",
+        "ASC-L633371",
+        "ASC-L641708",
+        "ASC-L644481",
+        "ASC-L685440",
+        "ASC-L85894",
+        "ASC-L86314"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0003",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-03",
+      "observation_refs": [
+        "SO-1DA23ED17AA5",
+        "SO-61297290B6D1"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-1DA23ED17AA5",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03"
+        },
+        {
+          "observation_ref": "SO-61297290B6D1",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-03"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-03"
+      ],
+      "proposed_role": "STATE",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-03",
+          "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+          "reason": "The required upstream interface and wake boundaries are not directly observed."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L1133",
+        "ASC-L1557",
+        "ASC-L1764",
+        "ASC-L1987",
+        "ASC-L277356",
+        "ASC-L281590",
+        "ASC-L285",
+        "ASC-L324946",
+        "ASC-L402260",
+        "ASC-L495",
+        "ASC-L685596",
+        "ASC-L709",
+        "ASC-L72",
+        "ASC-L921"
+      ],
+      "promotion_state": "HOLD_UNRESOLVED",
+      "review_required": true,
+      "promotion_reason": "Finding has no safe semantic mapping.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0004",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-04",
+      "observation_refs": [
+        "SO-11F964A63B77"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-11F964A63B77",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-04"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-04"
+      ],
+      "proposed_role": "TIMING_ONLY",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-04",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "The retrieved DBC term is not validated as the fast-charge protocol exchange."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L123",
+        "ASC-L24082",
+        "ASC-L25757",
+        "ASC-L27425",
+        "ASC-L29093",
+        "ASC-L38512",
+        "ASC-L40196",
+        "ASC-L42073",
+        "ASC-L685505"
+      ],
+      "promotion_state": "HOLD_UNRESOLVED",
+      "review_required": true,
+      "promotion_reason": "Finding has no safe semantic mapping.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0005",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-05",
+      "observation_refs": [
+        "SO-C817FE195629",
+        "SO-30140211597F"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-C817FE195629",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05"
+        },
+        {
+          "observation_ref": "SO-30140211597F",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-05"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-05"
+      ],
+      "proposed_role": "CAPABILITY",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-05",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "No validated EVSE-boundary capability voltage and current pair is present."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L289691",
+        "ASC-L292373",
+        "ASC-L299438",
+        "ASC-L306365",
+        "ASC-L313782",
+        "ASC-L321226",
+        "ASC-L328137",
+        "ASC-L35",
+        "ASC-L41",
+        "ASC-L431429",
+        "ASC-L685438",
+        "ASC-L685444"
+      ],
+      "promotion_state": "HOLD_UNRESOLVED",
+      "review_required": true,
+      "promotion_reason": "Finding has no safe semantic mapping.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0006",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-06",
+      "observation_refs": [
+        "SO-EE1762E29E91",
+        "SO-FCA6D6091527"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-EE1762E29E91",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06"
+        },
+        {
+          "observation_ref": "SO-FCA6D6091527",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-06"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-06"
+      ],
+      "proposed_role": "CAPABILITY",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-06",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "DBC naming and dynamics alone do not confirm a complete Vehicle Capability set."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L204",
+        "ASC-L208",
+        "ASC-L240000",
+        "ASC-L276296",
+        "ASC-L282543",
+        "ASC-L289817",
+        "ASC-L292986",
+        "ASC-L293247",
+        "ASC-L293510",
+        "ASC-L293777",
+        "ASC-L294301",
+        "ASC-L294560",
+        "ASC-L295088",
+        "ASC-L578359",
+        "ASC-L685554",
+        "ASC-L685555"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0007",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-07",
+      "observation_refs": [
+        "SO-C735BF77D6EA"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-C735BF77D6EA",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-07"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-07"
+      ],
+      "proposed_role": "REQUEST",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-07",
+          "missing_evidence_type": "DIRECT_REQUEST",
+          "reason": "Direct semantically validated request voltage and current are absent."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L204",
+        "ASC-L685555"
+      ],
+      "promotion_state": "HOLD_UNRESOLVED",
+      "review_required": true,
+      "promotion_reason": "Finding has no safe semantic mapping.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0008",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-08",
+      "observation_refs": [
+        "SO-19CE993899A3",
+        "SO-464571D40359",
+        "SO-605D4479E286"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-19CE993899A3",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08"
+        },
+        {
+          "observation_ref": "SO-464571D40359",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08"
+        },
+        {
+          "observation_ref": "SO-605D4479E286",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-08"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-08"
+      ],
+      "proposed_role": "STATE",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-08",
+          "missing_evidence_type": "CONDITION_OR_PERMISSION",
+          "reason": "No direct permission or safety-gate decision variable is validated."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L1802",
+        "ASC-L277203",
+        "ASC-L279219",
+        "ASC-L683896"
+      ],
+      "promotion_state": "HOLD_UNRESOLVED",
+      "review_required": true,
+      "promotion_reason": "Finding has no safe semantic mapping.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0009",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-09",
+      "observation_refs": [
+        "SO-605D4479E286",
+        "SO-40123AC227A0"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-605D4479E286",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09"
+        },
+        {
+          "observation_ref": "SO-40123AC227A0",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-09"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-09"
+      ],
+      "proposed_role": "STATE",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-09",
+          "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+          "reason": "Voltage matching and synchronized transfer evidence are not bound to the path transition."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L1802",
+        "ASC-L277203",
+        "ASC-L279219",
+        "ASC-L579549",
+        "ASC-L683896"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0010",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-10",
+      "observation_refs": [
+        "SO-30140211597F",
+        "SO-CE0335F98FD8",
+        "SO-05B359B48253",
+        "SO-CEEC4D90BE22"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-30140211597F",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10"
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10"
+        },
+        {
+          "observation_ref": "SO-05B359B48253",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10"
+        },
+        {
+          "observation_ref": "SO-CEEC4D90BE22",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-10"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-10"
+      ],
+      "proposed_role": "ACTUAL",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-10",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "EVSE current quantitative semantics and synchronized cross-boundary comparison remain unvalidated."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L109",
+        "ASC-L11",
+        "ASC-L131",
+        "ASC-L150",
+        "ASC-L169",
+        "ASC-L193",
+        "ASC-L25",
+        "ASC-L279095",
+        "ASC-L289691",
+        "ASC-L292373",
+        "ASC-L299438",
+        "ASC-L302096",
+        "ASC-L306365",
+        "ASC-L308731",
+        "ASC-L313782",
+        "ASC-L314",
+        "ASC-L316171",
+        "ASC-L321226",
+        "ASC-L323355",
+        "ASC-L328137",
+        "ASC-L330534",
+        "ASC-L332",
+        "ASC-L337698",
+        "ASC-L338601",
+        "ASC-L344876",
+        "ASC-L355",
+        "ASC-L41",
+        "ASC-L431429",
+        "ASC-L502893",
+        "ASC-L55",
+        "ASC-L576808",
+        "ASC-L685444",
+        "ASC-L685615",
+        "ASC-L79"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0011",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-11",
+      "observation_refs": [
+        "SO-EE1762E29E91",
+        "SO-30140211597F",
+        "SO-CE0335F98FD8"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-EE1762E29E91",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11"
+        },
+        {
+          "observation_ref": "SO-30140211597F",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11"
+        },
+        {
+          "observation_ref": "SO-CE0335F98FD8",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-11"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-11"
+      ],
+      "proposed_role": "POSSIBLE_PROXY",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-11",
+          "missing_evidence_type": "DIRECT_REQUEST",
+          "reason": "The continuous relationship cannot be completed without validated Request and all boundary roles."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L208",
+        "ASC-L240000",
+        "ASC-L276296",
+        "ASC-L282543",
+        "ASC-L289691",
+        "ASC-L292373",
+        "ASC-L299438",
+        "ASC-L302096",
+        "ASC-L306365",
+        "ASC-L308731",
+        "ASC-L313782",
+        "ASC-L316171",
+        "ASC-L321226",
+        "ASC-L323355",
+        "ASC-L328137",
+        "ASC-L330534",
+        "ASC-L337698",
+        "ASC-L344876",
+        "ASC-L41",
+        "ASC-L431429",
+        "ASC-L578359",
+        "ASC-L685444",
+        "ASC-L685554"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0012",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-12",
+      "observation_refs": [
+        "SO-7717801FE8E8",
+        "SO-BC7D879CB5FA"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-7717801FE8E8",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12"
+        },
+        {
+          "observation_ref": "SO-BC7D879CB5FA",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-12"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-12"
+      ],
+      "proposed_role": "STATE",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-12",
+          "missing_evidence_type": "ALTERNATIVE_CONDITION",
+          "reason": "No alternative-condition comparison separates thermal influence from other controls."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L122",
+        "ASC-L292266",
+        "ASC-L292390",
+        "ASC-L578215",
+        "ASC-L583363",
+        "ASC-L585461",
+        "ASC-L597592",
+        "ASC-L61",
+        "ASC-L685458",
+        "ASC-L685532"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0013",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-13",
+      "observation_refs": [
+        "SO-39C18ABF3E3C",
+        "SO-31D612FA2BA9",
+        "SO-4AA492D64A9C",
+        "SO-5772080DA750",
+        "SO-61CF5F025B68"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-39C18ABF3E3C",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        },
+        {
+          "observation_ref": "SO-31D612FA2BA9",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        },
+        {
+          "observation_ref": "SO-4AA492D64A9C",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        },
+        {
+          "observation_ref": "SO-5772080DA750",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        },
+        {
+          "observation_ref": "SO-61CF5F025B68",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-13"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-13"
+      ],
+      "proposed_role": "STATE",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-13",
+          "missing_evidence_type": "CONDITION_OR_PERMISSION",
+          "reason": "Applicable fault and protection decision evidence and independent safe-state confirmation are absent."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L239851",
+        "ASC-L240253",
+        "ASC-L273533",
+        "ASC-L274543",
+        "ASC-L275550",
+        "ASC-L282612",
+        "ASC-L35",
+        "ASC-L37",
+        "ASC-L624868",
+        "ASC-L625080",
+        "ASC-L633371",
+        "ASC-L633571",
+        "ASC-L634196",
+        "ASC-L642692",
+        "ASC-L685438",
+        "ASC-L685440",
+        "ASC-L83365",
+        "ASC-L83378",
+        "ASC-L86107",
+        "ASC-L86314"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    },
+    {
+      "binding_id": "EB-0014",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-3B23-14",
+      "observation_refs": [
+        "SO-31D612FA2BA9",
+        "SO-7BB7F570959A",
+        "SO-DCF64D235226"
+      ],
+      "observation_provenance": [
+        {
+          "observation_ref": "SO-31D612FA2BA9",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14"
+        },
+        {
+          "observation_ref": "SO-7BB7F570959A",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14"
+        },
+        {
+          "observation_ref": "SO-DCF64D235226",
+          "provenance_class": "DIRECT_INTENT_RETRIEVAL",
+          "origin_intent_ref": "SSI-ER-14"
+        }
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-14"
+      ],
+      "proposed_role": "STATE",
+      "epistemic_classes": [
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Selected observations may be companion states or DBC-label matches rather than the required semantic variable."
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "GAP-3B23-14",
+          "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+          "reason": "Planned time cannot substitute for observed stop or unplug time and several exit stages lack direct evidence."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L279854",
+        "ASC-L341",
+        "ASC-L35",
+        "ASC-L37",
+        "ASC-L580365",
+        "ASC-L624868",
+        "ASC-L625080",
+        "ASC-L633371",
+        "ASC-L633571",
+        "ASC-L634387",
+        "ASC-L642692",
+        "ASC-L684524",
+        "ASC-L685438",
+        "ASC-L685440",
+        "ASC-L83365",
+        "ASC-L86107",
+        "ASC-L86314"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-f2f9203de6d5494d",
+        "reasoning_input_package_hash": "1da118c87ee9299a4eb8e84a697edf652edec81741ad07dee9a82a76f5a1ad15",
+        "reasoning_result_id": "TM3-015-phase3b2_3-context-blind-replay-v5"
+      }
+    }
+  ],
+  "promotion_state_counts": {
+    "HUMAN_REVIEW_REQUIRED": 9,
+    "HOLD_UNRESOLVED": 5
+  },
+  "mapping_hash": "007d41422d5c370c229ff4803a0f7387e7ebf63a0f62d99e85541dedc4adf17a"
+}

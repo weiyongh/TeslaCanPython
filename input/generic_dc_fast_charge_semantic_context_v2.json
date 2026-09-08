@@ -1,0 +1,69 @@
+{
+  "context_version": "generic-dc-fast-charge-v2",
+  "l3_context": {
+    "position": "GENERIC_PROBLEM_DOMAIN_SEMANTIC_PRIOR_NOT_REASONING_SCRIPT_OR_SIGNAL_WHITELIST",
+    "system": "Generic DC Fast-Charge System",
+    "system_boundary": {
+      "inside": ["physical charge interface", "connection confirmation", "locking", "vehicle-side charge control", "vehicle high-voltage charge path"],
+      "referenced": ["traction battery and BMS", "vehicle control", "thermal management", "high-voltage safety"],
+      "external": ["EVSE internal control", "operator action", "payment and operator platform", "external physical measurement"]
+    },
+    "semantic_boundaries": [
+      "A+ and A- mechanical contact is not proof that auxiliary low-voltage supply is established.",
+      "Auxiliary low-voltage supply establishment is not proof that the vehicle actually woke.",
+      "Capability, Request, and Actual are distinct semantic roles.",
+      "Permission, contactor state, and energy transfer are distinct states or results.",
+      "EVSE Actual and Pack Actual belong to different measurement boundaries.",
+      "A generic communication process does not prescribe one vehicle ECU implementation sequence.",
+      "DBC labels and temporal proximity do not independently confirm semantic role or causality."
+    ],
+    "control_mainlines": [
+      {"mainline_id": "CML-DCFC-INTERFACE", "name": "Physical interface and connection establishment", "node_refs": ["CT-DCFC-01", "CT-DCFC-02", "CT-DCFC-03", "CT-DCFC-04"]},
+      {"mainline_id": "CML-DCFC-COMMUNICATION", "name": "Digital communication and parameter exchange", "node_refs": ["CT-DCFC-05", "CT-DCFC-06"]},
+      {"mainline_id": "CML-DCFC-CONTROL", "name": "Capability, Request, Permission, and Actual control", "node_refs": ["CT-DCFC-07", "CT-DCFC-08", "CT-DCFC-09", "CT-DCFC-10", "CT-DCFC-11", "CT-DCFC-12"]},
+      {"mainline_id": "CML-DCFC-THERMAL-PROTECTION", "name": "Thermal and protection companion control", "node_refs": ["CT-DCFC-13", "CT-DCFC-14"]},
+      {"mainline_id": "CML-DCFC-STOP", "name": "Controlled stop and safe exit", "node_refs": ["CT-DCFC-15"]}
+    ],
+    "control_tree_nodes": [
+      {"node_id": "CT-DCFC-01", "name": "Nine-terminal physical interface", "definition": "Mechanical availability of PE, CC1, CC2, DC+, DC-, A+, A-, S+, and S-; contact order is a physical-interface prior and not proof of electrical function establishment."},
+      {"node_id": "CT-DCFC-02", "name": "Connection confirmation", "definition": "Vehicle-side and EVSE-side connection confirmation are distinct observations and must not be inferred solely from mechanical contact."},
+      {"node_id": "CT-DCFC-03", "name": "Interface locking", "definition": "Lock request, lock execution, lock feedback, and confirmed locked state are distinct."},
+      {"node_id": "CT-DCFC-04", "name": "Auxiliary supply and vehicle wake", "definition": "A+ and A- contact, auxiliary low-voltage supply establishment, wake conditions, controller wake, and charge-ready state require separate evidence."},
+      {"node_id": "CT-DCFC-05", "name": "Digital communication handshake", "definition": "S+ and S- physical readiness, communication link establishment, endpoint online state, handshake, initialization, and communication validity are generic functions; implementation ownership is vehicle-specific."},
+      {"node_id": "CT-DCFC-06", "name": "Version and parameter exchange", "definition": "Protocol compatibility, version exchange, battery parameters, EVSE capability, vehicle capability, and preparation state are distinguishable communication-stage concepts."},
+      {"node_id": "CT-DCFC-07", "name": "EVSE Capability", "definition": "Current EVSE maximum voltage, current, and power boundaries; capability is not vehicle Request or actual output."},
+      {"node_id": "CT-DCFC-08", "name": "Vehicle Capability", "definition": "Current vehicle or battery allowed charging voltage, current, and power boundaries derived from battery, thermal, safety, and operating constraints."},
+      {"node_id": "CT-DCFC-09", "name": "Vehicle Request", "definition": "Vehicle charging voltage and current control targets; request power is normally derived as P_request = U_request × I_request unless independently defined and validated."},
+      {"node_id": "CT-DCFC-10", "name": "Permission and Safety Gate", "definition": "A decision result based on connection, lock, communication, parameters, battery conditions, HVIL, insulation, interface condition, and prohibiting faults; it is not contactor feedback or energy transfer."},
+      {"node_id": "CT-DCFC-11", "name": "High-voltage path", "definition": "High-voltage permission, contactor request, action, feedback, voltage matching, and confirmed DC path establishment are distinct steps requiring applicable evidence."},
+      {"node_id": "CT-DCFC-12", "name": "Voltage and Current Actual", "definition": "EVSE output voltage/current and Pack-side voltage/current are actual-response measurements at different boundaries; derived powers use synchronized voltage and current at the same boundary."},
+      {"node_id": "CT-DCFC-13", "name": "Continuous charge control", "definition": "Battery state and constraints update Vehicle Capability; EVSE Capability constrains feasible operation; Vehicle Request is updated; EVSE Actual and Pack Actual respond under system constraints. These roles remain distinct throughout charging."},
+      {"node_id": "CT-DCFC-14", "name": "Thermal and protection control", "definition": "Battery and interface temperature, cooling or heating demand and execution, HVIL, insulation, communication, voltage/current, lock, and fault conditions may update capability, limit request, or initiate protection without collapsing those roles."},
+      {"node_id": "CT-DCFC-15", "name": "Stop and controlled exit", "definition": "End condition, request reduction or withdrawal, actual-current reduction, energy-transfer exit, EVSE high-voltage exit, vehicle high-voltage-path exit, communication closeout, safe unlock, disconnect confirmation, and sleep preparation require bounded evidence; the initiator may remain unknown."}
+    ],
+    "evidence_requirements": [
+      {"evidence_requirement_id": "ER-01", "statement": "Distinguish nine-terminal mechanical interface conditions from confirmed physical connection.", "sufficiency_rule": "Independent evidence is required for mechanical contact and connection confirmation."},
+      {"evidence_requirement_id": "ER-02", "statement": "Distinguish connection confirmation from lock request, lock execution, lock feedback, and confirmed lock.", "sufficiency_rule": "A single state label cannot satisfy all locking stages."},
+      {"evidence_requirement_id": "ER-03", "statement": "Distinguish A+ and A- contact, auxiliary supply establishment, actual controller wake, and charge-ready state.", "sufficiency_rule": "Downstream activity alone does not prove each upstream condition."},
+      {"evidence_requirement_id": "ER-04", "statement": "Identify communication link, handshake or initialization, version compatibility, and parameter exchange where observable.", "sufficiency_rule": "Generic protocol stages do not prove a fixed internal ECU sequence or unobserved protocol messages."},
+      {"evidence_requirement_id": "ER-05", "statement": "Identify EVSE Capability without substituting Vehicle Capability, Vehicle Request, or Actual.", "sufficiency_rule": "Capability requires validated boundary variables or explicit insufficient evidence."},
+      {"evidence_requirement_id": "ER-06", "statement": "Identify Vehicle Capability without substituting EVSE Capability, Vehicle Request, or Actual.", "sufficiency_rule": "Vehicle allowed voltage/current/power require validated vehicle-boundary evidence."},
+      {"evidence_requirement_id": "ER-07", "statement": "Identify Vehicle Request voltage and current independently of Capability and Actual.", "sufficiency_rule": "Request power is derived from synchronized request voltage/current unless an independent request-power field is validated."},
+      {"evidence_requirement_id": "ER-08", "statement": "Identify Permission and Safety Gate separately from contactor state, high-voltage path, and energy transfer.", "sufficiency_rule": "Actual or contactor observations cannot alone prove permission."},
+      {"evidence_requirement_id": "ER-09", "statement": "Identify high-voltage path request, action, feedback, voltage matching, and establishment within observable limits.", "sufficiency_rule": "Contactor state alone does not prove energy transfer."},
+      {"evidence_requirement_id": "ER-10", "statement": "Distinguish EVSE Actual voltage/current/power from Pack Actual voltage/current/power at their measurement boundaries.", "sufficiency_rule": "Cross-boundary comparison requires synchronized and semantically validated measurements."},
+      {"evidence_requirement_id": "ER-11", "statement": "Assess the continuous Capability, Request, EVSE Actual, and Pack Actual relationship without collapsing roles or assuming causality from proximity.", "sufficiency_rule": "Missing roles remain explicit gaps."},
+      {"evidence_requirement_id": "ER-12", "statement": "Identify thermal state, thermal demand, execution, and effects on capability or request where supported.", "sufficiency_rule": "Thermal correlation requires validation and an alternative-condition check for causal attribution."},
+      {"evidence_requirement_id": "ER-13", "statement": "Identify protection monitoring, limiting action, stop request, and safe shutdown without inventing fault causes.", "sufficiency_rule": "Protection interpretation requires applicable safety and fault-state evidence."},
+      {"evidence_requirement_id": "ER-14", "statement": "Describe controlled stop across Request, EVSE Actual, Pack Actual, high-voltage path, communication closeout, and safe unlock.", "sufficiency_rule": "CAN state time is not human action time, and a missing initiator remains an evidence gap."}
+    ],
+    "known_dbc_uncertainties": [
+      {"uncertainty_id": "DU-GENERIC-01", "statement": "DBC availability, naming, scale, enumeration, multiplexing, and measurement ownership require vehicle-specific validation."},
+      {"uncertainty_id": "DU-GENERIC-02", "statement": "A decoded or matched field does not by itself confirm Request, Permission, Capability, Actual, protocol state, or causality."}
+    ],
+    "source_refs": [
+      {"title": "直流快充", "url": "https://app.notion.com/p/3d0a4e4386498073a723f95a15d1c301", "page_last_edited_at": "2026-09-08T01:56:01.348Z", "anchors": ["一、系统结构", "二、状态和变量", "三、主线", "四、控制树", "七、状态", "八、边界"]}
+    ],
+    "prior_version": "generic-dc-fast-charge-v2"
+  }
+}

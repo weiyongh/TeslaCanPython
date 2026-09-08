@@ -1,0 +1,74 @@
+{
+  "phase": "2.6C",
+  "replay_id": "TM3-015-STRICT-BLIND-v2.1",
+  "input": {
+    "package_id": "SRP-TM3-015-DCFC-v2.1",
+    "package_hash": "d86e2e9a5b52dae16382ed68d3d495fd27aafe9478f1e63fc1c100325312af3e",
+    "contract_version": "semantic-reasoning-v1",
+    "validation_result": "PASS",
+    "reference_closure_result": "PASS",
+    "unknown_reference_count": 0,
+    "observation_count": 120,
+    "candidate_count": 40,
+    "control_node_count": 17,
+    "evidence_requirement_count": 10
+  },
+  "strict_blindness": {
+    "status": "PASS",
+    "fresh_isolated_context": true,
+    "conversation_history_inherited": false,
+    "historical_results_used": false,
+    "allowed_sources": [
+      "output/TM3-015/reasoning_spike/reasoning_input_v2.1.json",
+      "spikes/contracts/semantic_reasoning_v1.schema.json"
+    ],
+    "forbidden_sources_read": 0
+  },
+  "output": {
+    "path": "output/TM3-015/reasoning_spike/blind_reasoning_output_v2.1.json",
+    "file_sha256_at_freeze": "1809dd3550fa10bee117fb5bf03fc158b5ef5ffa14c3fa810424e052a40eeb2d",
+    "canonical_object_sha256_at_freeze": "2f21f54063ee161d8675bf47bae402cf94bbfa7ba52c0b2361bf9d3abe0082eb",
+    "contract_validation_result": "PASS",
+    "reference_closure_result": "PASS",
+    "unknown_reference_count": 0,
+    "initial_finding_count": 5,
+    "updated_finding_count": 0,
+    "frozen": true,
+    "freeze_time_utc": "2026-09-07T15:01:44Z"
+  },
+  "runtime": {
+    "replay_start_time_utc": "2026-09-07T14:51:37Z",
+    "input_validation_start_time_utc": "2026-09-07T14:51:38Z",
+    "input_validation_duration_seconds": 0.871557,
+    "reasoning_start_time_utc_executor_reported": "2026-09-07T14:51:00Z",
+    "reasoning_end_time_utc_executor_reported": "2026-09-07T15:00:41Z",
+    "initial_semantic_reasoning_duration_seconds_executor_reported": 581,
+    "follow_up_start_time_utc": null,
+    "follow_up_end_time_utc": null,
+    "follow_up_duration_seconds": 0,
+    "updated_semantic_reasoning_duration_seconds": 0,
+    "program_validation_start_time_utc": "2026-09-07T15:01:27Z",
+    "program_validation_end_time_utc": "2026-09-07T15:01:28Z",
+    "program_validation_duration_seconds": 0.861387,
+    "output_freeze_time_utc": "2026-09-07T15:01:44Z",
+    "wall_clock_to_freeze_seconds": 607
+  },
+  "budget": {
+    "model_call_count": 1,
+    "initial_semantic_reasoning_calls": 1,
+    "deterministic_follow_up_count": 0,
+    "updated_semantic_reasoning_calls": 0,
+    "discovery_rerun_count": 0,
+    "asc_parse_count": 0,
+    "dbc_coverage_join_count": 0,
+    "observation_regeneration_count": 0,
+    "candidate_regeneration_count": 0
+  },
+  "freeze_gate": {
+    "input_valid_before_reasoning": true,
+    "reasoning_output_valid_before_comparison": true,
+    "reasoning_output_frozen_before_comparison": true,
+    "hidden_comparison_started": false
+  },
+  "timing_note": "The executor-reported reasoning start precedes the orchestrator replay start by 37 seconds and is retained as reported rather than corrected. It is not used to establish the freeze order; the output hash and orchestrator freeze timestamp establish that order."
+}

@@ -206,3 +206,13 @@ Codex就应该知道该干什么。
 另外你说“慢充再验证一次就结束了”，我也赞成这个节奏。Model 3这一轮基线不需要无限采下去。把慢充这个不同类型的案例跑通以后，反而应该回头总结：哪些流程已经稳定、哪些Prompt可以删除、哪些人工审核可以取消、哪些问题进入以后有需要再验证的Signal backlog。
 
 这会比继续增加第十几个基线案例更有价值。
+
+# notion同步
+```
+按 doc/methodology/TeslaCanPython_Notion_L3_本地同步规范_v0.2.md 更新一次本地 L3。
+```
+
+# 怎么启动移交的地吗
+```
+用当前正式代码，对 TM3-015 做一次只到 Retrieval 为止的验证；不要改算法，不进 LLM；把 Full Observation、Retrieval Coverage、K/R/U 分布、Strong-but-not-retrieved 和选择理由做成人类可审核摘要。
+```

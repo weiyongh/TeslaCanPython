@@ -1,0 +1,155 @@
+{
+  "audit_id": "AUDIT-TM3-015-PHASE26-v1",
+  "experiment": "TM3-015 直流快充",
+  "scope": "Isolated Dynamic Semantic Reasoning Validation Spike",
+  "formal_pipeline_modified": false,
+  "artifacts": {
+    "reasoning_input": {
+      "path": "output/TM3-015/reasoning_spike/reasoning_input.json",
+      "package_id": "SRP-TM3-015-DCFC-v1",
+      "package_hash": "aea77f58573fa4671fdb0aa0f3639725fbd860fe96e0c1266b3e381ea28a7685",
+      "file_sha256": "2415a816aa789696790e5ff934bc3325abdfba285a12595a03886c406bbebbf6"
+    },
+    "reasoning_output": {
+      "path": "output/TM3-015/reasoning_spike/reasoning_output.json",
+      "file_sha256_at_freeze": "4a63dc47c42d82c904a3902172b01f5cc78096f7452f29b02184c5561cc4ec99",
+      "frozen_before_hidden_comparison": true
+    },
+    "hidden_comparison": {
+      "path": "output/TM3-015/reasoning_spike/hidden_comparison.json",
+      "file_sha256": "caf4946f0e551fb47410a5317b25ca82c85dc21a5d559c46abb7ae0225f9905f"
+    }
+  },
+  "input_boundary": {
+    "included": [
+      "input/can_20260831102614_TM3-015_直流快充采集.asc",
+      "input/tesla_model3_ONYX.dbc",
+      "采集前已存在的快充L3语义先验、Control Mainline、Control Tree Node",
+      "ER-01至ER-10",
+      "已知DBC不确定性",
+      "Phase 2.5 Discovery Kernel生成的Observation、Candidate与一致性关系"
+    ],
+    "excluded_from_package": [
+      "TM3-015历史最终报告",
+      "events.csv",
+      "evidence_assessment.csv",
+      "energy_dbc_adaptation/",
+      "analysis_audit.json",
+      "既有人工分析结论"
+    ],
+    "source_traceability": {
+      "l3_source_ref_count": 2,
+      "control_mainline_count": 4,
+      "control_tree_node_count": 13,
+      "evidence_requirement_count": 10,
+      "known_dbc_uncertainty_count": 6,
+      "all_required_prior_objects_have_source_ref_or_fingerprint": true
+    }
+  },
+  "processing_statistics": {
+    "asc_bytes": 31815365,
+    "asc_sha256": "622bfb8e8db203f0a5ba09b4ab91bff42415a28728a078a7c4f7f771e880665d",
+    "parsed_frames": 685617,
+    "malformed_candidate_lines": 0,
+    "time_range_s": [0.0, 299.7339],
+    "bus_variants": 344,
+    "dbc_coverage": {
+      "MATCHED": 65,
+      "PARTIAL": 97,
+      "INVALID": 8,
+      "UNMATCHED": 174
+    },
+    "decoded_signal_summaries": 4280,
+    "compressed_candidates": 120,
+    "llm_candidates": 40,
+    "reasoning_observations": 120,
+    "initial_findings": 8,
+    "updated_findings": 3
+  },
+  "reasoning_execution": {
+    "initial_reasoning_count": 1,
+    "deterministic_follow_up_count": 1,
+    "updated_reasoning_count": 1,
+    "autonomous_loop_count": 0,
+    "claim_classes_used": ["OBSERVED", "DERIVED", "INFERRED", "UNSUPPORTED"],
+    "follow_up": {
+      "request_id": "VR-01",
+      "operation": "TARGETED_WINDOW_STATS",
+      "window_s": [100.0, 280.0],
+      "result_id": "FU-5284974017F34272",
+      "result": "PASS",
+      "limitations": [
+        "所有返回时间均为CAN_OBSERVED_TIME",
+        "没有返回值可作为独立人工事件时间",
+        "计算不升级DBC语义或定量可信度",
+        "高频数值Signal的transition列表受32条上限影响"
+      ]
+    }
+  },
+  "program_side_validation": {
+    "input_hash_valid": true,
+    "output_contract_valid": true,
+    "unknown_reference_count": 0,
+    "follow_up_limit_valid": true,
+    "updated_pass_has_no_follow_up_request": true,
+    "inference_alternative_explanation_rule_valid": true,
+    "result": "PASS"
+  },
+  "hidden_comparison_result": {
+    "executed_after_output_freeze": true,
+    "compatible_evidence_requirements": 10,
+    "total_evidence_requirements": 10,
+    "semantic_checks_passed": 5,
+    "semantic_checks_total": 5,
+    "strict_cognitive_blinding": false,
+    "artifact_input_blinding": true
+  },
+  "acceptance_criteria": [
+    {"criterion": "冻结输入包并保留package_id/package_hash", "status": "PASS"},
+    {"criterion": "L3 Context、Control Tree与ER具备来源引用或指纹", "status": "PASS"},
+    {"criterion": "历史结果未进入reasoning_input", "status": "PASS"},
+    {"criterion": "Phase 2.5 Discovery Kernel完成ASC完整性、覆盖、Known/Residual/Unknown和压缩", "status": "PASS"},
+    {"criterion": "一次Initial、最多一次确定性Follow-up、一次Updated且无自治循环", "status": "PASS"},
+    {"criterion": "输出区分OBSERVED/DERIVED/INFERRED/UNSUPPORTED并保留替代解释", "status": "PASS"},
+    {"criterion": "未将计划时间或CAN边沿升级成人工事件和因果事实", "status": "PASS"},
+    {"criterion": "未补造Request、Permission、Protocol或强制Unknown映射", "status": "PASS"},
+    {"criterion": "Hidden Comparison在输出冻结后执行", "status": "PASS"},
+    {"criterion": "执行者对历史结果保持严格认知盲态", "status": "FAIL", "reason": "本会话在样本选择阶段已读取TM3-015历史报告、events、assessment和energy summary；文件级输入隔离成立，但无法追溯消除模型上下文暴露。"}
+  ],
+  "overall_acceptance": "FAIL",
+  "architecture_issues": [
+    {
+      "id": "AI-01",
+      "severity": "BLOCKING_FOR_STRICT_BLIND_ACCEPTANCE",
+      "issue": "文件隐藏不能保证同一会话中的模型认知盲态。",
+      "impact": "Hidden Comparison可验证结构与结果兼容性，但不能作为严格独立盲测证据。",
+      "minimum_resolution": "在从未读取历史结果的新任务/隔离上下文中重放冻结输入和Contract，再由独立进程解锁比较。"
+    },
+    {
+      "id": "AI-02",
+      "severity": "HIGH",
+      "issue": "TARGETED_WINDOW_STATS只返回混合窗口统计，且transition对高频数值Signal截断为32条。",
+      "impact": "它能验证稀疏状态边沿，却不能独立形成稳态Pack功率闭环或完整捕获高频Signal阶段变化。",
+      "minimum_resolution": "Phase 3前增加由LLM指定、程序校验的稳定子窗统计与同步派生量，但仍限制为一次确定性Follow-up。"
+    },
+    {
+      "id": "AI-03",
+      "severity": "HIGH",
+      "issue": "当前DBC对连接字段、0x29D电流和部分Pack/温度量存在语义、缩放或范围冲突。",
+      "impact": "DBC名称只能产生候选角色；若缺少Signal Validation，Semantic Prior会被表面命名污染。",
+      "minimum_resolution": "把maturity/validation_state作为映射的一等输入，并要求Actual、Capability、State、Timing-only分别裁决。"
+    },
+    {
+      "id": "AI-04",
+      "severity": "MEDIUM",
+      "issue": "ER状态的Hidden Comparison采用兼容区间，不能衡量理由、边界和错误因果的一致程度。",
+      "impact": "10/10兼容不等于语义判断完全正确。",
+      "minimum_resolution": "增加基于结构化claim、gap、role和prohibited-claim的独立评分。"
+    }
+  ],
+  "phase3_recommendation": {
+    "recommend": false,
+    "decision": "REPEAT_ISOLATED_BLIND_VALIDATION_FIRST",
+    "reason": "白盒合同与程序校验可运行，且历史对比表现良好；严格认知盲测未成立，Follow-up也不足以完成稳态定量闭环，因此不建议直接集成正式Pipeline。"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "charter_version": "analysis-charter-v1",
+  "experiment_id": "TM3-015",
+  "purpose": "直流快充动态过程的全量CAN Observation Discovery；不预设本次数据的Signal角色、Evidence Gap或结论",
+  "system_scope": "车辆侧直流快充连接、状态、高压、能量和热管理可观察边界",
+  "analysis_scope": "全量bus-key、DBC coverage、Known/Residual/Unknown机器观察及候选压缩",
+  "l3_prior_refs": [
+    "input/generic_dc_fast_charge_semantic_context_v2.json"
+  ],
+  "semantic_context_ref": "input/generic_dc_fast_charge_semantic_context_v2.json",
+  "experiment_procedure_ref": "input/TM3-015_experiment_procedure_v1.json",
+  "evidence_requirements": [
+    "ER-01", "ER-02", "ER-03", "ER-04", "ER-05", "ER-06", "ER-07",
+    "ER-08", "ER-09", "ER-10", "ER-11", "ER-12", "ER-13", "ER-14"
+  ],
+  "allowed_data_sources": [
+    "input/can_20260831102614_TM3-015_直流快充采集.asc",
+    "input/tesla_model3_ONYX.dbc"
+  ],
+  "asc_ref": "input/can_20260831102614_TM3-015_直流快充采集.asc",
+  "dbc_refs": [
+    "input/tesla_model3_ONYX.dbc"
+  ],
+  "time_policy": {
+    "mode": "DYNAMIC_CAN_OBSERVED",
+    "planned_time_is_observed_event": false,
+    "can_state_is_human_action": false,
+    "event_inference_allowed": false
+  },
+  "known_signal_hints": []
+}

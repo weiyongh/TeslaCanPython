@@ -1,0 +1,2016 @@
+{
+  "contract_version": "semantic-reasoning-v1",
+  "result_id": "SRR-TM3-015-STRICT-BLIND-INITIAL-v1",
+  "input_package_id": "SRP-TM3-015-DCFC-v1",
+  "input_package_hash": "aea77f58573fa4671fdb0aa0f3639725fbd860fe96e0c1266b3e381ea28a7685",
+  "initial_reasoning": {
+    "pass_id": "INITIAL-STRICT-BLIND",
+    "findings": [
+      {
+        "finding_id": "F-DCFC-CONNECTION-SEQUENCE",
+        "candidate_refs": [
+          "C0033",
+          "C0034"
+        ],
+        "observation_refs": [
+          "O-248FA28FD648",
+          "O-CCCAD844E3A0",
+          "O-30A5630397C5",
+          "O-DECE03E5A445",
+          "O-F1EC04428859",
+          "O-4D428E122092"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-248FA28FD648",
+          "EA-CCCAD844E3A0",
+          "EA-30A5630397C5",
+          "EA-DECE03E5A445",
+          "EA-4D428E122092",
+          "EA-F1EC04428859"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-248FA28FD648",
+              "EA-CCCAD844E3A0",
+              "EA-30A5630397C5",
+              "EA-DECE03E5A445"
+            ],
+            "statement": "多个充电口、线缆和锁止候选Signal在CAN观察时间20.7178至21.0173秒首次变化。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-4D428E122092",
+              "EA-F1EC04428859"
+            ],
+            "statement": "EVSE类型候选在39.7192秒首次变化，线缆状态候选在40.1183秒首次变化。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-248FA28FD648",
+              "O-30A5630397C5",
+              "O-DECE03E5A445",
+              "O-4D428E122092"
+            ],
+            "statement": "这些同域状态共同构成连接检测与可见协商过程的车型投射候选。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-START"
+          ],
+          "role": "连接检测与可见协商"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-01",
+          "node_refs": [
+            "CT-DCFC-01",
+            "CT-DCFC-02"
+          ],
+          "observability": "PARTIALLY_OBSERVED",
+          "control_node_refs": [
+            "CT-DCFC-01",
+            "CT-DCFC-02"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-01",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "EA-248FA28FD648",
+              "EA-CCCAD844E3A0",
+              "EA-30A5630397C5",
+              "EA-DECE03E5A445"
+            ],
+            "reason": "CAN状态变化可形成车型投射，但缺少外部插枪、开门和锁止事件时间，不能区分人工动作。"
+          },
+          {
+            "evidence_requirement_ref": "ER-02",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "EA-4D428E122092",
+              "EA-F1EC04428859",
+              "O-30A5630397C5",
+              "O-DECE03E5A445"
+            ],
+            "reason": "存在多个同层状态的有序变化，但DBC语义未验证且不足以确认完整握手。"
+          }
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "20.7178至40.1183秒的多Signal变化可能投射连接识别、锁止及可见协商的推进，但不能代表人工动作时间或完整协议状态机。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-CONN-DBC",
+            "description": "社区DBC位段、枚举或复用解释不适配本车，使变化被错误命名为连接或协商状态。",
+            "compatible_observation_refs": [
+              "O-248FA28FD648",
+              "O-30A5630397C5",
+              "O-DECE03E5A445",
+              "O-4D428E122092"
+            ],
+            "discriminating_evidence": "独立外部事件记录与替代DBC定义的逐帧一致性。",
+            "minimum_check": "在一次插枪与拔枪重复采集中同步记录外部Observed Event Time，并核对各候选状态的方向和重复性。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "存在一组可映射至连接检测和可见协商节点的有序CAN状态变化。"
+        ],
+        "unsupported_claims": [
+          "20.7178秒就是人工插枪时刻。",
+          "39.7192秒证明完整充电协议握手完成。",
+          "任一单Signal可独立确认锁止安全事实。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-CONN-EVENT-TIME",
+            "blocked_claim": "区分开门、插枪、锁止及协商的真实事件边界",
+            "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+            "reason": "输入明确标注Observed Event Time缺失，CAN不能反推人工动作时刻。",
+            "minimum_evidence_needed": "带统一时间基准的开门、插枪、锁止确认和扫码操作实录。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-CONN-SIGNAL-VALIDATION",
+            "blocked_claim": "确认CP候选Signal的连接与协商语义",
+            "missing_evidence_type": "SIGNAL_VALIDATION",
+            "reason": "CP定义来自社区DBC，且存在SNA及覆盖不完整。",
+            "minimum_evidence_needed": "重复事件下的方向一致性与独立外部状态对照。",
+            "priority": "P1"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "同步外部事件时间重复一次开门、插枪、锁止和拔枪过程，验证CP候选状态顺序及复现性。",
+        "uncertainty": "连接域多Signal时序较集中，但人工事件、完整协议及DBC语义均未独立确认。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "ER-01",
+          "ER-02",
+          "O-248FA28FD648",
+          "O-30A5630397C5",
+          "O-DECE03E5A445",
+          "O-4D428E122092"
+        ],
+        "traceability_refs": [
+          "ER-01",
+          "ER-02",
+          "O-248FA28FD648",
+          "O-30A5630397C5",
+          "O-DECE03E5A445",
+          "O-4D428E122092"
+        ]
+      },
+      {
+        "finding_id": "F-DCFC-HV-CURRENT-ESTABLISHMENT",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-9D323E9B10AC",
+          "O-2644736F4A49",
+          "O-7D22A98C2406",
+          "O-8EBD6B851F2B",
+          "O-FF177FEE2DC2",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-9D323E9B10AC",
+          "EA-2644736F4A49",
+          "EA-7D22A98C2406",
+          "EA-8EBD6B851F2B",
+          "EA-FF177FEE2DC2",
+          "EA-7980F7D7EA4B",
+          "EA-BFA7B49A9AC9"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-9D323E9B10AC",
+              "EA-2644736F4A49",
+              "EA-7D22A98C2406",
+              "EA-8EBD6B851F2B",
+              "EA-FF177FEE2DC2"
+            ],
+            "statement": "充电UI、高压及接触器候选Signal在115.3922至139.4878秒区间首次变化。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-7980F7D7EA4B",
+              "EA-BFA7B49A9AC9"
+            ],
+            "statement": "CP侧直流电压候选在140.0275秒首次变化，CP侧直流电流候选在145.0277秒首次变化。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-2644736F4A49",
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "statement": "该序列与高压状态建立后出现直流能量传输响应相容。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-START",
+            "CML-DCFC-ENERGY"
+          ],
+          "role": "高压建立、直流电压与电流响应"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-04",
+          "node_refs": [
+            "CT-DCFC-04",
+            "CT-DCFC-05",
+            "CT-DCFC-06",
+            "CT-DCFC-07",
+            "CT-ENERGY-01"
+          ],
+          "observability": "PARTIALLY_OBSERVED",
+          "control_node_refs": [
+            "CT-DCFC-04",
+            "CT-DCFC-05",
+            "CT-DCFC-06",
+            "CT-DCFC-07",
+            "CT-ENERGY-01"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-03",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "EA-2644736F4A49",
+              "EA-7D22A98C2406",
+              "EA-8EBD6B851F2B",
+              "EA-FF177FEE2DC2",
+              "EA-BFA7B49A9AC9"
+            ],
+            "reason": "多个高压状态候选与后续电流建立相容，但未观察到直接车辆许可Signal。"
+          },
+          {
+            "evidence_requirement_ref": "ER-04",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "EA-7980F7D7EA4B",
+              "EA-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "reason": "CP侧电压、电流候选与Pack电流动态同时存在，但方向、定量闭环和DBC适配仍需窗口化验证。"
+          }
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "CONTROL_RELATION_SUPPORTED",
+        "semantic_hypothesis": "115.3922至145.0277秒形成车辆侧可见的充电准备、高压建立、电压建立和电流建立序列，支持当前启动控制主线，但不揭示内部许可规则。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-HV-DECODE",
+            "description": "高压、CP电压或CP电流候选的DBC缩放、符号或枚举不适配，只有原始位变化真实。",
+            "compatible_observation_refs": [
+              "O-2644736F4A49",
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "discriminating_evidence": "同一有限窗口内CP与Pack电压、电流的方向、量级和状态转移闭环。",
+            "minimum_check": "对130至160秒执行目标窗口统计，返回候选状态转移及CP/Pack电压电流的起止值、极值和符号。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "存在与高压建立后直流电流建立相容的车辆侧状态序列。",
+          "电压候选首次变化早于电流候选首次变化。"
+        ],
+        "unsupported_claims": [
+          "已直接观察车辆内部充电许可。",
+          "接触器候选的任一枚举单独证明高压安全状态。",
+          "CP侧电流的定量语义已经确认。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-DIRECT-PERMISSION",
+            "blocked_claim": "确认车辆侧条件判断与充电许可节点",
+            "missing_evidence_type": "CONDITION_OR_PERMISSION",
+            "reason": "输入没有已验证的直接许可Signal。",
+            "minimum_evidence_needed": "与电流建立相容且经过语义验证的直接车辆许可或条件状态。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-ENERGY-SIGNAL-VALIDATION",
+            "blocked_claim": "确认CP与Pack电流、电压的定量关系",
+            "missing_evidence_type": "SIGNAL_VALIDATION",
+            "reason": "CP与Pack均标记VALIDATION_REQUIRED，Pack电流还存在符号与偏置不确定性。",
+            "minimum_evidence_needed": "窗口化方向、量级和物理相容性核对，并保留不同测量边界。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "对130至160秒的高压与电流建立窗口统计关键状态转移和CP/Pack电压电流，以判定是否形成方向与量级相容的启动闭环。",
+        "uncertainty": "序列层支持较强，但许可不可见且关键能源Signal语义未验证。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "ER-03",
+          "ER-04",
+          "O-2644736F4A49",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ],
+        "traceability_refs": [
+          "ER-03",
+          "ER-04",
+          "O-2644736F4A49",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ]
+      },
+      {
+        "finding_id": "F-DCFC-SHORT-RUN-ENERGY",
+        "candidate_refs": [
+          "C0030"
+        ],
+        "observation_refs": [
+          "O-54E23D9221B4",
+          "O-CA4507EB8924",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-40626519D168"
+        ],
+        "relation_refs": [
+          "R-C0030"
+        ],
+        "event_refs": [
+          "EA-7980F7D7EA4B",
+          "EA-BFA7B49A9AC9",
+          "EA-40626519D168"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-BFA7B49A9AC9"
+            ],
+            "statement": "CP直流电流候选在全采集范围为0至133.0892539 A并最终回到0。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-CA4507EB8924"
+            ],
+            "statement": "Pack电流候选在全采集范围为-219.6至27.8 A并最终为0.5 A。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-40626519D168"
+            ],
+            "statement": "SOC UI候选在全采集范围由27.5至31.0之间变化。"
+          },
+          {
+            "claim_class": "DERIVED",
+            "support_refs": [
+              "R-C0030"
+            ],
+            "statement": "106项正值brick族成员均值之和353.2068999632107 V，与HVP_packVoltage均值353.97099999999995 V及BMS_packVoltage均值351.383347345945 V接近，形成电压闭合候选。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-ENERGY"
+          ],
+          "role": "CP与Pack能源交叉验证"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-07",
+          "node_refs": [
+            "CT-DCFC-07",
+            "CT-DCFC-08",
+            "CT-ENERGY-01"
+          ],
+          "observability": "PARTIALLY_OBSERVED",
+          "control_node_refs": [
+            "CT-DCFC-07",
+            "CT-DCFC-08",
+            "CT-ENERGY-01"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-04",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "O-CA4507EB8924",
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "R-C0030"
+            ],
+            "reason": "能源侧存在多源动态和电压闭合候选，但全程聚合值不能证明同一窗口内的方向、量级与时序闭环。"
+          },
+          {
+            "evidence_requirement_ref": "ER-05",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-CA4507EB8924",
+              "O-BFA7B49A9AC9"
+            ],
+            "reason": "输入未提供连续20至30秒目标窗口统计，无法确认短时稳定运行。"
+          }
+        ],
+        "relationship_kind": "PHYSICAL_CLOSURE",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "数据包含直流充电能源响应与电压闭合候选，但只能作为条件化车型基线候选，尚不能确认CP与Pack定量效率或短稳态。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-ENERGY-BOUNDARY",
+            "description": "CP与Pack位于不同测量边界，且聚合统计跨越启动、运行和退出，表观量级关系不代表同一物理状态。",
+            "compatible_observation_refs": [
+              "O-54E23D9221B4",
+              "O-CA4507EB8924",
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9"
+            ],
+            "discriminating_evidence": "同一稳定窗口内同步采样的CP与Pack电压、电流及各自功率。",
+            "minimum_check": "在电流非零区间识别一个连续20至30秒候选窗口，统计均值、标准差、范围和符号一致性。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "存在CP侧和Pack侧能源响应候选。",
+          "brick族和Pack电压存在全程统计层的电压闭合候选。"
+        ],
+        "unsupported_claims": [
+          "已形成连续20至30秒短稳态。",
+          "可由CP与Pack直接计算充电效率。",
+          "Pack电流负号已确认代表充电方向。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-STABLE-WINDOW",
+            "blocked_claim": "形成短时稳定充电基线",
+            "missing_evidence_type": "REPEAT_OBSERVATION",
+            "reason": "缺少连续20至30秒的目标窗口统计。",
+            "minimum_evidence_needed": "电流非零且状态一致的连续20至30秒窗口及关键Signal分布。",
+            "priority": "P1"
+          },
+          {
+            "gap_id": "G-PHYSICAL-BOUNDARY",
+            "blocked_claim": "CP与Pack的定量物理闭环",
+            "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+            "reason": "两个测量边界不同且没有桩端物理测量。",
+            "minimum_evidence_needed": "同步桩端电压电流或明确边界校准，结合车内同窗数据。",
+            "priority": "P1"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "对145至245秒中的电流非零区间定位连续20至30秒候选窗口，并统计CP/Pack电压、电流与SOC变化。",
+        "uncertainty": "全程范围支持存在能量传输阶段，但不能替代同窗稳定性与边界化定量验证。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "ER-04",
+          "ER-05",
+          "R-C0030",
+          "O-54E23D9221B4",
+          "O-CA4507EB8924",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9"
+        ],
+        "traceability_refs": [
+          "ER-04",
+          "ER-05",
+          "R-C0030",
+          "O-54E23D9221B4",
+          "O-CA4507EB8924",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9"
+        ]
+      },
+      {
+        "finding_id": "F-DCFC-STOP-EXIT",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-E56A605C76CE",
+          "O-626BE21E225E",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "O-30A5630397C5",
+          "O-248FA28FD648"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-E56A605C76CE",
+          "EA-626BE21E225E"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-E56A605C76CE"
+            ],
+            "statement": "停止充电请求候选为二值动态Signal，发生12次变化并最终为0。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-626BE21E225E"
+            ],
+            "statement": "UI充电使能请求候选在245.6557秒首次变化。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "statement": "采集结束时CP电流候选为0，Pack电流候选为0.5。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "EA-626BE21E225E",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "statement": "245.6557秒附近可能是车辆侧可见的退出边界候选，但没有实际停止入口时间不能建立请求到退出关系。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-STOP"
+          ],
+          "role": "停止请求候选、电流退出与连接释放"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-09",
+          "node_refs": [
+            "CT-DCFC-09",
+            "CT-DCFC-10",
+            "CT-DCFC-11"
+          ],
+          "observability": "PARTIALLY_OBSERVED",
+          "control_node_refs": [
+            "CT-DCFC-09",
+            "CT-DCFC-10",
+            "CT-DCFC-11"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-06",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "EA-626BE21E225E",
+              "O-E56A605C76CE",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "reason": "存在请求和电流退出候选，但缺少实际停止入口时间及持续归零窗口。"
+          },
+          {
+            "evidence_requirement_ref": "ER-07",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-30A5630397C5",
+              "O-248FA28FD648"
+            ],
+            "reason": "CAN候选不能代替锁止释放与拔枪的安全操作实录。"
+          }
+        ],
+        "relationship_kind": "POSSIBLE_PROXY",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "UI充电使能请求候选及后续电流归零可用于寻找停止退出窗口，但当前证据不能确认外部停止请求、退出延迟或连接安全释放。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-STOP-PROXY",
+            "description": "UI使能或CP停止候选可能是显示/代理状态、周期变化或DBC误解，而非实际停止请求。",
+            "compatible_observation_refs": [
+              "O-E56A605C76CE",
+              "O-626BE21E225E"
+            ],
+            "discriminating_evidence": "带外部停止动作时间的单调请求、状态退出和持续电流归零序列。",
+            "minimum_check": "同步记录停止按钮操作时间，并统计操作前后CP/Pack电流及充电状态的首次变化和持续归零。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "采集包含可能与停止退出相关的车辆侧状态变化及最终近零电流。"
+        ],
+        "unsupported_claims": [
+          "245.6557秒就是实际停止操作时刻。",
+          "CP_stopChargeRequest已验证为直接停止请求。",
+          "拔枪和锁止释放已由CAN安全确认。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-STOP-EVENT-TIME",
+            "blocked_claim": "请求到电流退出的时序",
+            "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+            "reason": "实际停止入口未记录。",
+            "minimum_evidence_needed": "统一时基的停止按钮或桩端停止事件时间。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-STOP-ZERO-HOLD",
+            "blocked_claim": "电流退出后持续归零",
+            "missing_evidence_type": "EXECUTION_FEEDBACK",
+            "reason": "仅有全程最终值，缺少停止窗口内的归零时刻与保持时长。",
+            "minimum_evidence_needed": "停止候选前后CP与Pack电流的逐窗转移和连续近零保持统计。",
+            "priority": "P1"
+          },
+          {
+            "gap_id": "G-UNPLUG-SAFETY",
+            "blocked_claim": "锁止释放和拔枪收尾完成",
+            "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+            "reason": "安全事实依赖外部实录，CAN不得代替。",
+            "minimum_evidence_needed": "锁止释放确认与拔枪实录及时间。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "在240至260秒统计UI使能、停止候选、充电状态、CP/Pack电流和连接状态的转移，随后用下一次外部停止事件时间验证。",
+        "uncertainty": "退出候选存在，但实际停止入口、请求语义、持续归零及安全释放均未建立。",
+        "confidence": "LOW",
+        "trace_refs": [
+          "ER-06",
+          "ER-07",
+          "O-E56A605C76CE",
+          "O-626BE21E225E",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ],
+        "traceability_refs": [
+          "ER-06",
+          "ER-07",
+          "O-E56A605C76CE",
+          "O-626BE21E225E",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ]
+      },
+      {
+        "finding_id": "F-THERMAL-COMPANION-LINE",
+        "candidate_refs": [
+          "C0002",
+          "C0003"
+        ],
+        "observation_refs": [
+          "O-4C49F2F6C6F2",
+          "O-6481FC6EB409",
+          "O-9A338BD975E3",
+          "O-ADFBE5C783AE",
+          "O-91CFD3997AF6",
+          "O-5C20B202383C",
+          "O-3C70B39B2A47",
+          "O-8C1ADA0DF0E3",
+          "O-6B9B0785AEA9"
+        ],
+        "relation_refs": [
+          "R-C0002",
+          "R-C0003"
+        ],
+        "event_refs": [
+          "EA-6481FC6EB409",
+          "EA-4C49F2F6C6F2",
+          "EA-5C20B202383C",
+          "EA-3C70B39B2A47",
+          "EA-8C1ADA0DF0E3",
+          "EA-9A338BD975E3",
+          "EA-91CFD3997AF6",
+          "EA-ADFBE5C783AE",
+          "EA-6B9B0785AEA9"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-4C49F2F6C6F2",
+              "O-6481FC6EB409",
+              "O-9A338BD975E3",
+              "O-ADFBE5C783AE",
+              "O-91CFD3997AF6"
+            ],
+            "statement": "电池泵实际/目标、冷却流量实际/目标及入口温度候选在采集中均有动态变化。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "R-C0002"
+            ],
+            "statement": "BMS_packTMax与BMS_packTMin候选在599次同帧比较中全部违反最大值不小于最小值的顺序。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "R-C0003"
+            ],
+            "statement": "BMS热敏电阻最大/最小编号候选在149次比较中有138次顺序冲突。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-4C49F2F6C6F2",
+              "O-6481FC6EB409",
+              "O-9A338BD975E3",
+              "O-ADFBE5C783AE"
+            ],
+            "statement": "这些动态候选可保留为热管理独立副线，但当前不足以建立请求到执行到温度响应的可靠语义链。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-THERMAL"
+          ],
+          "role": "Pack热管理独立副线"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-THERMAL-01",
+          "node_refs": [
+            "CT-THERMAL-01"
+          ],
+          "observability": "PARTIALLY_OBSERVED_WITH_CONFLICT",
+          "control_node_refs": [
+            "CT-THERMAL-01"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-10",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-4C49F2F6C6F2",
+              "O-6481FC6EB409",
+              "O-9A338BD975E3",
+              "O-ADFBE5C783AE",
+              "R-C0002",
+              "R-C0003"
+            ],
+            "reason": "请求和执行候选虽动态，但DBC适配未验证，且温度/编号Signal出现系统性顺序冲突。"
+          }
+        ],
+        "relationship_kind": "COMPANION_STATE",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "采集含热管理请求与执行候选活动，可作为充电过程的伴随副线；在DBC/MUX和Signal定义验证前，不应解释为已确认的热控制闭环。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-THERMAL-MUX",
+            "description": "MUX、位段或页面不适配造成每帧交替或错误解码，从而产生虚假的目标、温度和min/max关系。",
+            "compatible_observation_refs": [
+              "O-5C20B202383C",
+              "O-3C70B39B2A47",
+              "O-8C1ADA0DF0E3"
+            ],
+            "discriminating_evidence": "验证MUX页后，请求、目标、执行和温度应在同一有效页及连续窗口内呈物理可解释关系。",
+            "minimum_check": "先审计0x312等热管理候选的MUX适用性和定义，再选择同一有效页做窗口统计。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "热管理相关候选在采集中动态存在。",
+          "热管理应独立于充电主线保留为副线。"
+        ],
+        "unsupported_claims": [
+          "泵目标已确认导致泵实际响应。",
+          "温度候选可用于量化Pack热响应。",
+          "min/max冲突代表车辆真实热异常。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-THERMAL-DBC",
+            "blocked_claim": "建立热管理请求、目标、执行与温度响应链",
+            "missing_evidence_type": "DBC_DEFINITION",
+            "reason": "已知热管理Signal需先验证DBC适配和MUX，且存在确定性顺序冲突。",
+            "minimum_evidence_needed": "适配本帧DLC和MUX页的位段、缩放、符号及枚举定义。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-THERMAL-WINDOW",
+            "blocked_claim": "确认热响应与充电阶段相关",
+            "missing_evidence_type": "REPEAT_OBSERVATION",
+            "reason": "只有全程统计与首次变化，缺少相同阶段的请求到执行到温度窗口关系。",
+            "minimum_evidence_needed": "经Signal验证后的启动、稳定和退出窗口对照。",
+            "priority": "P1"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "优先验证热管理DBC与MUX适用性；若通过，再比较充电启动、稳定及退出窗口中的请求、目标、执行和温度变化。",
+        "uncertainty": "动态活动真实可见，但多个确定性冲突强烈限制语义解释。",
+        "confidence": "LOW",
+        "trace_refs": [
+          "ER-10",
+          "C0002",
+          "C0003",
+          "R-C0002",
+          "R-C0003",
+          "O-4C49F2F6C6F2",
+          "O-6481FC6EB409"
+        ],
+        "traceability_refs": [
+          "ER-10",
+          "C0002",
+          "C0003",
+          "R-C0002",
+          "R-C0003",
+          "O-4C49F2F6C6F2",
+          "O-6481FC6EB409"
+        ]
+      },
+      {
+        "finding_id": "F-UNKNOWN-RESIDUAL-BOUNDARY",
+        "candidate_refs": [
+          "C0047",
+          "C0048",
+          "C0049",
+          "C0050",
+          "C0077",
+          "C0078",
+          "C0079",
+          "C0080",
+          "C0092",
+          "C0093",
+          "C0094",
+          "C0095"
+        ],
+        "observation_refs": [],
+        "relation_refs": [],
+        "event_refs": [],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "C0047",
+              "C0048",
+              "C0049",
+              "C0050"
+            ],
+            "statement": "多个报文存在当前DBC未解释的动态残余bit。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "C0077",
+              "C0078",
+              "C0079",
+              "C0080"
+            ],
+            "statement": "部分未知bit以近固定周期切换，并被标记为计数器、心跳或分页候选。"
+          },
+          {
+            "claim_class": "UNSUPPORTED",
+            "support_refs": [
+              "C0047",
+              "C0048",
+              "C0049",
+              "C0050",
+              "C0092",
+              "C0093",
+              "C0094",
+              "C0095"
+            ],
+            "statement": "输入没有证据将这些未知或残余候选安全映射到直流快充控制树节点。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [],
+          "role": "NO_SAFE_MAPPING"
+        },
+        "control_tree_mapping": {
+          "node_ref": "NO_SAFE_MAPPING",
+          "node_refs": [],
+          "observability": "NO_SAFE_MAPPING",
+          "control_node_refs": []
+        },
+        "evidence_requirement_mapping": [],
+        "relationship_kind": "NO_SAFE_RELATIONSHIP",
+        "causality_status": "NOT_APPLICABLE",
+        "semantic_hypothesis": "未知和残余候选目前只证明存在未解释的报文活动，不能因其动态或低离散度而归入直流快充语义链。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-UNKNOWN-INFRA",
+            "description": "周期活动可能是计数器、心跳、分页或与本实验无关的车辆背景状态。",
+            "compatible_observation_refs": [],
+            "discriminating_evidence": "跨重复充电和非充电对照采集的事件锁定变化，结合位级结构与计数器排除。",
+            "minimum_check": "先排除固定周期计数器/心跳，再用带外部事件时间的充电与非充电对照验证。"
+          }
+        ],
+        "model_interaction": "INSUFFICIENT_TO_MAP",
+        "supported_claims": [
+          "当前DBC覆盖未解释全部动态位和未知报文。"
+        ],
+        "unsupported_claims": [
+          "任一未知候选是充电请求、许可、接触器或能源Signal。",
+          "动态残余可直接扩展控制树。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-UNKNOWN-DEFINITION",
+            "blocked_claim": "未知候选的直流快充语义映射",
+            "missing_evidence_type": "DBC_DEFINITION",
+            "reason": "候选缺少可验证定义，部分还可能是计数器、心跳或分页。",
+            "minimum_evidence_needed": "位级结构、反复事件相关性及独立状态对照共同支持的候选定义。",
+            "priority": "P2"
+          },
+          {
+            "gap_id": "G-UNKNOWN-CONTROL",
+            "blocked_claim": "未知候选进入控制树",
+            "missing_evidence_type": "ALTERNATIVE_CONDITION",
+            "reason": "没有非充电对照，无法排除背景车辆活动。",
+            "minimum_evidence_needed": "相同车辆条件下的充电与非充电对照采集。",
+            "priority": "P2"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "保持NO_SAFE_MAPPING；仅对排除周期基础设施后仍与重复充电事件同步的候选开展位级验证。",
+        "uncertainty": "没有足够证据区分控制语义、背景状态和通信基础设施。",
+        "confidence": "LOW",
+        "trace_refs": [
+          "C0047",
+          "C0048",
+          "C0049",
+          "C0050",
+          "C0077",
+          "C0078",
+          "C0079",
+          "C0080",
+          "C0092",
+          "C0093",
+          "C0094",
+          "C0095"
+        ],
+        "traceability_refs": [
+          "C0047",
+          "C0048",
+          "C0049",
+          "C0050",
+          "C0077",
+          "C0078",
+          "C0079",
+          "C0080",
+          "C0092",
+          "C0093",
+          "C0094",
+          "C0095"
+        ]
+      }
+    ],
+    "validation_requests": [
+      {
+        "request_id": "VR-TM3-015-ENERGY-START-STOP-WINDOW",
+        "operation": "TARGETED_WINDOW_STATS",
+        "input_refs": [
+          "O-9D323E9B10AC",
+          "O-2644736F4A49",
+          "O-7D22A98C2406",
+          "O-8EBD6B851F2B",
+          "O-FF177FEE2DC2",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "O-54E23D9221B4",
+          "O-626BE21E225E"
+        ],
+        "parameters": {
+          "start_time_s": 130.0,
+          "end_time_s": 260.0,
+          "subwindows": [
+            {
+              "name": "HV_AND_CURRENT_ESTABLISHMENT",
+              "start_time_s": 130.0,
+              "end_time_s": 160.0
+            },
+            {
+              "name": "RUN_CANDIDATE",
+              "start_time_s": 160.0,
+              "end_time_s": 240.0
+            },
+            {
+              "name": "EXIT_CANDIDATE",
+              "start_time_s": 240.0,
+              "end_time_s": 260.0
+            }
+          ],
+          "statistics": [
+            "first_value",
+            "last_value",
+            "minimum",
+            "maximum",
+            "mean",
+            "standard_deviation",
+            "change_times",
+            "time_above_or_below_near_zero"
+          ],
+          "near_zero_absolute_current_a": 1.0
+        },
+        "expected_decision": "判定高压/电流建立的顺序是否在同窗内相容、是否存在连续20至30秒的短稳态候选，以及245.6557秒附近是否伴随CP与Pack电流持续归零；该结果仍不能替代外部事件时间或独立Signal语义验证。"
+      }
+    ]
+  },
+  "follow_up_result": null,
+  "updated_reasoning": {
+    "pass_id": "UPDATED-DETERMINISTIC-CONTRACT-CORRECTION-FROZEN",
+    "findings": [
+      {
+        "finding_id": "F-DCFC-CONNECTION-SEQUENCE",
+        "candidate_refs": [
+          "C0033",
+          "C0034"
+        ],
+        "observation_refs": [
+          "O-248FA28FD648",
+          "O-CCCAD844E3A0",
+          "O-30A5630397C5",
+          "O-DECE03E5A445",
+          "O-F1EC04428859",
+          "O-4D428E122092"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-248FA28FD648",
+          "EA-CCCAD844E3A0",
+          "EA-30A5630397C5",
+          "EA-DECE03E5A445",
+          "EA-4D428E122092",
+          "EA-F1EC04428859"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-248FA28FD648",
+              "EA-CCCAD844E3A0",
+              "EA-30A5630397C5",
+              "EA-DECE03E5A445"
+            ],
+            "statement": "多个充电口、线缆和锁止候选Signal在CAN观察时间20.7178至21.0173秒首次变化。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-4D428E122092",
+              "EA-F1EC04428859"
+            ],
+            "statement": "EVSE类型候选在39.7192秒首次变化，线缆状态候选在40.1183秒首次变化。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-248FA28FD648",
+              "O-30A5630397C5",
+              "O-DECE03E5A445",
+              "O-4D428E122092"
+            ],
+            "statement": "这些同域状态共同构成连接检测与可见协商过程的车型投射候选。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-START"
+          ],
+          "role": "连接检测与可见协商"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-01",
+          "node_refs": [
+            "CT-DCFC-01",
+            "CT-DCFC-02"
+          ],
+          "observability": "PARTIALLY_OBSERVED",
+          "control_node_refs": [
+            "CT-DCFC-01",
+            "CT-DCFC-02"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-01",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "EA-248FA28FD648",
+              "EA-CCCAD844E3A0",
+              "EA-30A5630397C5",
+              "EA-DECE03E5A445"
+            ],
+            "reason": "CAN状态变化可形成车型投射，但缺少外部插枪、开门和锁止事件时间，不能区分人工动作。"
+          },
+          {
+            "evidence_requirement_ref": "ER-02",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "EA-4D428E122092",
+              "EA-F1EC04428859",
+              "O-30A5630397C5",
+              "O-DECE03E5A445"
+            ],
+            "reason": "存在多个同层状态的有序变化，但DBC语义未验证且不足以确认完整握手。"
+          }
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "20.7178至40.1183秒的多Signal变化可能投射连接识别、锁止及可见协商的推进，但不能代表人工动作时间或完整协议状态机。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-CONN-DBC",
+            "description": "社区DBC位段、枚举或复用解释不适配本车，使变化被错误命名为连接或协商状态。",
+            "compatible_observation_refs": [
+              "O-248FA28FD648",
+              "O-30A5630397C5",
+              "O-DECE03E5A445",
+              "O-4D428E122092"
+            ],
+            "discriminating_evidence": "独立外部事件记录与替代DBC定义的逐帧一致性。",
+            "minimum_check": "在一次插枪与拔枪重复采集中同步记录外部Observed Event Time，并核对各候选状态的方向和重复性。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "存在一组可映射至连接检测和可见协商节点的有序CAN状态变化。"
+        ],
+        "unsupported_claims": [
+          "20.7178秒就是人工插枪时刻。",
+          "39.7192秒证明完整充电协议握手完成。",
+          "任一单Signal可独立确认锁止安全事实。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-CONN-EVENT-TIME",
+            "blocked_claim": "区分开门、插枪、锁止及协商的真实事件边界",
+            "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+            "reason": "输入明确标注Observed Event Time缺失，CAN不能反推人工动作时刻。",
+            "minimum_evidence_needed": "带统一时间基准的开门、插枪、锁止确认和扫码操作实录。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-CONN-SIGNAL-VALIDATION",
+            "blocked_claim": "确认CP候选Signal的连接与协商语义",
+            "missing_evidence_type": "SIGNAL_VALIDATION",
+            "reason": "CP定义来自社区DBC，且存在SNA及覆盖不完整。",
+            "minimum_evidence_needed": "重复事件下的方向一致性与独立外部状态对照。",
+            "priority": "P1"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "同步外部事件时间重复一次开门、插枪、锁止和拔枪过程，验证CP候选状态顺序及复现性。",
+        "uncertainty": "连接域多Signal时序较集中，但人工事件、完整协议及DBC语义均未独立确认。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "ER-01",
+          "ER-02",
+          "O-248FA28FD648",
+          "O-30A5630397C5",
+          "O-DECE03E5A445",
+          "O-4D428E122092"
+        ],
+        "traceability_refs": [
+          "ER-01",
+          "ER-02",
+          "O-248FA28FD648",
+          "O-30A5630397C5",
+          "O-DECE03E5A445",
+          "O-4D428E122092"
+        ]
+      },
+      {
+        "finding_id": "F-DCFC-HV-CURRENT-ESTABLISHMENT",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-9D323E9B10AC",
+          "O-2644736F4A49",
+          "O-7D22A98C2406",
+          "O-8EBD6B851F2B",
+          "O-FF177FEE2DC2",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-9D323E9B10AC",
+          "EA-2644736F4A49",
+          "EA-7D22A98C2406",
+          "EA-8EBD6B851F2B",
+          "EA-FF177FEE2DC2",
+          "EA-7980F7D7EA4B",
+          "EA-BFA7B49A9AC9"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-9D323E9B10AC",
+              "EA-2644736F4A49",
+              "EA-7D22A98C2406",
+              "EA-8EBD6B851F2B",
+              "EA-FF177FEE2DC2"
+            ],
+            "statement": "充电UI、高压及接触器候选Signal在115.3922至139.4878秒区间首次变化。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-7980F7D7EA4B",
+              "EA-BFA7B49A9AC9"
+            ],
+            "statement": "CP侧直流电压候选在140.0275秒首次变化，CP侧直流电流候选在145.0277秒首次变化。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-2644736F4A49",
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "statement": "该序列与高压状态建立后出现直流能量传输响应相容。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-START",
+            "CML-DCFC-ENERGY"
+          ],
+          "role": "高压建立、直流电压与电流响应"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-04",
+          "node_refs": [
+            "CT-DCFC-04",
+            "CT-DCFC-05",
+            "CT-DCFC-06",
+            "CT-DCFC-07",
+            "CT-ENERGY-01"
+          ],
+          "observability": "PARTIALLY_OBSERVED",
+          "control_node_refs": [
+            "CT-DCFC-04",
+            "CT-DCFC-05",
+            "CT-DCFC-06",
+            "CT-DCFC-07",
+            "CT-ENERGY-01"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-03",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "EA-2644736F4A49",
+              "EA-7D22A98C2406",
+              "EA-8EBD6B851F2B",
+              "EA-FF177FEE2DC2",
+              "EA-BFA7B49A9AC9"
+            ],
+            "reason": "多个高压状态候选与后续电流建立相容，但未观察到直接车辆许可Signal。"
+          },
+          {
+            "evidence_requirement_ref": "ER-04",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "EA-7980F7D7EA4B",
+              "EA-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "reason": "CP侧电压、电流候选与Pack电流动态同时存在，但方向、定量闭环和DBC适配仍需窗口化验证。"
+          }
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "CONTROL_RELATION_SUPPORTED",
+        "semantic_hypothesis": "115.3922至145.0277秒形成车辆侧可见的充电准备、高压建立、电压建立和电流建立序列，支持当前启动控制主线，但不揭示内部许可规则。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-HV-DECODE",
+            "description": "高压、CP电压或CP电流候选的DBC缩放、符号或枚举不适配，只有原始位变化真实。",
+            "compatible_observation_refs": [
+              "O-2644736F4A49",
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "discriminating_evidence": "同一有限窗口内CP与Pack电压、电流的方向、量级和状态转移闭环。",
+            "minimum_check": "对130至160秒执行目标窗口统计，返回候选状态转移及CP/Pack电压电流的起止值、极值和符号。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "存在与高压建立后直流电流建立相容的车辆侧状态序列。",
+          "电压候选首次变化早于电流候选首次变化。"
+        ],
+        "unsupported_claims": [
+          "已直接观察车辆内部充电许可。",
+          "接触器候选的任一枚举单独证明高压安全状态。",
+          "CP侧电流的定量语义已经确认。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-DIRECT-PERMISSION",
+            "blocked_claim": "确认车辆侧条件判断与充电许可节点",
+            "missing_evidence_type": "CONDITION_OR_PERMISSION",
+            "reason": "输入没有已验证的直接许可Signal。",
+            "minimum_evidence_needed": "与电流建立相容且经过语义验证的直接车辆许可或条件状态。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-ENERGY-SIGNAL-VALIDATION",
+            "blocked_claim": "确认CP与Pack电流、电压的定量关系",
+            "missing_evidence_type": "SIGNAL_VALIDATION",
+            "reason": "CP与Pack均标记VALIDATION_REQUIRED，Pack电流还存在符号与偏置不确定性。",
+            "minimum_evidence_needed": "窗口化方向、量级和物理相容性核对，并保留不同测量边界。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "对130至160秒的高压与电流建立窗口统计关键状态转移和CP/Pack电压电流，以判定是否形成方向与量级相容的启动闭环。",
+        "uncertainty": "序列层支持较强，但许可不可见且关键能源Signal语义未验证。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "ER-03",
+          "ER-04",
+          "O-2644736F4A49",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ],
+        "traceability_refs": [
+          "ER-03",
+          "ER-04",
+          "O-2644736F4A49",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ]
+      },
+      {
+        "finding_id": "F-DCFC-SHORT-RUN-ENERGY",
+        "candidate_refs": [
+          "C0030"
+        ],
+        "observation_refs": [
+          "O-54E23D9221B4",
+          "O-CA4507EB8924",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9",
+          "O-40626519D168"
+        ],
+        "relation_refs": [
+          "R-C0030"
+        ],
+        "event_refs": [
+          "EA-7980F7D7EA4B",
+          "EA-BFA7B49A9AC9",
+          "EA-40626519D168"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-BFA7B49A9AC9"
+            ],
+            "statement": "CP直流电流候选在全采集范围为0至133.0892539 A并最终回到0。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-CA4507EB8924"
+            ],
+            "statement": "Pack电流候选在全采集范围为-219.6至27.8 A并最终为0.5 A。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-40626519D168"
+            ],
+            "statement": "SOC UI候选在全采集范围由27.5至31.0之间变化。"
+          },
+          {
+            "claim_class": "DERIVED",
+            "support_refs": [
+              "R-C0030"
+            ],
+            "statement": "106项正值brick族成员均值之和353.2068999632107 V，与HVP_packVoltage均值353.97099999999995 V及BMS_packVoltage均值351.383347345945 V接近，形成电压闭合候选。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-ENERGY"
+          ],
+          "role": "CP与Pack能源交叉验证"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-07",
+          "node_refs": [
+            "CT-DCFC-07",
+            "CT-DCFC-08",
+            "CT-ENERGY-01"
+          ],
+          "observability": "PARTIALLY_OBSERVED",
+          "control_node_refs": [
+            "CT-DCFC-07",
+            "CT-DCFC-08",
+            "CT-ENERGY-01"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-04",
+            "status": "PARTIAL_SUPPORT",
+            "basis_refs": [
+              "O-CA4507EB8924",
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9",
+              "R-C0030"
+            ],
+            "reason": "能源侧存在多源动态和电压闭合候选，但全程聚合值不能证明同一窗口内的方向、量级与时序闭环。"
+          },
+          {
+            "evidence_requirement_ref": "ER-05",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-CA4507EB8924",
+              "O-BFA7B49A9AC9"
+            ],
+            "reason": "输入未提供连续20至30秒目标窗口统计，无法确认短时稳定运行。"
+          }
+        ],
+        "relationship_kind": "PHYSICAL_CLOSURE",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "数据包含直流充电能源响应与电压闭合候选，但只能作为条件化车型基线候选，尚不能确认CP与Pack定量效率或短稳态。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-ENERGY-BOUNDARY",
+            "description": "CP与Pack位于不同测量边界，且聚合统计跨越启动、运行和退出，表观量级关系不代表同一物理状态。",
+            "compatible_observation_refs": [
+              "O-54E23D9221B4",
+              "O-CA4507EB8924",
+              "O-7980F7D7EA4B",
+              "O-BFA7B49A9AC9"
+            ],
+            "discriminating_evidence": "同一稳定窗口内同步采样的CP与Pack电压、电流及各自功率。",
+            "minimum_check": "在电流非零区间识别一个连续20至30秒候选窗口，统计均值、标准差、范围和符号一致性。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "存在CP侧和Pack侧能源响应候选。",
+          "brick族和Pack电压存在全程统计层的电压闭合候选。"
+        ],
+        "unsupported_claims": [
+          "已形成连续20至30秒短稳态。",
+          "可由CP与Pack直接计算充电效率。",
+          "Pack电流负号已确认代表充电方向。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-STABLE-WINDOW",
+            "blocked_claim": "形成短时稳定充电基线",
+            "missing_evidence_type": "REPEAT_OBSERVATION",
+            "reason": "缺少连续20至30秒的目标窗口统计。",
+            "minimum_evidence_needed": "电流非零且状态一致的连续20至30秒窗口及关键Signal分布。",
+            "priority": "P1"
+          },
+          {
+            "gap_id": "G-PHYSICAL-BOUNDARY",
+            "blocked_claim": "CP与Pack的定量物理闭环",
+            "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+            "reason": "两个测量边界不同且没有桩端物理测量。",
+            "minimum_evidence_needed": "同步桩端电压电流或明确边界校准，结合车内同窗数据。",
+            "priority": "P1"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "对145至245秒中的电流非零区间定位连续20至30秒候选窗口，并统计CP/Pack电压、电流与SOC变化。",
+        "uncertainty": "全程范围支持存在能量传输阶段，但不能替代同窗稳定性与边界化定量验证。",
+        "confidence": "MEDIUM",
+        "trace_refs": [
+          "ER-04",
+          "ER-05",
+          "R-C0030",
+          "O-54E23D9221B4",
+          "O-CA4507EB8924",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9"
+        ],
+        "traceability_refs": [
+          "ER-04",
+          "ER-05",
+          "R-C0030",
+          "O-54E23D9221B4",
+          "O-CA4507EB8924",
+          "O-7980F7D7EA4B",
+          "O-BFA7B49A9AC9"
+        ]
+      },
+      {
+        "finding_id": "F-DCFC-STOP-EXIT",
+        "candidate_refs": [],
+        "observation_refs": [
+          "O-E56A605C76CE",
+          "O-626BE21E225E",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924",
+          "O-30A5630397C5",
+          "O-248FA28FD648"
+        ],
+        "relation_refs": [],
+        "event_refs": [
+          "EA-E56A605C76CE",
+          "EA-626BE21E225E"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-E56A605C76CE"
+            ],
+            "statement": "停止充电请求候选为二值动态Signal，发生12次变化并最终为0。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "EA-626BE21E225E"
+            ],
+            "statement": "UI充电使能请求候选在245.6557秒首次变化。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "statement": "采集结束时CP电流候选为0，Pack电流候选为0.5。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "EA-626BE21E225E",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "statement": "245.6557秒附近可能是车辆侧可见的退出边界候选，但没有实际停止入口时间不能建立请求到退出关系。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-STOP"
+          ],
+          "role": "停止请求候选、电流退出与连接释放"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-DCFC-09",
+          "node_refs": [
+            "CT-DCFC-09",
+            "CT-DCFC-10",
+            "CT-DCFC-11"
+          ],
+          "observability": "PARTIALLY_OBSERVED",
+          "control_node_refs": [
+            "CT-DCFC-09",
+            "CT-DCFC-10",
+            "CT-DCFC-11"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-06",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "EA-626BE21E225E",
+              "O-E56A605C76CE",
+              "O-BFA7B49A9AC9",
+              "O-CA4507EB8924"
+            ],
+            "reason": "存在请求和电流退出候选，但缺少实际停止入口时间及持续归零窗口。"
+          },
+          {
+            "evidence_requirement_ref": "ER-07",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-30A5630397C5",
+              "O-248FA28FD648"
+            ],
+            "reason": "CAN候选不能代替锁止释放与拔枪的安全操作实录。"
+          }
+        ],
+        "relationship_kind": "POSSIBLE_PROXY",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "UI充电使能请求候选及后续电流归零可用于寻找停止退出窗口，但当前证据不能确认外部停止请求、退出延迟或连接安全释放。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-STOP-PROXY",
+            "description": "UI使能或CP停止候选可能是显示/代理状态、周期变化或DBC误解，而非实际停止请求。",
+            "compatible_observation_refs": [
+              "O-E56A605C76CE",
+              "O-626BE21E225E"
+            ],
+            "discriminating_evidence": "带外部停止动作时间的单调请求、状态退出和持续电流归零序列。",
+            "minimum_check": "同步记录停止按钮操作时间，并统计操作前后CP/Pack电流及充电状态的首次变化和持续归零。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "采集包含可能与停止退出相关的车辆侧状态变化及最终近零电流。"
+        ],
+        "unsupported_claims": [
+          "245.6557秒就是实际停止操作时刻。",
+          "CP_stopChargeRequest已验证为直接停止请求。",
+          "拔枪和锁止释放已由CAN安全确认。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-STOP-EVENT-TIME",
+            "blocked_claim": "请求到电流退出的时序",
+            "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+            "reason": "实际停止入口未记录。",
+            "minimum_evidence_needed": "统一时基的停止按钮或桩端停止事件时间。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-STOP-ZERO-HOLD",
+            "blocked_claim": "电流退出后持续归零",
+            "missing_evidence_type": "EXECUTION_FEEDBACK",
+            "reason": "仅有全程最终值，缺少停止窗口内的归零时刻与保持时长。",
+            "minimum_evidence_needed": "停止候选前后CP与Pack电流的逐窗转移和连续近零保持统计。",
+            "priority": "P1"
+          },
+          {
+            "gap_id": "G-UNPLUG-SAFETY",
+            "blocked_claim": "锁止释放和拔枪收尾完成",
+            "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+            "reason": "安全事实依赖外部实录，CAN不得代替。",
+            "minimum_evidence_needed": "锁止释放确认与拔枪实录及时间。",
+            "priority": "P0"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "在240至260秒统计UI使能、停止候选、充电状态、CP/Pack电流和连接状态的转移，随后用下一次外部停止事件时间验证。",
+        "uncertainty": "退出候选存在，但实际停止入口、请求语义、持续归零及安全释放均未建立。",
+        "confidence": "LOW",
+        "trace_refs": [
+          "ER-06",
+          "ER-07",
+          "O-E56A605C76CE",
+          "O-626BE21E225E",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ],
+        "traceability_refs": [
+          "ER-06",
+          "ER-07",
+          "O-E56A605C76CE",
+          "O-626BE21E225E",
+          "O-BFA7B49A9AC9",
+          "O-CA4507EB8924"
+        ]
+      },
+      {
+        "finding_id": "F-THERMAL-COMPANION-LINE",
+        "candidate_refs": [
+          "C0002",
+          "C0003"
+        ],
+        "observation_refs": [
+          "O-4C49F2F6C6F2",
+          "O-6481FC6EB409",
+          "O-9A338BD975E3",
+          "O-ADFBE5C783AE",
+          "O-91CFD3997AF6",
+          "O-5C20B202383C",
+          "O-3C70B39B2A47",
+          "O-8C1ADA0DF0E3",
+          "O-6B9B0785AEA9"
+        ],
+        "relation_refs": [
+          "R-C0002",
+          "R-C0003"
+        ],
+        "event_refs": [
+          "EA-6481FC6EB409",
+          "EA-4C49F2F6C6F2",
+          "EA-5C20B202383C",
+          "EA-3C70B39B2A47",
+          "EA-8C1ADA0DF0E3",
+          "EA-9A338BD975E3",
+          "EA-91CFD3997AF6",
+          "EA-ADFBE5C783AE",
+          "EA-6B9B0785AEA9"
+        ],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "O-4C49F2F6C6F2",
+              "O-6481FC6EB409",
+              "O-9A338BD975E3",
+              "O-ADFBE5C783AE",
+              "O-91CFD3997AF6"
+            ],
+            "statement": "电池泵实际/目标、冷却流量实际/目标及入口温度候选在采集中均有动态变化。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "R-C0002"
+            ],
+            "statement": "BMS_packTMax与BMS_packTMin候选在599次同帧比较中全部违反最大值不小于最小值的顺序。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "R-C0003"
+            ],
+            "statement": "BMS热敏电阻最大/最小编号候选在149次比较中有138次顺序冲突。"
+          },
+          {
+            "claim_class": "INFERRED",
+            "support_refs": [
+              "O-4C49F2F6C6F2",
+              "O-6481FC6EB409",
+              "O-9A338BD975E3",
+              "O-ADFBE5C783AE"
+            ],
+            "statement": "这些动态候选可保留为热管理独立副线，但当前不足以建立请求到执行到温度响应的可靠语义链。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [
+            "CML-DCFC-THERMAL"
+          ],
+          "role": "Pack热管理独立副线"
+        },
+        "control_tree_mapping": {
+          "node_ref": "CT-THERMAL-01",
+          "node_refs": [
+            "CT-THERMAL-01"
+          ],
+          "observability": "PARTIALLY_OBSERVED_WITH_CONFLICT",
+          "control_node_refs": [
+            "CT-THERMAL-01"
+          ]
+        },
+        "evidence_requirement_mapping": [
+          {
+            "evidence_requirement_ref": "ER-10",
+            "status": "INSUFFICIENT",
+            "basis_refs": [
+              "O-4C49F2F6C6F2",
+              "O-6481FC6EB409",
+              "O-9A338BD975E3",
+              "O-ADFBE5C783AE",
+              "R-C0002",
+              "R-C0003"
+            ],
+            "reason": "请求和执行候选虽动态，但DBC适配未验证，且温度/编号Signal出现系统性顺序冲突。"
+          }
+        ],
+        "relationship_kind": "COMPANION_STATE",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "采集含热管理请求与执行候选活动，可作为充电过程的伴随副线；在DBC/MUX和Signal定义验证前，不应解释为已确认的热控制闭环。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-THERMAL-MUX",
+            "description": "MUX、位段或页面不适配造成每帧交替或错误解码，从而产生虚假的目标、温度和min/max关系。",
+            "compatible_observation_refs": [
+              "O-5C20B202383C",
+              "O-3C70B39B2A47",
+              "O-8C1ADA0DF0E3"
+            ],
+            "discriminating_evidence": "验证MUX页后，请求、目标、执行和温度应在同一有效页及连续窗口内呈物理可解释关系。",
+            "minimum_check": "先审计0x312等热管理候选的MUX适用性和定义，再选择同一有效页做窗口统计。"
+          }
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": [
+          "热管理相关候选在采集中动态存在。",
+          "热管理应独立于充电主线保留为副线。"
+        ],
+        "unsupported_claims": [
+          "泵目标已确认导致泵实际响应。",
+          "温度候选可用于量化Pack热响应。",
+          "min/max冲突代表车辆真实热异常。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-THERMAL-DBC",
+            "blocked_claim": "建立热管理请求、目标、执行与温度响应链",
+            "missing_evidence_type": "DBC_DEFINITION",
+            "reason": "已知热管理Signal需先验证DBC适配和MUX，且存在确定性顺序冲突。",
+            "minimum_evidence_needed": "适配本帧DLC和MUX页的位段、缩放、符号及枚举定义。",
+            "priority": "P0"
+          },
+          {
+            "gap_id": "G-THERMAL-WINDOW",
+            "blocked_claim": "确认热响应与充电阶段相关",
+            "missing_evidence_type": "REPEAT_OBSERVATION",
+            "reason": "只有全程统计与首次变化，缺少相同阶段的请求到执行到温度窗口关系。",
+            "minimum_evidence_needed": "经Signal验证后的启动、稳定和退出窗口对照。",
+            "priority": "P1"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "优先验证热管理DBC与MUX适用性；若通过，再比较充电启动、稳定及退出窗口中的请求、目标、执行和温度变化。",
+        "uncertainty": "动态活动真实可见，但多个确定性冲突强烈限制语义解释。",
+        "confidence": "LOW",
+        "trace_refs": [
+          "ER-10",
+          "C0002",
+          "C0003",
+          "R-C0002",
+          "R-C0003",
+          "O-4C49F2F6C6F2",
+          "O-6481FC6EB409"
+        ],
+        "traceability_refs": [
+          "ER-10",
+          "C0002",
+          "C0003",
+          "R-C0002",
+          "R-C0003",
+          "O-4C49F2F6C6F2",
+          "O-6481FC6EB409"
+        ]
+      },
+      {
+        "finding_id": "F-UNKNOWN-RESIDUAL-BOUNDARY",
+        "candidate_refs": [
+          "C0047",
+          "C0048",
+          "C0049",
+          "C0050",
+          "C0077",
+          "C0078",
+          "C0079",
+          "C0080",
+          "C0092",
+          "C0093",
+          "C0094",
+          "C0095"
+        ],
+        "observation_refs": [],
+        "relation_refs": [],
+        "event_refs": [],
+        "fact_bindings": [
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "C0047",
+              "C0048",
+              "C0049",
+              "C0050"
+            ],
+            "statement": "多个报文存在当前DBC未解释的动态残余bit。"
+          },
+          {
+            "claim_class": "OBSERVED",
+            "support_refs": [
+              "C0077",
+              "C0078",
+              "C0079",
+              "C0080"
+            ],
+            "statement": "部分未知bit以近固定周期切换，并被标记为计数器、心跳或分页候选。"
+          },
+          {
+            "claim_class": "UNSUPPORTED",
+            "support_refs": [
+              "C0047",
+              "C0048",
+              "C0049",
+              "C0050",
+              "C0092",
+              "C0093",
+              "C0094",
+              "C0095"
+            ],
+            "statement": "输入没有证据将这些未知或残余候选安全映射到直流快充控制树节点。"
+          }
+        ],
+        "l3_domain_mapping": {
+          "system": "直流快充系统",
+          "mainline_refs": [],
+          "role": "NO_SAFE_MAPPING"
+        },
+        "control_tree_mapping": {
+          "node_ref": "NO_SAFE_MAPPING",
+          "node_refs": [],
+          "observability": "NO_SAFE_MAPPING",
+          "control_node_refs": []
+        },
+        "evidence_requirement_mapping": [],
+        "relationship_kind": "NO_SAFE_RELATIONSHIP",
+        "causality_status": "NOT_APPLICABLE",
+        "semantic_hypothesis": "未知和残余候选目前只证明存在未解释的报文活动，不能因其动态或低离散度而归入直流快充语义链。",
+        "alternative_explanations": [
+          {
+            "alternative_id": "ALT-UNKNOWN-INFRA",
+            "description": "周期活动可能是计数器、心跳、分页或与本实验无关的车辆背景状态。",
+            "compatible_observation_refs": [],
+            "discriminating_evidence": "跨重复充电和非充电对照采集的事件锁定变化，结合位级结构与计数器排除。",
+            "minimum_check": "先排除固定周期计数器/心跳，再用带外部事件时间的充电与非充电对照验证。"
+          }
+        ],
+        "model_interaction": "INSUFFICIENT_TO_MAP",
+        "supported_claims": [
+          "当前DBC覆盖未解释全部动态位和未知报文。"
+        ],
+        "unsupported_claims": [
+          "任一未知候选是充电请求、许可、接触器或能源Signal。",
+          "动态残余可直接扩展控制树。"
+        ],
+        "missing_evidence": [
+          {
+            "gap_id": "G-UNKNOWN-DEFINITION",
+            "blocked_claim": "未知候选的直流快充语义映射",
+            "missing_evidence_type": "DBC_DEFINITION",
+            "reason": "候选缺少可验证定义，部分还可能是计数器、心跳或分页。",
+            "minimum_evidence_needed": "位级结构、反复事件相关性及独立状态对照共同支持的候选定义。",
+            "priority": "P2"
+          },
+          {
+            "gap_id": "G-UNKNOWN-CONTROL",
+            "blocked_claim": "未知候选进入控制树",
+            "missing_evidence_type": "ALTERNATIVE_CONDITION",
+            "reason": "没有非充电对照，无法排除背景车辆活动。",
+            "minimum_evidence_needed": "相同车辆条件下的充电与非充电对照采集。",
+            "priority": "P2"
+          }
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "保持NO_SAFE_MAPPING；仅对排除周期基础设施后仍与重复充电事件同步的候选开展位级验证。",
+        "uncertainty": "没有足够证据区分控制语义、背景状态和通信基础设施。",
+        "confidence": "LOW",
+        "trace_refs": [
+          "C0047",
+          "C0048",
+          "C0049",
+          "C0050",
+          "C0077",
+          "C0078",
+          "C0079",
+          "C0080",
+          "C0092",
+          "C0093",
+          "C0094",
+          "C0095"
+        ],
+        "traceability_refs": [
+          "C0047",
+          "C0048",
+          "C0049",
+          "C0050",
+          "C0077",
+          "C0078",
+          "C0079",
+          "C0080",
+          "C0092",
+          "C0093",
+          "C0094",
+          "C0095"
+        ]
+      }
+    ],
+    "validation_requests": []
+  },
+  "audit_metadata": {
+    "reasoning_mode": "STRICT_BLIND_UPDATED_CONTRACT_CORRECTION",
+    "overall_status": "UPDATED_REASONING_COMPLETE_FROZEN",
+    "strict_cognitive_blinding": true,
+    "follow_up_kind": "UNIQUE_DETERMINISTIC_CONTRACT_CORRECTION",
+    "follow_up_sequence": 1,
+    "historical_results_used": false,
+    "source_scope": [
+      "/Users/hwy/codex_work/TeslaCanPython/output/TM3-015/reasoning_spike/reasoning_input.json",
+      "/Users/hwy/codex_work/TeslaCanPython/spikes/contracts/semantic_reasoning_v1.schema.json",
+      "/Users/hwy/codex_work/TeslaCanPython/output/TM3-015/reasoning_spike/reasoning_output_strict_blind.json"
+    ],
+    "network_used": false,
+    "other_agents_used": false,
+    "semantic_judgments_changed": false,
+    "correction_scope": [
+      "INPUT_PACKAGE_HASH",
+      "CONTROL_NODE_REFS",
+      "TRACEABILITY_REFS",
+      "UPDATED_REASONING_FREEZE"
+    ],
+    "numeric_claim_policy": "ONLY_INPUT_PACKAGE_VALUES",
+    "human_event_time_inference_prohibited": true
+  },
+  "overall_status": "UPDATED_REASONING_COMPLETE_FROZEN"
+}

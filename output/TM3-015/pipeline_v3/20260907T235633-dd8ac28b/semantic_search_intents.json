@@ -1,0 +1,1412 @@
+{
+  "retrieval_version": "semantic-observation-retrieval-v1",
+  "intents": [
+    {
+      "intent_id": "SSI-ER-01-STATE",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-THERMAL-01"
+      ],
+      "evidence_requirement_refs": [
+        "ER-01"
+      ],
+      "semantic_roles": [
+        "STATE"
+      ],
+      "semantic_need": "区分充电口开启与插枪/锁止。 至少需要外部事件时间；CAN状态只能作为车型投射。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "can",
+        "connected",
+        "evse",
+        "latch",
+        "pack",
+        "secured",
+        "state",
+        "status"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-02-STATE",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-THERMAL-01"
+      ],
+      "evidence_requirement_refs": [
+        "ER-02"
+      ],
+      "semantic_roles": [
+        "STATE"
+      ],
+      "semantic_need": "车辆识别直流连接并进入可见协商过程。 多个同层状态顺序一致；单一位不足以确认完整握手。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "can",
+        "connected",
+        "evse",
+        "latch",
+        "pack",
+        "secured",
+        "state",
+        "status"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-03-ACTUAL",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-03"
+      ],
+      "semantic_roles": [
+        "ACTUAL"
+      ],
+      "semantic_need": "车辆侧条件/许可与高压直流充电状态建立。 许可/状态须与电流建立相容；单一接触器枚举不充分。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "current",
+        "evse",
+        "output",
+        "pack",
+        "power",
+        "request",
+        "signal",
+        "soc",
+        "voltage"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-03-PERMISSION",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-03"
+      ],
+      "semantic_roles": [
+        "PERMISSION"
+      ],
+      "semantic_need": "车辆侧条件/许可与高压直流充电状态建立。 许可/状态须与电流建立相容；单一接触器枚举不充分。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "allow",
+        "can",
+        "capability",
+        "enable",
+        "evse",
+        "pack",
+        "permission",
+        "permit",
+        "request",
+        "signal",
+        "soc"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-03-STATE",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-03"
+      ],
+      "semantic_roles": [
+        "STATE"
+      ],
+      "semantic_need": "车辆侧条件/许可与高压直流充电状态建立。 许可/状态须与电流建立相容；单一接触器枚举不充分。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "connected",
+        "evse",
+        "latch",
+        "pack",
+        "request",
+        "secured",
+        "signal",
+        "soc",
+        "state",
+        "status"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-03-TIMING_ONLY",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-03"
+      ],
+      "semantic_roles": [
+        "TIMING_ONLY"
+      ],
+      "semantic_need": "车辆侧条件/许可与高压直流充电状态建立。 许可/状态须与电流建立相容；单一接触器枚举不充分。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "change",
+        "edge",
+        "evse",
+        "pack",
+        "request",
+        "signal",
+        "soc",
+        "transition"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-04-REQUEST",
+      "control_tree_refs": [
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-04"
+      ],
+      "semantic_roles": [
+        "REQUEST"
+      ],
+      "semantic_need": "车辆Request、EVSE Actual与Pack Actual形成可区分的请求—响应—物理建立关系。 分别验证请求电压/电流、桩侧实际输出和Pack实际响应的角色、方向、量级与时序；请求无可验证Observation时必须判INSUFFICIENT_EVIDENCE，不得由Capability或Actual代替。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "capability",
+        "command",
+        "evse",
+        "pack",
+        "request",
+        "target"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-04-CAPABILITY",
+      "control_tree_refs": [
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-04"
+      ],
+      "semantic_roles": [
+        "CAPABILITY"
+      ],
+      "semantic_need": "车辆Request、EVSE Actual与Pack Actual形成可区分的请求—响应—物理建立关系。 分别验证请求电压/电流、桩侧实际输出和Pack实际响应的角色、方向、量级与时序；请求无可验证Observation时必须判INSUFFICIENT_EVIDENCE，不得由Capability或Actual代替。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "available",
+        "capability",
+        "evse",
+        "limit",
+        "maximum",
+        "minimum",
+        "pack",
+        "request"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-04-ACTUAL",
+      "control_tree_refs": [
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-04"
+      ],
+      "semantic_roles": [
+        "ACTUAL"
+      ],
+      "semantic_need": "车辆Request、EVSE Actual与Pack Actual形成可区分的请求—响应—物理建立关系。 分别验证请求电压/电流、桩侧实际输出和Pack实际响应的角色、方向、量级与时序；请求无可验证Observation时必须判INSUFFICIENT_EVIDENCE，不得由Capability或Actual代替。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "capability",
+        "current",
+        "evse",
+        "output",
+        "pack",
+        "power",
+        "request",
+        "voltage"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-04-TIMING_ONLY",
+      "control_tree_refs": [
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-04"
+      ],
+      "semantic_roles": [
+        "TIMING_ONLY"
+      ],
+      "semantic_need": "车辆Request、EVSE Actual与Pack Actual形成可区分的请求—响应—物理建立关系。 分别验证请求电压/电流、桩侧实际输出和Pack实际响应的角色、方向、量级与时序；请求无可验证Observation时必须判INSUFFICIENT_EVIDENCE，不得由Capability或Actual代替。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "capability",
+        "change",
+        "edge",
+        "evse",
+        "pack",
+        "request",
+        "transition"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-05-REQUEST",
+      "control_tree_refs": [
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-05"
+      ],
+      "semantic_roles": [
+        "REQUEST"
+      ],
+      "semantic_need": "形成可描述的短时充电窗口，并在可观测范围内区分Capability、Request、EVSE Actual与Pack Actual。 连续20至30秒相对稳定；各语义层分别评价，缺失层保留Evidence Gap，否则只分析启动或爬升。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "capability",
+        "command",
+        "evse",
+        "pack",
+        "request",
+        "target"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-05-CAPABILITY",
+      "control_tree_refs": [
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-05"
+      ],
+      "semantic_roles": [
+        "CAPABILITY"
+      ],
+      "semantic_need": "形成可描述的短时充电窗口，并在可观测范围内区分Capability、Request、EVSE Actual与Pack Actual。 连续20至30秒相对稳定；各语义层分别评价，缺失层保留Evidence Gap，否则只分析启动或爬升。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "available",
+        "capability",
+        "evse",
+        "limit",
+        "maximum",
+        "minimum",
+        "pack",
+        "request"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-05-ACTUAL",
+      "control_tree_refs": [
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-05"
+      ],
+      "semantic_roles": [
+        "ACTUAL"
+      ],
+      "semantic_need": "形成可描述的短时充电窗口，并在可观测范围内区分Capability、Request、EVSE Actual与Pack Actual。 连续20至30秒相对稳定；各语义层分别评价，缺失层保留Evidence Gap，否则只分析启动或爬升。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "capability",
+        "current",
+        "evse",
+        "output",
+        "pack",
+        "power",
+        "request",
+        "voltage"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-06-REQUEST",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-06"
+      ],
+      "semantic_roles": [
+        "REQUEST"
+      ],
+      "semantic_need": "停止入口后，车辆请求、电桩输出、Pack响应及充电状态按可观测范围退出。 需要实际停止入口；分别分析请求降低/停止、EVSE与Pack实际电流退出、充电状态退出及持续归零；缺少Request Observation不得由Actual反推。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "command",
+        "evse",
+        "pack",
+        "request",
+        "target"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-06-ACTUAL",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-06"
+      ],
+      "semantic_roles": [
+        "ACTUAL"
+      ],
+      "semantic_need": "停止入口后，车辆请求、电桩输出、Pack响应及充电状态按可观测范围退出。 需要实际停止入口；分别分析请求降低/停止、EVSE与Pack实际电流退出、充电状态退出及持续归零；缺少Request Observation不得由Actual反推。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "current",
+        "evse",
+        "output",
+        "pack",
+        "power",
+        "request",
+        "voltage"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-06-STATE",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-06"
+      ],
+      "semantic_roles": [
+        "STATE"
+      ],
+      "semantic_need": "停止入口后，车辆请求、电桩输出、Pack响应及充电状态按可观测范围退出。 需要实际停止入口；分别分析请求降低/停止、EVSE与Pack实际电流退出、充电状态退出及持续归零；缺少Request Observation不得由Actual反推。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "connected",
+        "evse",
+        "latch",
+        "pack",
+        "request",
+        "secured",
+        "state",
+        "status"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-06-TIMING_ONLY",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-06"
+      ],
+      "semantic_roles": [
+        "TIMING_ONLY"
+      ],
+      "semantic_need": "停止入口后，车辆请求、电桩输出、Pack响应及充电状态按可观测范围退出。 需要实际停止入口；分别分析请求降低/停止、EVSE与Pack实际电流退出、充电状态退出及持续归零；缺少Request Observation不得由Actual反推。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "change",
+        "edge",
+        "evse",
+        "pack",
+        "request",
+        "transition"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-07-STATE",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-THERMAL-01"
+      ],
+      "evidence_requirement_refs": [
+        "ER-07"
+      ],
+      "semantic_roles": [
+        "STATE"
+      ],
+      "semantic_need": "枪锁释放与拔枪形成独立收尾。 安全操作实录为主；CAN不得代替安全确认。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "can",
+        "connected",
+        "evse",
+        "latch",
+        "pack",
+        "secured",
+        "state",
+        "status"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-08-REQUEST",
+      "control_tree_refs": [
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-08"
+      ],
+      "semantic_roles": [
+        "REQUEST"
+      ],
+      "semantic_need": "记录条件、桩侧/车辆侧Capability和告警边界，并与Request及Actual严格区分。 Capability只作为控制范围与工况背景，不等于Request或Actual；告警计数不能单独形成故障判断，DBC名称必须先经Signal Validation。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "capability",
+        "command",
+        "evse",
+        "pack",
+        "request",
+        "signal",
+        "soc",
+        "target"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-08-CAPABILITY",
+      "control_tree_refs": [
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-08"
+      ],
+      "semantic_roles": [
+        "CAPABILITY"
+      ],
+      "semantic_need": "记录条件、桩侧/车辆侧Capability和告警边界，并与Request及Actual严格区分。 Capability只作为控制范围与工况背景，不等于Request或Actual；告警计数不能单独形成故障判断，DBC名称必须先经Signal Validation。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "available",
+        "capability",
+        "evse",
+        "limit",
+        "maximum",
+        "minimum",
+        "pack",
+        "request",
+        "signal",
+        "soc"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-08-ACTUAL",
+      "control_tree_refs": [
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-08"
+      ],
+      "semantic_roles": [
+        "ACTUAL"
+      ],
+      "semantic_need": "记录条件、桩侧/车辆侧Capability和告警边界，并与Request及Actual严格区分。 Capability只作为控制范围与工况背景，不等于Request或Actual；告警计数不能单独形成故障判断，DBC名称必须先经Signal Validation。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "capability",
+        "current",
+        "evse",
+        "output",
+        "pack",
+        "power",
+        "request",
+        "signal",
+        "soc",
+        "voltage"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-08-PERMISSION",
+      "control_tree_refs": [
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-08"
+      ],
+      "semantic_roles": [
+        "PERMISSION"
+      ],
+      "semantic_need": "记录条件、桩侧/车辆侧Capability和告警边界，并与Request及Actual严格区分。 Capability只作为控制范围与工况背景，不等于Request或Actual；告警计数不能单独形成故障判断，DBC名称必须先经Signal Validation。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "allow",
+        "capability",
+        "enable",
+        "evse",
+        "pack",
+        "permission",
+        "permit",
+        "request",
+        "signal",
+        "soc"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-09-PERMISSION",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-THERMAL-01",
+        "CT-DCFC-12"
+      ],
+      "evidence_requirement_refs": [
+        "ER-09"
+      ],
+      "semantic_roles": [
+        "PERMISSION"
+      ],
+      "semantic_need": "记录整车状态门作为充电条件背景。 只说明状态共存，不反推OEM完整许可规则。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "allow",
+        "can",
+        "capability",
+        "enable",
+        "evse",
+        "pack",
+        "permission",
+        "permit",
+        "request",
+        "signal",
+        "soc"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-09-STATE",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-03",
+        "CT-DCFC-04",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-08",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-THERMAL-01",
+        "CT-DCFC-12"
+      ],
+      "evidence_requirement_refs": [
+        "ER-09"
+      ],
+      "semantic_roles": [
+        "STATE"
+      ],
+      "semantic_need": "记录整车状态门作为充电条件背景。 只说明状态共存，不反推OEM完整许可规则。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "connected",
+        "evse",
+        "latch",
+        "pack",
+        "request",
+        "secured",
+        "signal",
+        "soc",
+        "state",
+        "status"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-10-REQUEST",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-10"
+      ],
+      "semantic_roles": [
+        "REQUEST"
+      ],
+      "semantic_need": "Pack热状态、请求与执行响应形成独立副线。 先验证DBC适配，再分析请求、目标、执行和温度响应。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "command",
+        "evse",
+        "pack",
+        "request",
+        "target"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-10-ACTUAL",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-10"
+      ],
+      "semantic_roles": [
+        "ACTUAL"
+      ],
+      "semantic_need": "Pack热状态、请求与执行响应形成独立副线。 先验证DBC适配，再分析请求、目标、执行和温度响应。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "current",
+        "evse",
+        "output",
+        "pack",
+        "power",
+        "request",
+        "voltage"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    },
+    {
+      "intent_id": "SSI-ER-10-STATE",
+      "control_tree_refs": [
+        "CT-DCFC-01",
+        "CT-DCFC-02",
+        "CT-DCFC-05",
+        "CT-DCFC-06",
+        "CT-DCFC-07",
+        "CT-DCFC-09",
+        "CT-DCFC-10",
+        "CT-DCFC-11",
+        "CT-ENERGY-01",
+        "CT-THERMAL-01",
+        "CT-DCFC-12",
+        "CT-DCFC-13",
+        "CT-DCFC-14",
+        "CT-DCFC-15"
+      ],
+      "evidence_requirement_refs": [
+        "ER-10"
+      ],
+      "semantic_roles": [
+        "STATE"
+      ],
+      "semantic_need": "Pack热状态、请求与执行响应形成独立副线。 先验证DBC适配，再分析请求、目标、执行和温度响应。",
+      "experiment_context_ref": "TM3-015",
+      "behavior_features": [
+        "DYNAMIC",
+        "LOW_CARDINALITY_STATE"
+      ],
+      "relationship_features": [
+        "TEMPORAL_OR_QUANTITATIVE_RELATION_IF_AVAILABLE"
+      ],
+      "dbc_terms": [
+        "actual",
+        "can",
+        "capability",
+        "connected",
+        "evse",
+        "latch",
+        "pack",
+        "request",
+        "secured",
+        "state",
+        "status"
+      ],
+      "allowed_outcomes": [
+        "SUPPORT",
+        "PARTIAL",
+        "CONTRADICT",
+        "GAP",
+        "UNKNOWN_CANDIDATE",
+        "NO_SAFE_MAPPING"
+      ]
+    }
+  ]
+}

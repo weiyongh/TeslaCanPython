@@ -1,0 +1,218 @@
+{
+  "contract_version": "semantic-reasoning-v1",
+  "result_id": "SRR-TM3-015-STRICT-BLIND-v2.1",
+  "input_package_id": "SRP-TM3-015-DCFC-v2.1",
+  "input_package_hash": "d86e2e9a5b52dae16382ed68d3d495fd27aafe9478f1e63fc1c100325312af3e",
+  "initial_reasoning": {
+    "pass_id": "INITIAL-STRICT-BLIND-1",
+    "findings": [
+      {
+        "finding_id": "F-CONNECTION-SEQUENCE",
+        "candidate_refs": [],
+        "observation_refs": ["O-248FA28FD648", "O-CCCAD844E3A0", "O-30A5630397C5", "O-DECE03E5A445", "O-4D428E122092", "O-F1EC04428859"],
+        "relation_refs": [],
+        "event_refs": ["EA-248FA28FD648", "EA-CCCAD844E3A0", "EA-30A5630397C5", "EA-DECE03E5A445", "EA-4D428E122092", "EA-F1EC04428859"],
+        "fact_bindings": [
+          {"claim_class": "OBSERVED", "support_refs": ["O-248FA28FD648", "O-CCCAD844E3A0", "O-30A5630397C5", "O-DECE03E5A445"], "statement": "Several decoded charge-port fields changed at CAN-observed times 20.7178–21.0173 s."},
+          {"claim_class": "OBSERVED", "support_refs": ["O-4D428E122092", "O-F1EC04428859"], "statement": "Two additional decoded connection/charger-state fields first changed at 39.7192 s and 40.1183 s."},
+          {"claim_class": "INFERRED", "support_refs": ["O-248FA28FD648", "O-30A5630397C5", "O-DECE03E5A445", "O-4D428E122092"], "statement": "The grouped sequence is compatible with vehicle-side detection of a physical connection followed by a visible charger-type state, but field semantics are not independently confirmed."},
+          {"claim_class": "UNSUPPORTED", "support_refs": [], "statement": "The frozen evidence does not identify the actual human insertion, scan, authorization, or lock-completion time."}
+        ],
+        "l3_domain_mapping": {"system": "直流快充系统", "mainline_ref": "CML-DCFC-START", "role": "vehicle-visible connection and charger-state sequence"},
+        "control_tree_mapping": {"node_ref": "CT-DCFC-01", "mapping_status": "PARTIAL", "reason": "Multiple vehicle-side port fields move coherently, but external action time and independent semantic validation are absent."},
+        "evidence_requirement_mapping": [
+          {"evidence_requirement_ref": "ER-01", "status": "PARTIAL_SUPPORT", "basis_refs": ["O-248FA28FD648", "O-CCCAD844E3A0", "O-30A5630397C5", "O-DECE03E5A445"], "reason": "CAN state projection is present; required external event time is missing."},
+          {"evidence_requirement_ref": "ER-02", "status": "PARTIAL_SUPPORT", "basis_refs": ["O-4D428E122092", "O-F1EC04428859"], "reason": "More than one visible state changes, but this cannot establish a complete protocol handshake."}
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "A vehicle-visible connection-state sequence exists before the later high-voltage/output sequence.",
+        "alternative_explanations": [
+          {"alternative_id": "ALT-CONN-DBC", "description": "One or more decoded names/enumerations may not match this vehicle or DLC variant.", "compatible_observation_refs": ["O-248FA28FD648", "O-30A5630397C5", "O-4D428E122092"], "discriminating_evidence": "Independent physical port/lock observations synchronized to CAN plus definition validation.", "minimum_check": "Repeat one connect/disconnect cycle with externally recorded event times and port-state evidence."},
+          {"alternative_id": "ALT-CONN-INTERNAL", "description": "The changes may be internal state transitions after an earlier unobserved human action.", "compatible_observation_refs": ["O-CCCAD844E3A0", "O-F1EC04428859"], "discriminating_evidence": "Observed human action timestamps.", "minimum_check": "Record door-open, insertion, lock, and removal as separate external events."}
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": ["A multi-field vehicle-visible connection sequence is observed."],
+        "unsupported_claims": ["Complete charging protocol negotiation is confirmed.", "CAN times equal human-event times."],
+        "missing_evidence": [
+          {"gap_id": "G-CONN-TIME", "blocked_claim": "Distinguish door opening, insertion, and locking as physical events.", "missing_evidence_type": "EXTERNAL_EVENT_TIME", "reason": "Only CAN-observed transition times are available.", "minimum_evidence_needed": "Synchronized external event log or video for each physical action.", "priority": "P0"},
+          {"gap_id": "G-CONN-SEM", "blocked_claim": "Confirm each decoded connection field's physical meaning.", "missing_evidence_type": "SIGNAL_VALIDATION", "reason": "DBC labels are not independent semantic evidence.", "minimum_evidence_needed": "Repeat physical action with independent state observation and consistent transition direction.", "priority": "P1"}
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "Repeat a single connect/disconnect cycle with synchronized external timestamps for door, insertion, lock and removal; verify all six field transitions without treating CAN time as action time.",
+        "uncertainty": "Medium: grouping and order are observed, while physical labels and event causality remain unvalidated.",
+        "confidence": "MEDIUM",
+        "trace_refs": ["O-248FA28FD648", "O-CCCAD844E3A0", "O-30A5630397C5", "O-DECE03E5A445", "O-4D428E122092", "O-F1EC04428859", "EA-248FA28FD648", "EA-4D428E122092"]
+      },
+      {
+        "finding_id": "F-HV-OUTPUT-ESTABLISHMENT",
+        "candidate_refs": [],
+        "observation_refs": ["O-2644736F4A49", "O-7D22A98C2406", "O-8EBD6B851F2B", "O-FF177FEE2DC2", "O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-CA4507EB8924"],
+        "relation_refs": [],
+        "event_refs": ["EA-2644736F4A49", "EA-7D22A98C2406", "EA-8EBD6B851F2B", "EA-FF177FEE2DC2", "EA-7980F7D7EA4B", "EA-BFA7B49A9AC9"],
+        "fact_bindings": [
+          {"claim_class": "OBSERVED", "support_refs": ["O-2644736F4A49", "O-7D22A98C2406", "O-8EBD6B851F2B", "O-FF177FEE2DC2"], "statement": "Decoded contactor/high-voltage fields changed during 133.3907–139.4878 s CAN time."},
+          {"claim_class": "OBSERVED", "support_refs": ["O-7980F7D7EA4B", "O-BFA7B49A9AC9"], "statement": "Decoded EVSE-side voltage first changed at 140.0275 s and current first changed at 145.0277 s."},
+          {"claim_class": "INFERRED", "support_refs": ["O-2644736F4A49", "O-FF177FEE2DC2", "O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-CA4507EB8924"], "statement": "The ordered changes are compatible with high-voltage/output establishment and Pack current response, but do not expose the permission decision or prove causality."}
+        ],
+        "l3_domain_mapping": {"system": "直流快充系统", "mainline_ref": "CML-DCFC-START", "role": "high-voltage and actual-output establishment"},
+        "control_tree_mapping": {"node_ref": "CT-DCFC-05", "mapping_status": "PARTIAL", "reason": "High-voltage and output-state observations align temporally, while direct permission is absent."},
+        "evidence_requirement_mapping": [
+          {"evidence_requirement_ref": "ER-03", "status": "PARTIAL_SUPPORT", "basis_refs": ["O-2644736F4A49", "O-7D22A98C2406", "O-8EBD6B851F2B", "O-FF177FEE2DC2", "O-BFA7B49A9AC9"], "reason": "State and current establishment are compatible, but no direct condition/permission observation exists."},
+          {"evidence_requirement_ref": "ER-04", "status": "INSUFFICIENT", "basis_refs": ["O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-CA4507EB8924"], "reason": "Actual-side candidates exist, but validated vehicle request voltage/current observations do not."}
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "A visible HV-state transition precedes decoded output voltage/current establishment in this capture.",
+        "alternative_explanations": [
+          {"alternative_id": "ALT-HV-DECODE", "description": "Partial DBC coverage or enum mismatch could distort the apparent contactor/HV sequence.", "compatible_observation_refs": ["O-2644736F4A49", "O-7D22A98C2406", "O-8EBD6B851F2B", "O-FF177FEE2DC2"], "discriminating_evidence": "Independent HV/contactor state evidence and repeated ordering.", "minimum_check": "Repeat start sequence and compare vehicle HV indication or independent voltage measurement with these transitions."},
+          {"alternative_id": "ALT-HV-COMMON-CAUSE", "description": "A hidden controller or protocol state may drive both HV and output transitions.", "compatible_observation_refs": ["O-FF177FEE2DC2", "O-7980F7D7EA4B", "O-BFA7B49A9AC9"], "discriminating_evidence": "Direct permission/request observations.", "minimum_check": "Acquire a validated vehicle permission or request signal in a future experiment."}
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": ["HV-related state changes precede decoded output-current establishment in CAN time."],
+        "unsupported_claims": ["Vehicle charging permission was observed.", "EVSE internal decision or protocol stage was observed."],
+        "missing_evidence": [
+          {"gap_id": "G-HV-PERM", "blocked_claim": "Map the vehicle-side condition/permission decision.", "missing_evidence_type": "CONDITION_OR_PERMISSION", "reason": "No validated direct permission observation is supplied.", "minimum_evidence_needed": "A separately validated permission/enable state synchronized with HV and current establishment.", "priority": "P0"},
+          {"gap_id": "G-HV-REQUEST", "blocked_claim": "Establish request-to-actual control relationship.", "missing_evidence_type": "DIRECT_REQUEST", "reason": "Capability and Actual cannot substitute for Request.", "minimum_evidence_needed": "Validated vehicle requested voltage and current observations.", "priority": "P0"}
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "In a repeated start, record an independent HV/output indication and obtain separately validated vehicle request or permission evidence.",
+        "uncertainty": "Medium-high because timing is clear but decoded semantics are validation-required and key internal layers are missing.",
+        "confidence": "MEDIUM",
+        "trace_refs": ["O-2644736F4A49", "O-7D22A98C2406", "O-8EBD6B851F2B", "O-FF177FEE2DC2", "O-7980F7D7EA4B", "O-BFA7B49A9AC9", "EA-2644736F4A49", "EA-BFA7B49A9AC9"]
+      },
+      {
+        "finding_id": "F-ENERGY-ACTUAL-CLOSURE",
+        "candidate_refs": [],
+        "observation_refs": ["O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-54E23D9221B4", "O-CA4507EB8924", "O-433C9B324F0C", "O-40626519D168", "O-154E3806A3FD", "O-AB6CA4EF7267"],
+        "relation_refs": [],
+        "event_refs": ["EA-7980F7D7EA4B", "EA-BFA7B49A9AC9", "EA-40626519D168"],
+        "fact_bindings": [
+          {"claim_class": "OBSERVED", "support_refs": ["O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-54E23D9221B4", "O-CA4507EB8924", "O-433C9B324F0C"], "statement": "Decoded EVSE voltage/current and Pack voltage/current are dynamic during the capture; reported ranges are 0–365.478578 V, 0–133.0892539 A, 8.17–365.25 V, -219.6–27.8 A, and 347.4–365.3 V for the second Pack-voltage field."},
+          {"claim_class": "OBSERVED", "support_refs": ["O-40626519D168", "O-154E3806A3FD", "O-AB6CA4EF7267"], "statement": "Decoded SOC increased from its reported minimum 27.5 to maximum 31.0, and two charge-energy counters increased over their observed ranges."},
+          {"claim_class": "INFERRED", "support_refs": ["O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-CA4507EB8924", "O-40626519D168"], "statement": "The observations are compatible with an actual charging-energy transfer, but sign convention, EVSE-current scaling, simultaneity, and semantic validity prevent a quantitative closure claim."}
+        ],
+        "l3_domain_mapping": {"system": "直流快充系统", "mainline_ref": "CML-DCFC-ENERGY", "role": "actual-side energy cross-check"},
+        "control_tree_mapping": {"node_ref": "CT-ENERGY-01", "mapping_status": "PARTIAL", "reason": "Both boundaries have dynamic voltage/current candidates and cumulative response, but definitions and synchronized closure are unvalidated."},
+        "evidence_requirement_mapping": [
+          {"evidence_requirement_ref": "ER-04", "status": "INSUFFICIENT", "basis_refs": ["O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-54E23D9221B4", "O-CA4507EB8924"], "reason": "Actual-side evidence is present, but direct Request is absent and quantitative semantic validity is unresolved."},
+          {"evidence_requirement_ref": "ER-05", "status": "PARTIAL_SUPPORT", "basis_refs": ["O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-54E23D9221B4", "O-CA4507EB8924", "O-40626519D168"], "reason": "A charging interval is plausible, but the package does not establish a validated 20–30 s stable window across all semantic layers."}
+        ],
+        "relationship_kind": "PHYSICAL_CLOSURE",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "EVSE-side and Pack-side actual quantities plus rising energy/SOC can form an energy cross-check after their definitions and time-aligned scaling are validated.",
+        "alternative_explanations": [
+          {"alternative_id": "ALT-ENERGY-SCALE", "description": "The decoded EVSE current or Pack current may have incorrect scale, sign, or boundary meaning.", "compatible_observation_refs": ["O-BFA7B49A9AC9", "O-CA4507EB8924"], "discriminating_evidence": "Independent charger display or calibrated current/power measurement.", "minimum_check": "Compare one steady charging interval against an independent current/power reading."},
+          {"alternative_id": "ALT-ENERGY-WINDOW", "description": "Global ranges combine different times and do not represent one simultaneous operating point.", "compatible_observation_refs": ["O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-54E23D9221B4", "O-CA4507EB8924"], "discriminating_evidence": "Same-window synchronized statistics.", "minimum_check": "Use a future externally bounded stable interval and compute simultaneous U, I and power on each boundary."}
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": ["Actual-side voltage/current candidates and cumulative charging-response candidates coexist."],
+        "unsupported_claims": ["EVSE and Pack power quantitatively close.", "A vehicle voltage/current Request was observed."],
+        "missing_evidence": [
+          {"gap_id": "G-ENERGY-REQUEST", "blocked_claim": "Separate Request from EVSE Actual and Pack Actual.", "missing_evidence_type": "DIRECT_REQUEST", "reason": "No validated request voltage/current observation is available.", "minimum_evidence_needed": "Validated vehicle request voltage and current fields.", "priority": "P0"},
+          {"gap_id": "G-ENERGY-MEASURE", "blocked_claim": "Quantitatively validate energy closure.", "missing_evidence_type": "PHYSICAL_MEASUREMENT", "reason": "No independent charger-side measurement is supplied.", "minimum_evidence_needed": "Synchronized charger display or calibrated power/current measurement for one stable interval.", "priority": "P1"}
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "On a future 20–30 s externally bounded stable interval, record independent charger power/current and compare simultaneous EVSE-side and Pack-side U/I after validating sign and scale.",
+        "uncertainty": "High for quantitative closure; medium for the weaker conclusion that charging-energy-related quantities changed together.",
+        "confidence": "LOW",
+        "trace_refs": ["O-7980F7D7EA4B", "O-BFA7B49A9AC9", "O-54E23D9221B4", "O-CA4507EB8924", "O-40626519D168", "O-154E3806A3FD", "O-AB6CA4EF7267"]
+      },
+      {
+        "finding_id": "F-STOP-EXIT",
+        "candidate_refs": [],
+        "observation_refs": ["O-626BE21E225E", "O-9D323E9B10AC", "O-8EBD6B851F2B", "O-BFA7B49A9AC9", "O-CA4507EB8924", "O-4D428E122092", "O-F1EC04428859", "O-248FA28FD648"],
+        "relation_refs": [],
+        "event_refs": ["EA-626BE21E225E", "EA-9D323E9B10AC", "EA-4D428E122092", "EA-F1EC04428859", "EA-248FA28FD648"],
+        "fact_bindings": [
+          {"claim_class": "OBSERVED", "support_refs": ["O-626BE21E225E", "O-9D323E9B10AC", "O-8EBD6B851F2B"], "statement": "Decoded enable, charging-status, and fast-charge-contactor fields change back during the late capture interval."},
+          {"claim_class": "OBSERVED", "support_refs": ["O-4D428E122092", "O-F1EC04428859", "O-248FA28FD648"], "statement": "Decoded charger-present/cable/latch fields later return toward their initial reported states."},
+          {"claim_class": "INFERRED", "support_refs": ["O-626BE21E225E", "O-9D323E9B10AC", "O-BFA7B49A9AC9", "O-4D428E122092"], "statement": "This is compatible with charging exit followed by connection release, but the stop entry and request withdrawal are not directly observed."},
+          {"claim_class": "UNSUPPORTED", "support_refs": [], "statement": "No human stop or unplug time can be assigned from these CAN transitions."}
+        ],
+        "l3_domain_mapping": {"system": "直流快充系统", "mainline_ref": "CML-DCFC-STOP", "role": "actual/status exit and later connection release"},
+        "control_tree_mapping": {"node_ref": "CT-DCFC-10", "mapping_status": "PARTIAL", "reason": "Actual/status exit is visible, but stop request and external event timing are missing."},
+        "evidence_requirement_mapping": [
+          {"evidence_requirement_ref": "ER-06", "status": "PARTIAL_SUPPORT", "basis_refs": ["O-626BE21E225E", "O-9D323E9B10AC", "O-BFA7B49A9AC9", "O-CA4507EB8924"], "reason": "Exit-related state and actual candidates are present; actual stop entry and validated Request are absent."},
+          {"evidence_requirement_ref": "ER-07", "status": "PARTIAL_SUPPORT", "basis_refs": ["O-4D428E122092", "O-F1EC04428859", "O-248FA28FD648"], "reason": "Vehicle-side release states are visible, but physical safe release/removal requires external evidence."}
+        ],
+        "relationship_kind": "STATE_SEQUENCE",
+        "causality_status": "TEMPORAL_ASSOCIATION_ONLY",
+        "semantic_hypothesis": "A late vehicle-visible exit sequence includes charging-status/actual withdrawal and subsequent connection-state release.",
+        "alternative_explanations": [
+          {"alternative_id": "ALT-STOP-ORIGIN", "description": "The exit may have been initiated by vehicle logic, EVSE logic, operator action, or another unobserved condition.", "compatible_observation_refs": ["O-626BE21E225E", "O-9D323E9B10AC", "O-BFA7B49A9AC9"], "discriminating_evidence": "External stop-entry time plus validated direct request state.", "minimum_check": "Repeat with explicit externally timestamped stop command and request observation."},
+          {"alternative_id": "ALT-STOP-DECODE", "description": "The UI enable field may not be the charging stop request despite its name.", "compatible_observation_refs": ["O-626BE21E225E"], "discriminating_evidence": "Independent action correlation across repeated stop modes.", "minimum_check": "Compare user stop and natural/remote stop cases separately."}
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": ["A late exit-and-release sequence is visible in multiple decoded fields."],
+        "unsupported_claims": ["The stop initiator is identified.", "UI_chargeEnableRequest is a validated vehicle charging-current Request.", "Safe unplug completion is established."],
+        "missing_evidence": [
+          {"gap_id": "G-STOP-TIME", "blocked_claim": "Identify the stop entry and measure response timing.", "missing_evidence_type": "EXTERNAL_EVENT_TIME", "reason": "No observed stop-entry time exists.", "minimum_evidence_needed": "Synchronized external stop command time.", "priority": "P0"},
+          {"gap_id": "G-STOP-REQ", "blocked_claim": "Show request withdrawal before actual current exit.", "missing_evidence_type": "DIRECT_REQUEST", "reason": "No validated direct voltage/current request is observed.", "minimum_evidence_needed": "Validated request observation spanning stop and zero-current persistence.", "priority": "P0"}
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "Repeat one explicit stop with synchronized stop and unplug timestamps; capture validated request, EVSE actual, Pack actual, charge status and latch states through sustained zero current.",
+        "uncertainty": "Medium: multi-field exit is visible, but initiation, direction of control, and safe physical removal are unknown.",
+        "confidence": "MEDIUM",
+        "trace_refs": ["O-626BE21E225E", "O-9D323E9B10AC", "O-8EBD6B851F2B", "O-BFA7B49A9AC9", "O-CA4507EB8924", "O-4D428E122092", "O-F1EC04428859", "O-248FA28FD648"]
+      },
+      {
+        "finding_id": "F-THERMAL-COMPANION",
+        "candidate_refs": [],
+        "observation_refs": ["O-5C20B202383C", "O-ADFBE5C783AE", "O-9A338BD975E3", "O-4C49F2F6C6F2", "O-6481FC6EB409", "O-91CFD3997AF6", "O-6B9B0785AEA9"],
+        "relation_refs": [],
+        "event_refs": ["EA-5C20B202383C", "EA-ADFBE5C783AE", "EA-9A338BD975E3", "EA-4C49F2F6C6F2", "EA-6481FC6EB409", "EA-91CFD3997AF6", "EA-6B9B0785AEA9"],
+        "fact_bindings": [
+          {"claim_class": "OBSERVED", "support_refs": ["O-5C20B202383C", "O-ADFBE5C783AE", "O-9A338BD975E3", "O-4C49F2F6C6F2", "O-6481FC6EB409"], "statement": "Decoded thermal request/target and execution candidates are dynamic, including flow, pump target, pump actual and coolant-flow actual."},
+          {"claim_class": "OBSERVED", "support_refs": ["O-91CFD3997AF6", "O-6B9B0785AEA9"], "statement": "Decoded thermal-state candidates also change, with reported coolant-inlet range 26.0–59.625 degC and model maximum range 33.5–35.0."},
+          {"claim_class": "INFERRED", "support_refs": ["O-ADFBE5C783AE", "O-9A338BD975E3", "O-4C49F2F6C6F2", "O-6481FC6EB409", "O-91CFD3997AF6"], "statement": "These fields could form a thermal request–execution–temperature companion line, but their early activity and unvalidated semantics prevent attribution specifically to DC charging."}
+        ],
+        "l3_domain_mapping": {"system": "直流快充系统", "mainline_ref": "CML-DCFC-THERMAL", "role": "thermal companion request/execution/state candidates"},
+        "control_tree_mapping": {"node_ref": "CT-THERMAL-01", "mapping_status": "PARTIAL", "reason": "Candidate layers exist but semantic validation and charge-specific attribution are missing."},
+        "evidence_requirement_mapping": [
+          {"evidence_requirement_ref": "ER-10", "status": "PARTIAL_SUPPORT", "basis_refs": ["O-5C20B202383C", "O-ADFBE5C783AE", "O-9A338BD975E3", "O-4C49F2F6C6F2", "O-6481FC6EB409", "O-91CFD3997AF6"], "reason": "Request/target, execution, and temperature candidates are observed, but DBC adaptation and causal linkage are unresolved."}
+        ],
+        "relationship_kind": "COMPANION_STATE",
+        "causality_status": "CAUSALITY_NOT_ESTABLISHED",
+        "semantic_hypothesis": "A thermal companion subsystem is active across the capture and may respond during charging, independently of the electrical control chain.",
+        "alternative_explanations": [
+          {"alternative_id": "ALT-THERMAL-BASELOAD", "description": "Thermal activity may reflect vehicle wake-up, cabin conditioning, or another background demand rather than DC charging.", "compatible_observation_refs": ["O-5C20B202383C", "O-4C49F2F6C6F2", "O-6481FC6EB409"], "discriminating_evidence": "Alternative-condition capture without charging and external HVAC state.", "minimum_check": "Compare a matched wake-state no-charge capture and record cabin climate state."},
+          {"alternative_id": "ALT-THERMAL-DECODE", "description": "Target/actual labels or scaling may be incorrect for the present DBC/vehicle variant.", "compatible_observation_refs": ["O-ADFBE5C783AE", "O-9A338BD975E3", "O-4C49F2F6C6F2", "O-91CFD3997AF6"], "discriminating_evidence": "Independent actuator and temperature measurements or repeated physically plausible ordering.", "minimum_check": "Validate one request/target-to-actual pair under a controlled thermal step."}
+        ],
+        "model_interaction": "SUPPORTS_CURRENT_MODEL",
+        "supported_claims": ["Multiple thermal candidates are dynamic and span putative request, execution, and temperature layers."],
+        "unsupported_claims": ["DC charging caused the thermal changes.", "All decoded thermal fields have confirmed quantitative semantics."],
+        "missing_evidence": [
+          {"gap_id": "G-THERMAL-VALID", "blocked_claim": "Confirm thermal request–execution mapping.", "missing_evidence_type": "SIGNAL_VALIDATION", "reason": "Several key fields are UNVALIDATED or VALIDATION_REQUIRED.", "minimum_evidence_needed": "Independent actuator/flow/temperature evidence for at least one controlled step.", "priority": "P1"},
+          {"gap_id": "G-THERMAL-CONTROL", "blocked_claim": "Attribute thermal activity to DC charging.", "missing_evidence_type": "ALTERNATIVE_CONDITION", "reason": "Thermal activity begins before the visible charging-output sequence and other loads are unrecorded.", "minimum_evidence_needed": "Matched no-charge control or recorded HVAC/ambient condition.", "priority": "P2"}
+        ],
+        "signal_validation_needed": true,
+        "minimum_next_check": "Run one matched no-charge wake-state control and one charging capture with HVAC state recorded; validate a single thermal target-to-actual pair against independent behavior.",
+        "uncertainty": "High for charge-specific attribution; medium for the existence of a dynamic thermal companion line.",
+        "confidence": "LOW",
+        "trace_refs": ["O-5C20B202383C", "O-ADFBE5C783AE", "O-9A338BD975E3", "O-4C49F2F6C6F2", "O-6481FC6EB409", "O-91CFD3997AF6", "O-6B9B0785AEA9"]
+      }
+    ],
+    "validation_requests": []
+  },
+  "follow_up_result": null,
+  "updated_reasoning": {
+    "pass_id": "FINAL-NO-FOLLOW-UP-1",
+    "findings": [],
+    "validation_requests": []
+  },
+  "audit_metadata": {
+    "strict_cognitive_blinding": true,
+    "historical_results_used": false,
+    "model_call_count": 1,
+    "discovery_rerun_count": 0,
+    "asc_parse_count": 0,
+    "follow_up_count": 0,
+    "allowed_sources": [
+      "/Users/hwy/codex_work/TeslaCanPython/output/TM3-015/reasoning_spike/reasoning_input_v2.1.json",
+      "/Users/hwy/codex_work/TeslaCanPython/spikes/contracts/semantic_reasoning_v1.schema.json"
+    ],
+    "reasoning_started_at_utc": "2026-09-07T14:51:00Z",
+    "reasoning_ended_at_utc": "2026-09-07T15:00:41Z"
+  }
+}

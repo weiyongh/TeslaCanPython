@@ -1,0 +1,53 @@
+{
+  "phase": "2.6C",
+  "purpose": "STRICT_BLIND_REPLAY_OF_LLM_SEMANTIC_REASONING",
+  "reasoning_executor": {
+    "isolated_context": true,
+    "conversation_history_inherited": false,
+    "allowed_reads": [
+      "output/TM3-015/reasoning_spike/reasoning_input.json",
+      "spikes/contracts/semantic_reasoning_v1.schema.json",
+      "output/TM3-015/reasoning_spike/reasoning_output_strict_blind.json"
+    ],
+    "historical_tm3_015_results_read": false,
+    "network_used": false,
+    "other_agents_used_by_executor": false
+  },
+  "runtime_budget": {
+    "initial_semantic_reasoning": 1,
+    "targeted_deterministic_follow_up": 0,
+    "updated_semantic_result": 1,
+    "updated_result_scope": "CONTRACT_REFERENCE_CORRECTION_ONLY",
+    "discovery_rerun": false,
+    "asc_reparsed": false,
+    "dbc_coverage_join_rerun": false
+  },
+  "frozen_inputs": {
+    "reasoning_input_file_sha256": "2415a816aa789696790e5ff934bc3325abdfba285a12595a03886c406bbebbf6",
+    "schema_file_sha256": "3d62feaba59ed9f4486efb1346d509b58d198115ce7aa79c6db0c471b40a6042"
+  },
+  "output": {
+    "path": "output/TM3-015/reasoning_spike/reasoning_output_strict_blind.json",
+    "file_sha256_at_validation": "43a9a101a05a96525eefaba91e71b9cc809a5be0eea37e458f73f5f55f34eb8e",
+    "program_validation": "PASS",
+    "program_validation_errors": []
+  },
+  "hidden_comparison": {
+    "path": "output/TM3-015/reasoning_spike/hidden_comparison_strict_blind.json",
+    "compatible_er_count": 6,
+    "total_er_count": 10,
+    "semantic_boundary_checks_passed": 3,
+    "semantic_boundary_checks_total": 5,
+    "er_mismatches": ["ER-05", "ER-06", "ER-08", "ER-09"],
+    "failed_semantic_checks": [
+      "separates_cp_current_timing_from_quantitative_validity",
+      "separates_capability_from_actual"
+    ]
+  },
+  "certification": {
+    "strict_cognitive_blindness": "PASS",
+    "input_contract_independent_recovery": "FAIL",
+    "overall_phase_2_6c": "FAIL",
+    "reason": "The isolated executor remained cognitively blind and produced a contract-valid result, but the frozen package did not independently recover the previously accepted 10/10 ER compatibility and 5/5 semantic-boundary result. The single updated-result turn was consumed by deterministic contract-reference correction; the requested TARGETED_WINDOW_STATS operation was not executed."
+  }
+}

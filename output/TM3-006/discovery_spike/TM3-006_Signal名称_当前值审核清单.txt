@@ -1,0 +1,4231 @@
+APP_buildType: SIGNED
+APP_environmentRainy: 1
+APP_environmentSnowy: 1
+APP_infoIndex: AP_BUILD_TYPE
+APP_w193_camWindshieldUnclean: 0
+APP_w194_accDriverResumeRqrd: 1
+APP_w195_scwUnavailable: 0
+APP_w196_stopSignWarning: 0
+APP_w197_redLightWarning: 0
+APP_w198_tsrUnavailable: 0
+APP_w199_apcAbort: 0
+APP_w200_lcSlowdown: 0
+APP_w201_lcAborting: 0
+APP_w202_scwNoisyEnvironment: 0
+APP_w203_apcActivation: 0
+APP_w204_apcFinalFront: 0
+APP_w205_apcFinalRear: 0
+APP_w206_autosteerNotEnabled: 0
+APP_w207_autosteerUnavailable: 0
+APP_w208_rackDetected: 0
+APP_w209_autoSummonRequest: 0
+APP_w210_camObstrcted: 0
+APP_w211_accNoSeatBelt: 0
+APP_w212_lcUnavailableStrikeOut: 0
+APP_w213_autosteerStruckOut: 0
+APP_w214_driverNotIntracting: 0
+APP_w215_contDriverNotIntracting: 1
+APP_w216_driverOverriding: 0
+APP_w217_lcUnavailableSpeeding: 0
+APP_w218_lcSpeedExceededLimit: 0
+APP_w219_lcTempUnavailableSpeed: 0
+APP_w220_lcTempUnavailableRoad: 0
+APP_w221_accRadarBlind: 0
+APP_w222_accCameraBlind: 0
+APP_w223_accObjectInPath: 0
+APP_w224_accCameraCalibration: 0
+APP_w225_lcDegradedVisSpeedLmt: 0
+APP_w226_lcCamCalNeededSpeedLmt: 0
+APP_w227_virtualWallBlocked: 0
+APP_w228_DEPRECATED: 0
+APP_w229_alcUltrasoundDamaged: 0
+APP_w230_alcUltrasoundBlocked: 0
+BMS_a017_SW_Brick_OV: 0
+BMS_a018_SW_Brick_UV: 0
+BMS_a019_SW_Module_OT: 0
+BMS_a021_SW_Dr_Limits_Regulation: 0
+BMS_a022_SW_Over_Current: 0
+BMS_a023_SW_Stack_OV: 0
+BMS_a024_SW_Islanded_Brick: 0
+BMS_a025_SW_PwrBalance_Anomaly: 0
+BMS_a026_SW_HFCurrent_Anomaly: 0
+BMS_a034_SW_Passive_Isolation: 0
+BMS_a035_SW_Isolation: 0
+BMS_a036_SW_HvpHvilFault: 0
+BMS_a037_SW_Flood_Port_Open: 0
+BMS_a039_SW_DC_Link_Over_Voltage: 0
+BMS_a041_SW_Power_On_Reset: 0
+BMS_a042_SW_MPU_Error: 0
+BMS_a043_SW_Watch_Dog_Reset: 0
+BMS_a044_SW_Assertion: 0
+BMS_a045_SW_Exception: 0
+BMS_a046_SW_Task_Stack_Usage: 0
+BMS_a047_SW_Task_Stack_Overflow: 0
+BMS_a048_SW_Log_Upload_Request: 0
+BMS_a050_SW_Brick_Voltage_MIA: 0
+BMS_a051_SW_HVC_Vref_Bad: 0
+BMS_a052_SW_PCS_MIA: 0
+BMS_a053_SW_ThermalModel_Sanity: 0
+BMS_a054_SW_Ver_Supply_Fault: 0
+BMS_a059_SW_Pack_Voltage_Sensing: 0
+BMS_a060_SW_Leakage_Test_Failure: 0
+BMS_a061_robinBrickOverVoltage: 0
+BMS_a062_SW_BrickV_Imbalance: 0
+BMS_a063_SW_ChargePort_Fault: 0
+BMS_a064_SW_SOC_Imbalance: 0
+BMS_a069_SW_Low_Power: 0
+BMS_a071_SW_SM_TransCon_Not_Met: 0
+BMS_a075_SW_Chg_Disable_Failure: 0
+BMS_a076_SW_Dch_While_Charging: 0
+BMS_a077_SW_Charger_Regulation: 0
+BMS_a081_SW_Ctr_Close_Blocked: 0
+BMS_a082_SW_Ctr_Force_Open: 0
+BMS_a083_SW_Ctr_Close_Failure: 0
+BMS_a084_SW_Sleep_Wake_Aborted: 1
+BMS_a087_SW_Feim_Test_Blocked: 0
+BMS_a088_SW_VcFront_MIA_InDrive: 0
+BMS_a089_SW_VcFront_MIA: 0
+BMS_a090_SW_Gateway_MIA: 0
+BMS_a091_SW_ChargePort_MIA: 0
+BMS_a092_SW_ChargePort_Mia_On_Hvs: 0
+BMS_a094_SW_Drive_Inverter_MIA: 0
+BMS_a099_SW_BMB_Communication: 0
+BMS_a105_SW_One_Module_Tsense: 0
+BMS_a106_SW_All_Module_Tsense: 0
+BMS_a107_SW_Stack_Voltage_MIA: 0
+BMS_a121_SW_NVRAM_Config_Error: 0
+BMS_a122_SW_BMS_Therm_Irrational: 0
+BMS_a123_SW_Internal_Isolation: 0
+BMS_a127_SW_shunt_SNA: 0
+BMS_a128_SW_shunt_MIA: 0
+BMS_a129_SW_VSH_Failure: 0
+BMS_a130_IO_CAN_Error: 0
+BMS_a131_Bleed_FET_Failure: 0
+BMS_a132_HW_BMB_OTP_Uncorrctbl: 0
+BMS_a134_SW_Delayed_Ctr_Off: 0
+BMS_a136_SW_Module_OT_Warning: 0
+BMS_a137_SW_Brick_UV_Warning: 0
+BMS_a138_SW_Brick_OV_Warning: 0
+BMS_a139_SW_DC_Link_V_Irrational: 0
+BMS_a141_SW_BMB_Status_Warning: 0
+BMS_a144_Hvp_Config_Mismatch: 0
+BMS_a145_SW_SOC_Change: 0
+BMS_a146_SW_Brick_Overdischarged: 0
+BMS_a149_SW_Missing_Config_Block: 0
+BMS_a151_SW_external_isolation: 0
+BMS_a156_SW_BMB_Vref_bad: 0
+BMS_a157_SW_HVP_HVS_Comms: 0
+BMS_a158_SW_HVP_HVI_Comms: 0
+BMS_a159_SW_HVP_ECU_Error: 0
+BMS_a161_SW_DI_Open_Request: 0
+BMS_a162_SW_No_Power_For_Support: 0
+BMS_a163_SW_Contactor_Mismatch: 0
+BMS_a164_SW_Uncontrolled_Regen: 0
+BMS_a165_SW_Pack_Partial_Weld: 0
+BMS_a166_SW_Pack_Full_Weld: 0
+BMS_a167_SW_FC_Partial_Weld: 0
+BMS_a168_SW_FC_Full_Weld: 0
+BMS_a169_SW_FC_Pack_Weld: 0
+BMS_a170_SW_Limp_Mode: 0
+BMS_a171_SW_Stack_Voltage_Sense: 0
+BMS_a174_SW_Charge_Failure: 0
+BMS_a176_SW_GracefulPowerOff: 0
+BMS_a179_SW_Hvp_12V_Fault: 0
+BMS_a180_SW_ECU_reset_blocked: 0
+BMS_acChargerKwhTotal: 6139.592000000001 KWh
+BMS_activeHeatingWorthwhile: 0
+BMS_appCrc: 1983305633
+BMS_appGitHash: 0
+BMS_assemblyId: 2
+BMS_bmbMinMaxMultiplexer: THERM_MUX0
+BMS_bootCrc: 3984728572
+BMS_bootGitHash: 55154812515831416
+BMS_bootUdsProtoVersion: 5
+BMS_brick0: 3.2851000000000004 V
+BMS_brick1: 3.2849000000000004 V
+BMS_brick10: 3.2856 V
+BMS_brick100: 3.2848 V
+BMS_brick101: 3.2849000000000004 V
+BMS_brick102: 3.2857000000000003 V
+BMS_brick103: 3.2857000000000003 V
+BMS_brick104: 3.2857000000000003 V
+BMS_brick105: 3.2858 V
+BMS_brick106: 0.0 V
+BMS_brick107: 0.0 V
+BMS_brick11: 3.2852 V
+BMS_brick12: 3.2857000000000003 V
+BMS_brick13: 3.2853000000000003 V
+BMS_brick14: 3.2845 V
+BMS_brick15: 3.2847 V
+BMS_brick16: 3.2849000000000004 V
+BMS_brick17: 3.285 V
+BMS_brick18: 3.285 V
+BMS_brick19: 3.285 V
+BMS_brick2: 3.2853000000000003 V
+BMS_brick20: 3.2853000000000003 V
+BMS_brick21: 3.2848 V
+BMS_brick22: 3.2853000000000003 V
+BMS_brick23: 3.2853000000000003 V
+BMS_brick24: 3.2855000000000003 V
+BMS_brick25: 3.2849000000000004 V
+BMS_brick26: 3.2848 V
+BMS_brick27: 3.285 V
+BMS_brick28: 3.2851000000000004 V
+BMS_brick29: 3.2852 V
+BMS_brick3: 3.2852 V
+BMS_brick30: 3.2852 V
+BMS_brick31: 3.2849000000000004 V
+BMS_brick32: 3.2851000000000004 V
+BMS_brick33: 3.2851000000000004 V
+BMS_brick34: 3.285 V
+BMS_brick35: 3.2849000000000004 V
+BMS_brick36: 3.2848 V
+BMS_brick37: 3.2846 V
+BMS_brick38: 3.2845 V
+BMS_brick39: 3.2844 V
+BMS_brick4: 3.2856 V
+BMS_brick40: 3.2848 V
+BMS_brick41: 3.2846 V
+BMS_brick42: 3.2848 V
+BMS_brick43: 3.2846 V
+BMS_brick44: 3.2846 V
+BMS_brick45: 3.2845 V
+BMS_brick46: 3.2853000000000003 V
+BMS_brick47: 3.2853000000000003 V
+BMS_brick48: 3.2853000000000003 V
+BMS_brick49: 3.2849000000000004 V
+BMS_brick5: 3.2851000000000004 V
+BMS_brick50: 3.2852 V
+BMS_brick51: 3.2852 V
+BMS_brick52: 3.2852 V
+BMS_brick53: 3.2839 V
+BMS_brick54: 3.2840000000000003 V
+BMS_brick55: 3.2844 V
+BMS_brick56: 3.2842000000000002 V
+BMS_brick57: 3.2845 V
+BMS_brick58: 3.2844 V
+BMS_brick59: 3.2844 V
+BMS_brick6: 3.2854 V
+BMS_brick60: 3.2844 V
+BMS_brick61: 3.2853000000000003 V
+BMS_brick62: 3.2852 V
+BMS_brick63: 3.2852 V
+BMS_brick64: 3.285 V
+BMS_brick65: 3.2855000000000003 V
+BMS_brick66: 3.285 V
+BMS_brick67: 3.2845 V
+BMS_brick68: 3.2843 V
+BMS_brick69: 3.2844 V
+BMS_brick7: 3.2852 V
+BMS_brick70: 3.2844 V
+BMS_brick71: 3.2849000000000004 V
+BMS_brick72: 3.2848 V
+BMS_brick73: 3.2847 V
+BMS_brick74: 3.2848 V
+BMS_brick75: 3.2854 V
+BMS_brick76: 3.2855000000000003 V
+BMS_brick77: 3.2857000000000003 V
+BMS_brick78: 3.2857000000000003 V
+BMS_brick79: 3.2856 V
+BMS_brick8: 3.2857000000000003 V
+BMS_brick80: 3.2854 V
+BMS_brick81: 3.2847 V
+BMS_brick82: 3.2851000000000004 V
+BMS_brick83: 3.2851000000000004 V
+BMS_brick84: 3.2852 V
+BMS_brick85: 3.2852 V
+BMS_brick86: 3.2852 V
+BMS_brick87: 3.2852 V
+BMS_brick88: 3.2855000000000003 V
+BMS_brick89: 3.2854 V
+BMS_brick9: 3.2855000000000003 V
+BMS_brick90: 3.2852 V
+BMS_brick91: 3.2853000000000003 V
+BMS_brick92: 3.2853000000000003 V
+BMS_brick93: 3.2851000000000004 V
+BMS_brick94: 3.2845 V
+BMS_brick95: 3.2846 V
+BMS_brick96: 3.2844 V
+BMS_brick97: 3.2848 V
+BMS_brick98: 3.2849000000000004 V
+BMS_brick99: 3.2847 V
+BMS_brickIndex: 21
+BMS_brickNumVoltageMax: 106
+BMS_brickNumVoltageMin: 54
+BMS_brickStatus: 42
+BMS_brickVoltageMax: 3.286 V
+BMS_brickVoltageMin: 3.2840000000000003 V
+BMS_buildConfigId: 4205
+BMS_buildType: PLATFORM_BUILD
+BMS_chargeRequest: 0
+BMS_chargeRetryCount: 11
+BMS_chgPowerAvailable: 255.75 kW
+BMS_componentId: 136
+BMS_contactorState: CLOSED
+BMS_cpMiaOnHvs: 1
+BMS_currentUnfiltered: 1.0499999999999545 A
+BMS_dcChargerKwhTotal: 3769.587 KWh
+BMS_diLimpRequest: NONE
+BMS_ecuLogUploadRequest: 1
+BMS_energyBuffer: 2.23 kWh
+BMS_energyStatusIndex: 0
+BMS_energyToChargeComplete: 26.5 kWh
+BMS_expectedEnergyRemaining: 23.0 kWh
+BMS_flowRequest: 17.099999999999998 LPM
+BMS_fullyCharged: 0
+BMS_hardwareId: 4
+BMS_hvState: DOWN
+BMS_hvacPowerRequest: 1
+BMS_hvsBusAsleep: 0
+BMS_idealEnergyRemaining: 23.0 kWh
+BMS_infoIndex: PCBAID_ASSYID_USAGEID
+BMS_initialFullPackEnergy: 0.1 kWh
+BMS_inletActiveCoolTargetT: -12.25 DegC
+BMS_inletActiveHeatTargetT: 49.75 DegC
+BMS_inletPassiveTargetT: 59.25 DegC
+BMS_isolationResistance: 0 kOhm
+BMS_keepWarmRequest: 0
+BMS_kwhChargeTotal: 14616.688 KWh
+BMS_kwhCounter_Id: MUX1
+BMS_kwhDischargeTotal: 14015.902 KWh
+BMS_kwhDriveDischargeTotal: 13460.98 KWh
+BMS_kwhRegenChargeTotal: 4707.177 KWh
+BMS_matrixIndex: AlertMatrix2
+BMS_maxBusVoltage: 201.36 V
+BMS_maxChargeCurrent: 250.0 A
+BMS_maxDischargeCurrent: 682.624 A
+BMS_minBusVoltage: 106.06 V
+BMS_minPackTemperature: -15.5 DegC
+BMS_modelTMax: 31.0 DegC
+BMS_modelTMin: -40.0 DegC
+BMS_nmGoingToSleep: 0
+BMS_nmKeepAwakeReason: CTRS_CLOSED
+BMS_nmWakeUpBus: 1
+BMS_nmWakeUpReason: CAN_VEH
+BMS_noFlowRequest: 0
+BMS_nominalEnergyRemaining: 23.0 kWh
+BMS_nominalFullPackEnergy: 51.120000000000005 kWh
+BMS_notEnoughPowerForDrive: 0
+BMS_notEnoughPowerForSupport: 0
+BMS_okToShipByAir: 0
+BMS_okToShipByLand: 0
+BMS_packCurrent: 1.0 A
+BMS_packTMax: 15.0 DegC
+BMS_packTMin: 64.0 DegC
+BMS_packVoltage: 348.14 V
+BMS_pcbaId: 4
+BMS_pcsNoFlowRequest: 0
+BMS_pcsPwmEnabled: 1
+BMS_platformType: 3
+BMS_powerDissipation: 2.24 kW
+BMS_preconditionAllowed: 1
+BMS_socAvg: 45.7 %
+BMS_socMax: 48.1 %
+BMS_socMin: 45.5 %
+BMS_socUI: 46.5 %
+BMS_state: STANDBY
+BMS_subUsageId: 2
+BMS_thermistorNumTMax: 3
+BMS_thermistorNumTMin: 1
+BMS_thermistorTMax: 31.5 DegC
+BMS_thermistorTMin: 31.0 DegC
+BMS_uiChargeStatus: NO_POWER
+BMS_updateAllowed: 1
+BMS_usageId: 5
+CMPD_inputHVCurrent: 0.6000000000000001 A
+CMPD_inputHVPower: 0 W
+CMPD_inputHVVoltage: 32.0 V
+CMPD_powerLimitActive: 0
+CMPD_powerLimitTooLowToStart: 1
+CMPD_ready: 0
+CMPD_speedDuty: 0.2 %
+CMPD_speedRPM: 2580 RPM
+CMPD_state: 3
+CMPD_wasteHeatState: 0
+CP_UHF_chipState: 0
+CP_UHF_controlState: INIT
+CP_UHF_fifoData: 0
+CP_UHF_handleFound: 0
+CP_UHF_rssi: 0
+CP_UHF_rxNumBytes: 0
+CP_UHF_rxOverflow: 0
+CP_UHF_selfTestRssi: 0
+CP_a001_canRx: 0
+CP_a002_canTx: 0
+CP_a003_canError: 0
+CP_a004_proximityRationality: 0
+CP_a005_gbdcLiveDisconnect: 0
+CP_a006_lostCommsBMS: 0
+CP_a007_watchdog: 0
+CP_a008_memoryError: 0
+CP_a009_coverOpen: 0
+CP_a010_pilotRationality: 0
+CP_a011_eeprom: 0
+CP_a012_ledDriver: 0
+CP_a013_lostCommsGTW: 0
+CP_a014_lostCommsCHG: 0
+CP_a015_apsVov: 0
+CP_a016_apsVuv: 0
+CP_a017_fiveVov: 0
+CP_a018_fiveVuv: 0
+CP_a019_threeVov: 0
+CP_a020_threeVuv: 0
+CP_a021_zeroVov: 0
+CP_a022_zeroVuv: 0
+CP_a023_gbdcSessionFailed: 0
+CP_a024_ledsUC: 0
+CP_a025_ledsOC: 0
+CP_a026_networkManagement: 0
+CP_a027_doorSensorOutOfSpec: 0
+CP_a028_insertEnableMismatch: 0
+CP_a029_doorClosedProxPilot: 0
+CP_a030_busOff: 0
+CP_a031_doorClosedCommandedOpen: 0
+CP_a032_doorOpenExpectedClosed: 0
+CP_a033_spiOpen: 0
+CP_a034_calibrationIncomplete: 0
+CP_a035_latchMovement_1: 0
+CP_a036_latchNotDisengaged: 0
+CP_a037_latchNotEngaged: 0
+CP_a038_latchNotBlocking: 0
+CP_a039_latchMovement_2: 0
+CP_a040_doNotUse: 0
+CP_a041_doorSensorUnplugged: 0
+CP_a042_doorAssemblyBroken: 0
+CP_a043_doorPotIrrational: 0
+CP_a044_lostCommsHVP: 0
+CP_a045_lostCommsVCSEC: 0
+CP_a046_lostCommsEVSE: 0
+CP_a047_lostCommsVCFRONT: 0
+CP_a048_lostCommsUI: 0
+CP_a049_multipleCablesDetected: 0
+CP_a050_latchNotConnected: 0
+CP_a051_doorInductiveSensorMIA: 0
+CP_a052_evseNotSupported: 0
+CP_a053_proxLatchedNoPilot: 0
+CP_a054_cableNotSecured: 0
+CP_a055_chargeStoppedNoPilot: 0
+CP_a056_proxDisconnected: 0
+CP_a057_evseFaulted: 0
+CP_a058_acChargingBlocked: 0
+CP_a059_swcanError: 0
+CP_a060_lostCommsPCS: 0
+CP_a061_uhfReceiverMIA: 0
+CP_a062_scOutOfService: 0
+CP_a063_scUpdateInProgress: 0
+CP_a064_superchargingBlocked: 0
+CP_a065_selfTestFailed: 0
+CP_a066_proxLatchedIdlePilot: 0
+CP_a067_gbdcConnFault: 0
+CP_a068_doorSensorMismatch: 0
+CP_a069_doorInductiveSensorError: 0
+CP_a256_unused: 0
+CP_acChargeRetriesExceeded: 0
+CP_acChargeState: INACTIVE
+CP_acNumRetries: 0
+CP_appCrc: 833176688
+CP_appGitHash: 0
+CP_apsVoltage: 3.0058811999999997 V
+CP_assemblyId: 4
+CP_backCover2Counts: 0.0 %
+CP_backCoverCounts: 0.0 %
+CP_boardTemperature: -50.0 C
+CP_bootCrc: 2164417909
+CP_bootGitHash: 34880965707952968
+CP_bootUdsProtoVersion: 5
+CP_buildConfigId: 23
+CP_buildType: PLATFORM_BUILD
+CP_cableCurrentLimit: 0 A
+CP_cableType: 5
+CP_chargeCablePresent: NOT_PRESENT
+CP_chargeCableSecured: 1
+CP_chargeCableState: 1
+CP_chargeDoorOpen: 0
+CP_chargeDoorOpenUI: 1
+CP_coldWeatherMode: NONE
+CP_componentId: 8
+CP_coverClosed: 0
+CP_digitalCommsAttempts: 0
+CP_digitalCommsEstablished: 0
+CP_doorButtonPressed: 0
+CP_doorControlState: doorInit
+CP_doorCountsDebounced: 0.0 %
+CP_doorCountsFiltered: 0.0 %
+CP_doorI: 7.47 A
+CP_doorLastRequestMaxI: 5.135 A
+CP_doorOpenRequested: 0
+CP_doorPot: 82.525 %
+CP_evseAccept: 0
+CP_evseChargeType: NO_CHARGER_PRESENT
+CP_evseRequest: 0
+CP_faultLineSensed: SET
+CP_faultLineV: 0.0 V
+CP_gbState: IDLE
+CP_gbdcChargeAttempts: 0
+CP_gbdcFailureReason: FAILURE_NONE
+CP_gbdcStopChargeReason: STOP_REASON_NONE
+CP_hardwareId: 252
+CP_hvInletExposed: 0
+CP_inductiveDoorState: 7
+CP_inductiveSensorState: INIT
+CP_inductiveSensor_raw: 0
+CP_infoIndex: BOOTLOADER_GITHASH
+CP_insertEnableLine: 1
+CP_latch2ControlState: latchInit
+CP_latch2I: 0.32 A
+CP_latch2State: DISENGAGED
+CP_latchControlState: latchIdle
+CP_latchEngaged: 0
+CP_latchI: 0.0 A
+CP_latchState: DISENGAGED
+CP_ledColor: GREEN
+CP_lineVoltageRequested: 1
+CP_matrixIndex: AlertMatrix1
+CP_numAlertsSet: 30
+CP_pcbaId: 13
+CP_permanentPowerRequest: 0
+CP_pilot: NONE
+CP_pilotCurrent: 0.0 A
+CP_pinTemperature1: -55.0 C
+CP_pinTemperature2: -55.0 C
+CP_pinTemperature3: -55.0 C
+CP_platformType: 1
+CP_proximity: SNA
+CP_sensorDataSelect: DOOR
+CP_stopChargeRequest: 0
+CP_subUsageId: 65535
+CP_swcanRelayClosed: 0
+CP_teslaSwcanState: INACTIVE
+CP_type: GB
+CP_usageId: 1
+CP_vehiclePrechargeRequired: 0
+CP_vehicleUnlockRequest: 1
+DAS_TP_accRestricted: 0
+DAS_TP_counter: 0
+DAS_TP_handsOn: 0
+DAS_TP_hppC0: 0.0 m
+DAS_TP_hppC1: 0.0 rad
+DAS_TP_hppC2: 0.0 1/m
+DAS_TP_hppC3: 0.0 1/m2
+DAS_TP_hppCounter: 0
+DAS_TP_hppError: 3.0 m
+DAS_TP_hppFuse: 0
+DAS_TP_hppQlty: 0
+DAS_TP_hppRange: 0 m
+DAS_TP_hppValid: 0
+DAS_TP_laneChange: 0
+DAS_TP_lcState: 0
+DAS_TP_llC0: 5.12 m
+DAS_TP_llC1: -0.47656371999999997 rad
+DAS_TP_llC2: 0.018712 1/m
+DAS_TP_llC3: 0.0 1/m2
+DAS_TP_llCounter: 0
+DAS_TP_llFuse: 0
+DAS_TP_llQlty: 0
+DAS_TP_llRange: 23 m
+DAS_TP_llType: UNDECIDED
+DAS_TP_multiplexer: HPP
+DAS_TP_plannerState: 1
+DAS_TP_restrictedAccess: 0
+DAS_TP_rlC0: 5.12 m
+DAS_TP_rlC1: -0.06445329 rad
+DAS_TP_rlC2: 0.005892 1/m
+DAS_TP_rlC3: 0.0 1/m2
+DAS_TP_rlCounter: 0
+DAS_TP_rlFuse: 0
+DAS_TP_rlQlty: 0
+DAS_TP_rlRange: 0 m
+DAS_TP_rlType: UNDECIDED
+DAS_TP_sonicDistL: 3.47 m
+DAS_TP_sonicDistR: 0.36 m
+DAS_TP_vehFuse: 0
+DAS_TP_vlWidth: 0.0 m
+DAS_TP_wipersActive: 1
+DAS_ahlbOverride: 0
+DAS_autopilotState: DISABLED
+DAS_autosteerHPPUsage: REJECTED_UNAVAILABLE
+DAS_autosteerVehiclesUsage: REJECTED_UNAVAILABLE
+DAS_blindSpotRearLeft: NO_WARNING
+DAS_blindSpotRearRight: NO_WARNING
+DAS_bodyControlsChecksum: 166
+DAS_bodyControlsCounter: 4
+DAS_dynamicBrakeLightRequest: 0
+DAS_forwardCollisionWarning: NONE
+DAS_fusedSpeedLimit: UNKNOWN_SNA kph/mph
+DAS_hazardLightRequest: OFF
+DAS_headlightRequest: OFF
+DAS_heaterRequest: SNA
+DAS_heaterState: OFF_SNA
+DAS_highLowBeamDecision: OFF
+DAS_highLowBeamOffReason: OFF_REASON_SNA
+DAS_radarHeaterRequest: 0
+DAS_summonClearedGate: 0
+DAS_summonObstacle: 0
+DAS_suppressSpeedWarning: Do_Not_Suppress
+DAS_turnIndicatorRequest: NONE
+DAS_turnIndicatorRequestReason: NONE
+DAS_visionOnlySpeedLimit: UNKNOWN_SNA kph/mph
+DAS_w002_ldwDisabled: 0
+DAS_w003_isaDisabled: 1
+DAS_w004_accDisabled: 0
+DAS_w005_fcwCancelled: 1
+DAS_w006_aebCancelled: 0
+DAS_w007_ahlbDisabled: 1
+DAS_w008_parkDisabled: 1
+DAS_w009_aebFault: 1
+DAS_w010_radcCalibIssue: 0
+DAS_w011_scaEvent: 1
+DAS_w012_Cam_BootFailure: 1
+DAS_w013_Cam_Watchdog: 1
+DAS_w014_swAssert: 1
+DAS_w015_Camera_Failsafes: 1
+DAS_w016_aeb_e_event: 0
+DAS_w017_Cam_Msg_MIA: 1
+DAS_w018_ECU_Power_Issue: 1
+DAS_w019_ECU_Stack_Overflow: 1
+DAS_w020_ECU_checkstopError: 1
+DAS_w021_ECU_Temperature_Issue: 1
+DAS_w022_ECU_EEPROM_Failure: 1
+DAS_w023_ECU_Cam_Statemismatc: 1
+DAS_w024_ECU_Watchdog_Reset: 1
+DAS_w025_LC_Steering_Override: 1
+DAS_w026_ECU_timingIssue: 1
+DAS_w027_ECU_Reset_Fault: 1
+DAS_w028_spi_rx_error: 1
+DAS_w029_spi_tx_error: 0
+DAS_w030_Heater_Issue: 0
+DAS_w031_canRxError: 0
+DAS_w032_canTxError: 0
+DAS_w033_gtwMia: 1
+DAS_w034_sccmMia: 1
+DAS_w035_espMia: 0
+DAS_w036_bdyMia: 1
+DAS_w037_camTacIssue: 1
+DAS_w038_camFailure: 1
+DAS_w039_sdm_rcm_Mia: 1
+DAS_w040_autopilotAngleSaturated: 1
+DAS_w193_camWindshieldUnclean: 1
+DAS_w194_accDriverResumeRqrd: 0
+DAS_w195_scwUnavailable: 0
+DAS_w196_stopSignWarning: 0
+DAS_w197_redLightWarning: 0
+DAS_w198_tsrUnavailable: 0
+DAS_w199_apcAbort: 0
+DAS_w200_lcSlowdown: 0
+DAS_w201_lcAborting: 0
+DAS_w202_scwNoisyEnvironment: 0
+DAS_w203_apcActivation: 0
+DAS_w204_apcFinalFront: 0
+DAS_w205_apcFinalRear: 0
+DAS_w206_autosteerNotEnabled: 0
+DAS_w207_autosteerUnavailable: 0
+DAS_w208_rackDetected: 0
+DAS_w209_autoSummonRequest: 0
+DAS_w210_camObstrcted: 0
+DAS_w211_accNoSeatBelt: 0
+DAS_w212_lcUnavailableStrikeOut: 0
+DAS_w213_autosteerStruckOut: 0
+DAS_w214_driverNotIntracting: 0
+DAS_w215_contDriverNotIntracting: 0
+DAS_w216_driverOverriding: 0
+DAS_w217_lcUnavailableSpeeding: 0
+DAS_w218_lcSpeedExceededLimit: 0
+DAS_w219_lcTempUnavailableSpeed: 0
+DAS_w220_lcTempUnavailableRoad: 0
+DAS_w221_accRadarBlind: 0
+DAS_w222_accCameraBlind: 0
+DAS_w223_accObjectInPath: 0
+DAS_w224_accCameraCalibration: 0
+DAS_w225_lcDegradedVisSpeedLmt: 0
+DAS_w226_lcCamCalNeededSpeedLmt: 0
+DAS_w227_virtualWallBlocked: 0
+DAS_w228_DEPRECATED: 0
+DAS_w229_alcUltrasoundDamaged: 0
+DAS_w230_alcUltrasoundBlocked: 0
+DAS_wiperSpeed: INVALID
+DIS_a065_canHardwareBusB: 0
+DIS_a066_canDataBusB: 0
+DIS_a067_canOverrunBusB: 0
+DIS_a070_12vSupplySensor: 0
+DIS_a071_busDisconnected: 0
+DIS_a072_gateDriveFaultCounter: 0
+DIS_a073_motorSpeed: 0
+DIS_a074_motorEncoder: 0
+DIS_a075_motorSpeedMismatch: 0
+DIS_a076_12vSupplyOV: 0
+DIS_a077_12vSupplyUV: 0
+DIS_a078_adcRefLow: 0
+DIS_a079_adcRefHigh: 0
+DIS_a086_hvilNotPresent: 0
+DIS_a087_gtwMIA: 0
+DIS_a088_uiMIA: 0
+DIS_a090_pmMIA: 0
+DIS_a091_espMIA: 0
+DIS_a092_bmsMIA: 0
+DIS_a093_canHardwareBusA: 0
+DIS_a094_canDataBusA: 0
+DIS_a095_canOverrunBusA: 0
+DIS_a096_memoryError: 0
+DIS_a097_eepromError: 0
+DIS_a098_intTimeTooLong: 0
+DIS_a099_threadOverrun: 0
+DIS_a100_assertion: 0
+DIS_a103_lowFlow: 0
+DIS_a106_absMIA: 0
+DIS_a108_stateTrans: 0
+DIS_a110_brakeMIA: 0
+DIS_a112_noPhaseCurrent: 0
+DIS_a113_noFuncHeatsinkSensor: 0
+DIS_a114_noMotorSpeed: 0
+DIS_a115_heatsinkTempImbalance: 0
+DIS_a116_powerConvIrrational: 0
+DIS_a117_diMIA: 0
+DIS_a121_motorControlRegulation: 0
+DIS_a122_highStackUsage: 0
+DIS_a123_lossMotorControl: 0
+DIS_a126_limpMode: 0
+DIS_a127_gracefulPowerOff: 0
+DIS_a129_epbNotApplied: 0
+DIS_a131_highSpeedWearLimit: 0
+DIS_a133_capacitorOT: 0
+DIS_a134_wheelSpeedIrrational: 0
+DIS_a136_spiError: 0
+DIS_a142_highLashAngle: 0
+DIS_a143_mcuLimitActive: 0
+DIS_a144_configMismatch: 0
+DIS_a147_highTorqueWearLimit: 0
+DIS_a148_overtorqueUsed: 0
+DIS_a149_oilPumpFailure: 0
+DIS_a150_busVD: 0
+DIS_a151_shockTorqueLimiter: 0
+DIS_a152_linError: 0
+DIS_a153_oilPump: 0
+DIS_a154_resolver: 0
+DIS_a155_vcfrontMIA: 0
+DIS_a156_currentObserver: 0
+DIS_a157_rcmMIA: 0
+DIS_a158_ibstMIA: 0
+DIS_a160_busVoltageAnomaly: 0
+DIS_a161_epas3pMIA: 0
+DIS_a202_excessHeatUnavailable: 0
+DIS_a225_tmpEstPlausibility: 0
+DIS_a229_batteryIsHeating: 0
+DIS_a233_diMsgMissed: 0
+DIS_a234_pcsMIA: 0
+DIS_a241_systemThermallyLimited: 0
+DIS_appGitHash: 0
+DIS_applicationCrc: 3306636322
+DIS_applicationSvnRevision: 65537
+DIS_applicationSvnUrlHash: 0
+DIS_assemblyId: 75
+DIS_bootGitHash: 44931131714676272
+DIS_bootloaderCrc: 3388578679
+DIS_buildConfigurationId: 13003
+DIS_buildType: PLATFORM_BUILD
+DIS_componentId: 5
+DIS_hardwareId: CONFIGURABLE_HWID_PLACEHOLDER
+DIS_infoBootLdUdsProtocolVersion: 6
+DIS_infoIndex: APP_CRC
+DIS_oilPumpAppCrc: 568072398
+DIS_oilPumpBuildType: PLATFORM_BUILD
+DIS_pcbaId: 30
+DIS_platformTyp: 3
+DIS_subUsageId: 0
+DIS_subcomponentGitHash: 0
+DIS_usageId: 2
+DI_accelPedalPos: 0.0 %
+DI_activeInletTempReq: 70 DegC
+DI_aebState: STANDSTILL
+DI_autoparkState: SNA
+DI_autopilotRequest: ACTIVATE
+DI_axleSpeed: -0.1 RPM
+DI_brakeFLTemp: 508 DegC
+DI_brakeFRTemp: 251 DegC
+DI_brakePedalState: INVALID
+DI_brakeRLTemp: 248 DegC
+DI_brakeRRTemp: 244 DegC
+DI_brkStState: UNAVAILABLE
+DI_btcStateUI: ON
+DI_controlStack: 0.0 %
+DI_coolantFlowReq: 1.0 LPM
+DI_cpu100HzAvg: 16.400000000000002 %
+DI_cpu100HzMax: 0.0 %
+DI_cpu100HzMin: 0.0 %
+DI_cpu10HzAvg: 72.0 %
+DI_cpu10HzMax: 0.0 %
+DI_cpu10HzMin: 99.60000000000001 %
+DI_cpu1kHzAvg: 70.8 %
+DI_cpu1kHzMax: 77.60000000000001 %
+DI_cpu1kHzMin: 74.0 %
+DI_cpu20kHzAvg: 0.0 %
+DI_cpu20kHzMax: 25.200000000000003 %
+DI_cpu20kHzMin: 73.2 %
+DI_cruiseSetSpeed: 255.5 speed
+DI_cruiseSetSpeedUnits: KPH
+DI_cruiseState: PRE_CANCEL
+DI_current: 1900 A
+DI_dcCapT: 158 DegC
+DI_dcLinkCapTemp: 34 DegC
+DI_debugSelector: 50
+DI_decodeHardwareStack: 40.0 %
+DI_dissipation: 125 W
+DI_driveBlocked: 2
+DI_eepromStack: 35.2 %
+DI_elecPower: 0.0 kW
+DI_epbRequest: NO_REQUEST
+DI_gateDriveState: INIT
+DI_gateDriveSupplyState: DOWN
+DI_gear: P
+DI_heatPowerActual: 2.72 kW
+DI_heatPowerMax: 12.72 kW
+DI_heatPowerOptimal: 0.0 kW
+DI_heatsinkT: -40 DegC
+DI_hvDcCableTemp: 30 DegC
+DI_idleStack: 32.4 %
+DI_immobilizerStack: 28.400000000000002 %
+DI_immobilizerState: INIT_SNA
+DI_inverterT: -4 DegC
+DI_inverterTQF: IRRATIONAL
+DI_inverterTpct: 28.8 %
+DI_keepAliveRequest: NO_REQUEST
+DI_limitBaseSpeed: 0
+DI_limitClutch: 0
+DI_limitDcCapTemp: 0
+DI_limitDeltaFluidTemp: 0
+DI_limitDiff: 0
+DI_limitDischargePower: 0
+DI_limitDriveTorque: 0
+DI_limitGracefulPowerOff: 0
+DI_limitIBat: 0
+DI_limitIGBTJunctTemp: 0
+DI_limitInverterTemp: 1
+DI_limitLimpMode: 0
+DI_limitMotorCurrent: 0
+DI_limitMotorSpeed: 0
+DI_limitMotorVoltage: 0
+DI_limitObstacleDetection: 0
+DI_limitOilPumpFluidTemp: 0
+DI_limitPCBTemp: 0
+DI_limitPoleTemp: 0
+DI_limitRegenPower: 0
+DI_limitRegenTorque: 1
+DI_limitRotorTemp: 0
+DI_limitShift: 0
+DI_limitShockTorque: 0
+DI_limitStatorFrequency: 0
+DI_limitStatorTemp: 0
+DI_limitTCDrive: 0
+DI_limitTCRegen: 0
+DI_limitVBatHigh: 0
+DI_limitVBatLow: 1
+DI_limitVehicleSpeed: 0
+DI_limitdcLinkCapTemp: 1
+DI_limithvDcCableTemp: 0
+DI_limitnegDcBusbarTemp: 0
+DI_limitphaseOutBusBarWeldTemp: 0
+DI_limitphaseOutBusbarTemp: 0
+DI_limitphaseOutLugTemp: 0
+DI_limitposDcBusbarTemp: 1
+DI_locStatusChecksum: 255
+DI_locStatusCounter: 15
+DI_module10HzStack: 0.0 %
+DI_negDcBusbarTemp: 34 DegC
+DI_odometer: 60976.91 km
+DI_oilFlowReq: 0.0 LPM
+DI_oilPumpCurrent: 0.8 A
+DI_oilPumpCurrentSensorOffset: 0.625 A
+DI_oilPumpFlowActual: 1.02 LPM
+DI_oilPumpFlowTarget: 0.8999999999999999 LPM
+DI_oilPumpFluidConfidence: 1
+DI_oilPumpFluidT: -31 DegC
+DI_oilPumpLeadAngle: 0.0 deg
+DI_oilPumpPcbT: 36 DegC
+DI_oilPumpState: ENABLE
+DI_oilPumpVoltage: 0.0 V
+DI_parkBrakeState: RELEASED
+DI_passiveInletTempReq: 40 DegC
+DI_phaseOutBusbarTemp: 34 DegC
+DI_phaseOutBusbarWeldTemp: 33 DegC
+DI_phaseOutLugTemp: 38 DegC
+DI_posDcBusbarTemp: 34 DegC
+DI_powerStageSafeState: NONE
+DI_proximity: 1
+DI_ptcStateUI: ON
+DI_regenLight: 0
+DI_rotorMaxMagnetTemp: 35 DegC
+DI_slavePedalPos: 5.2 %
+DI_speedChecksum: 111
+DI_speedCounter: 5
+DI_statorEndWindingTemp: 39 DegC
+DI_statorT: 3 DegC
+DI_statorTpct: 28.8 %
+DI_sysDrivePowerMax: 248 kW
+DI_sysHeatPowerActual: 0.08 kW
+DI_sysHeatPowerMax: 0.08 kW
+DI_sysHeatPowerOptimal: 0.0 kW
+DI_sysPedalMaxTorque: 0.0 Nm
+DI_sysPedalMinTorque: -25.499999999999773 Nm
+DI_sysPostPedalMaxTorque: 0.0 Nm
+DI_sysPostPedalMinTorque: -1638.3 Nm
+DI_sysRegenPowerMax: 92 kW
+DI_systemStack: 59.2 %
+DI_systemState: STANDBY
+DI_systemStatusChecksum: 252
+DI_systemStatusCounter: 9
+DI_tcTelltaleFlash: OFF
+DI_tcTelltaleOn: OFF
+DI_temperatureIndex: 0
+DI_torqueActual: 0 Nm
+DI_torqueChecksum: 35
+DI_torqueCommand: 0 Nm
+DI_torqueCounter: 13
+DI_trackModeState: UNAVAILABLE
+DI_tractionControlMode: NORMAL
+DI_tractionControlModeUI: NORMAL
+DI_udsStack: 25.200000000000003 %
+DI_uiSpeed: 0
+DI_uiSpeedUnits: MPH
+DI_vdcTelltaleFlash: OFF
+DI_vdcTelltaleOn: OFF
+DI_vehicleSpeed: 0.0 kph
+DI_voltage: 0.5 V
+DI_xcpStack: 0.0 %
+EPAS3P_a001_sent1Mia: 0
+EPAS3P_a002_sent1Error: 0
+EPAS3P_a003_trqSens1Supply: 0
+EPAS3P_a004_trqSens1Eeprom: 0
+EPAS3P_a005_sent2Mia: 0
+EPAS3P_a006_sent2Error: 0
+EPAS3P_a007_trqSens2Supply: 0
+EPAS3P_a008_trqSens2Eeprom: 0
+EPAS3P_a009_sentDiff: 1
+EPAS3P_a010_trqSensCalError: 0
+EPAS3P_a011_currentSensError: 0
+EPAS3P_a012_currentSensCalError: 0
+EPAS3P_a013_gateDriveError: 0
+EPAS3P_a014_gateDriveTxError: 0
+EPAS3P_a015_gateDriveEeprom: 0
+EPAS3P_a016_phaseUhighUv: 0
+EPAS3P_a017_phaseUlowUv: 0
+EPAS3P_a018_phaseVhighUv: 0
+EPAS3P_a019_phaseVlowUv: 0
+EPAS3P_a020_phaseWhighUv: 0
+EPAS3P_a021_phaseWlowUv: 0
+EPAS3P_a022_phaseUhighOv: 0
+EPAS3P_a023_phaseUlowOv: 0
+EPAS3P_a024_phaseVhighOv: 0
+EPAS3P_a025_phaseVlowOv: 0
+EPAS3P_a026_phaseWhighOv: 0
+EPAS3P_a027_phaseWlowOv: 0
+EPAS3P_a028_phaseUbootUv: 0
+EPAS3P_a029_phaseVbootUv: 0
+EPAS3P_a030_phaseWbootUv: 0
+EPAS3P_a031_phaseFeedbackError: 0
+EPAS3P_a032_vRegOutputUv: 0
+EPAS3P_a033_vRegOutputOv: 0
+EPAS3P_a034_vRegError: 0
+EPAS3P_a035_vbbSupplyUv: 0
+EPAS3P_a036_vbbSupplyOv: 0
+EPAS3P_a037_motPos1ParityError: 0
+EPAS3P_a038_motPos1Uv: 0
+EPAS3P_a039_motPos1MagnetMia: 0
+EPAS3P_a040_motPos1LogicError: 0
+EPAS3P_a041_motPos1tempError: 0
+EPAS3P_a042_motPos2ParityError: 0
+EPAS3P_a043_motPos2Uv: 0
+EPAS3P_a044_motPos2MagnetMia: 0
+EPAS3P_a045_motPos2LogicError: 0
+EPAS3P_a046_motPos2tempError: 0
+EPAS3P_a047_motPosCorrError: 0
+EPAS3P_a048_motPosCalError: 0
+EPAS3P_a049_piCtrlError: 0
+EPAS3P_a050_mcuSmuError: 0
+EPAS3P_a051_mcuSupError: 0
+EPAS3P_a052_intWatchdogError: 0
+EPAS3P_a053_extWatchdogError: 0
+EPAS3P_a054_memoryProtectError: 0
+EPAS3P_a055_floatPointError: 0
+EPAS3P_a056_battUv: 0
+EPAS3P_a057_battUvReduced: 0
+EPAS3P_a058_battOv: 0
+EPAS3P_a059_battOvReduced: 0
+EPAS3P_a060_battBridgeDiff: 0
+EPAS3P_a061_bridgeUv: 0
+EPAS3P_a062_assistCorrError: 0
+EPAS3P_a063_dampCorrError: 0
+EPAS3P_a064_phaseCompCorrError: 0
+EPAS3P_a065_trqTarCorrError: 0
+EPAS3P_a066_returnCorrError: 0
+EPAS3P_a067_yawDampCorrError: 1
+EPAS3P_a068_hystCorrError: 1
+EPAS3P_a069_eacCorrError: 1
+EPAS3P_a070_hodCorrError: 0
+EPAS3P_a071_vehSpdCorrError: 0
+EPAS3P_a072_motFeedFwdError: 0
+EPAS3P_a073_motParEstError: 1
+EPAS3P_a074_overHeatProtect: 0
+EPAS3P_a075_fspPwrCut: 0
+EPAS3P_a076_tempSensOutofRange: 1
+EPAS3P_a077_highSideFetError: 0
+EPAS3P_a078_phaseDisconnectError: 1
+EPAS3P_a079_backupCurrentPlaus: 0
+EPAS3P_a080_ecuInitArbError: 1
+EPAS3P_a081_coggCompError: 1
+EPAS3P_a082_polarityCalError: 1
+EPAS3P_a083_crcMismatch: 1
+EPAS3P_a084_eacCancelled: 0
+EPAS3P_a085_canBusOff: 0
+EPAS3P_a086_dasMia: 1
+EPAS3P_a087_dasCntError: 1
+EPAS3P_a088_dasCsError: 0
+EPAS3P_a089_espWsMia: 0
+EPAS3P_a090_espWsCntError: 0
+EPAS3P_a091_espWsCsError: 0
+EPAS3P_a092_espWrMia: 0
+EPAS3P_a093_espWrCntError: 1
+EPAS3P_a094_espWrCsError: 0
+EPAS3P_a095_espWsStatus: 0
+EPAS3P_a096_rcmMia: 0
+EPAS3P_a097_rcmCntError: 1
+EPAS3P_a098_rcmCsError: 1
+EPAS3P_a099_yawRateStatus: 1
+EPAS3P_a100_diMia: 0
+EPAS3P_a101_diCntError: 0
+EPAS3P_a102_diCsError: 1
+EPAS3P_a103_vcFrontMia: 0
+EPAS3P_a104_vcFrontCntError: 0
+EPAS3P_a105_vcFrontCsError: 0
+EPAS3P_a106_vcFrontTempMia: 1
+EPAS3P_a107_uiTuneReqMia: 0
+EPAS3P_a108_uiTuneReqCntError: 0
+EPAS3P_a109_uiTuneReqCsError: 0
+EPAS3P_a110_sasMia: 0
+EPAS3P_a111_sasCntError: 0
+EPAS3P_a112_sasCsError: 0
+EPAS3P_a113_sasStatusError: 0
+EPAS3P_a114_gtwConfigMia: 0
+EPAS3P_a115_ecuStatMia: 0
+EPAS3P_a116_ecuStatCntError: 0
+EPAS3P_a117_ecuStatCrcError: 0
+EPAS3P_a118_privateBusOff: 0
+EPAS3P_a119_pvtEcuStatMia: 0
+EPAS3P_a120_pvtEcuStatCntError: 0
+EPAS3P_currentTuneMode: DM_COMFORT
+EPAS3P_eacErrorCode: EAC_ERROR_HIGH_MMOT_SAFETY
+EPAS3P_eacStatus: EAC_INHIBITED
+EPAS3P_handsOnLevel: 0
+EPAS3P_internalSAS: -108.70000000000005 deg
+EPAS3P_internalSASQF: UNDEFINABLE_ACCURACY
+EPAS3P_matrixIndex: AlertMatrix0
+EPAS3P_steeringFault: FAULT
+EPAS3P_steeringRackForce: -18625 N
+EPAS3P_steeringReduced: NORMAL_ASSIST
+EPAS3P_sysStatusChecksum: 31
+EPAS3P_sysStatusCounter: 10
+EPAS3P_torsionBarTorque: -0.019999999999999574 Nm
+EPAS3S_currentTuneMode: DM_COMFORT
+EPAS3S_eacErrorCode: EAC_ERROR_IDLE
+EPAS3S_eacStatus: EAC_INHIBITED
+EPAS3S_handsOnLevel: 0
+EPAS3S_infoIndex: END
+EPAS3S_internalSAS: -819.2 deg
+EPAS3S_internalSASQF: UNDEFINABLE_ACCURACY
+EPAS3S_steeringFault: FAULT
+EPAS3S_steeringRackForce: 25 N
+EPAS3S_steeringReduced: NORMAL_ASSIST
+EPAS3S_sysStatusChecksum: 0
+EPAS3S_sysStatusCounter: 0
+EPAS3S_torsionBarTorque: -20.5 Nm
+EPBL_12VFilt: 11.17043136 V
+EPBL_a001_WatchdogReset: 0
+EPBL_a002_PowerLossReset: 0
+EPBL_a003_SWAssertion: 0
+EPBL_a010_ExtSupplyVoltError: 0
+EPBL_a012_CPUReset: 0
+EPBL_a013_AlertManagerFault: 0
+EPBL_a015_NVMMAlert: 0
+EPBL_a021_TaskSchedulerError: 0
+EPBL_a022_TaskInitError: 0
+EPBL_a031_UDSActive: 0
+EPBL_a041_HighCPULoad: 0
+EPBL_a042_HighStackUsage: 0
+EPBL_a043_Task1msError: 0
+EPBL_a044_Task10msError: 0
+EPBL_a045_Task100msError: 0
+EPBL_a046_Task1000msError: 0
+EPBL_a059_inputResistanceHigh: 0
+EPBL_a060_engineeringBuild: 0
+EPBL_a061_XCPConnected: 0
+EPBL_a062_XCPWasConnected: 0
+EPBL_a063_SwitchFault: 0
+EPBL_a064_busSleepReqTimeout: 0
+EPBL_a097_CMP_MIA: 0
+EPBL_a098_DI_THERMAL_MIA: 0
+EPBL_a099_PARK_MIA: 0
+EPBL_a100_CANbus_MIA: 0
+EPBL_a101_PM_MIA: 0
+EPBL_a102_PTC_MIA: 0
+EPBL_a103_CP_MIA: 0
+EPBL_a104_DAS_MIA: 0
+EPBL_a105_TAS_MIA: 0
+EPBL_a106_PCS_MIA: 0
+EPBL_a107_BMS_MIA: 0
+EPBL_a108_DIS_MIA: 0
+EPBL_a109_RCM_MIA: 0
+EPBL_a110_GTW_MIA: 0
+EPBL_a111_EPBR_MIA: 0
+EPBL_a112_EPBL_MIA: 0
+EPBL_a113_UI_MIA: 0
+EPBL_a114_ESP_MIA: 0
+EPBL_a115_VCSEC_MIA: 0
+EPBL_a116_VCRIGHT_MIA: 0
+EPBL_a117_VCLEFT_MIA: 0
+EPBL_a118_VCFRONT_MIA: 0
+EPBL_a119_SCCM_MIA: 0
+EPBL_a120_DI_DRIVE_MIA: 0
+EPBL_a121_nDriveFault: 0
+EPBL_a122_Oc: 0
+EPBL_a123_Uc: 0
+EPBL_a124_calOutOfBounds: 0
+EPBL_a125_IdleVMismatch: 0
+EPBL_a126_MotorNVoltLow: 0
+EPBL_a127_MotorNVoltHigh: 0
+EPBL_a128_MotorPVoltHigh: 0
+EPBL_a134_NvOv: 0
+EPBL_a135_NvUv: 0
+EPBL_a136_PvOv: 0
+EPBL_a137_PvUv: 0
+EPBL_a138_NVMWriteTime: 0
+EPBL_a141_invalidState: 0
+EPBL_a170_12vOv: 0
+EPBL_a171_12vUv: 0
+EPBL_a172_SPI_MIA: 0
+EPBL_a173_hiCurrentMissing: 0
+EPBL_a174_csmReleaseFailed: 0
+EPBL_a175_csmReleaseRetry: 0
+EPBL_a176_csmApplyFailed: 0
+EPBL_a177_csmApplyRetry: 0
+EPBL_a178_caliperStateUnknown: 0
+EPBL_a179_epbProblem: 0
+EPBL_a180_dynamicActive: 0
+EPBL_a181_TooSteepGradeToPark: 0
+EPBL_a182_OneEPBAppliedUnsecEnv: 0
+EPBL_a183_cdpNotAvailable: 0
+EPBL_a184_dynamicParkAbort: 0
+EPBL_a185_summonAborted: 0
+EPBL_a186_externalParkAbort: 0
+EPBL_a187_cdpDynamic: 0
+EPBL_a188_epbDynamic: 0
+EPBL_a189_epbDynamicParkCanceled: 0
+EPBL_a190_csmApplyDegraded: 0
+EPBL_a191_csmReleaseDegraded: 0
+EPBL_a195_parkForDriverIsLeaving: 0
+EPBL_a200_PmUnparkNotAllowed: 0
+EPBL_a201_hwBrakeTypeMismatch: 0
+EPBL_a216_SPI_MIA_debugData1: 0
+EPBL_a217_SPI_MIA_debugData2: 0
+EPBL_a241_diOutputLocked: 0
+EPBL_a242_hvOutputLocked: 0
+EPBL_a243_bdwUnavailable: 0
+EPBL_a244_WinchModeActive: 0
+EPBL_a245_serviceModeActive: 0
+EPBL_a246_idleFaultApply: 0
+EPBL_a247_csmDynamicApplyRetry: 0
+EPBL_a248_csmDynamicApplyFailed: 0
+EPBL_a249_idleFaultRelease: 0
+EPBL_a250_WinchModeCanceled: 0
+EPBL_a251_currentVarianceHigh: 0
+EPBL_csmFaultReason: NONE
+EPBL_disconnected: 0
+EPBL_epbmCDPQualified: IDLE
+EPBL_esmCaliperRequest: INVALID
+EPBL_esmOperationTrigger: USER_CANCEL
+EPBL_infoAppCrc: 1496845508
+EPBL_infoAppGitHash: 0
+EPBL_infoAssemblyId: ASSEMBLY1
+EPBL_infoBootCrc: 1929528788
+EPBL_infoBootGitHash: 48977123340192348
+EPBL_infoBootUdsProtoVersion: 5
+EPBL_infoBuildConfigId: 207
+EPBL_infoBuildType: PLATFORM_BUILD
+EPBL_infoComponentId: 31
+EPBL_infoHardwareId: 47
+EPBL_infoIndex: UDS_PROTOCOL_BOOTCRC
+EPBL_infoPcbaId: 47
+EPBL_infoPlatformType: 3
+EPBL_infoSubUsageId: 0
+EPBL_infoUsageId: 1
+EPBL_internalCDPRequest: NOT_REQUESTED
+EPBL_internalStatusChecksum: 15
+EPBL_internalStatusCounter: 11
+EPBL_localServiceModeActive: 0
+EPBL_lockoutUnlockCount: 2
+EPBL_matrixIndex: AlertMatrix3
+EPBL_summonFaultReason: NONE
+EPBL_summonState: ARMED
+EPBL_unitFaultStatus: NOMINAL
+EPBL_unitStatus: PARK
+EPBR_12VFilt: 11.17043136 V
+EPBR_a001_WatchdogReset: 0
+EPBR_a002_PowerLossReset: 0
+EPBR_a003_SWAssertion: 0
+EPBR_a010_ExtSupplyVoltError: 0
+EPBR_a012_CPUReset: 0
+EPBR_a013_AlertManagerFault: 0
+EPBR_a015_NVMMAlert: 0
+EPBR_a021_TaskSchedulerError: 0
+EPBR_a022_TaskInitError: 0
+EPBR_a031_UDSActive: 0
+EPBR_a041_HighCPULoad: 0
+EPBR_a042_HighStackUsage: 0
+EPBR_a043_Task1msError: 0
+EPBR_a044_Task10msError: 0
+EPBR_a045_Task100msError: 0
+EPBR_a046_Task1000msError: 0
+EPBR_a059_inputResistanceHigh: 0
+EPBR_a060_engineeringBuild: 0
+EPBR_a061_XCPConnected: 0
+EPBR_a062_XCPWasConnected: 0
+EPBR_a063_SwitchFault: 0
+EPBR_a064_busSleepReqTimeout: 0
+EPBR_a097_CMP_MIA: 0
+EPBR_a098_DI_THERMAL_MIA: 0
+EPBR_a099_PARK_MIA: 0
+EPBR_a100_CANbus_MIA: 0
+EPBR_a101_PM_MIA: 0
+EPBR_a102_PTC_MIA: 0
+EPBR_a103_CP_MIA: 0
+EPBR_a104_DAS_MIA: 0
+EPBR_a105_TAS_MIA: 0
+EPBR_a106_PCS_MIA: 0
+EPBR_a107_BMS_MIA: 0
+EPBR_a108_DIS_MIA: 0
+EPBR_a109_RCM_MIA: 0
+EPBR_a110_GTW_MIA: 0
+EPBR_a111_EPBR_MIA: 0
+EPBR_a112_EPBL_MIA: 0
+EPBR_a113_UI_MIA: 0
+EPBR_a114_ESP_MIA: 0
+EPBR_a115_VCSEC_MIA: 0
+EPBR_a116_VCRIGHT_MIA: 0
+EPBR_a117_VCLEFT_MIA: 0
+EPBR_a118_VCFRONT_MIA: 0
+EPBR_a119_SCCM_MIA: 0
+EPBR_a120_DI_DRIVE_MIA: 0
+EPBR_a121_nDriveFault: 0
+EPBR_a122_Oc: 0
+EPBR_a123_Uc: 0
+EPBR_a124_calOutOfBounds: 0
+EPBR_a125_IdleVMismatch: 0
+EPBR_a126_MotorNVoltLow: 0
+EPBR_a127_MotorNVoltHigh: 0
+EPBR_a128_MotorPVoltHigh: 0
+EPBR_a134_NvOv: 0
+EPBR_a135_NvUv: 0
+EPBR_a136_PvOv: 0
+EPBR_a137_PvUv: 0
+EPBR_a138_NVMWriteTime: 0
+EPBR_a141_invalidState: 0
+EPBR_a170_12vOv: 0
+EPBR_a171_12vUv: 0
+EPBR_a172_SPI_MIA: 0
+EPBR_a173_hiCurrentMissing: 0
+EPBR_a174_csmReleaseFailed: 0
+EPBR_a175_csmReleaseRetry: 0
+EPBR_a176_csmApplyFailed: 0
+EPBR_a177_csmApplyRetry: 0
+EPBR_a178_caliperStateUnknown: 0
+EPBR_a179_epbProblem: 0
+EPBR_a180_dynamicActive: 0
+EPBR_a181_TooSteepGradeToPark: 0
+EPBR_a182_OneEPBAppliedUnsecEnv: 0
+EPBR_a183_cdpNotAvailable: 0
+EPBR_a184_dynamicParkAbort: 0
+EPBR_a185_summonAborted: 0
+EPBR_a186_externalParkAbort: 0
+EPBR_a187_cdpDynamic: 0
+EPBR_a188_epbDynamic: 0
+EPBR_a189_epbDynamicParkCanceled: 0
+EPBR_a190_csmApplyDegraded: 0
+EPBR_a191_csmReleaseDegraded: 0
+EPBR_a195_parkForDriverIsLeaving: 0
+EPBR_a200_PmUnparkNotAllowed: 0
+EPBR_a201_hwBrakeTypeMismatch: 0
+EPBR_a216_SPI_MIA_debugData1: 0
+EPBR_a217_SPI_MIA_debugData2: 0
+EPBR_a241_diOutputLocked: 0
+EPBR_a242_hvOutputLocked: 0
+EPBR_a243_bdwUnavailable: 0
+EPBR_a244_WinchModeActive: 0
+EPBR_a245_serviceModeActive: 0
+EPBR_a246_idleFaultApply: 0
+EPBR_a247_csmDynamicApplyRetry: 0
+EPBR_a248_csmDynamicApplyFailed: 0
+EPBR_a249_idleFaultRelease: 0
+EPBR_a250_WinchModeCanceled: 0
+EPBR_a251_currentVarianceHigh: 0
+EPBR_blockDrive: 0
+EPBR_bothDisconnected: 0
+EPBR_brakeDiscWipeRequest: NONE
+EPBR_brakeHWConfigMismatch: 0
+EPBR_brakeLight: 0
+EPBR_cdpRequest: NOT_REQUESTED
+EPBR_csmFaultReason: NONE
+EPBR_disconnected: 0
+EPBR_epbmCDPQualified: IDLE
+EPBR_esmCaliperRequest: INVALID
+EPBR_esmOperationTrigger: USER_CANCEL
+EPBR_espPowerRequest: 0
+EPBR_hornRequest: 0
+EPBR_infoAppCrc: 1053666247
+EPBR_infoAppGitHash: 0
+EPBR_infoAssemblyId: ASSEMBLY1
+EPBR_infoBootCrc: 2251777474
+EPBR_infoBootGitHash: 48977123340192348
+EPBR_infoBootUdsProtoVersion: 5
+EPBR_infoBuildConfigId: 205
+EPBR_infoBuildType: PLATFORM_BUILD
+EPBR_infoComponentId: 31
+EPBR_infoHardwareId: 45
+EPBR_infoIndex: VERSION_DEPRECATED
+EPBR_infoPcbaId: 45
+EPBR_infoPlatformType: 3
+EPBR_infoSubUsageId: 1
+EPBR_infoUsageId: 1
+EPBR_internalCDPRequest: NOT_REQUESTED
+EPBR_internalStatusChecksum: 175
+EPBR_internalStatusCounter: 11
+EPBR_localServiceModeActive: 0
+EPBR_lockoutUnlockCount: 2
+EPBR_matrixIndex: AlertMatrix3
+EPBR_okToPark: 1
+EPBR_requestUserConfirmation: 0
+EPBR_statusChecksum: 67
+EPBR_statusCounter: 12
+EPBR_summonEnabled: 0
+EPBR_summonFaultReason: NONE
+EPBR_summonState: ARMED
+EPBR_systemStatus: PARKED
+EPBR_telltale: 0
+EPBR_uiButtonAvailable: 0
+EPBR_unitFaultStatus: NOMINAL
+EPBR_unitStatus: PARK
+EPBR_updateMode: 0
+EPBR_winchModeActive: 0
+EPBR_winchModeAvailable: 0
+EPBR_winchModeTimer: 6
+GTW_CHbusLoadPercent: 0 percent
+GTW_CabinBlowerCtrlType: LV8907
+GTW_OTAKeepAwake: 0
+GTW_PARTYbusLoadPercent: 0 percent
+GTW_VEHBusAsleep: 0
+GTW_VEHbusLoadPercent: 0 percent
+GTW_activeHighBeam: ACTIVE
+GTW_airSuspension: NONE
+GTW_airbagCutoffSwitch: ENABLED
+GTW_audioType: BASE
+GTW_autopilot: 4
+GTW_autopilotCameraType: 0
+GTW_autopilotTrial: 0
+GTW_auxParkLamps: 3
+GTW_bPillarNFCParam: 0
+GTW_birthday: 1621687073
+GTW_brakeHWType: 2
+GTW_brakeLineSwitchType: VC_ONLY
+GTW_cabinPTCHeaterType: 0
+GTW_carConfigMultiplexer: 4
+GTW_chBusAsleep: 0
+GTW_chassisType: 2
+GTW_compressorType: 0
+GTW_connectivityPackage: 0
+GTW_coolantPumpType: 0
+GTW_country: 17230
+GTW_dasHw: 4
+GTW_deliveryStatus: 1
+GTW_drivetrainType: AWD
+GTW_eBuckConfig: NONE
+GTW_eCallEnabled: DISABLED
+GTW_efficiencyPackage: 0
+GTW_epasType: MANDO_VGR69_GEN3
+GTW_espValveType: 2
+GTW_exteriorColor: MIDNIGHT_SILVER
+GTW_frontFogLamps: NOT_INSTALLED
+GTW_frontSeatHeaters: KONGSBERG_LOW_POWER
+GTW_frontSeatReclinerHardware: 3
+GTW_frontSeatType: BASE
+GTW_headlamps: 2
+GTW_headlightLevelerType: 0
+GTW_heatedWipers: TRUE
+GTW_homelinkType: NONE
+GTW_hrlIndex: Mux1
+GTW_hrlPagesCount: 4
+GTW_hrlState: DISABLED
+GTW_hrlTriggerBus: VEH
+GTW_hrlTriggerDuration: 7 seconds
+GTW_hrlTriggerId: 0
+GTW_hrlTriggerType: NONE
+GTW_hvacPanelVaneType: CONVERGENT_V1
+GTW_hvacQuietSnorkelType: DEFAULT
+GTW_ibstWakeType: NONE
+GTW_immersiveAudio: 0
+GTW_interiorLighting: BASE
+GTW_intrusionSensorType: NOT_INSTALLED
+GTW_loggingVersion: 0
+GTW_lumbarECUType: NONE
+GTW_m3FrontOverheadConsoleType: VALEO
+GTW_mapRegion: 3
+GTW_memoryMirrors: SMR
+GTW_nmDebugWakeUp: 4194304
+GTW_nmGoingToSleep: 0
+GTW_nmKeepAwakeReason: NONE_SNA
+GTW_nmWakeUpBus: 0
+GTW_nmWakeUpReason: NONE
+GTW_numberHVILNodes: 4
+GTW_offboardUpdateState: WAITING_FOR_CONNECTION
+GTW_offboardUpdateStatus: OK
+GTW_packEnergy: 50_KWH
+GTW_packMassDeviation: NO_DEVIATION
+GTW_passengerAirbagType: FULL_SUPPRESSION
+GTW_passengerOccupancySensorType: 0
+GTW_pedestrianWarningSound: NONE
+GTW_performancePackage: 3
+GTW_plcSupportType: 0
+GTW_powerSteeringColumn: TK
+GTW_radarHeaterType: 0
+GTW_rearDriveUnitType: 0
+GTW_rearFogLamps: INSTALLED
+GTW_rearGlassType: NX
+GTW_rearLightType: 2
+GTW_rearSeatHeaters: NONE
+GTW_refrigerantType: 1
+GTW_restraintsHardwareType: 123
+GTW_rightHandDrive: LEFT
+GTW_roofGlassType: 0
+GTW_roofType: FIXED_GLASS
+GTW_softRange: 0
+GTW_spoilerType: NOT_INSTALLED
+GTW_steeringColumnUJointType: 1
+GTW_superchargingAccess: PAY_AS_YOU_GO
+GTW_tireType: 2
+GTW_towPackage: 0
+GTW_tpmsType: 0
+GTW_trackModePackage: 0
+GTW_twelveVBatteryType: 0
+GTW_updateStarted: 0
+GTW_vdcType: TESLA_VDC
+GTW_vehicleVersionMatchStatus: 3
+GTW_wheelType: 22
+GTW_windshieldType: SEKISUI_ACOUSTIC
+GTW_xcpESP: FALSE
+GTW_xcpIbst: FALSE
+HVP_appCrc: 2852188440
+HVP_appGitHash: 0
+HVP_assemblyId: 2
+HVP_auxCurrentMia: 0
+HVP_battery12V: 13.0 V
+HVP_bootCrc: 2028238663
+HVP_bootGitHash: 7572801301116292
+HVP_bootUdsProtoVersion: 5
+HVP_buildConfigId: 4205
+HVP_buildType: PLATFORM_BUILD
+HVP_componentId: 135
+HVP_currentSenseMia: 0
+HVP_dcLinkAllowedToEnergize: 0
+HVP_dcLinkNegativeV: -206.10000000000002 V
+HVP_dcLinkPositiveV: 142.1 V
+HVP_dcLinkVoltage: 348.20000000000005 V
+HVP_debugMessageMultiplexer: Mux0
+HVP_fcContCoilCurrent: 0.0 A
+HVP_fcContNegativeState: OPEN
+HVP_fcContPositiveState: OPEN
+HVP_fcContVoltage: 1.5 V
+HVP_fcContactorSetState: OPEN
+HVP_fcCtrsClosingAllowed: 0
+HVP_fcCtrsOpenNowRequested: 0
+HVP_fcCtrsOpenRequested: 0
+HVP_fcCtrsRequestStatus: COMPLETED
+HVP_fcCtrsResetRequestRequired: 0
+HVP_fcLinkAllowedToEnergizeAc: 0
+HVP_fcLinkAllowedToEnergizeDc: 1
+HVP_fcLinkNegativeV: 1.9000000000000001 V
+HVP_fcLinkPositiveV: -3190.4 V
+HVP_fcLinkVoltage: 0.1 V
+HVP_gpioBmsEout: 1
+HVP_gpioCpFaultIn: 1
+HVP_gpioCpFaultOut: 0
+HVP_gpioCpLatchEnable: 0
+HVP_gpioCrashSignal: 0
+HVP_gpioFcContNegAux: 1
+HVP_gpioFcContPosAux: 1
+HVP_gpioFcContPowerEnable: 0
+HVP_gpioHvCablesOk: 1
+HVP_gpioHvilEnable: 1
+HVP_gpioHvpSelfEnable: 1
+HVP_gpioHvpVerEn: 1
+HVP_gpioLed: 1
+HVP_gpioPackContPowerEn: 1
+HVP_gpioPackCoontPosFlywheel: 0
+HVP_gpioPassivePyroDepl: 0
+HVP_gpioPcsChargePwmEnable: 0
+HVP_gpioPcsDcdcPwmEnable: 1
+HVP_gpioPcsEnable: 0
+HVP_gpioPyroIsoEn: 0
+HVP_gpioPyroPor: 1
+HVP_gpioSecDrdy: 1
+HVP_gpioShuntDataReady: 0
+HVP_gpioShuntEn: 1
+HVP_hardwareId: 4
+HVP_hvilInVoltage: 1.2000000000000002 V
+HVP_hvilOutVoltage: 2.6 V
+HVP_hvilStatus: STATUS_OK
+HVP_hvp1v5Ref: 0.30000000000000004 V
+HVP_infoIndex: APP_GITHASH
+HVP_packContCoilCurrent: 1.3 A
+HVP_packContNegativeState: ECONOMIZED
+HVP_packContPositiveState: ECONOMIZED
+HVP_packContVoltage: 12.8 V
+HVP_packContactorSetState: CLOSED
+HVP_packCtrsClosingAllowed: 0
+HVP_packCtrsOpenNowRequested: 1
+HVP_packCtrsOpenRequested: 1
+HVP_packCtrsRequestStatus: NOT_ACTIVE
+HVP_packCtrsResetRequestRequired: 0
+HVP_packCurrentMia: 1
+HVP_packNegativeV: -205.60000000000002 V
+HVP_packPositiveV: 143.20000000000002 V
+HVP_packVoltage: 348.40000000000003 V
+HVP_pcbaId: 4
+HVP_platformType: 3
+HVP_pyroAnalog: 3.3000000000000003 V
+HVP_pyroTestInProgress: 0
+HVP_shuntAsicTempDbg: -244.0 C
+HVP_shuntAsicTempStatus: VALID
+HVP_shuntAuxCurrentDbg: 2048.4 A
+HVP_shuntAuxCurrentStatus: INVALID
+HVP_shuntBarTempDbg: -80.02 C
+HVP_shuntBarTempStatus: VALID
+HVP_shuntCurrentDebug: -2968.8 A
+HVP_shuntHwMia: 1
+HVP_shuntRefVoltageDbg: 0.016 V
+HVP_shuntRefVoltageMismatch: 1
+HVP_shuntThermistorMia: 0
+HVP_subUsageId: 2
+HVP_usageId: 5
+HVP_w001_WatchdogReset: 1
+HVP_w002_UnusedAlert2: 0
+HVP_w003_SwAssertion: 0
+HVP_w004_CrashEvent: 0
+HVP_w005_OverDchgCurrentFault: 0
+HVP_w006_OverChargeCurrentFault: 0
+HVP_w007_OverCurrentFault: 0
+HVP_w008_OverTemperatureFault: 0
+HVP_w009_OverVoltageFault: 0
+HVP_w010_UnderVoltageFault: 0
+HVP_w011_PrimaryBmbMiaFault: 0
+HVP_w012_SecondaryBmbMiaFault: 0
+HVP_w013_BmbMismatchFault: 0
+HVP_w014_BmsHviMiaFault: 0
+HVP_w015_CpMiaFault: 0
+HVP_w016_PcsMiaFault: 0
+HVP_w017_BmsFault: 0
+HVP_w018_PcsFault: 0
+HVP_w019_CpFault: 0
+HVP_w020_ShuntHwMiaFault: 0
+HVP_w021_PyroMiaFault: 0
+HVP_w022_hvsMiaFault: 0
+HVP_w024_Supply12vFault: 0
+HVP_w025_VerSupplyFault: 0
+HVP_w026_HvilFault: 0
+HVP_w027_BmsHvsMiaFault: 0
+HVP_w028_PackVoltMismatchFault: 0
+HVP_w029_EnsMiaFault: 0
+HVP_w030_PackPosCtrArcFault: 0
+HVP_w031_packNegCtrArcFault: 0
+HVP_w032_ShuntHwAndBmsMiaFault: 0
+HVP_w033_fcContHwFault: 0
+HVP_w034_robinOverVoltageFault: 0
+HVP_w035_packContHwFault: 0
+HVP_w036_pyroFuseBlown: 0
+HVP_w037_pyroFuseFailedToBlow: 0
+HVP_w038_CpilFault: 0
+HVP_w039_PackContactorFellOpen: 0
+HVP_w040_FcContactorFellOpen: 0
+HVP_w041_packCtrCloseBlocked: 0
+HVP_w042_fcCtrCloseBlocked: 0
+HVP_w043_packContactorForceOpen: 0
+HVP_w044_fcContactorForceOpen: 0
+HVP_w045_dcLinkOverVoltage: 0
+HVP_w046_shuntOverTemperature: 0
+HVP_w047_passivePyroDeploy: 0
+HVP_w048_logUploadRequest: 0
+HVP_w049_packCtrCloseFailed: 0
+HVP_w050_fcCtrCloseFailed: 0
+HVP_w051_shuntThermistorMia: 0
+IBST_driverBrakeApply: BRAKES_NOT_APPLIED
+IBST_iBoosterStatus: READY
+IBST_statusChecksum: 32
+IBST_statusCounter: 7
+OCS1P_classificationExtHold: 0
+OCS1P_classificationHeld: 0
+OCS1P_classificationHoldState: OFF
+OCS1P_cushionStable: 0
+OCS1P_occupantClassification: 19
+OCS1P_occupantClassificationQF: NOT_FAULTED
+OCS1P_occupantClassificationRaw: EMPTY
+OCS1P_occupantClassificationSelf: EMPTY
+OCS1P_occupiedState: OCCUPIED
+OCS1P_sandwichStable: 0
+OCS1P_seatbackStable: 0
+OCS1P_statusChecksum: 0
+OCS1P_statusCounter: 0
+PARK_sdiSensor1RawDistData: 275 cm
+PARK_sdiSensor2RawDistData: NEAR_DETECTION cm
+PCS_1V2Max10s: 1.202 V
+PCS_1V2Min10s: 1.192 V
+PCS_1V5Max10s: 1.5030000000000001 V
+PCS_1V5Min10s: 1.497 V
+PCS_a001_chgHwInputOc: 0
+PCS_a002_chgHwOutputOc: 0
+PCS_a003_chgHwInputOv: 0
+PCS_a004_chgHwIntBusOv: 0
+PCS_a005_chgOutputOv: 0
+PCS_a006_chgPrechargeFailedScr: 0
+PCS_a007_chgPhaseTempHot: 0
+PCS_a008_chgPhaseOverTemp: 0
+PCS_a009_chgPfcCurrentRegulation: 0
+PCS_a010_chgIntBusVRegulation: 0
+PCS_a011_chgLlcCurrentRegulation: 0
+PCS_a012_chgPfcIBandTracerFault: 0
+PCS_a013_chgPrechargeFailedBoost: 0
+PCS_a014_chgTempRationality: 0
+PCS_a015_chg12vUv: 0
+PCS_a016_chgAllPhasesFaulted: 0
+PCS_a017_chgWallPowerRemoval: 0
+PCS_a018_chgUnknownGridConfig: 0
+PCS_a019_acChargePowerLimited: 0
+PCS_a020_chgEnableLineMismatch: 0
+PCS_a021_hvpMia: 0
+PCS_a022_bmsMia: 0
+PCS_a023_cpMia: 0
+PCS_a024_vcfrontMia: 0
+PCS_a025_cpu2Malfunction: 0
+PCS_a026_watchdogAlarmed: 0
+PCS_a027_chgInsufficientCooling: 0
+PCS_a028_chgOutputUv: 0
+PCS_a029_chgPowerRationality: 0
+PCS_a030_canRationality: 0
+PCS_a031_uiMia: 0
+PCS_a032_gtwMia: 0
+PCS_a033_hvBusUv: 0
+PCS_a034_hvBusOv: 0
+PCS_a035_lvBusUv: 0
+PCS_a036_lvBusOv: 0
+PCS_a037_resonantTankOc: 0
+PCS_a038_claFaulted: 0
+PCS_a039_sdModuleClkFault: 0
+PCS_a040_dcdcMaxPowerReached: 0
+PCS_a041_dcdcOverTemp: 0
+PCS_a042_dcdcEnableLineMismatch: 0
+PCS_a043_hvBusPrechargeFailure: 0
+PCS_a044_12vSupportRegulation: 0
+PCS_a045_hvBusLowImpedance: 0
+PCS_a046_hvBusHighImpedence: 0
+PCS_a047_lvBusLowImpedance: 0
+PCS_a048_lvBusHighImpedance: 0
+PCS_a049_dcdcTempRationality: 0
+PCS_a050_dcdc12VsupportFaulted: 0
+PCS_a051_chgIntBusUv: 0
+PCS_a052_acVoltageNotPresent: 0
+PCS_a053_chgInputVDropHigh: 0
+PCS_a054_chgInputVDropTooHigh: 0
+PCS_a055_chgLineImedanceHigh: 0
+PCS_a056_chgLineImedanceTooHigh: 0
+PCS_a057_chgInputOverFreq: 0
+PCS_a058_chgInputUnderFreq: 0
+PCS_a059_chgInputOvRms: 0
+PCS_a060_chgInputOvPeak: 0
+PCS_a061_chgVLineRationality: 0
+PCS_a062_chgILineRationality: 0
+PCS_a063_chgVOutRationality: 0
+PCS_a064_chgIOutRationality: 0
+PCS_a065_chgPllNotLocked: 0
+PCS_a066_dcdcHvRationality: 0
+PCS_a067_dcdcLvRationality: 0
+PCS_a068_dcdcTankvRationality: 0
+PCS_a069_chgPfcLineDidt: 0
+PCS_a070_chgPfcLineDvdt: 0
+PCS_a071_chgPfcILoopRationality: 0
+PCS_a072_cpu2ClaStopped: 0
+PCS_a073_unexpectedAcInputVoltage: 0
+PCS_a074_hvBusDischargeFailure: 0
+PCS_a075_hvBusDischargeTimeout: 0
+PCS_a076_dcdcEnDeassertedErr: 0
+PCS_a077_microGridEnergyLow: 0
+PCS_a078_chgStopDcdcTooHot: 0
+PCS_a079_eepromOperationError: 0
+PCS_a080_damagedPhaseDetected: 0
+PCS_a081_dcdcPchgTimeout: 0
+PCS_a082_dcdcPchgUnsafeDiVoltage: 0
+PCS_a083_triggerOdin: 0
+PCS_a084_dcdcPchgStartVoltages: 0
+PCS_a085_dcdcFetsNotSwitching: 0
+PCS_a086_dcdcInsufficientCooling: 0
+PCS_a087_nvramRecordStatusError: 0
+PCS_a088_pchgParameters: 0
+PCS_a089_hvBusDischargeIrrational: 0
+PCS_acChargeSelfTestState: IDLE
+PCS_ambientTemp: 116.5 C
+PCS_appCrc: 3500042431
+PCS_appGitHash: 0
+PCS_assemblyId: 3
+PCS_bootCrc: 1405097436
+PCS_bootGitHash: 20200152198404964
+PCS_bootUdsProtoVersion: 6
+PCS_buildConfigId: 631
+PCS_buildType: PLATFORM_BUILD
+PCS_chargeStatus: IDLE
+PCS_chg5VL1Enable: 1
+PCS_chgAcCurrentLimit: 16.0 A
+PCS_chgInputFreqWobblePHAPeak: FREQUENCY_UNKNOWN Hz
+PCS_chgInputFreqWobblePHBPeak: FREQUENCY_UNKNOWN Hz
+PCS_chgInputFreqWobblePHCPeak: FREQUENCY_UNKNOWN Hz
+PCS_chgInputFrequencyL1N: FREQUENCY_UNKNOWN Hz
+PCS_chgInputFrequencyL2N: FREQUENCY_UNKNOWN Hz
+PCS_chgInputFrequencyL3N: FREQUENCY_UNKNOWN Hz
+PCS_chgInputL1L2Vdc: 2 V
+PCS_chgInputL1L2Vrms: 1.6 V
+PCS_chgInputL1NVPeak10s: 3 V
+PCS_chgInputL1NVdc: 2 V
+PCS_chgInputL1NVrms: 1.8 V
+PCS_chgInputL2NVPeak10s: 2 V
+PCS_chgInputL2NVdc: 1 V
+PCS_chgInputL2NVrms: 1.4000000000000001 V
+PCS_chgInputL3NVPeak10s: 4 V
+PCS_chgInputL3NVdc: 1 V
+PCS_chgInputL3NVrms: 1.6 V
+PCS_chgInputNGVdc: -4 V
+PCS_chgInputNGVrms: 4 V
+PCS_chgInputPower: 0.0 kW
+PCS_chgInputVoltage: 1.848 V
+PCS_chgInstantAcPowerAvailable: 0.0 kW
+PCS_chgInternalPhaseConfig: THREE_PHASE
+PCS_chgL1L2PllLocked: 0
+PCS_chgL1NPllLocked: 0
+PCS_chgL2NPllLocked: 0
+PCS_chgL3NPllLocked: 0
+PCS_chgLineCurrent: 0.0 A
+PCS_chgMainState: IDLE
+PCS_chgMaxAcPowerAvailable: 25.5 kW
+PCS_chgNgPllLocked: 0
+PCS_chgOutputV: 388.036116 V
+PCS_chgPHAEnable: 0
+PCS_chgPHALineCurrentRequest: 0.0 A
+PCS_chgPHBEnable: 0
+PCS_chgPHBLineCurrentRequest: 0.0 A
+PCS_chgPHCEnable: 0
+PCS_chgPHCLineCurrentRequest: 0.0 A
+PCS_chgPhAInputIrms: 0.0 A
+PCS_chgPhAIntBusV: 0 V
+PCS_chgPhAIntBusVMax10s: 0 V
+PCS_chgPhAIntBusVMin10s: 0 V
+PCS_chgPhAIntBusVTarget: 420 V
+PCS_chgPhALastShutdownReason: REASON_NONE
+PCS_chgPhALifetimekWh: 3155.4500000000003 kWh
+PCS_chgPhANoFlowBucket: 0.0 -
+PCS_chgPhAOutputI: 0.0 A
+PCS_chgPhAPchgVoltDeltaMax10s: 0.0 V
+PCS_chgPhARetryCount: 0
+PCS_chgPhAState: IDLE
+PCS_chgPhATemp: 31.9 C
+PCS_chgPhATransientRetryCount: 0.0 -
+PCS_chgPhBInputIrms: 0.0 A
+PCS_chgPhBIntBusV: 0 V
+PCS_chgPhBIntBusVMax10s: 1 V
+PCS_chgPhBIntBusVMin10s: 0 V
+PCS_chgPhBIntBusVTarget: 420 V
+PCS_chgPhBLastShutdownReason: REASON_NONE
+PCS_chgPhBLifetimekWh: 1675.42 kWh
+PCS_chgPhBNoFlowBucket: 0.0 -
+PCS_chgPhBOutputI: 0.0 A
+PCS_chgPhBPchgVoltDeltaMax10s: 0.0 V
+PCS_chgPhBRetryCount: 0
+PCS_chgPhBState: IDLE
+PCS_chgPhBTemp: 32.3 C
+PCS_chgPhBTransientRetryCount: 0.0 -
+PCS_chgPhCInputIrms: 0.0 A
+PCS_chgPhCIntBusV: 0 V
+PCS_chgPhCIntBusVMax10s: 0 V
+PCS_chgPhCIntBusVMin10s: 0 V
+PCS_chgPhCIntBusVTarget: 420 V
+PCS_chgPhCLastShutdownReason: REASON_NONE
+PCS_chgPhCLifetimekWh: 1683.68 kWh
+PCS_chgPhCNoFlowBucket: 0.0 -
+PCS_chgPhCOutputI: 0.0 A
+PCS_chgPhCPchgVoltDeltaMax10s: 0.0 V
+PCS_chgPhCRetryCount: 0
+PCS_chgPhCState: IDLE
+PCS_chgPhCTemp: -13.200000000000003 C
+PCS_chgPhCTransientRetryCount: 0.0 -
+PCS_chgPhManCurrentToDist: 0.0 A
+PCS_chgPhManOptimalPhsToUse: 0
+PCS_chgPwmEnableLine: 0
+PCS_chgRetryCount: 0
+PCS_componentId: 27
+PCS_cpu2AppCrc: 3661288053
+PCS_cpu2BootState: APPLICATION
+PCS_dcdc12VSupportRtyCnt: 0
+PCS_dcdc12VSupportStatus: ACTIVE
+PCS_dcdc12vSupportLifetimekWh: 1774.92 kWh
+PCS_dcdcCLAControllerOutput: 0.17500000000000002 1
+PCS_dcdcClaCurrentFreq: 166.5039915 kHz
+PCS_dcdcCurrentLimit: 8.8 A
+PCS_dcdcDischargeRtyCnt: 0
+PCS_dcdcFaulted: 0
+PCS_dcdcHalfPeriodUs: 24.376452363000002 us
+PCS_dcdcHvBusDischargeStatus: IDLE
+PCS_dcdcHvBusVolt: 272.021484375 V
+PCS_dcdcInitialPrechargeSubState: STANDBY
+PCS_dcdcIntervalMaxFrequency: 178 kHz
+PCS_dcdcIntervalMaxHvBusVolt: 348.6 V
+PCS_dcdcIntervalMaxLvBusVolt: 35.2 V
+PCS_dcdcIntervalMaxLvOutputCurr: 453 A
+PCS_dcdcIntervalMinFrequency: 156 kHz
+PCS_dcdcIntervalMinHvBusVolt: 348.40000000000003 V
+PCS_dcdcIntervalMinLvBusVolt: 16.8 V
+PCS_dcdcIntervalMinLvOutputCurr: 389 A
+PCS_dcdcLvBusVolt: 11.2890625 V
+PCS_dcdcLvOutputCurrent: 1.3 A
+PCS_dcdcLvOutputCurrentTempLimit: 0.1 A
+PCS_dcdcMainState: STANDBY
+PCS_dcdcMaxLvOutputCurrent: 324.0 A
+PCS_dcdcMaxOutputCurrentAllowed: 225.0 A
+PCS_dcdcOutputIsLimited: 0
+PCS_dcdcPrechargeRestartCnt: 0
+PCS_dcdcPrechargeRtyCnt: 0
+PCS_dcdcPrechargeStatus: IDLE
+PCS_dcdcPwmEnableLine: 1
+PCS_dcdcShortTimeUs: 8.194331742000001 us
+PCS_dcdcSubState: 12V_SUPPORT_ACTIVE
+PCS_dcdcSupportingFixedLvTarget: 0
+PCS_dcdcTCommMeasured: 32.10555094 us
+PCS_dcdcTankVoltage: 100 V
+PCS_dcdcTankVoltageTarget: 100 V
+PCS_dcdcTemp: 38.2 C
+PCS_dcdcUnifiedCommand: 0.056 1
+PCS_ecuLogUploadRequest: NONE
+PCS_gridConfig: SNA
+PCS_hardwareId: 252
+PCS_infoIndex: PACKAGE_SN_1_7
+PCS_logMessageSelect: CHG_3
+PCS_matrixIndex: AlertMatrix1
+PCS_numAlertsSet: 9
+PCS_partNumChar01: 49
+PCS_partNumChar02: 49
+PCS_partNumChar03: 51
+PCS_partNumChar04: 53
+PCS_partNumChar05: 53
+PCS_partNumChar06: 53
+PCS_partNumChar07: 56
+PCS_partNumChar08: 45
+PCS_partNumChar09: 48
+PCS_partNumChar10: 53
+PCS_partNumChar11: 45
+PCS_partNumChar12: 65
+PCS_partNumChar13: 0
+PCS_partNumChar14: 0
+PCS_partNumChar15: 0
+PCS_partNumChar16: 0
+PCS_partNumChar17: 0
+PCS_partNumChar18: 0
+PCS_partNumChar19: 0
+PCS_partNumChar20: 0
+PCS_pcbaId: 6
+PCS_platformType: 3
+PCS_serialNumChar01: 74
+PCS_serialNumChar02: 66
+PCS_serialNumChar03: 76
+PCS_serialNumChar04: 50
+PCS_serialNumChar05: 49
+PCS_serialNumChar06: 48
+PCS_serialNumChar07: 54
+PCS_serialNumChar08: 55
+PCS_serialNumChar09: 80
+PCS_serialNumChar10: 79
+PCS_serialNumChar11: 65
+PCS_serialNumChar12: 48
+PCS_serialNumChar13: 52
+PCS_serialNumChar14: 67
+PCS_subUsageId: 1
+PCS_usageId: 1
+PMS_appGitHash: 0
+PMS_applicationCrc: 781439380
+PMS_assemblyId: 75
+PMS_bootGitHash: 44931131714676272
+PMS_bootloaderCrc: 1686952640
+PMS_buildConfigurationId: 13003
+PMS_buildType: PLATFORM_BUILD
+PMS_componentId: 9
+PMS_hardwareId: CONFIGURABLE_HWID_PLACEHOLDER
+PMS_infoIndex: UDS_PROTOCOL_BOOTCRC
+PMS_pcbaId: 30
+PMS_platformTyp: 3
+PMS_subUsageId: 0
+PMS_udsProtocolVersion: 6
+PMS_usageId: 2
+PMS_w001_absoluteTorque: 0
+PMS_w002_accumulatedTorque: 0
+PMS_w003_torqueReversal: 0
+PMS_w004_regenTorque: 0
+PMS_w005_torqueInNeutral: 0
+PMS_w006_inconsistentDIGear: 0
+PMS_w007_watchdogReset: 0
+PMS_w008_memoryError: 0
+PMS_w009_espMIA: 0
+PMS_w010_diMIA: 0
+PMS_w011_phaseCurrentIrrational: 0
+PMS_w012_canDataBusA: 0
+PMS_w013_canHardwareBusA: 0
+PMS_w018_encoderIrrational: 0
+PMS_w019_statorTempIrrational: 0
+PMS_w026_diHeartBeatMIA: 0
+PMS_w027_torqueOutOfMap: 0
+PMS_w028_torqueCmdError: 0
+PMS_w031_highStackUsage: 0
+PMS_w032_registerConfigError: 0
+PMS_w033_selfTest: 0
+PMS_w034_trqCrossCheck: 0
+PMS_w038_inconsistentTorqueSign: 0
+PMS_w039_disMIA: 0
+PMS_w040_pmMIA: 0
+PMS_w042_gtwMIA: 0
+PMS_w043_inconsistentConfig: 0
+PMS_w045_motorMovementDetected: 0
+PMS_w053_vcfrontMIA: 0
+PMS_w054_uiMIA: 0
+PMS_w055_resolver: 0
+PMS_w056_canHardwareBusB: 0
+PMS_w057_canDataBusB: 0
+PMS_w061_DIPMVersionMismatch: 0
+PMS_w063_debugAlert: 0
+PMS_w064_torqueIntervention: 0
+RCM_airbagCutoffStatus: RCM_PASSENGER_AIRBAG_ENABLED
+RCM_alrSwitchStatus: SNA
+RCM_armStatus: RCM_ARMED
+RCM_driverOrientationInitStatus: RCM_DRIVER_ORIENTATION_MATCHED_LHD
+RCM_edr1State: EMPTY
+RCM_edr2State: EMPTY
+RCM_imuOffsetLearnState: OFFSET_LEARNING_OFF
+RCM_keepPowerReason: NO_KEEP_POWER_REQUEST
+RCM_passAirbagIndicatorRequest: RCM_PASSENGER_AIRBAG_INDICATOR_OFF
+RCM_seatTrackPositionDrvr: RCM_SEAT_POSITION_FAR
+RCM_seatTrackPositionPass: SNA
+RCM_statusChecksum: 158
+RCM_statusCounter: 12
+RCM_vinLearnFlag: RCM_VIN_STORED
+RCM_warningIndicatorState: RCM_WARNING_INDICATOR_OFF
+SCCM_a001_CANBusOff: 0
+SCCM_a002_CANTOut: 0
+SCCM_a003_highBeamOpen: 0
+SCCM_a004_highBeamShortToGND: 0
+SCCM_a005_tipWipeOpen: 0
+SCCM_a006_tipWipeShortToGND: 0
+SCCM_a007_turnIndComInfo: 0
+SCCM_a008_turnIndInvalidTrans: 0
+SCCM_a009_turnIndOpen: 0
+SCCM_a010_turnIndShortToGnd: 0
+SCCM_a011_turnIndHWErr: 0
+SCCM_a012_turnGenErr: 0
+SCCM_a013_voltageHigh: 0
+SCCM_a014_voltageLow: 0
+SCCM_a015_softwareError: 0
+SCCM_a016_hardwareError: 0
+SCCM_a017_memoryError: 0
+SCCM_a018_angleSpeedOutOfRange: 0
+SCCM_a019_angleSpeedAboveLimit: 0
+SCCM_a020_angleInternalError: 0
+SCCM_a021_gearStalkSignalInvalid: 0
+SCCM_a022_gearStalkOpenCircuit: 0
+SCCM_a023_gearStalkShortCircuit: 0
+SCCM_a024_gearStalkGenErr: 0
+SCCM_a025_runTimeError: 0
+SCCM_a026_parkButtonInvalidSignal: 0
+SCCM_a027_parkButtonOpenCircuit: 0
+SCCM_a028_parkButtonShortToGround: 0
+SCCM_a029_parkButtonMalfunction: 0
+SCCM_gearStalkStatus: IDLE
+SCCM_highBeamStalkStatus: IDLE
+SCCM_infoAppSvnHash: 14690803418020172
+SCCM_infoAssemblyId: 1
+SCCM_infoBootCrc: 3505094791
+SCCM_infoBootSvnHash: 14409332619294796
+SCCM_infoBootSvnRev: 415729
+SCCM_infoBootSvnUrlHash: 0
+SCCM_infoBuildConfigId: 0
+SCCM_infoBuildType: PLATFORM_BUILD
+SCCM_infoComponentId: 56
+SCCM_infoHardwareId: 65535
+SCCM_infoIndex: BOOTLOADER_SVN
+SCCM_infoPcbaId: 3
+SCCM_infoSubUsageId: 0
+SCCM_infoSubcomponent1Version: 1379020345
+SCCM_infoUdsProtoVersion: 5
+SCCM_infoUsageId: 0
+SCCM_leftStalkChecksum: 76
+SCCM_leftStalkCounter: 6
+SCCM_leftStalkReserved1: 0
+SCCM_matrixIndex: SCCM_AlertMatrix0
+SCCM_parkButtonStatus: NOT_PRESSED
+SCCM_rightStalkChecksum: 65
+SCCM_rightStalkCounter: 5
+SCCM_steeringAngle: -6.899999999999977 deg
+SCCM_steeringAngleChecksum: 173
+SCCM_steeringAngleCounter: 3
+SCCM_steeringAngleSensorReservd1: 0
+SCCM_steeringAngleSensorReservd2: 255
+SCCM_steeringAngleSensorReservd3: 63
+SCCM_steeringAngleSensorStatus: OK
+SCCM_steeringAngleSpeed: 0.0 deg/s
+SCCM_steeringAngleValidity: VALID
+SCCM_supplierID: 2
+SCCM_turnIndicatorStalkStatus: IDLE
+SCCM_washWipeButtonStatus: NOT_PRESSED
+TAS_w129_openCircuitFL: 0
+TAS_w130_openCircuitFR: 1
+TAS_w131_openCircuitRL: 1
+TAS_w132_openCircuitRR: 0
+TAS_w133_openCircuitReservoir: 1
+TAS_w134_openCircuitExhaust: 0
+TAS_w135_openCircuitBoost: 1
+TAS_w136_openCircuitCompressor: 0
+TAS_w137_shortCircuitFL: 1
+TAS_w138_shortCircuitFR: 0
+TAS_w139_shortCircuitRL: 0
+TAS_w140_shortCircuitRR: 1
+TAS_w141_shortCircuitReservoir: 0
+TAS_w142_shortCircuitExhaust: 0
+TAS_w143_shortCircuitBoost: 0
+TAS_w144_shortCircuitCompressor: 1
+TAS_w145_boardFaultFL: 0
+TAS_w146_boardFaultFR: 1
+TAS_w147_boardFaultRL: 0
+TAS_w148_boardFaultRR: 1
+TAS_w149_boardFaultReservoir: 0
+TAS_w150_boardFaultExhaust: 1
+TAS_w151_boardFaultBoost: 0
+TAS_w152_boardFaultCompressor: 1
+TAS_w153_otherCircuitFL: 0
+TAS_w154_otherCircuitFR: 1
+TAS_w155_otherCircuitRL: 0
+TAS_w156_otherCircuitRR: 1
+TAS_w157_otherCircuitReservoir: 0
+TAS_w158_otherCircuitExhaust: 1
+TAS_w159_otherCircuitBoost: 0
+TAS_w160_otherCircuitCompressor: 1
+TAS_w161_valveBlockOpenGND: 0
+TAS_w162_compressorValveOpenGND: 1
+TAS_w163_reservoirFillDisabled: 0
+TAS_w164_calibrationVersion: 1
+TPMSFLunknown: 0
+TPMSFRunknown: 0
+TPMS_btPressureFL: 2.725 bar
+TPMS_btPressureFR: 2.725 bar
+TPMS_btPressureRL: 2.7 bar
+TPMS_btPressureRR: 2.725 bar
+UI_TCR_classConstElem: 0
+UI_TCR_classMovingFourWheel: 0
+UI_TCR_classMovingPed: 0
+UI_TCR_classMovingTwoWheel: 0
+UI_TCR_classUnknown: 0
+UI_TCR_downSampleFactor: 0
+UI_TCR_enable: 0
+UI_TCR_maxDy: 0.0 m
+UI_TCR_minRCS: -14.0 dB
+UI_TCR_moveStateIndeterm: 0
+UI_TCR_moveStateMoving: 0
+UI_TCR_moveStateStanding: 0
+UI_TCR_moveStateStopped: 0
+UI_TCR_vehSpeed: 0
+UI_TCR_wExist: 16
+UI_a001_DriverDoorOpen: 1
+UI_a002_DoorOpen: 0
+UI_a003_TrunkOpen: 0
+UI_a004_FrunkOpen: 0
+UI_a005_HeadlightsOnDoorOpen: 0
+UI_a006_RemoteServiceAlert: 0
+UI_a007_SoftPackConfigMismatch: 0
+UI_a008_TouchScreenError: 0
+UI_a009_SquashfsError: 0
+UI_a010_MapsMissing: 0
+UI_a011_IncorrectMap: 0
+UI_a012_NotOnPrivateProperty: 0
+UI_a013_TPMSHardWarning: 0
+UI_a014_TPMSSoftWarning: 0
+UI_a015_TPMSOverPressureWarning: 0
+UI_a016_TPMSTemperatureWarning: 0
+UI_a017_TPMSSystemFault: 0
+UI_a018_SlipStartOn: 0
+UI_a019_ParkBrakeFault: 0
+UI_a020_SteeringReduced: 0
+UI_a021_RearSeatbeltUnbuckled: 0
+UI_a022_ApeFusesEtc: 0
+UI_a023_CellInternetCheckFailed: 0
+UI_a024_WifiInternetCheckFailed: 0
+UI_a025_WifiOnlineCheckFailed: 0
+UI_a026_ModemResetLoopDetected: 0
+UI_a027_AutoSteerMIA: 0
+UI_a028_FrontTrunkPopupClosed: 0
+UI_a029_ModemMIA: 0
+UI_a030_ModemVMCrash: 0
+UI_a031_BrakeFluidLow: 0
+UI_a032_CellModemRecoveryResets: 0
+UI_a033_ApTrialExpired: 0
+UI_a034_WakeupProblem: 0
+UI_a035_AudioWatchdogKernelError: 0
+UI_a036_AudioWatchdogHfpError: 0
+UI_a037_AudioWatchdogXrunStormError: 0
+UI_a038_AudioWatchdogA2bI2cLockupError: 0
+UI_a039_AudioA2bNeedRediscovery: 0
+UI_a040_HomelinkTransmit: 0
+UI_a041_AudioDmesgXrun: 1
+UI_a042_AudioDmesgRtThrottling: 1
+UI_a043_InvalidMapDataOverride: 1
+UI_a044_AudioDmesgDspException: 1
+UI_acChargeCurrentLimit: 16 A
+UI_accOvertakeEnable: ACC_OVERTAKE_ON
+UI_acceptBottsDots: 0
+UI_accessoryPowerRequest: 1
+UI_actualSOC: 3 %
+UI_aebEnable: AEB_ON
+UI_aesEnable: AES_OFF
+UI_ahlbEnable: AHLB_OFF
+UI_airbagCutoffSwState: PASSENGER_AIRBAG_ON
+UI_alarmEnabled: 1
+UI_alertID: a041_AudioDmesgXrun
+UI_alertState: CLEARED
+UI_ambientLightingEnabled: 0
+UI_anonDebugFlag1: OFF
+UI_anonDebugFlag2: OFF
+UI_anonDebugFlag3: OFF
+UI_anonDebugFlag4: OFF
+UI_anonDebugParam1: 0
+UI_anonDebugParam2: 0
+UI_anonDebugParam3: 16
+UI_anonDebugParam4: 16
+UI_anonDebugParam5: 0
+UI_anonDebugParam6: 0
+UI_anonDebugParam7: 0
+UI_apmv3Branch: 0
+UI_applyEceR79: 0
+UI_audioActive: 1
+UI_autoFoldMirrorsOn: 1
+UI_autoHighBeamEnabled: 0
+UI_autoLaneChangeEnable: ON
+UI_autoParkRequest: SEARCH
+UI_autopilotControlIndex: 1
+UI_autopilotTrial: NONE
+UI_autosteerRestricted: 1
+UI_blindspotDistance: DEFAULT
+UI_blindspotMinSpeed: DEFAULT
+UI_blindspotTTC: DEFAULT
+UI_bluetoothActive: 0
+UI_bsdEnable: BSD_ON
+UI_cameraActive: 0
+UI_cellActive: 1
+UI_cellConnected: 1
+UI_cellNetworkTechnology: LTE
+UI_cellReceiverPower: -121 dB
+UI_cellSignalBars: ZERO
+UI_chargeEnableRequest: 1
+UI_chargeTerminationPct: 100.0 %
+UI_chassisControlChecksum: 191
+UI_chassisControlCounter: 0
+UI_childDoorLockOn: 0
+UI_closeChargePortDoorRequest: 0
+UI_columnAndLumbarRecallActive: 0
+UI_controlledAccess: 0
+UI_countryCode: 156
+UI_creepTorque: OFF
+UI_cruiseControlCounter: 5
+UI_cruiseSpeedCommand: SNAP
+UI_csaRoadCurvC2: 0.0 1/m
+UI_csaRoadCurvC3: 0.0 1/m2
+UI_csaRoadCurvChecksum: 132
+UI_csaRoadCurvCounter: 112
+UI_csaRoadCurvRange: 0 m
+UI_csaRoadCurvReserved: 2
+UI_csaRoadCurvUsingTspline: 1
+UI_dasDebugEnable: 0
+UI_developmentCar: 0
+UI_disableBackup: 0
+UI_disableFisheye: 0
+UI_disableLeftPillar: 0
+UI_disableLeftRepeater: 0
+UI_disableMain: 0
+UI_disableNarrow: 0
+UI_disableRadar: 0
+UI_disableRightPillar: 0
+UI_disableRightRepeater: 0
+UI_displayBrightnessLevel: 100.0 %
+UI_displayOn: 1
+UI_displayReady: 1
+UI_distanceUnits: MILES
+UI_domeLightSwitch: OFF
+UI_donAlcProgGoreAbortThres: 0P00
+UI_donDisableAutoWiperDuration: DEFAULT
+UI_donDisableCutin: OFF
+UI_donDisableOnAutoWiperSpeed: OFF
+UI_donMinGoreWidthForAbortMap: 14
+UI_donMinGoreWidthForAbortNotMap: DEFAULT
+UI_donStopEndOfRampBuffer: DEFAULT
+UI_driveStateRequest: IDLE
+UI_driverMonitorConfirmation: 1
+UI_driverProfileRecallIndex: 4
+UI_driverProfileRecallStop: 0
+UI_elevation: 72 m
+UI_enableAutopilotStopWarning: 0
+UI_enableCabinCamera: 1
+UI_enableCabinCameraTelemetry: 0
+UI_enableMapStops: 0
+UI_energyAtDestination: -327.68 kWh
+UI_expectedRange: 169.60000000000002 km
+UI_factoryMode: DISABLED
+UI_factoryReset: NONE_SNA
+UI_factorySummonEnable: 0
+UI_falseTouchCounter: 20 1
+UI_fcwEnable: FCW_ON
+UI_fcwSensitivity: AEB_SENSITIVITY_AVERAGE
+UI_frontFogSwitch: 0
+UI_frontLeftSeatHeatReq: OFF
+UI_frontRightSeatHeatReq: OFF
+UI_frontSeatBackPos: 35.7 deg
+UI_frontSeatLiftPos: 52 mm
+UI_frontSeatRecallActive: 0
+UI_frontSeatTiltPos: 0.8 deg
+UI_frontSeatTrackPos: 104 mm
+UI_frunkRequest: 0
+UI_fsdStopsControlEnabled: 0
+UI_fsdVisualizationEnabled: 1
+UI_globalUnlockOn: 1
+UI_gpsAccuracy: 1.8 m
+UI_gpsActive: 1
+UI_gpsRoadMatch: 1
+UI_hardCoreSummon: 0
+UI_hindsightEnergy: 10.23 kWh
+UI_homelinkNearby: 0
+UI_homelinkV2Command0: 0
+UI_homelinkV2Command1: 0
+UI_homelinkV2Command2: 0
+UI_honkHorn: 0
+UI_hovEnabled: OFF
+UI_hvacReqACDisable: AUTO
+UI_hvacReqAirDistributionMode: AUTO
+UI_hvacReqBlowerSegment: AUTO
+UI_hvacReqKeepClimateOn: 0
+UI_hvacReqManualDefogState: NONE
+UI_hvacReqRecirc: AUTO
+UI_hvacReqSecondRowState: AUTO
+UI_hvacReqTempSetpointLeft: 22.0 degC
+UI_hvacReqTempSetpointRight: 22.0 degC
+UI_hvacReqUserPowerState: OFF
+UI_hvacUseModeledDuctTemp: 0
+UI_idealRange: 1105.6000000000001 km
+UI_inSuperchargerGeofence: 0
+UI_intrusionSensorOn: 0
+UI_isSunUp: UP
+UI_latControlEnable: OFF
+UI_latitude: 22.849718 deg
+UI_ldwEnable: LDW_TRIGGERS_HAPTIC
+UI_leftMirrorDipXPosition: 1.6600000000000001 V
+UI_leftMirrorDipYPosition: 2.94 V
+UI_leftMirrorTiltXPosition: 1.42 V
+UI_leftMirrorTiltYPosition: 2.68 V
+UI_lightSwitch: AUTO_SNA
+UI_limitMode: NORMAL
+UI_lockRequest: IDLE
+UI_longitude: 108.438294 deg
+UI_lumbarAPressureHpa: 0
+UI_lumbarBPressureHpa: 0
+UI_mapDataChecksum: 166
+UI_mapDataCounter: 0
+UI_mapSpeedLimit: LESS_OR_EQ_50
+UI_mapSpeedLimitDependency: NONE
+UI_mapSpeedLimitType: REGULAR
+UI_mapSpeedUnits: KPH
+UI_minsToSunrise: 970 min
+UI_minsToSunset: 290 min
+UI_mirrorDipOnReverse: 0
+UI_mirrorFoldRequest: IDLE
+UI_mirrorHeatRequest: 0
+UI_mirrorRecallActive: 0
+UI_motorOnMode: NORMAL
+UI_narrowGarages: 0
+UI_navRouteActive: 0
+UI_navToSupercharger: 0
+UI_nextBranchDist: SNA m
+UI_nextBranchLeftOffRamp: 0
+UI_nextBranchRightOffRamp: 0
+UI_nmGoingToSleep: 0
+UI_nmKeepAwakeReason: NONE_SNA
+UI_noStalkConfirmAlertChime: 0
+UI_noStalkConfirmAlertHaptic: 0
+UI_openChargePortDoorRequest: 0
+UI_parallelAutoparkEnabled: 1
+UI_parkBrakeRequest: IDLE
+UI_pedalMap: CHILL
+UI_pedalSafetyEnable: PEDAL_SAFETY_ON
+UI_perpendicularAutoparkEnabled: 1
+UI_pmmEnabled: 1
+UI_powerOff: 0
+UI_powertrainControlChecksum: 69
+UI_powertrainControlCounter: 6
+UI_predictedEnergy: -325.13 kWh
+UI_radioActive: 0
+UI_ratedConsumption: 638.125 Wh/km
+UI_readyForDrive: 1
+UI_rearCenterSeatHeatReq: OFF
+UI_rearFogSwitch: 0
+UI_rearLeftSeatHeatReq: OFF
+UI_rearRightSeatHeatReq: OFF
+UI_rearWindowLockout: 0
+UI_rebootAutopilot: 0
+UI_redLightStopSignEnable: RLSSW_OFF
+UI_regenTorqueMax: 2.5 %
+UI_rejectAutosteer: 0
+UI_rejectHPP: 0
+UI_rejectHandsOn: 0
+UI_rejectLeftFreeSpace: 0
+UI_rejectLeftLane: 0
+UI_rejectNav: 0
+UI_rejectRightFreeSpace: 0
+UI_rejectRightLane: 0
+UI_remoteClosureRequest: IDLE
+UI_remoteStartRequest: IDLE
+UI_requestActiveBatteryHeating: 0
+UI_rightMirrorDipXPosition: 1.42 V
+UI_rightMirrorDipYPosition: 2.7800000000000002 V
+UI_rightMirrorTiltXPosition: 1.44 V
+UI_rightMirrorTiltYPosition: 2.98 V
+UI_roadClass: CLASS_6_MINOR
+UI_scaEnabled: 0
+UI_screenPCBTemperature: 56.5 degC
+UI_screenshotActive: 0
+UI_seeYouHomeLightingOn: 0
+UI_selfParkTune: SNA
+UI_serviceMode: DISABLED
+UI_showLaneGraph: 0
+UI_showTrackLabels: 0
+UI_showroomMode: DISABLED
+UI_solarAzimuthAngle: 241 degrees
+UI_solarAzimuthAngleCarRef: -103 degrees
+UI_solarElevationAngle: 66 degrees
+UI_speedLimit: 150 kph
+UI_speedLimitTick: 24 speed
+UI_steeringBacklightEnabled: ENABLED
+UI_steeringButtonMode: OFF
+UI_steeringColumnInOutPos: 876 ticks
+UI_steeringColumnUpDownPos: 768 ticks
+UI_steeringTuneRequest: STANDARD
+UI_stop12vSupport: 0
+UI_streetCount: 0
+UI_summonActive: 0
+UI_suspensionLevelRequest: NO_CHANGE_SNA
+UI_systemActive: 1
+UI_systemPowerLimit: 60 kW
+UI_systemTorqueLimit: 7600 Nm
+UI_touchActive: 1
+UI_trackModeRequest: IDLE
+UI_tractionControlMode: NORMAL_SELECTED
+UI_trailerMode: OFF
+UI_transportMode: DISABLED
+UI_tripPlanningActive: 0
+UI_ulcSnooze: 0
+UI_unlockOnPark: 1
+UI_usableSOC: 69 %
+UI_ventPanelLeftLateralMode: SINGLE
+UI_ventPanelLeftLateralSplit: 26.0 %
+UI_ventPanelLeftPositionX: 0.5 %
+UI_ventPanelLeftPositionY: 50.0 %
+UI_ventPanelRightLateralMode: SINGLE
+UI_ventPanelRightLateralSplit: 49.0 %
+UI_ventPanelRightPositionX: 66.5 %
+UI_ventPanelRightPositionY: 50.0 %
+UI_vpnActive: 1
+UI_wakeupTime: 0
+UI_walkAwayLock: 1
+UI_walkUpUnlock: 0
+UI_warningIndicatorStatus: WARNING_LAMP_OFF
+UI_wasteMode: NONE
+UI_wasteModeRegenLimit: MAX
+UI_wifiActive: 1
+UI_wifiConnected: 0
+UI_winchModeRequest: IDLE
+UI_wiperMode: NORMAL
+UI_wiperRequest: OFF
+UI_zeroSpeedConfirmed: SNA
+UTC_day: 27
+UTC_hour: 6
+UTC_minutes: 12
+UTC_month: 8
+UTC_seconds: 43
+UTC_statusChecksum: 194
+UTC_statusCounter: 2
+UTC_year: 26
+VCFRONT_12VARailStable: 1
+VCFRONT_12VBRailStable: 1
+VCFRONT_12VBatteryIndex: 2
+VCFRONT_12VOverchargeCounter: 0
+VCFRONT_5VARailStable: 0
+VCFRONT_5VBRailStable: 0
+VCFRONT_AS8510Voltage: 7.92599808 V
+VCFRONT_CCQdotActual: 1280 W
+VCFRONT_CCQdotFdFrwrdTarget: 0 W
+VCFRONT_CCQdotFdbk: 320 W
+VCFRONT_CMPDischargeSuperheat: 4 C
+VCFRONT_ChargePumpVoltage: 0.0 V
+VCFRONT_ChargePumpVoltageStable: 0
+VCFRONT_DIQdotA: 0 W
+VCFRONT_DRLLeftStatus: OFF
+VCFRONT_DRLRightStatus: OFF
+VCFRONT_EPAS3PCurrent: 0.2 A
+VCFRONT_EPAS3PFault: 0
+VCFRONT_EPAS3PSelfTestResult: FAILED_EFUSE_OUTPUT_SHORT
+VCFRONT_EPAS3PState: LOCKED_OUT
+VCFRONT_EPAS3PTemp: 39.5 degC
+VCFRONT_EPAS3PVoltage: 13.0 V
+VCFRONT_EPAS3SCurrent: 0.2 A
+VCFRONT_EPAS3SFault: 0
+VCFRONT_EPAS3SSelfTestResult: FAILED_EFUSE_OUTPUT_SHORT
+VCFRONT_EPAS3SState: LOCKED_OUT
+VCFRONT_EPAS3STemp: 39.125 degC
+VCFRONT_EPAS3SVoltage: 13.0 V
+VCFRONT_ESPMotorCurrent: 0.2 A
+VCFRONT_ESPMotorFault: 0
+VCFRONT_ESPMotorSelfTestResult: FAILED_EFUSE_OUTPUT_SHORT
+VCFRONT_ESPMotorState: LOCKED_OUT
+VCFRONT_ESPMotorTemp: 40.0 degC
+VCFRONT_ESPMotorVoltage: 13.0 V
+VCFRONT_ESPValveCurrent: 1.4000000000000001 A
+VCFRONT_ESPValveFault: 0
+VCFRONT_ESPValveState: LOCKED_OUT
+VCFRONT_ESPValveTemp: -40.0 degC
+VCFRONT_ESPValveVoltage: 0.0 V
+VCFRONT_HCML_bladeTemp: 67 C
+VCFRONT_HCML_diffuseTemp: 83 C
+VCFRONT_HCML_highBeamTemp: 129 C
+VCFRONT_HCML_lowBeamSpotTemp: 73 C
+VCFRONT_HCML_turnTemp: 75 C
+VCFRONT_HCMR_bladeTemp: -38 C
+VCFRONT_HCMR_diffuseTemp: -41 C
+VCFRONT_HCMR_highBeamTemp: -38 C
+VCFRONT_HCMR_lowBeamSpotTemp: -48 C
+VCFRONT_HCMR_turnTemp: -49 C
+VCFRONT_HSDInitCompleteU13: 0
+VCFRONT_HSDInitCompleteU16: 0
+VCFRONT_IBSAmpHours: 26.2 Ah
+VCFRONT_IBSCurrent: -0.01 A
+VCFRONT_IBSCurrentRaw: 0.02 A
+VCFRONT_IBSFault: 0
+VCFRONT_IBSTemperature: 1241.7 degC
+VCFRONT_IBSVoltage: 13.11925939618 V
+VCFRONT_LVPowerStateChecksum: 118
+VCFRONT_LVPowerStateCounter: 4
+VCFRONT_LVPowerStateIndex: Mux1
+VCFRONT_PCSCurrent: 0.0 A
+VCFRONT_PCSFault: 0
+VCFRONT_PCSMia: 0
+VCFRONT_PCSState: LOCKED_OUT
+VCFRONT_PCSTemp: 39.375 degC
+VCFRONT_PCSVoltage: 13.100000000000001 V
+VCFRONT_PDischargeControllerOutp: 82.0 %
+VCFRONT_PEResetLineState: 0
+VCFRONT_PSuctionControllerOutput: 51.5 %
+VCFRONT_a001_WatchdogReset: 0
+VCFRONT_a002_PowerLossReset: 0
+VCFRONT_a003_SWAssertion: 0
+VCFRONT_a010_ExtSupplyVoltError: 0
+VCFRONT_a012_CPUReset: 0
+VCFRONT_a013_AlertManagerFault: 0
+VCFRONT_a015_NVMMAlert: 0
+VCFRONT_a021_TaskSchedulerError: 0
+VCFRONT_a022_TaskInitError: 0
+VCFRONT_a031_UDSActive: 0
+VCFRONT_a041_HighCPULoad: 0
+VCFRONT_a042_HighStackUsage: 0
+VCFRONT_a043_Task1msError: 0
+VCFRONT_a044_Task10msError: 0
+VCFRONT_a045_Task100msError: 0
+VCFRONT_a046_Task1000msError: 0
+VCFRONT_a059_inputResistanceHigh: 0
+VCFRONT_a060_engineeringBuild: 0
+VCFRONT_a061_XCPConnected: 0
+VCFRONT_a062_XCPWasConnected: 0
+VCFRONT_a063_SwitchFault: 0
+VCFRONT_a064_busSleepReqTimeout: 0
+VCFRONT_a097_CMP_MIA: 0
+VCFRONT_a098_DI_THERMAL_MIA: 0
+VCFRONT_a099_PARK_MIA: 0
+VCFRONT_a100_CANbus_MIA: 0
+VCFRONT_a101_PM_MIA: 0
+VCFRONT_a102_PTC_MIA: 0
+VCFRONT_a103_CP_MIA: 0
+VCFRONT_a104_DAS_MIA: 0
+VCFRONT_a105_TAS_MIA: 0
+VCFRONT_a106_PCS_MIA: 0
+VCFRONT_a107_BMS_MIA: 0
+VCFRONT_a108_DIS_MIA: 0
+VCFRONT_a109_RCM_MIA: 0
+VCFRONT_a110_GTW_MIA: 0
+VCFRONT_a111_EPBR_MIA: 0
+VCFRONT_a112_EPBL_MIA: 0
+VCFRONT_a113_UI_MIA: 0
+VCFRONT_a114_ESP_MIA: 0
+VCFRONT_a115_VCSEC_MIA: 0
+VCFRONT_a116_VCRIGHT_MIA: 0
+VCFRONT_a117_VCLEFT_MIA: 0
+VCFRONT_a118_VCFRONT_MIA: 0
+VCFRONT_a119_SCCM_MIA: 0
+VCFRONT_a120_DI_DRIVE_MIA: 0
+VCFRONT_a121_pumpBatICLatchFault: 0
+VCFRONT_a122_pumpBatICWarning: 0
+VCFRONT_a123_pumpPtICLatchFault: 0
+VCFRONT_a124_pumpPtICWarning: 0
+VCFRONT_a125_thmlFanICLatchFault: 0
+VCFRONT_a126_thmlFanICWarning: 0
+VCFRONT_a127_vcleftEFuseTrip: 0
+VCFRONT_a128_vcrightEFuseTrip: 0
+VCFRONT_a129_pcsEFuseTrip: 0
+VCFRONT_a130_epas3pEFuseTrip: 0
+VCFRONT_a131_epas3sEFuseTrip: 0
+VCFRONT_a132_iBoosterEFuseTrip: 0
+VCFRONT_a133_espEFuseTrip: 0
+VCFRONT_a134_fusedHighEFuseTrip: 0
+VCFRONT_a135_coolantLevelLow: 0
+VCFRONT_a136_refrigDischTempSns: 0
+VCFRONT_a137_refrigDischPresSns: 0
+VCFRONT_a138_refrigSuctTempSns: 0
+VCFRONT_a139_refrigSuctPresSns: 0
+VCFRONT_a140_coolantTempPtSns: 0
+VCFRONT_a141_coolantTempBatSns: 0
+VCFRONT_a142_exvMotorFault: 0
+VCFRONT_a143_pumpBatICTransFault: 0
+VCFRONT_a144_pumpPtICTransFault: 0
+VCFRONT_a145_thmlFanICTransFault: 0
+VCFRONT_a146_pumpBatSoftStall: 0
+VCFRONT_a147_pumpPtSoftStall: 0
+VCFRONT_a148_thmlFanSoftStall: 0
+VCFRONT_a149_BLEFrontPowerCycled: 0
+VCFRONT_a150_pumpBatLowRPMCBang: 0
+VCFRONT_a151_pumpPtLowRPMCBang: 0
+VCFRONT_a152_thmlFanLowRPMCBang: 0
+VCFRONT_a156_louverBlockage: 0
+VCFRONT_a157_louverBreakage: 0
+VCFRONT_a158_louverDisconnected: 0
+VCFRONT_a159_fiveWayValveFault: 0
+VCFRONT_a160_compressorInhibited: 0
+VCFRONT_a161_compressorSelfFault: 0
+VCFRONT_a164_eFuseLckoutMissing: 0
+VCFRONT_a165_unxpctdEFuseLckout: 0
+VCFRONT_a166_rightHCMMIA: 0
+VCFRONT_a167_leftHCMMIA: 0
+VCFRONT_a168_hcmShortToVBAT: 0
+VCFRONT_a169_hcmPhaseEnableFail: 0
+VCFRONT_a170_hcmUnderVoltage: 0
+VCFRONT_a171_driveBlckdByMsmtch: 0
+VCFRONT_a172_wsteHtBlckdByMsmtch: 0
+VCFRONT_a173_HVBlckdByMsmtch: 0
+VCFRONT_a174_driveNotAuthed: 0
+VCFRONT_a175_ambientTempSns: 0
+VCFRONT_a176_vehicleInSelfTest: 0
+VCFRONT_a177_mcuAudioEFuseFault: 0
+VCFRONT_a179_highLVAmpsIntoPCS: 0
+VCFRONT_a180_12VNotSupported: 0
+VCFRONT_a182_replace12VBattery: 0
+VCFRONT_a183_low12VCapacity: 0
+VCFRONT_a185_washerFluidLow: 1
+VCFRONT_a186_noDriveChgCableCon: 0
+VCFRONT_a187_busesNotSleeping: 0
+VCFRONT_a188_sleepFailed: 0
+VCFRONT_a189_IBSMIA: 0
+VCFRONT_a190_DCDCNotOperational: 0
+VCFRONT_a191_exitDriveLow12V: 0
+VCFRONT_a192_criticalLoadShed: 0
+VCFRONT_a193_mcuAudioRetry: 0
+VCFRONT_a194_iBoosterRetry: 0
+VCFRONT_a195_drveBlckdVltgeTooHgh: 0
+VCFRONT_a196_discnctd12VBattery: 0
+VCFRONT_a198_PRVCANOverterminate: 0
+VCFRONT_a199_PRVCANUndertrminate: 0
+VCFRONT_a200_vcleftSelfTestFail: 0
+VCFRONT_a201_vcrightSelfTestFail: 0
+VCFRONT_a202_pcsSelfTestFail: 0
+VCFRONT_a203_epas3pSelfTestFail: 0
+VCFRONT_a204_epas3sSelfTestFail: 0
+VCFRONT_a205_iBoosterSelfTestFail: 0
+VCFRONT_a206_espSelfTestFail: 0
+VCFRONT_a207_vbatFusdSelfTestFail: 0
+VCFRONT_a208_brakeFluidLow: 0
+VCFRONT_a209_brakeFluidSNA: 0
+VCFRONT_a210_fiveWayValveCalib: 0
+VCFRONT_a211_I2CFault: 0
+VCFRONT_a212_IBSOverTemp: 0
+VCFRONT_a213_12VOvercharge: 0
+VCFRONT_a214_airCompUnderCurrent: 0
+VCFRONT_a215_airCompDriverFault: 0
+VCFRONT_a219_12VVoltFloorRchd: 0
+VCFRONT_a220_reverseBatteryFault: 0
+VCFRONT_a221_leftTurnLightFault: 0
+VCFRONT_a222_rightTurnLightFault: 0
+VCFRONT_a223_12VTempSensDiscnect: 0
+VCFRONT_a224_revBatChrgPmpFault: 0
+VCFRONT_a225_driveBlckdByShowroom: 0
+VCFRONT_a226_railAPoweredForFrunk: 0
+VCFRONT_a228_pumpBatFbkSanity: 0
+VCFRONT_a229_pumpPtFbkSanity: 0
+VCFRONT_a230_thmlFanFbkSanity: 0
+VCFRONT_a231_12VTempSensShort: 0
+VCFRONT_a233_autopilot1EFuseFault: 0
+VCFRONT_a234_autopilot2EFuseFault: 0
+VCFRONT_a235_ptTempSnsIrrational: 0
+VCFRONT_a236_batTempSnsIrrational: 0
+VCFRONT_a237_pumpBatChipComms: 0
+VCFRONT_a238_pumpPtChipComms: 0
+VCFRONT_a239_thmlFanChipComms: 0
+VCFRONT_a243_12VOverchargeInstc: 0
+VCFRONT_a244_sleepBypassFault: 0
+VCFRONT_a245_pump1EFuseFault: 0
+VCFRONT_a246_pump2EFuseFault: 0
+VCFRONT_a247_evapSolenoidFault: 0
+VCFRONT_a248_voltageOutOfSpec: 0
+VCFRONT_a249_fiveWayValveBadMode: 0
+VCFRONT_a250_headlampsNotAimed: 0
+VCFRONT_a251_UIWakeupTrigger: 0
+VCFRONT_a252_frontControllerWakeup: 0
+VCFRONT_a253_maxChrgeSssionTmeout: 0
+VCFRONT_a254_pumpBatStopped: 0
+VCFRONT_a255_pumpPtStopped: 0
+VCFRONT_a256_compTornShaftSeal: 0
+VCFRONT_a257_portExpanderVOR: 0
+VCFRONT_a258_resistanceEstimationRun: 0
+VCFRONT_a259_12vVoltageDropOnHighLoadCurrent: 0
+VCFRONT_activeLouverAbnormalKT: 0
+VCFRONT_activeLouverCalibRange: 790 ticks
+VCFRONT_activeLouverCommSuccess: 0
+VCFRONT_activeLouverDemand: 10 %
+VCFRONT_activeLouverDisconnect: 0
+VCFRONT_activeLouverFalsStallCal: 0
+VCFRONT_activeLouverFalsStallRun: 0
+VCFRONT_activeLouverIsCalibrated: 0
+VCFRONT_activeLouverMotorCounts: 1452 ticks
+VCFRONT_activeLouverMotorState: UNPOWERED
+VCFRONT_activeLouverOpenPos: 24 %
+VCFRONT_activeLouverOpenPosTarg: 4 %
+VCFRONT_activeLouverOverCurrent: 0
+VCFRONT_activeLouverOverTemp: 0
+VCFRONT_activeLouverStallCounter: 1
+VCFRONT_activeLouverStallLength: 258 ticks
+VCFRONT_activeLouverStalled: 0
+VCFRONT_activeLouverState: UNCALIBRATED
+VCFRONT_airCompressorStatus: OFF
+VCFRONT_ambientColderThanBatt: 0
+VCFRONT_ambientLightingBrightnes: 0.0 %
+VCFRONT_ambientSourcingAvailable: 0
+VCFRONT_ambientSourcingDisabled: 1
+VCFRONT_amplifierLVRequest: OFF
+VCFRONT_anyClosureOpen: 0
+VCFRONT_anyDoorOpen: 0
+VCFRONT_approachLightingRequest: 0
+VCFRONT_autopilot1Current: 9.9 A
+VCFRONT_autopilot1Fault: 0
+VCFRONT_autopilot1State: LOCKED_OUT
+VCFRONT_autopilot1Temp: -40.0 degC
+VCFRONT_autopilot1Voltage: 13.0 V
+VCFRONT_autopilot2Current: 9.1 A
+VCFRONT_autopilot2Fault: 0
+VCFRONT_autopilot2State: LOCKED_OUT
+VCFRONT_autopilot2Temp: -40.0 degC
+VCFRONT_autopilot2Voltage: 13.0 V
+VCFRONT_battDissipation: 4480 W
+VCFRONT_battLoopWorthCooling: 0
+VCFRONT_battOverStagUpperLimit: 0
+VCFRONT_battSensorIrrational: 0
+VCFRONT_battUnderStagUpperLimit: 0
+VCFRONT_batterySMState: OTA_STANDBY
+VCFRONT_brakeFluidLevel: NORMAL
+VCFRONT_cabinHeatEnergyDuringDri: 0 Wh
+VCFRONT_calibratedPositionHCML: 2 Steps
+VCFRONT_calibratedPositionHCMR: 0 Steps
+VCFRONT_ccLeftExvCalibFailed: 0
+VCFRONT_ccLeftExvCalibOffset: 0 ticks
+VCFRONT_ccLeftExvRange: 57 ticks
+VCFRONT_ccRightExvCalibFailed: 0
+VCFRONT_ccRightExvCalibOffset: 240 ticks
+VCFRONT_ccRightExvRange: 0 ticks
+VCFRONT_cclExvFlow: 89.60000000000001 %
+VCFRONT_ccrExvFlow: 23.8 %
+VCFRONT_chargeNeeded: 0
+VCFRONT_chillerDemandActive: 0
+VCFRONT_chillerExvCalibFailed: 0
+VCFRONT_chillerExvCalibOffset: 0 ticks
+VCFRONT_chillerExvFlow: 8.0 %
+VCFRONT_chillerExvRange: 0 ticks
+VCFRONT_chillerInletTempEstimate: 28 C
+VCFRONT_chillerLiftDisabledLowPs: 1
+VCFRONT_chillerPassiveCoolPower: 9060 W
+VCFRONT_compDemandChiller: 0 %
+VCFRONT_compDemandEvap: 0 %
+VCFRONT_compEnergyDuringDrive: 0 Wh
+VCFRONT_compLimitDeadband: 1
+VCFRONT_compLimitNvh: 0
+VCFRONT_compLimitPresDischargeHi: 1
+VCFRONT_compLimitScrollSepRamp: 0
+VCFRONT_compLimitScrollSepRegion: 1
+VCFRONT_compLimitTempDischargeHi: 0
+VCFRONT_compLimitTempDischargeSi: 0
+VCFRONT_compPerfRecoveryLimited: 1
+VCFRONT_compRampRateUpMax: 0.1 %/s
+VCFRONT_compStandbyCoastDownMode: 0
+VCFRONT_compStandbyCommunication: 1
+VCFRONT_compStandbyHVNotReady: 0
+VCFRONT_compStandbyHighSuctionSu: 1
+VCFRONT_compStandbyLowAmbient: 1
+VCFRONT_compStandbyLowDischPress: 0
+VCFRONT_compStandbyMultiplePdCut: 1
+VCFRONT_compStandbyRefrigNotOk: 0
+VCFRONT_compStandbySelfNotReady: 1
+VCFRONT_compStandbyShowroomMode: 0
+VCFRONT_compressorState: STANDBY
+VCFRONT_condenserPressureLimit: 10.0 bar
+VCFRONT_coolantAirPurgeBatState: INACTIVE
+VCFRONT_coolantFillRoutineStatus: 2
+VCFRONT_coolantFlowAmbSourceActu: 0.2 LPM
+VCFRONT_coolantFlowAmbSourceTarg: 7.1000000000000005 LPM
+VCFRONT_coolantFlowBatActual: 4.1000000000000005 LPM
+VCFRONT_coolantFlowBatReason: PASSIVE_MANAGER_BATT
+VCFRONT_coolantFlowBatTarget: 2.0 LPM
+VCFRONT_coolantFlowPTActual: 4.1000000000000005 LPM
+VCFRONT_coolantFlowPTReason: PASSIVE_MANAGER_BATT
+VCFRONT_coolantFlowPTTarget: 2.0 LPM
+VCFRONT_coolantHasBeenFilled: 1
+VCFRONT_coolantLevel: FILLED
+VCFRONT_coolantLevelVoltage: 0.33 V
+VCFRONT_coolantTempBasedMode: SERIES
+VCFRONT_coolantValveAngleActual: 287.25 deg
+VCFRONT_coolantValveAngleDrift: 0.25 degrees
+VCFRONT_coolantValveAngleTarget: 35.0 deg
+VCFRONT_coolantValveAngleTravel: 3600 deg
+VCFRONT_coolantValveCountRange: 985 ticks
+VCFRONT_coolantValveDuty: 0 %
+VCFRONT_coolantValveISense: 0.65 A
+VCFRONT_coolantValveMode: 1
+VCFRONT_coolantValveModeWrong: 0
+VCFRONT_coolantValveRadBypass: 0 %
+VCFRONT_coolantValveRecalCount: 223
+VCFRONT_coolantValveRecalReason: 1
+VCFRONT_coolantValveState: 0
+VCFRONT_coolantValveWindupEstL: 34 ticks
+VCFRONT_coolantValveWindupEstR: 0 ticks
+VCFRONT_courtesyLightingRequest: 0
+VCFRONT_cpLVRequest: ON
+VCFRONT_cpOkToUseHighPower: 1
+VCFRONT_crashDetectedType: NONE
+VCFRONT_crashState: IDLE
+VCFRONT_crashUnlockOverrideSet: 0
+VCFRONT_currentPositionHCML: 512 Steps
+VCFRONT_currentPositionHCMR: 16 Steps
+VCFRONT_cycleModelConverged: 0
+VCFRONT_das1HighCurrentLVState: OFF
+VCFRONT_das1OkToUseHighPower: 1
+VCFRONT_das2HighCurrentLVState: OFF
+VCFRONT_das2OkToUseHighPower: 1
+VCFRONT_diDissipation: 0 W
+VCFRONT_diLVRequest: ON
+VCFRONT_disLVState: ON
+VCFRONT_dischargePressureTarget: 27.75 bar
+VCFRONT_eFuseDebugStatusIndex: VBAT_FUSED_HIGH_CURRENT
+VCFRONT_eFuseLockoutVoltage: 4.96463616 V
+VCFRONT_epasLVState: ON
+VCFRONT_epasWakeLine: 1
+VCFRONT_espLVState: ON
+VCFRONT_estCompPower: 0 W
+VCFRONT_estCompPressureInlet: 4.7 bar
+VCFRONT_estCompPressureOutlet: 6.6000000000000005 bar
+VCFRONT_estCompRefrigMassflow: 64 g/s
+VCFRONT_estCompTempOutlet: 114.0 C
+VCFRONT_estCompressorRpm: 3600 rpm
+VCFRONT_estPressureDisch: 16.0 bar
+VCFRONT_estPressureLiq: 0.0 bar
+VCFRONT_estPressureSuct: 4.0 bar
+VCFRONT_estQLift: 200 W
+VCFRONT_estTempDisch: 81.6 C
+VCFRONT_estTempLiq: 68.8 C
+VCFRONT_estTempSuct: 2 C
+VCFRONT_evapDisabledLowPsCutout: 1
+VCFRONT_evapExvCalibFailed: 1
+VCFRONT_evapExvCalibOffset: 0 ticks
+VCFRONT_evapExvFlow: 0.0 %
+VCFRONT_evapExvRange: 0 ticks
+VCFRONT_evapFdFrwrdTarget: 640 W
+VCFRONT_evapFdFrwrdTargetMinimum: 0 W
+VCFRONT_evapFdbk: 0 W
+VCFRONT_exteriorQuietModeAllowed: 0
+VCFRONT_exteriorQuietModeEnabled: 0
+VCFRONT_exvFlow: 0.0 %
+VCFRONT_exvFlowTarget: 3.1 %
+VCFRONT_exvIsFlooding: 0
+VCFRONT_exvMotorState: UNPOWERED
+VCFRONT_exvPrechillActive: 0
+VCFRONT_exvState: UNINIT
+VCFRONT_fanControlFeedfwdActive: 1
+VCFRONT_fanControlRadCanCool: 1
+VCFRONT_fanControlRadiatorInletT: 41.4 C
+VCFRONT_fanControlRadiatorUa: 112 W/C
+VCFRONT_fanDemand: 0 %
+VCFRONT_fanDemandCondenser: 0 %
+VCFRONT_fanDemandRadiator: 0 %
+VCFRONT_feedBackDuctTempControll: -100 -
+VCFRONT_feedBackEvapTempControll: 0.6200000000000001 -
+VCFRONT_feedFwdFanDemand: 0 %
+VCFRONT_feedFwdMDotCabinCondense: 0.275 -
+VCFRONT_feedFwdMDotEvaporator: 0.5750000000000001 -
+VCFRONT_feedFwdPumpDemand: 72 %
+VCFRONT_feedfwdLoadCoolingDomina: 1
+VCFRONT_fogLeftStatus: OFF
+VCFRONT_fogRightStatus: OFF
+VCFRONT_freezeEvapITerm: 1
+VCFRONT_frunkAccessPost: 0
+VCFRONT_frunkInteriorRelSwitch: 0
+VCFRONT_frunkLatchStatus: CLOSED
+VCFRONT_frunkLatchType: 2
+VCFRONT_hasLowRefrigerant: 1
+VCFRONT_hazardLightRequest: NONE
+VCFRONT_hazardSwitchBacklight: 0
+VCFRONT_hcmlAppCRC: 3097682628
+VCFRONT_hcmrAppCRC: 3097682628
+VCFRONT_headlampLeftCurrent: 4.4 A
+VCFRONT_headlampLeftFanStatus: 0
+VCFRONT_headlampLeftFault: 0
+VCFRONT_headlampLeftState: 1
+VCFRONT_headlampLeftTemperature: -40 degC
+VCFRONT_headlampLeftVoltage: 0.0 V
+VCFRONT_headlampRightCurrent: 7.6000000000000005 A
+VCFRONT_headlampRightFanStatus: 0
+VCFRONT_headlampRightFault: 0
+VCFRONT_headlampRightState: 1
+VCFRONT_headlampRightTemperature: -40 degC
+VCFRONT_headlampRightVoltage: 0.0 V
+VCFRONT_headlightLeftVPosition: 288 ticks
+VCFRONT_headlightRightVPosition: 0 ticks
+VCFRONT_highBeamLeftStatus: OFF
+VCFRONT_highBeamRightStatus: OFF
+VCFRONT_highBeamSwitchActive: 0
+VCFRONT_homelinkCommStatus: SNA
+VCFRONT_homelinkRegionCode: 5
+VCFRONT_homelinkV2Response0: 108
+VCFRONT_homelinkV2Response1: 127
+VCFRONT_homelinkV2Response2: 2
+VCFRONT_homelinkV2Response3: 62
+VCFRONT_homelinkV2Response4: 98
+VCFRONT_hornOn: 0
+VCFRONT_hpAmbientSource: 0
+VCFRONT_hpAtSteadyState: 0
+VCFRONT_hpBattStagTarget: 72 C
+VCFRONT_hpBatteryCool: 1
+VCFRONT_hpBatteryCoolCabinConden: 0
+VCFRONT_hpBatteryCoolCabinReheat: 0
+VCFRONT_hpBatteryCoolEvaporator: 1
+VCFRONT_hpBatteryHeatAmbientSour: 1
+VCFRONT_hpBatteryHeatCOP1: 0
+VCFRONT_hpCOP: 0.8 -
+VCFRONT_hpCabinCoolEvaporator: 0
+VCFRONT_hpCabinCoolEvaporatorReh: 1
+VCFRONT_hpCabinHeatAmbientSource: 0
+VCFRONT_hpCabinHeatBatteryCoolRe: 0
+VCFRONT_hpCabinHeatBatteryHeatRe: 1
+VCFRONT_hpCabinHeatBlend: 0
+VCFRONT_hpCabinHeatCOP1: 1
+VCFRONT_hpCabinHeatReheatAmbient: 0
+VCFRONT_hpCabinHeatReheatScaveng: 1
+VCFRONT_hpCabinHeatScavengeOnly: 0
+VCFRONT_hpCompPowerIndex: 96 -
+VCFRONT_hpForceScavenge: 1
+VCFRONT_hpGeneral: 0
+VCFRONT_hpMode: 0
+VCFRONT_hpPotentialLowRefrig: 1
+VCFRONT_hpRefrigerantPurgeState: 1
+VCFRONT_hpSubcoolTarget: 17 C
+VCFRONT_hvacCompLVState: ON
+VCFRONT_hvacPerfTestCommand: 1
+VCFRONT_hvcLVRequest: OFF
+VCFRONT_iBoosterCurrent: 0.2 A
+VCFRONT_iBoosterFault: 0
+VCFRONT_iBoosterLVState: ON
+VCFRONT_iBoosterSelfTestResult: FAILED_EFUSE_OUTPUT_SHORT
+VCFRONT_iBoosterState: LOCKED_OUT
+VCFRONT_iBoosterStateDBG: ON
+VCFRONT_iBoosterTemp: 40.75 degC
+VCFRONT_iBoosterVoltage: 13.100000000000001 V
+VCFRONT_iBoosterWakeLine: 1
+VCFRONT_indicatorLeftRequest: ACTIVE_HIGH
+VCFRONT_indicatorRightRequest: OFF
+VCFRONT_infoAppCrc: 4253084723
+VCFRONT_infoAppGitHash: 0
+VCFRONT_infoAssemblyId: 0
+VCFRONT_infoBootCrc: 1978547766
+VCFRONT_infoBootGitHash: 48977123340192348
+VCFRONT_infoBootUdsProtoVersion: 5
+VCFRONT_infoBuildConfigId: 276
+VCFRONT_infoBuildType: PLATFORM_BUILD
+VCFRONT_infoComponentId: 134
+VCFRONT_infoHardwareId: 45
+VCFRONT_infoIndex: VERSION_DEPRECATED
+VCFRONT_infoPcbaId: 45
+VCFRONT_infoPlatformType: 3
+VCFRONT_infoSubUsageId: 0
+VCFRONT_infoSubcomponent3: 4294967295
+VCFRONT_infoSubcomponent4: 1233154550
+VCFRONT_infoUsageId: 0
+VCFRONT_isActiveHeatingBattery: 0
+VCFRONT_isColdStartRunning: 1
+VCFRONT_isEvapOperationAllowed: 0
+VCFRONT_isHeatPumpOilPurgeActive: 1
+VCFRONT_lccExvCalibFailed: 0
+VCFRONT_lccExvCalibOffset: 0 ticks
+VCFRONT_lccExvFlow: 0.0 %
+VCFRONT_lccExvRange: 1143 ticks
+VCFRONT_lccInletTempEstimate: -32 C
+VCFRONT_lccPassiveHeatPower: 9180 W
+VCFRONT_leftControllerCurrent: 1.5 A
+VCFRONT_leftControllerFault: 0
+VCFRONT_leftControllerState: LOCKED_OUT
+VCFRONT_leftControllerTemp: 39.5 degC
+VCFRONT_leftControllerVoltage: 13.100000000000001 V
+VCFRONT_logging10Hz2: 3
+VCFRONT_logging10HzIndex: COOLANT_PUMPS
+VCFRONT_logging1HzIndex: 10
+VCFRONT_lowBeamLeftStatus: OFF
+VCFRONT_lowBeamRightStatus: OFF
+VCFRONT_lowBeamsCalibrated: 0
+VCFRONT_lowBeamsOnForDRL: 0
+VCFRONT_lowSideLiftEnergyDrive: 0 Wh
+VCFRONT_lowSideWattsLift: 0 W
+VCFRONT_matrixIndex: AlertMatrix2
+VCFRONT_maxAllowedEvapPowerInSer: 7760 W
+VCFRONT_maxChillerCoolingPower: 0 W
+VCFRONT_maxCompressorRPMAllowed: 0 rpm
+VCFRONT_maxEvapHeatRejection: 1625 W
+VCFRONT_minAllowedChillerPowerIn: 0 W
+VCFRONT_minAllowedSuctionPressur: 1.44 bar
+VCFRONT_minEvapHeatRejection: 1050 W
+VCFRONT_minFlowPDCont: 125.5 %
+VCFRONT_modeDesired: 3
+VCFRONT_modeTransitionID: SERIES_1_drive_batteryWantsCool
+VCFRONT_modelLoadCoolingDominant: 0
+VCFRONT_ocsLVRequest: OFF
+VCFRONT_oilPumpFrontLVState: ON
+VCFRONT_oilPumpRearLVRequest: ON
+VCFRONT_parkLVState: ON
+VCFRONT_parkLeftStatus: OFF
+VCFRONT_parkRightStatus: OFF
+VCFRONT_passiveCoolingState: 0
+VCFRONT_pcsLVState: ON
+VCFRONT_pcsSelfTestResult: FAILED_EFUSE_OUTPUT_SHORT
+VCFRONT_premAudioOkToUseHiPower: 0
+VCFRONT_pressureRefrigDischarge: 11.375 bar
+VCFRONT_pressureRefrigDischargeV: 27.5 bar
+VCFRONT_pressureRefrigLiquid: 0.0 bar
+VCFRONT_pressureRefrigSuction: 2.375 bar
+VCFRONT_pressureRefrigSuctionVit: 12.0 bar
+VCFRONT_ptLoopWorthCooling: 1
+VCFRONT_ptSensorIrrational: 0
+VCFRONT_ptcLVRequest: ON
+VCFRONT_pump1AndFanCurrent: 0.0 A
+VCFRONT_pump1AndFanState: 1
+VCFRONT_pump1AndFanVoltage: 13.0 V
+VCFRONT_pump2AndAirCompCurrent: 2.4000000000000004 A
+VCFRONT_pump2AndAirCompState: 1
+VCFRONT_pump2AndAirCompVoltage: 13.100000000000001 V
+VCFRONT_pumpBatSpiError: 0
+VCFRONT_pumpBatteryEnabled: 1
+VCFRONT_pumpBatteryFETTemp: 129 C
+VCFRONT_pumpBatteryInitd: 0
+VCFRONT_pumpBatteryOutVoltage: 0.0 V
+VCFRONT_pumpBatteryPowerOn: 1
+VCFRONT_pumpBatteryRPMActual: 5750 rpm
+VCFRONT_pumpBatteryRPMTarget: 1390 rpm
+VCFRONT_pumpPowertrainEnabled: 0
+VCFRONT_pumpPowertrainFETTemp: 161 C
+VCFRONT_pumpPowertrainInitd: 0
+VCFRONT_pumpPowertrainOutVoltage: 0.0 V
+VCFRONT_pumpPowertrainPowerOn: 0
+VCFRONT_pumpPowertrainRPMActual: 140 rpm
+VCFRONT_pumpPowertrainRPMTarget: 10090 rpm
+VCFRONT_pumpPtSpiError: 1
+VCFRONT_pumpsWake: 0
+VCFRONT_radActiveRejectEstimate: 693 W
+VCFRONT_radPassiveRejectEstimate: 3098 W
+VCFRONT_radarHeaterState: 2
+VCFRONT_radcLVState: ON
+VCFRONT_radiatorFanDemandLimit: 0 %
+VCFRONT_radiatorFanDemandLimited: 0
+VCFRONT_radiatorFanEnabled: 1
+VCFRONT_radiatorFanFETTemp: -31 C
+VCFRONT_radiatorFanInitd: 0
+VCFRONT_radiatorFanOutVoltage: 5.4 V
+VCFRONT_radiatorFanPhaseCurrent: -9.5 A
+VCFRONT_radiatorFanPhaseIMax: 0.0 A
+VCFRONT_radiatorFanPowerOn: 0
+VCFRONT_radiatorFanRPMActual: 6400 rpm
+VCFRONT_radiatorFanRPMTarget: 5250 rpm
+VCFRONT_radiatorFanRunReason: 0
+VCFRONT_radiatorIneffective: 0
+VCFRONT_railAState: 0
+VCFRONT_railA_12v: 12.732767520000001 V
+VCFRONT_railA_5v: 5.01362928 V
+VCFRONT_railBState: 0
+VCFRONT_railB_12v: 12.836197440000001 V
+VCFRONT_railB_5v: 5.0081856 V
+VCFRONT_rcmLVRequest: ON
+VCFRONT_recircExvCalibFailed: 1
+VCFRONT_recircExvCalibOffset: -224 ticks
+VCFRONT_recircExvFlow: 0.0 %
+VCFRONT_recircExvRange: 504 ticks
+VCFRONT_refrigFillRoutineStatus: 0
+VCFRONT_refrigerantHasBeenFilled: 0
+VCFRONT_refrigerantValvesClosed: 0
+VCFRONT_reverseBatteryFault: 0
+VCFRONT_rightControllerCurrent: 2.2 A
+VCFRONT_rightControllerFault: 0
+VCFRONT_rightControllerState: LOCKED_OUT
+VCFRONT_rightControllerTemp: 39.125 degC
+VCFRONT_rightControllerVoltage: 13.100000000000001 V
+VCFRONT_sccmLVRequest: ON
+VCFRONT_seeYouHomeLightingReq: 0
+VCFRONT_shortedCellFaultCounter: 4
+VCFRONT_sideMarkersStatus: OFF
+VCFRONT_sideRepeaterLeftStatus: OFF
+VCFRONT_sideRepeaterRightStatus: OFF
+VCFRONT_silentWakeIBSCurrent: -95.09999999999998 mA
+VCFRONT_simLatchingStalk: IDLE
+VCFRONT_sleepBypassCurrent: 0.0 A
+VCFRONT_sleepBypassFault: 0
+VCFRONT_sleepBypassState: 1
+VCFRONT_sleepBypassVoltage: 10.8 V
+VCFRONT_sleepCurrent: -406.4 mA
+VCFRONT_solenoidEvapCurrent: 0.0 A
+VCFRONT_solenoidEvapState: UNDEFINED
+VCFRONT_statusIndex: HOMELINK
+VCFRONT_subcoolActual: 26.0 C
+VCFRONT_suctionPressureTarget: 0.15 bar
+VCFRONT_switchLightingBrightness: 0.0 %
+VCFRONT_targetBatActiveCool: 57 C
+VCFRONT_targetBatActiveHeat: 10 C
+VCFRONT_targetBatPassive: 72 C
+VCFRONT_targetPTActiveCool: 189 C
+VCFRONT_targetPTPassive: 106 C
+VCFRONT_tasLVState: OFF
+VCFRONT_tempAmbient: 31.0 degC
+VCFRONT_tempAmbientFiltered: 30.5 degC
+VCFRONT_tempCompTargetVoltage: 9.0 V
+VCFRONT_tempCoolantBatInlet: 32.25 degC
+VCFRONT_tempCoolantPTInlet: 32.0 degC
+VCFRONT_tempDischargeSimulated: -40.0 C
+VCFRONT_tempRefrigDischarge: -30.0 C
+VCFRONT_tempRefrigLiquid: -39.875 C
+VCFRONT_tempRefrigSuction: 49.0 C
+VCFRONT_tempSuperheatActFiltered: -5.5 C
+VCFRONT_tempSuperheatActual: 51.2 C
+VCFRONT_tempSuperheatTarget: 79.2 C
+VCFRONT_thmlFanSpiError: 0
+VCFRONT_timeSpentSleeping: 175 s
+VCFRONT_totalLoadCoolingDominant: 1
+VCFRONT_tpmsLVRequest: ON
+VCFRONT_tunerLVRequest: ON
+VCFRONT_turnSignalLeftStatus: OFF
+VCFRONT_turnSignalRightStatus: OFF
+VCFRONT_uiAudioCurrent: 11.3 A
+VCFRONT_uiAudioFault: 0
+VCFRONT_uiAudioLVState: OFF
+VCFRONT_uiAudioOkToUseHighPower: 1
+VCFRONT_uiAudioState: 1
+VCFRONT_uiCurrent: 0.0 A
+VCFRONT_uiFault: 0
+VCFRONT_uiHiCurrentLVState: ON
+VCFRONT_uiOkToUseHighPower: 1
+VCFRONT_uiState: 1
+VCFRONT_usingSimulatedAmbTemp: 0
+VCFRONT_usingSimulatedDischTemp: 0
+VCFRONT_usingSimulatedSuctTemp: 0
+VCFRONT_vbatFusedHighCurrent: 0.0 A
+VCFRONT_vbatFusedHighFault: 0
+VCFRONT_vbatFusedHighState: 0
+VCFRONT_vbatFusedHighTemp: -40.0 degC
+VCFRONT_vbatFusedHighVoltage: 0.0 V
+VCFRONT_vbatFusedSelfTestResult: NOT_RUN
+VCFRONT_vbatMonitorVoltage: 0.04354944 V
+VCFRONT_vbatProt [ch1:0x2E1]: 22.063235040000002 V
+VCFRONT_vbatProt [ch1:0x2F1]: 0.0 V
+VCFRONT_vcleftHiCurrentLVState: ON
+VCFRONT_vcleftOkToUseHighPower: 1
+VCFRONT_vcleftSelfTestResult: FAILED_EFUSE_OUTPUT_SHORT
+VCFRONT_vcrightHiCurrentLVState: ON
+VCFRONT_vcrightOkToUseHighPower: 1
+VCFRONT_vcrightSelfTestResult: FAILED_EFUSE_OUTPUT_SHORT
+VCFRONT_vehiclePowerState: DRIVE
+VCFRONT_vehicleStatusDBG: DRIVE
+VCFRONT_voltageDropCounter: 0
+VCFRONT_voltageFloorReachedCount: 0
+VCFRONT_voltageProfile: 0
+VCFRONT_washerFluidLevel: LOW
+VCFRONT_wasteHeatRequestType: NONE
+VCFRONT_wiperCycles: 54900 Cycles
+VCFRONT_wiperPosition: DEPRESSED_PARK
+VCFRONT_wiperSpeed: OFF
+VCFRONT_wiperState: PARK
+VCLEFT_2RowSeatBothFoldFlatSwitc: 0
+VCLEFT_2RowSeatCenterSwitch: 0
+VCLEFT_2RowSeatLeftFoldFlatSwitc: 0
+VCLEFT_2RowSeatReclineSwitch: 0
+VCLEFT_2RowSeatRightFoldFlatSwit: 0
+VCLEFT_5AVoltage: 4.98641088 V
+VCLEFT_DIeFuseCurrent: 51.300000000000004 A
+VCLEFT_DIeFuseFault: 0
+VCLEFT_FLMapLightStatus: OFF
+VCLEFT_FLMapLightSwitchPressed: 0
+VCLEFT_FRMapLightStatus: OFF
+VCLEFT_FRMapLightSwitchPressed: 0
+VCLEFT_OTAState: 0
+VCLEFT_RLMapLightStatus: OFF
+VCLEFT_RLMapLightSwitchPressed: 0
+VCLEFT_RRMapLightStatus: OFF
+VCLEFT_RRMapLightSwitchPressed: 0
+VCLEFT_a001_WatchdogReset: 0
+VCLEFT_a002_PowerLossReset: 0
+VCLEFT_a003_SWAssertion: 0
+VCLEFT_a010_ExtSupplyVoltError: 0
+VCLEFT_a012_CPUReset: 0
+VCLEFT_a013_AlertManagerFault: 0
+VCLEFT_a015_NVMMAlert: 0
+VCLEFT_a021_TaskSchedulerError: 0
+VCLEFT_a022_TaskInitError: 0
+VCLEFT_a031_UDSActive: 0
+VCLEFT_a041_HighCPULoad: 0
+VCLEFT_a042_HighStackUsage: 0
+VCLEFT_a043_Task1msError: 0
+VCLEFT_a044_Task10msError: 0
+VCLEFT_a045_Task100msError: 0
+VCLEFT_a046_Task1000msError: 0
+VCLEFT_a059_inputResistanceHigh: 0
+VCLEFT_a060_engineeringBuild: 0
+VCLEFT_a061_XCPConnected: 0
+VCLEFT_a062_XCPWasConnected: 0
+VCLEFT_a063_SwitchFault: 0
+VCLEFT_a064_busSleepReqTimeout: 0
+VCLEFT_a097_CMP_MIA: 0
+VCLEFT_a098_DI_THERMAL_MIA: 0
+VCLEFT_a099_PARK_MIA: 0
+VCLEFT_a100_CANbus_MIA: 0
+VCLEFT_a101_PM_MIA: 0
+VCLEFT_a102_PTC_MIA: 0
+VCLEFT_a103_CP_MIA: 0
+VCLEFT_a104_DAS_MIA: 0
+VCLEFT_a105_TAS_MIA: 0
+VCLEFT_a106_PCS_MIA: 0
+VCLEFT_a107_BMS_MIA: 0
+VCLEFT_a108_DIS_MIA: 0
+VCLEFT_a109_RCM_MIA: 0
+VCLEFT_a110_GTW_MIA: 0
+VCLEFT_a111_EPBR_MIA: 0
+VCLEFT_a112_EPBL_MIA: 0
+VCLEFT_a113_UI_MIA: 0
+VCLEFT_a114_ESP_MIA: 0
+VCLEFT_a115_VCSEC_MIA: 0
+VCLEFT_a116_VCRIGHT_MIA: 0
+VCLEFT_a117_VCLEFT_MIA: 0
+VCLEFT_a118_VCFRONT_MIA: 0
+VCLEFT_a119_SCCM_MIA: 0
+VCLEFT_a120_DI_DRIVE_MIA: 0
+VCLEFT_a129_blowerICLatchFault: 0
+VCLEFT_a130_blowerICWarning: 0
+VCLEFT_a131_blowerICTransFault: 0
+VCLEFT_a132_blowerSoftStall: 0
+VCLEFT_a133_blowerLowRPMCBang: 0
+VCLEFT_a134_SteerColUpDownUnCal: 0
+VCLEFT_a135_SteerColInOutUnCal: 0
+VCLEFT_a136_brakeSwitchMismatch: 0
+VCLEFT_a137_VCSECPowerCycled: 0
+VCLEFT_a138_consoleDoorAssist: 0
+VCLEFT_a139_BLERearPowerCycled: 0
+VCLEFT_a140_BLELeftPowerCycled: 0
+VCLEFT_a141_12VAuxPowerTrip: 0
+VCLEFT_a150_windowPinchFront: 0
+VCLEFT_a151_windowPinchRear: 0
+VCLEFT_a152_windowUncalFront: 0
+VCLEFT_a153_windowUncalRear: 0
+VCLEFT_a154_windowThermalFront: 0
+VCLEFT_a155_windowThermalRear: 0
+VCLEFT_a156_windowNoInputFront: 0
+VCLEFT_a157_windowNoInputRear: 0
+VCLEFT_a158_windowPinchOverideF: 0
+VCLEFT_a159_windowPinchOverideR: 0
+VCLEFT_a160_windowUndercurrentF: 0
+VCLEFT_a161_windowUndercurrentR: 0
+VCLEFT_a162_windowEncoderStallF: 0
+VCLEFT_a163_windowEncoderStallR: 0
+VCLEFT_a164_windowFactoryTest: 0
+VCLEFT_a165_windowFactoryTest2: 0
+VCLEFT_a166_windowDebug: 0
+VCLEFT_a167_windowDebugPinchF: 0
+VCLEFT_a168_windowDebugPinchR: 0
+VCLEFT_a169_windowCurrentPeakF: 0
+VCLEFT_a170_windowCurrentPeakR: 0
+VCLEFT_a172_SPI_MIA: 0
+VCLEFT_a180_frontDoorLatchRehome: 0
+VCLEFT_a181_rearDoorLatchRehome: 0
+VCLEFT_a182_emergencyLatchRel: 0
+VCLEFT_a183_doorStateFactoryTest: 0
+VCLEFT_a185_summonAborted: 0
+VCLEFT_a186_latchReleaseFailedF: 0
+VCLEFT_a187_latchReleaseFailedR: 0
+VCLEFT_a188_latchUnableToRearmF: 0
+VCLEFT_a189_latchUnableToRearmR: 0
+VCLEFT_a190_eFuseMgmtVbatFused: 0
+VCLEFT_a191_TLCOvercurrent: 0
+VCLEFT_a196_VEHCANOverterminate: 0
+VCLEFT_a197_VEHCANUndertrminate: 0
+VCLEFT_a200_motorPhantomEncoder: 0
+VCLEFT_a201_motorDutyEncDisabl: 0
+VCLEFT_a202_epbmUnderIStatic: 0
+VCLEFT_a203_epbmOverIStatic: 0
+VCLEFT_a204_epbmUnderIDyn: 0
+VCLEFT_a205_epbmOverIDyn: 0
+VCLEFT_a206_epbWrongDirection: 0
+VCLEFT_a207_epbmEnableWrong: 0
+VCLEFT_a208_epbFaulted: 0
+VCLEFT_a209_epbStateMisTime: 0
+VCLEFT_a210_epbStateTime: 0
+VCLEFT_a211_epbmUnderIStaticNew: 0
+VCLEFT_a212_epbmOverIStaticNew: 0
+VCLEFT_a213_epbmUnderIDynNew: 0
+VCLEFT_a214_epbmOverIDynNew: 0
+VCLEFT_a215_currentDesyncWarning: 0
+VCLEFT_a216_SPI_MIA_debugData1: 0
+VCLEFT_a217_SPI_MIA_debugData2: 0
+VCLEFT_a218_motorDriverFault: 0
+VCLEFT_a219_motorCurrentDropout: 0
+VCLEFT_a220_seatCurrStallTrack: 0
+VCLEFT_a221_seatCurrStallBack: 0
+VCLEFT_a222_seatCurrStallTilt: 0
+VCLEFT_a223_seatCurrStallLift: 0
+VCLEFT_a224_seatEncStallTrack: 0
+VCLEFT_a225_seatEncStallBack: 0
+VCLEFT_a226_seatEncStallTilt: 0
+VCLEFT_a227_seatEncStallLift: 0
+VCLEFT_a228_seatEncOverTrack: 0
+VCLEFT_a229_seatEncOverBack: 0
+VCLEFT_a230_seatEncOverTilt: 0
+VCLEFT_a231_seatEncOverLift: 0
+VCLEFT_a232_seatCurrUnderTrack: 0
+VCLEFT_a233_seatCurrUnderBack: 0
+VCLEFT_a234_seatCurrUnderTilt: 0
+VCLEFT_a235_seatCurrUnderLift: 0
+VCLEFT_a236_lumbarOverPresA: 0
+VCLEFT_a237_lumbarOverPresB: 0
+VCLEFT_a238_lumbarValveMIA: 0
+VCLEFT_a239_seatHeatIFront: 0
+VCLEFT_a240_seatHeatShortFront: 0
+VCLEFT_a241_seatHeatMIAFront: 0
+VCLEFT_a242_seatHeatIRearL: 0
+VCLEFT_a243_seatHeatShortRearL: 0
+VCLEFT_a244_seatHeatMIARearL: 0
+VCLEFT_a251_seatUncalTrack: 0
+VCLEFT_a252_seatUncalBack: 0
+VCLEFT_a253_seatUncalTilt: 0
+VCLEFT_a254_seatUncalLift: 0
+VCLEFT_a259_latchDisarmDelayF: 0
+VCLEFT_a260_latchDisarmDelayR: 0
+VCLEFT_a263_seatTrackStallDebug: 0
+VCLEFT_a264_seatBackStallDebug: 0
+VCLEFT_a265_seatTiltStallDebug: 0
+VCLEFT_a266_seatLiftStallDebug: 0
+VCLEFT_a267_seatTrackHCEncStlDbg: 0
+VCLEFT_a268_seatBackHCEncStlDbg: 0
+VCLEFT_a269_seatTiltHCEncStlDbg: 0
+VCLEFT_a270_seatLiftHCEncStlDbg: 0
+VCLEFT_a272_vhclPwrStateMsmtch: 0
+VCLEFT_a273_handleStuckActiveF: 0
+VCLEFT_a274_handleStuckActiveR: 0
+VCLEFT_a275_leftTurnLightFault: 0
+VCLEFT_a276_mirrorDebug: 0
+VCLEFT_a277_BLELeftUnderVoltage: 0
+VCLEFT_a278_BLERearUnderVoltage: 0
+VCLEFT_a279_VCSECUnderVoltage: 0
+VCLEFT_a280_latchDidNotDisarmF: 0
+VCLEFT_a281_latchDidNotDisarmR: 0
+VCLEFT_a282_latchUnexpectedArmF: 0
+VCLEFT_a283_latchUnexpectedArmR: 0
+VCLEFT_a284_blowerFbkSanity: 0
+VCLEFT_a285_blowerChipComms: 0
+VCLEFT_a286_windowSpeedInvalidF: 0
+VCLEFT_a287_windowSpeedInvalidR: 0
+VCLEFT_a290_occupancyFaultedFront: 0
+VCLEFT_a291_buckleFaultedFront: 0
+VCLEFT_a292_occupancyFaultedRearL: 0
+VCLEFT_a293_occupancyFaultedRearC: 0
+VCLEFT_a294_occupancyFaultedRearR: 0
+VCLEFT_a295_buckleFaultedRearL: 0
+VCLEFT_a300_swcUnderVoltage: 0
+VCLEFT_a301_swcOverVoltage: 0
+VCLEFT_a302_blowerGeneralFault: 0
+VCLEFT_a303_eFuseMgmtWindowLift: 0
+VCLEFT_a304_frontIntHandleShorted: 0
+VCLEFT_a305_rearIntHandleShorted: 0
+VCLEFT_a306_handleDisconnectedF: 0
+VCLEFT_a307_handleDisconnectedR: 0
+VCLEFT_blowerIndex: FEEDBACK_SIGNALS
+VCLEFT_brakeLightStatus: OFF
+VCLEFT_brakePressed: 0
+VCLEFT_brakeSwitchPressed: 0
+VCLEFT_brakeTrailerLightStatus: FAULT
+VCLEFT_btnWindowAutoDownLR: 0
+VCLEFT_btnWindowAutoUpLR: 0
+VCLEFT_btnWindowDownLR: 0
+VCLEFT_btnWindowSwPackAutoDownLF: 0
+VCLEFT_btnWindowSwPackAutoDownLR: 0
+VCLEFT_btnWindowSwPackAutoDownRF: 0
+VCLEFT_btnWindowSwPackAutoDownRR: 0
+VCLEFT_btnWindowSwPackAutoUpLF: 0
+VCLEFT_btnWindowSwPackAutoUpLR: 0
+VCLEFT_btnWindowSwPackAutoUpRF: 0
+VCLEFT_btnWindowSwPackAutoUpRR: 0
+VCLEFT_btnWindowSwPackDownLF: 0
+VCLEFT_btnWindowSwPackDownLR: 0
+VCLEFT_btnWindowSwPackDownRF: 0
+VCLEFT_btnWindowSwPackDownRR: 0
+VCLEFT_btnWindowSwPackUpLF: 0
+VCLEFT_btnWindowSwPackUpLR: 0
+VCLEFT_btnWindowSwPackUpRF: 0
+VCLEFT_btnWindowSwPackUpRR: 0
+VCLEFT_btnWindowUpLR: 0
+VCLEFT_cdpEnumDummy: IDLE
+VCLEFT_columnRecallStatus: SNA
+VCLEFT_consoleDoorAssist: 0
+VCLEFT_dynamicBrakeLightStatus: 0
+VCLEFT_epbFaultStatus: NOMINAL
+VCLEFT_epbMotorCurrent: 0.0 A
+VCLEFT_epbSummonState: IDLE
+VCLEFT_epbUnitStatus: UNKNOWN
+VCLEFT_epbmApplyVoltage: 2.41 A
+VCLEFT_epbmCaliperState: PARK
+VCLEFT_epbmDebugIndex: STATES
+VCLEFT_epbmDynApplyingAllowed: 0
+VCLEFT_epbmDynamicAllowed: 0
+VCLEFT_epbmFaultAllowed: 0
+VCLEFT_epbmFaultStatus: RETRY
+VCLEFT_epbmMotorEnabled: 0
+VCLEFT_epbmOpenAllowed: 0
+VCLEFT_epbmParkAllowed: 1
+VCLEFT_epbmParkingAllowed: 0
+VCLEFT_epbmReleaseVoltage: 2.41 A
+VCLEFT_epbmReleasingAllowed: 0
+VCLEFT_epbmServiceAllowed: 0
+VCLEFT_epbmStartAllowed: 0
+VCLEFT_epbmSummonAllowed: 0
+VCLEFT_epbmSummonParkAllowed: 0
+VCLEFT_epbmSummonReleaseAllowed: 0
+VCLEFT_epbmSummonState: IDLE
+VCLEFT_epbmUnitStatus: PARK
+VCLEFT_epbmUnknownAllowed: 1
+VCLEFT_epbmWinchAllowed: 0
+VCLEFT_epbmWinchReleaseAllowed: 0
+VCLEFT_fogTrailerLightStatus: FAULT
+VCLEFT_footwellLightCurrent: 0.30000000000000004 mA
+VCLEFT_frontBuckleSwitch: ON
+VCLEFT_frontHandlePWM: 8 %
+VCLEFT_frontHandlePulled: 0
+VCLEFT_frontHandlePulledPersist: 0
+VCLEFT_frontIntSwitchPressed: 0
+VCLEFT_frontLatchStatus: CLOSED
+VCLEFT_frontLatchSwitch: 1
+VCLEFT_frontOccupancySwitch: ON
+VCLEFT_frontRelActuatorSwitch: 1
+VCLEFT_frontRideHeight: 1 mm
+VCLEFT_frontSeatBackCalibrated: 1
+VCLEFT_frontSeatBackCurrent: 0.01 A
+VCLEFT_frontSeatBackDuty: 0.0 %
+VCLEFT_frontSeatBackLog: 0
+VCLEFT_frontSeatBackPos: 1737
+VCLEFT_frontSeatBackPosReal: 35.800000000000004 deg
+VCLEFT_frontSeatBackState: STOPPED
+VCLEFT_frontSeatBackrestBack: OFF
+VCLEFT_frontSeatBackrestForward: OFF
+VCLEFT_frontSeatLiftCalibrated: 1
+VCLEFT_frontSeatLiftCurrent: 0.0 A
+VCLEFT_frontSeatLiftDown: OFF
+VCLEFT_frontSeatLiftDuty: 0.0 %
+VCLEFT_frontSeatLiftLog: 0
+VCLEFT_frontSeatLiftPos: 934
+VCLEFT_frontSeatLiftPosReal: 36 mm
+VCLEFT_frontSeatLiftState: STOPPED
+VCLEFT_frontSeatLiftUp: OFF
+VCLEFT_frontSeatLumbarDown: OFF
+VCLEFT_frontSeatLumbarIn: OFF
+VCLEFT_frontSeatLumbarOut: OFF
+VCLEFT_frontSeatLumbarUp: OFF
+VCLEFT_frontSeatTiltCalibrated: 1
+VCLEFT_frontSeatTiltCurrent: 0.0 A
+VCLEFT_frontSeatTiltDown: OFF
+VCLEFT_frontSeatTiltDuty: 0.0 %
+VCLEFT_frontSeatTiltLog: 0
+VCLEFT_frontSeatTiltPos: 0
+VCLEFT_frontSeatTiltPosReal: 0.0 deg
+VCLEFT_frontSeatTiltState: STOPPED
+VCLEFT_frontSeatTiltUp: OFF
+VCLEFT_frontSeatTrackBack: OFF
+VCLEFT_frontSeatTrackCalibrated: 1
+VCLEFT_frontSeatTrackCurrent: 0.0 A
+VCLEFT_frontSeatTrackDuty: 0.0 %
+VCLEFT_frontSeatTrackForward: OFF
+VCLEFT_frontSeatTrackLog: 0
+VCLEFT_frontSeatTrackPos: 592
+VCLEFT_frontSeatTrackPosReal: 117 mm
+VCLEFT_frontSeatTrackState: STOPPED
+VCLEFT_hazardButtonPressed: 0
+VCLEFT_hornSwitchPressed: 0
+VCLEFT_hvacBlowerEnabled: 0
+VCLEFT_hvacBlowerFETTemp: 160 degC
+VCLEFT_hvacBlowerFault: 0
+VCLEFT_hvacBlowerITerm: -1.45 Nm
+VCLEFT_hvacBlowerInitd: 1
+VCLEFT_hvacBlowerLimitFETTemps: 0
+VCLEFT_hvacBlowerOutputDuty: 0 %
+VCLEFT_hvacBlowerPowerOn: 1
+VCLEFT_hvacBlowerRPMActual: 0 rpm
+VCLEFT_hvacBlowerRPMTarget: 0 rpm
+VCLEFT_hvacBlowerSpiError: 0
+VCLEFT_hvacBlowerTorque: -1.65 Nm
+VCLEFT_infoAppCrc: 2168504498
+VCLEFT_infoAppGitHash: 0
+VCLEFT_infoAssemblyId: 0
+VCLEFT_infoBootCrc: 370067298
+VCLEFT_infoBootGitHash: 48977123340192348
+VCLEFT_infoBootUdsProtoVersion: 5
+VCLEFT_infoBuildConfigId: 207
+VCLEFT_infoBuildType: PLATFORM_BUILD
+VCLEFT_infoCBCAppCRC: 1818696954
+VCLEFT_infoComponentId: 35
+VCLEFT_infoHardwareId: 47
+VCLEFT_infoIndex: VERSION_DEPRECATED
+VCLEFT_infoPcbaId: 47
+VCLEFT_infoPlatformType: 3
+VCLEFT_infoSubUsageId: 0
+VCLEFT_infoSubcomponent1: 4294967295
+VCLEFT_infoSubcomponent3: 218362856
+VCLEFT_infoUsageId: 0
+VCLEFT_leftTurnTrailerLightStatus: OFF
+VCLEFT_liftgateLatchRequest: LATCH_REQUEST_NONE
+VCLEFT_liftgateMvmntNotAllowedCo: PLG_MVMT_NOT_ALLOWED_NONE
+VCLEFT_liftgatePhysicalChimeRequ: LIFTGATE_CHIME_REQUEST_NONE
+VCLEFT_liftgatePosition: 0 deg
+VCLEFT_liftgatePositionCalibrate: 1
+VCLEFT_liftgateRequestSource: PLG_REQUEST_SOURCE_NONE
+VCLEFT_liftgateSpeed: 0.0 deg/s
+VCLEFT_liftgateState: PLG_STATE_CLOSED
+VCLEFT_liftgateStatusIndex: LIFTGATE_STATUS_INDEX_1
+VCLEFT_liftgateStoppingCondition: PLG_STOPPING_CONDITION_NONE
+VCLEFT_liftgateStrutCurrent: 0.0 A
+VCLEFT_liftgateStrutDutyCycle: 0 %
+VCLEFT_liftgateUIChimeRequest: LIFTGATE_CHIME_REQUEST_NONE
+VCLEFT_loadShedPriority: 176
+VCLEFT_lumbarAPressureHpa: 33312
+VCLEFT_lumbarAState: STOPPED
+VCLEFT_lumbarActiveTooLongErr: 0
+VCLEFT_lumbarBPressureHpa: 49164
+VCLEFT_lumbarBState: STOPPED
+VCLEFT_lumbarDevMaxPumpPressA: 0
+VCLEFT_lumbarDevMaxPumpPressB: 0
+VCLEFT_lumbarGeneralErr: 0
+VCLEFT_lumbarMaxOperatingPErr: 0
+VCLEFT_lumbarMaxPErr: 0
+VCLEFT_lumbarMinPErr: 0
+VCLEFT_lumbarOvercurrentErr: 0
+VCLEFT_matrixIndex: AlertMatrix1
+VCLEFT_mirrorDipped: 0
+VCLEFT_mirrorFoldState: UNFOLDED
+VCLEFT_mirrorHeatState: OFF
+VCLEFT_mirrorRecallState: INIT
+VCLEFT_mirrorRecallStatus: SNA
+VCLEFT_mirrorState: IDLE
+VCLEFT_mirrorTiltXPosition: 1.3800000000000001 V
+VCLEFT_mirrorTiltYPosition: 2.68 V
+VCLEFT_pcbaTemperature: -40.0 degC
+VCLEFT_rearCenterBuckleSwitch: 1
+VCLEFT_rearCenterOccupancySwitch: OFF
+VCLEFT_rearHVACButtonPressed: 0
+VCLEFT_rearHandlePWM: 4 %
+VCLEFT_rearHandlePulled: 0
+VCLEFT_rearIntSwitchPressed: 0
+VCLEFT_rearLatchStatus: CLOSED
+VCLEFT_rearLatchSwitch: 1
+VCLEFT_rearLeftBuckleSwitch: OFF
+VCLEFT_rearLeftOccupancySwitch: OFF
+VCLEFT_rearRelActuatorSwitch: 1
+VCLEFT_rearRideHeight: -1 mm
+VCLEFT_rearRightOccupancySwitch: OFF
+VCLEFT_reverseTrailerLightStatus: 2
+VCLEFT_rideHeightSensorFault: 0
+VCLEFT_rightMirrorTilt: STOP
+VCLEFT_rightTrnTrailerLightStatus: OFF
+VCLEFT_seatRecallStatus: SNA
+VCLEFT_seatStatusIndex: BACK
+VCLEFT_statusIndex: MUX0
+VCLEFT_steeringColumnInOutAmps: 0.0 A
+VCLEFT_steeringColumnInOutCalib: 1
+VCLEFT_steeringColumnInOutDuty: 0 %
+VCLEFT_steeringColumnInOutPos: 876 ticks
+VCLEFT_steeringColumnLastRequest: NONE
+VCLEFT_steeringColumnSMState: MANUAL_CONTROL
+VCLEFT_steeringColumnUpDownAmps: 0.0 A
+VCLEFT_steeringColumnUpDownCalib: 1
+VCLEFT_steeringColumnUpDownDuty: 0 %
+VCLEFT_steeringColumnUpDownPos: 768 ticks
+VCLEFT_summonActiveAllowed: 0
+VCLEFT_summonArmedAllowed: 0
+VCLEFT_summonCompleteAllowed: 0
+VCLEFT_summonFaultAllowed: 1
+VCLEFT_summonFaultReason: NONE
+VCLEFT_summonIdleAllowed: 1
+VCLEFT_summonInitAllowed: 1
+VCLEFT_summonUnavailableAllowed: 1
+VCLEFT_swcAppCRC: 3430699081
+VCLEFT_swcInputVoltage: 13.0 V
+VCLEFT_swcLeftDoublePress: 0
+VCLEFT_swcLeftPressed: OFF
+VCLEFT_swcLeftScrollTicks: 0
+VCLEFT_swcLeftTiltLeft: OFF
+VCLEFT_swcLeftTiltRight: OFF
+VCLEFT_swcPCBATemperature: -68 degC
+VCLEFT_swcRightDoublePress: 0
+VCLEFT_swcRightPressed: OFF
+VCLEFT_swcRightScrollTicks: 0
+VCLEFT_swcRightTiltLeft: OFF
+VCLEFT_swcRightTiltRight: OFF
+VCLEFT_switchStatusIndex: 0
+VCLEFT_systemRecallStatus: SNA
+VCLEFT_tailLightStatus: OFF
+VCLEFT_tailTrailerLightStatus: FAULT
+VCLEFT_tlcPCBATemperature: -20 degC
+VCLEFT_trailerDetected: 3
+VCLEFT_turnSignalStatus: OFF
+VCLEFT_vbatProt: 13.10838144 V
+VCLEFT_vehiclePowerStateDBG: ACCESSORY
+VCRIGHT_LHPanelAirflowBlocked: 0
+VCRIGHT_RHPanelAirflowBlocked: 1
+VCRIGHT_a001_WatchdogReset: 0
+VCRIGHT_a002_PowerLossReset: 0
+VCRIGHT_a003_SWAssertion: 0
+VCRIGHT_a010_ExtSupplyVoltError: 0
+VCRIGHT_a012_CPUReset: 0
+VCRIGHT_a013_AlertManagerFault: 0
+VCRIGHT_a015_NVMMAlert: 0
+VCRIGHT_a021_TaskSchedulerError: 0
+VCRIGHT_a022_TaskInitError: 0
+VCRIGHT_a031_UDSActive: 0
+VCRIGHT_a041_HighCPULoad: 0
+VCRIGHT_a042_HighStackUsage: 0
+VCRIGHT_a043_Task1msError: 0
+VCRIGHT_a044_Task10msError: 0
+VCRIGHT_a045_Task100msError: 0
+VCRIGHT_a046_Task1000msError: 0
+VCRIGHT_a059_inputResistanceHigh: 0
+VCRIGHT_a060_engineeringBuild: 0
+VCRIGHT_a061_XCPConnected: 0
+VCRIGHT_a062_XCPWasConnected: 0
+VCRIGHT_a063_SwitchFault: 0
+VCRIGHT_a064_busSleepReqTimeout: 0
+VCRIGHT_a097_CMP_MIA: 0
+VCRIGHT_a098_DI_THERMAL_MIA: 0
+VCRIGHT_a099_PARK_MIA: 0
+VCRIGHT_a100_CANbus_MIA: 0
+VCRIGHT_a101_PM_MIA: 0
+VCRIGHT_a102_PTC_MIA: 0
+VCRIGHT_a103_CP_MIA: 0
+VCRIGHT_a104_DAS_MIA: 0
+VCRIGHT_a105_TAS_MIA: 0
+VCRIGHT_a106_PCS_MIA: 0
+VCRIGHT_a107_BMS_MIA: 0
+VCRIGHT_a108_DIS_MIA: 0
+VCRIGHT_a109_RCM_MIA: 0
+VCRIGHT_a110_GTW_MIA: 0
+VCRIGHT_a111_EPBR_MIA: 0
+VCRIGHT_a112_EPBL_MIA: 0
+VCRIGHT_a113_UI_MIA: 1
+VCRIGHT_a114_ESP_MIA: 0
+VCRIGHT_a115_VCSEC_MIA: 0
+VCRIGHT_a116_VCRIGHT_MIA: 0
+VCRIGHT_a117_VCLEFT_MIA: 0
+VCRIGHT_a118_VCFRONT_MIA: 0
+VCRIGHT_a119_SCCM_MIA: 0
+VCRIGHT_a120_DI_DRIVE_MIA: 0
+VCRIGHT_a129_hvacIntakeUncalib: 0
+VCRIGHT_a130_hvacLHBleedUncalib: 0
+VCRIGHT_a131_hvacRHBleedUncalib: 0
+VCRIGHT_a132_hvacLHVaneUncalib: 0
+VCRIGHT_a133_hvacRHVaneUncalib: 0
+VCRIGHT_a134_hvacUpprModeUncalib: 0
+VCRIGHT_a135_hvacLowrModeUncalib: 0
+VCRIGHT_a136_hvacIntakeFault: 0
+VCRIGHT_a137_hvacLHBleedFault: 0
+VCRIGHT_a138_hvacRHBleedFault: 0
+VCRIGHT_a139_hvacLHVaneFault: 0
+VCRIGHT_a140_hvacRHVaneFault: 0
+VCRIGHT_a141_hvacUpperModeFault: 0
+VCRIGHT_a142_hvacLowerModeFault: 0
+VCRIGHT_a144_evaporatorTempSns: 0
+VCRIGHT_a145_ductLeftTempSns: 0
+VCRIGHT_a146_ductRightTempSns: 0
+VCRIGHT_a147_incarProbeTempSns: 0
+VCRIGHT_a148_incarMidTempSns: 0
+VCRIGHT_a149_incarDeepTempSns: 0
+VCRIGHT_a150_windowPinchFront: 0
+VCRIGHT_a151_windowPinchRear: 0
+VCRIGHT_a152_windowUncalFront: 0
+VCRIGHT_a153_windowUncalRear: 0
+VCRIGHT_a154_windowThermalFront: 0
+VCRIGHT_a155_windowThermalRear: 0
+VCRIGHT_a156_windowNoInputFront: 0
+VCRIGHT_a157_windowNoInputRear: 0
+VCRIGHT_a158_windowPinchOverideF: 0
+VCRIGHT_a159_windowPinchOverideR: 0
+VCRIGHT_a160_windowUndercurrentF: 0
+VCRIGHT_a161_windowUndercurrentR: 0
+VCRIGHT_a162_windowEncoderStallF: 0
+VCRIGHT_a163_windowEncoderStallR: 0
+VCRIGHT_a164_windowFactoryTest: 0
+VCRIGHT_a165_windowFactoryTest2: 0
+VCRIGHT_a166_windowDebug: 0
+VCRIGHT_a167_windowDebugPinchF: 0
+VCRIGHT_a168_windowDebugPinchR: 0
+VCRIGHT_a169_windowCurrentPeakF: 0
+VCRIGHT_a170_windowCurrentPeakR: 0
+VCRIGHT_a172_SPI_MIA: 0
+VCRIGHT_a174_BLERightPowerCycled: 0
+VCRIGHT_a180_frontDoorLatchRehome: 0
+VCRIGHT_a181_rearDoorLatchRehome: 0
+VCRIGHT_a182_emergencyLatchRel: 0
+VCRIGHT_a183_doorStateFactoryTest: 0
+VCRIGHT_a184_trunkFailedOpening: 0
+VCRIGHT_a185_summonAborted: 0
+VCRIGHT_a186_latchReleaseFailedF: 0
+VCRIGHT_a187_latchReleaseFailedR: 0
+VCRIGHT_a188_latchUnableToRearmF: 0
+VCRIGHT_a189_latchUnableToRearmR: 0
+VCRIGHT_a190_eFuseMgmtVbatFused: 0
+VCRIGHT_a191_gloveboxPower: 0
+VCRIGHT_a192_gloveboxLatchRel: 0
+VCRIGHT_a193_amplifierEFuseFault: 0
+VCRIGHT_a194_cntctrPwrEFuseFault: 0
+VCRIGHT_a195_hvcEFuseFault: 0
+VCRIGHT_a196_VEHCANOverterminate: 0
+VCRIGHT_a197_VEHCANUndertrminate: 0
+VCRIGHT_a198_PRVCANOverterminate: 0
+VCRIGHT_a199_PRVCANUndertrminate: 0
+VCRIGHT_a200_motorPhantomEncoder: 0
+VCRIGHT_a201_motorDutyEncDisabl: 0
+VCRIGHT_a202_epbmUnderIStatic: 0
+VCRIGHT_a203_epbmOverIStatic: 0
+VCRIGHT_a204_epbmUnderIDyn: 0
+VCRIGHT_a205_epbmOverIDyn: 0
+VCRIGHT_a206_epbWrongDirection: 0
+VCRIGHT_a207_epbmEnableWrong: 0
+VCRIGHT_a208_epbFaulted: 0
+VCRIGHT_a209_epbStateMisTime: 0
+VCRIGHT_a210_epbStateTime: 0
+VCRIGHT_a211_epbmUnderIStaticNew: 0
+VCRIGHT_a212_epbmOverIStaticNew: 0
+VCRIGHT_a213_epbmUnderIDynNew: 0
+VCRIGHT_a214_epbmOverIDynNew: 0
+VCRIGHT_a215_currentDesyncWarning: 0
+VCRIGHT_a216_SPI_MIA_debugData1: 0
+VCRIGHT_a217_SPI_MIA_debugData2: 0
+VCRIGHT_a218_motorDriverFault: 0
+VCRIGHT_a219_motorCurrentDropout: 0
+VCRIGHT_a220_seatCurrStallTrack: 0
+VCRIGHT_a221_seatCurrStallBack: 0
+VCRIGHT_a222_seatCurrStallTilt: 0
+VCRIGHT_a223_seatCurrStallLift: 0
+VCRIGHT_a224_seatEncStallTrack: 0
+VCRIGHT_a225_seatEncStallBack: 0
+VCRIGHT_a226_seatEncStallTilt: 0
+VCRIGHT_a227_seatEncStallLift: 0
+VCRIGHT_a228_seatEncOverTrack: 0
+VCRIGHT_a229_seatEncOverBack: 0
+VCRIGHT_a230_seatEncOverTilt: 0
+VCRIGHT_a231_seatEncOverLift: 0
+VCRIGHT_a232_seatCurrUnderTrack: 0
+VCRIGHT_a233_seatCurrUnderBack: 0
+VCRIGHT_a234_seatCurrUnderTilt: 0
+VCRIGHT_a235_seatCurrUnderLift: 0
+VCRIGHT_a236_lumbarOverPresA: 0
+VCRIGHT_a237_lumbarOverPresB: 0
+VCRIGHT_a238_lumbarValveMIA: 0
+VCRIGHT_a239_seatHeatIFront: 0
+VCRIGHT_a240_seatHeatShortFront: 0
+VCRIGHT_a241_seatHeatMIAFront: 0
+VCRIGHT_a242_seatHeatIRearL: 0
+VCRIGHT_a243_seatHeatShortRearL: 0
+VCRIGHT_a244_seatHeatMIARearL: 0
+VCRIGHT_a245_seatHeatIRearC: 0
+VCRIGHT_a246_seatHeatShortRearC: 0
+VCRIGHT_a247_seatHeatMIARearC: 0
+VCRIGHT_a248_seatHeatIRearR: 0
+VCRIGHT_a249_seatHeatShortRearR: 0
+VCRIGHT_a250_seatHeatMIARearR: 0
+VCRIGHT_a251_seatUncalTrack: 0
+VCRIGHT_a252_seatUncalBack: 0
+VCRIGHT_a253_seatUncalTilt: 0
+VCRIGHT_a254_seatUncalLift: 0
+VCRIGHT_a255_PTCOverTemp: 0
+VCRIGHT_a256_PTCCurrentDrawNoReq: 0
+VCRIGHT_a257_THSMIA: 0
+VCRIGHT_a258_PTCStuckInBoot: 0
+VCRIGHT_a259_latchDisarmDelayF: 0
+VCRIGHT_a260_latchDisarmDelayR: 0
+VCRIGHT_a262_PTCFaulted: 0
+VCRIGHT_a263_seatTrackStallDebug: 0
+VCRIGHT_a264_seatBackStallDebug: 0
+VCRIGHT_a265_seatTiltStallDebug: 0
+VCRIGHT_a266_seatLiftStallDebug: 0
+VCRIGHT_a267_seatTrackHCEncStlDbg: 0
+VCRIGHT_a268_seatBackHCEncStlDbg: 0
+VCRIGHT_a269_seatTiltHCEncStlDbg: 0
+VCRIGHT_a270_seatLiftHCEncStlDbg: 0
+VCRIGHT_a271_THSSensorFault: 0
+VCRIGHT_a272_vhclPwrStateMsmtch: 0
+VCRIGHT_a273_handleStuckActiveF: 0
+VCRIGHT_a274_handleStuckActiveR: 0
+VCRIGHT_a275_rightTurnLightFault: 0
+VCRIGHT_a276_mirrorDebug: 0
+VCRIGHT_a277_BLERightUnderVoltage: 0
+VCRIGHT_a280_latchDidNotDisarmF: 0
+VCRIGHT_a281_latchDidNotDisarmR: 0
+VCRIGHT_a282_latchUnexpectedArmF: 0
+VCRIGHT_a283_latchUnexpectedArmR: 0
+VCRIGHT_a286_windowSpeedInvalidF: 0
+VCRIGHT_a287_windowSpeedInvalidR: 0
+VCRIGHT_a290_occupancyFaultedFront: 0
+VCRIGHT_a291_buckleFaultedFront: 0
+VCRIGHT_a292_buckleFaultedRearC: 0
+VCRIGHT_a293_buckleFaultedRearR: 0
+VCRIGHT_a304_frontIntHandleShorted: 0
+VCRIGHT_a305_rearIntHandleShorted: 0
+VCRIGHT_a306_handleDisconnectedF: 0
+VCRIGHT_a307_handleDisconnectedR: 0
+VCRIGHT_brakeLightStatus: OFF
+VCRIGHT_cabinTempBreathLevel: 43.5 C
+VCRIGHT_cabinTempFanCurrent: 0.0 A
+VCRIGHT_cabinTempFanOutput: 0
+VCRIGHT_cabinTempGlassRoof: 54.5 C
+VCRIGHT_cabinTempInterior: 38.0 C
+VCRIGHT_cabinTempInteriorL2: 28.5 C
+VCRIGHT_cabinTempInteriorL3: -40.0 C
+VCRIGHT_cabinTempInteriorSunny: 48.2 C
+VCRIGHT_cabinTempInteriorSunnyL2: 44.599999999999994 C
+VCRIGHT_cabinTempInteriorSunnyL3: 75.8 C
+VCRIGHT_cabinTempSideGlassLeft: 44.0 C
+VCRIGHT_cabinTempSideGlassRight: 44.0 C
+VCRIGHT_cabinTempTopPadAir: -13.0 C
+VCRIGHT_cabinTempWindshield: 44.5 C
+VCRIGHT_cdpEnumDummy: IDLE
+VCRIGHT_cloudinessProbability: 0 %
+VCRIGHT_conditioningRequest: 0
+VCRIGHT_convectionDeliveredLeft: -12 W/m2
+VCRIGHT_convectionDeliveredRight: 232 W/m2
+VCRIGHT_convectionTargetLeft: -58 W/m2
+VCRIGHT_convectionTargetRight: 140 W/m2
+VCRIGHT_defrostAirflowBlocked: 0
+VCRIGHT_epbFaultStatus: FAULT
+VCRIGHT_epbMotorCurrent: 0.0 A
+VCRIGHT_epbSummonState: ARMED
+VCRIGHT_epbUnitStatus: UNKNOWN
+VCRIGHT_epbmApplyVoltage: 2.4 A
+VCRIGHT_epbmCaliperState: PARK
+VCRIGHT_epbmDebugIndex: STATES
+VCRIGHT_epbmDynApplyingAllowed: 0
+VCRIGHT_epbmDynamicAllowed: 0
+VCRIGHT_epbmFaultAllowed: 0
+VCRIGHT_epbmFaultStatus: NOMINAL
+VCRIGHT_epbmMotorEnabled: 0
+VCRIGHT_epbmOpenAllowed: 0
+VCRIGHT_epbmParkAllowed: 1
+VCRIGHT_epbmParkingAllowed: 0
+VCRIGHT_epbmReleaseVoltage: 2.4 A
+VCRIGHT_epbmReleasingAllowed: 0
+VCRIGHT_epbmServiceAllowed: 0
+VCRIGHT_epbmStartAllowed: 0
+VCRIGHT_epbmSummonAllowed: 0
+VCRIGHT_epbmSummonParkAllowed: 0
+VCRIGHT_epbmSummonReleaseAllowed: 0
+VCRIGHT_epbmSummonState: UNAVAILABLE
+VCRIGHT_epbmSystemStatus: 0
+VCRIGHT_epbmUnknownAllowed: 1
+VCRIGHT_epbmWinchAllowed: 0
+VCRIGHT_epbmWinchReleaseAllowed: 0
+VCRIGHT_estimatedThsSolarLoad: 657 W/m2
+VCRIGHT_evapCondensationRate: 0.0 g/s
+VCRIGHT_evapDryingRoutineRuntime: 0
+VCRIGHT_evapLoadInFresh: 2065 W
+VCRIGHT_evapLoadInRecirc: 4550 W
+VCRIGHT_evapPerformanceLow: 0
+VCRIGHT_evapPulldownBias: 0.0 %
+VCRIGHT_evapPulldownBiasActive: 0
+VCRIGHT_evapWaterMass: 0 Grams
+VCRIGHT_filterLifeBlowerTorque: 2.6639999999999997 Nm
+VCRIGHT_floorAirflowBlocked: 0
+VCRIGHT_frontBuckleStatus: UNLATCHED
+VCRIGHT_frontHandlePWM: 34 %
+VCRIGHT_frontHandlePulled: 0
+VCRIGHT_frontHandlePulledPersist: 0
+VCRIGHT_frontIntSwitchPressed: 0
+VCRIGHT_frontLatchStatus: CLOSED
+VCRIGHT_frontLatchSwitch: 1
+VCRIGHT_frontOccupancyStatus: UNOCCUPIED
+VCRIGHT_frontRelActuatorSwitch: 1
+VCRIGHT_frontSeatBackCalibrated: 1
+VCRIGHT_frontSeatBackCurrent: 0.0 A
+VCRIGHT_frontSeatBackDuty: 0.0 %
+VCRIGHT_frontSeatBackLog: 0
+VCRIGHT_frontSeatBackPos: 1763
+VCRIGHT_frontSeatBackPosReal: 36.300000000000004 deg
+VCRIGHT_frontSeatBackState: STOPPED
+VCRIGHT_frontSeatLiftCalibrated: 1
+VCRIGHT_frontSeatLiftCurrent: 0.0 A
+VCRIGHT_frontSeatLiftDuty: 0.0 %
+VCRIGHT_frontSeatLiftLog: 0
+VCRIGHT_frontSeatLiftPos: 126
+VCRIGHT_frontSeatLiftPosReal: 5 mm
+VCRIGHT_frontSeatLiftState: STOPPED
+VCRIGHT_frontSeatTiltCalibrated: 1
+VCRIGHT_frontSeatTiltCurrent: 0.05 A
+VCRIGHT_frontSeatTiltDuty: 0.0 %
+VCRIGHT_frontSeatTiltLog: 0
+VCRIGHT_frontSeatTiltPos: 89
+VCRIGHT_frontSeatTiltPosReal: 1.0 deg
+VCRIGHT_frontSeatTiltState: STOPPED
+VCRIGHT_frontSeatTrackCalibrated: 1
+VCRIGHT_frontSeatTrackCurrent: 0.0 A
+VCRIGHT_frontSeatTrackDuty: 0.0 %
+VCRIGHT_frontSeatTrackLog: 0
+VCRIGHT_frontSeatTrackPos: 774
+VCRIGHT_frontSeatTrackPosReal: 153 mm
+VCRIGHT_frontSeatTrackState: STOPPED
+VCRIGHT_hvacACRunning: OFF
+VCRIGHT_hvacAirDistributionMode: DEFROST_PANEL_FLOOR
+VCRIGHT_hvacAirFlowModeRow1: NONE
+VCRIGHT_hvacAirFlowModeRow2: NONE
+VCRIGHT_hvacAirflowReason: HVAC_OFF
+VCRIGHT_hvacAutoTransitionReason: END
+VCRIGHT_hvacBlowerSegment: 7
+VCRIGHT_hvacBlowerSpeedRPMReq: 0 RPM
+VCRIGHT_hvacCabOvrheatProtActive: 0
+VCRIGHT_hvacCabOvrheatProtAllowe: 0
+VCRIGHT_hvacCabinHumidityLevel: 0 %
+VCRIGHT_hvacCabinPurgeActive: 1
+VCRIGHT_hvacCabinPurgeAllowed: 0
+VCRIGHT_hvacCabinTempEst: 163.9 C
+VCRIGHT_hvacDuctTargetLeft: 22.0 C
+VCRIGHT_hvacDuctTargetRight: 22.0 C
+VCRIGHT_hvacEstimateWindshieldRH: 0 %
+VCRIGHT_hvacEvapEnabled: 0
+VCRIGHT_hvacFilterLifeDetectActi: 0
+VCRIGHT_hvacFlashFoggingDetected: 0
+VCRIGHT_hvacFoggingRiskLevel: 0 %
+VCRIGHT_hvacHeatingEnabledLeft: 0
+VCRIGHT_hvacHeatingEnabledRight: 0
+VCRIGHT_hvacIntakeActuatorState: BRAKING
+VCRIGHT_hvacIntakeEndStop: 0.0 V
+VCRIGHT_hvacIntakeOperationMode: NORMAL
+VCRIGHT_hvacIntakePosition: 12.4 %
+VCRIGHT_hvacIntakeTarget: 12.4 %
+VCRIGHT_hvacIntakeVoltage: 4.24 V
+VCRIGHT_hvacIntakeZeroStop: 3.8000000000000003 V
+VCRIGHT_hvacLHBleedActuatorState: BRAKING
+VCRIGHT_hvacLHBleedEndStop: 1.6 V
+VCRIGHT_hvacLHBleedOperationMode: NORMAL
+VCRIGHT_hvacLHBleedPosition: 83.2 %
+VCRIGHT_hvacLHBleedTarget: 83.2 %
+VCRIGHT_hvacLHBleedVoltage: 0.5 V
+VCRIGHT_hvacLHBleedZeroStop: 5.0 V
+VCRIGHT_hvacLHVaneActuatorState: BRAKING
+VCRIGHT_hvacLHVaneEndStop: 1.6 V
+VCRIGHT_hvacLHVaneOperationMode: NORMAL
+VCRIGHT_hvacLHVanePosition: 70.8 %
+VCRIGHT_hvacLHVaneTarget: 54.800000000000004 %
+VCRIGHT_hvacLHVaneVoltage: 1.26 V
+VCRIGHT_hvacLHVaneZeroStop: 3.02 V
+VCRIGHT_hvacLowerModeActState: BRAKING
+VCRIGHT_hvacLowerModeEndStop: 0.0 V
+VCRIGHT_hvacLowerModeOpMode: NORMAL
+VCRIGHT_hvacLowerModePosition: 33.6 %
+VCRIGHT_hvacLowerModeTarget: 34.0 %
+VCRIGHT_hvacLowerModeVoltage: 3.24 V
+VCRIGHT_hvacLowerModeZeroStop: 3.8000000000000003 V
+VCRIGHT_hvacMassflowRefrigSystem: 0 g/s
+VCRIGHT_hvacMassflowTarget: 0 g/s
+VCRIGHT_hvacModelInitStatus: 6
+VCRIGHT_hvacOverheatProtActive: 0
+VCRIGHT_hvacPerfTestRunning: 0
+VCRIGHT_hvacPerfTestState: 0
+VCRIGHT_hvacPowerState: 5
+VCRIGHT_hvacQdotFeedforward: -32767 W
+VCRIGHT_hvacQdotLeft: 3330 W
+VCRIGHT_hvacQdotLimitedLeft: 0
+VCRIGHT_hvacQdotLimitedRight: 0
+VCRIGHT_hvacQdotRight: 8178 W
+VCRIGHT_hvacRHBleedActuatorState: BRAKING
+VCRIGHT_hvacRHBleedEndStop: 3.34 V
+VCRIGHT_hvacRHBleedOperationMode: NORMAL
+VCRIGHT_hvacRHBleedPosition: 76.4 %
+VCRIGHT_hvacRHBleedTarget: 92.4 %
+VCRIGHT_hvacRHBleedVoltage: 4.34 V
+VCRIGHT_hvacRHBleedZeroStop: 5.04 V
+VCRIGHT_hvacRHVaneActuatorState: BRAKING
+VCRIGHT_hvacRHVaneEndStop: 2.56 V
+VCRIGHT_hvacRHVaneOperationMode: NORMAL
+VCRIGHT_hvacRHVanePosition: 56.0 %
+VCRIGHT_hvacRHVaneTarget: 84.80000000000001 %
+VCRIGHT_hvacRHVaneVoltage: 2.94 V
+VCRIGHT_hvacRHVaneZeroStop: 1.56 V
+VCRIGHT_hvacRecirc: RECIRC
+VCRIGHT_hvacRecircDoorPercent: 100.80000000000001 %
+VCRIGHT_hvacSecondRowState: OFF
+VCRIGHT_hvacSetTempActualLeft: 22.0 C
+VCRIGHT_hvacSetTempActualRight: 22.0 C
+VCRIGHT_hvacStatusIndex: 0
+VCRIGHT_hvacSystemNominal: 1
+VCRIGHT_hvacUpperModeActState: BRAKING
+VCRIGHT_hvacUpperModeEndStop: 0.16 V
+VCRIGHT_hvacUpperModeOpMode: NORMAL
+VCRIGHT_hvacUpperModePosition: 79.60000000000001 %
+VCRIGHT_hvacUpperModeTarget: 2.8000000000000003 %
+VCRIGHT_hvacUpperModeVoltage: 1.28 V
+VCRIGHT_hvacUpperModeZeroStop: 3.12 V
+VCRIGHT_hvacVentStatus: LEFT
+VCRIGHT_leftHeatOvertempProtect: 0
+VCRIGHT_logging10HzIndex: END
+VCRIGHT_logging1HzIndex: HVAC_COMFORT_SOLAR
+VCRIGHT_lumbarAPressureHpa: 0
+VCRIGHT_lumbarAState: STOPPED
+VCRIGHT_lumbarActiveTooLongErr: 0
+VCRIGHT_lumbarBPressureHpa: 0
+VCRIGHT_lumbarBState: STOPPED
+VCRIGHT_lumbarDevMaxPumpPressA: 0
+VCRIGHT_lumbarDevMaxPumpPressB: 0
+VCRIGHT_lumbarGeneralErr: 0
+VCRIGHT_lumbarMaxOperatingPErr: 0
+VCRIGHT_lumbarMaxPErr: 0
+VCRIGHT_lumbarMinPErr: 0
+VCRIGHT_lumbarOvercurrentErr: 0
+VCRIGHT_matrixIndex: AlertMatrix2
+VCRIGHT_mirrorDipped: 0
+VCRIGHT_mirrorFoldState: UNFOLDED
+VCRIGHT_mirrorRecallState: INIT
+VCRIGHT_mirrorRecallStatus: SNA
+VCRIGHT_mirrorState: IDLE
+VCRIGHT_mirrorTiltXPosition: 1.46 V
+VCRIGHT_mirrorTiltYPosition: 3.0 V
+VCRIGHT_pcbaTemperature: 122.5 C
+VCRIGHT_ptcHeaterHvacActNotReady: 0
+VCRIGHT_ptcHeaterLAirPathBlocked: 0
+VCRIGHT_ptcHeaterNoAirflow: 0
+VCRIGHT_ptcHeaterNoHighVoltage: 0
+VCRIGHT_ptcHeaterNoUiRequest: 0
+VCRIGHT_ptcHeaterPwrDemandLeft: 0 W
+VCRIGHT_ptcHeaterPwrDemandRight: 0 W
+VCRIGHT_ptcHeaterRAirPathBlocked: 0
+VCRIGHT_ptcHeaterReqAirpathBlock: 0
+VCRIGHT_ptcHeaterTempDuctFault: 0
+VCRIGHT_ptcHeaterTempDuctHigh: 0
+VCRIGHT_rearCenterBuckleStatus: SNA
+VCRIGHT_rearFogLightStatus: OFF
+VCRIGHT_rearHandlePWM: 36 %
+VCRIGHT_rearHandlePulled: 0
+VCRIGHT_rearIntSwitchPressed: 0
+VCRIGHT_rearLatchStatus: CLOSED
+VCRIGHT_rearLatchSwitch: 1
+VCRIGHT_rearRelActuatorSwitch: 1
+VCRIGHT_rearRightBuckleStatus: UNLATCHED
+VCRIGHT_reservedForBackCompat: 0
+VCRIGHT_restraintStatusChecksum: 2
+VCRIGHT_restraintStatusCounter: 15
+VCRIGHT_reverseLightStatus: OFF
+VCRIGHT_rightHeatOvertempProtect: 0
+VCRIGHT_seatRecallStatus: SNA
+VCRIGHT_seatStatusIndex: BACK
+VCRIGHT_solarLoadLeftOccupant: 20 W/m2
+VCRIGHT_solarLoadOnVehFiltered: 640 W/m2
+VCRIGHT_solarLoadOnVehicle: 512 W/m2
+VCRIGHT_solarLoadRightOccupant: 24 W/m2
+VCRIGHT_summonActiveAllowed: 0
+VCRIGHT_summonArmedAllowed: 0
+VCRIGHT_summonCompleteAllowed: 0
+VCRIGHT_summonFaultAllowed: 1
+VCRIGHT_summonFaultReason: ESP_FAULT
+VCRIGHT_summonIdleAllowed: 1
+VCRIGHT_summonInitAllowed: 1
+VCRIGHT_summonUnavailableAllowed: 1
+VCRIGHT_systemRecallStatus: SNA
+VCRIGHT_tailLightStatus: OFF
+VCRIGHT_tempAmbientRaw: 31.0 C
+VCRIGHT_tempDuctLeft: 30.5 C
+VCRIGHT_tempDuctLeftLower: -22.0 C
+VCRIGHT_tempDuctLeftUpper: -22.0 C
+VCRIGHT_tempDuctModeledLeft: 27.200000000000003 C
+VCRIGHT_tempDuctModeledRight: 37.099999999999994 C
+VCRIGHT_tempDuctRight: 30.5 C
+VCRIGHT_tempDuctRightLower: -22.0 C
+VCRIGHT_tempDuctRightUpper: 32.0 C
+VCRIGHT_tempEvaporator: 29.5 C
+VCRIGHT_tempEvaporatorTarget: 6.0 C
+VCRIGHT_tempHtrSurfaceModeledL: -40.0 C
+VCRIGHT_tempHtrSurfaceModeledR: -40.0 C
+VCRIGHT_tempIncarCabinDeep: 35.0 C
+VCRIGHT_tempIncarCabinMid: 38.0 C
+VCRIGHT_tempIncarCabinProbe: 38.0 C
+VCRIGHT_thsActive: 1
+VCRIGHT_thsHumidity: 29 %
+VCRIGHT_thsSolarLoadInfrared: 138 W/m2
+VCRIGHT_thsSolarLoadVisible: 114 W/m2
+VCRIGHT_thsTemperature: 55 degC
+VCRIGHT_timeLeftToCabinModelInit: 0
+VCRIGHT_trunkLatchStatus: CLOSED
+VCRIGHT_turnSignalStatus: OFF
+VCRIGHT_wattsDemandEvap: 0 W
+VCRIGHT_wattsHeaterLeftTotal: 0 W
+VCRIGHT_wattsHeaterRightTotal: 0 W
+VCSEC_BLECENTERAppGitHashByte: 4312072344
+VCSEC_BLECENTERComponentID: 0
+VCSEC_BLECENTERCrc: 0
+VCSEC_BLECENTERPcbaID: 0
+VCSEC_BLEConnectionCounter: 0
+VCSEC_BLEConnectionStatus: NOT_CONNECTED
+VCSEC_BLEDeviceBatteryLevel: 5
+VCSEC_BLEDeviceLocation: 3
+VCSEC_BLEDevicePairingStatus: 6
+VCSEC_BLEDeviceType: UNKNOWN
+VCSEC_BLEDeviceVersion: 1032
+VCSEC_BLEEndpointInfoIndex: REAR_APP_GITHASH
+VCSEC_BLELEFTAppGitHashByte: 4312072344
+VCSEC_BLELEFTComponentID: 0
+VCSEC_BLELEFTCrc: 0
+VCSEC_BLELEFTPcbaID: 0
+VCSEC_BLEREARAppGitHashByte: 0
+VCSEC_BLEREARComponentID: 0
+VCSEC_BLEREARCrc: 1642001281
+VCSEC_BLEREARPcbaID: 0
+VCSEC_BLERIGHTAppGitHashByte: 1642001280
+VCSEC_BLERIGHTComponentID: 1
+VCSEC_BLERIGHTCrc: 17105048
+VCSEC_BLERIGHTPcbaID: 0
+VCSEC_MCUCommandType: NONE
+VCSEC_TPMSBatVoltage0: 1.5 V
+VCSEC_TPMSBatVoltage1: 2.59 V
+VCSEC_TPMSBatVoltage2: 2.23 V
+VCSEC_TPMSBatVoltage3: 2.23 V
+VCSEC_TPMSConnectionTypeCurrent0: 2
+VCSEC_TPMSConnectionTypeCurrent1: 1
+VCSEC_TPMSConnectionTypeCurrent2: 2
+VCSEC_TPMSConnectionTypeCurrent3: 2
+VCSEC_TPMSConnectionTypeDesired0: 2
+VCSEC_TPMSConnectionTypeDesired1: 3
+VCSEC_TPMSConnectionTypeDesired2: 1
+VCSEC_TPMSConnectionTypeDesired3: 2
+VCSEC_TPMSDataIndex: 1
+VCSEC_TPMSLocation0: 0
+VCSEC_TPMSLocation1: 4
+VCSEC_TPMSLocation2: 7
+VCSEC_TPMSLocation3: 7
+VCSEC_TPMSPressure0: 2.9000000000000004 bar
+VCSEC_TPMSPressure1: 0.0 bar
+VCSEC_TPMSPressure2: 0.0 bar
+VCSEC_TPMSPressure3: 3.2 bar
+VCSEC_TPMSRSSI0: -89 dBm
+VCSEC_TPMSRSSI1: 82 dBm
+VCSEC_TPMSRSSI2: -87 dBm
+VCSEC_TPMSRSSI3: 85 dBm
+VCSEC_TPMSSensorState0: 3
+VCSEC_TPMSSensorState1: 5
+VCSEC_TPMSSensorState2: 6
+VCSEC_TPMSSensorState3: 3
+VCSEC_TPMSTemperature0: 76 C
+VCSEC_TPMSTemperature1: 69 C
+VCSEC_TPMSTemperature2: 34 C
+VCSEC_TPMSTemperature3: 34 C
+VCSEC_a001_WatchdogReset: 0
+VCSEC_a002_PowerLossReset: 0
+VCSEC_a003_SWAssertion: 0
+VCSEC_a010_ExtSupplyVoltError: 0
+VCSEC_a012_CPUReset: 0
+VCSEC_a013_AlertManagerFault: 0
+VCSEC_a015_NVMMAlert: 0
+VCSEC_a021_TaskSchedulerError: 0
+VCSEC_a022_TaskInitError: 0
+VCSEC_a031_UDSActive: 0
+VCSEC_a041_HighCPULoad: 0
+VCSEC_a042_HighStackUsage: 0
+VCSEC_a043_Task1msError: 0
+VCSEC_a044_Task10msError: 0
+VCSEC_a045_Task100msError: 0
+VCSEC_a046_Task1000msError: 0
+VCSEC_a059_inputResistanceHigh: 0
+VCSEC_a060_engineeringBuild: 0
+VCSEC_a061_XCPConnected: 0
+VCSEC_a062_XCPWasConnected: 0
+VCSEC_a063_SwitchFault: 0
+VCSEC_a064_busSleepReqTimeout: 0
+VCSEC_a097_CMP_MIA: 0
+VCSEC_a098_DI_THERMAL_MIA: 0
+VCSEC_a099_PARK_MIA: 0
+VCSEC_a100_CANbus_MIA: 0
+VCSEC_a101_PM_MIA: 0
+VCSEC_a102_PTC_MIA: 0
+VCSEC_a103_CP_MIA: 0
+VCSEC_a104_DAS_MIA: 0
+VCSEC_a105_TAS_MIA: 0
+VCSEC_a106_PCS_MIA: 0
+VCSEC_a107_BMS_MIA: 0
+VCSEC_a108_DIS_MIA: 0
+VCSEC_a109_RCM_MIA: 0
+VCSEC_a110_GTW_MIA: 0
+VCSEC_a111_EPBR_MIA: 0
+VCSEC_a112_EPBL_MIA: 0
+VCSEC_a113_UI_MIA: 0
+VCSEC_a114_ESP_MIA: 0
+VCSEC_a115_VCSEC_MIA: 0
+VCSEC_a116_VCRIGHT_MIA: 0
+VCSEC_a117_VCLEFT_MIA: 0
+VCSEC_a118_VCFRONT_MIA: 0
+VCSEC_a119_SCCM_MIA: 0
+VCSEC_a120_DI_DRIVE_MIA: 0
+VCSEC_a133_alarmTriggered: 0
+VCSEC_a134_badCertificate: 0
+VCSEC_a135_centerEndpointMIA: 0
+VCSEC_a136_leftEndpointMIA: 0
+VCSEC_a137_rightEndpointMIA: 0
+VCSEC_a138_rearEndpointMIA: 0
+VCSEC_a140_nfcAuthentication: 0
+VCSEC_a141_tooFewKeysOnWhitelist: 0
+VCSEC_a142_bleGattAlertC: 0
+VCSEC_a143_bleGattAlertL: 0
+VCSEC_a144_bleGattAlertR: 0
+VCSEC_a145_bleGattAlertRe: 0
+VCSEC_a147_protobufRXTimeout: 0
+VCSEC_a148_keyWhitelistFull: 0
+VCSEC_a149_attrsWentMissingL: 0
+VCSEC_a150_attrsWentMissingR: 0
+VCSEC_a151_attrsWentMissingRe: 0
+VCSEC_a153_srvcCmdTimeoutC: 0
+VCSEC_a154_srvcCmdTimeoutL: 0
+VCSEC_a155_srvcCmdTimeoutR: 0
+VCSEC_a156_srvcCmdTimeoutRe: 0
+VCSEC_a158_hciFaultC: 0
+VCSEC_a159_hciFaultL: 0
+VCSEC_a161_hciFaultR: 0
+VCSEC_a162_hciFaultRe: 0
+VCSEC_a164_attrsWentMissingC: 0
+VCSEC_a165_ephemeralKeyGenerated: 0
+VCSEC_a166_BLECenterPowerCycled: 0
+VCSEC_a167_BLECenterSoftReset: 0
+VCSEC_a168_BLELeftSoftReset: 0
+VCSEC_a169_BLERightSoftReset: 0
+VCSEC_a170_BLERearSoftReset: 0
+VCSEC_a172_BLEUnexpectedResetC: 0
+VCSEC_a173_BLEUnexpectedResetL: 0
+VCSEC_a174_BLEUnexpectedResetRi: 0
+VCSEC_a175_BLEUnexpectedResetRe: 0
+VCSEC_a177_whitelistAddedKey: 0
+VCSEC_a178_whitelistRemovedKey: 0
+VCSEC_a179_wlistAddedPermission: 0
+VCSEC_a180_wlistRemovedPermission: 0
+VCSEC_a181_signedMessageFault: 0
+VCSEC_a182_cryptoHighStackUsage: 0
+VCSEC_a183_centerEndpointRFMia: 0
+VCSEC_a184_driverEndpointRFMia: 0
+VCSEC_a185_passengerEndpointRFMia: 0
+VCSEC_a186_rearEndpointRFMia: 0
+VCSEC_a187_badConnectionDropped: 0
+VCSEC_a188_protobufDecodeError: 0
+VCSEC_a189_protoExpLengthTooLarge: 0
+VCSEC_a190_protoTooManyBytes: 0
+VCSEC_a191_macIDWlistingFailedC: 0
+VCSEC_a192_macIDWlistingFailedL: 0
+VCSEC_a193_macIDWlistingFailedRi: 0
+VCSEC_a194_macIDWlistingFailedRe: 0
+VCSEC_a195_keyMissingInDrive: 0
+VCSEC_a196_protobufTXTimeout: 0
+VCSEC_a197_indicationFault: 0
+VCSEC_a198_BPillarNFCReaderMIA: 0
+VCSEC_a199_CenterNFCReaderMIA: 0
+VCSEC_a200_centerEndpointLostComm: 0
+VCSEC_a201_leftEndpointLostComm: 0
+VCSEC_a202_rightEndpointLostComm: 0
+VCSEC_a203_rearEndpointLostComm: 0
+VCSEC_a204_SharedSecretsWritten: 0
+VCSEC_a205_MTUUpdateNotConfirmed: 0
+VCSEC_a206_BLELeftAssertFailure: 0
+VCSEC_a207_BLERightAssertFailure: 0
+VCSEC_a208_BLERearAssertFailure: 0
+VCSEC_a209_BLECenterAssertFailure: 0
+VCSEC_alarmStatus: DISARMED
+VCSEC_authRequested: 0
+VCSEC_authenticationStatus: AUTHENTICATED_FOR_DRIVE
+VCSEC_chargePortLockStatus: UNLOCKED
+VCSEC_chargePortRequest: NONE
+VCSEC_driveAttemptedWithoutAuth: 0
+VCSEC_frunkRequest: NONE
+VCSEC_immobilizerState: IDLE
+VCSEC_infoAppCrc: 2888010604
+VCSEC_infoAppGitHash: 0
+VCSEC_infoAssemblyId: ASSEMBLY1
+VCSEC_infoBootCrc: 1077558712
+VCSEC_infoBootGitHash: 58229148687883360
+VCSEC_infoBootUdsProtoVersion: 5
+VCSEC_infoBuildConfigId: 7
+VCSEC_infoBuildType: PLATFORM_BUILD
+VCSEC_infoComponentId: 12
+VCSEC_infoHardwareId: 3
+VCSEC_infoIndex: SUBCOMPONENT4
+VCSEC_infoPcbaId: 3
+VCSEC_infoPlatformType: 3
+VCSEC_infoSubUsageId: 0
+VCSEC_infoSubcomponent1: 1642001281
+VCSEC_infoSubcomponent2: 1642001281
+VCSEC_infoSubcomponent3: 1642001281
+VCSEC_infoSubcomponent4: 1642001281
+VCSEC_infoUsageId: 1
+VCSEC_keyChannelIndexed: SNA
+VCSEC_leftFrontLockStatus: UNLOCKED
+VCSEC_leftRearLockStatus: UNLOCKED
+VCSEC_lockIndicationRequest: NONE_SNA
+VCSEC_lockRequestType: NONE
+VCSEC_matrixIndex: AlertMatrix1
+VCSEC_mobileAppVersion: 60
+VCSEC_numberOfPubKeysOnWhitelist: 4
+VCSEC_prsntRsnDeltaD: 0
+VCSEC_prsntRsnDeltaP: 0
+VCSEC_prsntRsnDeltaR: 0
+VCSEC_prsntRsnHighThresholdC: 0
+VCSEC_prsntRsnHighThresholdD: 0
+VCSEC_prsntRsnHighThresholdP: 1
+VCSEC_prsntRsnHighThresholdR: 0
+VCSEC_rightFrontLockStatus: UNLOCKED
+VCSEC_rightRearLockStatus: UNLOCKED
+VCSEC_simpleLockStatus: UNLOCKED
+VCSEC_summonRequest: IDLE
+VCSEC_trunkLockStatus: UNLOCKED
+VCSEC_trunkRequest: NONE
+VCSEC_usingModifiedMACAddress: 0
+VCSEC_vehicleLockStatus: PASSIVE_INTERNAL_UNLOCKED
+VIN_A405: 24578809344819200
+VIN_B405: 21732127673894195
+VIN_C405: 14410440821256771
+VIN_infoIndex: 16

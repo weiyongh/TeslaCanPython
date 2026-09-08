@@ -1,0 +1,374 @@
+{
+  "mapping_version": "evidence-mapping-draft-v1",
+  "created_at": "2026-09-08T02:34:22.382435+00:00",
+  "approval_state": "NOT_APPROVED",
+  "bindings": [
+    {
+      "binding_id": "EB-0001",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-RETRIEVED-CONNECTION",
+      "observation_refs": [
+        "SO-268A8B468362",
+        "SO-57834B9DC181",
+        "SO-7BB7F570959A",
+        "SO-7C154FF11732",
+        "SO-AFC76E33264C",
+        "SO-0593C7A1D041"
+      ],
+      "candidate_refs": [
+        "C0033",
+        "C0034"
+      ],
+      "evidence_requirement_refs": [
+        "ER-01"
+      ],
+      "proposed_role": "STATE",
+      "epistemic_classes": [
+        "INFERRED",
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "DBC_NAME_NOT_CONFIRMATION"
+      ],
+      "alternatives": [
+        "UI or controller state rather than physical state",
+        "DBC enumeration mismatch"
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "G-PHYSICAL-CONNECTION",
+          "missing_evidence_type": "PHYSICAL_MEASUREMENT",
+          "reason": "No independent plug and lock observation is available."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L204",
+        "ASC-L240255",
+        "ASC-L276297",
+        "ASC-L277088",
+        "ASC-L279102",
+        "ASC-L282544",
+        "ASC-L289270",
+        "ASC-L35",
+        "ASC-L37",
+        "ASC-L42000",
+        "ASC-L43668",
+        "ASC-L43872",
+        "ASC-L44091",
+        "ASC-L44302",
+        "ASC-L44727",
+        "ASC-L577111",
+        "ASC-L624672",
+        "ASC-L625080",
+        "ASC-L633371",
+        "ASC-L634387",
+        "ASC-L641708",
+        "ASC-L644083",
+        "ASC-L644481",
+        "ASC-L645072",
+        "ASC-L685438",
+        "ASC-L685440",
+        "ASC-L685555",
+        "ASC-L83365",
+        "ASC-L85894",
+        "ASC-L86314"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-9c206059b748bc1b",
+        "reasoning_input_package_hash": "5abd023a233d724bdee759f8930bdb565709ce365bf7dedfcb99f33b09c450d6",
+        "reasoning_result_id": "TM3-015-SEMANTIC-RETRIEVAL-REPLAY-001"
+      }
+    },
+    {
+      "binding_id": "EB-0002",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-RETRIEVED-REQUEST",
+      "observation_refs": [
+        "SO-CDB81064C219",
+        "SO-D137E9644D18",
+        "SO-39C18ABF3E3C",
+        "SO-605D4479E286"
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-04",
+        "ER-06"
+      ],
+      "proposed_role": "REQUEST",
+      "epistemic_classes": [
+        "INFERRED",
+        "OBSERVED"
+      ],
+      "semantic_status": "UNVALIDATED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "REQUEST_ROLE_UNCONFIRMED",
+        "NO_HUMAN_EVENT_TIME"
+      ],
+      "alternatives": [
+        "Boolean state",
+        "UI intent",
+        "contactor-control request",
+        "incorrect DBC scaling"
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "G-DIRECT-VI-REQUEST",
+          "missing_evidence_type": "DIRECT_REQUEST",
+          "reason": "No validated vehicle charging voltage/current Request pair is retrieved."
+        },
+        {
+          "gap_id": "G-STOP-EVENT-TIME",
+          "missing_evidence_type": "EXTERNAL_EVENT_TIME",
+          "reason": "No externally observed human stop time is available."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L1802",
+        "ASC-L239851",
+        "ASC-L240253",
+        "ASC-L273533",
+        "ASC-L274543",
+        "ASC-L275550",
+        "ASC-L277203",
+        "ASC-L279219",
+        "ASC-L282612",
+        "ASC-L35",
+        "ASC-L56",
+        "ASC-L576361",
+        "ASC-L633167",
+        "ASC-L634387",
+        "ASC-L634792",
+        "ASC-L683896",
+        "ASC-L684996",
+        "ASC-L685438",
+        "ASC-L83365",
+        "ASC-L85891"
+      ],
+      "promotion_state": "HOLD_UNRESOLVED",
+      "review_required": true,
+      "promotion_reason": "Finding has no safe semantic mapping.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-9c206059b748bc1b",
+        "reasoning_input_package_hash": "5abd023a233d724bdee759f8930bdb565709ce365bf7dedfcb99f33b09c450d6",
+        "reasoning_result_id": "TM3-015-SEMANTIC-RETRIEVAL-REPLAY-001"
+      }
+    },
+    {
+      "binding_id": "EB-0003",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-RETRIEVED-ACTUAL",
+      "observation_refs": [
+        "SO-30140211597F",
+        "SO-CE0335F98FD8",
+        "SO-05B359B48253",
+        "SO-1BD4E76B92C5",
+        "SO-2CA4B2E7EDED"
+      ],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-04",
+        "ER-05"
+      ],
+      "proposed_role": "ACTUAL",
+      "epistemic_classes": [
+        "INFERRED",
+        "OBSERVED"
+      ],
+      "semantic_status": "VALIDATION_REQUIRED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "MEDIUM",
+      "uncertainty_flags": [
+        "ACTUAL_NOT_REQUEST",
+        "ACTUAL_NOT_CAPABILITY",
+        "TIMING_ONLY_POSSIBLE"
+      ],
+      "alternatives": [
+        "Incorrect EVSE current scale",
+        "different measurement boundaries",
+        "timing-only proxy"
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "G-EVSE-QUANTITATIVE",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "No synchronized independent EVSE measurement validates the decoded magnitude."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L109",
+        "ASC-L11",
+        "ASC-L11170",
+        "ASC-L131",
+        "ASC-L13289",
+        "ASC-L150",
+        "ASC-L15418",
+        "ASC-L17538",
+        "ASC-L193",
+        "ASC-L19660",
+        "ASC-L289077",
+        "ASC-L289691",
+        "ASC-L292373",
+        "ASC-L299438",
+        "ASC-L302096",
+        "ASC-L306365",
+        "ASC-L308731",
+        "ASC-L313782",
+        "ASC-L314",
+        "ASC-L316171",
+        "ASC-L321226",
+        "ASC-L323355",
+        "ASC-L328137",
+        "ASC-L330534",
+        "ASC-L332",
+        "ASC-L337698",
+        "ASC-L338601",
+        "ASC-L344876",
+        "ASC-L355",
+        "ASC-L41",
+        "ASC-L431429",
+        "ASC-L4780",
+        "ASC-L504979",
+        "ASC-L511",
+        "ASC-L576808",
+        "ASC-L634393",
+        "ASC-L684674",
+        "ASC-L685444",
+        "ASC-L685615",
+        "ASC-L6919",
+        "ASC-L83372"
+      ],
+      "promotion_state": "HUMAN_REVIEW_REQUIRED",
+      "review_required": true,
+      "promotion_reason": "Semantic role or Signal Validation requires human review.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-9c206059b748bc1b",
+        "reasoning_input_package_hash": "5abd023a233d724bdee759f8930bdb565709ce365bf7dedfcb99f33b09c450d6",
+        "reasoning_result_id": "TM3-015-SEMANTIC-RETRIEVAL-REPLAY-001"
+      }
+    },
+    {
+      "binding_id": "EB-0004",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-CAPABILITY-GAP",
+      "observation_refs": [],
+      "candidate_refs": [],
+      "evidence_requirement_refs": [
+        "ER-08"
+      ],
+      "proposed_role": "CAPABILITY",
+      "epistemic_classes": [
+        "UNSUPPORTED"
+      ],
+      "semantic_status": "INSUFFICIENT_EVIDENCE",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "NO_SUITABLE_CAPABILITY_OBSERVATION"
+      ],
+      "alternatives": [],
+      "evidence_gaps": [
+        {
+          "gap_id": "G-CAPABILITY",
+          "missing_evidence_type": "SIGNAL_VALIDATION",
+          "reason": "No above-threshold retrieved observation safely establishes charging Capability."
+        }
+      ],
+      "raw_reference_closure": [],
+      "promotion_state": "HOLD_UNRESOLVED",
+      "review_required": true,
+      "promotion_reason": "Finding has no safe semantic mapping.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-9c206059b748bc1b",
+        "reasoning_input_package_hash": "5abd023a233d724bdee759f8930bdb565709ce365bf7dedfcb99f33b09c450d6",
+        "reasoning_result_id": "TM3-015-SEMANTIC-RETRIEVAL-REPLAY-001"
+      }
+    },
+    {
+      "binding_id": "EB-0005",
+      "experiment_id": "TM3-015",
+      "finding_id": "F-UNNAMED-RETRIEVAL",
+      "observation_refs": [
+        "OBS-0010",
+        "OBS-0005",
+        "OBS-0009"
+      ],
+      "candidate_refs": [
+        "C0092"
+      ],
+      "evidence_requirement_refs": [],
+      "proposed_role": "UNRESOLVED",
+      "epistemic_classes": [
+        "INFERRED",
+        "OBSERVED"
+      ],
+      "semantic_status": "UNVALIDATED",
+      "validation_state": "PENDING_REVIEW",
+      "confidence": "LOW",
+      "uncertainty_flags": [
+        "RAW_SEMANTICS_UNKNOWN",
+        "PHASE_FEATURE_UNAVAILABLE",
+        "RELATIONSHIP_FEATURE_UNAVAILABLE"
+      ],
+      "alternatives": [
+        "Counter",
+        "heartbeat",
+        "paging",
+        "unrelated state"
+      ],
+      "evidence_gaps": [
+        {
+          "gap_id": "G-UNNAMED-PHASE",
+          "missing_evidence_type": "ALTERNATIVE_CONDITION",
+          "reason": "PHASE_FEATURE_UNAVAILABLE and RELATIONSHIP_FEATURE_UNAVAILABLE prevent event-specific discrimination."
+        }
+      ],
+      "raw_reference_closure": [
+        "ASC-L1002",
+        "ASC-L1011",
+        "ASC-L1223",
+        "ASC-L1234",
+        "ASC-L1431",
+        "ASC-L1441",
+        "ASC-L155",
+        "ASC-L162",
+        "ASC-L292838",
+        "ASC-L293126",
+        "ASC-L293381",
+        "ASC-L293637",
+        "ASC-L293912",
+        "ASC-L294174",
+        "ASC-L294431",
+        "ASC-L359",
+        "ASC-L368",
+        "ASC-L575",
+        "ASC-L583",
+        "ASC-L583404",
+        "ASC-L685537",
+        "ASC-L685547",
+        "ASC-L783",
+        "ASC-L792"
+      ],
+      "promotion_state": "HOLD_UNRESOLVED",
+      "review_required": true,
+      "promotion_reason": "Finding has no safe semantic mapping.",
+      "provenance": {
+        "reasoning_input_package_id": "TM3-015-reasoning-9c206059b748bc1b",
+        "reasoning_input_package_hash": "5abd023a233d724bdee759f8930bdb565709ce365bf7dedfcb99f33b09c450d6",
+        "reasoning_result_id": "TM3-015-SEMANTIC-RETRIEVAL-REPLAY-001"
+      }
+    }
+  ],
+  "promotion_state_counts": {
+    "HUMAN_REVIEW_REQUIRED": 2,
+    "HOLD_UNRESOLVED": 3
+  },
+  "mapping_hash": "a66fe582a20243cb03800f5db4ead2b6475ac14e0632f3afededa393dddb6f03"
+}

@@ -1,0 +1,158 @@
+{
+  "phase": "2.6C",
+  "comparison_id": "HC-TM3-015-STRICT-BLIND-v2.1",
+  "evaluation_side_only": true,
+  "reasoning_output": {
+    "path": "output/TM3-015/reasoning_spike/blind_reasoning_output_v2.1.json",
+    "file_sha256_at_unlock": "1809dd3550fa10bee117fb5bf03fc158b5ef5ffa14c3fa810424e052a40eeb2d",
+    "canonical_object_sha256_at_unlock": "2f21f54063ee161d8675bf47bae402cf94bbfa7ba52c0b2361bf9d3abe0082eb",
+    "frozen_before_historical_sources_read": true
+  },
+  "historical_sources": [
+    {
+      "path": "output/TM3-015/reasoning_spike/reasoning_output.json",
+      "sha256": "4a63dc47c42d82c904a3902172b01f5cc78096f7452f29b02184c5561cc4ec99"
+    },
+    {
+      "path": "output/TM3-015/reasoning_spike/hidden_comparison.json",
+      "sha256": "caf4946f0e551fb47410a5317b25ca82c85dc21a5d559c46abb7ae0225f9905f"
+    },
+    {
+      "path": "output/TM3-015/evidence_assessment.csv",
+      "sha256": "b414d4b9e522da2a75725c6266264ee72c9f2658c82a453596c85c60857f1868"
+    },
+    {
+      "path": "output/TM3-015/energy_dbc_adaptation/energy_chain_summary.json",
+      "sha256": "e8fd80937668b9b950d21c3fcdf85e86a162bdea19b58f257d1c26d53cf2fa2e"
+    }
+  ],
+  "dimension_results": {
+    "evidence_boundary": {
+      "status": "PASS",
+      "evidence": "The output used 10 OBSERVED, 5 INFERRED, 2 UNSUPPORTED and no DERIVED fact bindings; references resolve, inferred claims retain uncertainty and alternatives, and missing external evidence was preserved."
+    },
+    "semantic_role_independence": {
+      "status": "PASS",
+      "evidence": "The output did not infer Request from actual quantities, did not treat capability as actual, kept EVSE-side and Pack-side actual boundaries separate, and did not promote validation-required current fields to confirmed quantitative values."
+    },
+    "control_tree_mapping": {
+      "status": "PASS_WITH_COVERAGE_NOTE",
+      "evidence": "All five findings use existing nodes with PARTIAL mappings and do not force unresolved candidates into the tree. No explicit NO_SAFE_MAPPING finding was produced for the residual candidate space."
+    },
+    "evidence_requirement_mapping": {
+      "status": "PASS_WITH_DIFFERENCES",
+      "evidence": "Mappings are traceable and conservative. ER-04 is INSUFFICIENT because Request is not independently observed; ER-03/05/06 remain partial. ER-07 is marked PARTIAL_SUPPORT despite the sufficiency rule requiring external safety evidence, which is a minor over-crediting risk."
+    },
+    "causality_restraint": {
+      "status": "PASS",
+      "evidence": "Only TEMPORAL_ASSOCIATION_ONLY or CAUSALITY_NOT_ESTABLISHED were used. Human-event times, stop initiator, permission, protocol stages and EVSE internal decisions were not invented."
+    },
+    "dbc_physical_semantic_validation": {
+      "status": "PASS_WITH_COVERAGE_NOTE",
+      "evidence": "All relevant findings require Signal Validation and reject name-only confirmation. The blind result did not explicitly surface the historically noted physically implausible Pack-voltage sample, so conflict coverage is weaker than the prior result."
+    },
+    "unknown_residual_handling": {
+      "status": "PASS_WITH_COVERAGE_NOTE",
+      "evidence": "Residual candidates were not assigned convenient meanings or forced into the model, but the output did not create an explicit unresolved/NO_SAFE_MAPPING residual finding."
+    },
+    "validation_quality": {
+      "status": "PASS",
+      "evidence": "No deterministic follow-up was requested. Proposed next checks are bounded to specific gaps and do not create an exploratory API."
+    }
+  },
+  "claim_discipline": {
+    "status": "PASS",
+    "fact_binding_counts": {
+      "OBSERVED": 10,
+      "DERIVED": 0,
+      "INFERRED": 5,
+      "UNSUPPORTED": 2
+    },
+    "unknown_reference_count": 0,
+    "fabricated_request_permission_protocol_or_human_event_evidence": false,
+    "dbc_name_only_confirmation": false,
+    "causality_confirmed_claims": 0
+  },
+  "meaningful_differences_from_previous_phase_2_6": [
+    {
+      "area": "Request versus actual evidence",
+      "classification": "IMPROVEMENT",
+      "difference": "The v2.1 blind result explicitly classifies ER-04 as INSUFFICIENT because actual-side observations cannot prove an unobserved vehicle voltage/current Request.",
+      "reason": "This is better aligned with the refreshed L3 role boundary and is evidence-grounded rather than agreement-seeking."
+    },
+    {
+      "area": "Connection and external-event boundary",
+      "classification": "IMPROVEMENT",
+      "difference": "The blind result creates a separate connection-sequence finding and consistently preserves the missing door/insertion/lock human-event timestamps.",
+      "reason": "It improves traceability without converting CAN time into physical action time."
+    },
+    {
+      "area": "Stable-window precision",
+      "classification": "NEUTRAL_DIFFERENCE",
+      "difference": "The previous result used one deterministic window-statistics follow-up; the v2.1 replay used none and therefore remains more conservative about a validated 20–30 second stable window.",
+      "reason": "The weaker precision follows from the smaller runtime evidence set, not an unsupported contradiction."
+    },
+    {
+      "area": "ER-07 release classification",
+      "classification": "REGRESSION",
+      "difference": "The blind result assigns PARTIAL_SUPPORT to ER-07 from vehicle-visible release states, whereas the previous result used INSUFFICIENT because safe release and unplug require external physical evidence.",
+      "reason": "The narrative retains the missing evidence, but the status is slightly too positive relative to the ER sufficiency rule."
+    },
+    {
+      "area": "Physical-conflict coverage",
+      "classification": "REGRESSION",
+      "difference": "The blind result broadly requests Signal Validation but does not explicitly identify the prior result's physically implausible Pack-voltage sample or use a conflict candidate.",
+      "reason": "DBC caution passes, but the concrete validation trigger is less complete."
+    },
+    {
+      "area": "Unknown/residual candidates",
+      "classification": "CANNOT_DETERMINE",
+      "difference": "The blind result leaves residual candidates unmapped but provides no explicit residual finding or NO_SAFE_MAPPING record.",
+      "reason": "It avoids false mapping, yet the absence of an explicit audit finding makes residual coverage difficult to assess."
+    },
+    {
+      "area": "Thermal companion line",
+      "classification": "NEUTRAL_DIFFERENCE",
+      "difference": "Both results preserve the thermal line as partial and require DBC/physical validation before asserting a request-to-execution causal chain.",
+      "reason": "Terminology differs but the evidence boundary is materially consistent."
+    }
+  ],
+  "architecture_issues": [
+    {
+      "classification": "FOLLOW_UP_INTERFACE_GAP",
+      "issue": "The existing TARGETED_WINDOW_STATS implementation re-decodes the ASC, while this strict replay prohibits ASC reads and parsing.",
+      "impact": "A blind replay cannot use the current follow-up implementation without violating the replay contract; this run correctly used zero follow-ups.",
+      "recommended_scope": "If Phase 3 needs strict-blind follow-up, provide a deterministic operation over data already frozen inside the package or freeze approved window results as reachable inputs."
+    },
+    {
+      "classification": "EVALUATION_METHOD_GAP",
+      "issue": "The program validator accepts an empty updated_reasoning pass and does not validate the audit metadata fields required by the Phase 2.6C execution contract.",
+      "impact": "Contract/reference correctness passes, but replay lifecycle requirements still need an external audit artifact."
+    }
+  ],
+  "acceptance_criteria": {
+    "strict_cognitive_blindness": "PASS",
+    "frozen_input_hash": "PASS",
+    "discovery_rerun_count_zero": "PASS",
+    "no_asc_parse": "PASS",
+    "no_observation_candidate_regeneration": "PASS",
+    "all_finding_references_resolve": "PASS",
+    "unknown_reference_count_zero": "PASS",
+    "claim_discipline": "PASS",
+    "no_fabricated_evidence": "PASS",
+    "no_dbc_name_only_confirmation": "PASS",
+    "no_temporal_to_causality_promotion": "PASS",
+    "unresolved_candidates_not_forced": "PASS",
+    "follow_up_limit": "PASS",
+    "no_autonomous_loop": "PASS",
+    "output_frozen_before_comparison": "PASS",
+    "comparison_did_not_modify_output": "PASS"
+  },
+  "overall_result": "PASS_WITH_NON_BLOCKING_FINDINGS",
+  "failure_classification": [],
+  "recommendation": "PROCEED_TO_PHASE_3",
+  "comparison_started_at_utc": "2026-09-07T15:03:39Z",
+  "comparison_ended_at_utc": "2026-09-07T15:05:55Z",
+  "comparison_duration_seconds": 136.169022,
+  "reasoning_output_file_sha256_after_comparison": "1809dd3550fa10bee117fb5bf03fc158b5ef5ffa14c3fa810424e052a40eeb2d"
+}
