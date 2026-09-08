@@ -9,3 +9,4 @@
 /captures/
 *.jks
 *.keystore
+doc/V2优化/**/*_temp*
