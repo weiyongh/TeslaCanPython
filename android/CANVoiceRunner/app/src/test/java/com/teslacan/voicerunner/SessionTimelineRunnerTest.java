@@ -66,7 +66,7 @@ public class SessionTimelineRunnerTest {
         int completeCount;
 
         @Override public void onPrepareStep(int index, ScriptStep step) { }
-        @Override public void onCountdown(int value) { countdowns.add(value); }
+        @Override public void onCountdown(int index, int value) { countdowns.add(value); }
         @Override public void onFireStep(int index, ScriptStep step, long elapsedMs) { fired.add(step.title); }
         @Override public void onSkipStep(int index, ScriptStep step) { skipped.add(step.title); }
         @Override public void onComplete() { completeCount++; }

@@ -20,17 +20,27 @@ import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-/** V2优化-任务02-界面只负责控制和显示后台采集会话。 */
+/** V2优化-任务03-沿用既有执行区并增加 Clock、暂停与跳过操作。 */
 public class MainActivity extends Activity implements CollectionRunnerService.SnapshotListener {
     private static final int OPEN = 10, SAVE = 11, NOTIFICATIONS = 12;
     private static final int BLUE = Color.rgb(61, 111, 198), ORANGE = Color.rgb(246, 126, 37);
-    private TextView fileName, timer, current, countdown, next;
-    private Button runButton;
+    private TextView fileName, currentClock, timer, current, countdown, next, sessionStatus;
+    private Button runButton, pauseButton, skipButton, exportButton;
     private String scriptText = "", scriptName = "内置示例脚本.txt";
     private List<ScriptStep> steps = new ArrayList<>();
     private List<String> completedEvents = new ArrayList<>();
     private CollectionRunnerService runnerService;
     private boolean serviceBound;
+    private final Handler clockHandler = new Handler(Looper.getMainLooper());
+    private final Runnable clockTick = new Runnable() {
+        @Override public void run() {
+            if (currentClock != null) {
+                currentClock.setText(new SimpleDateFormat("HH:mm:ss", Locale.CHINA)
+                        .format(new Date()));
+            }
+            clockHandler.postDelayed(this, 250L);
+        }
+    };
 
     private final ServiceConnection serviceConnection = new ServiceConnection() {
         @Override public void onServiceConnected(ComponentName name, IBinder binder) {
@@ -61,10 +71,13 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
 
     @Override protected void onStart() {
         super.onStart();
+        clockHandler.removeCallbacks(clockTick);
+        clockHandler.post(clockTick);
         bindService(new Intent(this, CollectionRunnerService.class), serviceConnection, Context.BIND_AUTO_CREATE);
     }
 
     @Override protected void onStop() {
+        clockHandler.removeCallbacks(clockTick);
         if (serviceBound) {
             runnerService.setSnapshotListener(null);
             unbindService(serviceConnection);
@@ -78,9 +91,17 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         root.setPadding(dp(18), dp(12), dp(18), dp(14)); root.setBackgroundColor(Color.WHITE); root.setFitsSystemWindows(true);
         LinearLayout top = new LinearLayout(this); top.setGravity(Gravity.CENTER);
         top.addView(button("导入脚本", view -> openScript()), buttonLp());
-        top.addView(button("查看脚本", view -> showScript()), buttonLp()); root.addView(top, matchWrap());
-        fileName = text("", 16, Color.DKGRAY); fileName.setGravity(Gravity.CENTER); fileName.setSingleLine();
-        fileName.setEllipsize(android.text.TextUtils.TruncateAt.MIDDLE); root.addView(fileName, matchWrap());
+        top.addView(button("查看脚本", view -> showScript()), buttonLp());
+        exportButton = button("导出", view -> exportEvents());
+        exportButton.setEnabled(false);
+        top.addView(exportButton, buttonLp()); root.addView(top, matchWrap());
+        LinearLayout fileClockRow = new LinearLayout(this); fileClockRow.setGravity(Gravity.CENTER_VERTICAL);
+        fileName = text("", 16, Color.DKGRAY); fileName.setSingleLine();
+        fileName.setEllipsize(android.text.TextUtils.TruncateAt.MIDDLE);
+        fileClockRow.addView(fileName, new LinearLayout.LayoutParams(0, -2, 1f));
+        currentClock = text("--:--:--", 16, Color.DKGRAY); currentClock.setGravity(Gravity.END);
+        fileClockRow.addView(currentClock, new LinearLayout.LayoutParams(dp(88), -2));
+        root.addView(fileClockRow, matchWrap());
         root.addView(new Space(this), space(0.65f));
         timer = text("00:00", 48, Color.rgb(15, 31, 47)); timer.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
         timer.setGravity(Gravity.CENTER); root.addView(timer, matchWrap());
@@ -95,16 +116,27 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         root.addView(new Space(this), space(.35f));
         next = text("下一操作：—", 20, Color.rgb(30, 30, 30)); next.setGravity(Gravity.CENTER);
         next.setPadding(4, dp(8), 4, dp(8)); root.addView(next, matchWrap()); root.addView(new Space(this), space(1f));
-        runButton = button("开始采集", view -> toggle()); LinearLayout.LayoutParams runParams = new LinearLayout.LayoutParams(dp(180), dp(58));
-        runParams.gravity = Gravity.CENTER; root.addView(runButton, runParams); setContentView(root);
+        sessionStatus = text("尚未采集", 17, Color.DKGRAY); sessionStatus.setGravity(Gravity.CENTER);
+        sessionStatus.setPadding(0, dp(6), 0, dp(6)); root.addView(sessionStatus, matchWrap());
+        LinearLayout controls = new LinearLayout(this); controls.setGravity(Gravity.CENTER);
+        pauseButton = button("暂停播报", view -> togglePause()); pauseButton.setBackgroundColor(Color.rgb(80, 170, 90));
+        skipButton = button("跳过", view -> skipCurrent()); skipButton.setBackgroundColor(ORANGE);
+        runButton = button("开始采集", view -> toggle());
+        controls.addView(pauseButton, buttonLp()); controls.addView(skipButton, buttonLp());
+        controls.addView(runButton, buttonLp()); root.addView(controls, matchWrap());
+        pauseButton.setEnabled(false); skipButton.setEnabled(false); setContentView(root);
     }
 
     private void toggle() {
         RunnerSnapshot snapshot = serviceBound ? runnerService.getSnapshot() : null;
-        if (snapshot != null && (snapshot.state == RunnerSnapshot.State.RUNNING || snapshot.state == RunnerSnapshot.State.PREPARING)) {
-            completedEvents = runnerService.getEvents();
-            runnerService.stopSession();
-            showExportPrompt();
+        if (snapshot != null && (snapshot.state == RunnerSnapshot.State.RUNNING
+                || snapshot.state == RunnerSnapshot.State.PAUSED
+                || snapshot.state == RunnerSnapshot.State.PREPARING)) {
+            if (snapshot.state == RunnerSnapshot.State.PREPARING) {
+                runnerService.stopSession();
+                return;
+            }
+            runnerService.finishSession();
             return;
         }
         if (steps.isEmpty()) { toast("请先导入脚本"); return; }
@@ -113,6 +145,8 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
     }
 
     private void startCollection() {
+        completedEvents.clear();
+        exportButton.setEnabled(false);
         Intent intent = new Intent(this, CollectionRunnerService.class).setAction(CollectionRunnerService.ACTION_START)
                 .putExtra(CollectionRunnerService.EXTRA_SCRIPT, scriptText);
         startForegroundService(intent);
@@ -127,18 +161,55 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
             countdown.setText("—");
             showNext(steps.size() > 1 ? 1 : 0);
             runButton.setText("开始采集");
+            pauseButton.setEnabled(false); skipButton.setEnabled(false);
+            sessionStatus.setText("尚未采集");
             return;
         }
         timer.setText(clock((int) (snapshot.elapsedMs / 1000L))); current.setText(snapshot.currentTitle);
         countdown.setText(snapshot.countdownText);
         next.setText(snapshot.nextSecond >= 0 ? "下一操作： " + clock(snapshot.nextSecond) + "  " + snapshot.nextTitle : "下一操作： 已完成");
-        boolean active = snapshot.state == RunnerSnapshot.State.RUNNING || snapshot.state == RunnerSnapshot.State.PREPARING;
+        boolean active = snapshot.state == RunnerSnapshot.State.RUNNING
+                || snapshot.state == RunnerSnapshot.State.PAUSED
+                || snapshot.state == RunnerSnapshot.State.PREPARING;
         runButton.setText(active ? "结束采集" : "开始采集");
+        pauseButton.setEnabled(snapshot.state == RunnerSnapshot.State.RUNNING
+                || snapshot.state == RunnerSnapshot.State.PAUSED);
+        skipButton.setEnabled(snapshot.state == RunnerSnapshot.State.RUNNING
+                || snapshot.state == RunnerSnapshot.State.PAUSED);
+        pauseButton.setText(snapshot.state == RunnerSnapshot.State.PAUSED ? "继续播报" : "暂停播报");
+        if (snapshot.state == RunnerSnapshot.State.PAUSED) {
+            sessionStatus.setText("播报暂停中 · script_time 继续");
+        } else if (snapshot.state == RunnerSnapshot.State.RUNNING) {
+            sessionStatus.setText("播报运行中 · " + snapshot.currentEventStatus);
+        } else if (snapshot.state == RunnerSnapshot.State.PREPARING) {
+            sessionStatus.setText("准备开始采集");
+        } else if (snapshot.state == RunnerSnapshot.State.COMPLETED) {
+            sessionStatus.setText("采集已结束");
+        }
         if (snapshot.state == RunnerSnapshot.State.COMPLETED && runnerService != null
                 && runnerService.claimCompletion()) {
             completedEvents = runnerService.getEvents();
+            exportButton.setEnabled(true);
             showExportPrompt();
         }
+    }
+
+    private void togglePause() {
+        if (runnerService != null) runnerService.togglePause();
+    }
+
+    private void skipCurrent() {
+        if (runnerService == null || !runnerService.skipCurrentEvent()) {
+            toast("当前没有可跳过的操作");
+        }
+    }
+
+    private void exportEvents() {
+        if (completedEvents.isEmpty()) {
+            toast("当前没有可导出的采集记录");
+            return;
+        }
+        saveEvents();
     }
 
     private void showExportPrompt() {
@@ -183,6 +254,7 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
     private void openScript() {
         RunnerSnapshot snapshot = serviceBound ? runnerService.getSnapshot() : null;
         if (snapshot != null && (snapshot.state == RunnerSnapshot.State.RUNNING
+                || snapshot.state == RunnerSnapshot.State.PAUSED
                 || snapshot.state == RunnerSnapshot.State.PREPARING)) {
             toast("请先结束当前采集，再导入脚本");
             return;

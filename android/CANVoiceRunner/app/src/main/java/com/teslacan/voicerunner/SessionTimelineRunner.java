@@ -6,7 +6,7 @@ import java.util.List;
 final class SessionTimelineRunner {
     interface Listener {
         void onPrepareStep(int index, ScriptStep step);
-        void onCountdown(int value);
+        void onCountdown(int index, int value);
         void onFireStep(int index, ScriptStep step, long elapsedMs);
         void onSkipStep(int index, ScriptStep step);
         void onComplete();
@@ -47,7 +47,7 @@ final class SessionTimelineRunner {
         }
         if (remaining >= 1 && remaining <= 3 && countdownSecond != remaining) {
             countdownSecond = remaining;
-            listener.onCountdown(remaining);
+            listener.onCountdown(nextStepIndex, remaining);
         } else if (remaining > 3) {
             countdownSecond = -1;
         }

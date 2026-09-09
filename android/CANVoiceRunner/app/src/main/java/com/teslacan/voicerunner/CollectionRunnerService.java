@@ -22,8 +22,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-/** V2优化-任务02-在界面退到后台后继续计时和语音播报。 */
+/** V2优化-任务03-维护连续 script_time、可暂停播报和 Event 记录。 */
 public final class CollectionRunnerService extends Service
         implements TextToSpeech.OnInitListener, SessionTimelineRunner.Listener {
     static final String ACTION_START = "com.teslacan.voicerunner.START";
@@ -46,7 +48,8 @@ public final class CollectionRunnerService extends Service
 
     private final IBinder binder = new LocalBinder();
     private final Handler handler = new Handler(Looper.getMainLooper());
-    private final List<String> events = new ArrayList<>();
+    private final SessionTimebase timebase = new SessionTimebase();
+    private final List<EventRecord> eventRecords = new ArrayList<>();
     private List<ScriptStep> steps = Collections.emptyList();
     private SessionTimelineRunner timelineRunner;
     private SnapshotListener snapshotListener;
@@ -55,8 +58,12 @@ public final class CollectionRunnerService extends Service
     private boolean ttsReady;
     private boolean preRollStarted;
     private boolean completionClaimed;
-    private long sessionStartMs;
-    private long completedElapsedMs;
+    private long completedScriptTimeUs;
+    private long startClockEpochMs;
+    private long endClockEpochMs;
+    private String startClock = "";
+    private String endClock = "";
+    private int currentEventIndex = -1;
     private String lastNotificationText;
     private RunnerSnapshot.State state = RunnerSnapshot.State.IDLE;
     private String currentTitle = "尚未开始";
@@ -64,11 +71,13 @@ public final class CollectionRunnerService extends Service
 
     private final Runnable tick = new Runnable() {
         @Override public void run() {
-            if (state != RunnerSnapshot.State.RUNNING) return;
-            long elapsedMs = SystemClock.elapsedRealtime() - sessionStartMs;
-            timelineRunner.update(elapsedMs);
-            publish(elapsedMs);
-            if (state == RunnerSnapshot.State.RUNNING) handler.postDelayed(this, TICK_MS);
+            if (!isActive()) return;
+            long nowNanos = SystemClock.elapsedRealtimeNanos();
+            if (state == RunnerSnapshot.State.RUNNING) {
+                timelineRunner.update(timebase.scheduleTimeMs(nowNanos));
+            }
+            publish(timebase.scriptTimeUs(nowNanos) / 1_000L);
+            if (isActive()) handler.postDelayed(this, TICK_MS);
         }
     };
 
@@ -83,7 +92,7 @@ public final class CollectionRunnerService extends Service
         if (intent == null) return START_NOT_STICKY;
         String action = intent.getAction();
         if (ACTION_STOP.equals(action)) {
-            stopSession();
+            finishSession();
             return START_NOT_STICKY;
         }
         if (ACTION_START.equals(action)) {
@@ -107,7 +116,9 @@ public final class CollectionRunnerService extends Service
     }
 
     List<String> getEvents() {
-        return new ArrayList<>(events);
+        return SessionCsvExporter.export(eventRecords,
+                startClockEpochMs, startClock, endClockEpochMs, endClock,
+                completedScriptTimeUs);
     }
 
     boolean claimCompletion() {
@@ -126,11 +137,18 @@ public final class CollectionRunnerService extends Service
             return;
         }
         handler.removeCallbacksAndMessages(null);
-        events.clear();
-        events.add("planned_s,actual_s,event");
+        eventRecords.clear();
+        for (int i = 0; i < steps.size(); i++) {
+            eventRecords.add(new EventRecord(i, steps.get(i)));
+        }
         preRollStarted = false;
         completionClaimed = false;
-        completedElapsedMs = 0L;
+        completedScriptTimeUs = 0L;
+        startClockEpochMs = 0L;
+        endClockEpochMs = 0L;
+        startClock = "";
+        endClock = "";
+        currentEventIndex = -1;
         lastNotificationText = null;
         timelineRunner = new SessionTimelineRunner(steps, this);
         state = RunnerSnapshot.State.PREPARING;
@@ -163,11 +181,14 @@ public final class CollectionRunnerService extends Service
     private void beginTimedRun() {
         if (state != RunnerSnapshot.State.PREPARING) return;
         state = RunnerSnapshot.State.RUNNING;
-        sessionStartMs = SystemClock.elapsedRealtime();
+        long nowNanos = SystemClock.elapsedRealtimeNanos();
+        timebase.start(nowNanos);
+        startClockEpochMs = System.currentTimeMillis();
+        startClock = formatWallClock(startClockEpochMs);
         currentTitle = "开始采集";
         countdownText = "开始";
         speak("开始采集");
-        timelineRunner.update(0L);
+        timelineRunner.update(timebase.scheduleTimeMs(nowNanos));
         publish(0L);
         handler.post(tick);
     }
@@ -183,21 +204,60 @@ public final class CollectionRunnerService extends Service
         stopSelf();
     }
 
+    void finishSession() {
+        if (!isActive()) return;
+        completeSession(true);
+    }
+
+    void togglePause() {
+        if (state == RunnerSnapshot.State.RUNNING) {
+            timebase.pause(SystemClock.elapsedRealtimeNanos());
+            state = RunnerSnapshot.State.PAUSED;
+            if (textToSpeech != null) textToSpeech.stop();
+            publish(currentElapsedMs());
+        } else if (state == RunnerSnapshot.State.PAUSED) {
+            timebase.resume(SystemClock.elapsedRealtimeNanos());
+            state = RunnerSnapshot.State.RUNNING;
+            publish(currentElapsedMs());
+        }
+    }
+
+    boolean skipCurrentEvent() {
+        if (!isActive() || eventRecords.isEmpty()) return false;
+        int targetIndex = currentEventIndex;
+        if (targetIndex < 0 || eventRecords.get(targetIndex).getStatus()
+                == EventRecord.Status.SKIPPED) {
+            targetIndex = timelineRunner == null ? -1 : timelineRunner.getNextStepIndex();
+        }
+        if (targetIndex < 0 || targetIndex >= eventRecords.size()) return false;
+        EventRecord target = eventRecords.get(targetIndex);
+        target.skip(currentScriptTimeUs());
+        currentEventIndex = targetIndex;
+        currentTitle = target.step.title;
+        countdownText = "跳过";
+        publish(currentElapsedMs());
+        return true;
+    }
+
     @Override public void onPrepareStep(int index, ScriptStep step) {
+        if (eventRecords.get(index).getStatus() == EventRecord.Status.SKIPPED) return;
         speak("准备，" + step.title);
     }
 
-    @Override public void onCountdown(int value) {
+    @Override public void onCountdown(int index, int value) {
+        if (eventRecords.get(index).getStatus() == EventRecord.Status.SKIPPED) return;
         countdownText = String.valueOf(value);
         toneGenerator.startTone(ToneGenerator.TONE_PROP_BEEP, 120);
     }
 
     @Override public void onFireStep(int index, ScriptStep step, long elapsedMs) {
+        EventRecord event = eventRecords.get(index);
+        if (event.getStatus() == EventRecord.Status.SKIPPED) return;
+        event.trigger(currentScriptTimeUs());
+        currentEventIndex = index;
         currentTitle = step.title;
         countdownText = "执行";
         toneGenerator.startTone(ToneGenerator.TONE_PROP_ACK, 260);
-        events.add(step.second + "," + String.format(Locale.US, "%.3f", elapsedMs / 1000d)
-                + ",\"" + step.title.replace("\"", "\"\"") + "\"");
     }
 
     @Override public void onSkipStep(int index, ScriptStep step) {
@@ -205,30 +265,32 @@ public final class CollectionRunnerService extends Service
     }
 
     @Override public void onComplete() {
-        completedElapsedMs = Math.max(0L, SystemClock.elapsedRealtime() - sessionStartMs);
-        state = RunnerSnapshot.State.COMPLETED;
-        countdownText = "—";
-        speak("采集完成");
-        publish(completedElapsedMs);
+        completeSession(true);
     }
 
     private long currentElapsedMs() {
-        if (state == RunnerSnapshot.State.COMPLETED) return completedElapsedMs;
-        return state == RunnerSnapshot.State.RUNNING
-                ? Math.max(0L, SystemClock.elapsedRealtime() - sessionStartMs) : 0L;
+        if (state == RunnerSnapshot.State.COMPLETED) return completedScriptTimeUs / 1_000L;
+        return isActive() ? currentScriptTimeUs() / 1_000L : 0L;
     }
 
     private RunnerSnapshot createSnapshot(long elapsedMs) {
         int nextIndex = timelineRunner == null ? 0 : timelineRunner.getNextStepIndex();
+        while (nextIndex < eventRecords.size()
+                && eventRecords.get(nextIndex).getStatus() == EventRecord.Status.SKIPPED) {
+            nextIndex++;
+        }
         String nextTitle = nextIndex < steps.size() ? steps.get(nextIndex).title : "已完成";
         int nextSecond = nextIndex < steps.size() ? steps.get(nextIndex).second : -1;
+        String eventStatus = currentEventIndex >= 0 && currentEventIndex < eventRecords.size()
+                ? eventRecords.get(currentEventIndex).getStatus().csvValue : "pending";
         return new RunnerSnapshot(state, elapsedMs, currentTitle, nextTitle,
-                nextSecond, countdownText);
+                nextSecond, countdownText, eventStatus);
     }
 
     private void publish(long elapsedMs) {
         RunnerSnapshot snapshot = createSnapshot(elapsedMs);
         if (state == RunnerSnapshot.State.PREPARING || state == RunnerSnapshot.State.RUNNING
+                || state == RunnerSnapshot.State.PAUSED
                 || state == RunnerSnapshot.State.COMPLETED) {
             String notificationText = notificationText(snapshot);
             if (!notificationText.equals(lastNotificationText)) {
@@ -243,6 +305,9 @@ public final class CollectionRunnerService extends Service
     private String notificationText(RunnerSnapshot snapshot) {
         if (snapshot.state == RunnerSnapshot.State.PREPARING) return "准备开始采集";
         String elapsed = formatClock((int) (snapshot.elapsedMs / 1000L));
+        if (snapshot.state == RunnerSnapshot.State.PAUSED) {
+            return elapsed + " · 播报暂停，采集时间继续";
+        }
         return snapshot.nextSecond >= 0
                 ? elapsed + " · 下一操作 " + formatClock(snapshot.nextSecond) + " " + snapshot.nextTitle
                 : elapsed + " · 已完成";
@@ -289,6 +354,31 @@ public final class CollectionRunnerService extends Service
     private String formatClock(int seconds) {
         int value = Math.floorMod(seconds, 3600);
         return String.format(Locale.CHINA, "%02d:%02d", value / 60, value % 60);
+    }
+
+    private boolean isActive() {
+        return state == RunnerSnapshot.State.RUNNING || state == RunnerSnapshot.State.PAUSED;
+    }
+
+    private long currentScriptTimeUs() {
+        return timebase.scriptTimeUs(SystemClock.elapsedRealtimeNanos());
+    }
+
+    private void completeSession(boolean announce) {
+        if (!isActive()) return;
+        handler.removeCallbacks(tick);
+        completedScriptTimeUs = currentScriptTimeUs();
+        endClockEpochMs = System.currentTimeMillis();
+        endClock = formatWallClock(endClockEpochMs);
+        state = RunnerSnapshot.State.COMPLETED;
+        countdownText = "—";
+        if (announce) speak("采集完成");
+        publish(completedScriptTimeUs / 1_000L);
+    }
+
+    private String formatWallClock(long epochMs) {
+        return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX", Locale.US)
+                .format(new Date(epochMs));
     }
 
     @Override public void onInit(int status) {
