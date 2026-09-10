@@ -42,6 +42,46 @@
 
 遇到基线规划、采集脚本、控制树、功能诊断树、实验结论或学习路线任务时，普通工作以 `knowledge/notion_l3/current/` 为正式本地 L3 Knowledge Source，只读取当前任务所需页面。不得默认访问实时Notion，也不得把 `doc/notion_workspace_context.md`、`knowledge/notion_l3/snapshots/`、Notion“备份库”或全局搜索命中的历史副本作为日常正式L3来源。只有用户明确要求同步或实时核实、用户说明Notion已更新，或本地 `current/` 确实缺少当前任务必需知识时，才访问Notion；同步遵循 `doc/methodology/TeslaCanPython_Notion_L3_本地同步规范_v0.2.md`。仅做纯代码修复或格式调整时，不必读取无关L3页面。
 
+## Acquisition Plan / 采集计划长期约定
+
+用户提出“开始计划一个L3的采集”、采集Case、采集案例、采集计划或语义相近的请求时，默认指向本项目的Acquisition Plan（采集计划）工作，不理解为直接编写一份孤立脚本。进入该工作域后，先检查当前Case已经存在的L3 Knowledge、冻结Case契约、现场条件和Acquisition Plan等产物，再根据真实缺口进入对应阶段，不机械地每次从L3重新开始：
+
+```text
+检查当前Case已有产物
+├─ 所需L3 Knowledge不足
+│  → 只补足支撑当前Case所必需的最小L3
+│  → Case → Evidence Requirement → Observable Requirement
+│  → 人工审核并冻结Case契约
+├─ 已有足够L3，但没有冻结Case契约
+│  → Case → Evidence Requirement → Observable Requirement
+│  → 人工审核并冻结Case契约
+└─ 已有冻结Case契约
+   → 直接进入现场条件 → Acquisition Plan → Script
+
+已审核Case契约
++ 用户提供的自然语言现场条件
+→ AI草拟Event及OR映射
+→ Acquisition Plan
+→ 最小结构校验与当前Renderer渲染
+→ 人工审核
+→ 可执行Script
+```
+
+- L3 Knowledge只需充分支撑当前Case的语义、主线、状态迁移和控制关系；不得为了当前Case先补完该系统的全部L3知识。
+- 已有产物能够满足当前阶段输入时直接复用；只有实际缺失或不足时才回到相应上游补足。
+- Case契约是规范性语义输入，只承载`L3 → Case → ER → OR`，不绑定Vehicle或Round。
+- 脚本Reference是结合特定现场条件形成的示例性预期输出，用于表达现场风格和回归验证；不得反向定义Case、ER或OR。
+- Reference不得向新Acquisition Plan注入本次Contract、用户本次明确现场条件和公共规则未提供的车型、设备或实现细节；项目记忆和既有车型上下文也不得作为未声明现场条件的替代来源。
+- 现场条件由用户在讨论Case时以自然语言提供，例如启动入口、可调设置、显示能力、可拍摄页面和允许的停止方式。
+- VoiceRunner只播报每个Event的第一行标题，并在Event前自动倒数，以提示音作为操作者执行动作的时间锚点；其余行是不播报的现场说明。标题必须简短、清晰、可直接执行，Script不重复写入倒计时内容。
+- Event计划时间必须同时满足L3观察窗口和真实现场行为，纳入人员位置与移动、设备切换、页面操作、拍照取证以及下一次倒计时前的就位余量；等待必须具有基线、响应或稳定观察等明确采集意义。
+- AI负责从已审核语义和现场条件草拟Event；共享代码只负责Acquisition Plan最小结构承载、确定性校验和渲染，不按Case编写专用生成逻辑。
+- Candidate Signal、DBC、ASC和Evidence Mapping不属于Case契约或Script生成的前置环节；只能在Case契约冻结后评估可观测性，不得反向塑造Case、ER、OR或实验设计。
+- VoiceRunner是当前唯一Renderer和输出目标，但Acquisition Plan本身不以VoiceRunner命名或限定职责；未经实际需求不建设Renderer插件机制或未来输出抽象。
+- Acquisition Plan生成的现场Script文件名使用`L3-<System>-<Module>-<AcquisitionBriefName>_<Module中文名><AcquisitionBriefName中文名>采集.txt`。英文前缀采用Case语义标识，中文后缀直接表达“Module + Acquisition Brief Name + 采集”；例如`L3-Charge-Slow-FullCycle_慢充全过程采集.txt`。不得再使用泛化的`_语音执行脚本`作为Case级输出文件名。
+- 相关长期入口为`doc/L3采集Case/`、`doc/tools/acquisition_plan/`和`doc/methodology/采集身份与追溯约定.md`。
+- “开始计划”默认表示进入逐层讨论、草拟和人工审核，不自动授权为已经批准正式脚本、程序开发、实车采集或后续ASC分析。
+
 知识优先级：
 
 1. 用户当前指令和最新实验事实；
