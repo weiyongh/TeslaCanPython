@@ -7,6 +7,8 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.content.pm.ServiceInfo;
+import android.content.pm.PackageManager;
+import android.Manifest;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
 import android.os.Binder;
@@ -24,6 +26,9 @@ import java.util.List;
 import java.util.Locale;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /** V2优化-任务03-维护连续 script_time、可暂停播报和 Event 记录。 */
 public final class CollectionRunnerService extends Service
@@ -31,9 +36,16 @@ public final class CollectionRunnerService extends Service
     static final String ACTION_START = "com.teslacan.voicerunner.START";
     static final String ACTION_STOP = "com.teslacan.voicerunner.STOP";
     static final String EXTRA_SCRIPT = "script";
+    static final String EXTRA_SCRIPT_NAME = "script_name";
+    static final String EXTRA_RECORDING_ENABLED = "recording_enabled";
 
     interface SnapshotListener {
         void onSnapshot(RunnerSnapshot snapshot);
+    }
+
+    interface ExportListener {
+        void onExported();
+        void onError(String message);
     }
 
     final class LocalBinder extends Binder {
@@ -50,6 +62,7 @@ public final class CollectionRunnerService extends Service
     private final Handler handler = new Handler(Looper.getMainLooper());
     private final SessionTimebase timebase = new SessionTimebase();
     private final List<EventRecord> eventRecords = new ArrayList<>();
+    private final ExecutorService persistenceExecutor = Executors.newSingleThreadExecutor();
     private List<ScriptStep> steps = Collections.emptyList();
     private SessionTimelineRunner timelineRunner;
     private SnapshotListener snapshotListener;
@@ -59,6 +72,7 @@ public final class CollectionRunnerService extends Service
     private boolean preRollStarted;
     private boolean completionClaimed;
     private long completedScriptTimeUs;
+    private long completedScheduleTimeMs;
     private long startClockEpochMs;
     private long endClockEpochMs;
     private String startClock = "";
@@ -68,6 +82,13 @@ public final class CollectionRunnerService extends Service
     private RunnerSnapshot.State state = RunnerSnapshot.State.IDLE;
     private String currentTitle = "尚未开始";
     private String countdownText = "—";
+    private String sourceScriptName = "采集脚本.txt";
+    private boolean recordingEnabled;
+    private SessionRecord sessionRecord;
+    private SessionStorage sessionStorage;
+    private SessionStorage.Files sessionFiles;
+    private SessionAudioRecorder audioRecorder;
+    private String audioStartFailure;
 
     private final Runnable tick = new Runnable() {
         @Override public void run() {
@@ -86,6 +107,7 @@ public final class CollectionRunnerService extends Service
         createNotificationChannel();
         textToSpeech = new TextToSpeech(this, this);
         toneGenerator = new ToneGenerator(AudioManager.STREAM_MUSIC, 90);
+        sessionStorage = new SessionStorage(this);
     }
 
     @Override public int onStartCommand(Intent intent, int flags, int startId) {
@@ -96,6 +118,11 @@ public final class CollectionRunnerService extends Service
             return START_NOT_STICKY;
         }
         if (ACTION_START.equals(action)) {
+            sourceScriptName = intent.getStringExtra(EXTRA_SCRIPT_NAME);
+            if (sourceScriptName == null || sourceScriptName.trim().isEmpty()) {
+                sourceScriptName = "采集脚本.txt";
+            }
+            recordingEnabled = intent.getBooleanExtra(EXTRA_RECORDING_ENABLED, false);
             startInForeground(buildNotification("准备开始采集"));
             startSession(intent.getStringExtra(EXTRA_SCRIPT));
         }
@@ -117,15 +144,22 @@ public final class CollectionRunnerService extends Service
 
     List<String> getEvents() {
         return SessionCsvExporter.export(eventRecords,
-                startClockEpochMs, startClock, endClockEpochMs, endClock,
-                completedScriptTimeUs);
+                startClockEpochMs, startClock);
+    }
+
+    SessionRecord getSessionRecord() {
+        return sessionRecord;
+    }
+
+    SessionStorage.Files getSessionFiles() {
+        return sessionFiles;
     }
 
     boolean claimCompletion() {
-        if (state != RunnerSnapshot.State.COMPLETED || completionClaimed) return false;
+        if (state != RunnerSnapshot.State.COMPLETED || completionClaimed
+                || !isAudioTerminal()) return false;
         completionClaimed = true;
         stopForeground(STOP_FOREGROUND_REMOVE);
-        stopSelf();
         return true;
     }
 
@@ -144,17 +178,23 @@ public final class CollectionRunnerService extends Service
         preRollStarted = false;
         completionClaimed = false;
         completedScriptTimeUs = 0L;
+        completedScheduleTimeMs = 0L;
         startClockEpochMs = 0L;
         endClockEpochMs = 0L;
         startClock = "";
         endClock = "";
         currentEventIndex = -1;
+        sessionRecord = null;
+        sessionFiles = null;
+        audioRecorder = null;
+        audioStartFailure = null;
         lastNotificationText = null;
         timelineRunner = new SessionTimelineRunner(steps, this);
         state = RunnerSnapshot.State.PREPARING;
         currentTitle = "准备开始采集";
         countdownText = "—";
         publish(0L);
+        if (recordingEnabled) startAudioPreRoll();
         if (ttsReady) speak("准备开始采集", "pre_start");
         else handler.postDelayed(this::beginPreRoll, 1800L);
     }
@@ -185,6 +225,35 @@ public final class CollectionRunnerService extends Service
         timebase.start(nowNanos);
         startClockEpochMs = System.currentTimeMillis();
         startClock = formatWallClock(startClockEpochMs);
+        String sessionId = sessionStorage.nextSessionId();
+        String directoryName = SessionStorage.directoryName(
+                sourceScriptName, startClockEpochMs, sessionId);
+        sessionRecord = new SessionRecord(
+                sessionId, sourceScriptName, directoryName, eventRecords);
+        sessionRecord.startClockEpochMs = startClockEpochMs;
+        sessionRecord.startClock = startClock;
+        sessionRecord.startRealtimeNs = nowNanos;
+        sessionRecord.audio.enabled = recordingEnabled;
+        if (!recordingEnabled) {
+            sessionRecord.audio.status = "DISABLED";
+        } else if (audioStartFailure != null) {
+            markAudioFailure(audioStartFailure, 0L);
+        } else {
+            sessionRecord.audio.status = "RECORDING";
+            sessionRecord.audio.requestClock = formatWallClock(audioRecorder.requestClockEpochMs());
+            sessionRecord.audio.requestOffsetUs =
+                    (audioRecorder.requestRealtimeNs() - nowNanos) / 1_000L;
+            sessionRecord.audio.sampleRateHz = 48_000;
+            sessionRecord.audio.channelCount = 1;
+            sessionRecord.audio.mimeType = "audio/mp4";
+            sessionRecord.audio.bitRate = 96_000;
+        }
+        try {
+            sessionFiles = sessionStorage.createSessionFiles(directoryName);
+            persistAsync();
+        } catch (IOException error) {
+            sessionFiles = null;
+        }
         currentTitle = "开始采集";
         countdownText = "开始";
         speak("开始采集");
@@ -196,6 +265,7 @@ public final class CollectionRunnerService extends Service
     void stopSession() {
         handler.removeCallbacksAndMessages(null);
         if (textToSpeech != null) textToSpeech.stop();
+        if (audioRecorder != null) audioRecorder.stop();
         state = RunnerSnapshot.State.IDLE;
         currentTitle = "尚未开始";
         countdownText = "—";
@@ -223,19 +293,16 @@ public final class CollectionRunnerService extends Service
     }
 
     boolean skipCurrentEvent() {
-        if (!isActive() || eventRecords.isEmpty()) return false;
+        if (!isActive() || eventRecords.isEmpty() || currentEventIndex < 0) return false;
         int targetIndex = currentEventIndex;
-        if (targetIndex < 0 || eventRecords.get(targetIndex).getStatus()
-                == EventRecord.Status.SKIPPED) {
-            targetIndex = timelineRunner == null ? -1 : timelineRunner.getNextStepIndex();
-        }
         if (targetIndex < 0 || targetIndex >= eventRecords.size()) return false;
         EventRecord target = eventRecords.get(targetIndex);
-        target.skip(currentScriptTimeUs());
+        if (!target.skip(currentScriptTimeUs())) return false;
         currentEventIndex = targetIndex;
         currentTitle = target.step.title;
         countdownText = "跳过";
         publish(currentElapsedMs());
+        persistAsync();
         return true;
     }
 
@@ -258,6 +325,7 @@ public final class CollectionRunnerService extends Service
         currentTitle = step.title;
         countdownText = "执行";
         toneGenerator.startTone(ToneGenerator.TONE_PROP_ACK, 260);
+        persistAsync();
     }
 
     @Override public void onSkipStep(int index, ScriptStep step) {
@@ -283,8 +351,25 @@ public final class CollectionRunnerService extends Service
         int nextSecond = nextIndex < steps.size() ? steps.get(nextIndex).second : -1;
         String eventStatus = currentEventIndex >= 0 && currentEventIndex < eventRecords.size()
                 ? eventRecords.get(currentEventIndex).getStatus().csvValue : "pending";
-        return new RunnerSnapshot(state, elapsedMs, currentTitle, nextTitle,
-                nextSecond, countdownText, eventStatus);
+        long scheduleMs;
+        if (state == RunnerSnapshot.State.COMPLETED) {
+            scheduleMs = completedScheduleTimeMs;
+        } else {
+            scheduleMs = isActive() && timebase.isStarted()
+                    ? timebase.scheduleTimeMs(SystemClock.elapsedRealtimeNanos()) : elapsedMs;
+        }
+        int photos = sessionRecord == null ? 0 : sessionRecord.photos.size();
+        int notes = 0;
+        if (sessionRecord != null) {
+            for (NoteRecord note : sessionRecord.notes) {
+                if (!note.deleted && note.targetType == NoteRecord.TargetType.EVENT) notes++;
+            }
+        }
+        String audioStatus = sessionRecord == null
+                ? (recordingEnabled ? "PREPARING" : "DISABLED")
+                : sessionRecord.audio.status;
+        return new RunnerSnapshot(state, elapsedMs, scheduleMs, currentTitle, nextTitle,
+                nextSecond, countdownText, eventStatus, photos, notes, audioStatus);
     }
 
     private void publish(long elapsedMs) {
@@ -336,8 +421,13 @@ public final class CollectionRunnerService extends Service
 
     private void startInForeground(Notification notification) {
         if (Build.VERSION.SDK_INT >= 34) {
+            int types = ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE;
+            if (recordingEnabled && checkSelfPermission(Manifest.permission.RECORD_AUDIO)
+                    == PackageManager.PERMISSION_GRANTED) {
+                types |= ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE;
+            }
             startForeground(NOTIFICATION_ID, notification,
-                    ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE);
+                    types);
         } else {
             startForeground(NOTIFICATION_ID, notification);
         }
@@ -364,12 +454,280 @@ public final class CollectionRunnerService extends Service
         return timebase.scriptTimeUs(SystemClock.elapsedRealtimeNanos());
     }
 
+    boolean canAttachEvidence() {
+        return isActive() && currentEventIndex >= 0
+                && eventRecords.get(currentEventIndex).getTriggerScriptTimeUs() != null;
+    }
+
+    EventRecord currentEvent() {
+        return canAttachEvidence() ? eventRecords.get(currentEventIndex) : null;
+    }
+
+    List<PhotoRecord> getPhotos() {
+        return sessionRecord == null ? Collections.emptyList()
+                : new ArrayList<>(sessionRecord.photos);
+    }
+
+    List<NoteRecord> getNotes() {
+        return sessionRecord == null ? Collections.emptyList()
+                : new ArrayList<>(sessionRecord.notes);
+    }
+
+    int nextPhotoSequence(String eventId) {
+        int count = 0;
+        if (sessionRecord != null) {
+            for (PhotoRecord photo : sessionRecord.photos) {
+                if (eventId.equals(photo.eventId)) count++;
+            }
+        }
+        return count + 1;
+    }
+
+    boolean addPhoto(String eventId, String action, int sequence, long capturedScriptTimeUs,
+                     String fileName, String contentUri) {
+        if (sessionRecord == null || !isActive() || eventId == null || action == null
+                || sequence < 1 || capturedScriptTimeUs < 0L
+                || fileName == null || contentUri == null) return false;
+        String photoId = eventId + "-P" + String.format(Locale.US, "%02d", sequence);
+        sessionRecord.photos.add(new PhotoRecord(photoId, eventId, sequence, action,
+                sessionRecord.clockAt(capturedScriptTimeUs), capturedScriptTimeUs,
+                fileName, contentUri));
+        persistAsync();
+        publish(currentElapsedMs());
+        return true;
+    }
+
+    NoteRecord addNote(NoteRecord.TargetType type, String targetId, String text,
+                       long anchoredScriptTimeUs) {
+        if (sessionRecord == null || !isActive() || text == null
+                || text.trim().isEmpty()) return null;
+        if (type == NoteRecord.TargetType.PHOTO) {
+            for (NoteRecord note : sessionRecord.notes) {
+                if (!note.deleted && type == note.targetType && targetId.equals(note.targetId)) {
+                    return null;
+                }
+            }
+        }
+        String noteId = String.format(Locale.US, "N%04d", sessionRecord.notes.size() + 1);
+        NoteRecord note = new NoteRecord(noteId, type, targetId, text.trim(),
+                sessionRecord.clockAt(anchoredScriptTimeUs), anchoredScriptTimeUs);
+        sessionRecord.notes.add(note);
+        persistAsync();
+        publish(currentElapsedMs());
+        return note;
+    }
+
+    boolean updateNote(String noteId, String text) {
+        NoteRecord note = findNote(noteId);
+        if (note == null || note.deleted || !isActive() || text == null
+                || text.trim().isEmpty()) return false;
+        long nowUs = currentScriptTimeUs();
+        note.text = text.trim();
+        note.updatedScriptTimeUs = nowUs;
+        note.updatedClock = sessionRecord.clockAt(nowUs);
+        persistAsync();
+        publish(currentElapsedMs());
+        return true;
+    }
+
+    boolean deleteNote(String noteId) {
+        NoteRecord note = findNote(noteId);
+        if (note == null || note.deleted || !isActive()) return false;
+        long nowUs = currentScriptTimeUs();
+        note.deleted = true;
+        note.deletedScriptTimeUs = nowUs;
+        note.deletedClock = sessionRecord.clockAt(nowUs);
+        persistAsync();
+        publish(currentElapsedMs());
+        return true;
+    }
+
+    long captureEvidenceTimeUs() {
+        return isActive() ? currentScriptTimeUs() : -1L;
+    }
+
+    private NoteRecord findNote(String noteId) {
+        if (sessionRecord != null) {
+            for (NoteRecord note : sessionRecord.notes) {
+                if (note.noteId.equals(noteId)) return note;
+            }
+        }
+        return null;
+    }
+
+    void exportZip(android.net.Uri destination, ExportListener listener) {
+        if (state != RunnerSnapshot.State.COMPLETED || sessionRecord == null
+                || sessionFiles == null) {
+            listener.onError("当前没有已完成的 Session");
+            return;
+        }
+        SessionRecord record = sessionRecord;
+        SessionStorage.Files files = sessionFiles;
+        persistenceExecutor.execute(() -> {
+            try {
+                for (PhotoRecord photo : record.photos) {
+                    photo.fileStatus = sessionStorage.canRead(
+                            android.net.Uri.parse(photo.contentUri))
+                            ? "AVAILABLE" : "UNAVAILABLE";
+                }
+                sessionStorage.persist(record, files, "0.2.0");
+                sessionStorage.exportZip(record, files, destination);
+                handler.post(listener::onExported);
+            } catch (IOException error) {
+                handler.post(() -> listener.onError(error.getMessage()));
+            }
+        });
+    }
+
+    boolean isExportReady() {
+        return state == RunnerSnapshot.State.COMPLETED && isAudioTerminal()
+                && sessionRecord != null && sessionFiles != null;
+    }
+
+    private void persistAsync() {
+        if (sessionRecord == null || sessionFiles == null) return;
+        String json = SessionJsonExporter.export(sessionRecord, "0.2.0");
+        String csv = String.join("\n", SessionCsvExporter.export(
+                sessionRecord.events, sessionRecord.startClockEpochMs,
+                sessionRecord.startClock)) + "\n";
+        SessionStorage.Files files = sessionFiles;
+        persistenceExecutor.execute(() -> {
+            try {
+                sessionStorage.writeText(files.jsonUri, json);
+                sessionStorage.writeText(files.csvUri, csv);
+            } catch (IOException ignored) {
+                // UI 通过最终保存/导出失败明确提示；正常写入路径不阻塞采集时序。
+            }
+        });
+    }
+
+    private void startAudioPreRoll() {
+        if (checkSelfPermission(Manifest.permission.RECORD_AUDIO)
+                != PackageManager.PERMISSION_GRANTED) {
+            audioStartFailure = "PERMISSION_NOT_GRANTED";
+            return;
+        }
+        java.io.File file = new java.io.File(getCacheDir(),
+                "recording_" + SystemClock.elapsedRealtimeNanos() + ".m4a");
+        audioRecorder = new SessionAudioRecorder(file, new SessionAudioRecorder.Listener() {
+            @Override public void onStopped(SessionAudioRecorder.Result result) {
+                handler.post(() -> finishAudio(result));
+            }
+
+            @Override public void onFailure(String reason) {
+                handler.post(() -> {
+                    audioStartFailure = reason;
+                    if (sessionRecord != null) {
+                        markAudioFailure(reason, currentElapsedMs() * 1_000L);
+                        persistAsync();
+                        publish(currentElapsedMs());
+                    }
+                });
+            }
+        });
+        try {
+            audioRecorder.start();
+        } catch (RuntimeException error) {
+            audioStartFailure = "AUDIO_START_FAILED: " + error.getMessage();
+            audioRecorder = null;
+        }
+    }
+
+    private void finishAudio(SessionAudioRecorder.Result result) {
+        if (sessionRecord == null) {
+            result.file.delete();
+            return;
+        }
+        AudioRecordingRecord audio = sessionRecord.audio;
+        try {
+            if (sessionFiles == null) {
+                throw new IOException("SESSION_STORAGE_UNAVAILABLE");
+            }
+            long streamStartEpochMs = result.streamStartRealtimeNs == null
+                    ? result.requestClockEpochMs
+                    : result.requestClockEpochMs
+                    + Math.round((result.streamStartRealtimeNs - result.requestRealtimeNs)
+                    / 1_000_000.0d);
+            String scriptBase = SessionStorage.safeName(sourceScriptName
+                    .replaceFirst("\\.[^.]+$", ""));
+            String stamp = new SimpleDateFormat("yyyyMMdd_HHmmss_SSS", Locale.US)
+                    .format(new Date(streamStartEpochMs));
+            String name = scriptBase + "_录音_" + stamp + ".m4a";
+            android.net.Uri uri = sessionStorage.saveFile(result.file, name, "audio/mp4",
+                    sessionFiles.relativePath + "audio/");
+            audio.fileName = name;
+            audio.contentUri = uri.toString();
+            audio.startClock = formatWallClock(streamStartEpochMs);
+            if (result.streamStartRealtimeNs == null) {
+                audio.startOffsetUs = null;
+                audio.startMethod = "TIMESTAMP_UNAVAILABLE";
+                audio.startAccuracyUs = null;
+            } else {
+                audio.startOffsetUs =
+                        (result.streamStartRealtimeNs - sessionRecord.startRealtimeNs) / 1_000L;
+                audio.startMethod = "AUDIO_TIMESTAMP_BOOTTIME";
+                audio.startAccuracyUs = 20_000L;
+            }
+            audio.endClock = sessionRecord.endClock;
+            audio.endScriptTimeUs = sessionRecord.endScriptTimeUs;
+            audio.durationUs = result.frameCount * 1_000_000L / result.sampleRate;
+            audio.sampleRateHz = result.sampleRate;
+            audio.channelCount = 1;
+            audio.mimeType = "audio/mp4";
+            audio.bitRate = 96_000;
+            audio.endReason = "COMPLETED";
+            audio.status = "SAVED";
+            result.file.delete();
+        } catch (IOException error) {
+            markAudioFailure("SAVE_FAILED: " + error.getMessage(),
+                    sessionRecord.endScriptTimeUs == null ? 0L : sessionRecord.endScriptTimeUs);
+            audio.status = "SAVE_FAILED";
+            result.file.delete();
+        }
+        persistAsync();
+        publish(currentElapsedMs());
+    }
+
+    private void markAudioFailure(String reason, long scriptTimeUs) {
+        if (sessionRecord == null) return;
+        AudioRecordingRecord audio = sessionRecord.audio;
+        audio.enabled = true;
+        audio.status = "FAILED";
+        audio.failureReason = reason;
+        audio.failureScriptTimeUs = scriptTimeUs;
+        audio.failureClock = sessionRecord.clockAt(scriptTimeUs);
+    }
+
+    private boolean isAudioTerminal() {
+        if (sessionRecord == null || !sessionRecord.audio.enabled) return true;
+        String status = sessionRecord.audio.status;
+        return "SAVED".equals(status) || "FAILED".equals(status)
+                || "SAVE_FAILED".equals(status);
+    }
+
     private void completeSession(boolean announce) {
         if (!isActive()) return;
         handler.removeCallbacks(tick);
-        completedScriptTimeUs = currentScriptTimeUs();
+        long completedAtNanos = SystemClock.elapsedRealtimeNanos();
+        completedScriptTimeUs = timebase.scriptTimeUs(completedAtNanos);
+        completedScheduleTimeMs = timebase.scheduleTimeMs(completedAtNanos);
         endClockEpochMs = System.currentTimeMillis();
         endClock = formatWallClock(endClockEpochMs);
+        if (sessionRecord != null) {
+            sessionRecord.endClockEpochMs = endClockEpochMs;
+            sessionRecord.endClock = endClock;
+            sessionRecord.endScriptTimeUs = completedScriptTimeUs;
+            sessionRecord.status = announce ? "COMPLETED" : "ABORTED";
+            sessionRecord.endReason = announce ? "NATURAL_OR_USER_COMPLETION" : "ABORTED";
+            try {
+                if (sessionFiles != null) {
+                    sessionStorage.persist(sessionRecord, sessionFiles, "0.2.0");
+                }
+            } catch (IOException ignored) { }
+        }
+        if (audioRecorder != null && "RECORDING".equals(sessionRecord.audio.status)) {
+            audioRecorder.stop();
+        }
         state = RunnerSnapshot.State.COMPLETED;
         countdownText = "—";
         if (announce) speak("采集完成");
@@ -399,8 +757,10 @@ public final class CollectionRunnerService extends Service
 
     @Override public void onDestroy() {
         handler.removeCallbacksAndMessages(null);
+        if (audioRecorder != null) audioRecorder.stop();
         if (textToSpeech != null) textToSpeech.shutdown();
         if (toneGenerator != null) toneGenerator.release();
+        persistenceExecutor.shutdown();
         super.onDestroy();
     }
 }

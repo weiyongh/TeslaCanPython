@@ -15,19 +15,18 @@ public class EventRecordTest {
         assertNull(event.getSkipScriptTimeUs());
     }
 
-    @Test public void skipBeforeTriggerKeepsTriggerTimeEmpty() {
+    @Test public void cannotSkipBeforeTrigger() {
         EventRecord event = event();
-        event.skip(9_000_000L);
-        event.trigger(10_000_000L);
-        assertEquals(EventRecord.Status.SKIPPED, event.getStatus());
+        assertEquals(false, event.skip(9_000_000L));
+        assertEquals(EventRecord.Status.PENDING, event.getStatus());
         assertNull(event.getTriggerScriptTimeUs());
-        assertEquals(Long.valueOf(9_000_000L), event.getSkipScriptTimeUs());
+        assertNull(event.getSkipScriptTimeUs());
     }
 
     @Test public void correctionAfterTriggerPreservesBothAuditTimes() {
         EventRecord event = event();
         event.trigger(10_000_000L);
-        event.skip(11_500_000L);
+        assertEquals(true, event.skip(11_500_000L));
         assertEquals(EventRecord.Status.SKIPPED, event.getStatus());
         assertEquals(Long.valueOf(10_000_000L), event.getTriggerScriptTimeUs());
         assertEquals(Long.valueOf(11_500_000L), event.getSkipScriptTimeUs());

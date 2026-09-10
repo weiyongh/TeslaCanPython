@@ -17,14 +17,21 @@ public class SessionCsvExporterTest {
         event.skip(36_000_000L);
 
         List<String> lines = SessionCsvExporter.export(Arrays.asList(event),
-                1_000L, "2026-09-09T12:00:00.000+08:00",
-                91_000L, "2026-09-09T12:01:30.000+08:00", 90_000_000L);
+                1_788_926_400_000L, "2026-09-09T12:00:00.000+08:00");
 
-        assertEquals(4, lines.size());
-        assertTrue(lines.get(1).contains("session_start"));
-        assertTrue(lines.get(1).contains("2026-09-09T12:00:00.000+08:00"));
-        assertTrue(lines.get(2).contains(
+        assertEquals(2, lines.size());
+        assertEquals("event_id,action,plan_time_s,status,session_script_time_us,"
+                + "skip_script_time_us,clock_iso,clock_epoch_ms", lines.get(0));
+        assertTrue(lines.get(1).contains(
                 "E01,\"插入\"\"充电枪\"\"\",30,skipped,34827000,36000000"));
-        assertTrue(lines.get(3).endsWith(",90000000"));
+        assertTrue(lines.get(1).endsWith(
+                "\"2026-09-09T12:00:34.827+08:00\",1788926434827"));
+    }
+
+    @Test public void pendingEventDoesNotInventObservedTime() {
+        EventRecord event = new EventRecord(0, new ScriptStep(10, "未触发动作", ""));
+        List<String> lines = SessionCsvExporter.export(Arrays.asList(event),
+                1_788_926_400_000L, "2026-09-09T12:00:00.000+08:00");
+        assertEquals("E01,\"未触发动作\",10,pending,,,\"\",", lines.get(1));
     }
 }

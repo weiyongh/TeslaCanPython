@@ -31,10 +31,12 @@ final class EventRecord {
         status = Status.TRIGGERED;
     }
 
-    void skip(long scriptTimeUs) {
-        if (skipScriptTimeUs != null) return;
+    boolean skip(long scriptTimeUs) {
+        if (status != Status.TRIGGERED || triggerScriptTimeUs == null
+                || skipScriptTimeUs != null) return false;
         skipScriptTimeUs = scriptTimeUs;
         status = Status.SKIPPED;
+        return true;
     }
 
     Status getStatus() {
@@ -47,5 +49,9 @@ final class EventRecord {
 
     Long getSkipScriptTimeUs() {
         return skipScriptTimeUs;
+    }
+
+    String eventId() {
+        return String.format(java.util.Locale.US, "E%02d", index + 1);
     }
 }

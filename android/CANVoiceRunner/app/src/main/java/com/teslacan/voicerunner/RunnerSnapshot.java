@@ -6,21 +6,30 @@ final class RunnerSnapshot {
 
     final State state;
     final long elapsedMs;
+    final long scheduleElapsedMs;
     final String currentTitle;
     final String nextTitle;
     final int nextSecond;
     final String countdownText;
     final String currentEventStatus;
+    final int photoCount;
+    final int eventNoteCount;
+    final String recordingStatus;
 
-    RunnerSnapshot(State state, long elapsedMs, String currentTitle,
+    RunnerSnapshot(State state, long elapsedMs, long scheduleElapsedMs, String currentTitle,
                    String nextTitle, int nextSecond, String countdownText,
-                   String currentEventStatus) {
+                   String currentEventStatus, int photoCount, int eventNoteCount,
+                   String recordingStatus) {
         this.state = state;
         this.elapsedMs = elapsedMs;
+        this.scheduleElapsedMs = scheduleElapsedMs;
         this.currentTitle = currentTitle;
         this.nextTitle = nextTitle;
         this.nextSecond = nextSecond;
         this.countdownText = countdownText;
         this.currentEventStatus = currentEventStatus;
+        this.photoCount = photoCount;
+        this.eventNoteCount = eventNoteCount;
+        this.recordingStatus = recordingStatus;
     }
 }

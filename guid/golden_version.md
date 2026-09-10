@@ -216,3 +216,33 @@ Codex就应该知道该干什么。
 ```
 用当前正式代码，对 TM3-015 做一次只到 Retrieval 为止的验证；不要改算法，不进 LLM；把 Full Observation、Retrieval Coverage、K/R/U 分布、Strong-but-not-retrieved 和选择理由做成人类可审核摘要。
 ```
+
+# candidate
+
+```
+真实实验
+   ↓
+可靠采集
+   ↓
+Observation
+   ↓
+Retrieval
+   ↓
+Signal Candidate / Verification
+   ↓
+Evidence
+   ↓
+控制树实例化
+   ↓
+Baseline
+   ↓
+故障比较 / 诊断推理
+   ↓
+Case
+```
+
+# 降功率
+
+```
+Request → Allow → Run → Limit/Derate → Exit/Protect
+```

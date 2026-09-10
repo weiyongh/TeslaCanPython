@@ -5,10 +5,10 @@ android {
     compileSdk = 36
     defaultConfig {
         applicationId = "com.teslacan.voicerunner"
-        minSdk = 26
+        minSdk = 29
         targetSdk = 36
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "0.2.0"
     }
     buildTypes {
         debug {
@@ -22,4 +22,9 @@ android {
 dependencies {
     // V2优化-任务02-使用标准 JUnit 验证时间轴调度，不引入运行时依赖。
     testImplementation("junit:junit:4.13.2")
+    implementation("androidx.camera:camera-core:1.4.2")
+    implementation("androidx.camera:camera-camera2:1.4.2")
+    implementation("androidx.camera:camera-lifecycle:1.4.2")
+    implementation("androidx.camera:camera-view:1.4.2")
+    implementation("androidx.activity:activity:1.10.1")
 }

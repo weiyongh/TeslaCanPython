@@ -32,6 +32,10 @@ final class SessionTimebase {
         return pauseStartRealtimeNanos >= 0L;
     }
 
+    boolean isStarted() {
+        return started;
+    }
+
     long scriptTimeUs(long nowRealtimeNanos) {
         requireStarted();
         return (clampedNow(nowRealtimeNanos) - startRealtimeNanos) / 1_000L;
