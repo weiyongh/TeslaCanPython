@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "exported_clock": "2026-09-10T07:39:11.421+08:00",
+  "app_version": "0.2.0",
+  "session": {
+    "session_id": "S0006",
+    "source_script_name": "内置示例脚本.txt",
+    "start_clock": "2026-09-10T07:35:56.824+08:00",
+    "start_clock_epoch_ms": 1788996956824,
+    "end_clock": "2026-09-10T07:38:57.295+08:00",
+    "end_clock_epoch_ms": 1788997137295,
+    "end_script_time_us": 180471522,
+    "status": "COMPLETED",
+    "end_reason": "NATURAL_OR_USER_COMPLETION",
+    "script_time_source": "ELAPSED_REALTIME",
+    "script_time_unit": "us",
+    "clock_precision": "ms"
+  },
+  "events": [
+    {
+      "event_id": "E01",
+      "event_sequence": 1,
+      "action": "开始采集",
+      "action_detail": "车辆停稳并保持P挡，四个车窗完全关闭\n驾驶门保持关闭，车辆保持解锁",
+      "plan_time_s": 0,
+      "status": "triggered",
+      "trigger_script_time_us": 64903,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E02",
+      "event_sequence": 2,
+      "action": "手动下降，按住",
+      "action_detail": "驾驶窗下降第一档，持续按住2秒",
+      "plan_time_s": 20,
+      "status": "triggered",
+      "trigger_script_time_us": 20062808,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E03",
+      "event_sequence": 3,
+      "action": "松开",
+      "action_detail": "松开驾驶窗下降按钮",
+      "plan_time_s": 22,
+      "status": "triggered",
+      "trigger_script_time_us": 22048854,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E04",
+      "event_sequence": 4,
+      "action": "手动上升，按住",
+      "action_detail": "驾驶窗上升第一档，保持到计划松开时间",
+      "plan_time_s": 37,
+      "status": "triggered",
+      "trigger_script_time_us": 37029786,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E05",
+      "event_sequence": 5,
+      "action": "松开",
+      "action_detail": "松开驾驶窗上升按钮，确认车窗完全关闭",
+      "plan_time_s": 42,
+      "status": "skipped",
+      "trigger_script_time_us": 42055137,
+      "skip_script_time_us": 44184653
+    },
+    {
+      "event_id": "E06",
+      "event_sequence": 6,
+      "action": "自动下降",
+      "action_detail": "驾驶窗下降第二档，触发后立即松开",
+      "plan_time_s": 57,
+      "status": "triggered",
+      "trigger_script_time_us": 57103132,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E07",
+      "event_sequence": 7,
+      "action": "自动上升",
+      "action_detail": "驾驶窗上升第二档，触发后立即松开",
+      "plan_time_s": 72,
+      "status": "triggered",
+      "trigger_script_time_us": 128469741,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E08",
+      "event_sequence": 8,
+      "action": "手动下降，按住",
+      "action_detail": "驾驶窗下降第一档，持续按住2秒",
+      "plan_time_s": 87,
+      "status": "triggered",
+      "trigger_script_time_us": 143455756,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E09",
+      "event_sequence": 9,
+      "action": "松开",
+      "action_detail": "松开驾驶窗下降按钮",
+      "plan_time_s": 89,
+      "status": "triggered",
+      "trigger_script_time_us": 145460350,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E10",
+      "event_sequence": 10,
+      "action": "手动上升，按住",
+      "action_detail": "驾驶窗上升第一档，保持到计划松开时间",
+      "plan_time_s": 104,
+      "status": "triggered",
+      "trigger_script_time_us": 160409642,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E11",
+      "event_sequence": 11,
+      "action": "松开",
+      "action_detail": "松开驾驶窗上升按钮，确认车窗完全关闭",
+      "plan_time_s": 109,
+      "status": "triggered",
+      "trigger_script_time_us": 165474377,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E12",
+      "event_sequence": 12,
+      "action": "结束采集",
+      "action_detail": "保存ASC文件并记录异常现象",
+      "plan_time_s": 124,
+      "status": "triggered",
+      "trigger_script_time_us": 180423632,
+      "skip_script_time_us": null
+    }
+  ],
+  "photos": [
+    {
+      "photo_id": "E01-P01",
+      "event_id": "E01",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-10T07:36:03.240+08:00",
+      "captured_script_time_us": 6416076,
+      "file_name": "E01-P01_开始采集_20260910_073603_240.jpg",
+      "content_uri": "content://media/external/downloads/1000003374",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E06-P01",
+      "event_id": "E06",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-10T07:37:36.693+08:00",
+      "captured_script_time_us": 99868543,
+      "file_name": "E06-P01_自动下降_20260910_073736_693.jpg",
+      "content_uri": "content://media/external/downloads/1000003375",
+      "file_status": "AVAILABLE"
+    }
+  ],
+  "notes": [
+    {
+      "note_id": "N0001",
+      "target_type": "EVENT",
+      "target_id": "E03",
+      "text": "备注",
+      "created_clock": "2026-09-10T07:36:21.719+08:00",
+      "created_script_time_us": 24895479,
+      "updated_clock": null,
+      "updated_script_time_us": null,
+      "deleted": false,
+      "deleted_clock": null,
+      "deleted_script_time_us": null
+    },
+    {
+      "note_id": "N0002",
+      "target_type": "PHOTO",
+      "target_id": "E01-P01",
+      "text": "测试",
+      "created_clock": "2026-09-10T07:37:16.805+08:00",
+      "created_script_time_us": 79980698,
+      "updated_clock": null,
+      "updated_script_time_us": null,
+      "deleted": false,
+      "deleted_clock": null,
+      "deleted_script_time_us": null
+    },
+    {
+      "note_id": "N0003",
+      "target_type": "EVENT",
+      "target_id": "E06",
+      "text": "备注",
+      "created_clock": "2026-09-10T07:37:47.742+08:00",
+      "created_script_time_us": 110918354,
+      "updated_clock": null,
+      "updated_script_time_us": null,
+      "deleted": false,
+      "deleted_clock": null,
+      "deleted_script_time_us": null
+    }
+  ],
+  "audio_recording": {
+    "enabled": false,
+    "status": "DISABLED",
+    "file_name": null,
+    "content_uri": null,
+    "request_clock": null,
+    "request_offset_us": null,
+    "start_clock": null,
+    "start_offset_us": null,
+    "start_method": null,
+    "start_accuracy_us": null,
+    "end_clock": null,
+    "end_script_time_us": null,
+    "duration_us": null,
+    "sample_rate_hz": null,
+    "channel_count": null,
+    "mime_type": null,
+    "bit_rate": null,
+    "end_reason": null,
+    "failure_clock": null,
+    "failure_script_time_us": null,
+    "failure_reason": null
+  }
+}
