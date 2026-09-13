@@ -1,0 +1,447 @@
+{
+  "schema_version": "acquisition-context-v1",
+  "review_status": "DRAFT",
+  "reviewer": null,
+  "reviewed_at": null,
+  "package": {
+    "name": "L3-Charge-Slow-FullCycle_慢充全过程采集__20260911_133727_858__S0009",
+    "path": "/Users/hwy/codex_work/TeslaCanPython/input/L3-Charge-Slow-FullCycle_慢充全过程采集__20260911_133727_858__S0009",
+    "collection_name": "慢充全过程采集",
+    "source_files": [
+      {
+        "path": "TESLA-M3-SOP5",
+        "size": 0,
+        "mtime_ns": 1789113487422599166
+      },
+      {
+        "path": "session.json",
+        "size": 8994,
+        "mtime_ns": 1789105624000000000
+      },
+      {
+        "path": "event_timeline.csv",
+        "size": 1097,
+        "mtime_ns": 1789105624000000000
+      },
+      {
+        "path": "photos/E03-P01_插枪_20260911_133907_626.jpg",
+        "size": 3401381,
+        "mtime_ns": 1789128037608016859
+      },
+      {
+        "path": "photos/E05-P01_扫码启动_20260911_134042_388.jpg",
+        "size": 3413672,
+        "mtime_ns": 1789105624000000000
+      },
+      {
+        "path": "photos/E05-P02_扫码启动_20260911_134050_424.jpg",
+        "size": 3236796,
+        "mtime_ns": 1789105624000000000
+      },
+      {
+        "path": "photos/E05-P03_扫码启动_20260911_134127_933.jpg",
+        "size": 3656332,
+        "mtime_ns": 1789105624000000000
+      },
+      {
+        "path": "photos/E06-P01_记录充电数据1_20260911_134133_171.jpg",
+        "size": 4348044,
+        "mtime_ns": 1789105624000000000
+      },
+      {
+        "path": "photos/E06-P02_记录充电数据1_20260911_134249_787.jpg",
+        "size": 3661959,
+        "mtime_ns": 1789105624000000000
+      },
+      {
+        "path": "photos/E07-P01_记录充电数据2_20260911_134255_656.jpg",
+        "size": 4075821,
+        "mtime_ns": 1789105626000000000
+      },
+      {
+        "path": "photos/E08-P01_停止充电_20260911_134356_019.jpg",
+        "size": 3784613,
+        "mtime_ns": 1789105626000000000
+      },
+      {
+        "path": "photos/E08-P02_停止充电_20260911_134401_541.jpg",
+        "size": 3960181,
+        "mtime_ns": 1789105626000000000
+      },
+      {
+        "path": "can/can_20260911133648.asc",
+        "size": 46165657,
+        "mtime_ns": 1789105490000000000
+      },
+      {
+        "path": "can/can_20260911133648_2.asc",
+        "size": 9947542,
+        "mtime_ns": 1789105586000000000
+      }
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "issues": [],
+    "voicerunner": {
+      "schema_version": 1,
+      "app_version": "0.2.0",
+      "start_clock": "2026-09-11T13:37:27.858+08:00",
+      "end_clock": "2026-09-11T13:46:28.001+08:00",
+      "duration_s": 540.14238
+    },
+    "asc_files": [
+      {
+        "file": "can/can_20260911133648.asc",
+        "time": {
+          "start_clock": "2026-09-11T13:37:27.000+08:00",
+          "end_clock": "2026-09-11T13:44:49.372+08:00",
+          "first_offset_s": 0.0,
+          "last_offset_s": 442.372,
+          "duration_s": 442.372
+        },
+        "fingerprint": {
+          "path": "can/can_20260911133648.asc",
+          "size": 46165657,
+          "mtime_ns": 1789105490000000000
+        }
+      },
+      {
+        "file": "can/can_20260911133648_2.asc",
+        "time": {
+          "start_clock": "2026-09-11T13:44:50.000+08:00",
+          "end_clock": "2026-09-11T13:46:27.538+08:00",
+          "first_offset_s": 0.0,
+          "last_offset_s": 97.5384,
+          "duration_s": 97.5384
+        },
+        "fingerprint": {
+          "path": "can/can_20260911133648_2.asc",
+          "size": 9947542,
+          "mtime_ns": 1789105586000000000
+        }
+      }
+    ]
+  },
+  "round": {
+    "round_id": "S0009",
+    "case_id": "L3-Charge-Slow-FullCycle",
+    "vehicle_id": "TESLA-M3-SOP5",
+    "source_script_name": "L3-Charge-Slow-FullCycle_慢充全过程采集.txt",
+    "audio_recording": {
+      "enabled": false,
+      "status": "DISABLED",
+      "file_name": null,
+      "content_uri": null,
+      "request_clock": null,
+      "request_offset_us": null,
+      "start_clock": null,
+      "start_offset_us": null,
+      "start_method": null,
+      "start_accuracy_us": null,
+      "end_clock": null,
+      "end_script_time_us": null,
+      "duration_us": null,
+      "sample_rate_hz": null,
+      "channel_count": null,
+      "mime_type": null,
+      "bit_rate": null,
+      "end_reason": null,
+      "failure_clock": null,
+      "failure_script_time_us": null,
+      "failure_reason": null
+    },
+    "events": [
+      {
+        "event_id": "E01",
+        "event_sequence": 1,
+        "title": "开始采集",
+        "detail": "立即启动CAN数据记录\n保持车辆无操作，拍摄未连接初始状态\n前往充电口准备取枪",
+        "plan_time_s": 0,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:37:27.926+08:00",
+        "actual_script_time_us": 67531,
+        "resources": []
+      },
+      {
+        "event_id": "E02",
+        "event_sequence": 2,
+        "title": "开充电小门",
+        "detail": "正常打开充电口盖，暂不插枪",
+        "plan_time_s": 40,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:38:07.899+08:00",
+        "actual_script_time_us": 40040689,
+        "resources": []
+      },
+      {
+        "event_id": "E03",
+        "event_sequence": 3,
+        "title": "插枪",
+        "detail": "插枪到位后暂不扫码\n插枪异常时暂停并记录，不反复拔插",
+        "plan_time_s": 60,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:38:27.895+08:00",
+        "actual_script_time_us": 60037427,
+        "resources": [
+          {
+            "resource_id": "E03-P01",
+            "type": "PHOTO",
+            "target_id": "E03",
+            "file": "photos/E03-P01_插枪_20260911_133907_626.jpg",
+            "clock": "2026-09-11T13:39:07.626+08:00",
+            "script_time_us": 99768238,
+            "file_status": "AVAILABLE",
+            "values": [
+              {"value_id": "E03-P01-V01", "name": "车辆充电状态", "ai_value": "准备充电", "unit": null, "source_location": "车机左侧充电面板顶部", "confirmed_value": "准备充电", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E03-P01-V02", "name": "SOC", "ai_value": 85, "unit": "%", "source_location": "车机顶部状态栏及右侧电池卡片", "confirmed_value": 85, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E03-P01-V03", "name": "充电限值", "ai_value": 100, "unit": "%", "source_location": "车机左侧充电面板", "confirmed_value": 100, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E03-P01-V04", "name": "充电电流设置", "ai_value": 16, "unit": "A", "source_location": "车机右侧充电设置中的此地点的充电电流", "confirmed_value": 16, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E03-P01-V05", "name": "车辆提示", "ai_value": "充电设备未准备就绪", "unit": null, "source_location": "车机车辆图下方提示条", "confirmed_value": "充电设备未准备就绪", "review_status": "PENDING", "review_comment": null}
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E04",
+        "event_sequence": 4,
+        "title": "记录连接状态",
+        "detail": "进入驾驶舱，拍摄车辆端已连接但尚未充电的页面\n车辆未识别连接时暂停并记录，不继续扫码",
+        "plan_time_s": 100,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:39:07.919+08:00",
+        "actual_script_time_us": 100061487,
+        "resources": []
+      },
+      {
+        "event_id": "E05",
+        "event_sequence": 5,
+        "title": "扫码启动",
+        "detail": "前往充电桩，使用微信扫码启动充电\n充电开始且桩屏仍亮时，拍摄电压、电流和功率\n登录、授权或付款耗时较长时暂停，不追赶计划时间\n启动失败时暂停并记录页面提示",
+        "plan_time_s": 160,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:40:07.880+08:00",
+        "actual_script_time_us": 160021915,
+        "resources": [
+          {
+            "resource_id": "E05-P01",
+            "type": "PHOTO",
+            "target_id": "E05",
+            "file": "photos/E05-P01_扫码启动_20260911_134042_388.jpg",
+            "clock": "2026-09-11T13:40:42.388+08:00",
+            "script_time_us": 194529877,
+            "file_status": "AVAILABLE",
+            "values": [
+              {"value_id": "E05-P01-V01", "name": "桩端充电状态", "ai_value": "正在充电", "unit": null, "source_location": "充电桩屏幕表格左上", "confirmed_value": "正在充电", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P01-V02", "name": "桩端已充时间", "ai_value": "00:00:21", "unit": null, "source_location": "充电桩屏幕表格右上", "confirmed_value": "00:00:21", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P01-V03", "name": "桩端充电电压", "ai_value": 225.0, "unit": "V", "source_location": "充电桩屏幕表格左中", "confirmed_value": 225.0, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P01-V04", "name": "桩端充电功率", "ai_value": 3.66, "unit": "kW", "source_location": "充电桩屏幕表格左下", "confirmed_value": 3.66, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P01-V05", "name": "桩端已充电量", "ai_value": 0.008, "unit": "kWh", "source_location": "充电桩屏幕表格右中", "confirmed_value": 0.008, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P01-V06", "name": "桩端消费金额", "ai_value": 0.01, "unit": "CNY", "source_location": "充电桩屏幕表格右下", "confirmed_value": 0.01, "review_status": "PENDING", "review_comment": null}
+            ]
+          },
+          {
+            "resource_id": "E05-P02",
+            "type": "PHOTO",
+            "target_id": "E05",
+            "file": "photos/E05-P02_扫码启动_20260911_134050_424.jpg",
+            "clock": "2026-09-11T13:40:50.424+08:00",
+            "script_time_us": 202566047,
+            "file_status": "AVAILABLE",
+            "values": [
+              {"value_id": "E05-P02-V01", "name": "小程序充电电压", "ai_value": 224.9, "unit": "V", "source_location": "手机画面中部参数行左侧", "confirmed_value": 224.9, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P02-V02", "name": "小程序充电电流", "ai_value": 16.1, "unit": "A", "source_location": "手机画面中部参数行中央", "confirmed_value": 16.1, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P02-V03", "name": "小程序充电功率", "ai_value": 3.62, "unit": "kW", "source_location": "手机画面中部参数行右侧", "confirmed_value": 3.62, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P02-V04", "name": "小程序已充电量", "ai_value": 0.005, "unit": "kWh", "source_location": "手机画面中央圆环内及下方左侧", "confirmed_value": 0.005, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P02-V05", "name": "小程序充电时长", "ai_value": 28, "unit": "s", "source_location": "手机画面下半部第一行中央", "confirmed_value": 28, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P02-V06", "name": "小程序消费金额", "ai_value": 0, "unit": "CNY", "source_location": "手机画面下半部第一行右侧", "confirmed_value": 0, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P02-V07", "name": "停车位编号", "ai_value": 12, "unit": null, "source_location": "手机画面上部左侧", "confirmed_value": 12, "review_status": "PENDING", "review_comment": null}
+            ]
+          },
+          {
+            "resource_id": "E05-P03",
+            "type": "PHOTO",
+            "target_id": "E05",
+            "file": "photos/E05-P03_扫码启动_20260911_134127_933.jpg",
+            "clock": "2026-09-11T13:41:27.933+08:00",
+            "script_time_us": 240075395,
+            "file_status": "AVAILABLE",
+            "values": [
+              {"value_id": "E05-P03-V01", "name": "小程序充电电压", "ai_value": 222.1, "unit": "V", "source_location": "手机画面中部参数行左侧", "confirmed_value": 222.1, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P03-V02", "name": "小程序充电电流", "ai_value": 32.1, "unit": "A", "source_location": "手机画面中部参数行中央", "confirmed_value": 32.1, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P03-V03", "name": "小程序充电功率", "ai_value": 7.13, "unit": "kW", "source_location": "手机画面中部参数行右侧", "confirmed_value": 7.13, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P03-V04", "name": "小程序已充电量", "ai_value": 0.055, "unit": "kWh", "source_location": "手机画面中央圆环内及下方左侧", "confirmed_value": 0.055, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P03-V05", "name": "小程序充电时长", "ai_value": 58, "unit": "s", "source_location": "手机画面下半部第一行中央", "confirmed_value": 58, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P03-V06", "name": "小程序消费金额", "ai_value": 0.07, "unit": "CNY", "source_location": "手机画面下半部第一行右侧", "confirmed_value": 0.07, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P03-V07", "name": "小程序电费", "ai_value": 0.04, "unit": "CNY", "source_location": "手机画面下半部第二行左侧", "confirmed_value": 0.04, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E05-P03-V08", "name": "小程序服务费", "ai_value": 0.03, "unit": "CNY", "source_location": "手机画面下半部第二行右侧", "confirmed_value": 0.03, "review_status": "PENDING", "review_comment": null}
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E06",
+        "event_sequence": 6,
+        "title": "记录充电数据1",
+        "detail": "进入驾驶舱，拍摄车辆端当前充电页面\n随即保存微信小程序当前充电页面\n确保充电状态、功率、SOC及小程序电压、电流、功率清晰可见\n小程序未显示更新时间时，备注“实时性未知”\n尚未开始充电时暂停并记录页面提示",
+        "plan_time_s": 240,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:41:27.954+08:00",
+        "actual_script_time_us": 240096062,
+        "resources": [
+          {
+            "resource_id": "E06-P01",
+            "type": "PHOTO",
+            "target_id": "E06",
+            "file": "photos/E06-P01_记录充电数据1_20260911_134133_171.jpg",
+            "clock": "2026-09-11T13:41:33.171+08:00",
+            "script_time_us": 245313180,
+            "file_status": "AVAILABLE",
+            "values": [
+              {"value_id": "E06-P01-V01", "name": "车辆充电状态", "ai_value": "正在充电", "unit": null, "source_location": "车机左侧充电面板", "confirmed_value": "正在充电", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P01-V02", "name": "SOC", "ai_value": 85, "unit": "%", "source_location": "车机顶部状态栏", "confirmed_value": 85, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P01-V03", "name": "预计剩余时间", "ai_value": "1小时40分钟", "unit": null, "source_location": "车机左侧充电面板顶部", "confirmed_value": "1小时40分钟", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P01-V04", "name": "车辆显示充电功率", "ai_value": 7, "unit": "kW", "source_location": "车机左侧充电参数列", "confirmed_value": 7, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P01-V05", "name": "车辆显示充电速度", "ai_value": 51, "unit": "km/h", "source_location": "车机左侧充电参数列", "confirmed_value": 51, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P01-V06", "name": "车辆显示充电电流", "ai_value": "32/32", "unit": "A", "source_location": "车机左侧充电参数列", "confirmed_value": "32/32", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P01-V07", "name": "车辆显示充电电压", "ai_value": 219, "unit": "V", "source_location": "车机左侧充电参数列", "confirmed_value": 219, "review_status": "PENDING", "review_comment": null}
+            ]
+          },
+          {
+            "resource_id": "E06-P02",
+            "type": "PHOTO",
+            "target_id": "E06",
+            "file": "photos/E06-P02_记录充电数据1_20260911_134249_787.jpg",
+            "clock": "2026-09-11T13:42:49.787+08:00",
+            "script_time_us": 321929122,
+            "file_status": "AVAILABLE",
+            "values": [
+              {"value_id": "E06-P02-V01", "name": "小程序充电电压", "ai_value": 222.5, "unit": "V", "source_location": "手机画面中部参数行左侧", "confirmed_value": 222.5, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P02-V02", "name": "小程序充电电流", "ai_value": 32.3, "unit": "A", "source_location": "手机画面中部参数行中央", "confirmed_value": 32.3, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P02-V03", "name": "小程序充电功率", "ai_value": 7.19, "unit": "kW", "source_location": "手机画面中部参数行右侧", "confirmed_value": 7.19, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P02-V04", "name": "小程序已充电量", "ai_value": 0.236, "unit": "kWh", "source_location": "手机画面中央圆环内及下方左侧", "confirmed_value": 0.236, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P02-V05", "name": "小程序充电时长", "ai_value": 2, "unit": "min", "source_location": "手机画面下半部第一行中央", "confirmed_value": 2, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P02-V06", "name": "小程序消费金额", "ai_value": 0.3, "unit": "CNY", "source_location": "手机画面下半部第一行右侧", "confirmed_value": 0.3, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P02-V07", "name": "小程序电费", "ai_value": 0.17, "unit": "CNY", "source_location": "手机画面下半部第二行左侧", "confirmed_value": 0.17, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E06-P02-V08", "name": "小程序服务费", "ai_value": 0.13, "unit": "CNY", "source_location": "手机画面下半部第二行右侧", "confirmed_value": 0.13, "review_status": "PENDING", "review_comment": null}
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E07",
+        "event_sequence": 7,
+        "title": "记录充电数据2",
+        "detail": "再次拍摄车辆端当前充电页面\n随即再次保存微信小程序当前充电页面\n确保充电状态、功率、SOC及小程序电压、电流、功率清晰可见\n小程序未显示更新时间时，备注“实时性未知”",
+        "plan_time_s": 320,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:42:47.931+08:00",
+        "actual_script_time_us": 320073024,
+        "resources": [
+          {
+            "resource_id": "E07-P01",
+            "type": "PHOTO",
+            "target_id": "E07",
+            "file": "photos/E07-P01_记录充电数据2_20260911_134255_656.jpg",
+            "clock": "2026-09-11T13:42:55.656+08:00",
+            "script_time_us": 327798103,
+            "file_status": "AVAILABLE",
+            "values": [
+              {"value_id": "E07-P01-V01", "name": "车辆充电状态", "ai_value": "正在充电", "unit": null, "source_location": "车机左侧充电面板", "confirmed_value": "正在充电", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E07-P01-V02", "name": "SOC", "ai_value": 85, "unit": "%", "source_location": "车机顶部状态栏", "confirmed_value": 85, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E07-P01-V03", "name": "预计剩余时间", "ai_value": "1小时35分钟", "unit": null, "source_location": "车机左侧充电面板顶部", "confirmed_value": "1小时35分钟", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E07-P01-V04", "name": "车辆显示充电功率", "ai_value": 7, "unit": "kW", "source_location": "车机左侧充电参数列", "confirmed_value": 7, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E07-P01-V05", "name": "车辆显示充电速度", "ai_value": 50, "unit": "km/h", "source_location": "车机左侧充电参数列", "confirmed_value": 50, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E07-P01-V06", "name": "车辆显示充电电流", "ai_value": "32/32", "unit": "A", "source_location": "车机左侧充电参数列", "confirmed_value": "32/32", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E07-P01-V07", "name": "车辆显示充电电压", "ai_value": 221, "unit": "V", "source_location": "车机左侧充电参数列", "confirmed_value": 221, "review_status": "PENDING", "review_comment": null}
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E08",
+        "event_sequence": 8,
+        "title": "停止充电",
+        "detail": "通过车机屏幕正常停止充电\n拍摄停止后仍连接的车辆端页面\n停止失败时暂停并记录页面提示",
+        "plan_time_s": 380,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:43:47.960+08:00",
+        "actual_script_time_us": 380101571,
+        "resources": [
+          {
+            "resource_id": "E08-P01",
+            "type": "PHOTO",
+            "target_id": "E08",
+            "file": "photos/E08-P01_停止充电_20260911_134356_019.jpg",
+            "clock": "2026-09-11T13:43:56.019+08:00",
+            "script_time_us": 388160549,
+            "file_status": "AVAILABLE",
+            "values": [
+              {"value_id": "E08-P01-V01", "name": "订单状态", "ai_value": "订单已完成", "unit": null, "source_location": "手机画面顶部", "confirmed_value": "订单已完成", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P01-V02", "name": "订单开始时间", "ai_value": "2026-09-11 13:40:21", "unit": null, "source_location": "手机画面充电信息左侧", "confirmed_value": "2026-09-11 13:40:21", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P01-V03", "name": "订单结束时间", "ai_value": "2026-09-11 13:43:51", "unit": null, "source_location": "手机画面充电信息右侧", "confirmed_value": "2026-09-11 13:43:51", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P01-V04", "name": "订单显示时长", "ai_value": 3, "unit": "min", "source_location": "手机画面充电信息中央", "confirmed_value": 3, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P01-V05", "name": "合计充电量", "ai_value": 0.38, "unit": "kWh", "source_location": "手机画面充电信息下方", "confirmed_value": 0.38, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P01-V06", "name": "合计金额", "ai_value": 0.49, "unit": "CNY", "source_location": "手机画面费用区域右侧", "confirmed_value": 0.49, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P01-V07", "name": "电费", "ai_value": 0.27, "unit": "CNY", "source_location": "手机画面费用区域电费行", "confirmed_value": 0.27, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P01-V08", "name": "服务费", "ai_value": 0.22, "unit": "CNY", "source_location": "手机画面费用区域服务费行", "confirmed_value": 0.22, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P01-V09", "name": "充电枪号", "ai_value": 1, "unit": null, "source_location": "手机画面订单信息枪号行", "confirmed_value": 1, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P01-V10", "name": "停车位编号", "ai_value": 12, "unit": null, "source_location": "手机画面订单信息底部", "confirmed_value": 12, "review_status": "PENDING", "review_comment": null}
+            ]
+          },
+          {
+            "resource_id": "E08-P02",
+            "type": "PHOTO",
+            "target_id": "E08",
+            "file": "photos/E08-P02_停止充电_20260911_134401_541.jpg",
+            "clock": "2026-09-11T13:44:01.541+08:00",
+            "script_time_us": 393683131,
+            "file_status": "AVAILABLE",
+            "values": [
+              {"value_id": "E08-P02-V01", "name": "车辆充电状态", "ai_value": "充电停止", "unit": null, "source_location": "车机左侧充电面板顶部", "confirmed_value": "充电停止", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P02-V02", "name": "SOC", "ai_value": 86, "unit": "%", "source_location": "车机顶部状态栏", "confirmed_value": 86, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P02-V03", "name": "车辆显示充电功率", "ai_value": 0, "unit": "kW", "source_location": "车机左侧充电参数列", "confirmed_value": 0, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P02-V04", "name": "车辆显示充电速度", "ai_value": 0, "unit": "km/h", "source_location": "车机左侧充电参数列", "confirmed_value": 0, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P02-V05", "name": "车辆显示充电电流", "ai_value": "0/0", "unit": "A", "source_location": "车机左侧充电参数列", "confirmed_value": "0/0", "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P02-V06", "name": "车辆显示充电电压", "ai_value": 6, "unit": "V", "source_location": "车机左侧充电参数列", "confirmed_value": 6, "review_status": "PENDING", "review_comment": null},
+              {"value_id": "E08-P02-V07", "name": "车辆提示", "ai_value": "充电设备未准备就绪", "unit": null, "source_location": "车机车辆图下方提示条", "confirmed_value": "充电设备未准备就绪", "review_status": "PENDING", "review_comment": null}
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E09",
+        "event_sequence": 9,
+        "title": "解锁充电枪",
+        "detail": "使用现场正常方式解锁充电枪\n已经自动解锁时确认释放，不重复操作\n无法解锁时暂停，不强行操作",
+        "plan_time_s": 440,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:44:47.913+08:00",
+        "actual_script_time_us": 440055300,
+        "resources": []
+      },
+      {
+        "event_id": "E10",
+        "event_sequence": 10,
+        "title": "拔枪",
+        "detail": "确认充电枪已经释放后拔枪\n未释放时暂停，不强行拔枪\n拔枪后进入驾驶舱，拍摄车辆端未连接、未充电页面",
+        "plan_time_s": 470,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:45:17.961+08:00",
+        "actual_script_time_us": 470103160,
+        "resources": []
+      },
+      {
+        "event_id": "E11",
+        "event_sequence": 11,
+        "title": "结束采集",
+        "detail": "停止CAN数据记录并保存ASC\n结束VoiceRunner本轮并保存全部现场记录",
+        "plan_time_s": 540,
+        "status": "triggered",
+        "actual_clock": "2026-09-11T13:46:27.956+08:00",
+        "actual_script_time_us": 540097573,
+        "resources": []
+      }
+    ]
+  }
+}

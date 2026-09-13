@@ -1,12 +1,12 @@
 {
-  "snapshot_time": "2026-09-08T19:43:24+08:00",
-  "snapshot_path": "knowledge/notion_l3/snapshots/2026-09-08_194324",
+  "snapshot_time": "2026-09-13T18:15:27+08:00",
+  "snapshot_path": "knowledge/notion_l3/snapshots/2026-09-13_181527",
   "source_root": "新能源汽修L3学习",
   "source_root_page_id": "2faa4e43-8649-8039-9f2c-ebb011f5f302",
   "authority_rule": "official_ancestor_path_only",
   "sync_mode": "faithful_snapshot",
   "status": "complete",
-  "document_count": 15,
+  "document_count": 17,
   "excluded_sources": [
     "备份库/…",
     "备份库/复制备份/…",
@@ -29,11 +29,11 @@
       "source_path": "新能源汽修L3学习",
       "source_page_id": "2faa4e43-8649-8039-9f2c-ebb011f5f302",
       "source_url": "https://app.notion.com/p/2faa4e43864980399f2cebb011f5f302",
-      "source_last_edited_time": "2026-09-08T11:03:00.403Z",
+      "source_last_edited_time": "2026-09-09T22:33:04.895Z",
       "local_path": "knowledge/notion_l3/current/新能源汽修L3学习.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/新能源汽修L3学习.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/新能源汽修L3学习.md",
       "authority": "official",
-      "sha256": "0000d69e7d605e56c83a08ab4243f234e8d93af3542c8194ff5d8e5a6e49e15c"
+      "sha256": "3c45c582f27556376f3a70cba326ced1488a6dfc964b502e6b5c7a8b1c5ad4ea"
     },
     {
       "title": "充电系统",
@@ -42,20 +42,20 @@
       "source_url": "https://app.notion.com/p/3a0a4e4386498025a70bff0d1dc32073",
       "source_last_edited_time": "2026-09-03T12:25:16.208Z",
       "local_path": "knowledge/notion_l3/current/充电系统/充电系统.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/充电系统/充电系统.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/充电系统/充电系统.md",
       "authority": "official",
-      "sha256": "c0faafff4a5a6298912606f73182fd46a553cd3b1a40fb0e9c2f98bb1e64ddca"
+      "sha256": "7e567e6f6882d9ccd178b1a5462bcaccb7371d35fe00349ef71c200ef2aa4368"
     },
     {
       "title": "交流慢充",
       "source_path": "新能源汽修L3学习/充电系统/交流慢充",
       "source_page_id": "3d0a4e43864980bcb205f098cf9f71dd",
       "source_url": "https://app.notion.com/p/3d0a4e43864980bcb205f098cf9f71dd",
-      "source_last_edited_time": "2026-09-06T16:27:19.268Z",
+      "source_last_edited_time": "2026-09-08T11:57:31.787Z",
       "local_path": "knowledge/notion_l3/current/充电系统/交流慢充/交流慢充.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/充电系统/交流慢充/交流慢充.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/充电系统/交流慢充/交流慢充.md",
       "authority": "official",
-      "sha256": "4538b66d85fb05910f57340e8199a690902b50b158c9badf4c24bffdc0295dbe"
+      "sha256": "dbdb48999464580483a63bac67a6ee6c733f362d40f07c0168b39aefb85b7a32"
     },
     {
       "title": "交流慢充_核心Evidence_Chain小抄",
@@ -64,9 +64,9 @@
       "source_url": "https://app.notion.com/p/3d3a4e4386498091bc0ae1b6b8a21766",
       "source_last_edited_time": "2026-09-06T15:57:05.459Z",
       "local_path": "knowledge/notion_l3/current/充电系统/交流慢充/交流慢充_核心Evidence_Chain小抄.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/充电系统/交流慢充/交流慢充_核心Evidence_Chain小抄.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/充电系统/交流慢充/交流慢充_核心Evidence_Chain小抄.md",
       "authority": "official",
-      "sha256": "8c59a594812e5414d711a2eefeb02159a0f0f2e05b48d9d8b1d73af744f7fbc6"
+      "sha256": "94734b03eb11b60636bd118cd06920f7eca5b72bba2462fbd2fcc10ab4cf6115"
     },
     {
       "title": "交流慢充_控制导引时序与Evidence状态模型_参考",
@@ -75,9 +75,9 @@
       "source_url": "https://app.notion.com/p/3d2a4e43864980c9a403d879134ccac0",
       "source_last_edited_time": "2026-09-06T11:48:12.098Z",
       "local_path": "knowledge/notion_l3/current/充电系统/交流慢充/交流慢充_控制导引时序与Evidence状态模型_参考.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/充电系统/交流慢充/交流慢充_控制导引时序与Evidence状态模型_参考.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/充电系统/交流慢充/交流慢充_控制导引时序与Evidence状态模型_参考.md",
       "authority": "official",
-      "sha256": "32017238ca70f2fecb78c948794bc1385eefe4d5941e9f82f0f3062b18e6e5c9"
+      "sha256": "b4e8e2f121fc5f98074af5686e6de4d5df66ae26c646a1c41f30774ea6f0ceba"
     },
     {
       "title": "快慢充_L3学习复盘小抄",
@@ -86,9 +86,9 @@
       "source_url": "https://app.notion.com/p/3d3a4e43864980ad8111cf8c58e3cc62",
       "source_last_edited_time": "2026-09-06T16:28:19.927Z",
       "local_path": "knowledge/notion_l3/current/充电系统/交流慢充/快慢充_L3学习复盘小抄.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/充电系统/交流慢充/快慢充_L3学习复盘小抄.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/充电系统/交流慢充/快慢充_L3学习复盘小抄.md",
       "authority": "official",
-      "sha256": "700e7a03052a343f302c5c2b60ec63e3f5563bf4129538b1b2bb178cb601c603"
+      "sha256": "7b87e842f9870a2a44e6f588380e5a2f0d72b90aa0729355e668d863db866f3d"
     },
     {
       "title": "直流快充",
@@ -97,9 +97,9 @@
       "source_url": "https://app.notion.com/p/3d0a4e4386498073a723f95a15d1c301",
       "source_last_edited_time": "2026-09-08T01:56:01.348Z",
       "local_path": "knowledge/notion_l3/current/充电系统/直流快充/直流快充.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/充电系统/直流快充/直流快充.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/充电系统/直流快充/直流快充.md",
       "authority": "official",
-      "sha256": "c2996ae6421ede32895680496aec877e994fb2cf5a2a69400abeaaed167d3110"
+      "sha256": "6f0c3074d5fccb49093491a3886af007b27f9f7ceeb928406e85b784cd398098"
     },
     {
       "title": "直流快充通信控制器、BMS 与车桩通信关系",
@@ -108,9 +108,9 @@
       "source_url": "https://app.notion.com/p/3d0a4e4386498060aa6ee46c830d4fb1",
       "source_last_edited_time": "2026-09-03T12:25:16.208Z",
       "local_path": "knowledge/notion_l3/current/充电系统/直流快充/直流快充通信控制器、BMS 与车桩通信关系.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/充电系统/直流快充/直流快充通信控制器、BMS 与车桩通信关系.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/充电系统/直流快充/直流快充通信控制器、BMS 与车桩通信关系.md",
       "authority": "official",
-      "sha256": "0a75666c6a6968c22826d5d0c67d62d47f61093ab7adca669f4cb6a54d8d53bf"
+      "sha256": "与车桩通信关系.md)="
     },
     {
       "title": "电驱动系统",
@@ -119,9 +119,9 @@
       "source_url": "https://app.notion.com/p/2faa4e43864980a3acbaf92b06b0df95",
       "source_last_edited_time": "2026-09-08T11:01:32.853Z",
       "local_path": "knowledge/notion_l3/current/电驱动系统/电驱动系统.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/电驱动系统/电驱动系统.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/电驱动系统/电驱动系统.md",
       "authority": "official",
-      "sha256": "47c6d43c2f0ab1211ff48ea86b9b4d28e6b83cc651a884aafda29ec0a5f53a27"
+      "sha256": "db3d22e45d88904613ab8982418143a5054a46c119e5c8882e39f3f9229e0a7c"
     },
     {
       "title": "动力电池系统",
@@ -130,9 +130,9 @@
       "source_url": "https://app.notion.com/p/31ca4e43864980059a22c3bf197c9475",
       "source_last_edited_time": "2026-09-08T11:01:32.853Z",
       "local_path": "knowledge/notion_l3/current/动力电池系统/动力电池系统.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/动力电池系统/动力电池系统.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/动力电池系统/动力电池系统.md",
       "authority": "official",
-      "sha256": "02af5e7ca5fc202401381ac8b447c7581e83957148e660c8fbf66d5851b3c85c"
+      "sha256": "fa2bc622f89220b9b02755d8bf529c1162c6aea31fab580f12cb12ab83632550"
     },
     {
       "title": "动力电池状态变量表",
@@ -141,9 +141,9 @@
       "source_url": "https://app.notion.com/p/3a8a4e43864980e89a7bf5dede408127",
       "source_last_edited_time": "2026-07-25T03:53:21.458Z",
       "local_path": "knowledge/notion_l3/current/动力电池系统/动力电池状态变量表.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/动力电池系统/动力电池状态变量表.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/动力电池系统/动力电池状态变量表.md",
       "authority": "official",
-      "sha256": "b94dee1dc1eb7c5e8d56f93e4436cefb91342121a1e5d5f9befff26be4e91ca3"
+      "sha256": "83ab5d33082dc0d2e7959a933cec10363762a7c80edf40001d84067e1b8dfa79"
     },
     {
       "title": "L3系统诊断基础语义",
@@ -152,9 +152,9 @@
       "source_url": "https://app.notion.com/p/3d1a4e438649804e8d79f725754a4f03",
       "source_last_edited_time": "2026-09-04T13:59:46.057Z",
       "local_path": "knowledge/notion_l3/current/L3系统诊断基础语义/L3系统诊断基础语义.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/L3系统诊断基础语义/L3系统诊断基础语义.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/L3系统诊断基础语义/L3系统诊断基础语义.md",
       "authority": "official",
-      "sha256": "8d7c9c39c0de3f8ef39bea91b5e4957147ca81fe04a8672458db8a4671a8a6ea"
+      "sha256": "dd42f02dcc0e787fcfdf0bed48353f1847a8dadb897a9a384bd8957f25a2a0de"
     },
     {
       "title": "七个控制概念与Evidence",
@@ -163,9 +163,9 @@
       "source_url": "https://app.notion.com/p/3d1a4e43864980879991e843589536a6",
       "source_last_edited_time": "2026-09-04T15:03:20.377Z",
       "local_path": "knowledge/notion_l3/current/L3系统诊断基础语义/七个控制概念与Evidence.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/L3系统诊断基础语义/七个控制概念与Evidence.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/L3系统诊断基础语义/七个控制概念与Evidence.md",
       "authority": "official",
-      "sha256": "22ddd7f4d638d07683d571b588f70f0cd814f9d52a127a3e7c0e44527a7bc6a7"
+      "sha256": "6e8182d82115d79d027654349b37b21420c66440f15db3ee946cb982c7f19dfd"
     },
     {
       "title": "L3学习库说明",
@@ -174,20 +174,43 @@
       "source_url": "https://app.notion.com/p/3d5a4e438649808da9e0df69439eb409",
       "source_last_edited_time": "2026-09-08T11:01:32.853Z",
       "local_path": "knowledge/notion_l3/current/L3学习库说明.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/L3学习库说明.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/L3学习库说明.md",
       "authority": "official",
-      "sha256": "c0fe146a279eb08bb54e4ffbd590ec07f97142171241668bb12eae194aeba11f"
+      "sha256": "76920123f1c2a85b7ed3140a4201f3acb270e148a2a0d920ad6d60778ece5156"
     },
     {
       "title": "L3学习主框架",
       "source_path": "新能源汽修L3学习/L3学习主框架",
       "source_page_id": "31ea4e43864980ff8606feae21cb5e4a",
       "source_url": "https://app.notion.com/p/31ea4e43864980ff8606feae21cb5e4a",
-      "source_last_edited_time": "2026-09-08T11:01:32.853Z",
+      "source_last_edited_time": "2026-09-08T11:52:14.102Z",
       "local_path": "knowledge/notion_l3/current/L3学习主框架.md",
-      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-08_194324/L3学习主框架.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/L3学习主框架.md",
       "authority": "official",
-      "sha256": "5b7e1401b31b55b653a2ae07b937eb8d45cb488a3dc05cb53b835cd35a9d8285"
+      "sha256": "b3ab931940df62ec6b68b9aafd8872f9143916e3d8da8ed4e0e5ca7435bfea83"
+    },
+    {
+      "title": "座舱舒适系统",
+      "source_path": "新能源汽修L3学习/座舱舒适系统",
+      "source_page_id": "3d6a4e43864980fe875bf677810e83f6",
+      "source_url": "https://app.notion.com/p/3d6a4e43864980fe875bf677810e83f6",
+      "source_last_edited_time": "2026-09-09T22:33:09.155Z",
+      "local_path": "knowledge/notion_l3/current/座舱舒适系统/座舱舒适系统.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/座舱舒适系统/座舱舒适系统.md",
+      "authority": "official",
+      "sha256": "76bb1ec94938a7711219771cc3acbda14330740de4c1ea642e4540e8da23a326"
+    },
+    {
+      "title": "空调系统HVAC",
+      "source_path": "新能源汽修L3学习/座舱舒适系统/空调系统HVAC",
+      "source_page_id": "3d6a4e4386498053a16ef09f594b3893",
+      "source_url": "https://app.notion.com/p/3d6a4e4386498053a16ef09f594b3893",
+      "source_last_edited_time": "2026-09-13T10:03:07.048Z",
+      "local_path": "knowledge/notion_l3/current/座舱舒适系统/空调系统HVAC/空调系统HVAC.md",
+      "snapshot_local_path": "knowledge/notion_l3/snapshots/2026-09-13_181527/座舱舒适系统/空调系统HVAC/空调系统HVAC.md",
+      "authority": "official",
+      "sha256": "93724c8280d8f3f60648a20bb09ce99ed81cb8073badb3a25a029e463d4e0179"
     }
   ]
 }
+

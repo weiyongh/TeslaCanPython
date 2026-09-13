@@ -67,6 +67,8 @@
 → 可执行Script
 ```
 
+- 用户说“审核通过”只表示当前正在审核的产物获得批准。记录该审核状态后必须立即停止，不得自动进入下一阶段、生成下一份产物或执行后续流程；只有收到用户新的明确指令后才能继续。
+
 - L3 Knowledge只需充分支撑当前Case的语义、主线、状态迁移和控制关系；不得为了当前Case先补完该系统的全部L3知识。
 - 已有产物能够满足当前阶段输入时直接复用；只有实际缺失或不足时才回到相应上游补足。
 - Case契约是规范性语义输入，只承载`L3 → Case → ER → OR`，不绑定Vehicle或Round。
@@ -74,12 +76,25 @@
 - Reference不得向新Acquisition Plan注入本次Contract、用户本次明确现场条件和公共规则未提供的车型、设备或实现细节；项目记忆和既有车型上下文也不得作为未声明现场条件的替代来源。
 - 现场条件由用户在讨论Case时以自然语言提供，例如启动入口、可调设置、显示能力、可拍摄页面和允许的停止方式。
 - VoiceRunner只播报每个Event的第一行标题，并在Event前自动倒数，以提示音作为操作者执行动作的时间锚点；其余行是不播报的现场说明。标题必须简短、清晰、可直接执行，Script不重复写入倒计时内容。
+
+采集计划讨论与脚本生成统一遵循以下现场话语原则：
+
+1. 第一行是整个Event的语音摘要，要简短并涵盖主要任务。
+2. 动作和取证同时发生时，标题使用“动作并记录”。
+3. 现场标题使用简单直白的话，不使用分析术语。
+4. 采集前完成的事项，在说明行末标注“（采集前）”。
+5. Event说明使用大白话，简单易懂，能够直接指导现场操作。
+6. 同一取证在不同现场条件下有不同实现方式时，列出可选方案，供现场灵活采用。
+7. 取证条件不足时可以采用替代或降级方式，不因此删除观察要求或判定采集失败。
+
 - Event计划时间必须同时满足L3观察窗口和真实现场行为，纳入人员位置与移动、设备切换、页面操作、拍照取证以及下一次倒计时前的就位余量；等待必须具有基线、响应或稳定观察等明确采集意义。
 - AI负责从已审核语义和现场条件草拟Event；共享代码只负责Acquisition Plan最小结构承载、确定性校验和渲染，不按Case编写专用生成逻辑。
 - Candidate Signal、DBC、ASC和Evidence Mapping不属于Case契约或Script生成的前置环节；只能在Case契约冻结后评估可观测性，不得反向塑造Case、ER、OR或实验设计。
 - VoiceRunner是当前唯一Renderer和输出目标，但Acquisition Plan本身不以VoiceRunner命名或限定职责；未经实际需求不建设Renderer插件机制或未来输出抽象。
 - Acquisition Plan生成的现场Script文件名使用`L3-<System>-<Module>-<AcquisitionBriefName>_<Module中文名><AcquisitionBriefName中文名>采集.txt`。英文前缀采用Case语义标识，中文后缀直接表达“Module + Acquisition Brief Name + 采集”；例如`L3-Charge-Slow-FullCycle_慢充全过程采集.txt`。不得再使用泛化的`_语音执行脚本`作为Case级输出文件名。
 - 相关长期入口为`doc/L3采集Case/`、`doc/tools/acquisition_plan/`和`doc/methodology/采集身份与追溯约定.md`。
+- 实车采集导入后，每个Round输入目录以“文件名等于Vehicle ID、内容为空、无后缀”的单一文件作为车型标记（Vehicle Marker），例如`TESLA-M3-SOP5`。采集分析必须先读取该标记确定Vehicle ID，再读取同目录VoiceRunner已建立的Event、照片、Note和录音关系，并通过Event实际Clock核对ASC时间轴；不得从目录名、DBC、Signal或历史上下文猜测车型。详细规则见`doc/methodology/采集身份与追溯约定.md`。
+- 采集结果从确认到分析统一使用`Acquisition Package → Validation → Recognition → Analysis`。Validation只做原始采集包轻量校验，包括VoiceRunner实际采集时长与一个或多个ASC的起止、时长、分段、间隙和Event时间覆盖核对；VoiceRunner只在首次接入或版本变更时进行深度合同校验。Recognition只识别Vehicle、Round、Event及其照片/Note/录音现场信息。Validation和Recognition均不解析CAN报文内容；Analysis才进入ASC Payload、DBC、CAN ID、Signal、控制关系和Evidence分析。详细定义见`doc/methodology/采集身份与追溯约定.md`。
 - “开始计划”默认表示进入逐层讨论、草拟和人工审核，不自动授权为已经批准正式脚本、程序开发、实车采集或后续ASC分析。
 
 知识优先级：
@@ -215,6 +230,7 @@
 - Signal重要度、证据角色、P0/P1/P2/P3和报告位置是当前实验的动态属性，不是Signal永久属性。
 - 公共链路固定为：`Draft Evidence Plan → Human Review/Override → Approved Evidence Plan → Evidence Assessment → Report View Model → Renderer`。
 - 人工审核只对当前实验有效，Approved Plan必须标记`THIS_EXPERIMENT_ONLY`，不得自动写回车型知识。
+- 项目设计审核及AI识别数据审核在没有UI时，统一生成面向人的Markdown审核文档，以表格清楚展示原始值、来源/位置、人工确认值、审核状态和备注；图片使用`![img](url)`直接预览。人工在该文档中校对、补充并明确审核通过后，程序才将有效结果回写正式JSON或其他结构化数据。Markdown是审核界面，结构化数据是后续流程的正式机器输入，两者不得形成并行真值。
 - Evidence Assessment至少区分：`SUPPORTED / CONTRADICTED / INSUFFICIENT_EVIDENCE / NOT_OBSERVED / NOT_APPLICABLE`；单项SUPPORTED不能自动升级为“原因已确认”。
 - Renderer没有诊断裁决权：不推导控制树、Signal角色、优先级、报告位置或结论；只消费Approved/effective结果和上游形成的Control Relationship View、Assessment及报告数据。
 - 最终报告必须明确基线是否有效、是否需要整体重采或局部补采、最小下一步行动，以及当前是否需要进入诊断树。

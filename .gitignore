@@ -3,6 +3,8 @@ __pycache__/
 *.pyc
 .codex/
 .python_packages/
+.clj-kondo/
+.lsp/
 
 # Local downloads and generated artifacts
 .downloads/

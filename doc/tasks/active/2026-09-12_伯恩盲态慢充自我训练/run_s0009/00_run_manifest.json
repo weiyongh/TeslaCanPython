@@ -1,0 +1,75 @@
+{
+  "mode": "STRICT_DBC_INDEPENDENT_RECONNAISSANCE",
+  "inputs": [
+    "input/L3-Charge-Slow-FullCycle_慢充全过程采集__20260911_133727_858__S0009/can/can_20260911133648.asc",
+    "input/L3-Charge-Slow-FullCycle_慢充全过程采集__20260911_133727_858__S0009/can/can_20260911133648_2.asc"
+  ],
+  "forbidden_inputs": [
+    "DBC",
+    "Yi hit points",
+    "prior Signal mappings",
+    "prior ASC payloads"
+  ],
+  "segments": [
+    {
+      "file": "input/L3-Charge-Slow-FullCycle_慢充全过程采集__20260911_133727_858__S0009/can/can_20260911133648.asc",
+      "offset_s": 0.0,
+      "duration_s": 442.372,
+      "frames": 1000000
+    },
+    {
+      "file": "input/L3-Charge-Slow-FullCycle_慢充全过程采集__20260911_133727_858__S0009/can/can_20260911133648_2.asc",
+      "offset_s": 443.0,
+      "duration_s": 97.5384,
+      "frames": 219531
+    }
+  ],
+  "frame_count": 1219531,
+  "can_id_count": 282,
+  "time_start_s": 0.0,
+  "time_end_s": 540.5384,
+  "stages": {
+    "BASELINE": [
+      5.0,
+      35.0
+    ],
+    "DOOR_OPEN": [
+      43.0,
+      57.0
+    ],
+    "CONNECTED_IDLE": [
+      70.0,
+      150.0
+    ],
+    "CHARGING": [
+      250.0,
+      370.0
+    ],
+    "STOPPED_CONNECTED": [
+      400.0,
+      435.0
+    ],
+    "UNLOCKED_CONNECTED": [
+      447.0,
+      465.0
+    ],
+    "UNPLUGGED": [
+      480.0,
+      535.0
+    ]
+  },
+  "events": {
+    "OPEN_DOOR": 40.04,
+    "PLUG": 60.04,
+    "START_REQUEST": 160.02,
+    "STOP": 380.1,
+    "UNLOCK": 440.06,
+    "UNPLUG": 470.1
+  },
+  "outputs": {
+    "stable_changing_bits": 252,
+    "role_candidates": 171,
+    "event_transition_rows": 314,
+    "continuous_candidates": 546
+  }
+}

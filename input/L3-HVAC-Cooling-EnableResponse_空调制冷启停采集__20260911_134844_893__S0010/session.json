@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "exported_clock": "2026-09-11T14:00:05.666+08:00",
+  "app_version": "0.2.0",
+  "session": {
+    "session_id": "S0010",
+    "source_script_name": "L3-HVAC-Cooling-EnableResponse_空调制冷启停采集.txt",
+    "start_clock": "2026-09-11T13:48:44.893+08:00",
+    "start_clock_epoch_ms": 1789105724893,
+    "end_clock": "2026-09-11T13:59:45.007+08:00",
+    "end_clock_epoch_ms": 1789106385007,
+    "end_script_time_us": 660113919,
+    "status": "COMPLETED",
+    "end_reason": "NATURAL_OR_USER_COMPLETION",
+    "script_time_source": "ELAPSED_REALTIME",
+    "script_time_unit": "us",
+    "clock_precision": "ms"
+  },
+  "events": [
+    {
+      "event_id": "E01",
+      "event_sequence": 1,
+      "action": "开始采集",
+      "action_detail": "立即启动CAN数据记录\n确认车辆P挡、空调关闭、车门车窗关闭（采集前）\n确认AUTO关闭，温度、风量、风向和循环模式已固定（采集前）\n拍摄空调关闭的车机页面（采集前）",
+      "plan_time_s": 0,
+      "status": "triggered",
+      "trigger_script_time_us": 68647,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E02",
+      "event_sequence": 2,
+      "action": "打开制冷并记录",
+      "action_detail": "使用采集前确认的固定设置打开制冷\n拍摄开启后的车机空调页面\n此后保持温度、风量、风向和循环模式不变",
+      "plan_time_s": 60,
+      "status": "triggered",
+      "trigger_script_time_us": 60104697,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E03",
+      "event_sequence": 3,
+      "action": "记录空调运行情况",
+      "action_detail": "拍摄当前车机空调页面\n记录出风、声音及其他可感知变化\n没有出风或没有变冷时照常记录，不反复操作",
+      "plan_time_s": 120,
+      "status": "triggered",
+      "trigger_script_time_us": 120058458,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E04",
+      "event_sequence": 4,
+      "action": "记录出风情况",
+      "action_detail": "保持全部空调设置不变\n拍摄当前车机空调页面\n有温度计：记录同一出风口的温度\n无温度计：在同一出风口感受约5秒，记录不凉、微凉或明显凉\n手机或车机有温度信息时：记录温度值、来源和测量对象",
+      "plan_time_s": 240,
+      "status": "triggered",
+      "trigger_script_time_us": 240105671,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E05",
+      "event_sequence": 5,
+      "action": "再次记录出风情况",
+      "action_detail": "继续保持全部空调设置不变\n再次拍摄车机空调页面\n有温度计：再次记录同一出风口的温度\n无温度计：在同一出风口感受约5秒，按相同方式记录\n手机或车机有温度信息时：再次记录温度值、来源和测量对象",
+      "plan_time_s": 360,
+      "status": "triggered",
+      "trigger_script_time_us": 360071543,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E06",
+      "event_sequence": 6,
+      "action": "关闭空调并记录",
+      "action_detail": "通过车机正常关闭整个空调系统\n拍摄关闭后的车机页面\n关闭失败时记录页面提示，不反复操作",
+      "plan_time_s": 480,
+      "status": "triggered",
+      "trigger_script_time_us": 480017649,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E07",
+      "event_sequence": 7,
+      "action": "记录关闭状态",
+      "action_detail": "保持空调关闭，不进行其他车辆操作\n再次拍摄空调关闭的车机页面\n记录制冷和出风是否已经退出",
+      "plan_time_s": 540,
+      "status": "triggered",
+      "trigger_script_time_us": 540000465,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E08",
+      "event_sequence": 8,
+      "action": "结束采集",
+      "action_detail": "停止CAN数据记录并保存ASC\n确认照片、温度或人工感受记录已经保存\n结束VoiceRunner本轮并保存全部现场记录",
+      "plan_time_s": 660,
+      "status": "triggered",
+      "trigger_script_time_us": 660076936,
+      "skip_script_time_us": null
+    }
+  ],
+  "photos": [
+    {
+      "photo_id": "E02-P01",
+      "event_id": "E02",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-11T13:50:04.231+08:00",
+      "captured_script_time_us": 79338312,
+      "file_name": "E02-P01_打开制冷并记录_20260911_135004_231.jpg",
+      "content_uri": "content://media/external/downloads/1000003438",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E02-P02",
+      "event_id": "E02",
+      "photo_sequence": 2,
+      "captured_clock": "2026-09-11T13:50:46.195+08:00",
+      "captured_script_time_us": 121302164,
+      "file_name": "E02-P02_打开制冷并记录_20260911_135046_195.jpg",
+      "content_uri": "content://media/external/downloads/1000003439",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E03-P01",
+      "event_id": "E03",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-11T13:51:54.625+08:00",
+      "captured_script_time_us": 189732199,
+      "file_name": "E03-P01_记录空调运行情况_20260911_135154_625.jpg",
+      "content_uri": "content://media/external/downloads/1000003440",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E04-P01",
+      "event_id": "E04",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-11T13:52:58.373+08:00",
+      "captured_script_time_us": 253479863,
+      "file_name": "E04-P01_记录出风情况_20260911_135258_373.jpg",
+      "content_uri": "content://media/external/downloads/1000003441",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E04-P02",
+      "event_id": "E04",
+      "photo_sequence": 2,
+      "captured_clock": "2026-09-11T13:54:49.102+08:00",
+      "captured_script_time_us": 364209124,
+      "file_name": "E04-P02_记录出风情况_20260911_135449_102.jpg",
+      "content_uri": "content://media/external/downloads/1000003442",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E06-P01",
+      "event_id": "E06",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-11T13:56:55.072+08:00",
+      "captured_script_time_us": 490178854,
+      "file_name": "E06-P01_关闭空调并记录_20260911_135655_072.jpg",
+      "content_uri": "content://media/external/downloads/1000003443",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E06-P02",
+      "event_id": "E06",
+      "photo_sequence": 2,
+      "captured_clock": "2026-09-11T13:57:45.407+08:00",
+      "captured_script_time_us": 540513638,
+      "file_name": "E06-P02_关闭空调并记录_20260911_135745_407.jpg",
+      "content_uri": "content://media/external/downloads/1000003444",
+      "file_status": "AVAILABLE"
+    }
+  ],
+  "notes": [
+    {
+      "note_id": "N0001",
+      "target_type": "EVENT",
+      "target_id": "E07",
+      "text": "测试用",
+      "created_clock": "2026-09-11T13:58:47.577+08:00",
+      "created_script_time_us": 602683706,
+      "updated_clock": null,
+      "updated_script_time_us": null,
+      "deleted": false,
+      "deleted_clock": null,
+      "deleted_script_time_us": null
+    }
+  ],
+  "audio_recording": {
+    "enabled": true,
+    "status": "SAVED",
+    "file_name": "L3-HVAC-Cooling-EnableResponse_空调制冷启停采集_录音_20260911_134840_388.m4a",
+    "content_uri": "content://media/external/downloads/1000003446",
+    "request_clock": "2026-09-11T13:48:40.264+08:00",
+    "request_offset_us": -4629282,
+    "start_clock": "2026-09-11T13:48:40.388+08:00",
+    "start_offset_us": -4504898,
+    "start_method": "AUDIO_TIMESTAMP_BOOTTIME",
+    "start_accuracy_us": 20000,
+    "end_clock": "2026-09-11T13:59:45.007+08:00",
+    "end_script_time_us": 660113919,
+    "duration_us": 664576000,
+    "sample_rate_hz": 48000,
+    "channel_count": 1,
+    "mime_type": "audio/mp4",
+    "bit_rate": 96000,
+    "end_reason": "COMPLETED",
+    "failure_clock": null,
+    "failure_script_time_us": null,
+    "failure_reason": null
+  }
+}

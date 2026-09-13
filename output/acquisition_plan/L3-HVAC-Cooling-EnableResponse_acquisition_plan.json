@@ -1,0 +1,92 @@
+{
+  "schema_version": "acquisition-plan-v1",
+  "case_id": "L3-HVAC-Cooling-EnableResponse",
+  "contract_ref": "doc/L3采集Case/空调/L3-HVAC-Cooling-EnableResponse_Case契约.md",
+  "events": [
+    {
+      "planned_time_s": 0,
+      "title": "开始采集",
+      "instruction_lines": [
+        "立即启动CAN数据记录",
+        "确认车辆P挡、空调关闭、车门车窗关闭（采集前）",
+        "确认AUTO关闭，温度、风量、风向和循环模式已固定（采集前）",
+        "拍摄空调关闭的车机页面（采集前）"
+      ],
+      "or_refs": ["OR-01.1"]
+    },
+    {
+      "planned_time_s": 60,
+      "title": "打开制冷并记录",
+      "instruction_lines": [
+        "使用采集前确认的固定设置打开制冷",
+        "拍摄开启后的车机空调页面",
+        "此后保持温度、风量、风向和循环模式不变"
+      ],
+      "or_refs": ["OR-02.1", "OR-02.2"]
+    },
+    {
+      "planned_time_s": 120,
+      "title": "记录空调运行情况",
+      "instruction_lines": [
+        "拍摄当前车机空调页面",
+        "记录出风、声音及其他可感知变化",
+        "没有出风或没有变冷时照常记录，不反复操作"
+      ],
+      "or_refs": ["OR-03.1", "OR-03.2"]
+    },
+    {
+      "planned_time_s": 240,
+      "title": "记录出风情况",
+      "instruction_lines": [
+        "保持全部空调设置不变",
+        "拍摄当前车机空调页面",
+        "有温度计：记录同一出风口的温度",
+        "无温度计：在同一出风口感受约5秒，记录不凉、微凉或明显凉",
+        "手机或车机有温度信息时：记录温度值、来源和测量对象"
+      ],
+      "or_refs": ["OR-04.1", "OR-04.2"]
+    },
+    {
+      "planned_time_s": 360,
+      "title": "再次记录出风情况",
+      "instruction_lines": [
+        "继续保持全部空调设置不变",
+        "再次拍摄车机空调页面",
+        "有温度计：再次记录同一出风口的温度",
+        "无温度计：在同一出风口感受约5秒，按相同方式记录",
+        "手机或车机有温度信息时：再次记录温度值、来源和测量对象"
+      ],
+      "or_refs": ["OR-04.2", "OR-05.1"]
+    },
+    {
+      "planned_time_s": 480,
+      "title": "关闭空调并记录",
+      "instruction_lines": [
+        "通过车机正常关闭整个空调系统",
+        "拍摄关闭后的车机页面",
+        "关闭失败时记录页面提示，不反复操作"
+      ],
+      "or_refs": ["OR-06.1"]
+    },
+    {
+      "planned_time_s": 540,
+      "title": "记录关闭状态",
+      "instruction_lines": [
+        "保持空调关闭，不进行其他车辆操作",
+        "再次拍摄空调关闭的车机页面",
+        "记录制冷和出风是否已经退出"
+      ],
+      "or_refs": ["OR-06.2", "OR-06.3"]
+    },
+    {
+      "planned_time_s": 660,
+      "title": "结束采集",
+      "instruction_lines": [
+        "停止CAN数据记录并保存ASC",
+        "确认照片、温度或人工感受记录已经保存",
+        "结束VoiceRunner本轮并保存全部现场记录"
+      ],
+      "or_refs": []
+    }
+  ]
+}
