@@ -1,0 +1,9 @@
+gate_id,source,target,gate_decision,formal_relationship,evidence_refs,admitted_strength,competition,boundary
+TG-R01,TG-N01,TG-N02,ADMIT,操作者改变设置后车辆界面接受并保持新设置,E03/E06相反操作及后续多张设置保持照片,SUPPORTED_DIRECT_RELATIONSHIP,Event是提示而非触控完成时间,不量化接受延迟且不解释内部写入位置
+TG-R02,TG-N02,TG-N07,ADMIT_WITH_UNOBSERVED_REGION,已接受设置的相反变化在连续充电条件下对应实际交流取电方向一致且可逆的变化,32→16→32 A设置与实际32→16→32 A及7→4→7 kW+W1/W2/W3,SUPPORTED_SYSTEM_LEVEL_CONTROL_RELATIONSHIP,单级动态、多级内部链或外部设备动态均可能贡献过程,必须画出未观测区域；不得直连为已知内部因果路径或建立1:1传递函数
+TG-R03,TG-N07,TG-N08,ADMIT,实际交流响应完成后进入新水平的持续充电稳定结果,W1/W2/W3+车辆与应用阶段性读数,SUPPORTED_CONDITIONED_STATE_TRANSITION,页面分辨率和应用刷新限制,只确认阶段顺序及短时稳定不确认精确收敛时刻
+TG-R04,TG-N02,TG-N07,ADMIT_STRUCTURAL_CONSTRAINT,设置接受状态与实际响应状态必须分离且前者可先于后者完成,E06-P01设置32 A同时实际21 A；E06-P02后实际32 A,SUPPORTED_NODE_SEPARATION,页面刷新可能放大观察间隔,只证明非同一瞬时观察状态；不证明固定延迟或内部节点数
+TG-R05,CS-N02,CS-N04,RETAIN_CANDIDATE,设置阶段后出现早期raw变化,S0030与S0009时序,STRONGLY_SUPPORTED_ORDER,共同潜变量或刷新差异,不得进入正式树为因果关系
+TG-R06,CS-N04,CS-N05/CS-N06,DO_NOT_ADMIT,早期raw簇驱动中间或较晚raw簇,两Round先后分类,INSUFFICIENT_CAUSAL_EVIDENCE,串行与并行模型当前不可区分,仅保留行为分组
+TG-R07,CS-N05/CS-N06,CS-N07,RETAIN_CANDIDATE,匿名raw簇与外部响应过程共变,S0030可逆+S0009建立退出,BEHAVIORAL_ASSOCIATION_ONLY,共同驱动、滤波或派生均可解释,不绑定Actual、功率、反馈或ECU
+TG-R08,TG-N02,既有IAC_target/A₂/AEVSE,DO_NOT_ADMIT,设置经由目标能力或EVSE边界影响实际取电,无直接内部Evidence,INSUFFICIENT_EVIDENCE,多种内部路径等价,不得因通用树已有这些节点而声称TM3-017已建立车型投射

@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "exported_clock": "2026-09-15T19:10:17.211+08:00",
+  "app_version": "0.2.0",
+  "session": {
+    "session_id": "S0030",
+    "source_script_name": "TM3-017_语音执行脚本.txt",
+    "start_clock": "2026-09-15T19:04:25.266+08:00",
+    "start_clock_epoch_ms": 1789470265266,
+    "end_clock": "2026-09-15T19:10:05.330+08:00",
+    "end_clock_epoch_ms": 1789470605330,
+    "end_script_time_us": 340063745,
+    "status": "COMPLETED",
+    "end_reason": "NATURAL_OR_USER_COMPLETION",
+    "script_time_source": "ELAPSED_REALTIME",
+    "script_time_unit": "us",
+    "clock_precision": "ms"
+  },
+  "events": [
+    {
+      "event_id": "E01",
+      "event_sequence": 1,
+      "action": "开始采集并保持充电",
+      "action_detail": "观察充电电流设置从32安调低到16安再恢复后的实际充电响应\n确认车辆保持P挡，交流慢充已在32安设置下稳定至少30秒\n保持空调、充电上限和其他车辆设置不变\n确认车辆支持在充电过程中直接调整电流；不支持就记录并结束本轮\n立即启动ASC记录和VoiceRunner，不停止或重新建立充电",
+      "plan_time_s": 0,
+      "status": "triggered",
+      "trigger_script_time_us": 36438,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E02",
+      "event_sequence": 2,
+      "action": "记录32安初始状态",
+      "action_detail": "拍摄车辆充电页面，清楚记录32安设置、实际电流或功率和正在充电状态\n随即拍摄充电桩或配套应用的实际电流和功率\n保留页面时间或拍摄时间；实时性未知时立即备注\n完成后保持设置和其他条件不变",
+      "plan_time_s": 30,
+      "status": "triggered",
+      "trigger_script_time_us": 30053155,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E03",
+      "event_sequence": 3,
+      "action": "调低到16安并记录",
+      "action_detail": "将车辆充电电流设置从32安调低到16安\n设置完成后立即拍摄16安设置值并记录实际动作时间\n只调整一次；调整后不操作其他车辆或充电设置\n若设置未被接受、充电退出或需要重连，记录事实并停止本轮",
+      "plan_time_s": 80,
+      "status": "triggered",
+      "trigger_script_time_us": 80055736,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E04",
+      "event_sequence": 4,
+      "action": "确认16安设置保持",
+      "action_detail": "确认车辆页面仍显示16安设置且正在充电\n拍摄设置已接受的页面，不要求实际电流立即稳定\n发现设置回跳、停充或重连时记录并停止本轮",
+      "plan_time_s": 105,
+      "status": "triggered",
+      "trigger_script_time_us": 105000309,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E05",
+      "event_sequence": 5,
+      "action": "记录16安稳定响应",
+      "action_detail": "拍摄车辆充电页面，记录16安设置下的实际电流或功率和正在充电状态\n随即拍摄充电桩或配套应用的实际电流和功率\n保留页面时间或拍摄时间；实时性未知时立即备注\n确认从调低后没有停止、重启或重新连接",
+      "plan_time_s": 150,
+      "status": "triggered",
+      "trigger_script_time_us": 150065708,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E06",
+      "event_sequence": 6,
+      "action": "恢复到32安并记录",
+      "action_detail": "将车辆充电电流设置从16安恢复到32安\n设置完成后立即拍摄32安设置值并记录实际动作时间\n只调整一次；恢复后不操作其他车辆或充电设置\n若设置未被接受、充电退出或需要重连，记录事实并停止本轮",
+      "plan_time_s": 210,
+      "status": "triggered",
+      "trigger_script_time_us": 210001582,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E07",
+      "event_sequence": 7,
+      "action": "确认32安设置恢复",
+      "action_detail": "确认车辆页面再次显示32安设置且正在充电\n拍摄恢复设置已接受的页面，不要求实际电流立即稳定\n发现设置回跳、停充或重连时记录并停止本轮",
+      "plan_time_s": 235,
+      "status": "triggered",
+      "trigger_script_time_us": 235085414,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E08",
+      "event_sequence": 8,
+      "action": "记录32安恢复响应",
+      "action_detail": "拍摄车辆充电页面，记录恢复后的实际电流或功率和正在充电状态\n随即拍摄充电桩或配套应用的实际电流和功率\n保留页面时间或拍摄时间；实时性未知时立即备注\n确认初始、16安和恢复32安三个窗口属于同一连续充电过程",
+      "plan_time_s": 280,
+      "status": "triggered",
+      "trigger_script_time_us": 280062962,
+      "skip_script_time_us": null
+    },
+    {
+      "event_id": "E09",
+      "event_sequence": 9,
+      "action": "检查证据并结束采集",
+      "action_detail": "确认三个窗口均有设置值、实际响应、充电状态和对应时间记录\n确认两次设置动作各有独立实际时间，偏差和页面实时性已经备注\n保存ASC、VoiceRunner导出、照片和备注后结束本Round\n是否继续充电按现场需要决定，不把结束采集当作停止充电事件",
+      "plan_time_s": 340,
+      "status": "triggered",
+      "trigger_script_time_us": 340020009,
+      "skip_script_time_us": null
+    }
+  ],
+  "photos": [
+    {
+      "photo_id": "E01-P01",
+      "event_id": "E01",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-15T19:04:59.854+08:00",
+      "captured_script_time_us": 34588136,
+      "file_name": "E01-P01_开始采集并保持充电_20260915_190459_854.jpg",
+      "content_uri": "content://media/external/downloads/1000003627",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E03-P01",
+      "event_id": "E03",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-15T19:05:57.763+08:00",
+      "captured_script_time_us": 92497157,
+      "file_name": "E03-P01_调低到16安并记录_20260915_190557_763.jpg",
+      "content_uri": "content://media/external/downloads/1000003628",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E03-P02",
+      "event_id": "E03",
+      "photo_sequence": 2,
+      "captured_clock": "2026-09-15T19:06:06.464+08:00",
+      "captured_script_time_us": 101197820,
+      "file_name": "E03-P02_调低到16安并记录_20260915_190606_464.jpg",
+      "content_uri": "content://media/external/downloads/1000003629",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E04-P01",
+      "event_id": "E04",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-15T19:06:17.823+08:00",
+      "captured_script_time_us": 112557110,
+      "file_name": "E04-P01_确认16安设置保持_20260915_190617_823.jpg",
+      "content_uri": "content://media/external/downloads/1000003630",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E04-P02",
+      "event_id": "E04",
+      "photo_sequence": 2,
+      "captured_clock": "2026-09-15T19:06:26.553+08:00",
+      "captured_script_time_us": 121287313,
+      "file_name": "E04-P02_确认16安设置保持_20260915_190626_553.jpg",
+      "content_uri": "content://media/external/downloads/1000003631",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E04-P03",
+      "event_id": "E04",
+      "photo_sequence": 3,
+      "captured_clock": "2026-09-15T19:06:57.859+08:00",
+      "captured_script_time_us": 152592639,
+      "file_name": "E04-P03_确认16安设置保持_20260915_190657_859.jpg",
+      "content_uri": "content://media/external/downloads/1000003632",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E05-P01",
+      "event_id": "E05",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-15T19:07:10.677+08:00",
+      "captured_script_time_us": 165411258,
+      "file_name": "E05-P01_记录16安稳定响应_20260915_190710_677.jpg",
+      "content_uri": "content://media/external/downloads/1000003633",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E06-P01",
+      "event_id": "E06",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-15T19:08:08.583+08:00",
+      "captured_script_time_us": 223317098,
+      "file_name": "E06-P01_恢复到32安并记录_20260915_190808_583.jpg",
+      "content_uri": "content://media/external/downloads/1000003634",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E06-P02",
+      "event_id": "E06",
+      "photo_sequence": 2,
+      "captured_clock": "2026-09-15T19:08:14.478+08:00",
+      "captured_script_time_us": 229211898,
+      "file_name": "E06-P02_恢复到32安并记录_20260915_190814_478.jpg",
+      "content_uri": "content://media/external/downloads/1000003635",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E07-P01",
+      "event_id": "E07",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-15T19:08:26.128+08:00",
+      "captured_script_time_us": 240861616,
+      "file_name": "E07-P01_确认32安设置恢复_20260915_190826_128.jpg",
+      "content_uri": "content://media/external/downloads/1000003636",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E07-P02",
+      "event_id": "E07",
+      "photo_sequence": 2,
+      "captured_clock": "2026-09-15T19:08:34.008+08:00",
+      "captured_script_time_us": 248741769,
+      "file_name": "E07-P02_确认32安设置恢复_20260915_190834_008.jpg",
+      "content_uri": "content://media/external/downloads/1000003637",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E07-P03",
+      "event_id": "E07",
+      "photo_sequence": 3,
+      "captured_clock": "2026-09-15T19:09:06.099+08:00",
+      "captured_script_time_us": 280833452,
+      "file_name": "E07-P03_确认32安设置恢复_20260915_190906_099.jpg",
+      "content_uri": "content://media/external/downloads/1000003638",
+      "file_status": "AVAILABLE"
+    },
+    {
+      "photo_id": "E08-P01",
+      "event_id": "E08",
+      "photo_sequence": 1,
+      "captured_clock": "2026-09-15T19:09:15.253+08:00",
+      "captured_script_time_us": 289987314,
+      "file_name": "E08-P01_记录32安恢复响应_20260915_190915_253.jpg",
+      "content_uri": "content://media/external/downloads/1000003639",
+      "file_status": "AVAILABLE"
+    }
+  ],
+  "notes": [],
+  "audio_recording": {
+    "enabled": false,
+    "status": "DISABLED",
+    "file_name": null,
+    "content_uri": null,
+    "request_clock": null,
+    "request_offset_us": null,
+    "start_clock": null,
+    "start_offset_us": null,
+    "start_method": null,
+    "start_accuracy_us": null,
+    "end_clock": null,
+    "end_script_time_us": null,
+    "duration_us": null,
+    "sample_rate_hz": null,
+    "channel_count": null,
+    "mime_type": null,
+    "bit_rate": null,
+    "end_reason": null,
+    "failure_clock": null,
+    "failure_script_time_us": null,
+    "failure_reason": null
+  }
+}

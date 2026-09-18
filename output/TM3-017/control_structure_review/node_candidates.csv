@@ -1,0 +1,11 @@
+node_id,node_name,observation_status,evidence_refs,acceptable_strength,competition,boundary
+CS-N01,操作者充电电流设置,DIRECT,E03+E06+车辆页面,CONFIRMED_OBSERVED,无,外部输入不是ECU内部目标
+CS-N02,车辆界面接受并保持设置,DIRECT,E03-P01+E04-P01+E04-P03+E06-P01+E06-P02,CONFIRMED_OBSERVED,回显或已提交设置均可,不证明内部接收位置与生效时刻
+CS-N03,内部处理区域,UNOBSERVED,E06-P01设置32而实际21及raw动态分层,REQUIRED_PLACEHOLDER_ONLY,单级动态或多级目标能力仲裁执行链,不得拆分或命名内部算法Node
+CS-N04,早期raw行为簇,DIRECT_RAW,RC-RAW-A,STRONGLY_SUPPORTED_BEHAVIOR_ONLY,快速观测或共同驱动,不是已确认控制Node
+CS-N05,中间raw行为簇,DIRECT_RAW,RC-RAW-B,SUPPORTED_BEHAVIOR_ONLY,独立层级或滤波差异,不是已确认控制Node
+CS-N06,较晚渐变raw行为簇,DIRECT_RAW,RC-RAW-C,STRONGLY_SUPPORTED_BEHAVIOR_ONLY,下游观测或共同驱动,不是已确认控制Node
+CS-N07,页面可见实际交流响应,DIRECT,E01-P01+E03-P01+E04/E05+E06/E07/E08照片,CONFIRMED_OBSERVED,车辆显示与应用刷新边界不同,不等同任何raw候选
+CS-N08,新设置下稳定充电状态,DIRECT_PLUS_RAW,W1+W2+W3+持续充电照片,SUPPORTED_CONTROL_OUTCOME,短时稳定不代表跨条件稳态,仅为本Round条件化结果
+CS-N09,连续充电前置条件,DIRECT_PLUS_INDIRECT,全过程无已记录停充重启重连且页面持续充电,SUPPORTED_CONDITION,缺少连续外部视频与已确认连接字段,不能拆分连接许可锁止等内部状态
+

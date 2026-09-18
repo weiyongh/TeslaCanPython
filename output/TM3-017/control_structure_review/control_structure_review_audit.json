@@ -1,0 +1,23 @@
+{
+  "experiment": "TM3-017",
+  "round": "S0030",
+  "status": "DRAFT_FOR_HUMAN_REVIEW",
+  "analysis_mode": "STRICT_NO_DBC_RAW_PAYLOAD_ONLY",
+  "approved_inputs": [
+    "output/acquisition_context/TM3-017_语音执行脚本__20260915_190425_266__S0030/acquisition_context.json",
+    "output/TM3-017/evidence_assessment.csv",
+    "output/TM3-017/TM3-017_Candidate_Falsification_Behavioral_Review.md",
+    "output/TM3-017/TM3-017_Cross_Round_Blind_Behavioral_Review.md",
+    "output/TM3-017/candidate_review/candidate_falsification_review.csv",
+    "output/TM3-017/candidate_review/cross_round/cross_round_candidate_review.csv"
+  ],
+  "output_counts": {
+    "role_candidates": 9,
+    "node_candidates": 9,
+    "relationship_candidates": 11,
+    "structure_hypotheses": 7
+  },
+  "formal_control_tree_modified": false,
+  "new_acquisition_designed": false,
+  "semantic_boundary": "No raw candidate is assigned a Signal name, scale, unit, ECU, request, actual, capability, arbitration, voltage, current, or power identity."
+}

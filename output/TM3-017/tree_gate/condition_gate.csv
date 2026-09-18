@@ -1,0 +1,6 @@
+gate_id,condition,gate_decision,formal_use,evidence_refs,admitted_strength,boundary
+TG-C01,同一连续高压充电运行态保持,ADMIT,作为TG-R02与TG-R03的适用条件,全过程无已记录停充重启重连+页面持续显示正在充电+ASC连续性,SUPPORTED_CONDITION,不代表连接锁止Ready许可或高压接触器各子状态已观测
+TG-C02,页面可见可用上限未低于操作者设置,RETAIN_AS_EXPERIMENT_SCOPE,记录本Round关系成立的现场边界但不形成正式控制逻辑,E01-P01及低设置阶段页面中可用上限32 A、设置16或32 A,OBSERVED_SCOPE_CONDITION,该字段来源与内部语义未独立确认；不得命名为AEVSE或A₂
+TG-C03,无其他已记录人工控制动作或现场异常,RETAIN_AS_EVIDENCE_VALIDITY,作为因果解释的实验有效性限定,E01至E08现场记录,SUPPORTED_RECORD_BOUNDARY,是实验记录条件而非车辆控制树Condition
+TG-C04,SOC约85%至86%及本次EVSE/环境,RETAIN_AS_APPLICABILITY_BOUNDARY,限制本轮增量外推范围,Acquisition Context与现场Evidence,OBSERVED_CONTEXT,没有跨SOC温度EVSE验证不得升级为控制条件或阈值
+TG-C05,热限制/SOC限制/桩侧限流/异常保护条件,DO_NOT_ADMIT,不进入本轮增量,本轮未施加或未独立观测,NOT_OBSERVED,不得为结构完整补入本轮车型投射

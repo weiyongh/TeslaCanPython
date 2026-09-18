@@ -1,0 +1,6 @@
+﻿can_id,field,round_2_result,round_3_sessions_passed,round_3_sessions_total,round_3_cross_round_pass,min_window_purity
+0x1FA,B0.b3,priority_candidate,5,5,True,1.0
+0x20C,B1.b3,priority_candidate,5,5,True,1.0
+0x282,B0.b2,priority_candidate,5,5,True,1.0
+0x2A1,B5.b0,priority_candidate,5,5,True,1.0
+0x2BF,B5.b3,priority_candidate,5,5,True,1.0

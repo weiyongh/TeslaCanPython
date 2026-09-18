@@ -1,0 +1,6 @@
+﻿session_id,photo_count,sort_key,sort_order,digest_decode,payload_bytes,collection_hash_algorithm,computed_sha256,registered_sha256,match
+S0019,6,photo_id,ASCII byte ascending,each sha256 hex decoded to 32 raw bytes then concatenated,192,SHA-256,57e9dde38c4ac1d57e6b85e162f9175b85aa7e03ccbda71254b6550bc3081e29,57e9dde38c4ac1d57e6b85e162f9175b85aa7e03ccbda71254b6550bc3081e29,True
+S0020,6,photo_id,ASCII byte ascending,each sha256 hex decoded to 32 raw bytes then concatenated,192,SHA-256,737f03a22bfd75b18b07d7200375e7ca7e95516db67033735010aa6fa244d3cd,737f03a22bfd75b18b07d7200375e7ca7e95516db67033735010aa6fa244d3cd,True
+S0021,6,photo_id,ASCII byte ascending,each sha256 hex decoded to 32 raw bytes then concatenated,192,SHA-256,71ede58b297c5d38dad5ebf23d28e5c1cc17306bde714f2b30fbd87cbea71882,71ede58b297c5d38dad5ebf23d28e5c1cc17306bde714f2b30fbd87cbea71882,True
+S0022,6,photo_id,ASCII byte ascending,each sha256 hex decoded to 32 raw bytes then concatenated,192,SHA-256,2fd898b7d4861237461287fb1711455aaa8eed8a225957e32acf729d5a314733,2fd898b7d4861237461287fb1711455aaa8eed8a225957e32acf729d5a314733,True
+S0023,7,photo_id,ASCII byte ascending,each sha256 hex decoded to 32 raw bytes then concatenated,224,SHA-256,0c466c0e8c10fa718a536b532d58fb490edaa7c832399cb89b434e2b298eab2f,0c466c0e8c10fa718a536b532d58fb490edaa7c832399cb89b434e2b298eab2f,True

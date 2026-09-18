@@ -1,0 +1,10 @@
+gate_id,candidate_or_existing_node,gate_decision,formal_delta_type,proposed_formal_name,proposed_location,evidence_refs,admitted_strength,boundary
+TG-N01,CS-N01,ADMIT,NEW_NODE,操作者充电电流设置（外部输入）,⑭高压充电运行态/充电目标持续更新之前,E03与E06相反操作+车辆页面32→16→32 A设置,SUPPORTED_EXPERIMENTAL_INPUT,不得等同AEVSE、A₂、IAC_target或任何内部Signal
+TG-N02,CS-N02,ADMIT,NEW_NODE,车辆接受并保持的充电电流设置（外部可观察状态）,TG-N01之后且内部处理区域之前,E03-P01+E04-P01+E04-P03+E06-P01+E06-P02,CONFIRMED_OBSERVED_STATE,界面回显只证明可观察接受与保持；不证明内部Target、裁决位置或生效时刻
+TG-N03,CS-N03,RETAIN_UNOBSERVED,BOUNDARY_ANNOTATION,车辆内部处理区域（身份与层级未观测）,TG-N02与既有IAC_actual之间,E06-P01设置32 A而实际21 A+raw动态类别可分离,REQUIRED_UNOBSERVED_REGION,不得拆成目标、能力、仲裁、请求或执行Node；不是Evidence支持的新正式Node
+TG-N04,CS-N04,RETAIN_CANDIDATE,NONE,早期raw行为簇,控制树外的匿名Evidence附件,S0030双向阶跃+S0009建立阶段,BEHAVIOR_ONLY,不得作为正式Node或赋予物理/控制Role
+TG-N05,CS-N05,RETAIN_CANDIDATE,NONE,中间raw行为簇,控制树外的匿名Evidence附件,S0030与S0009分段渐变,BEHAVIOR_ONLY,不得作为正式Node
+TG-N06,CS-N06,RETAIN_CANDIDATE,NONE,较晚raw行为簇,控制树外的匿名Evidence附件,S0030恢复约10–17秒+S0009建立退出,BEHAVIOR_ONLY,不得作为正式Node
+TG-N07,CS-N07,ADMIT,ANNOTATE_EXISTING_NODE,OBC交流输入端实际电流 IAC_actual,既有⑨/⑬/⑭节点,E01-P01+E03-P01+E04/E05+E06/E07/E08页面,SUPPORTED_VEHICLE_PROJECTION,只增强实际交流取电响应的车型实验级支持；不绑定任一raw候选且不确认内部采样Signal
+TG-N08,CS-N08,ADMIT,ANNOTATE_EXISTING_STATE,新设置下持续充电稳定结果,既有⑭高压充电运行态,W1=70.000s+W2=117.505s+W3=102.522s+持续充电页面,SUPPORTED_CONDITIONED_OUTCOME,仅为本Round短时稳定；不新增独立控制器Node且不外推长期或跨条件稳态
+TG-N09,CS-N09,ADMIT,CONDITION_ON_EXISTING_STATE,连续高压充电运行态,既有⑭高压充电运行态作为TG-R02/TG-R03条件,全过程无已记录停充重启重连+连续Event与页面,SUPPORTED_CONDITION,不拆分连接、锁止、许可、Ready或接触器状态

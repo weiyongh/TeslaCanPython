@@ -1,0 +1,132 @@
+[
+  {
+    "session_id": "S0014",
+    "segments": [
+      {
+        "file": "can_20260913103315.asc",
+        "header_offset_s": 0.408,
+        "first_script_s": 0.408,
+        "last_script_s": 230.235,
+        "frames": 518376
+      }
+    ],
+    "windows": {
+      "off_pre": [
+        35.017936,
+        55.047898
+      ],
+      "on": [
+        100.043221,
+        155.054814
+      ],
+      "off_post": [
+        200.069687,
+        225.038418
+      ]
+    }
+  },
+  {
+    "session_id": "S0015",
+    "segments": [
+      {
+        "file": "can_20260913103810.asc",
+        "header_offset_s": 0.229,
+        "first_script_s": 0.229,
+        "last_script_s": 230.1555,
+        "frames": 518259
+      }
+    ],
+    "windows": {
+      "off_pre": [
+        35.046422,
+        55.094421
+      ],
+      "on": [
+        100.03239,
+        155.054845
+      ],
+      "off_post": [
+        200.020031,
+        225.086468
+      ]
+    }
+  },
+  {
+    "session_id": "S0016",
+    "segments": [
+      {
+        "file": "can_20260913104300.asc",
+        "header_offset_s": 0.429,
+        "first_script_s": 0.429,
+        "last_script_s": 230.295,
+        "frames": 518541
+      }
+    ],
+    "windows": {
+      "off_pre": [
+        35.07437,
+        55.085494
+      ],
+      "on": [
+        100.031113,
+        155.084906
+      ],
+      "off_post": [
+        200.066094,
+        225.060099
+      ]
+    }
+  },
+  {
+    "session_id": "S0017",
+    "segments": [
+      {
+        "file": "can_20260913104757.asc",
+        "header_offset_s": 0.114,
+        "first_script_s": 0.114,
+        "last_script_s": 230.1373,
+        "frames": 518520
+      }
+    ],
+    "windows": {
+      "off_pre": [
+        35.010069,
+        55.076215
+      ],
+      "on": [
+        100.015477,
+        155.033218
+      ],
+      "off_post": [
+        200.090791,
+        225.009202
+      ]
+    }
+  },
+  {
+    "session_id": "S0018",
+    "segments": [
+      {
+        "file": "can_20260913105254.asc",
+        "header_offset_s": 0.398,
+        "first_script_s": 0.398,
+        "last_script_s": 230.4764,
+        "frames": 518972
+      }
+    ],
+    "windows": {
+      "off_pre": [
+        35.090697,
+        55.094101
+      ],
+      "on": [
+        100.030469,
+        155.058085
+      ],
+      "off_post": [
+        200.068482,
+        225.050954
+      ]
+    }
+  }
+]

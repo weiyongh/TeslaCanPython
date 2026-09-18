@@ -1,0 +1,1242 @@
+{
+  "schema_version": "acquisition-context-v1",
+  "review_status": "APPROVED",
+  "reviewer": "用户",
+  "reviewed_at": "2026-09-15",
+  "package": {
+    "name": "TM3-017_语音执行脚本__20260915_190425_266__S0030",
+    "path": "/Users/hwy/codex_work/TeslaCanPython/input/TM3-017_语音执行脚本__20260915_190425_266__S0030",
+    "collection_name": "语音执行脚本",
+    "source_files": [
+      {
+        "path": "TESLA-M3-SOP5",
+        "size": 0,
+        "mtime_ns": 1789113487422599166
+      },
+      {
+        "path": "session.json",
+        "size": 10992,
+        "mtime_ns": 1789471706106995608
+      },
+      {
+        "path": "event_timeline.csv",
+        "size": 1010,
+        "mtime_ns": 1789471706020141244
+      },
+      {
+        "path": "photos/E01-P01_开始采集并保持充电_20260915_190459_854.jpg",
+        "size": 2475492,
+        "mtime_ns": 1789471706024485934
+      },
+      {
+        "path": "photos/E03-P01_调低到16安并记录_20260915_190557_763.jpg",
+        "size": 2441043,
+        "mtime_ns": 1789471706028556011
+      },
+      {
+        "path": "photos/E03-P02_调低到16安并记录_20260915_190606_464.jpg",
+        "size": 3193496,
+        "mtime_ns": 1789471706040190701
+      },
+      {
+        "path": "photos/E04-P01_确认16安设置保持_20260915_190617_823.jpg",
+        "size": 2347516,
+        "mtime_ns": 1789471706046102741
+      },
+      {
+        "path": "photos/E04-P02_确认16安设置保持_20260915_190626_553.jpg",
+        "size": 3267177,
+        "mtime_ns": 1789471706052242090
+      },
+      {
+        "path": "photos/E04-P03_确认16安设置保持_20260915_190657_859.jpg",
+        "size": 2464289,
+        "mtime_ns": 1789471706059634964
+      },
+      {
+        "path": "photos/E05-P01_记录16安稳定响应_20260915_190710_677.jpg",
+        "size": 3777507,
+        "mtime_ns": 1789471706066588239
+      },
+      {
+        "path": "photos/E06-P01_恢复到32安并记录_20260915_190808_583.jpg",
+        "size": 2383078,
+        "mtime_ns": 1789471706074218905
+      },
+      {
+        "path": "photos/E06-P02_恢复到32安并记录_20260915_190814_478.jpg",
+        "size": 2388053,
+        "mtime_ns": 1789471706079838800
+      },
+      {
+        "path": "photos/E07-P01_确认32安设置恢复_20260915_190826_128.jpg",
+        "size": 2431117,
+        "mtime_ns": 1789471706084179141
+      },
+      {
+        "path": "photos/E07-P02_确认32安设置恢复_20260915_190834_008.jpg",
+        "size": 3003335,
+        "mtime_ns": 1789471706089754808
+      },
+      {
+        "path": "photos/E07-P03_确认32安设置恢复_20260915_190906_099.jpg",
+        "size": 2378084,
+        "mtime_ns": 1789471706096884028
+      },
+      {
+        "path": "photos/E08-P01_记录32安恢复响应_20260915_190915_253.jpg",
+        "size": 3264083,
+        "mtime_ns": 1789471706102663435
+      },
+      {
+        "path": "can/can_20260915190403_TM3-017_S0030.asc",
+        "size": 35494302,
+        "mtime_ns": 1789471819993879475
+      }
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "issues": [],
+    "voicerunner": {
+      "schema_version": 1,
+      "app_version": "0.2.0",
+      "start_clock": "2026-09-15T19:04:25.266+08:00",
+      "end_clock": "2026-09-15T19:10:05.330+08:00",
+      "duration_s": 340.063745
+    },
+    "asc_files": [
+      {
+        "file": "can/can_20260915190403_TM3-017_S0030.asc",
+        "time": {
+          "start_clock": "2026-09-15T19:04:27.000+08:00",
+          "end_clock": "2026-09-15T19:10:06.301+08:00",
+          "first_offset_s": 0.0,
+          "last_offset_s": 339.3012,
+          "duration_s": 339.3012
+        },
+        "fingerprint": {
+          "path": "can/can_20260915190403_TM3-017_S0030.asc",
+          "size": 35494302,
+          "mtime_ns": 1789471819993879475
+        }
+      }
+    ]
+  },
+  "round": {
+    "round_id": "S0030",
+    "case_id": "TM3-017",
+    "vehicle_id": "TESLA-M3-SOP5",
+    "source_script_name": "TM3-017_语音执行脚本.txt",
+    "audio_recording": {
+      "enabled": false,
+      "status": "DISABLED",
+      "file_name": null,
+      "content_uri": null,
+      "request_clock": null,
+      "request_offset_us": null,
+      "start_clock": null,
+      "start_offset_us": null,
+      "start_method": null,
+      "start_accuracy_us": null,
+      "end_clock": null,
+      "end_script_time_us": null,
+      "duration_us": null,
+      "sample_rate_hz": null,
+      "channel_count": null,
+      "mime_type": null,
+      "bit_rate": null,
+      "end_reason": null,
+      "failure_clock": null,
+      "failure_script_time_us": null,
+      "failure_reason": null
+    },
+    "events": [
+      {
+        "event_id": "E01",
+        "event_sequence": 1,
+        "title": "开始采集并保持充电",
+        "detail": "观察充电电流设置从32安调低到16安再恢复后的实际充电响应\n确认车辆保持P挡，交流慢充已在32安设置下稳定至少30秒\n保持空调、充电上限和其他车辆设置不变\n确认车辆支持在充电过程中直接调整电流；不支持就记录并结束本轮\n立即启动ASC记录和VoiceRunner，不停止或重新建立充电",
+        "plan_time_s": 0,
+        "status": "triggered",
+        "actual_clock": "2026-09-15T19:04:25.302+08:00",
+        "actual_script_time_us": 36438,
+        "resources": [
+          {
+            "resource_id": "E01-P01",
+            "type": "PHOTO",
+            "target_id": "E01",
+            "file": "photos/E01-P01_开始采集并保持充电_20260915_190459_854.jpg",
+            "clock": "2026-09-15T19:04:59.854+08:00",
+            "script_time_us": 34588136,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E01-P01-V01",
+                "name": "车辆充电状态",
+                "ai_value": "正在充电",
+                "unit": null,
+                "source_location": "车机充电页面左侧状态区",
+                "confirmed_value": "正在充电",
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": "正在充电"
+              },
+              {
+                "value_id": "E01-P01-V02",
+                "name": "SOC",
+                "ai_value": 85,
+                "unit": "%",
+                "source_location": "车机页面顶部电池状态",
+                "confirmed_value": 85,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 85
+              },
+              {
+                "value_id": "E01-P01-V03",
+                "name": "车辆显示充电电压",
+                "ai_value": 219,
+                "unit": "V",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 219,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 219
+              },
+              {
+                "value_id": "E01-P01-V04",
+                "name": "车辆实际充电电流",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E01-P01-V05",
+                "name": "车辆充电电流可用上限",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E01-P01-V06",
+                "name": "车辆显示充电功率",
+                "ai_value": 7,
+                "unit": "kW",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 7,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 7
+              },
+              {
+                "value_id": "E01-P01-V07",
+                "name": "车辆充电电流设置",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电设置右侧调节栏",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": "照片原始关联为E01；实际拍摄于E02后4.535秒，作为同一初始32 A阶段的实际时间锚点",
+                "effective_value": 32
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E02",
+        "event_sequence": 2,
+        "title": "记录32安初始状态",
+        "detail": "拍摄车辆充电页面，清楚记录32安设置、实际电流或功率和正在充电状态\n随即拍摄充电桩或配套应用的实际电流和功率\n保留页面时间或拍摄时间；实时性未知时立即备注\n完成后保持设置和其他条件不变",
+        "plan_time_s": 30,
+        "status": "triggered",
+        "actual_clock": "2026-09-15T19:04:55.319+08:00",
+        "actual_script_time_us": 30053155,
+        "resources": []
+      },
+      {
+        "event_id": "E03",
+        "event_sequence": 3,
+        "title": "调低到16安并记录",
+        "detail": "将车辆充电电流设置从32安调低到16安\n设置完成后立即拍摄16安设置值并记录实际动作时间\n只调整一次；调整后不操作其他车辆或充电设置\n若设置未被接受、充电退出或需要重连，记录事实并停止本轮",
+        "plan_time_s": 80,
+        "status": "triggered",
+        "actual_clock": "2026-09-15T19:05:45.322+08:00",
+        "actual_script_time_us": 80055736,
+        "resources": [
+          {
+            "resource_id": "E03-P01",
+            "type": "PHOTO",
+            "target_id": "E03",
+            "file": "photos/E03-P01_调低到16安并记录_20260915_190557_763.jpg",
+            "clock": "2026-09-15T19:05:57.763+08:00",
+            "script_time_us": 92497157,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E03-P01-V01",
+                "name": "车辆充电状态",
+                "ai_value": "正在充电",
+                "unit": null,
+                "source_location": "车机充电页面左侧状态区",
+                "confirmed_value": "正在充电",
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": "正在充电"
+              },
+              {
+                "value_id": "E03-P01-V02",
+                "name": "SOC",
+                "ai_value": 85,
+                "unit": "%",
+                "source_location": "车机页面顶部电池状态",
+                "confirmed_value": 85,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 85
+              },
+              {
+                "value_id": "E03-P01-V03",
+                "name": "车辆显示充电电压",
+                "ai_value": 224,
+                "unit": "V",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 224,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 224
+              },
+              {
+                "value_id": "E03-P01-V04",
+                "name": "车辆实际充电电流",
+                "ai_value": 16,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 16,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 16
+              },
+              {
+                "value_id": "E03-P01-V05",
+                "name": "车辆充电电流可用上限",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E03-P01-V06",
+                "name": "车辆显示充电功率",
+                "ai_value": 4,
+                "unit": "kW",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 4,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 4
+              },
+              {
+                "value_id": "E03-P01-V07",
+                "name": "车辆充电电流设置",
+                "ai_value": 16,
+                "unit": "A",
+                "source_location": "车机充电设置右侧调节栏",
+                "confirmed_value": 16,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 16
+              }
+            ]
+          },
+          {
+            "resource_id": "E03-P02",
+            "type": "PHOTO",
+            "target_id": "E03",
+            "file": "photos/E03-P02_调低到16安并记录_20260915_190606_464.jpg",
+            "clock": "2026-09-15T19:06:06.464+08:00",
+            "script_time_us": 101197820,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E03-P02-V01",
+                "name": "配套应用充电状态",
+                "ai_value": "正在充电",
+                "unit": null,
+                "source_location": "手机页面顶部",
+                "confirmed_value": "正在充电",
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": "正在充电"
+              },
+              {
+                "value_id": "E03-P02-V02",
+                "name": "配套应用交流电压",
+                "ai_value": 222.4,
+                "unit": "V",
+                "source_location": "手机页面参数行左侧",
+                "confirmed_value": 222.4,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 222.4
+              },
+              {
+                "value_id": "E03-P02-V03",
+                "name": "配套应用交流电流",
+                "ai_value": 32.4,
+                "unit": "A",
+                "source_location": "手机页面参数行中部",
+                "confirmed_value": 32.4,
+                "review_status": "ACCEPTED",
+                "review_comment": "拍摄于调低Event后21.142秒；页面仍显示高电流，实时性及响应延迟待结合后续Evidence解释",
+                "effective_value": 32.4
+              },
+              {
+                "value_id": "E03-P02-V04",
+                "name": "配套应用充电功率",
+                "ai_value": 7.21,
+                "unit": "kW",
+                "source_location": "手机页面参数行右侧",
+                "confirmed_value": 7.21,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 7.21
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E04",
+        "event_sequence": 4,
+        "title": "确认16安设置保持",
+        "detail": "确认车辆页面仍显示16安设置且正在充电\n拍摄设置已接受的页面，不要求实际电流立即稳定\n发现设置回跳、停充或重连时记录并停止本轮",
+        "plan_time_s": 105,
+        "status": "triggered",
+        "actual_clock": "2026-09-15T19:06:10.266+08:00",
+        "actual_script_time_us": 105000309,
+        "resources": [
+          {
+            "resource_id": "E04-P01",
+            "type": "PHOTO",
+            "target_id": "E04",
+            "file": "photos/E04-P01_确认16安设置保持_20260915_190617_823.jpg",
+            "clock": "2026-09-15T19:06:17.823+08:00",
+            "script_time_us": 112557110,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E04-P01-V01",
+                "name": "车辆充电状态",
+                "ai_value": "正在充电",
+                "unit": null,
+                "source_location": "车机充电页面左侧状态区",
+                "confirmed_value": "正在充电",
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": "正在充电"
+              },
+              {
+                "value_id": "E04-P01-V02",
+                "name": "SOC",
+                "ai_value": 86,
+                "unit": "%",
+                "source_location": "车机页面顶部电池状态",
+                "confirmed_value": 86,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 86
+              },
+              {
+                "value_id": "E04-P01-V03",
+                "name": "车辆显示充电电压",
+                "ai_value": 225,
+                "unit": "V",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 225,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 225
+              },
+              {
+                "value_id": "E04-P01-V04",
+                "name": "车辆实际充电电流",
+                "ai_value": 16,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 16,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 16
+              },
+              {
+                "value_id": "E04-P01-V05",
+                "name": "车辆充电电流可用上限",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E04-P01-V06",
+                "name": "车辆显示充电功率",
+                "ai_value": 4,
+                "unit": "kW",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 4,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 4
+              },
+              {
+                "value_id": "E04-P01-V07",
+                "name": "车辆充电电流设置",
+                "ai_value": 16,
+                "unit": "A",
+                "source_location": "车机充电设置右侧调节栏",
+                "confirmed_value": 16,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 16
+              }
+            ]
+          },
+          {
+            "resource_id": "E04-P02",
+            "type": "PHOTO",
+            "target_id": "E04",
+            "file": "photos/E04-P02_确认16安设置保持_20260915_190626_553.jpg",
+            "clock": "2026-09-15T19:06:26.553+08:00",
+            "script_time_us": 121287313,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E04-P02-V01",
+                "name": "配套应用交流电压",
+                "ai_value": 224.8,
+                "unit": "V",
+                "source_location": "手机页面参数行左侧",
+                "confirmed_value": 224.8,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 224.8
+              },
+              {
+                "value_id": "E04-P02-V02",
+                "name": "配套应用交流电流",
+                "ai_value": 16.2,
+                "unit": "A",
+                "source_location": "手机页面参数行中部",
+                "confirmed_value": 16.2,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 16.2
+              },
+              {
+                "value_id": "E04-P02-V03",
+                "name": "配套应用充电功率",
+                "ai_value": 3.64,
+                "unit": "kW",
+                "source_location": "手机页面参数行右侧",
+                "confirmed_value": 3.64,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 3.64
+              },
+              {
+                "value_id": "E04-P02-V04",
+                "name": "配套应用累计充电量",
+                "ai_value": 1.134,
+                "unit": "kWh",
+                "source_location": "手机页面中下部",
+                "confirmed_value": 1.134,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 1.134
+              }
+            ]
+          },
+          {
+            "resource_id": "E04-P03",
+            "type": "PHOTO",
+            "target_id": "E04",
+            "file": "photos/E04-P03_确认16安设置保持_20260915_190657_859.jpg",
+            "clock": "2026-09-15T19:06:57.859+08:00",
+            "script_time_us": 152592639,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E04-P03-V01",
+                "name": "车辆充电状态",
+                "ai_value": "正在充电",
+                "unit": null,
+                "source_location": "车机充电页面左侧状态区",
+                "confirmed_value": "正在充电",
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": "正在充电"
+              },
+              {
+                "value_id": "E04-P03-V02",
+                "name": "SOC",
+                "ai_value": 86,
+                "unit": "%",
+                "source_location": "车机页面顶部电池状态",
+                "confirmed_value": 86,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 86
+              },
+              {
+                "value_id": "E04-P03-V03",
+                "name": "车辆显示充电电压",
+                "ai_value": 226,
+                "unit": "V",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 226,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 226
+              },
+              {
+                "value_id": "E04-P03-V04",
+                "name": "车辆实际充电电流",
+                "ai_value": 16,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 16,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 16
+              },
+              {
+                "value_id": "E04-P03-V05",
+                "name": "车辆充电电流可用上限",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E04-P03-V06",
+                "name": "车辆显示充电功率",
+                "ai_value": 4,
+                "unit": "kW",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 4,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 4
+              },
+              {
+                "value_id": "E04-P03-V07",
+                "name": "车辆充电电流设置",
+                "ai_value": 16,
+                "unit": "A",
+                "source_location": "车机充电设置右侧调节栏",
+                "confirmed_value": 16,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 16
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E05",
+        "event_sequence": 5,
+        "title": "记录16安稳定响应",
+        "detail": "拍摄车辆充电页面，记录16安设置下的实际电流或功率和正在充电状态\n随即拍摄充电桩或配套应用的实际电流和功率\n保留页面时间或拍摄时间；实时性未知时立即备注\n确认从调低后没有停止、重启或重新连接",
+        "plan_time_s": 150,
+        "status": "triggered",
+        "actual_clock": "2026-09-15T19:06:55.332+08:00",
+        "actual_script_time_us": 150065708,
+        "resources": [
+          {
+            "resource_id": "E05-P01",
+            "type": "PHOTO",
+            "target_id": "E05",
+            "file": "photos/E05-P01_记录16安稳定响应_20260915_190710_677.jpg",
+            "clock": "2026-09-15T19:07:10.677+08:00",
+            "script_time_us": 165411258,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E05-P01-V01",
+                "name": "配套应用交流电压",
+                "ai_value": 224.6,
+                "unit": "V",
+                "source_location": "手机页面参数行左侧",
+                "confirmed_value": 224.6,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 224.6
+              },
+              {
+                "value_id": "E05-P01-V02",
+                "name": "配套应用交流电流",
+                "ai_value": 16.2,
+                "unit": "A",
+                "source_location": "手机页面参数行中部",
+                "confirmed_value": 16.2,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 16.2
+              },
+              {
+                "value_id": "E05-P01-V03",
+                "name": "配套应用充电功率",
+                "ai_value": 3.64,
+                "unit": "kW",
+                "source_location": "手机页面参数行右侧",
+                "confirmed_value": 3.64,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 3.64
+              },
+              {
+                "value_id": "E05-P01-V04",
+                "name": "配套应用累计充电量",
+                "ai_value": 1.195,
+                "unit": "kWh",
+                "source_location": "手机页面中下部",
+                "confirmed_value": 1.195,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 1.195
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E06",
+        "event_sequence": 6,
+        "title": "恢复到32安并记录",
+        "detail": "将车辆充电电流设置从16安恢复到32安\n设置完成后立即拍摄32安设置值并记录实际动作时间\n只调整一次；恢复后不操作其他车辆或充电设置\n若设置未被接受、充电退出或需要重连，记录事实并停止本轮",
+        "plan_time_s": 210,
+        "status": "triggered",
+        "actual_clock": "2026-09-15T19:07:55.268+08:00",
+        "actual_script_time_us": 210001582,
+        "resources": [
+          {
+            "resource_id": "E06-P01",
+            "type": "PHOTO",
+            "target_id": "E06",
+            "file": "photos/E06-P01_恢复到32安并记录_20260915_190808_583.jpg",
+            "clock": "2026-09-15T19:08:08.583+08:00",
+            "script_time_us": 223317098,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E06-P01-V01",
+                "name": "车辆充电状态",
+                "ai_value": "正在充电",
+                "unit": null,
+                "source_location": "车机充电页面左侧状态区",
+                "confirmed_value": "正在充电",
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": "正在充电"
+              },
+              {
+                "value_id": "E06-P01-V02",
+                "name": "SOC",
+                "ai_value": 86,
+                "unit": "%",
+                "source_location": "车机页面顶部电池状态",
+                "confirmed_value": 86,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 86
+              },
+              {
+                "value_id": "E06-P01-V03",
+                "name": "车辆显示充电电压",
+                "ai_value": 222,
+                "unit": "V",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 222,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 222
+              },
+              {
+                "value_id": "E06-P01-V04",
+                "name": "车辆实际充电电流",
+                "ai_value": 21,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 21,
+                "review_status": "ACCEPTED",
+                "review_comment": "恢复设置后的中间响应，不作为恢复稳定值",
+                "effective_value": 21
+              },
+              {
+                "value_id": "E06-P01-V05",
+                "name": "车辆充电电流可用上限",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E06-P01-V06",
+                "name": "车辆显示充电功率",
+                "ai_value": 5,
+                "unit": "kW",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 5,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 5
+              },
+              {
+                "value_id": "E06-P01-V07",
+                "name": "车辆充电电流设置",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电设置右侧调节栏",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              }
+            ]
+          },
+          {
+            "resource_id": "E06-P02",
+            "type": "PHOTO",
+            "target_id": "E06",
+            "file": "photos/E06-P02_恢复到32安并记录_20260915_190814_478.jpg",
+            "clock": "2026-09-15T19:08:14.478+08:00",
+            "script_time_us": 229211898,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E06-P02-V01",
+                "name": "车辆充电状态",
+                "ai_value": "正在充电",
+                "unit": null,
+                "source_location": "车机充电页面左侧状态区",
+                "confirmed_value": "正在充电",
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": "正在充电"
+              },
+              {
+                "value_id": "E06-P02-V02",
+                "name": "SOC",
+                "ai_value": 86,
+                "unit": "%",
+                "source_location": "车机页面顶部电池状态",
+                "confirmed_value": 86,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 86
+              },
+              {
+                "value_id": "E06-P02-V03",
+                "name": "车辆显示充电电压",
+                "ai_value": 219,
+                "unit": "V",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 219,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 219
+              },
+              {
+                "value_id": "E06-P02-V04",
+                "name": "车辆实际充电电流",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E06-P02-V05",
+                "name": "车辆充电电流可用上限",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E06-P02-V06",
+                "name": "车辆显示充电功率",
+                "ai_value": 7,
+                "unit": "kW",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 7,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 7
+              },
+              {
+                "value_id": "E06-P02-V07",
+                "name": "车辆充电电流设置",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电设置右侧调节栏",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E07",
+        "event_sequence": 7,
+        "title": "确认32安设置恢复",
+        "detail": "确认车辆页面再次显示32安设置且正在充电\n拍摄恢复设置已接受的页面，不要求实际电流立即稳定\n发现设置回跳、停充或重连时记录并停止本轮",
+        "plan_time_s": 235,
+        "status": "triggered",
+        "actual_clock": "2026-09-15T19:08:20.351+08:00",
+        "actual_script_time_us": 235085414,
+        "resources": [
+          {
+            "resource_id": "E07-P01",
+            "type": "PHOTO",
+            "target_id": "E07",
+            "file": "photos/E07-P01_确认32安设置恢复_20260915_190826_128.jpg",
+            "clock": "2026-09-15T19:08:26.128+08:00",
+            "script_time_us": 240861616,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E07-P01-V01",
+                "name": "车辆充电状态",
+                "ai_value": "正在充电",
+                "unit": null,
+                "source_location": "车机充电页面左侧状态区",
+                "confirmed_value": "正在充电",
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": "正在充电"
+              },
+              {
+                "value_id": "E07-P01-V02",
+                "name": "SOC",
+                "ai_value": 86,
+                "unit": "%",
+                "source_location": "车机页面顶部电池状态",
+                "confirmed_value": 86,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 86
+              },
+              {
+                "value_id": "E07-P01-V03",
+                "name": "车辆显示充电电压",
+                "ai_value": 220,
+                "unit": "V",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 220,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 220
+              },
+              {
+                "value_id": "E07-P01-V04",
+                "name": "车辆实际充电电流",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E07-P01-V05",
+                "name": "车辆充电电流可用上限",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E07-P01-V06",
+                "name": "车辆显示充电功率",
+                "ai_value": 7,
+                "unit": "kW",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 7,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 7
+              },
+              {
+                "value_id": "E07-P01-V07",
+                "name": "车辆充电电流设置",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电设置右侧调节栏",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              }
+            ]
+          },
+          {
+            "resource_id": "E07-P02",
+            "type": "PHOTO",
+            "target_id": "E07",
+            "file": "photos/E07-P02_确认32安设置恢复_20260915_190834_008.jpg",
+            "clock": "2026-09-15T19:08:34.008+08:00",
+            "script_time_us": 248741769,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E07-P02-V01",
+                "name": "配套应用交流电压",
+                "ai_value": 222,
+                "unit": "V",
+                "source_location": "手机页面参数行左侧",
+                "confirmed_value": 222,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 222
+              },
+              {
+                "value_id": "E07-P02-V02",
+                "name": "配套应用交流电流",
+                "ai_value": 32.3,
+                "unit": "A",
+                "source_location": "手机页面参数行中部",
+                "confirmed_value": 32.3,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32.3
+              },
+              {
+                "value_id": "E07-P02-V03",
+                "name": "配套应用充电功率",
+                "ai_value": 7.17,
+                "unit": "kW",
+                "source_location": "手机页面参数行右侧",
+                "confirmed_value": 7.17,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 7.17
+              },
+              {
+                "value_id": "E07-P02-V04",
+                "name": "配套应用累计充电量",
+                "ai_value": 1.277,
+                "unit": "kWh",
+                "source_location": "手机页面中下部",
+                "confirmed_value": 1.277,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 1.277
+              }
+            ]
+          },
+          {
+            "resource_id": "E07-P03",
+            "type": "PHOTO",
+            "target_id": "E07",
+            "file": "photos/E07-P03_确认32安设置恢复_20260915_190906_099.jpg",
+            "clock": "2026-09-15T19:09:06.099+08:00",
+            "script_time_us": 280833452,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E07-P03-V01",
+                "name": "车辆充电状态",
+                "ai_value": "正在充电",
+                "unit": null,
+                "source_location": "车机充电页面左侧状态区",
+                "confirmed_value": "正在充电",
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": "正在充电"
+              },
+              {
+                "value_id": "E07-P03-V02",
+                "name": "SOC",
+                "ai_value": 86,
+                "unit": "%",
+                "source_location": "车机页面顶部电池状态",
+                "confirmed_value": 86,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 86
+              },
+              {
+                "value_id": "E07-P03-V03",
+                "name": "车辆显示充电电压",
+                "ai_value": 219,
+                "unit": "V",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 219,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 219
+              },
+              {
+                "value_id": "E07-P03-V04",
+                "name": "车辆实际充电电流",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E07-P03-V05",
+                "name": "车辆充电电流可用上限",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              },
+              {
+                "value_id": "E07-P03-V06",
+                "name": "车辆显示充电功率",
+                "ai_value": 7,
+                "unit": "kW",
+                "source_location": "车机充电页面左侧参数列",
+                "confirmed_value": 7,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 7
+              },
+              {
+                "value_id": "E07-P03-V07",
+                "name": "车辆充电电流设置",
+                "ai_value": 32,
+                "unit": "A",
+                "source_location": "车机充电设置右侧调节栏",
+                "confirmed_value": 32,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E08",
+        "event_sequence": 8,
+        "title": "记录32安恢复响应",
+        "detail": "拍摄车辆充电页面，记录恢复后的实际电流或功率和正在充电状态\n随即拍摄充电桩或配套应用的实际电流和功率\n保留页面时间或拍摄时间；实时性未知时立即备注\n确认初始、16安和恢复32安三个窗口属于同一连续充电过程",
+        "plan_time_s": 280,
+        "status": "triggered",
+        "actual_clock": "2026-09-15T19:09:05.329+08:00",
+        "actual_script_time_us": 280062962,
+        "resources": [
+          {
+            "resource_id": "E08-P01",
+            "type": "PHOTO",
+            "target_id": "E08",
+            "file": "photos/E08-P01_记录32安恢复响应_20260915_190915_253.jpg",
+            "clock": "2026-09-15T19:09:15.253+08:00",
+            "script_time_us": 289987314,
+            "file_status": "AVAILABLE",
+            "values": [
+              {
+                "value_id": "E08-P01-V01",
+                "name": "配套应用交流电压",
+                "ai_value": 222.2,
+                "unit": "V",
+                "source_location": "手机页面参数行左侧",
+                "confirmed_value": 222.2,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 222.2
+              },
+              {
+                "value_id": "E08-P01-V02",
+                "name": "配套应用交流电流",
+                "ai_value": 32.3,
+                "unit": "A",
+                "source_location": "手机页面参数行中部",
+                "confirmed_value": 32.3,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 32.3
+              },
+              {
+                "value_id": "E08-P01-V03",
+                "name": "配套应用充电功率",
+                "ai_value": 7.18,
+                "unit": "kW",
+                "source_location": "手机页面参数行右侧",
+                "confirmed_value": 7.18,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 7.18
+              },
+              {
+                "value_id": "E08-P01-V04",
+                "name": "配套应用累计充电量",
+                "ai_value": 1.369,
+                "unit": "kWh",
+                "source_location": "手机页面中下部",
+                "confirmed_value": 1.369,
+                "review_status": "ACCEPTED",
+                "review_comment": null,
+                "effective_value": 1.369
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "event_id": "E09",
+        "event_sequence": 9,
+        "title": "检查证据并结束采集",
+        "detail": "确认三个窗口均有设置值、实际响应、充电状态和对应时间记录\n确认两次设置动作各有独立实际时间，偏差和页面实时性已经备注\n保存ASC、VoiceRunner导出、照片和备注后结束本Round\n是否继续充电按现场需要决定，不把结束采集当作停止充电事件",
+        "plan_time_s": 340,
+        "status": "triggered",
+        "actual_clock": "2026-09-15T19:10:05.286+08:00",
+        "actual_script_time_us": 340020009,
+        "resources": []
+      }
+    ]
+  }
+}

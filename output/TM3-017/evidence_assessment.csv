@@ -1,0 +1,8 @@
+evidence_requirement,status,assessment,evidence_refs,evidence_boundary
+ER-01,SUPPORTED,初始32 A设置、实际32 A、7 kW及正在充电得到人工确认；W1原始候选在70秒窗口保持高位,E01-P01+W1_INITIAL_HIGH,初始外部响应是单张页面记录；连续性由匿名原始行为交叉支持而非已确认Signal
+ER-02,SUPPORTED,E03后车辆页面确认16 A设置且可用上限仍为32 A；16 A设置在多个后续页面保持,E03+E03-P01+E04-P01+E04-P03,动作提示Clock与实际操作完成Clock之间只形成区间；不确认内部Target或仲裁
+ER-03,SUPPORTED,车辆实际值由32 A/7 kW降至16 A/4 kW；配套应用随后由高值转为16.2 A/3.64 kW；多组匿名原始位置呈高低高,E01-P01+E03-P01+E03-P02+E04-P02+blind_raw_candidates.csv,E03-P02在调低提示后21.142秒仍显示32.4 A/7.21 kW；刷新延迟未知故不得用应用推导精确响应时延
+ER-04,SUPPORTED,车辆和配套应用在低设置阶段多次记录持续充电及16 A/约16.2 A低位；W2为117.505秒非边沿窗口,E03-P01+E04-P01+E04-P02+E04-P03+E05-P01+W2_LOW,稳定窗口起点采用首张确认16 A实际值的照片；原始候选仅证明行为稳定
+ER-05,SUPPORTED,E06后32 A设置被接受；车辆先记录21 A/5 kW中间态后达到32 A/7 kW，配套应用达到32.3 A/7.17 kW；匿名原始候选反向恢复,E06+E06-P01+E06-P02+E07-P02+blind_raw_summary.json,不同原始候选的变化起点不同；不能据此拆分设置、请求、执行或反馈身份
+ER-06,SUPPORTED,恢复后车辆和配套应用在超过60秒的外部记录跨度中维持32 A/约32.3 A及充电状态；W3为102.522秒,E06-P02+E07-P01+E07-P02+E07-P03+E08-P01+W3_RECOVERED_HIGH,无已观察到的停充重启或重连；缺少连续外部视频且不确认任何连接状态Signal
+

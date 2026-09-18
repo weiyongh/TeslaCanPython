@@ -1,0 +1,8 @@
+experiment,plan_status,scope,evidence_item_id,evidence_requirement,role,source_type,source_ref,sufficiency,boundary,review_basis
+TM3-017,APPROVED,THIS_EXPERIMENT_ONLY,EP-01,ER-01,初始设置与实际响应,RECOGNITION,E01-P01,32 A设置与实际32 A、正在充电且ASC盲态窗口保持稳定,单张现场页面需与连续ASC原始行为联合使用,用户批准TM3-017 v0.2及Recognition Review
+TM3-017,APPROVED,THIS_EXPERIMENT_ONLY,EP-02,ER-02,调低输入与接受保持,EVENT+RECOGNITION,E03+E03-P01+E04-P01+E04-P03,调低Event后页面确认16 A设置并跨时保持,Event Clock是语音动作提示锚点而非手指操作完成时刻,用户批准TM3-017 v0.2及Recognition Review
+TM3-017,APPROVED,THIS_EXPERIMENT_ONLY,EP-03,ER-03,调低实际响应,RECOGNITION+RAW_ASC,E01-P01+E03-P01+E04-P02+blind_raw_candidates.csv,车辆和配套应用最终均显示实际电流及功率下降且原始候选同向,配套应用刷新时刻未知且E03-P02保留高值冲突,用户批准TM3-017 v0.2及Recognition Review
+TM3-017,APPROVED,THIS_EXPERIMENT_ONLY,EP-04,ER-04,低设置稳定保持,RECOGNITION+RAW_ASC,E03-P01+E04-P01+E04-P02+E04-P03+E05-P01+W2_LOW,持续充电且16 A/约16.2 A与低功率跨多个时间点保持,ASC字段身份不确认,用户批准TM3-017 v0.2及Recognition Review
+TM3-017,APPROVED,THIS_EXPERIMENT_ONLY,EP-05,ER-05,恢复输入与实际响应,EVENT+RECOGNITION+RAW_ASC,E06+E06-P01+E06-P02+E07-P02+blind_raw_candidates.csv,恢复32 A后观察到21 A中间态并达到32 A/约32.3 A且原始候选反向恢复,不得由CAN反推人工动作时刻或内部Target,用户批准TM3-017 v0.2及Recognition Review
+TM3-017,APPROVED,THIS_EXPERIMENT_ONLY,EP-06,ER-06,恢复稳定与连续过程,RECOGNITION+RAW_ASC,E06-P02+E07-P01+E07-P02+E07-P03+E08-P01+W3_RECOVERED_HIGH,恢复后持续充电并保持32 A/约32.3 A超过30秒且无已记录中断,没有连续外部视频且不能由原始不变量确认具体连接字段,用户批准TM3-017 v0.2及Recognition Review
+

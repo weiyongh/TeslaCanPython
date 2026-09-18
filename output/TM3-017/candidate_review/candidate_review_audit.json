@@ -1,0 +1,39 @@
+{
+  "experiment": "TM3-017",
+  "round": "S0030",
+  "analysis_mode": "STRICT_NO_DBC_RAW_PAYLOAD_ONLY",
+  "input_candidate_count": 48,
+  "priority_counts": {
+    "P1": 5,
+    "P2": 9,
+    "P3": 4,
+    "X": 30
+  },
+  "counter_or_cycle_detected": 12,
+  "retained_pair_correlation_threshold": 0.985,
+  "time_grid": "100 ms held-last-value, ASC 70-235 s",
+  "windows": {
+    "W1": [
+      5.0,
+      75.0
+    ],
+    "W2": [
+      90.763,
+      208.268
+    ],
+    "W3": [
+      227.478,
+      330.0
+    ]
+  },
+  "event_cues": {
+    "fall": 78.322,
+    "rise": 208.268
+  },
+  "limitations": [
+    "Priority ranks raw behavioral usefulness only.",
+    "No name, scale, unit, role, ECU, causality, or field byte order is assigned.",
+    "A rejected byte does not invalidate its complete CAN payload.",
+    "Event cues are not manual action-completion timestamps."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "analysis_mode": "STRICT_NO_DBC_RAW_PAYLOAD_ONLY",
+  "primary_round": "S0030",
+  "comparison_round": "S0009",
+  "comparison_context": "output/acquisition_context/L3-Charge-Slow-FullCycle_慢充全过程采集__20260911_133727_858__S0009/acquisition_context.json",
+  "comparison_context_status": "APPROVED",
+  "candidate_count": 14,
+  "windows": {
+    "S9_PRE": [
+      5.0,
+      50.0
+    ],
+    "S9_CONNECTED_NOT_CHARGING": [
+      105.0,
+      155.0
+    ],
+    "S9_CHARGING_HIGH": [
+      250.0,
+      315.0
+    ],
+    "S9_STOPPED_CONNECTED": [
+      335.0,
+      430.0
+    ],
+    "S9_UNLOCKED_CONNECTED": [
+      448.0,
+      465.0
+    ],
+    "S9_UNPLUGGED": [
+      475.0,
+      530.0
+    ]
+  },
+  "photo_points": {
+    "S9_APP_LOW_1": 195.388,
+    "S9_APP_LOW_2": 203.424,
+    "S9_APP_HIGH": 240.933,
+    "S9_VEHICLE_HIGH": 246.171,
+    "S9_VEHICLE_STOPPED": 394.541
+  },
+  "split_asc_timebase": "second ASC origin is +443.000 s from first origin; file gap 442.372-443.000 s retained",
+  "boundary": "Cross-round raw behavior only; no name, unit, scale, role, ECU, causality, or field encoding is assigned."
+}

@@ -1,0 +1,11 @@
+role_candidate_id,layer,anonymous_members,candidate_role,positive_evidence,competition,conclusion_strength,boundary
+RC-EXT-01,EXTERNAL_INPUT,人工Event+车辆页面,操作者设置输入,E03/E06相反操作且页面分别确认16/32 A,Event是提示锚点不是触控完成时刻,CONFIRMED_OBSERVED,仅为实验外部输入
+RC-EXT-02,ACCEPTANCE_OBSERVATION,车辆页面设置字段,设置被界面接受并保持,E03-P01/E04-P01/E04-P03及E06-P01以后保持目标页面值,界面回显可能先于或独立于内部执行,CONFIRMED_OBSERVED,不等同内部Target或仲裁结果
+RC-EXT-03,PHYSICAL_RESPONSE_OBSERVATION,车辆实际值+配套应用,实际交流取电响应,32→16→32 A及7→4→7 kW方向可逆且形成稳定窗口,应用刷新未知且不是严格同步测量,CONFIRMED_OBSERVED,只适用于本Round现场显示
+RC-RAW-A,EARLY_RAW,0x333/DLC5/B1;0x252/DLC8/B4-B5;0x472/DLC8/B1-B2;0x212/DLC8/B5,早期可逆层级载体,S0030两侧约2至6秒主要变化且S0009建立阶段先变化,早期内部结果/广播副本/过滤较快的观测/共同驱动均可解释,STRONGLY_SUPPORTED_BEHAVIOR_ONLY,不得命名为设置请求能力或目标
+RC-RAW-B,INTERMEDIATE_RAW,0x292/DLC8/B6,中间时序渐变载体,S0030恢复侧约5至7秒且S0009建立过程分段渐变,独立中间状态或不同刷新/滤波的同源观测均可解释,SUPPORTED_BEHAVIOR_ONLY,单候选不能建立独立控制Node
+RC-RAW-C,LATE_RAW,0x132/DLC6/B2;0x204/DLC8/B4;0x264/DLC6/B2-B3;0x212/DLC8/B2;0x2A3/DLC7/B4,较晚渐变与稳定层级载体,S0030恢复侧约10至17秒且S0009建立和退出过程重现,内部执行结果/下游响应/滤波量/共同物理驱动均可解释,STRONGLY_SUPPORTED_BEHAVIOR_ONLY,不得命名为实际电流功率或Pack响应
+RC-RAW-D,STATE_CONTEXT_RAW,0x333/DLC5/B1;0x2A3/DLC7/B4;0x472/DLC8/B1,多状态或发送域上下文,S0009未充电停止拔枪窗口出现额外层级或缺帧,状态编码/发送门/复用条件/非控制共变量均可解释,SUPPORTED_BEHAVIOR_ONLY,只能作为候选解释所需上下文
+RC-RAW-E,FIELD_BOUNDARY_RAW,0x204/B2-B4;0x252/B4-B5;0x264/B2-B3;0x472/B1-B2,相邻byte组合候选,同帧共同变化但跨状态关系不固定,单字段多个字段bitfield校验或附属状态均不可区分,INSUFFICIENT_FIELD_IDENTITY,不得固定字节序位宽符号或组合方式
+RC-LATENT-01,UNOBSERVED_INTERNAL,无直接成员,设置接受与物理响应之间的内部处理区域,E06-P01设置32 A时实际仍为21 A证明两者不是同一瞬时状态,单一动态环节或多级Target能力仲裁执行链均可解释,STRUCTURE_REQUIRED_IDENTITY_UNKNOWN,只允许保留未观测区域不允许拆成已确认内部Node
+

@@ -1,0 +1,28 @@
+{
+  "experiment_id": "TM3-017",
+  "round_id": "S0030",
+  "vehicle_id": "TESLA-M3-SOP5",
+  "status": "APPROVED_AND_APPLIED",
+  "information_boundary": "STRICT_NO_DBC_RAW_PAYLOAD_ONLY",
+  "source_reviews": [
+    "TM3-017_Evidence_Assessment.md",
+    "TM3-017_Candidate_Falsification_Behavioral_Review.md",
+    "TM3-017_Cross_Round_Blind_Behavioral_Review.md",
+    "TM3-017_Control_Structure_Layer_Review.md"
+  ],
+  "formal_tree_modified": true,
+  "formal_tree_path": "knowledge/notion_l3/current/充电系统/交流慢充/交流慢充.md",
+  "applied_date": "2026-09-15",
+  "new_collection_designed": false,
+  "dbc_or_semantic_signal_material_used": false,
+  "gate_summary": {
+    "new_nodes_admitted": 2,
+    "existing_nodes_or_states_annotated": 2,
+    "unobserved_regions_retained": 1,
+    "raw_behavior_nodes_admitted": 0,
+    "relationships_admitted": 4,
+    "formal_conditions_admitted": 1
+  },
+  "highest_conclusion_strength": "SUPPORTED_SYSTEM_LEVEL_CONTROL_RELATIONSHIP",
+  "hard_boundary": "No internal target, capability, arbitration, request, execution, ECU, physical unit, scale, bit/field identity, or raw candidate mapping is admitted."
+}

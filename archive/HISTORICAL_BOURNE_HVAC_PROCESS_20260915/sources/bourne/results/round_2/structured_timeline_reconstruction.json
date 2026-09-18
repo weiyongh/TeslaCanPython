@@ -1,0 +1,34 @@
+{
+  "hvac": [
+    {
+      "file": "can_20260911134802.asc",
+      "offset_s": 0.107,
+      "first_script_s": 0.107,
+      "last_script_s": 444.12140000000005,
+      "frames": 1000000
+    },
+    {
+      "file": "can_20260911134802_2.asc",
+      "offset_s": 444.107,
+      "first_script_s": 444.107,
+      "last_script_s": 659.7159,
+      "frames": 485911
+    }
+  ],
+  "ac_charge": [
+    {
+      "file": "can_20260911133648.asc",
+      "offset_s": -0.858,
+      "first_script_s": -0.858,
+      "last_script_s": 441.514,
+      "frames": 1000000
+    },
+    {
+      "file": "can_20260911133648_2.asc",
+      "offset_s": 442.142,
+      "first_script_s": 442.142,
+      "last_script_s": 539.6804,
+      "frames": 219531
+    }
+  ]
+}

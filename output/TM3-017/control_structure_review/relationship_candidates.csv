@@ -1,0 +1,13 @@
+relationship_id,source,target,relationship_type,evidence_refs,assessment,competition,acceptable_conclusion,boundary
+CS-R01,CS-N01,CS-N02,INPUT_TO_ACCEPTANCE,E03/E06提示与后续设置保持照片,SUPPORTED,提示后实际触控完成时间未知,操作者变化后车辆界面接受并保持新设置,不能给出精确接受延迟
+CS-R02,CS-N02,CS-N07,ACCEPTED_SETTING_TO_PHYSICAL_RESPONSE,32→16→32外部闭环+三个稳定窗口,SUPPORTED_CONTROL_RELATIONSHIP,未观察内部处理且应用刷新未知,当前条件下设置接受与实际取电方向一致且可逆,不能表达精确传递函数或内部因果路径
+CS-R03,CS-N02,CS-N04,TEMPORAL_ASSOCIATION,S0030两侧早期raw变化+S0009建立早期变化,STRONGLY_SUPPORTED_ORDER,早期簇可能响应同一潜在原因而非由N02驱动,设置提示/接受阶段之后存在早期raw变化簇,不升级为Request或Target路径
+CS-R04,CS-N04,CS-N05,ORDERING_HYPOTHESIS,S0030及S0009早中动态差异,PARTIALLY_SUPPORTED,并行不同滤波或采样周期可产生相同先后,早期簇通常先于中间簇达到主要变化,不确认串行因果
+CS-R05,CS-N04,CS-N06,ORDERING_HYPOTHESIS,S0030恢复侧约4-6秒对约10-17秒+S0009建立重现,STRONGLY_SUPPORTED_ORDER,共同潜变量的快慢观测可替代串行解释,早期与较晚raw动态可稳定区分,不确认上游下游身份
+CS-R06,CS-N05,CS-N07,COVARIATION,S0030相反阶跃+S0009建立过程,SUPPORTED_BEHAVIORAL_ASSOCIATION,中间簇可能是独立共变量,中间raw轨迹与外部响应阶段共变,不确认物理量或因果方向
+CS-R07,CS-N06,CS-N07,COVARIATION,S0030较晚渐变与E06中间态+S0009建立退出,STRONGLY_SUPPORTED_BEHAVIORAL_ASSOCIATION,较晚簇可能是滤波或共同物理驱动,较晚raw簇与实际响应过程时间相容并跨Round重现,不等同Actual或功率反馈
+CS-R08,CS-N07,CS-N08,RESPONSE_TO_STABLE_OUTCOME,W1/W2/W3及多源照片,SUPPORTED,页面分辨率与应用刷新限制,实际响应之后形成连续非瞬态观察窗口,不外推长期或其他条件稳定性
+CS-R09,CS-N09,CS-N02/CS-N07/CS-N08,CONDITION_GATE,同一连续充电过程且无已观察中断,SUPPORTED_CONDITION,无直接内部状态字段,本轮关系成立以持续充电前置条件为条件,不能定义具体许可或连接门逻辑
+CS-R10,CS-N02,CS-N03,UNOBSERVED_TRANSITION,E06设置32而实际21+多类raw时序,PLAUSIBLE_REQUIRED_REGION,回显后可能只有单一斜坡而非多级处理,接受状态与实际响应之间存在不可瞬时等同的内部区域,不能确认节点数量名称或方向细节
+CS-R11,CS-N03,CS-N07,UNOBSERVED_TRANSITION,设置与实际响应的时间分离,PLAUSIBLE_REQUIRED_REGION,外部设备动态也可能贡献延迟,内部处理区域与物理响应之间存在未观测转换,不能量化内部延迟
+

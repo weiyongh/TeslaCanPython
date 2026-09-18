@@ -1,0 +1,15 @@
+candidate,cross_round_rank,behavioral_class,cross_round_conclusion,semantic_status
+0x132/DLC6/B2,P1-A,多状态+晚渐变,跨Round保留；S0009非充电约247、建立过程低位后高位约180、停止后回到约247,ANONYMOUS_RAW_ONLY
+0x204/DLC8/B4,P1-A,零基线+晚渐变,跨Round保留；非充电为0、S0009充电建立时渐升至约160、停止后回0,ANONYMOUS_RAW_ONLY
+0x252/DLC8/B4,P1-B,早期门槛+稳定层级,跨Round保留；非充电为0、建立早期跳至244、停止后回0,ANONYMOUS_RAW_ONLY
+0x292/DLC8/B6,P1-B,零基线+中间渐变,跨Round保留；非充电为0、建立时两段渐升、停止后回0,ANONYMOUS_RAW_ONLY
+0x333/DLC5/B1,P1-C,早期多状态,保留但后移；未充电时也可为16，S0009建立早期16→32，停止连接时为5，拔枪后回16,ANONYMOUS_RAW_ONLY
+0x204/DLC8/B2,P2,同帧边界未决,与B3在充电稳态接近，但非充电时B2=0而B3=255；简单副本假设被否定,ANONYMOUS_RAW_ONLY
+0x204/DLC8/B3,P2,同帧边界未决,与B2在充电稳态接近，但非充电时分离；不得合并为副本,ANONYMOUS_RAW_ONLY
+0x212/DLC8/B2,P2,渐变+状态层级,非充电为0，建立过程分段渐升，停止后回0,ANONYMOUS_RAW_ONLY
+0x212/DLC8/B5,P2,渐变+状态层级,非充电为255，充电过程进入另一层级，不能与B2视为换算副本,ANONYMOUS_RAW_ONLY
+0x252/DLC8/B5,P2,相邻byte独立性,B4非充电回0时B5仍有168/128等层级；固定双byte字段假设缺乏支持,ANONYMOUS_RAW_ONLY
+0x264/DLC6/B2,P2,同帧渐变,与B3共同变化但轨迹和非充电层级不同；组合边界未决,ANONYMOUS_RAW_ONLY
+0x264/DLC6/B3,P2,同帧渐变,与B2共同变化但不是数值副本；组合边界未决,ANONYMOUS_RAW_ONLY
+0x2A3/DLC7/B4,P2-,发送域受限,在S0009非充电窗口缺帧且停止后仍保持18；不能作为通用停止响应候选,ANONYMOUS_RAW_ONLY
+0x472/DLC8/B1,P2-,早期多状态,S0009建立阶段经历0→低位→高位，但多数非充电窗口也维持37；只保留特定边沿价值,ANONYMOUS_RAW_ONLY

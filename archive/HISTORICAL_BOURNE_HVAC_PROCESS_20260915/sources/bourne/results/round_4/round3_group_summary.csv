@@ -1,0 +1,17 @@
+﻿group_id,can_id,byte,round3_member_raw_bits,candidate_mask_hex,sessions_consistent,sessions_meeting_group_acceptance,sessions_total,min_window_masked_purity,repeatable_masked_pattern,member_response_classes,group_response_type,classification,classification_accepted,round4_group_disposition,evidence_boundary
+G01,0x1FA,B0,b3;b4,0x18,True,5,5,1.0,0x00->0x18->0x18->0x18->0x18->0x00,hvac_ventilation_on_related,single_response,hvac_ventilation_on_related,True,RETAIN_UNRESOLVED_BOUNDARY,raw_association_only
+G02,0x20C,B1,b3;b4,0x18,True,0,5,1.0,0x00->0x10->0x10->0x18->0x10->0x00,ac_state_related_reversible;hvac_ventilation_on_related,composite_response,composite_response,False,SPLIT_REQUIRED,raw_association_only
+G03,0x20C,B4,b1,0x02,True,0,5,1.0,0x00->0x00->0x00->0x00->0x00->0x00,unclassified,constant,no_stimulus_variation,False,SUSPEND_CONSTANT,raw_association_only
+G04,0x20C,B5,b0,0x01,True,5,5,1.0,0x00->0x00->0x01->0x01->0x01->0x00,fan_level_sensitive_s3_same,single_response,fan_level_sensitive_s3_same,True,RETAIN_SINGLE_BIT_HYPOTHESIS,raw_association_only
+G05,0x20C,B7,b3,0x08,True,5,5,1.0,0x00->0x08->0x00->0x00->0x00->0x00,fan_level_sensitive_s3_same,single_response,fan_level_sensitive_s3_same,True,RETAIN_SINGLE_BIT_HYPOTHESIS,raw_association_only
+G06,0x253,B7,b4,0x10,True,5,5,1.0,0x10->0x00->0x00->0x00->0x00->0x10,hvac_ventilation_on_related,single_response,hvac_ventilation_on_related,True,RETAIN_SINGLE_BIT_HYPOTHESIS,raw_association_only
+G07,0x282,B0,b2;b6,0x44,True,0,5,1.0,0x00->0x44->0x04->0x04->0x04->0x00,hvac_ventilation_on_related;fan_level_sensitive_s3_same,composite_response,composite_response,False,SPLIT_REQUIRED,raw_association_only
+G08,0x282,B1,b2,0x04,True,5,5,1.0,0x00->0x04->0x04->0x04->0x04->0x00,hvac_ventilation_on_related,single_response,hvac_ventilation_on_related,True,RETAIN_SINGLE_BIT_HYPOTHESIS,raw_association_only
+G09,0x282,B2,b1,0x02,True,5,5,1.0,0x00->0x00->0x02->0x02->0x02->0x00,fan_level_sensitive_s3_same,single_response,fan_level_sensitive_s3_same,True,RETAIN_SINGLE_BIT_HYPOTHESIS,raw_association_only
+G10,0x282,B3,b3,0x08,True,5,5,1.0,0x00->0x00->0x08->0x08->0x08->0x00,fan_level_sensitive_s3_same,single_response,fan_level_sensitive_s3_same,True,RETAIN_SINGLE_BIT_HYPOTHESIS,raw_association_only
+G11,0x2A1,B5,b0,0x01,True,5,5,1.0,0x00->0x00->0x00->0x01->0x00->0x00,ac_state_related_reversible,single_response,ac_state_related_reversible,True,RETAIN_SINGLE_BIT_HYPOTHESIS,raw_association_only
+G12,0x2A7,B7,b0;b2,0x05,True,5,5,1.0,0x04->0x04->0x04->0x01->0x04->0x04,ac_state_related_reversible,single_response,ac_state_related_reversible,True,RETAIN_UNRESOLVED_BOUNDARY,raw_association_only
+G13,0x2BF,B5,b3;b4,0x18,True,5,5,1.0,0x00->0x00->0x00->0x18->0x00->0x00,ac_state_related_reversible,single_response,ac_state_related_reversible,True,RETAIN_UNRESOLVED_BOUNDARY,raw_association_only
+G14,0x2F3,B3,b2,0x04,True,5,5,1.0,0x00->0x04->0x04->0x04->0x04->0x00,hvac_ventilation_on_related,single_response,hvac_ventilation_on_related,True,RETAIN_SINGLE_BIT_HYPOTHESIS,raw_association_only
+G15,0x323,B4,b1;b2,0x06,True,5,5,1.0,0x02->0x04->0x04->0x04->0x04->0x02,hvac_ventilation_on_related,single_response,hvac_ventilation_on_related,True,RETAIN_UNRESOLVED_BOUNDARY,raw_association_only
+G16,0x361,B3,b1;b2,0x06,True,5,5,1.0,0x02->0x02->0x02->0x04->0x02->0x02,ac_state_related_reversible,single_response,ac_state_related_reversible,True,RETAIN_UNRESOLVED_BOUNDARY,raw_association_only
