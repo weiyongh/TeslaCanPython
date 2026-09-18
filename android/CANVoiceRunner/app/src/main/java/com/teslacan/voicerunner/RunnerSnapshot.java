@@ -15,11 +15,12 @@ final class RunnerSnapshot {
     final int photoCount;
     final int eventNoteCount;
     final String recordingStatus;
+    final boolean manualTriggerMode;
 
     RunnerSnapshot(State state, long elapsedMs, long scheduleElapsedMs, String currentTitle,
                    String nextTitle, int nextSecond, String countdownText,
                    String currentEventStatus, int photoCount, int eventNoteCount,
-                   String recordingStatus) {
+                   String recordingStatus, boolean manualTriggerMode) {
         this.state = state;
         this.elapsedMs = elapsedMs;
         this.scheduleElapsedMs = scheduleElapsedMs;
@@ -31,5 +32,6 @@ final class RunnerSnapshot {
         this.photoCount = photoCount;
         this.eventNoteCount = eventNoteCount;
         this.recordingStatus = recordingStatus;
+        this.manualTriggerMode = manualTriggerMode;
     }
 }

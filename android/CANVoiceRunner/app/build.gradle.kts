@@ -7,14 +7,14 @@ android {
         applicationId = "com.teslacan.voicerunner"
         minSdk = 29
         targetSdk = 36
-        versionCode = 2
-        versionName = "0.2.0"
+        versionCode = 3
+        versionName = "0.2.1"
     }
     buildTypes {
         debug {
             // V2优化-任务02-调试包与手机中的旧签名版本并存，避免卸载旧 App。
-            applicationIdSuffix = ".v2debug"
-            versionNameSuffix = "-v2-debug"
+            applicationIdSuffix = ".v21debug"
+            versionNameSuffix = "-v2.1-debug"
         }
     }
 }

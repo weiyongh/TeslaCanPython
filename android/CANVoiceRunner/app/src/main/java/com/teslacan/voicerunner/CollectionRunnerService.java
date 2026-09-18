@@ -38,6 +38,7 @@ public final class CollectionRunnerService extends Service
     static final String EXTRA_SCRIPT = "script";
     static final String EXTRA_SCRIPT_NAME = "script_name";
     static final String EXTRA_RECORDING_ENABLED = "recording_enabled";
+    static final String EXTRA_MANUAL_TRIGGER_MODE = "manual_trigger_mode";
 
     interface SnapshotListener {
         void onSnapshot(RunnerSnapshot snapshot);
@@ -84,6 +85,8 @@ public final class CollectionRunnerService extends Service
     private String countdownText = "—";
     private String sourceScriptName = "采集脚本.txt";
     private boolean recordingEnabled;
+    private boolean manualTriggerMode;
+    private int manualNextStepIndex;
     private SessionRecord sessionRecord;
     private SessionStorage sessionStorage;
     private SessionStorage.Files sessionFiles;
@@ -94,7 +97,7 @@ public final class CollectionRunnerService extends Service
         @Override public void run() {
             if (!isActive()) return;
             long nowNanos = SystemClock.elapsedRealtimeNanos();
-            if (state == RunnerSnapshot.State.RUNNING) {
+            if (state == RunnerSnapshot.State.RUNNING && !manualTriggerMode) {
                 timelineRunner.update(timebase.scheduleTimeMs(nowNanos));
             }
             publish(timebase.scriptTimeUs(nowNanos) / 1_000L);
@@ -123,6 +126,7 @@ public final class CollectionRunnerService extends Service
                 sourceScriptName = "采集脚本.txt";
             }
             recordingEnabled = intent.getBooleanExtra(EXTRA_RECORDING_ENABLED, false);
+            manualTriggerMode = intent.getBooleanExtra(EXTRA_MANUAL_TRIGGER_MODE, false);
             startInForeground(buildNotification("准备开始采集"));
             startSession(intent.getStringExtra(EXTRA_SCRIPT));
         }
@@ -184,12 +188,13 @@ public final class CollectionRunnerService extends Service
         startClock = "";
         endClock = "";
         currentEventIndex = -1;
+        manualNextStepIndex = 0;
         sessionRecord = null;
         sessionFiles = null;
         audioRecorder = null;
         audioStartFailure = null;
         lastNotificationText = null;
-        timelineRunner = new SessionTimelineRunner(steps, this);
+        timelineRunner = manualTriggerMode ? null : new SessionTimelineRunner(steps, this);
         state = RunnerSnapshot.State.PREPARING;
         currentTitle = "准备开始采集";
         countdownText = "—";
@@ -256,8 +261,13 @@ public final class CollectionRunnerService extends Service
         }
         currentTitle = "开始采集";
         countdownText = "开始";
-        speak("开始采集");
-        timelineRunner.update(timebase.scheduleTimeMs(nowNanos));
+        if (manualTriggerMode) {
+            triggerManualStep(0);
+            manualNextStepIndex = Math.min(1, steps.size());
+        } else {
+            speak("开始采集");
+            timelineRunner.update(timebase.scheduleTimeMs(nowNanos));
+        }
         publish(0L);
         handler.post(tick);
     }
@@ -306,6 +316,29 @@ public final class CollectionRunnerService extends Service
         return true;
     }
 
+    boolean triggerNextManualEvent() {
+        if (!manualTriggerMode || state != RunnerSnapshot.State.RUNNING
+                || manualNextStepIndex < 0 || manualNextStepIndex >= steps.size()) {
+            return false;
+        }
+        triggerManualStep(manualNextStepIndex);
+        manualNextStepIndex++;
+        publish(currentElapsedMs());
+        return true;
+    }
+
+    private void triggerManualStep(int index) {
+        if (index < 0 || index >= eventRecords.size()) return;
+        EventRecord event = eventRecords.get(index);
+        if (event.getStatus() != EventRecord.Status.PENDING) return;
+        event.trigger(currentScriptTimeUs());
+        currentEventIndex = index;
+        currentTitle = event.step.title;
+        countdownText = "执行";
+        speak(event.step.title);
+        persistAsync();
+    }
+
     @Override public void onPrepareStep(int index, ScriptStep step) {
         if (eventRecords.get(index).getStatus() == EventRecord.Status.SKIPPED) return;
         speak("准备，" + step.title);
@@ -342,7 +375,9 @@ public final class CollectionRunnerService extends Service
     }
 
     private RunnerSnapshot createSnapshot(long elapsedMs) {
-        int nextIndex = timelineRunner == null ? 0 : timelineRunner.getNextStepIndex();
+        int nextIndex = manualTriggerMode
+                ? manualNextStepIndex
+                : (timelineRunner == null ? 0 : timelineRunner.getNextStepIndex());
         while (nextIndex < eventRecords.size()
                 && eventRecords.get(nextIndex).getStatus() == EventRecord.Status.SKIPPED) {
             nextIndex++;
@@ -369,7 +404,8 @@ public final class CollectionRunnerService extends Service
                 ? (recordingEnabled ? "PREPARING" : "DISABLED")
                 : sessionRecord.audio.status;
         return new RunnerSnapshot(state, elapsedMs, scheduleMs, currentTitle, nextTitle,
-                nextSecond, countdownText, eventStatus, photos, notes, audioStatus);
+                nextSecond, countdownText, eventStatus, photos, notes, audioStatus,
+                manualTriggerMode);
     }
 
     private void publish(long elapsedMs) {
@@ -570,7 +606,7 @@ public final class CollectionRunnerService extends Service
                             android.net.Uri.parse(photo.contentUri))
                             ? "AVAILABLE" : "UNAVAILABLE";
                 }
-                sessionStorage.persist(record, files, "0.2.0");
+                sessionStorage.persist(record, files, "0.2.1");
                 sessionStorage.exportZip(record, files, destination);
                 handler.post(listener::onExported);
             } catch (IOException error) {
@@ -586,7 +622,7 @@ public final class CollectionRunnerService extends Service
 
     private void persistAsync() {
         if (sessionRecord == null || sessionFiles == null) return;
-        String json = SessionJsonExporter.export(sessionRecord, "0.2.0");
+        String json = SessionJsonExporter.export(sessionRecord, "0.2.1");
         String csv = String.join("\n", SessionCsvExporter.export(
                 sessionRecord.events, sessionRecord.startClockEpochMs,
                 sessionRecord.startClock)) + "\n";
@@ -721,7 +757,7 @@ public final class CollectionRunnerService extends Service
             sessionRecord.endReason = announce ? "NATURAL_OR_USER_COMPLETION" : "ABORTED";
             try {
                 if (sessionFiles != null) {
-                    sessionStorage.persist(sessionRecord, sessionFiles, "0.2.0");
+                    sessionStorage.persist(sessionRecord, sessionFiles, "0.2.1");
                 }
             } catch (IOException ignored) { }
         }

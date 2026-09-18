@@ -29,12 +29,14 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
     private TextView fileName, currentClock, timer, current, countdown, next, sessionStatus;
     private Button runButton, pauseButton, skipButton, exportButton;
     private Button photoButton, noteButton, recordingButton;
+    private Button manualModeButton;
     private TextView photoSummary, noteSummary, recordingSummary;
     private String scriptText = "", scriptName = "内置示例脚本.txt";
     private List<ScriptStep> steps = new ArrayList<>();
     private CollectionRunnerService runnerService;
     private boolean serviceBound;
     private boolean recordingEnabled;
+    private boolean manualTriggerMode;
     private String pendingPhotoEventId;
     private String pendingPhotoAction;
     private int pendingPhotoSequence;
@@ -130,7 +132,9 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         circleParams.gravity = Gravity.CENTER; circleParams.setMargins(0, dp(10), 0, dp(16)); root.addView(circle, circleParams);
         root.addView(new Space(this), space(.35f));
         next = text("下一操作：—", 20, Color.rgb(30, 30, 30)); next.setGravity(Gravity.CENTER);
-        next.setPadding(4, dp(8), 4, dp(8)); root.addView(next, matchWrap());
+        next.setPadding(4, dp(8), 4, dp(8));
+        next.setOnClickListener(view -> triggerNextManualEvent());
+        root.addView(next, matchWrap());
         root.addView(new Space(this), space(.35f));
         LinearLayout summary = new LinearLayout(this); summary.setGravity(Gravity.CENTER);
         photoSummary = text("照片 0", 17, Color.GRAY); photoSummary.setGravity(Gravity.CENTER);
@@ -147,8 +151,14 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         evidence.addView(photoButton, buttonLp()); evidence.addView(noteButton, buttonLp());
         evidence.addView(recordingButton, buttonLp()); root.addView(evidence, matchWrap());
         root.addView(new Space(this), space(.45f));
+        LinearLayout modeStatus = new LinearLayout(this); modeStatus.setGravity(Gravity.CENTER_VERTICAL);
         sessionStatus = text("尚未采集", 17, Color.DKGRAY); sessionStatus.setGravity(Gravity.CENTER);
-        sessionStatus.setPadding(0, dp(6), 0, dp(6)); root.addView(sessionStatus, matchWrap());
+        sessionStatus.setPadding(0, dp(6), 0, dp(6));
+        modeStatus.addView(sessionStatus, new LinearLayout.LayoutParams(0, -2, 2f));
+        manualModeButton = button("人工触发：OFF", view -> toggleManualMode());
+        tintButton(manualModeButton, Color.rgb(57, 73, 171));
+        modeStatus.addView(manualModeButton, new LinearLayout.LayoutParams(0, dp(46), 1f));
+        root.addView(modeStatus, matchWrap());
         LinearLayout controls = new LinearLayout(this); controls.setGravity(Gravity.CENTER);
         pauseButton = button("暂停播报", view -> togglePause());
         tintButton(pauseButton, Color.rgb(80, 170, 90));
@@ -184,7 +194,8 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         Intent intent = new Intent(this, CollectionRunnerService.class).setAction(CollectionRunnerService.ACTION_START)
                 .putExtra(CollectionRunnerService.EXTRA_SCRIPT, scriptText)
                 .putExtra(CollectionRunnerService.EXTRA_SCRIPT_NAME, scriptName)
-                .putExtra(CollectionRunnerService.EXTRA_RECORDING_ENABLED, recordingEnabled);
+                .putExtra(CollectionRunnerService.EXTRA_RECORDING_ENABLED, recordingEnabled)
+                .putExtra(CollectionRunnerService.EXTRA_MANUAL_TRIGGER_MODE, manualTriggerMode);
         startForegroundService(intent);
         recordingEnabled = false;
     }
@@ -202,18 +213,28 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
             photoButton.setEnabled(false); noteButton.setEnabled(false);
             recordingButton.setEnabled(true);
             recordingButton.setText(recordingEnabled ? "录音：开" : "录音：关");
+            manualModeButton.setEnabled(true);
+            manualModeButton.setText(manualTriggerMode ? "人工触发：ON" : "人工触发：OFF");
+            renderNextAsLabel();
             sessionStatus.setText("尚未采集");
             return;
         }
         timer.setText(clock((int) (snapshot.scheduleElapsedMs / 1000L))); current.setText(snapshot.currentTitle);
         countdown.setText(snapshot.countdownText);
         next.setText(snapshot.nextSecond >= 0 ? "下一操作： " + clock(snapshot.nextSecond) + "  " + snapshot.nextTitle : "下一操作： 已完成");
+        boolean manualNextEnabled = snapshot.manualTriggerMode
+                && snapshot.state == RunnerSnapshot.State.RUNNING
+                && snapshot.nextSecond >= 0;
+        next.setClickable(manualNextEnabled);
+        next.setEnabled(manualNextEnabled);
+        next.setTextColor(manualNextEnabled ? Color.WHITE : Color.rgb(30, 30, 30));
+        next.setBackgroundColor(manualNextEnabled ? Color.rgb(57, 73, 171) : Color.TRANSPARENT);
         boolean active = snapshot.state == RunnerSnapshot.State.RUNNING
                 || snapshot.state == RunnerSnapshot.State.PAUSED
                 || snapshot.state == RunnerSnapshot.State.PREPARING;
         runButton.setText(active ? "结束采集" : "开始采集");
-        pauseButton.setEnabled(snapshot.state == RunnerSnapshot.State.RUNNING
-                || snapshot.state == RunnerSnapshot.State.PAUSED);
+        pauseButton.setEnabled(!snapshot.manualTriggerMode && (snapshot.state == RunnerSnapshot.State.RUNNING
+                || snapshot.state == RunnerSnapshot.State.PAUSED));
         skipButton.setEnabled((snapshot.state == RunnerSnapshot.State.RUNNING
                 || snapshot.state == RunnerSnapshot.State.PAUSED)
                 && "triggered".equals(snapshot.currentEventStatus));
@@ -221,6 +242,9 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         photoButton.setEnabled(evidenceEnabled);
         noteButton.setEnabled(evidenceEnabled);
         recordingButton.setEnabled(snapshot.state == RunnerSnapshot.State.COMPLETED);
+        manualModeButton.setEnabled(snapshot.state == RunnerSnapshot.State.IDLE
+                || snapshot.state == RunnerSnapshot.State.COMPLETED);
+        manualModeButton.setText(snapshot.manualTriggerMode ? "人工触发：ON" : "人工触发：OFF");
         pauseButton.setText(snapshot.state == RunnerSnapshot.State.PAUSED ? "继续播报" : "暂停播报");
         if (snapshot.state == RunnerSnapshot.State.PAUSED) {
             sessionStatus.setText("播报暂停中 · script_time 继续");
@@ -248,6 +272,30 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
 
     private void togglePause() {
         if (runnerService != null) runnerService.togglePause();
+    }
+
+    private void toggleManualMode() {
+        manualTriggerMode = !manualTriggerMode;
+        manualModeButton.setText(manualTriggerMode ? "人工触发：ON" : "人工触发：OFF");
+        if (manualTriggerMode) {
+            next.setTextColor(Color.WHITE);
+            next.setBackgroundColor(Color.rgb(57, 73, 171));
+        } else {
+            renderNextAsLabel();
+        }
+    }
+
+    private void triggerNextManualEvent() {
+        if (runnerService == null || !runnerService.triggerNextManualEvent()) {
+            toast("当前没有可触发的下一操作");
+        }
+    }
+
+    private void renderNextAsLabel() {
+        next.setClickable(false);
+        next.setEnabled(false);
+        next.setTextColor(Color.rgb(30, 30, 30));
+        next.setBackgroundColor(Color.TRANSPARENT);
     }
 
     private void skipCurrent() {
