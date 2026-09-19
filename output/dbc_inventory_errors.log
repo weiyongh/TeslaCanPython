@@ -1,0 +1,50 @@
+DBC Inventory execution log
+input_root	/Users/hwy/codex_work/TeslaCanPython/dbc
+scanned_files	36
+PARSED	Model3CAN.dbc	2752 signal rows
+PARSED	Model3CAN.dbc.txt	2752 signal rows
+PARSED	Model3_ETH.compact.json	375 signal rows
+PARSED	Model3_ETH_json_reference_optional.dbc	375 signal rows
+SKIPPED	Model3_ETH_json_reference_optional.manifest.json	not a recognized CAN Definition JSON
+PARSED	json/Model3/Model3_ETH.compact.json	375 signal rows
+SKIPPED	json/Model3/legacy_self_test_parser.json	not a recognized CAN Definition JSON
+PARSED	json/ModelS/ModelS_BDY.compact.json.json	25 signal rows
+PARSED	json/ModelS/ModelS_BFT.compact.json.json	5 signal rows
+PARSED	json/ModelS/ModelS_CH.compact.json.json	39 signal rows
+PARSED	json/ModelS/ModelS_ETH.compact.json.json	314 signal rows
+PARSED	json/ModelS/ModelS_OBDII.compact.json.json	2 signal rows
+PARSED	json/ModelS/ModelS_PT.compact.json.json	62 signal rows
+SKIPPED	json/ModelS/ModelS_PT_BMSDBG.compact.json.json	not a recognized CAN Definition JSON
+SKIPPED	json/ModelS/legacy_self_test_parser.json	not a recognized CAN Definition JSON
+PARSED	json/ModelX/ModelS_BDY.compact.json.json	62 signal rows
+PARSED	json/ModelX/ModelS_BFT.compact.json.json	5 signal rows
+PARSED	json/ModelX/ModelS_CH.compact.json.json	39 signal rows
+PARSED	json/ModelX/ModelS_ETH.compact.json.json	280 signal rows
+PARSED	json/ModelX/ModelS_OBDII.compact.json.json	2 signal rows
+PARSED	json/ModelX/ModelS_PT.compact.json.json	57 signal rows
+SKIPPED	json/ModelX/ModelS_PT_BMSDBG.compact.json.json	not a recognized CAN Definition JSON
+PARSED	json/ModelX/ModelS_TH.compact.json.json	2 signal rows
+SKIPPED	json/ModelX/legacy_self_test_parser.json	not a recognized CAN Definition JSON
+PARSED	json/ModelY/ModelY_ETH.compact.json	375 signal rows
+SKIPPED	json/ModelY/legacy_self_test_parser.json	not a recognized CAN Definition JSON
+PARSED	tesla_can (1).dbc	572 signal rows
+PARSED	tesla_can.dbc	559 signal rows
+PARSED	tesla_can.dbc.txt	210 signal rows
+PARSED	tesla_model3.dbc	7924 signal rows
+PARSED	tesla_model3_ONYX.dbc.txt	8484 signal rows
+PARSED	tesla_model3_party.dbc	240 signal rows
+PARSED	tesla_model3_vehicle.dbc	209 signal rows
+PARSED	tesla_powertrain.dbc	74 signal rows
+PARSED	特斯拉右侧车窗_DBC_EXP.dbc	30 signal rows
+PARSED	特斯拉左侧车窗_DBC_EXP.dbc	30 signal rows
+BASENAME_DUPLICATES
+Model3_ETH.compact.json	Model3_ETH.compact.json	json/Model3/Model3_ETH.compact.json
+ModelS_BDY.compact.json.json	json/ModelS/ModelS_BDY.compact.json.json	json/ModelX/ModelS_BDY.compact.json.json
+ModelS_BFT.compact.json.json	json/ModelS/ModelS_BFT.compact.json.json	json/ModelX/ModelS_BFT.compact.json.json
+ModelS_CH.compact.json.json	json/ModelS/ModelS_CH.compact.json.json	json/ModelX/ModelS_CH.compact.json.json
+ModelS_ETH.compact.json.json	json/ModelS/ModelS_ETH.compact.json.json	json/ModelX/ModelS_ETH.compact.json.json
+ModelS_OBDII.compact.json.json	json/ModelS/ModelS_OBDII.compact.json.json	json/ModelX/ModelS_OBDII.compact.json.json
+ModelS_PT.compact.json.json	json/ModelS/ModelS_PT.compact.json.json	json/ModelX/ModelS_PT.compact.json.json
+ModelS_PT_BMSDBG.compact.json.json	json/ModelS/ModelS_PT_BMSDBG.compact.json.json	json/ModelX/ModelS_PT_BMSDBG.compact.json.json
+legacy_self_test_parser.json	json/Model3/legacy_self_test_parser.json	json/ModelS/legacy_self_test_parser.json	json/ModelX/legacy_self_test_parser.json	json/ModelY/legacy_self_test_parser.json
+signal_rows	26230
