@@ -2,7 +2,7 @@ package com.teslacan.voicerunner;
 
 /** V2优化-任务03-向界面提供连续 script_time 与当前 Event 状态。 */
 final class RunnerSnapshot {
-    enum State { IDLE, PREPARING, RUNNING, PAUSED, COMPLETED }
+    enum State { IDLE, PREPARING, RUNNING, PAUSED, STOPPING, COMPLETED }
 
     final State state;
     final long elapsedMs;

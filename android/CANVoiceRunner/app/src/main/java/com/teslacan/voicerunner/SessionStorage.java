@@ -30,6 +30,8 @@ final class SessionStorage {
         final String relativePath;
         final Uri jsonUri;
         final Uri csvUri;
+        Uri rogueStartResponseUri;
+        Uri rogueStopResponseUri;
 
         Files(String relativePath, Uri jsonUri, Uri csvUri) {
             this.relativePath = relativePath;
@@ -104,6 +106,17 @@ final class SessionStorage {
         writeText(files.csvUri, String.join("\n", csv) + "\n");
     }
 
+    void saveRogueResponse(Files files, boolean start, String rawJson) throws IOException {
+        String name = start ? "rogue_start_response.json" : "rogue_stop_response.json";
+        Uri uri = start ? files.rogueStartResponseUri : files.rogueStopResponseUri;
+        if (uri == null) {
+            uri = create(name, "application/json", files.relativePath);
+            if (start) files.rogueStartResponseUri = uri;
+            else files.rogueStopResponseUri = uri;
+        }
+        writeText(uri, rawJson);
+    }
+
     void copy(Uri source, OutputStream destination) throws IOException {
         try (InputStream raw = resolver.openInputStream(source)) {
             if (raw == null) throw new IOException("无法读取 " + source);
@@ -142,6 +155,14 @@ final class SessionStorage {
                 String root = session.directoryName + "/";
                 add(zip, root + "session.json", files.jsonUri);
                 add(zip, root + "event_timeline.csv", files.csvUri);
+                if (files.rogueStartResponseUri != null) {
+                    add(zip, root + "rogue_start_response.json",
+                            files.rogueStartResponseUri);
+                }
+                if (files.rogueStopResponseUri != null) {
+                    add(zip, root + "rogue_stop_response.json",
+                            files.rogueStopResponseUri);
+                }
                 for (PhotoRecord photo : session.photos) {
                     if ("AVAILABLE".equals(photo.fileStatus)) {
                         add(zip, root + "photos/" + photo.fileName,

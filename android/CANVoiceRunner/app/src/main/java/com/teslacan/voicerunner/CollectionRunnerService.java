@@ -64,6 +64,8 @@ public final class CollectionRunnerService extends Service
     private final SessionTimebase timebase = new SessionTimebase();
     private final List<EventRecord> eventRecords = new ArrayList<>();
     private final ExecutorService persistenceExecutor = Executors.newSingleThreadExecutor();
+    private final ExecutorService rogueApiExecutor = Executors.newSingleThreadExecutor();
+    private final RogueApiClient rogueApiClient = new RogueApiClient();
     private List<ScriptStep> steps = Collections.emptyList();
     private SessionTimelineRunner timelineRunner;
     private SnapshotListener snapshotListener;
@@ -92,6 +94,10 @@ public final class CollectionRunnerService extends Service
     private SessionStorage.Files sessionFiles;
     private SessionAudioRecorder audioRecorder;
     private String audioStartFailure;
+    private boolean rogueStartRequested;
+    private boolean rogueStartSucceeded;
+    private boolean rogueStopRequested;
+    private boolean pendingCompletionAnnounce;
 
     private final Runnable tick = new Runnable() {
         @Override public void run() {
@@ -193,6 +199,10 @@ public final class CollectionRunnerService extends Service
         sessionFiles = null;
         audioRecorder = null;
         audioStartFailure = null;
+        rogueStartRequested = false;
+        rogueStartSucceeded = false;
+        rogueStopRequested = false;
+        pendingCompletionAnnounce = false;
         lastNotificationText = null;
         timelineRunner = manualTriggerMode ? null : new SessionTimelineRunner(steps, this);
         state = RunnerSnapshot.State.PREPARING;
@@ -200,8 +210,47 @@ public final class CollectionRunnerService extends Service
         countdownText = "—";
         publish(0L);
         if (recordingEnabled) startAudioPreRoll();
-        if (ttsReady) speak("准备开始采集", "pre_start");
-        else handler.postDelayed(this::beginPreRoll, 1800L);
+        createSessionAndStartRogue();
+    }
+
+    private void createSessionAndStartRogue() {
+        long nowNanos = SystemClock.elapsedRealtimeNanos();
+        timebase.start(nowNanos);
+        timebase.pause(nowNanos);
+        startClockEpochMs = System.currentTimeMillis();
+        startClock = formatWallClock(startClockEpochMs);
+        String sessionId = sessionStorage.nextSessionId();
+        String directoryName = SessionStorage.directoryName(
+                sourceScriptName, startClockEpochMs, sessionId);
+        sessionRecord = new SessionRecord(
+                sessionId, sourceScriptName, directoryName, eventRecords);
+        sessionRecord.startClockEpochMs = startClockEpochMs;
+        sessionRecord.startClock = startClock;
+        sessionRecord.startRealtimeNs = nowNanos;
+        sessionRecord.status = "STARTING";
+        sessionRecord.rogueApi.scriptName = rogueScriptName(sourceScriptName);
+        sessionRecord.audio.enabled = recordingEnabled;
+        if (!recordingEnabled) {
+            sessionRecord.audio.status = "DISABLED";
+        } else if (audioStartFailure != null) {
+            markAudioFailure(audioStartFailure, 0L);
+        } else {
+            sessionRecord.audio.status = "RECORDING";
+            sessionRecord.audio.requestClock = formatWallClock(audioRecorder.requestClockEpochMs());
+            sessionRecord.audio.requestOffsetUs =
+                    (audioRecorder.requestRealtimeNs() - nowNanos) / 1_000L;
+            sessionRecord.audio.sampleRateHz = 48_000;
+            sessionRecord.audio.channelCount = 1;
+            sessionRecord.audio.mimeType = "audio/mp4";
+            sessionRecord.audio.bitRate = 96_000;
+        }
+        try {
+            sessionFiles = sessionStorage.createSessionFiles(directoryName);
+            persistAsync();
+        } catch (IOException error) {
+            sessionFiles = null;
+        }
+        sendRogueStart();
     }
 
     private void beginPreRoll() {
@@ -227,38 +276,8 @@ public final class CollectionRunnerService extends Service
         if (state != RunnerSnapshot.State.PREPARING) return;
         state = RunnerSnapshot.State.RUNNING;
         long nowNanos = SystemClock.elapsedRealtimeNanos();
-        timebase.start(nowNanos);
-        startClockEpochMs = System.currentTimeMillis();
-        startClock = formatWallClock(startClockEpochMs);
-        String sessionId = sessionStorage.nextSessionId();
-        String directoryName = SessionStorage.directoryName(
-                sourceScriptName, startClockEpochMs, sessionId);
-        sessionRecord = new SessionRecord(
-                sessionId, sourceScriptName, directoryName, eventRecords);
-        sessionRecord.startClockEpochMs = startClockEpochMs;
-        sessionRecord.startClock = startClock;
-        sessionRecord.startRealtimeNs = nowNanos;
-        sessionRecord.audio.enabled = recordingEnabled;
-        if (!recordingEnabled) {
-            sessionRecord.audio.status = "DISABLED";
-        } else if (audioStartFailure != null) {
-            markAudioFailure(audioStartFailure, 0L);
-        } else {
-            sessionRecord.audio.status = "RECORDING";
-            sessionRecord.audio.requestClock = formatWallClock(audioRecorder.requestClockEpochMs());
-            sessionRecord.audio.requestOffsetUs =
-                    (audioRecorder.requestRealtimeNs() - nowNanos) / 1_000L;
-            sessionRecord.audio.sampleRateHz = 48_000;
-            sessionRecord.audio.channelCount = 1;
-            sessionRecord.audio.mimeType = "audio/mp4";
-            sessionRecord.audio.bitRate = 96_000;
-        }
-        try {
-            sessionFiles = sessionStorage.createSessionFiles(directoryName);
-            persistAsync();
-        } catch (IOException error) {
-            sessionFiles = null;
-        }
+        timebase.resume(nowNanos);
+        sessionRecord.status = "ACTIVE";
         currentTitle = "开始采集";
         countdownText = "开始";
         if (manualTriggerMode) {
@@ -273,6 +292,8 @@ public final class CollectionRunnerService extends Service
     }
 
     void stopSession() {
+        if (rogueStartRequested && sessionRecord != null
+                && "REQUESTED".equals(sessionRecord.rogueApi.startStatus)) return;
         handler.removeCallbacksAndMessages(null);
         if (textToSpeech != null) textToSpeech.stop();
         if (audioRecorder != null) audioRecorder.stop();
@@ -371,6 +392,7 @@ public final class CollectionRunnerService extends Service
 
     private long currentElapsedMs() {
         if (state == RunnerSnapshot.State.COMPLETED) return completedScriptTimeUs / 1_000L;
+        if (state == RunnerSnapshot.State.STOPPING) return completedScriptTimeUs / 1_000L;
         return isActive() ? currentScriptTimeUs() / 1_000L : 0L;
     }
 
@@ -388,6 +410,8 @@ public final class CollectionRunnerService extends Service
                 ? eventRecords.get(currentEventIndex).getStatus().csvValue : "pending";
         long scheduleMs;
         if (state == RunnerSnapshot.State.COMPLETED) {
+            scheduleMs = completedScheduleTimeMs;
+        } else if (state == RunnerSnapshot.State.STOPPING) {
             scheduleMs = completedScheduleTimeMs;
         } else {
             scheduleMs = isActive() && timebase.isStarted()
@@ -412,6 +436,7 @@ public final class CollectionRunnerService extends Service
         RunnerSnapshot snapshot = createSnapshot(elapsedMs);
         if (state == RunnerSnapshot.State.PREPARING || state == RunnerSnapshot.State.RUNNING
                 || state == RunnerSnapshot.State.PAUSED
+                || state == RunnerSnapshot.State.STOPPING
                 || state == RunnerSnapshot.State.COMPLETED) {
             String notificationText = notificationText(snapshot);
             if (!notificationText.equals(lastNotificationText)) {
@@ -425,6 +450,7 @@ public final class CollectionRunnerService extends Service
 
     private String notificationText(RunnerSnapshot snapshot) {
         if (snapshot.state == RunnerSnapshot.State.PREPARING) return "准备开始采集";
+        if (snapshot.state == RunnerSnapshot.State.STOPPING) return "正在停止罗格采集";
         String elapsed = formatClock((int) (snapshot.elapsedMs / 1000L));
         if (snapshot.state == RunnerSnapshot.State.PAUSED) {
             return elapsed + " · 播报暂停，采集时间继续";
@@ -484,6 +510,187 @@ public final class CollectionRunnerService extends Service
 
     private boolean isActive() {
         return state == RunnerSnapshot.State.RUNNING || state == RunnerSnapshot.State.PAUSED;
+    }
+
+    private long mappedEpochMs(long realtimeNs) {
+        return startClockEpochMs
+                + Math.round(timebase.scriptTimeUs(realtimeNs) / 1000.0d);
+    }
+
+    private static String rogueScriptName(String name) {
+        return name == null ? "采集脚本" : name.replaceFirst("\\.[^.]+$", "");
+    }
+
+    private void sendRogueStart() {
+        if (rogueStartRequested || sessionRecord == null) return;
+        rogueStartRequested = true;
+        sessionRecord.rogueApi.startStatus = "REQUESTED";
+        rogueApiExecutor.execute(() -> {
+            long requestRealtimeNs = SystemClock.elapsedRealtimeNanos();
+            long requestEpochMs = mappedEpochMs(requestRealtimeNs);
+            sessionRecord.rogueApi.benjiStartRequestEpochMs = requestEpochMs;
+            try {
+                RogueApiClient.Result result = rogueApiClient.start(
+                        sessionRecord.rogueApi.scriptName, sessionRecord.sessionId,
+                        requestEpochMs);
+                saveRawRogueResponse(true, result.rawJson);
+                handler.post(() -> handleRogueStartResult(result));
+            } catch (RogueApiClient.ResponseException error) {
+                saveRawRogueResponse(true, error.rawJson);
+                handler.post(() -> failRogueStart(error.httpStatus, error.errorCode,
+                        error.getMessage(), mappedEpochMs(error.responseRealtimeNs)));
+            } catch (IOException error) {
+                handler.post(() -> failRogueStart(null, "NETWORK_ERROR",
+                        error.getMessage(), null));
+            }
+        });
+    }
+
+    private void handleRogueStartResult(RogueApiClient.Result result) {
+        RogueApiRecord api = sessionRecord.rogueApi;
+        api.startHttpStatus = result.httpStatus;
+        api.benjiStartResponseEpochMs = mappedEpochMs(result.responseRealtimeNs);
+        if (!result.ok) {
+            failRogueStart(result.httpStatus, result.errorCode, result.message,
+                    api.benjiStartResponseEpochMs);
+            return;
+        }
+        api.rogueStartRequestReceivedEpochMs = result.requestReceivedEpochMs;
+        api.rogueDumpStartEpochMs = result.dumpEpochMs;
+        api.startLogFilename = result.logFilename;
+        if (result.httpStatus != 200
+                || !api.scriptName.equals(result.scriptName)
+                || !sessionRecord.sessionId.equals(result.sessionId)
+                || result.logFilename == null || result.logFilename.isEmpty()) {
+            failRogueStart(result.httpStatus, "RESPONSE_MISMATCH",
+                    "Rogue START response 与当前 Session 不一致",
+                    api.benjiStartResponseEpochMs);
+            return;
+        }
+        api.startStatus = "SUCCEEDED";
+        rogueStartSucceeded = true;
+        persistAsync();
+        currentTitle = "准备开始采集";
+        countdownText = "—";
+        publish(currentElapsedMs());
+        if (ttsReady) speak("准备开始采集", "pre_start");
+        else handler.postDelayed(this::beginPreRoll, 1800L);
+    }
+
+    private void failRogueStart(Integer httpStatus, String errorCode,
+                                String message, Long responseEpochMs) {
+        if (sessionRecord == null || rogueStartSucceeded) return;
+        RogueApiRecord api = sessionRecord.rogueApi;
+        api.startStatus = "FAILED";
+        api.startHttpStatus = httpStatus;
+        api.startErrorCode = errorCode;
+        api.startMessage = message;
+        api.benjiStartResponseEpochMs = responseEpochMs;
+        long nowNs = SystemClock.elapsedRealtimeNanos();
+        completedScriptTimeUs = timebase.scriptTimeUs(nowNs);
+        completedScheduleTimeMs = 0L;
+        sessionRecord.endScriptTimeUs = completedScriptTimeUs;
+        endClockEpochMs = mappedEpochMs(nowNs);
+        endClock = formatWallClock(endClockEpochMs);
+        sessionRecord.endClockEpochMs = endClockEpochMs;
+        sessionRecord.endClock = endClock;
+        sessionRecord.status = "START_FAILED";
+        sessionRecord.endReason = "ROGUE_START_FAILED";
+        if (audioRecorder != null) audioRecorder.stop();
+        state = RunnerSnapshot.State.COMPLETED;
+        currentTitle = "罗格启动失败";
+        countdownText = "—";
+        persistAsync();
+        publish(completedScriptTimeUs / 1_000L);
+    }
+
+    private void sendRogueStop() {
+        if (rogueStopRequested || !rogueStartSucceeded || sessionRecord == null) return;
+        rogueStopRequested = true;
+        sessionRecord.rogueApi.stopStatus = "REQUESTED";
+        rogueApiExecutor.execute(() -> {
+            long requestRealtimeNs = SystemClock.elapsedRealtimeNanos();
+            long requestEpochMs = mappedEpochMs(requestRealtimeNs);
+            sessionRecord.rogueApi.benjiStopRequestEpochMs = requestEpochMs;
+            try {
+                RogueApiClient.Result result = rogueApiClient.stop(
+                        sessionRecord.rogueApi.scriptName, sessionRecord.sessionId,
+                        requestEpochMs);
+                saveRawRogueResponse(false, result.rawJson);
+                handler.post(() -> handleRogueStopResult(result));
+            } catch (RogueApiClient.ResponseException error) {
+                saveRawRogueResponse(false, error.rawJson);
+                handler.post(() -> failRogueStop(error.httpStatus, error.errorCode,
+                        error.getMessage(), mappedEpochMs(error.responseRealtimeNs)));
+            } catch (IOException error) {
+                handler.post(() -> failRogueStop(null, "NETWORK_ERROR",
+                        error.getMessage(), null));
+            }
+        });
+    }
+
+    private void handleRogueStopResult(RogueApiClient.Result result) {
+        RogueApiRecord api = sessionRecord.rogueApi;
+        api.stopHttpStatus = result.httpStatus;
+        api.benjiStopResponseEpochMs = mappedEpochMs(result.responseRealtimeNs);
+        if (!result.ok) {
+            failRogueStop(result.httpStatus, result.errorCode, result.message,
+                    api.benjiStopResponseEpochMs);
+            return;
+        }
+        api.rogueStopRequestReceivedEpochMs = result.requestReceivedEpochMs;
+        api.rogueDumpStopEpochMs = result.dumpEpochMs;
+        api.stopLogFilename = result.logFilename;
+        if (result.httpStatus != 200
+                || !api.scriptName.equals(result.scriptName)
+                || !sessionRecord.sessionId.equals(result.sessionId)
+                || !api.startLogFilename.equals(result.logFilename)) {
+            failRogueStop(result.httpStatus, "RESPONSE_MISMATCH",
+                    "Rogue STOP response 与当前 Session 不一致",
+                    api.benjiStopResponseEpochMs);
+            return;
+        }
+        api.stopStatus = "SUCCEEDED";
+        finishAfterRogueStop(true);
+    }
+
+    private void failRogueStop(Integer httpStatus, String errorCode,
+                               String message, Long responseEpochMs) {
+        RogueApiRecord api = sessionRecord.rogueApi;
+        api.stopStatus = "FAILED";
+        api.stopHttpStatus = httpStatus;
+        api.stopErrorCode = errorCode;
+        api.stopMessage = message;
+        api.benjiStopResponseEpochMs = responseEpochMs;
+        finishAfterRogueStop(false);
+    }
+
+    private void finishAfterRogueStop(boolean succeeded) {
+        sessionRecord.status = succeeded ? "COMPLETED" : "STOP_FAILED";
+        sessionRecord.endReason = succeeded
+                ? (pendingCompletionAnnounce
+                ? "NATURAL_OR_USER_COMPLETION" : "ABORTED")
+                : "ROGUE_STOP_FAILED";
+        state = RunnerSnapshot.State.COMPLETED;
+        currentTitle = succeeded ? "采集完成" : "罗格停止失败";
+        countdownText = "—";
+        if (succeeded && pendingCompletionAnnounce) speak("采集完成");
+        persistAsync();
+        publish(completedScriptTimeUs / 1_000L);
+    }
+
+    private void saveRawRogueResponse(boolean start, String rawJson) {
+        if (sessionFiles == null || rawJson == null) return;
+        try {
+            sessionStorage.saveRogueResponse(sessionFiles, start, rawJson);
+            if (start) {
+                sessionRecord.rogueApi.startResponseFile = "rogue_start_response.json";
+            } else {
+                sessionRecord.rogueApi.stopResponseFile = "rogue_stop_response.json";
+            }
+        } catch (IOException ignored) {
+            // session.json 中仍保留 HTTP 状态和错误信息。
+        }
     }
 
     private long currentScriptTimeUs() {
@@ -747,27 +954,24 @@ public final class CollectionRunnerService extends Service
         long completedAtNanos = SystemClock.elapsedRealtimeNanos();
         completedScriptTimeUs = timebase.scriptTimeUs(completedAtNanos);
         completedScheduleTimeMs = timebase.scheduleTimeMs(completedAtNanos);
-        endClockEpochMs = System.currentTimeMillis();
+        endClockEpochMs = mappedEpochMs(completedAtNanos);
         endClock = formatWallClock(endClockEpochMs);
         if (sessionRecord != null) {
             sessionRecord.endClockEpochMs = endClockEpochMs;
             sessionRecord.endClock = endClock;
             sessionRecord.endScriptTimeUs = completedScriptTimeUs;
-            sessionRecord.status = announce ? "COMPLETED" : "ABORTED";
-            sessionRecord.endReason = announce ? "NATURAL_OR_USER_COMPLETION" : "ABORTED";
-            try {
-                if (sessionFiles != null) {
-                    sessionStorage.persist(sessionRecord, sessionFiles, "0.2.1");
-                }
-            } catch (IOException ignored) { }
+            sessionRecord.status = "STOPPING";
         }
         if (audioRecorder != null && "RECORDING".equals(sessionRecord.audio.status)) {
             audioRecorder.stop();
         }
-        state = RunnerSnapshot.State.COMPLETED;
+        pendingCompletionAnnounce = announce;
+        state = RunnerSnapshot.State.STOPPING;
+        currentTitle = "正在停止罗格采集";
         countdownText = "—";
-        if (announce) speak("采集完成");
+        persistAsync();
         publish(completedScriptTimeUs / 1_000L);
+        sendRogueStop();
     }
 
     private String formatWallClock(long epochMs) {
@@ -797,6 +1001,7 @@ public final class CollectionRunnerService extends Service
         if (textToSpeech != null) textToSpeech.shutdown();
         if (toneGenerator != null) toneGenerator.release();
         persistenceExecutor.shutdown();
+        rogueApiExecutor.shutdown();
         super.onDestroy();
     }
 }

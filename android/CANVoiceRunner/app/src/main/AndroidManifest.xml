@@ -6,9 +6,11 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <queries><intent><action android:name="android.intent.action.TTS_SERVICE" /></intent></queries>
-    <application android:theme="@style/AppTheme" android:label="CAN 采集播报器" android:allowBackup="true">
+    <application android:theme="@style/AppTheme" android:label="CAN 采集播报器"
+        android:allowBackup="true" android:usesCleartextTraffic="true">
         <service
             android:name=".CollectionRunnerService"
             android:exported="false"

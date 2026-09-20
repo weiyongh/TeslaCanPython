@@ -13,8 +13,8 @@ android {
     buildTypes {
         debug {
             // V2优化-任务02-调试包与手机中的旧签名版本并存，避免卸载旧 App。
-            applicationIdSuffix = ".v21debug"
-            versionNameSuffix = "-v2.1-debug"
+            applicationIdSuffix = ".v22debug"
+            versionNameSuffix = "-v2.2-debug"
         }
     }
 }

@@ -50,6 +50,7 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
                     RunnerSnapshot snapshot = runnerService.getSnapshot();
                     if (snapshot.state == RunnerSnapshot.State.RUNNING
                             || snapshot.state == RunnerSnapshot.State.PAUSED
+                            || snapshot.state == RunnerSnapshot.State.STOPPING
                             || snapshot.state == RunnerSnapshot.State.COMPLETED) {
                         value += "  耗时 " + clock((int) (snapshot.elapsedMs / 1000L));
                     }
@@ -176,7 +177,8 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         RunnerSnapshot snapshot = serviceBound ? runnerService.getSnapshot() : null;
         if (snapshot != null && (snapshot.state == RunnerSnapshot.State.RUNNING
                 || snapshot.state == RunnerSnapshot.State.PAUSED
-                || snapshot.state == RunnerSnapshot.State.PREPARING)) {
+                || snapshot.state == RunnerSnapshot.State.PREPARING
+                || snapshot.state == RunnerSnapshot.State.STOPPING)) {
             if (snapshot.state == RunnerSnapshot.State.PREPARING) {
                 runnerService.stopSession();
                 return;
@@ -231,8 +233,11 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         next.setBackgroundColor(manualNextEnabled ? Color.rgb(57, 73, 171) : Color.TRANSPARENT);
         boolean active = snapshot.state == RunnerSnapshot.State.RUNNING
                 || snapshot.state == RunnerSnapshot.State.PAUSED
-                || snapshot.state == RunnerSnapshot.State.PREPARING;
+                || snapshot.state == RunnerSnapshot.State.PREPARING
+                || snapshot.state == RunnerSnapshot.State.STOPPING;
         runButton.setText(active ? "结束采集" : "开始采集");
+        runButton.setEnabled(snapshot.state != RunnerSnapshot.State.PREPARING
+                && snapshot.state != RunnerSnapshot.State.STOPPING);
         pauseButton.setEnabled(!snapshot.manualTriggerMode && (snapshot.state == RunnerSnapshot.State.RUNNING
                 || snapshot.state == RunnerSnapshot.State.PAUSED));
         skipButton.setEnabled((snapshot.state == RunnerSnapshot.State.RUNNING
@@ -251,7 +256,9 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         } else if (snapshot.state == RunnerSnapshot.State.RUNNING) {
             sessionStatus.setText("播报运行中 · " + snapshot.currentEventStatus);
         } else if (snapshot.state == RunnerSnapshot.State.PREPARING) {
-            sessionStatus.setText("准备开始采集");
+            sessionStatus.setText("正在连接罗格");
+        } else if (snapshot.state == RunnerSnapshot.State.STOPPING) {
+            sessionStatus.setText("正在停止罗格采集");
         } else if (snapshot.state == RunnerSnapshot.State.COMPLETED) {
             sessionStatus.setText("采集已结束");
         }
@@ -647,7 +654,8 @@ public class MainActivity extends Activity implements CollectionRunnerService.Sn
         RunnerSnapshot snapshot = serviceBound ? runnerService.getSnapshot() : null;
         if (snapshot != null && (snapshot.state == RunnerSnapshot.State.RUNNING
                 || snapshot.state == RunnerSnapshot.State.PAUSED
-                || snapshot.state == RunnerSnapshot.State.PREPARING)) {
+                || snapshot.state == RunnerSnapshot.State.PREPARING
+                || snapshot.state == RunnerSnapshot.State.STOPPING)) {
             toast("请先结束当前采集，再导入脚本");
             return;
         }

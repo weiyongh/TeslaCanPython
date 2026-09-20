@@ -10,7 +10,7 @@ final class SessionJsonExporter {
     static String export(SessionRecord session, String appVersion) {
         StringBuilder out = new StringBuilder(4096);
         out.append("{\n");
-        field(out, 1, "schema_version", "1", true);
+        field(out, 1, "schema_version", "2", true);
         field(out, 1, "exported_clock", quote(SessionRecord.formatClock(
                 System.currentTimeMillis())), true);
         field(out, 1, "app_version", quote(appVersion), true);
@@ -35,8 +35,48 @@ final class SessionJsonExporter {
         notes(out, session.notes);
         out.append(",\n");
         audio(out, session.audio);
+        out.append(",\n");
+        rogueApi(out, session.rogueApi);
         out.append("\n}\n");
         return out.toString();
+    }
+
+    private static void rogueApi(StringBuilder out, RogueApiRecord api) {
+        out.append("  \"rogue_api\": {\n");
+        field(out, 2, "script_name", nullable(api.scriptName), true);
+        out.append("    \"start\": {\n");
+        field(out, 3, "status", quote(api.startStatus), true);
+        field(out, 3, "benji_start_request_epoch_ms",
+                number(api.benjiStartRequestEpochMs), true);
+        field(out, 3, "rogue_start_request_received_epoch_ms",
+                number(api.rogueStartRequestReceivedEpochMs), true);
+        field(out, 3, "rogue_dump_start_epoch_ms",
+                number(api.rogueDumpStartEpochMs), true);
+        field(out, 3, "benji_start_response_epoch_ms",
+                number(api.benjiStartResponseEpochMs), true);
+        field(out, 3, "log_filename", nullable(api.startLogFilename), true);
+        field(out, 3, "http_status", number(api.startHttpStatus), true);
+        field(out, 3, "error_code", nullable(api.startErrorCode), true);
+        field(out, 3, "message", nullable(api.startMessage), true);
+        field(out, 3, "response_file", nullable(api.startResponseFile), false);
+        out.append("    },\n");
+        out.append("    \"stop\": {\n");
+        field(out, 3, "status", quote(api.stopStatus), true);
+        field(out, 3, "benji_stop_request_epoch_ms",
+                number(api.benjiStopRequestEpochMs), true);
+        field(out, 3, "rogue_stop_request_received_epoch_ms",
+                number(api.rogueStopRequestReceivedEpochMs), true);
+        field(out, 3, "rogue_dump_stop_epoch_ms",
+                number(api.rogueDumpStopEpochMs), true);
+        field(out, 3, "benji_stop_response_epoch_ms",
+                number(api.benjiStopResponseEpochMs), true);
+        field(out, 3, "log_filename", nullable(api.stopLogFilename), true);
+        field(out, 3, "http_status", number(api.stopHttpStatus), true);
+        field(out, 3, "error_code", nullable(api.stopErrorCode), true);
+        field(out, 3, "message", nullable(api.stopMessage), true);
+        field(out, 3, "response_file", nullable(api.stopResponseFile), false);
+        out.append("    }\n");
+        out.append("  }");
     }
 
     private static void events(StringBuilder out, List<EventRecord> records) {

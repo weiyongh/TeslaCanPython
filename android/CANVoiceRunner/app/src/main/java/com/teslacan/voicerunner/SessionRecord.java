@@ -15,6 +15,7 @@ final class SessionRecord {
     final List<PhotoRecord> photos = new ArrayList<>();
     final List<NoteRecord> notes = new ArrayList<>();
     final AudioRecordingRecord audio = new AudioRecordingRecord();
+    final RogueApiRecord rogueApi = new RogueApiRecord();
     long startClockEpochMs;
     String startClock;
     Long endClockEpochMs;

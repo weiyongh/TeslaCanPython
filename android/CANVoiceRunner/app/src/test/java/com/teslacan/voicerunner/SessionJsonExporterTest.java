@@ -24,6 +24,14 @@ public class SessionJsonExporterTest {
         session.endScriptTimeUs = 1_000_000L;
         session.status = "COMPLETED";
         session.endReason = "NATURAL_COMPLETION";
+        session.rogueApi.scriptName = "脚本";
+        session.rogueApi.startStatus = "SUCCEEDED";
+        session.rogueApi.benjiStartRequestEpochMs = 1_788_930_000_010L;
+        session.rogueApi.rogueStartRequestReceivedEpochMs = 1_788_930_000_020L;
+        session.rogueApi.rogueDumpStartEpochMs = 1_788_930_000_030L;
+        session.rogueApi.benjiStartResponseEpochMs = 1_788_930_000_040L;
+        session.rogueApi.startLogFilename = "capture.asc";
+        session.rogueApi.startResponseFile = "rogue_start_response.json";
         session.photos.add(new PhotoRecord("E01-P01", "E01", 1,
                 "开始采集", session.clockAt(200_000L), 200_000L,
                 "E01-P01_开始采集.jpg", "content://photo/1"));
@@ -37,5 +45,9 @@ public class SessionJsonExporterTest {
         assertTrue(json.contains("\"photo_id\": \"E01-P01\""));
         assertTrue(json.contains("\"note_id\": \"N0001\""));
         assertTrue(json.contains("\"status\": \"DISABLED\""));
+        assertTrue(json.contains("\"schema_version\": 2"));
+        assertTrue(json.contains("\"rogue_api\":"));
+        assertTrue(json.contains("\"benji_start_request_epoch_ms\": 1788930000010"));
+        assertTrue(json.contains("\"response_file\": \"rogue_start_response.json\""));
     }
 }
